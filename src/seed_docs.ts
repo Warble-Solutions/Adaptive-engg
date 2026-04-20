@@ -72,5 +72,6 @@ main()
     process.exit(1)
   })
   .finally(async () => {
+    const { prisma } = await import('./lib/prisma');
     await prisma.$disconnect()
   })
