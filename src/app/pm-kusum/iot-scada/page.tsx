@@ -1,223 +1,187 @@
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Wifi, Monitor, Smartphone, BarChart3, Globe, Shield, Settings, CheckCircle2, Server, Radio, Cloud, Lock, Cpu, Activity, Users } from "lucide-react";
+import { KUSUM_STATS } from "@/lib/constants";
 
 export const metadata = {
-  title: "IoT SCADA (SolarWiz RMS) | Adaptive Engineering",
-  description: "Edge-computing Remote Monitoring System with Store & Forward for 100% data capture in rural India.",
+  title: "IoT SCADA — SolarWiz | PM-KUSUM | Adaptive Engineering",
+  description: "SolarWiz IoT SCADA — SolarEdge hardware & SolarPro software for remote monitoring, performance analytics, and real-time control of PM-KUSUM solar installations.",
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
       <SceneTrigger variant="network" color="#049A89" speed={0.5} />
-      
-      {/* HERO */}
+
+      {/* HERO —  Terminal/console inspired */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=1920&q=80" alt="IoT SCADA (SolarWiz RMS) Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0a1a14] to-slate-950"></div>
+          {/* Terminal grid overlay */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,1) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,1) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+          <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-primary/20 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-[100px]"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 shadow-lg">
-              PM-KUSUM
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20">
+              <Radio className="w-4 h-4" />
+              <span>PM-KUSUM</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              IoT SCADA (SolarWiz RMS)
+            <h1 className="text-5xl md:text-8xl font-black text-white mb-4 font-heading">
+              Solar<span className="text-primary">Wiz</span>
             </h1>
-            <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
-              Edge-computing Remote Monitoring System with Store &amp; Forward for 100% data capture in rural India.
+            <p className="text-2xl md:text-3xl font-bold text-gray-400 mb-8">IoT SCADA Platform</p>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+              Comprehensive IoT SCADA solution combining SolarEdge hardware and SolarPro software for remote monitoring, performance analytics, and real-time control of PM-KUSUM solar installations.
             </p>
           </SectionWrapper>
         </div>
       </section>
 
-      {/* Smart Monitoring for Solar Pumps */}
-      <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
+      {/* STATS BAR */}
+      <section className="py-12 bg-white rounded-t-[40px] relative z-20 -mt-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionWrapper>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+              {[
+                { value: `${KUSUM_STATS.yearsExperience.value}+`, label: "Years of Experience" },
+                { value: `${KUSUM_STATS.installedBase.value}${KUSUM_STATS.installedBase.suffix}`, label: "Installed Base" },
+                { value: `${KUSUM_STATS.ppcSolar.value}${KUSUM_STATS.ppcSolar.suffix}`, label: "PPC Solar" },
+                { value: `${KUSUM_STATS.statesOfIndia.value}+`, label: "States of India" },
+                { value: `${KUSUM_STATS.satisfiedCustomers.value}+`, label: "Satisfied Customers" },
+              ].map((stat, i) => (
+                <div key={i}>
+                  <div className="text-3xl font-black text-slate-900">{stat.value}</div>
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </SectionWrapper>
+        </div>
+      </section>
+
+      {/* DUAL PRODUCT: SOLAREDGE + SOLARPRO */}
+      <section className="py-16 bg-white relative z-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* SolarEdge — Hardware */}
+            <SectionWrapper delay={0.1}>
+              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-emerald-50 rounded-3xl border border-emerald-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[80px]"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                    <Cpu className="w-8 h-8" />
+                  </div>
+                  <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4">Hardware</div>
+                  <h3 className="text-3xl font-black text-slate-900 mb-4">SolarEdge</h3>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    Ruggedized IoT gateway designed for harsh field conditions. Connects to all major inverter brands via Modbus, collects real-time data, and transmits securely to the cloud.
+                  </p>
+                  <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center">
+                    <div className="text-center">
+                      <Cpu className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                      <p className="text-sm font-bold text-slate-400">SolarEdge Device</p>
+                      <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SectionWrapper>
+
+            {/* SolarPro — Software */}
+            <SectionWrapper delay={0.2}>
+              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-blue-50 rounded-3xl border border-blue-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-[80px]"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                    <Monitor className="w-8 h-8" />
+                  </div>
+                  <div className="inline-block px-3 py-1 bg-blue-500/10 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Software</div>
+                  <h3 className="text-3xl font-black text-slate-900 mb-4">SolarPro</h3>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    Cloud-based monitoring platform with real-time dashboards, performance analytics, automated reporting, and mobile access. MNRE & DISCOM compliant reporting built-in.
+                  </p>
+                  <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center">
+                    <div className="text-center">
+                      <Monitor className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                      <p className="text-sm font-bold text-slate-400">SolarPro Dashboard</p>
+                      <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SectionWrapper>
+          </div>
+        </div>
+      </section>
+
+      {/* KEY FEATURES */}
+      <section className="py-28 bg-transparent text-white relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionWrapper>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400 font-heading mb-4">Features & Benefits</h2>
+            </div>
+          </SectionWrapper>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: <Globe className="w-6 h-6" />, title: "Monitor from Anywhere", desc: "Access real-time plant data from any device — desktop, tablet, or mobile. No VPN required." },
+              { icon: <BarChart3 className="w-6 h-6" />, title: "Analyse Performance", desc: "PR, CUF, specific yield, inverter efficiency — all KPIs at your fingertips with drill-down analytics." },
+              { icon: <Server className="w-6 h-6" />, title: "In-built Reports", desc: "MNRE compliant, DISCOM format, and custom reports. Auto-generated daily, weekly, and monthly." },
+              { icon: <Settings className="w-6 h-6" />, title: "Third-party Integration", desc: "Open API for integration with CMS, ERP, billing systems, and other enterprise platforms." },
+              { icon: <Users className="w-6 h-6" />, title: "Multi-plant Configuration", desc: "Manage hundreds of distributed PM-KUSUM sites from a single dashboard with role-based access." },
+              { icon: <Shield className="w-6 h-6" />, title: "Secure & Reliable", desc: "End-to-end encrypted data transmission. 99.9% uptime SLA with redundant cloud infrastructure." },
+            ].map((item, i) => (
+              <SectionWrapper key={i} delay={i * 0.08}>
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/40 hover:-translate-y-2 transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                </div>
+              </SectionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NETWORK / SOC */}
+      <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SectionWrapper>
               <div>
-                <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Smart Monitoring for Solar Pumps</h2>
-                <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-                  SolarWiz is AEPL&apos;s flagship IoT platform designed specifically for PM-KUSUM solar pump monitoring. Built for the harsh realities of rural India — intermittent connectivity, extreme temperatures, and remote locations — SolarWiz uses edge computing with Store &amp; Forward technology to ensure 100% data capture even when network is unavailable.
+                <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Network & Security Operations Center</h2>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  Our dedicated NOC/SOC monitors all connected sites 24/7. Automated alerts for device offline, communication failures, and performance anomalies ensure zero-downtime monitoring.
                 </p>
+                <div className="space-y-4">
+                  {[
+                    "24/7 automated network health monitoring",
+                    "Device offline detection & auto-recovery",
+                    "Communication failure escalation",
+                    "Firmware OTA update management",
+                    "SIM & connectivity lifecycle management",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+                      <span className="text-slate-700 font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
-                <div className="grid grid-cols-3 gap-8 relative z-10">
-                  <div>
-                    <div className="text-4xl font-black text-slate-900 mb-1">68GW+</div>
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider">Assets Monitored</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-black text-slate-900 mb-1">99.9%</div>
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider">Data Capture Rate</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-black text-slate-900 mb-1">500+</div>
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider">Plants Online</div>
-                  </div>
+              <div className="relative h-80 bg-gradient-to-br from-slate-100 to-slate-50 rounded-3xl border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Activity className="w-16 h-16 text-slate-300 mx-auto mb-4" />
+                  <p className="text-sm font-bold text-slate-400">NOC/SOC Dashboard</p>
+                  <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
                 </div>
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-32 bg-transparent text-white relative z-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <SectionWrapper>
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-green-400 font-heading mb-4">Key Features</h2>
-            </SectionWrapper>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <SectionWrapper delay={0}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Cpu className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Edge Computing</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  On-device data processing with intelligent Store &amp; Forward. Data is captured locally and synced when connectivity resumes — zero data loss.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Activity className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Real-Time Dashboard</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  Live monitoring of pump flow rate, pressure, voltage, current, energy generation, and water discharge with configurable alerts.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">MNRE Compliant</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  Fully compliant with MNRE guidelines for PM-KUSUM Remote Monitoring. Tested and approved by multiple State Nodal Agencies.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.30000000000000004}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Multi-Protocol Support</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  Supports Modbus RTU/TCP, MQTT, HTTP, and IEC protocols. Compatible with all major VFD makes — INVT, Fuji, Delta, ABB.
-                </p>
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications */}
-      <section className="py-24 bg-white relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <SectionWrapper>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Technical Specifications</h2>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="bg-slate-50 rounded-3xl p-10 border border-slate-100">
-                <ul className="space-y-5">
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">ARM Cortex processor with 4G/LTE + WiFi + RS485 connectivity</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Industrial grade operating temperature: -20°C to +70°C</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">IP65 rated enclosure with DIN rail mounting option</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Built-in GPS for geotagging and anti-theft tracking</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">OTA firmware updates for remote maintenance</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Supports up to 32 Modbus slave devices per gateway</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Local data storage: 90 days of 1-minute interval data</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Cloud: AWS/Azure hosted with MeitY compliance</span>
-                  </li>
-                </ul>
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-24 bg-transparent relative z-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <SectionWrapper>
-              <h2 className="text-3xl font-bold text-white mb-4 font-heading">How It Works</h2>
-            </SectionWrapper>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-[60px] left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-primary/30 -z-0"></div>
-            <SectionWrapper delay={0}>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-black">1</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Sense</h3>
-                <p className="text-sm text-gray-400 leading-relaxed px-4">Sensors and meters capture pump performance — flow, pressure, energy, ambient conditions.</p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.1}>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-black">2</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Process</h3>
-                <p className="text-sm text-gray-400 leading-relaxed px-4">Edge device processes raw data locally, calculates derived parameters, and applies alerts.</p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-black">3</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Transmit</h3>
-                <p className="text-sm text-gray-400 leading-relaxed px-4">Data is transmitted to cloud via 4G. If offline, stored locally and synced later.</p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.30000000000000004}>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-black">4</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Visualize</h3>
-                <p className="text-sm text-gray-400 leading-relaxed px-4">State agencies and developers view data on CMS dashboard with automated reports.</p>
               </div>
             </SectionWrapper>
           </div>
@@ -228,10 +192,10 @@ export default function Page() {
       <section className="py-20 bg-transparent text-center relative z-10">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-3xl font-bold text-white mb-6 font-heading">Interested in IoT SCADA (SolarWiz RMS)?</h2>
-            <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your needs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
-              Get in Touch <ArrowRight className="w-4 h-4" />
+            <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Deploy SolarWiz?</h2>
+            <p className="text-gray-400 mb-8 text-lg">Get a customized SolarWiz solution for your PM-KUSUM solar installations.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+              Contact Us <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
         </div>

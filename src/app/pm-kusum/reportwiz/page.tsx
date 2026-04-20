@@ -1,167 +1,153 @@
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, FileText, BarChart3, PieChart, Brain, Clock, Download, TrendingUp, CheckCircle2, Table2, LineChart, Calendar, Filter, Layers } from "lucide-react";
 
 export const metadata = {
-  title: "ReportWiz | Adaptive Engineering",
-  description: "Automated JMR generation, performance analytics, and compliance reporting for renewable energy portfolios.",
+  title: "ReportWiz | PM-KUSUM | Adaptive Engineering",
+  description: "Automated reporting platform with KPI insights, custom reports, AI/ML analytics, and multi-format export for renewable energy plants.",
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
       <SceneTrigger variant="network" color="#049A89" speed={0.5} />
-      
-      {/* HERO */}
+
+      {/* HERO — Data visualization gradient with colored accent panels */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80" alt="ReportWiz Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]"></div>
+          {/* Chart-like vertical bars */}
+          <div className="absolute bottom-0 left-0 w-full h-1/3 flex items-end justify-around px-20 opacity-[0.06]">
+            {[40, 65, 85, 50, 70, 90, 55, 75, 60, 80, 45, 70].map((h, i) => (
+              <div key={i} className="w-8 bg-gradient-to-t from-primary to-emerald-400 rounded-t-sm" style={{ height: `${h}%` }}></div>
+            ))}
+          </div>
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[150px]"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 shadow-lg">
-              PM-KUSUM
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-500/10 backdrop-blur-sm text-indigo-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-indigo-500/20">
+              <FileText className="w-4 h-4" />
+              <span>PM-KUSUM</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              ReportWiz
+            <h1 className="text-5xl md:text-8xl font-black text-white mb-4 font-heading">
+              Report<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Wiz</span>
             </h1>
-            <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
-              Automated JMR generation, performance analytics, and compliance reporting for renewable energy portfolios.
+            <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mt-6">
+              Automated reporting platform with KPI insights, custom reports, AI/ML analytics, and scheduled multi-format exports for renewable energy portfolios.
             </p>
           </SectionWrapper>
         </div>
       </section>
 
-      {/* Reports That Generate Themselves */}
+      {/* CORE FEATURES — Colored accent panels */}
       <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <SectionWrapper>
-              <div>
-                <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Reports That Generate Themselves</h2>
-                <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-                  ReportWiz is AEPL&apos;s proprietary reporting engine that transforms raw energy data into structured, compliance-ready reports. From automated Joint Meter Readings (JMR) to Performance Ratio calculations and subsidy claim documentation — ReportWiz eliminates manual effort and ensures 100% accuracy for state agency submissions.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
-                <div className="grid grid-cols-3 gap-8 relative z-10">
-                  <div>
-                    <div className="text-4xl font-black text-slate-900 mb-1">90%</div>
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider">Time Saved</div>
+          <SectionWrapper>
+            <h2 className="text-4xl font-bold text-slate-900 text-center mb-16 font-heading">Reporting Capabilities</h2>
+          </SectionWrapper>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: <TrendingUp className="w-7 h-7" />, title: "KPI & Performance Insights", desc: "Track PR, CUF, specific yield, GHI, PLF, and more. Auto-benchmarking against contractual targets.", accent: "border-l-indigo-500 bg-indigo-50/30" },
+              { icon: <Filter className="w-7 h-7" />, title: "Custom Reports", desc: "Design bespoke reports with drag-and-drop parameter selection. Custom date ranges, grouping, and filtering.", accent: "border-l-cyan-500 bg-cyan-50/30" },
+              { icon: <BarChart3 className="w-7 h-7" />, title: "Analytics Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-emerald-500 bg-emerald-50/30" },
+              { icon: <Brain className="w-7 h-7" />, title: "AI/ML Analytics", desc: "Anomaly detection, degradation analysis, soiling loss estimation, and predictive performance modeling.", accent: "border-l-purple-500 bg-purple-50/30" },
+              { icon: <Calendar className="w-7 h-7" />, title: "Scheduled Reporting", desc: "Auto-generate daily, weekly, monthly, and annual reports. Email to stakeholders on schedule.", accent: "border-l-amber-500 bg-amber-50/30" },
+              { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
+            ].map((item, i) => (
+              <SectionWrapper key={i} delay={i * 0.08}>
+                <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full`}>
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-700 mb-5 shadow-sm group-hover:scale-110 transition-transform">
+                    {item.icon}
                   </div>
-                  <div>
-                    <div className="text-4xl font-black text-slate-900 mb-1">100%</div>
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider">Accuracy</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-black text-slate-900 mb-1">24hr</div>
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider">Report Delivery</div>
-                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
-            </SectionWrapper>
+              </SectionWrapper>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Report Types */}
-      <section className="py-32 bg-transparent text-white relative z-10">
+      {/* REPORT TYPES */}
+      <section className="py-28 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <SectionWrapper>
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-green-400 font-heading mb-4">Report Types</h2>
-            </SectionWrapper>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <SectionWrapper delay={0}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">JMR Reports</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  Auto-generated Joint Meter Readings with tamper-proof data trails, calculated from actual inverter and meter telemetry.
-                </p>
-              </div>
-            </SectionWrapper>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Standard Reports */}
             <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Activity className="w-6 h-6" />
+              <div className="p-10 bg-white/5 border border-white/10 rounded-3xl h-full">
+                <div className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6">Standard Reports</div>
+                <h3 className="text-2xl font-bold text-white mb-6">Pre-built Report Templates</h3>
+                <div className="space-y-4">
+                  {[
+                    "Daily generation report with weather correlation",
+                    "Monthly PR & CUF performance report",
+                    "Inverter-wise comparison report",
+                    "Downtime & availability report",
+                    "Grid curtailment & export report",
+                    "MNRE/DISCOM compliance report",
+                    "Annual performance summary",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Performance Analytics</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  PR, CUF, specific yield, degradation analysis, and inverter-level comparison reports with industry benchmarks.
-                </p>
               </div>
             </SectionWrapper>
+
+            {/* Analytic Reports */}
             <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <ShieldCheck className="w-6 h-6" />
+              <div className="p-10 bg-white/5 border border-white/10 rounded-3xl h-full">
+                <div className="inline-block px-4 py-2 bg-purple-500/20 text-purple-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Analytic Reports</div>
+                <h3 className="text-2xl font-bold text-white mb-6">AI-Powered Insights</h3>
+                <div className="space-y-4">
+                  {[
+                    "Loss bucket analysis (soiling, clipping, degradation)",
+                    "Predictive performance forecasting",
+                    "Equipment health scoring",
+                    "Weather-normalized performance index",
+                    "YoY degradation trend analysis",
+                    "Benchmarking across fleet",
+                    "Revenue impact quantification",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-purple-400 w-5 h-5 shrink-0" />
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Compliance Reports</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  Pre-formatted reports compliant with MNRE, SNA, and DISCOM requirements for subsidy release and grid compliance.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.30000000000000004}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Cpu className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Custom Dashboards</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                  White-labeled reports with your branding. Configurable KPIs, date ranges, and export formats (PDF, Excel, CSV).
-                </p>
               </div>
             </SectionWrapper>
           </div>
         </div>
       </section>
 
-      {/* Why Teams Love ReportWiz */}
-      <section className="py-24 bg-white relative z-20">
+      {/* BENEFITS */}
+      <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <SectionWrapper>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Why Teams Love ReportWiz</h2>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="bg-slate-50 rounded-3xl p-10 border border-slate-100">
-                <ul className="space-y-5">
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Automated daily, weekly, and monthly report generation on schedule</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Email and WhatsApp delivery to configurable distribution lists</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Historical data comparison with year-over-year trend analysis</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Anomaly detection flags underperforming assets automatically</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">Role-based access — different views for developers, agencies, and O&amp;M teams</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-slate-700">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
-                    <span className="leading-relaxed">API integration for feeding data into existing ERP/BI systems</span>
-                  </li>
-                </ul>
-              </div>
-            </SectionWrapper>
+          <SectionWrapper>
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-16 font-heading">Why ReportWiz?</h2>
+          </SectionWrapper>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Streamlined Operations — Eliminate manual report preparation",
+              "Improved Accuracy — Data directly from SCADA, no manual entry",
+              "Faster Decision Making — Real-time insights at management level",
+              "Regulatory Compliance — MNRE & DISCOM format built-in",
+              "Cost Savings — Reduce O&M team reporting overhead by 80%",
+              "Investor Confidence — Professional branded reports for stakeholders",
+            ].map((item, i) => (
+              <SectionWrapper key={i} delay={i * 0.06}>
+                <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-indigo-500/30 hover:shadow-lg transition-all duration-300">
+                  <CheckCircle2 className="text-indigo-500 w-5 h-5 shrink-0 mt-0.5" />
+                  <span className="font-medium text-slate-700 text-sm">{item}</span>
+                </div>
+              </SectionWrapper>
+            ))}
           </div>
         </div>
       </section>
@@ -170,10 +156,10 @@ export default function Page() {
       <section className="py-20 bg-transparent text-center relative z-10">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-3xl font-bold text-white mb-6 font-heading">Interested in ReportWiz?</h2>
-            <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your needs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
-              Get in Touch <ArrowRight className="w-4 h-4" />
+            <h2 className="text-3xl font-bold text-white mb-6 font-heading">Transform Your Reporting</h2>
+            <p className="text-gray-400 mb-8 text-lg">See how ReportWiz can automate your entire reporting workflow.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white rounded-full font-bold hover:from-indigo-700 hover:to-cyan-700 transition-all">
+              Request Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
         </div>
