@@ -1,0 +1,158 @@
+// Adaptive Engineering v2 — Database Schema
+// PostgreSQL via Neon, ORM via Prisma
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Admin Authentication ─────────────────────────────────────────────────────
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ─── Career / Jobs ────────────────────────────────────────────────────────────
+
+model Job {
+  id           String           @id @default(cuid())
+  title        String
+  slug         String           @unique
+  location     String
+  department   String
+  type         String           @default("Full-time")
+  description  String           @db.Text
+  requirements String           @db.Text
+  isActive     Boolean          @default(true)
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+  applications JobApplication[]
+}
+
+model JobApplication {
+  id          String   @id @default(cuid())
+  jobId       String
+  job         Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  name        String
+  email       String
+  phone       String
+  resumeUrl   String
+  coverLetter String?  @db.Text
+  status      String   @default("new")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([jobId])
+  @@index([status])
+}
+
+// ─── Contact Messages ─────────────────────────────────────────────────────────
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  subject   String
+  message   String   @db.Text
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([isRead])
+}
+
+// ─── Resources: Case Studies ──────────────────────────────────────────────────
+
+model CaseStudy {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  thumbnailUrl String
+  pdfUrl       String
+  description  String?  @db.Text
+  category     String?
+  sortOrder    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ─── Resources: Brochures ─────────────────────────────────────────────────────
+
+model Brochure {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  thumbnailUrl String
+  pdfUrl       String
+  category     String?
+  sortOrder    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ─── Resources: Blog Posts ────────────────────────────────────────────────────
+
+model BlogPost {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  thumbnailUrl String?
+  content      String   @db.Text
+  excerpt      String?  @db.Text
+  author       String   @default("Adaptive Engineering")
+  isPublished  Boolean  @default(false)
+  tags         String[] @default([])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([isPublished])
+}
+
+// ─── Resources: Certifications ────────────────────────────────────────────────
+
+model Certification {
+  id        String   @id @default(cuid())
+  title     String
+  imageUrl  String
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Testimonials ─────────────────────────────────────────────────────────────
+
+model Testimonial {
+  id          String @id @default(cuid())
+  quote       String @db.Text
+  author      String
+  designation String
+  company     String
+  sortOrder   Int    @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── Team Members ─────────────────────────────────────────────────────────────
+
+model TeamMember {
+  id          String   @id @default(cuid())
+  name        String
+  designation String
+  photoUrl    String?
+  department  String?
+  bio         String?  @db.Text
+  linkedinUrl String?
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

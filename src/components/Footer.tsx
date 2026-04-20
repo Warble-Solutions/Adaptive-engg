@@ -36,9 +36,10 @@ export default function Footer() {
                     <h5 className="text-white font-bold mb-6 text-lg tracking-wide">Quick Links</h5>
                     <ul className="space-y-4 text-sm text-gray-400 font-medium">
                         <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-                        <li><Link href="/about" className="hover:text-primary transition-colors">Company Profile</Link></li>
-                        <li><Link href="#" className="hover:text-primary transition-colors">Certifications</Link></li>
-                        <li><Link href="/contact" className="hover:text-primary transition-colors">Careers</Link></li>
+                        <li><Link href="/about/profile" className="hover:text-primary transition-colors">Company Profile</Link></li>
+                        <li><Link href="/resources/certifications" className="hover:text-primary transition-colors">Certifications</Link></li>
+                        <li><Link href="/resources/blogs" className="hover:text-primary transition-colors">Blogs & Insights</Link></li>
+                        <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
                         <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
                     </ul>
                 </div>
@@ -47,12 +48,13 @@ export default function Footer() {
                 <div>
                     <h5 className="text-white font-bold mb-6 text-lg tracking-wide">Solutions</h5>
                     <ul className="space-y-4 text-sm text-gray-400 font-medium">
-                        <li><Link href="/renewable" className="hover:text-primary hover:pl-1 transition-all">Unified Renewable Solution</Link></li>
-                        <li><Link href="/renewable#panels" className="hover:text-primary hover:pl-1 transition-all">Electrical Panel</Link></li>
-                        <li><Link href="/renewable#turnkey" className="hover:text-primary hover:pl-1 transition-all">Turnkey E&I</Link></li>
-                        <li><Link href="/renewable" className="hover:text-primary hover:pl-1 transition-all">IoT SCADA</Link></li>
-                        <li><Link href="/renewable" className="hover:text-primary hover:pl-1 transition-all">ReportWiz</Link></li>
-                        <li><Link href="/renewable" className="hover:text-primary hover:pl-1 transition-all">Central Monitoring System (CMS)</Link></li>
+                        <li><Link href="/renewable/unified" className="hover:text-primary hover:pl-1 transition-all">Unified Renewable Solution</Link></li>
+                        <li><Link href="/renewable/panels" className="hover:text-primary hover:pl-1 transition-all">Electrical Panel</Link></li>
+                        <li><Link href="/renewable/turnkey" className="hover:text-primary hover:pl-1 transition-all">Turnkey E&I</Link></li>
+                        <li><Link href="/pm-kusum/iot-scada" className="hover:text-primary hover:pl-1 transition-all">PM KUSUM & IoT SCADA</Link></li>
+                        <li><Link href="/infrastructure/tunnel" className="hover:text-primary hover:pl-1 transition-all">Tunnel Infrastructure</Link></li>
+                        <li><Link href="/privacy-policy" className="hover:text-primary hover:pl-1 transition-all">Privacy Policy</Link></li>
+                        <li><Link href="/terms" className="hover:text-primary hover:pl-1 transition-all">Terms & Conditions</Link></li>
                     </ul>
                 </div>
 

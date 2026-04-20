@@ -89,10 +89,10 @@ export default function Navbar() {
                                 About Us <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
                             <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                <DropdownLink href="/about">Company Profile</DropdownLink>
-                                <DropdownLink href="/about">Our Team</DropdownLink>
+                                <DropdownLink href="/about/profile">Company Profile</DropdownLink>
+                                <DropdownLink href="/about/team">Our Team</DropdownLink>
                                 <DropdownLink href="/history">Our Journey</DropdownLink>
-                                <DropdownLink href="/contact">Career</DropdownLink>
+                                <DropdownLink href="/careers">Careers</DropdownLink>
                                 <DropdownLink href="/contact">Contact Us</DropdownLink>
                             </div>
                         </div>
@@ -105,9 +105,9 @@ export default function Navbar() {
                                 Renewable Solutions <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
                             <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                <DropdownLink href="/renewable">Unified Renewable Solution</DropdownLink>
-                                <DropdownLink href="/renewable#panels">Electrical Panels</DropdownLink>
-                                <DropdownLink href="/renewable#turnkey">Turnkey E&I</DropdownLink>
+                                <DropdownLink href="/renewable/unified">Unified Renewable Solution</DropdownLink>
+                                <DropdownLink href="/renewable/panels">Electrical Panels</DropdownLink>
+                                <DropdownLink href="/renewable/turnkey">Turnkey E&I</DropdownLink>
                                 <DropdownLink href="/ppc">Power Plant Control</DropdownLink>
                             </div>
                         </div>
@@ -120,14 +120,14 @@ export default function Navbar() {
                                 PM-KUSUM <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
                             <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                <DropdownLink href="/pm-kusum">IoT SCADA</DropdownLink>
-                                <DropdownLink href="/pm-kusum">ReportWiz</DropdownLink>
-                                <DropdownLink href="/pm-kusum">Central Monitoring System (CMS)</DropdownLink>
-                                <DropdownLink href="/pm-kusum">Asset Management System (AMS)</DropdownLink>
-                                <DropdownLink href="/pm-kusum">HT Panel</DropdownLink>
-                                <DropdownLink href="/pm-kusum">ACDB Panels</DropdownLink>
-                                <DropdownLink href="/pm-kusum">Weather Monitoring System (WMS)</DropdownLink>
-                                <DropdownLink href="/pm-kusum">Telemetry System</DropdownLink>
+                                <DropdownLink href="/pm-kusum/iot-scada">IoT SCADA</DropdownLink>
+                                <DropdownLink href="/pm-kusum/reportwiz">ReportWiz</DropdownLink>
+                                <DropdownLink href="/pm-kusum/cms">Central Monitoring System (CMS)</DropdownLink>
+                                <DropdownLink href="/pm-kusum/ams">Asset Management System (AMS)</DropdownLink>
+                                <DropdownLink href="/pm-kusum/ht-panel">HT Panel</DropdownLink>
+                                <DropdownLink href="/pm-kusum/acdb-panels">ACDB Panels</DropdownLink>
+                                <DropdownLink href="/pm-kusum/wms">Weather Monitoring System (WMS)</DropdownLink>
+                                <DropdownLink href="/pm-kusum/telemetry">Telemetry System</DropdownLink>
                             </div>
                         </div>
 
@@ -136,9 +136,9 @@ export default function Navbar() {
                                 Infrastructure <ChevronDown className="w-3 h-3 opacity-50" />
                             </button>
                             <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                <DropdownLink href="#">Tunnel Solutions</DropdownLink>
-                                <DropdownLink href="#">Data Center</DropdownLink>
-                                <DropdownLink href="#">Industrial Automation</DropdownLink>
+                                <DropdownLink href="/infrastructure/tunnel">Tunnel Solutions</DropdownLink>
+                                <DropdownLink href="/infrastructure/data-center">Data Center</DropdownLink>
+                                <DropdownLink href="/infrastructure/automation">Industrial Automation</DropdownLink>
                             </div>
                         </div>
 
@@ -147,9 +147,10 @@ export default function Navbar() {
                                 Resources <ChevronDown className="w-3 h-3 opacity-50" />
                             </button>
                             <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                <DropdownLink href="#">Certification</DropdownLink>
-                                <DropdownLink href="#">Brochure</DropdownLink>
-                                <DropdownLink href="#">Case Studies</DropdownLink>
+                                <DropdownLink href="/resources/certifications">Certification</DropdownLink>
+                                <DropdownLink href="/resources/brochures">Brochures</DropdownLink>
+                                <DropdownLink href="/resources/case-studies">Case Studies</DropdownLink>
+                                <DropdownLink href="/resources/blogs">Blogs</DropdownLink>
                             </div>
                         </div>
                     </div>
