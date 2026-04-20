@@ -203,7 +203,7 @@ export default function RenewablePage() {
                         <div className="lg:w-1/2">
                             <SectionWrapper>
                                 <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">2. Electrical Panels</h2>
-                                <p className="text-xl text-primary font-bold mb-6">Manufactured in our 125,000 Sq. Ft. Manufacturing Facility.</p>
+                                <p className="text-xl text-primary font-bold mb-6">Manufactured in our 125,000+ Sq. Ft. Manufacturing Facility.</p>
                                 <p className="text-slate-600 leading-relaxed mb-8">
                                     We design and manufacture high-performance control panels ensuring safety and reliability for critical infrastructure.
                                 </p>

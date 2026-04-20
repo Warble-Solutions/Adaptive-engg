@@ -8,6 +8,7 @@ import Link from "next/link";
 import { CheckCircle2, Rocket, Factory, TrendingUp, Trophy, MapPin, Cpu, Activity } from "lucide-react";
 import MicroCTA from "@/components/ui/MicroCTA";
 import Counter from "@/components/ui/Counter";
+import { COMPANY_STATS } from "@/lib/constants";
 
 // NOTE: Navbar and Footer are provided globally by layout.tsx
 
@@ -59,27 +60,27 @@ export default function AboutPage() {
                                 <div className="grid grid-cols-3 gap-8 text-center">
                                     <div>
                                         <Counter
-                                            value={16}
-                                            suffix="+"
+                                            value={COMPANY_STATS.yearsExperience.value}
+                                            suffix={COMPANY_STATS.yearsExperience.suffix}
                                             className="text-4xl font-extrabold text-primary mb-1 block"
                                         />
                                         <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Years</div>
                                     </div>
                                     <div>
                                         <Counter
-                                            value={300}
-                                            suffix="+"
+                                            value={COMPANY_STATS.manpower.value}
+                                            suffix={COMPANY_STATS.manpower.suffix}
                                             className="text-4xl font-extrabold text-primary mb-1 block"
                                         />
                                         <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Manpower</div>
                                     </div>
                                     <div>
                                         <Counter
-                                            value={1000}
-                                            suffix="+"
+                                            value={COMPANY_STATS.scadaInstalled.value}
+                                            suffix={COMPANY_STATS.scadaInstalled.suffix}
                                             className="text-4xl font-extrabold text-primary mb-1 block"
                                         />
-                                        <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Projects</div>
+                                        <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">{COMPANY_STATS.scadaInstalled.label}</div>
                                     </div>
                                 </div>
                             </SectionWrapper>

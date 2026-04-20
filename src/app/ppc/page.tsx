@@ -21,6 +21,7 @@ import {
 // Navbar and Footer are globally in layout
 
 import SectionWrapper from "@/components/SectionWrapper";
+import { PPC_STATS } from "@/lib/constants";
 
 export default function PPCPage() {
 
@@ -78,11 +79,11 @@ export default function PPCPage() {
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[80px] -mr-32 -mt-32"></div>
                                 <div className="relative z-10 grid grid-cols-2 gap-8">
                                     <div>
-                                        <div className="text-4xl font-black text-primary mb-2">200+</div>
+                                        <div className="text-4xl font-black text-primary mb-2">{PPC_STATS.ppcProjects.value}+</div>
                                         <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">PPC Projects</div>
                                     </div>
                                     <div>
-                                        <div className="text-4xl font-black text-primary mb-2">40GW+</div>
+                                        <div className="text-4xl font-black text-primary mb-2">{PPC_STATS.renewableCapacity.value}GW+</div>
                                         <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">Installed Base</div>
                                     </div>
                                     <div className="col-span-2 pt-8 border-t border-white/10">
@@ -505,7 +506,7 @@ export default function PPCPage() {
                     <SectionWrapper>
                         <h2 className="text-4xl font-bold text-white mb-6 font-heading">Partner with AEPL</h2>
                         <p className="text-gray-400 mb-8 text-lg">
-                            Leverage our 16+ years of expertise to configure your PPC faster and more accurately.
+                            Leverage our {PPC_STATS.yearsExperience.value}+ years of expertise to configure your PPC faster and more accurately.
                             Accelerate commissioning and ensure long-term operational success.
                         </p>
                         <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">

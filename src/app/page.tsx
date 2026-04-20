@@ -10,6 +10,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDraftingCompass, faIndustry, faScrewdriverWrench, faDesktop } from "@fortawesome/free-solid-svg-icons";
 import SceneTrigger from "@/components/3d/SceneTrigger";
+import { COMPANY_STATS } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -61,12 +62,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 text-center">
             {[
-              { value: 16, suffix: "+", label: "Years Experience" },
-              { value: 300, suffix: "+", label: "Manpower" },
-              { value: 68, suffix: "GW+", label: "Assets Monitored" },
-              { value: 125000, suffix: "+", label: "Sq. Ft. Facility" },
-              { value: 1000, suffix: "+", label: "Projects Executed" },
-              { value: 500, suffix: "+", label: "Plants Monitored" }
+              { value: COMPANY_STATS.yearsExperience.value, suffix: COMPANY_STATS.yearsExperience.suffix, label: COMPANY_STATS.yearsExperience.label },
+              { value: COMPANY_STATS.manpower.value, suffix: COMPANY_STATS.manpower.suffix, label: COMPANY_STATS.manpower.label },
+              { value: COMPANY_STATS.scadaInstalled.value, suffix: COMPANY_STATS.scadaInstalled.suffix, label: COMPANY_STATS.scadaInstalled.label },
+              { value: COMPANY_STATS.manufacturingFacility.value, suffix: COMPANY_STATS.manufacturingFacility.suffix, label: COMPANY_STATS.manufacturingFacility.label },
+              { value: COMPANY_STATS.electricalPanels.value, suffix: COMPANY_STATS.electricalPanels.suffix, label: COMPANY_STATS.electricalPanels.label },
+              { value: COMPANY_STATS.satisfiedCustomers.value, suffix: COMPANY_STATS.satisfiedCustomers.suffix, label: COMPANY_STATS.satisfiedCustomers.label }
             ].map((stat, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 {/* <div className="text-5xl font-extrabold text-slate-900 font-heading mb-2">{stat.val}</div> */}
@@ -136,7 +137,7 @@ export default function Home() {
               <span className="text-primary font-bold uppercase text-sm tracking-widest mb-2 block">ReportWiz Platform</span>
               <h2 className="text-5xl font-extrabold text-slate-900 mb-8 font-heading">Intelligent <br /> Monitoring</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Our proprietary software provides Central Plant Monitoring and Mobile Asset Management. With an installed base of over 68GW, we ensure optimal performance across 500+ plants.
+                Our proprietary software provides Central Plant Monitoring and Mobile Asset Management. With an installed base of over {COMPANY_STATS.installedBase.value}GW, we ensure optimal performance across {COMPANY_STATS.satisfiedCustomers.value}+ plants.
               </p>
               <div className="mb-8">
                 <MicroCTA text="Request Live Demo" variant="quote" href="/contact?subject=Demo" context="light" />
@@ -397,7 +398,7 @@ export default function Home() {
               </div>
               <div className="mt-4">
                 <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors">Manufacturing Facility</h4>
-                <p className="text-sm text-gray-500 mt-1">Inside our 125,000 Sq. Ft. Plant.</p>
+                <p className="text-sm text-gray-500 mt-1">Inside our {COMPANY_STATS.manufacturingFacility.formatted} Sq. Ft. Plant.</p>
               </div>
             </SectionWrapper>
 
@@ -450,17 +451,17 @@ export default function Home() {
           <div className="flex gap-16 text-center">
             <SectionWrapper delay={0.1}>
               <div className="flex items-baseline justify-center gap-1 mb-2">
-                <Counter value={68} className="text-5xl font-extrabold text-white font-heading" />
-                <span className="text-5xl font-extrabold text-primary font-heading">GW+</span>
+                <Counter value={COMPANY_STATS.installedBase.value} className="text-5xl font-extrabold text-white font-heading" />
+                <span className="text-5xl font-extrabold text-primary font-heading">{COMPANY_STATS.installedBase.suffix}</span>
               </div>
-              <div className="text-xs font-bold uppercase tracking-widest text-gray-400">Monitored Assets</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-gray-400">{COMPANY_STATS.installedBase.label}</div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
               <div className="flex items-baseline justify-center gap-1 mb-2">
-                <Counter value={1000} className="text-5xl font-extrabold text-white font-heading" />
+                <Counter value={COMPANY_STATS.scadaInstalled.value} className="text-5xl font-extrabold text-white font-heading" />
                 <span className="text-5xl font-extrabold text-primary font-heading">+</span>
               </div>
-              <div className="text-xs font-bold uppercase tracking-widest text-gray-400">Total Projects</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-gray-400">{COMPANY_STATS.scadaInstalled.label}</div>
             </SectionWrapper>
           </div>
         </div>
