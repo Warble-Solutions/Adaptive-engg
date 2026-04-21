@@ -107,7 +107,7 @@ export default function Navbar() {
                             <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <div className="relative group/sub">
                                     <Link href="/renewable/unified" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
-                                        <span>Unified Renewable Solutions</span>
+                                        <span>Unified Renewable Solution</span>
                                         <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/sub:opacity-100 transition-opacity" />
                                     </Link>
                                     <div className="absolute top-0 left-full w-64 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 transform translate-x-2 group-hover/sub:translate-x-0 ml-1 overflow-hidden z-50">
