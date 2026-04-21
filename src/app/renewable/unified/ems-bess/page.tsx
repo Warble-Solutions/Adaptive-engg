@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <div className="flex flex-col w-full">
       {/* HERO — Split Layout */}
-      <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
+      <section className="section-hero relative min-h-screen flex items-center px-6 pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a1628] via-[#102040] to-[#0a1628]">
           <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(0deg, rgba(59,130,246,0.3) 1px, transparent 1px)', backgroundSize: '1px 20px' }}></div>
           <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-blue-500/15 rounded-full blur-[120px]"></div>
@@ -24,7 +24,7 @@ export default function Page() {
             {/* Left — Text */}
             <SectionWrapper>
               <div>
-                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-blue-500/20">
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-blue-500/20">
                   <Battery className="w-4 h-4" />
                   <span>Unified Renewable Solution</span>
                 </div>
