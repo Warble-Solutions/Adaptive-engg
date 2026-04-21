@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown } from "lucide-react";
+import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera } from "lucide-react";
 
 // ─────────────────────────────────────────────
 // Utility: animated number that fluctuates
@@ -527,6 +527,117 @@ export function ACDBPanelVisual() {
         {/* Mounting bracket */}
         <div className="absolute -left-2 top-1/4 w-2 h-8 bg-slate-500 rounded-l"></div>
         <div className="absolute -right-2 top-1/4 w-2 h-8 bg-slate-500 rounded-r"></div>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
+// 9. CMMS Work Order Dashboard
+// ─────────────────────────────────────────────
+export function CMMSDashboard() {
+  const [activeTab, setActiveTab] = useState<"open" | "progress" | "done">("open");
+  const [elapsed, setElapsed] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setElapsed(p => p + 1), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const workOrders: Record<string, { id: string; title: string; site: string; priority: "critical" | "high" | "medium"; assignee: string; sla: string }[]> = {
+    open: [
+      { id: "WO-1847", title: "INV-07 DC String Fault", site: "Rajasthan-01", priority: "critical", assignee: "VK", sla: "2h 14m" },
+      { id: "WO-1848", title: "Panel Cleaning — Block C", site: "Gujarat-14", priority: "medium", assignee: "SP", sla: "8h 00m" },
+    ],
+    progress: [
+      { id: "WO-1845", title: "Tracker Motor Replacement", site: "MP-08", priority: "high", assignee: "RM", sla: "1h 32m" },
+      { id: "WO-1846", title: "WMS Sensor Calibration", site: "Karnataka-11", priority: "medium", assignee: "AK", sla: "4h 15m" },
+    ],
+    done: [
+      { id: "WO-1843", title: "Transformer Oil Test", site: "TN-07", priority: "medium", assignee: "SP", sla: "Completed" },
+      { id: "WO-1844", title: "CB Trip Investigation", site: "AP-19", priority: "high", assignee: "VK", sla: "Completed" },
+    ],
+  };
+
+  const priorityColors = { critical: "bg-red-500", high: "bg-amber-500", medium: "bg-blue-500" };
+  const tabs = [
+    { key: "open" as const, label: "Open", count: 2, color: "text-red-400" },
+    { key: "progress" as const, label: "In Progress", count: 2, color: "text-amber-400" },
+    { key: "done" as const, label: "Completed", count: 2, color: "text-emerald-400" },
+  ];
+
+  return (
+    <div className="w-full h-full bg-[#0c1220] rounded-2xl border border-slate-700/50 overflow-hidden shadow-2xl p-4 text-white select-none flex flex-col">
+      {/* Title bar */}
+      <div className="flex items-center justify-between mb-3 px-1 shrink-0">
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 bg-amber-500/20 rounded-lg flex items-center justify-center">
+            <Wrench className="w-4 h-4 text-amber-400" />
+          </div>
+          <div>
+            <span className="text-xs font-bold text-white block leading-tight">CMMS Dashboard</span>
+            <span className="text-[8px] text-slate-500">Work Order Management</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-1.5 bg-white/5 rounded-lg px-2.5 py-1 border border-white/5">
+          <Clock className="w-3 h-3 text-amber-400" />
+          <span className="text-[9px] font-mono text-amber-400">{Math.floor(elapsed / 60).toString().padStart(2, '0')}:{(elapsed % 60).toString().padStart(2, '0')}</span>
+        </div>
+      </div>
+
+      {/* Summary strip */}
+      <div className="grid grid-cols-4 gap-2 mb-3 shrink-0">
+        {[
+          { label: "Today's WO", value: "12", color: "text-white" },
+          { label: "Open", value: "2", color: "text-red-400" },
+          { label: "In Progress", value: "2", color: "text-amber-400" },
+          { label: "Closed", value: "8", color: "text-emerald-400" },
+        ].map((s, i) => (
+          <div key={i} className="bg-white/5 rounded-lg p-2 text-center border border-white/5">
+            <div className={`text-base font-black font-mono ${s.color}`}>{s.value}</div>
+            <span className="text-[7px] text-slate-500 font-bold uppercase tracking-wider">{s.label}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Tab switcher */}
+      <div className="flex gap-1 mb-3 shrink-0">
+        {tabs.map(tab => (
+          <button
+            key={tab.key}
+            onClick={() => setActiveTab(tab.key)}
+            className={`flex-1 py-1.5 rounded-lg text-[9px] font-bold uppercase tracking-wider transition-all ${
+              activeTab === tab.key
+                ? 'bg-white/10 text-white border border-white/10'
+                : 'bg-transparent text-slate-500 hover:text-slate-300 border border-transparent'
+            }`}
+          >
+            {tab.label} <span className={tab.color}>({tab.count})</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Work order list */}
+      <div className="flex-grow space-y-1.5 overflow-hidden">
+        {workOrders[activeTab].map((wo, i) => (
+          <div key={i} className="flex items-center gap-3 px-3 py-2.5 bg-white/[0.03] rounded-xl border border-white/5 hover:bg-white/[0.07] hover:border-white/10 transition-all cursor-pointer group">
+            <div className={`w-1.5 h-8 ${priorityColors[wo.priority]} rounded-full shrink-0`}></div>
+            <div className="flex-grow min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-[9px] font-mono text-slate-500">{wo.id}</span>
+                <span className="text-[10px] font-bold text-white truncate">{wo.title}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-[8px] text-slate-500">{wo.site}</span>
+                <span className="text-[8px] text-slate-600">•</span>
+                <span className="text-[8px] text-slate-500">@{wo.assignee}</span>
+              </div>
+            </div>
+            <div className="shrink-0 text-right">
+              <span className={`text-[9px] font-mono ${wo.sla === 'Completed' ? 'text-emerald-400' : 'text-amber-400'}`}>{wo.sla}</span>
+              <span className="text-[8px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity block">View →</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
