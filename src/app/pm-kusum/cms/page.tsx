@@ -89,14 +89,18 @@ export default function Page() {
           </SectionWrapper>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Bento Box 1 - Medium */}
+            {/* Bento Box 1 - Medium (Image bg) */}
             <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
-                  <Wifi className="w-6 h-6" />
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 h-[300px] flex flex-col justify-end group relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_telemetry_1776742420287.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 bg-transparent border border-white/20 rounded-xl flex items-center justify-center text-white mb-3 backdrop-blur-lg group-hover:bg-white/10 transition-colors">
+                    <Wifi className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Light Weight Comm.</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-2">Optimized payloads for low-bandwidth rural PM-KUSUM connections.</p>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 relative z-10">Light Weight Comm.</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow relative z-10">Optimized data payloads strictly designed for low-bandwidth connections typical of rural PM-KUSUM pump and solar installations without data drop.</p>
               </div>
             </SectionWrapper>
 
@@ -131,17 +135,21 @@ export default function Page() {
               </div>
             </SectionWrapper>
 
-            {/* Bento Box 4 - Flow */}
+            {/* Bento Box 4 - Flow (Image bg) */}
             <SectionWrapper delay={0.4}>
-              <div className="p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Shield className="w-32 h-32 text-cyan-500" />
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ht_panel_1776742333863.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/60 to-transparent"></div>
+                <div className="absolute top-0 right-0 p-6 opacity-30 group-hover:opacity-50 transition-opacity z-10 drop-shadow-2xl">
+                  <Shield className="w-24 h-24 text-cyan-400" />
                 </div>
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 relative z-10 group-hover:scale-110 transition-transform">
-                  <Lock className="w-6 h-6" />
+                <div className="relative z-10 mt-auto">
+                  <div className="w-12 h-12 bg-transparent border border-cyan-500/30 rounded-2xl flex items-center justify-center text-cyan-300 mb-4 backdrop-blur-lg group-hover:scale-110 transition-transform">
+                    <Lock className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Secure Infrastructure</h3>
+                  <p className="text-gray-200 text-sm leading-relaxed">End-to-end encryption. Featuring multi-factor authentication, granular RBAC, and full SOC compliance.</p>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 relative z-10">Secure Infrastructure</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow relative z-10">End-to-end encryption at rest and in transit. Featuring multi-factor authentication, granular RBAC, and full SOC-mandated compliance logs.</p>
               </div>
             </SectionWrapper>
           </div>
