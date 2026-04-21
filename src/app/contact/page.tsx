@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-    Phone, Mail, MapPin, Send, MessageSquare,
-    Briefcase, LifeBuoy, Building2, ChevronDown, CheckCircle2
+    Phone, Mail, Send,
+    Briefcase, LifeBuoy, Building2, ChevronDown
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 
@@ -18,7 +18,6 @@ export default function ContactPage() {
 
     return (
         <div className="flex flex-col w-full">
-            {/* 1. HERO SECTION (Dark) */}
             {/* 1. HERO SECTION (Dark) */}
             <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
                 {/* Background Image */}
@@ -35,7 +34,7 @@ export default function ContactPage() {
                 <div className="z-10 max-w-7xl relative">
                     <SectionWrapper>
                         <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-                            Establish <span className="text-primary drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">Connection</span>
+                            Get in <span className="text-primary drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">Touch</span>
                         </h1>
                         <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
                             Get in touch with our engineering team for Consultations, Quotes, or Support
@@ -164,7 +163,7 @@ export default function ContactPage() {
                         {[
                             { title: "Sales & Business", desc: "For RFQs and Tenders.", email: "sales@adaptive-engg.com", icon: <Briefcase /> },
                             { title: "Technical Support", desc: "For O&M and Troubleshooting.", email: "support@adaptive-engg.com", icon: <LifeBuoy /> },
-                            { title: "HR & Careers", desc: "Join the engineering corps.", email: "hr@adaptive-engg.com", icon: <Building2 /> }
+                            { title: "HR & Careers", desc: "Explore career opportunities.", email: "hr@adaptive-engg.com", icon: <Building2 /> }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
                                 <div className="dark-card p-10 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer text-center h-full">
@@ -183,7 +182,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* 5. TRANSMISSION PROTOCOLS (FAQ - Dark) */}
+            {/* 5. FAQ SECTION (Dark) */}
             <section className="section-dark py-24 bg-transparent text-white relative z-10 -mt-10 pt-32">
                 <div className="max-w-3xl mx-auto px-6">
                     <SectionWrapper>
@@ -192,7 +191,7 @@ export default function ContactPage() {
 
                     <div className="space-y-4">
                         {[
-                            { q: "Do you handle government liasioning?", a: "Yes, our Turnkey service includes end-to-end CEIG and DISCOM approvals." },
+                            { q: "Do you handle government liaising?", a: "Yes, our Turnkey service includes end-to-end CEIG and DISCOM approvals." },
                             { q: "What is the warranty on panels?", a: "Standard 25-year performance warranty on modules, 1-year on panels." },
                             { q: "Is SolarWiz compatible with my existing pump?", a: "Yes, SolarWiz is retrofit-ready for most AC/DC pumps." }
                         ].map((item, i) => (

@@ -371,7 +371,7 @@ export default function AboutPage() {
                 <div className="max-w-2xl mx-auto px-6">
                     <SectionWrapper>
                         <h2 className="text-4xl font-bold mb-8 font-heading">Want to join our team?</h2>
-                        <Link href="/contact" className="inline-block px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
+                        <Link href="/careers" className="inline-block px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
                             View Careers
                         </Link>
                     </SectionWrapper>

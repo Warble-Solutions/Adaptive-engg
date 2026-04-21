@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Linkedin, Twitter, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Twitter, Youtube, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,9 +25,11 @@ export default function Footer() {
                         India&apos;s most trusted company for Renewable Energy, PM-KUSUM, and Industrial Automation solutions.
                     </p>
                     <div className="flex gap-4">
-                        <Link href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Linkedin className="w-5 h-5" /></Link>
-                        <Link href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Twitter className="w-5 h-5" /></Link>
-                        <Link href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Youtube className="w-5 h-5" /></Link>
+                        <Link href="https://www.facebook.com/profile.php?id=61551473856862" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Facebook className="w-5 h-5" /></Link>
+                        <Link href="https://www.instagram.com/adaptive_engg_pvt_ltd" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Instagram className="w-5 h-5" /></Link>
+                        <Link href="https://www.linkedin.com/company/adaptive-engineering-pvt-ltd/" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Linkedin className="w-5 h-5" /></Link>
+                        <Link href="https://x.com/Adaptive_Engg/" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Twitter className="w-5 h-5" /></Link>
+                        <Link href="https://www.youtube.com/@AdaptiveEngineeringPvt.Ltd." target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><Youtube className="w-5 h-5" /></Link>
                     </div>
                 </div>
 

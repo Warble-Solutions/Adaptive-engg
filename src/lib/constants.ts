@@ -14,7 +14,7 @@ export const COMPANY_STATS = {
 } as const;
 
 export const PPC_STATS = {
-  yearsExperience: { value: 16, suffix: "+", label: "Years Experience" },
+  yearsExperience: { value: 17, suffix: "+", label: "Years Experience" },
   ppcProjects: { value: 200, suffix: "+", label: "PPC Projects Executed Across India" },
   installedBase: { value: 68, suffix: "GW+", label: "Installed Base" },
   responseTime: { value: "<200", suffix: " ms", label: "Real-time Response to Grid Events" },
@@ -22,7 +22,7 @@ export const PPC_STATS = {
 } as const;
 
 export const KUSUM_STATS = {
-  yearsExperience: { value: 16, suffix: "+", label: "Years of Experience" },
+  yearsExperience: { value: 17, suffix: "+", label: "Years of Experience" },
   installedBase: { value: 68, suffix: " GW+", label: "Installed Base" },
   ppcSolar: { value: 8, suffix: " GW+", label: "PPC Solar" },
   statesOfIndia: { value: 19, suffix: "+", label: "States of India Benefiting" },

@@ -119,7 +119,7 @@ export default function Home() {
                 <img src="https://adaptive-engg.com/wp-content/uploads/2023/08/tunnel-mp.png.webp" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="Infra" />
                 <h3 className="text-2xl font-bold text-white mb-4">Infrastructure Solutions</h3>
                 <p className="text-gray-400 leading-relaxed mb-8">Specialized automation for Tunnels and Data Centers. In-house manufacturing of HT/LT Panels, MCC, and PCC for heavy industry.</p>
-                <span className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors">Learn More</span>
+                <Link href="/infrastructure/tunnel" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors">Learn More</Link>
               </div>
             </SectionWrapper>
           </div>
@@ -182,7 +182,7 @@ export default function Home() {
             <SectionWrapper>
               <h2 className="text-5xl font-bold text-white font-heading">Case Studies</h2>
             </SectionWrapper>
-            <Link href="#" className="text-primary font-bold hover:text-white transition hidden md:block">View All Projects</Link>
+            <Link href="/resources/case-studies" className="text-primary font-bold hover:text-white transition hidden md:block">View All Projects</Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -477,7 +477,7 @@ export default function Home() {
                 Our best-in-class manufacturing facility is certified by TUV Nord. We maintain stringent safety standards and a Zero Harm policy.
               </p>
               <div className="mt-8">
-                <Link href="/about" className="text-primary font-bold border-b-2 border-primary pb-1 hover:text-slate-900 transition-colors">View Safety Policy</Link>
+                <Link href="/resources/certifications" className="text-primary font-bold border-b-2 border-primary pb-1 hover:text-slate-900 transition-colors">View Certifications</Link>
               </div>
             </SectionWrapper>
           </div>
