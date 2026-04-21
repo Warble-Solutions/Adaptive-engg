@@ -1,7 +1,7 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart } from "lucide-react";
-import { AnalyticsDashboard } from "@/components/DashboardMockups";
+import { AnalyticsDashboard, AnalyticsHeroDashboards } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "Advanced Analytics | Unified Renewable Solutions | Adaptive Engineering",
@@ -11,25 +11,41 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      {/* HERO — Chart-inspired gradient */}
-      <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
+      {/* HERO — Split Layout: Text left, Dashboards Right */}
+      <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#1a0a2e] via-[#16213e] to-[#0f3460]">
           <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(139,92,246,0.3) 50px), repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(139,92,246,0.3) 50px)' }}></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[150px]"></div>
         </div>
-        <div className="z-10 max-w-7xl relative">
-          <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-500/10 backdrop-blur-sm text-purple-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-purple-500/20">
-              <PieChart className="w-4 h-4" />
-              <span>Unified Renewable Solution</span>
-            </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading">
-              Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Analytics</span>
-            </h1>
-            <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
-              Transform raw renewable energy data into actionable intelligence with advanced visualization, accurate loss bucket analysis, and AI-powered insights.
-            </p>
-          </SectionWrapper>
+        
+        <div className="z-10 max-w-7xl mx-auto w-full relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Text */}
+            <SectionWrapper>
+              <div>
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-500/10 backdrop-blur-sm text-purple-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-purple-500/20">
+                  <PieChart className="w-4 h-4" />
+                  <span>Unified Renewable Solution</span>
+                </div>
+                <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading">
+                  Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Analytics</span>
+                </h1>
+                <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
+                  Transform raw renewable energy data into actionable intelligence with advanced visualization, accurate loss bucket analysis, and AI-powered insights.
+                </p>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-purple-500 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                  Request Demo <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </SectionWrapper>
+
+            {/* Right — Overlapping Dashboard Cards */}
+            <SectionWrapper delay={0.3}>
+              <div className="hidden lg:block h-[480px]">
+                <AnalyticsHeroDashboards />
+              </div>
+            </SectionWrapper>
+          </div>
         </div>
       </section>
 

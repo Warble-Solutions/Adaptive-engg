@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe } from "lucide-react";
+import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe, PieChart, Brain, BarChart3 } from "lucide-react";
 
 // ─────────────────────────────────────────────
 // Utility: animated number that fluctuates
@@ -908,6 +908,183 @@ export function CMSHeroDashboards() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
+// 12. Analytics Hero — Overlapping Dashboard Cards
+// ─────────────────────────────────────────────
+export function AnalyticsHeroDashboards() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  return (
+    <div className="relative w-full h-[500px] select-none flex items-center justify-center">
+      {/* Background ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-purple-500/20 rounded-full blur-[80px] pointer-events-none"></div>
+
+      {/* Card 1 (Back Left) — Loss Bucket Analysis */}
+      <motion.div 
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute top-4 left-0 w-[240px] z-[1] -rotate-6"
+      >
+        <div className="w-full bg-[#120a1f]/60 backdrop-blur-xl rounded-2xl border border-purple-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-3">
+              <PieChart className="w-4 h-4 text-purple-400" />
+              <span className="text-[10px] font-bold text-purple-400 uppercase tracking-wider">Loss Buckets</span>
+            </div>
+            {/* Waterfall chart abstraction */}
+            <div className="space-y-1.5 mb-3">
+              {[
+                { label: "Theoretical Yield", val: 100, color: "bg-purple-500" },
+                { label: "Soiling Loss", val: -4, color: "bg-rose-400" },
+                { label: "Grid Curtailment", val: -2, color: "bg-rose-400" },
+                { label: "Eqp. Downtime", val: -1.5, color: "bg-rose-400" },
+                { label: "Actual Yield", val: 92.5, color: "bg-emerald-400" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <div className="w-[55px] text-[8px] text-slate-400 font-bold tracking-wider truncate">{item.label}</div>
+                  <div className="flex-1 h-3 rounded-sm bg-white/5 overflow-hidden flex" style={{ justifyContent: item.val < 0 ? 'flex-end' : 'flex-start' }}>
+                    <div 
+                      className={`h-full ${item.color} rounded-sm`} 
+                      style={{ 
+                        width: `${Math.abs(item.val)}%`, 
+                        opacity: i === 0 || i === 4 ? 0.8 : 0.6 
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-8 text-[8px] font-mono font-bold text-right text-slate-300">
+                    {item.val > 0 && i !== 0 ? '+' : ''}{item.val}{i !== 0 ? '%' : ''}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Card 2 (Bottom Right) — AI Predictions */}
+      <motion.div 
+        animate={{ y: [0, 12, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        className="absolute bottom-8 right-0 w-[260px] z-[2] rotate-3"
+      >
+        <div className="w-full bg-[#120a1f]/70 backdrop-blur-xl rounded-2xl border border-pink-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.5)] p-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent"></div>
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <Brain className="w-4 h-4 text-pink-400" />
+                <span className="text-[10px] font-bold text-pink-400 uppercase tracking-wider">AI Forecasting</span>
+              </div>
+              <span className="px-1.5 py-0.5 bg-pink-500/20 text-pink-400 rounded text-[9px] font-bold border border-pink-500/30">98.2% ACC</span>
+            </div>
+            
+            {/* Line chart abstraction */}
+            <div className="relative h-20 w-full mb-2">
+              <div className="absolute inset-x-0 bottom-0 top-0 border-b border-l border-white/10"></div>
+              {/* Actual line */}
+              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                <path d="M0,60 Q20,50 40,30 T80,40 T120,20 T160,30 T200,10" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+                <path d="M0,55 Q20,40 40,45 T80,20 T120,35 T160,15 T200,5" fill="none" stroke="#ec4899" strokeWidth="2.5" />
+                {/* Area fill */}
+                <path d="M0,80 L0,55 Q20,40 40,45 T80,20 T120,35 T160,15 T200,5 L200,80 Z" fill="url(#pink-gradient)" />
+                <defs>
+                  <linearGradient id="pink-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="rgba(236,72,153,0.3)" />
+                    <stop offset="100%" stopColor="rgba(236,72,153,0)" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              {/* Highlight point */}
+              <div className="absolute top-[5px] right-0 w-2 h-2 rounded-full bg-pink-400 shadow-[0_0_10px_#ec4899]"></div>
+            </div>
+            <div className="flex justify-between items-center text-[8px] text-slate-400 font-mono">
+              <span>Nov 12</span>
+              <span>Nov 14</span>
+              <span className="text-pink-400">Next 48h</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Card 3 (Center Front) — Advanced Analytics Dashboard */}
+      <motion.div 
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] z-[3]"
+      >
+        <div className="w-full bg-[#120a1f]/80 backdrop-blur-2xl rounded-3xl border border-purple-500/40 shadow-[0_16px_60px_rgba(168,85,247,0.25)] p-5 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 pointer-events-none"></div>
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/30 blur-3xl rounded-full"></div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-center gap-2">
+                <BarChart3 className="w-5 h-5 text-purple-400" />
+                <span className="text-xs font-black text-white tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">Intelligent Analytics</span>
+              </div>
+              <div className="flex gap-1 bg-white/5 p-1 rounded-lg border border-white/10">
+                {['Day', 'Month', 'Year'].map((t, i) => (
+                  <div key={t} className={`px-2 py-0.5 text-[8px] font-bold rounded cursor-pointer ${i === 1 ? 'bg-purple-500/40 text-white' : 'text-slate-400 hover:text-white'}`}>
+                    {t}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Performance Grid */}
+            <div className="grid grid-cols-2 gap-3 mb-5">
+              <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-xl p-3 relative overflow-hidden">
+                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-1">Portfolio CUF</div>
+                <div className="text-2xl font-bold text-white font-mono gap-1 flex items-baseline">
+                  24.8<span className="text-xs text-slate-500">%</span>
+                </div>
+                <div className="mt-1 flex items-center gap-1 text-[9px] text-emerald-400">
+                  <TrendingUp className="w-3 h-3" /> +1.2% YoY
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 rounded-xl p-3 relative overflow-hidden">
+                <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-rose-400 rounded-full animate-pulse"></div>
+                <div className="text-[10px] text-purple-300 font-bold uppercase tracking-wider mb-1">Detected Anomalies</div>
+                <div className="text-2xl font-bold text-white font-mono">
+                  3
+                </div>
+                <div className="mt-1 text-[8px] text-purple-400 font-bold uppercase tracking-wider underline cursor-pointer">
+                  View Root Cause Analysis
+                </div>
+              </div>
+            </div>
+
+            {/* Degradation Trend Comparison */}
+            <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[9px] font-bold text-white uppercase tracking-wider">Degradation Analysis</span>
+                <span className="text-[8px] text-slate-400">Asset: TN-40</span>
+              </div>
+              <div className="space-y-2">
+                {[
+                  { label: "Expected Yield", val: 94, color: "bg-slate-400" },
+                  { label: "Actual Yield", val: 89, color: "bg-purple-400" },
+                  { label: "AI Forecast (Year 5)", val: 85, color: "bg-pink-400" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <div className="w-24 text-[8px] text-slate-400 tracking-wider truncate">{item.label}</div>
+                    <div className="flex-1 h-1.5 bg-white/5 rounded-full overflow-hidden">
+                      <div className={`h-full ${item.color} rounded-full`} style={{ width: `${item.val}%` }}></div>
+                    </div>
+                    <div className="w-6 text-[8px] font-mono text-right text-slate-300">{item.val}%</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
           </div>
         </div>
       </motion.div>
