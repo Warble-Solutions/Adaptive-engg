@@ -212,7 +212,7 @@ export default function Page() {
       </section>
 
       {/* Our Values */}
-      <section className="py-24 bg-slate-900 relative z-20">
+      <section className="py-24 bg-transparent relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>

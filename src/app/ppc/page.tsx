@@ -375,7 +375,7 @@ export default function PPCPage() {
             </section >
 
             {/* 6. ECOSYSTEM INTEGRATION (Dark - Redesigned) */}
-            < section className="section-dark py-32 bg-slate-900 text-white relative z-10 -mt-20 pt-40" >
+            < section className="section-dark py-32 bg-transparent text-white relative z-10 -mt-20 pt-40" >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         {/* Left Column: Context */}

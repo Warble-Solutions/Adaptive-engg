@@ -64,7 +64,7 @@ export default function Page() {
       </section>
 
       {/* HYBRID INTEGRATION */}
-      <section className="py-24 bg-slate-900 text-white relative z-10">
+      <section className="py-24 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SectionWrapper>

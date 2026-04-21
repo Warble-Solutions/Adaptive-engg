@@ -68,7 +68,7 @@ export default function Page() {
       </section>
 
       {/* KEY FEATURES */}
-      <section className="py-28 bg-slate-900 text-white relative z-10">
+      <section className="py-28 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">

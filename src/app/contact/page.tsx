@@ -184,7 +184,7 @@ export default function ContactPage() {
             </section>
 
             {/* 5. TRANSMISSION PROTOCOLS (FAQ - Dark) */}
-            <section className="section-dark py-24 bg-slate-900 text-white relative z-10 -mt-10 pt-32">
+            <section className="section-dark py-24 bg-transparent text-white relative z-10 -mt-10 pt-32">
                 <div className="max-w-3xl mx-auto px-6">
                     <SectionWrapper>
                         <h2 className="text-3xl font-bold text-center mb-16 font-heading">Frequently Asked Questions</h2>

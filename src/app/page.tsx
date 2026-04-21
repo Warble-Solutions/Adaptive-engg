@@ -342,7 +342,7 @@ export default function Home() {
       </section>
 
       {/* 9. MEDIA GALLERY (YouTube Widget) */}
-      <section className="section-dark py-24 px-6 relative overflow-hidden bg-slate-900 border-t border-white/5" >
+      <section className="section-dark py-24 px-6 relative overflow-hidden bg-transparent border-t border-white/5" >
         <div className="max-w-7xl mx-auto">
 
           {/* Header */}

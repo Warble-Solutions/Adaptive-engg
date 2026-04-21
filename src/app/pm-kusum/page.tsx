@@ -167,7 +167,7 @@ export default function PmKusumPage() {
             </section>
 
             {/* 4. COMMAND CENTER (Dark - CMS Focus) */}
-            <section className="py-32 bg-slate-900 border-t border-white/5 relative z-20">
+            <section className="py-32 bg-transparent border-t border-white/5 relative z-20">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <SectionWrapper>
@@ -364,7 +364,7 @@ export default function PmKusumPage() {
             </section>
 
             {/* 5. TECHNICAL COMPLIANCE (Dark) */}
-            <section className="section-dark py-24 bg-slate-900 text-white relative z-20">
+            <section className="section-dark py-24 bg-transparent text-white relative z-20">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <SectionWrapper>

@@ -72,7 +72,7 @@ export default function Page() {
       </section>
 
       {/* INTEGRATION PROTOCOLS */}
-      <section className="py-24 bg-slate-900 text-white relative z-10">
+      <section className="py-24 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">
@@ -124,7 +124,7 @@ export default function Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-slate-900 text-center relative z-10">
+      <section className="py-20 bg-transparent text-center relative z-10">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Modernize Your SCADA?</h2>
