@@ -86,7 +86,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <button className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-teal-600 transition-all flex items-center justify-center gap-2 group">
-                                            Transmit Inquiry <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </button>
                                     </form>
                                 </div>
