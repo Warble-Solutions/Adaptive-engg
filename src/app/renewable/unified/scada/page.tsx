@@ -12,27 +12,42 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      {/* HERO — Industrial gradient with mesh overlay */}
-      <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
+      {/* HERO — Split layout: text left, dashboard right */}
+      <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#0a2a2a] to-slate-950">
           {/* Animated grid lines */}
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-teal-600/15 rounded-full blur-[100px]"></div>
         </div>
-        <div className="z-10 max-w-7xl relative">
-          <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20">
-              <Monitor className="w-4 h-4" />
-              <span>Unified Renewable Solution</span>
-            </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 font-heading">
-              SCADA
-            </h1>
-            <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
-              Flexible & scalable SCADA architecture with rich renewable libraries, handling millions of tags with a refined interface built from decades of field experience.
-            </p>
-          </SectionWrapper>
+        <div className="z-10 max-w-7xl mx-auto w-full relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Text */}
+            <SectionWrapper>
+              <div>
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20">
+                  <Monitor className="w-4 h-4" />
+                  <span>Unified Renewable Solution</span>
+                </div>
+                <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading">
+                  SCADA
+                </h1>
+                <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
+                  Flexible & scalable SCADA architecture with rich renewable libraries, handling millions of tags with a refined interface built from decades of field experience.
+                </p>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                  Schedule Consultation <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </SectionWrapper>
+
+            {/* Right — Dashboard */}
+            <SectionWrapper delay={0.3}>
+              <div className="h-[440px] hidden lg:block">
+                <ScadaMonitoringDashboard />
+              </div>
+            </SectionWrapper>
+          </div>
         </div>
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 z-10 animate-bounce">
