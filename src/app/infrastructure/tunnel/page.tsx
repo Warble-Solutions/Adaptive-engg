@@ -79,7 +79,10 @@ export default function Page() {
                     <span>System Advantages</span>
                   </div>
                   <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">Benefits</span></h2>
-                  <p className="text-slate-500 text-lg leading-relaxed mb-8">Intelligent automation that protects lives, preserves infrastructure, and slashes energy consumption.</p>
+                  <p className="text-slate-500 text-lg leading-relaxed mb-4">Intelligent automation that protects lives, preserves infrastructure, and slashes energy consumption.</p>
+                  <div className="rounded-3xl overflow-hidden mt-6 shadow-2xl border border-slate-200">
+                    <img src="/imgs/tunnel/tunnel_ventilation.png" alt="Tunnel Ventilation System" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-1000" />
+                  </div>
                 </SectionWrapper>
               </div>
             </div>
@@ -145,12 +148,12 @@ export default function Page() {
               </div>
             </SectionWrapper>
 
-            {/* Bento Box 3 - Large Tall */}
+            {/* Bento Box 3 - Large Tall (Image bg) */}
             <SectionWrapper delay={0.3}>
-              <div className="md:col-span-2 p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden h-[400px] sm:h-[300px] lg:h-[400px]">
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Layers className="w-48 h-48 text-cyan-400" />
-                </div>
+              <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 flex flex-col justify-end group relative overflow-hidden h-[400px] sm:h-[300px] lg:h-[400px] shadow-2xl">
+                <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_power_db.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/40 to-transparent"></div>
                 
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
