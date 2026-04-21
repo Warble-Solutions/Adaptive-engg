@@ -23,14 +23,14 @@ export default function Page() {
 
         {/* Dashboard in background */}
         <div className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none">
-          <div className="w-[900px] h-[520px] scale-[1.3] opacity-30">
+          <div className="w-[900px] h-[520px] scale-[1.3] opacity-40">
             <CMMSDashboard />
           </div>
           {/* Blur overlay */}
-          <div className="absolute inset-0 backdrop-blur-[6px]"></div>
+          <div className="absolute inset-0 backdrop-blur-[2px]"></div>
           {/* Gradient vignette */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a0a]/60 via-transparent to-[#1a1a0a]/80"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a0a]/50 via-transparent to-[#1a1a0a]/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a0a]/50 via-transparent to-[#1a1a0a]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a0a]/40 via-transparent to-[#1a1a0a]/40"></div>
         </div>
 
         <div className="z-10 max-w-7xl relative">
