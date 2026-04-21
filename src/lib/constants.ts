@@ -28,3 +28,11 @@ export const KUSUM_STATS = {
   statesOfIndia: { value: 19, suffix: "+", label: "States of India Benefiting" },
   satisfiedCustomers: { value: 100, suffix: "+", label: "Satisfied Customers" },
 } as const;
+
+export const TUNNEL_STATS = {
+  twinTubeRoad: { value: 2.5, suffix: " Km", label: "Twin Tube Road Tunnel" },
+  transformer: { value: 1000, suffix: " KVA", label: "Transformer with HT Sub Station", formatted: "1,000" },
+  ledLights: { value: 1500, suffix: "+", label: "LED Lights Installed", formatted: "1,500+" },
+  remoteIoPanels: { value: 15, suffix: "+", label: "Remote I/O Panels Installed" },
+} as const;
+
