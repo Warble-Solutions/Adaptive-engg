@@ -14,7 +14,7 @@ export default async function CaseStudiesPage() {
 
   return (
     <main className="min-h-screen pt-32 pb-24 px-6 relative">
-      <SceneTrigger variant="network" color="#049A89" speed={0.8} />
+      <SceneTrigger variant="logo" color="#049A89" speed={0.8} />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16">

@@ -183,6 +183,97 @@ const getWavePosition = (i: number) => {
     return vec;
 };
 
+// 6. AEPL Sunburst Logo for 'logo'
+const getLogoPosition = (i: number) => {
+    // AEPL logo mapped onto a spherical surface for real 3D depth
+    const SPHERE_R = 35;
+
+    const arcs = [
+        { radius: 7,  tileCount: 18, tileW: 1.0, tileH: 2.8, startAngle: -2.9, endAngle: 1.0, depth: 1.2 },
+        { radius: 14, tileCount: 11, tileW: 1.6, tileH: 3.8, startAngle: -2.0, endAngle: 1.3, depth: 1.5 },
+        { radius: 22, tileCount: 7,  tileW: 2.4, tileH: 5.0, startAngle: -1.2, endAngle: 1.2, depth: 1.8 },
+        { radius: 31, tileCount: 5,  tileW: 3.2, tileH: 6.0, startAngle: -0.5, endAngle: 1.0, depth: 2.2 },
+    ];
+
+    const totalTiles = arcs.reduce((sum, arc) => sum + arc.tileCount, 0);
+    const particlesPerTile = Math.floor(COUNT / totalTiles);
+
+    let tileIndex = Math.floor(i / particlesPerTile);
+    let localI = i % particlesPerTile;
+
+    let arcIndex = 0;
+    let tileInArc = 0;
+    let cumulative = 0;
+
+    for (let a = 0; a < arcs.length; a++) {
+        if (tileIndex < cumulative + arcs[a].tileCount) {
+            arcIndex = a;
+            tileInArc = tileIndex - cumulative;
+            break;
+        }
+        cumulative += arcs[a].tileCount;
+    }
+
+    if (tileIndex >= totalTiles) {
+        arcIndex = arcs.length - 1;
+        tileInArc = arcs[arcIndex].tileCount - 1;
+        localI = i % particlesPerTile;
+    }
+
+    const arc = arcs[arcIndex];
+    const angleRange = arc.endAngle - arc.startAngle;
+    const tileAngle = arc.startAngle + (tileInArc / Math.max(arc.tileCount - 1, 1)) * angleRange;
+
+    const flatCx = Math.cos(tileAngle) * arc.radius;
+    const flatCy = Math.sin(tileAngle) * arc.radius;
+
+    // Depth layers for tile thickness
+    const depthLayers = 3;
+    const surfaceParticles = Math.max(Math.floor(particlesPerTile / depthLayers), 1);
+    const depthLayer = Math.min(Math.floor(localI / surfaceParticles), depthLayers - 1);
+    const surfaceI = localI % surfaceParticles;
+
+    const cols = Math.max(Math.ceil(Math.sqrt(surfaceParticles * (arc.tileW / arc.tileH))), 2);
+    const rows = Math.max(Math.ceil(surfaceParticles / cols), 2);
+    const row = Math.floor(surfaceI / cols);
+    const col = surfaceI % cols;
+
+    const lx = (col / Math.max(cols - 1, 1) - 0.5) * arc.tileW;
+    const ly = (row / Math.max(rows - 1, 1) - 0.5) * arc.tileH;
+
+    const rx = lx * Math.cos(tileAngle) - ly * Math.sin(tileAngle);
+    const ry = lx * Math.sin(tileAngle) + ly * Math.cos(tileAngle);
+
+    const flatX = (flatCx + rx) * 1.1;
+    const flatY = (flatCy + ry) * 1.1;
+
+    // Map flat 2D onto sphere surface for 3D curvature
+    const theta = flatX / SPHERE_R;
+    const phi = flatY / SPHERE_R;
+
+    const x = SPHERE_R * Math.sin(theta) * Math.cos(phi);
+    const y = SPHERE_R * Math.sin(phi);
+    const z = SPHERE_R * (Math.cos(theta) * Math.cos(phi) - 1);
+
+    // Extrude tile outward along sphere normal for thickness
+    const depthOffset = (depthLayer / Math.max(depthLayers - 1, 1) - 0.5) * arc.depth;
+    const nx = Math.sin(theta) * Math.cos(phi);
+    const ny = Math.sin(phi);
+    const nz = Math.cos(theta) * Math.cos(phi);
+
+    const vec = new THREE.Vector3(
+        x + nx * depthOffset,
+        y + ny * depthOffset,
+        z + nz * depthOffset
+    );
+
+    // Tilt for dramatic 3D perspective
+    vec.applyAxisAngle(new THREE.Vector3(1, 0, 0), 0.25);
+    vec.applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.15);
+
+    return vec;
+};
+
 const MorphingParticles = () => {
     const mesh = useRef<THREE.InstancedMesh>(null);
     const { scene } = useScene();
@@ -194,6 +285,7 @@ const MorphingParticles = () => {
         const wind = new Float32Array(COUNT * 3);
         const battery = new Float32Array(COUNT * 3);
         const wave = new Float32Array(COUNT * 3);
+        const logo = new Float32Array(COUNT * 3);
 
         for (let i = 0; i < COUNT; i++) {
             const s = getSpherePosition(i);
@@ -210,9 +302,12 @@ const MorphingParticles = () => {
 
             const wa = getWavePosition(i);
             wave[i * 3] = wa.x; wave[i * 3 + 1] = wa.y; wave[i * 3 + 2] = wa.z;
+
+            const l = getLogoPosition(i);
+            logo[i * 3] = l.x; logo[i * 3 + 1] = l.y; logo[i * 3 + 2] = l.z;
         }
 
-        return { sphere, solar, wind, battery, wave };
+        return { sphere, solar, wind, battery, wave, logo };
     }, []);
 
     // Current interpolated positions
@@ -235,6 +330,7 @@ const MorphingParticles = () => {
             case 'wind': target = positions.wind; break;
             case 'battery': target = positions.battery; break;
             case 'wave': target = positions.wave; break;
+            case 'logo': target = positions.logo; break;
             case 'network': default: target = positions.sphere; break;
         }
 
@@ -288,6 +384,9 @@ const MorphingParticles = () => {
         } else if (scene.variant === 'wave') {
             // Wave: slow scroll or drift
             mesh.current.rotation.y = Math.sin(time * 0.1) * 0.05;
+        } else if (scene.variant === 'logo') {
+            // Logo: gentle slow spin
+            mesh.current.rotation.y += 0.0008 * speed;
         } else {
             // Globe/Battery: Spin
             mesh.current.rotation.y += 0.001 * speed;

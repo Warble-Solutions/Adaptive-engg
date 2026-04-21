@@ -23,7 +23,7 @@ export default function Home() {
           <span className="text-[10px] uppercase tracking-[0.3em] text-white">Scroll</span>
           <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
         </div>
-        <SceneTrigger variant="network" color="#049A89" />
+        <SceneTrigger variant="logo" color="#049A89" />
       </section>
 
       {/* 2. MARQUEE SECTION (Light) */}
@@ -39,7 +39,7 @@ export default function Home() {
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-64 w-auto object-contain hover:scale-110 transition-all duration-300"
+                  className="h-96 w-auto object-contain hover:scale-110 transition-all duration-300"
                 />
               </div>
             ))}
@@ -49,7 +49,7 @@ export default function Home() {
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-64 w-auto object-contain hover:scale-110 transition-all duration-300"
+                  className="h-96 w-auto object-contain hover:scale-110 transition-all duration-300"
                 />
               </div>
             ))}
@@ -130,7 +130,7 @@ export default function Home() {
 
       {/* 5. TECH HIGHLIGHT (Light) */}
       <section className="py-24 bg-light z-0" >
-        <SceneTrigger variant="network" color="#0EA5E9" speed={1} />
+        <SceneTrigger variant="logo" color="#0EA5E9" speed={1} />
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
           <div className="lg:w-1/2">
             <SectionWrapper>
@@ -229,7 +229,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <SectionWrapper>
               <h2 className="text-4xl font-bold text-slate-900 mb-2 font-heading">Built to Grow</h2>
-              <p className="text-primary font-bold uppercase tracking-widest text-sm">Future Proof Architecture</p>
+              <p className="text-primary font-bold uppercase tracking-widest text-sm">Scalable Solutions for Every Project</p>
             </SectionWrapper>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

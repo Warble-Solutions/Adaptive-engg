@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode } from "react";
 
-export type SceneVariant = 'network' | 'solar' | 'wind' | 'battery' | 'wave';
+export type SceneVariant = 'network' | 'solar' | 'wind' | 'battery' | 'wave' | 'logo';
 
 type SceneState = {
     primaryColor: string;
@@ -20,7 +20,7 @@ const defaultScene: SceneState = {
     primaryColor: "#049A89", // Default Teal
     secondaryColor: "#0F172A", // Slate 900
     speed: 1,
-    variant: 'network',
+    variant: 'logo',
 };
 
 const SceneContext = createContext<SceneContextType | undefined>(undefined);

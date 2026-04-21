@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -31,6 +31,7 @@ export default function Navbar() {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,6 +56,16 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY]);
 
+    // Lock body scroll when modal is open
+    useEffect(() => {
+        if (isInquiryOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => { document.body.style.overflow = ""; };
+    }, [isInquiryOpen]);
+
     return (
         <>
             <nav
@@ -64,9 +75,9 @@ export default function Navbar() {
                     isHidden ? "-translate-y-full" : "translate-y-0"
                 )}
             >
-                <div className="max-w-[1800px] mx-auto px-6 md:px-12 flex items-center justify-between h-24 relative">
-                    {/* Logo */}
-                    <Link href="/" className="z-20">
+                <div className="w-full px-5 flex items-center justify-between h-24 relative">
+                    {/* Logo - pushed left */}
+                    <Link href="/" className="z-20 mr-auto">
                         <Image
                             src="/imgs/logo.png"
                             alt="Adaptive Engineering"
@@ -77,8 +88,8 @@ export default function Navbar() {
                         />
                     </Link>
 
-                    {/* Desktop Navigation - Right Aligned */}
-                    <div className="hidden lg:flex items-center gap-8 ml-auto mr-8">
+                    {/* Desktop Navigation - Center/Right */}
+                    <div className="hidden lg:flex items-center gap-8 mr-6">
                         <NavLink href="/" isScrolled={isScrolled}>Home</NavLink>
 
                         <div className="relative group flex items-center h-full" onMouseEnter={() => setActiveDropdown('about')} onMouseLeave={() => setActiveDropdown(null)}>
@@ -171,8 +182,14 @@ export default function Navbar() {
                     </div>
 
                     {/* Right Side: CTA & Mobile Toggle */}
-                    <div className="flex items-center gap-6 z-20">
-
+                    <div className="flex items-center gap-4 z-20">
+                        {/* Let's Connect Button */}
+                        <button
+                            onClick={() => setIsInquiryOpen(true)}
+                            className="hidden lg:flex items-center gap-2 px-6 py-2.5 bg-primary text-white text-sm font-bold uppercase tracking-wider rounded-full hover:bg-teal-600 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:scale-105"
+                        >
+                            Let&apos;s Connect
+                        </button>
 
                         {/* Mobile Menu Toggle */}
                         <button
@@ -203,6 +220,89 @@ export default function Navbar() {
                         <Link href="/renewable" onClick={() => setIsMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white">Solutions</Link>
                         <Link href="/pm-kusum" onClick={() => setIsMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white">PM-KUSUM</Link>
                         <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-primary">Contact</Link>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Inquiry Modal */}
+            <AnimatePresence>
+                {isInquiryOpen && (
+                    <motion.div
+                        className="fixed inset-0 z-[100] flex items-center justify-center px-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        {/* Backdrop */}
+                        <motion.div
+                            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                            onClick={() => setIsInquiryOpen(false)}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                        />
+
+                        {/* Modal */}
+                        <motion.div
+                            className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden"
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            transition={{ duration: 0.3, type: "spring", damping: 25 }}
+                        >
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setIsInquiryOpen(false)}
+                                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-slate-500 hover:text-slate-800 transition-colors z-10"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            {/* Header */}
+                            <div className="px-8 pt-8 pb-4">
+                                <h3 className="text-2xl font-bold text-slate-900 font-heading">Let&apos;s Connect</h3>
+                                <p className="text-sm text-slate-500 mt-1">Tell us about your requirements and we&apos;ll get back to you shortly.</p>
+                            </div>
+
+                            {/* Form */}
+                            <form className="px-8 pb-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div className="space-y-1.5">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Name</label>
+                                        <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-sm" placeholder="Enter your name" />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Phone</label>
+                                        <input type="tel" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-sm" placeholder="+91..." />
+                                    </div>
+                                </div>
+
+                                <div className="space-y-1.5">
+                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email</label>
+                                    <input type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-sm" placeholder="name@company.com" />
+                                </div>
+
+                                <div className="space-y-1.5">
+                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Inquiry Type</label>
+                                    <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-700 text-sm">
+                                        <option>Renewable Solutions</option>
+                                        <option>PM-KUSUM</option>
+                                        <option>Infrastructure</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                                <div className="space-y-1.5">
+                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message</label>
+                                    <textarea rows={3} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none text-sm" placeholder="Tell us about your requirements..."></textarea>
+                                </div>
+
+                                <button className="w-full py-3.5 bg-primary text-white font-bold rounded-xl hover:bg-teal-600 transition-all flex items-center justify-center gap-2 group text-sm">
+                                    Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </button>
+                            </form>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

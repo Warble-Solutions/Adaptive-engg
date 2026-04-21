@@ -71,7 +71,7 @@ const awards = [
 export default function CertificationsPage() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="network" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
 
       {/* HERO */}
       <section className="section-hero relative min-h-[70vh] flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">

@@ -44,7 +44,7 @@ export default function SceneController() {
                 primaryColor: "#049A89", // Default Teal
                 secondaryColor: "#0F172A",
                 speed: 1,
-                variant: "network", // Globe
+                variant: "logo", // AEPL Sunburst Logo
             });
         }
     }, [pathname, setScene]);

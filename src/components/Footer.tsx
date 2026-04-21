@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer className="bg-transparent text-white pt-24 pb-12 relative z-50">
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/20 -z-10 pointer-events-none"></div>
-            <SceneTrigger variant="network" color="#049A89" speed={0.5} />
+            <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
 
                 {/* Brand */}

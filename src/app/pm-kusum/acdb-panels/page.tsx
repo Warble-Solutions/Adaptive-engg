@@ -14,7 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="network" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
 
       {/* HERO — Product catalog gradient */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
