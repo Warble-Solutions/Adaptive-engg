@@ -79,10 +79,7 @@ export default function Page() {
                     <span>System Advantages</span>
                   </div>
                   <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">Benefits</span></h2>
-                  <p className="text-slate-500 text-lg leading-relaxed mb-4">Intelligent automation that protects lives, preserves infrastructure, and slashes energy consumption.</p>
-                  <div className="rounded-3xl overflow-hidden mt-6 shadow-2xl border border-slate-200">
-                    <img src="/imgs/tunnel/tunnel_ventilation.png" alt="Tunnel Ventilation System" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-1000" />
-                  </div>
+                  <p className="text-slate-500 text-lg leading-relaxed mb-8">Intelligent automation that protects lives, preserves infrastructure, and slashes energy consumption.</p>
                 </SectionWrapper>
               </div>
             </div>
