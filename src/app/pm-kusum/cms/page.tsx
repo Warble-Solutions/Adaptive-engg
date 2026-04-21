@@ -88,10 +88,10 @@ export default function Page() {
             </div>
           </SectionWrapper>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Bento Box 1 - Medium (Image bg) */}
             <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 h-[300px] flex flex-col justify-end group relative overflow-hidden">
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_telemetry_1776742420287.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="relative z-10">
@@ -106,7 +106,7 @@ export default function Page() {
 
             {/* Bento Box 2 - Large Wide (Image bg) */}
             <SectionWrapper delay={0.2}>
-              <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 h-[300px] flex flex-col justify-end group relative overflow-hidden">
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_iot_scada_v2.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="relative z-10">
@@ -121,7 +121,7 @@ export default function Page() {
 
             {/* Bento Box 3 - Large Tall (Image bg) */}
             <SectionWrapper delay={0.3}>
-              <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden">
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ams_1776742293340.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent"></div>
@@ -137,7 +137,7 @@ export default function Page() {
 
             {/* Bento Box 4 - Flow (Image bg) */}
             <SectionWrapper delay={0.4}>
-              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden">
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ht_panel_1776742333863.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/60 to-transparent"></div>
                 <div className="absolute top-0 right-0 p-6 opacity-30 group-hover:opacity-50 transition-opacity z-10 drop-shadow-2xl">
