@@ -75,7 +75,7 @@ export default function PPCPage() {
                                     We electrify, automate and digitise renewable plants, driving efficiency and sustainability for Developers, IPPs and EPC companies.
                                 </p>
                                 <p className="text-slate-600 leading-relaxed mb-8">
-                                    With a proven track record of excellence, AEPL has established itself as the leader in Power Plant Control (PPC), having successfully executed over <span className="font-bold text-slate-900">200 PPC projects</span> across India’s rapidly growing renewable landscape. Supporting a massive installed base of <span className="font-bold text-slate-900">40GW+</span>, we bring field-proven experience to ensure seamless grid integration and operational success.
+                                    With a proven track record of excellence, AEPL has established itself as the leader in Power Plant Control (PPC), having successfully executed over <span className="font-bold text-slate-900">{PPC_STATS.ppcProjects.value}{PPC_STATS.ppcProjects.suffix}</span> across India’s rapidly growing renewable landscape. Supporting a massive installed base of <span className="font-bold text-slate-900">{PPC_STATS.installedBase.value}{PPC_STATS.installedBase.suffix}</span>, we bring field-proven experience to ensure seamless grid integration and operational success.
                                 </p>
                                 <MicroCTA text="View Our Portfolio" variant="connect" href="/renewable" context="light" />
                             </div>
@@ -89,8 +89,8 @@ export default function PPCPage() {
                                         <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">PPC Projects</div>
                                     </div>
                                     <div>
-                                        <div className="text-4xl font-black text-primary mb-2">{PPC_STATS.renewableCapacity.value}GW+</div>
-                                        <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">Installed Base</div>
+                                        <div className="text-4xl font-black text-primary mb-2">{PPC_STATS.installedBase.value}{PPC_STATS.installedBase.suffix}</div>
+                                        <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">{PPC_STATS.installedBase.label}</div>
                                     </div>
                                     <div className="col-span-2 pt-8 border-t border-white/10">
                                         <p className="text-gray-300 italic">&quot;Seamlessly orchestrating Solar, Wind, and BESS assets.&quot;</p>
