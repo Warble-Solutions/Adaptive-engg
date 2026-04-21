@@ -35,17 +35,17 @@ export default function Page() {
         </div>
       </section>
 
-      {/* APM MODULES — Dark Glassmorphism style */}
-      <section className="py-32 bg-transparent relative z-20 border-t border-white/10">
+      {/* APM MODULES — Light Premium style */}
+      <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 backdrop-blur-sm text-violet-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-violet-500/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 backdrop-blur-sm text-violet-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-violet-500/20">
                 <Layers className="w-4 h-4" />
                 <span>Core Capabilities</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">APM <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Modules</span></h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">Seven integrated modules engineered to provide complete visibility and control over your entire asset lifecycle.</p>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 tracking-tight">APM <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Modules</span></h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">Seven integrated modules engineered to provide complete visibility and control over your entire asset lifecycle.</p>
             </div>
           </SectionWrapper>
 
@@ -110,23 +110,23 @@ export default function Page() {
               },
             ].map((module, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className={`group p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
+                <div className={`group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
                   
                   {/* Glowing background orb effect */}
-                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-20 blur-[60px] transition-opacity duration-700`}></div>
+                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-10 blur-[50px] transition-opacity duration-700`}></div>
                   
                   <div className="flex items-center gap-4 mb-6 relative z-10">
                     <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:scale-110 transition-transform duration-300`}>
                       {module.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white leading-tight">{module.title}</h3>
+                    <h3 className="text-xl font-bold text-slate-900 leading-tight">{module.title}</h3>
                   </div>
                   
-                  <p className="text-sm text-gray-400 leading-relaxed mb-8 flex-grow relative z-10 group-hover:text-gray-300 transition-colors">{module.desc}</p>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-8 flex-grow relative z-10 group-hover:text-slate-700 transition-colors">{module.desc}</p>
                   
-                  <div className="space-y-3 relative z-10 bg-black/20 p-5 rounded-2xl border border-white/5">
+                  <div className="space-y-3 relative z-10 bg-slate-100/80 group-hover:bg-slate-50 p-5 rounded-2xl border border-slate-200/60 transition-colors">
                     {module.items.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-3 text-sm text-gray-300 group-hover:text-white transition-colors">
+                      <div key={idx} className="flex items-start gap-3 text-sm text-slate-600 group-hover:text-slate-900 transition-colors">
                         <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 text-transparent bg-clip-text bg-gradient-to-br ${module.color}`} style={{ color: "unset" }} />
                         <span className="font-medium">{item}</span>
                       </div>
