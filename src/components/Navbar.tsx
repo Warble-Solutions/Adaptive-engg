@@ -104,16 +104,24 @@ export default function Navbar() {
                             )}>
                                 Renewable Solutions <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
-                            <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                <DropdownLink href="/renewable/unified">Unified Renewable Solution</DropdownLink>
-                                <DropdownLink href="/renewable/unified/scada">SCADA</DropdownLink>
-                                <DropdownLink href="/ppc">Power Plant Control (PPC)</DropdownLink>
-                                <DropdownLink href="/renewable/unified/cms">Central Monitoring (CMS)</DropdownLink>
-                                <DropdownLink href="/renewable/unified/analytics">Advanced Analytics</DropdownLink>
-                                <DropdownLink href="/renewable/unified/cmms">CMMS</DropdownLink>
-                                <DropdownLink href="/renewable/unified/ems-bess">EMS - BESS</DropdownLink>
-                                <DropdownLink href="/renewable/panels">Electrical Panels</DropdownLink>
-                                <DropdownLink href="/renewable/turnkey">Turnkey E&I</DropdownLink>
+                            <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                <div className="px-6 py-3 bg-slate-50 border-b border-slate-100">
+                                    <Link href="/renewable/unified" className="text-xs font-black text-primary uppercase tracking-widest hover:text-slate-800 transition-colors">
+                                        Unified Renewable Solutions
+                                    </Link>
+                                </div>
+                                <div className="pl-2 border-l-2 border-slate-100 ml-6 mb-2 mt-2">
+                                    <DropdownLink href="/renewable/unified/scada">SCADA</DropdownLink>
+                                    <DropdownLink href="/ppc">Power Plant Control (PPC)</DropdownLink>
+                                    <DropdownLink href="/renewable/unified/cms">Central Monitoring (CMS)</DropdownLink>
+                                    <DropdownLink href="/renewable/unified/analytics">Advanced Analytics</DropdownLink>
+                                    <DropdownLink href="/renewable/unified/cmms">CMMS</DropdownLink>
+                                    <DropdownLink href="/renewable/unified/ems-bess">EMS - BESS</DropdownLink>
+                                </div>
+                                <div className="border-t border-slate-100">
+                                    <DropdownLink href="/renewable/panels">Electrical Panels</DropdownLink>
+                                    <DropdownLink href="/renewable/turnkey">Turnkey E&I</DropdownLink>
+                                </div>
                             </div>
                         </div>
 
