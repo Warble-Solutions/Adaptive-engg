@@ -6,7 +6,6 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNetworkWired, faBezierCurve, faFileSignature, faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 import MicroCTA from "@/components/ui/MicroCTA";
-import DowntimeCalculator from "@/components/DowntimeCalculator";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export default function RenewablePage() {
@@ -323,12 +322,6 @@ export default function RenewablePage() {
                 </div>
             </section>
 
-            {/* --- INTERACTIVE CALCULATOR SECTION --- */}
-            <section className="py-24 px-6 bg-slate-950">
-                <div className="max-w-7xl mx-auto">
-                    <DowntimeCalculator />
-                </div>
-            </section>
 
             {/* 6. CTA (Dark) */}
             <section className="py-20 bg-transparent text-center border-t border-slate-800 relative z-10">
