@@ -1091,3 +1091,267 @@ export function AnalyticsHeroDashboards() {
     </div>
   );
 }
+
+// ─────────────────────────────────────────────
+// 13. EMS Hero — Overlapping Dashboard Cards
+// ─────────────────────────────────────────────
+export function EMSHeroDashboards() {
+  const soc = useLiveValue(84.2, 1.5);
+  const gridPrice = useLiveValue(4.25, 0.5);
+  
+  return (
+    <div className="relative w-full h-[500px] select-none flex items-center justify-center">
+      {/* Background ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-blue-500/20 rounded-full blur-[80px] pointer-events-none"></div>
+
+      {/* Card 1 (Back Left) — Power Flow Schematic */}
+      <motion.div 
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute top-4 left-0 w-[240px] z-[1] -rotate-6"
+      >
+        <div className="w-full bg-[#0a1628]/60 backdrop-blur-xl rounded-2xl border border-blue-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-4">
+              <Activity className="w-4 h-4 text-blue-400" />
+              <span className="text-[10px] font-bold text-blue-400 uppercase tracking-wider">Live Power Flow</span>
+            </div>
+            
+            {/* Flow mini-diagram */}
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex flex-col gap-3">
+                <div className="bg-amber-500/10 border border-amber-500/20 p-2 rounded-lg text-center w-14">
+                  <Sun className="w-4 h-4 text-amber-400 mx-auto mb-1" />
+                  <div className="text-[8px] text-amber-400 font-bold font-mono">14 MW</div>
+                </div>
+                <div className="bg-cyan-500/10 border border-cyan-500/20 p-2 rounded-lg text-center w-14">
+                  <Wind className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
+                  <div className="text-[8px] text-cyan-400 font-bold font-mono">22 MW</div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-0.5 bg-gradient-to-r from-amber-400 to-blue-400 relative mb-4">
+                   <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-blue-400 animate-ping"></div>
+                </div>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 relative">
+                  <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-blue-400 animate-ping delay-150"></div>
+                </div>
+              </div>
+
+              <div className="bg-blue-500/20 border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.3)] p-2 rounded-xl text-center w-16 group hover:scale-110 transition-transform">
+                <Battery className="w-5 h-5 text-blue-400 mx-auto mb-1" />
+                <div className="text-[9px] text-blue-400 font-bold font-mono uppercase tracking-wider">Charging</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center justify-between text-[8px] font-bold text-slate-400 uppercase tracking-widest px-2">
+              <span>Gen: 36 MW</span>
+              <span className="text-blue-400">Storing: 30 MW</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Card 2 (Bottom Right) — ML Arbitrage */}
+      <motion.div 
+        animate={{ y: [0, 12, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        className="absolute bottom-6 right-0 w-[260px] z-[2] rotate-3"
+      >
+        <div className="w-full bg-[#0a1628]/70 backdrop-blur-xl rounded-2xl border border-emerald-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.5)] p-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent"></div>
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-emerald-400" />
+                <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">ML Arbitrage</span>
+              </div>
+              <span className="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded text-[9px] font-bold border border-emerald-500/30 animate-pulse">BUYING</span>
+            </div>
+            
+            <div className="flex items-center gap-4 mb-3">
+              <div>
+                <div className="text-[8px] text-slate-400 uppercase font-bold tracking-wider mb-1">Grid Price</div>
+                <div className="text-xl font-black text-white font-mono flex items-baseline gap-1">
+                  ₹{gridPrice.toFixed(2)}<span className="text-[10px] text-slate-400 font-sans font-bold">/kWh</span>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-white/10"></div>
+              <div>
+                <div className="text-[8px] text-slate-400 uppercase font-bold tracking-wider mb-1">Signal</div>
+                <div className="text-sm font-bold text-emerald-400">CHARGE BESS</div>
+              </div>
+            </div>
+
+            {/* Price forecast miniature */}
+            <div className="relative h-12 w-full mt-2 bg-black/20 rounded">
+               <div className="absolute bottom-0 w-full h-[1px] bg-red-500/30"></div>
+               {/* Trend visualization */}
+               <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                 <path d="M0,40 Q20,35 40,30 T80,35 T120,40 T160,20 T200,5" fill="none" stroke="#10b981" strokeWidth="2" />
+                 <path d="M0,40 Q20,35 40,30 T80,35 T120,40 T160,20 T200,5 L200,48 L0,48 Z" fill="url(#emerald-gradient)" />
+                 <defs>
+                  <linearGradient id="emerald-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="rgba(16,185,129,0.3)" />
+                    <stop offset="100%" stopColor="rgba(16,185,129,0)" />
+                  </linearGradient>
+                </defs>
+               </svg>
+               <div className="absolute top-[3px] right-0 w-1.5 h-1.5 bg-emerald-400 rounded-full shadow-[0_0_8px_#10b981]"></div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Card 3 (Center Front) — BESS SoC Gauge */}
+      <motion.div 
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] z-[3]"
+      >
+        <div className="w-full bg-[#0a1628]/80 backdrop-blur-2xl rounded-3xl border border-blue-500/40 shadow-[0_16px_60px_rgba(59,130,246,0.25)] p-6 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-emerald-500/10 pointer-events-none"></div>
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full"></div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-2">
+                <Battery className="w-5 h-5 text-blue-400" />
+                <span className="text-xs font-black text-white tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">BESS State of Charge</span>
+              </div>
+              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+            </div>
+
+            <div className="flex items-center gap-6 mb-6">
+              {/* Circular Gauge */}
+              <div className="relative w-28 h-28 shrink-0 flex items-center justify-center">
+                <svg className="w-full h-full -rotate-90 transform absolute inset-0" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="12" />
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="#3b82f6" strokeWidth="12" strokeDasharray={`${soc * 2.51} 251.2`} className="transition-all duration-1000" />
+                </svg>
+                <div className="text-center font-mono">
+                  <div className="text-2xl font-black text-white tracking-tighter">{soc.toFixed(1)}<span className="text-sm">%</span></div>
+                  <div className="text-[9px] text-blue-400 font-bold uppercase tracking-wider mt-0.5">SoC</div>
+                </div>
+              </div>
+
+              {/* Stats */}
+              <div className="space-y-3 flex-1">
+                <div>
+                  <div className="text-[9px] text-slate-400 font-bold uppercase tracking-wider mb-1">Available Cap</div>
+                  <div className="text-lg font-bold text-white font-mono">84.2 <span className="text-xs text-slate-500">MWh</span></div>
+                </div>
+                <div>
+                  <div className="text-[9px] text-slate-400 font-bold uppercase tracking-wider mb-1">Health (SOH)</div>
+                  <div className="text-lg font-bold text-emerald-400 font-mono">99.4 <span className="text-xs text-slate-500">%</span></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Subsystems strip */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center justify-between">
+                 <div className="flex items-center gap-2">
+                   <ThermometerSun className="w-4 h-4 text-orange-400" />
+                   <span className="text-[9px] font-bold text-white uppercase tracking-wider">HVAC Temp</span>
+                 </div>
+                 <span className="text-xs font-bold text-orange-400 font-mono">22°C</span>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center justify-between">
+                 <div className="flex items-center gap-2">
+                   <Activity className="w-4 h-4 text-purple-400" />
+                   <span className="text-[9px] font-bold text-white uppercase tracking-wider">Cell Bal</span>
+                 </div>
+                 <span className="text-[8px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400 font-bold">ACTIVE</span>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
+// 14. Hybrid Plant Intelligence Dashboard
+// ─────────────────────────────────────────────
+export function HybridPlantDashboard() {
+  const load = useLiveValue(42, 2);
+  const solGen = useLiveValue(28, 1);
+  const windGen = useLiveValue(18, 1.5);
+  const bessDischarge = useLiveValue(2, 0.5); // Making up the difference
+  
+  return (
+    <div className="w-full bg-[#0a1628]/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-6 shadow-2xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)]"></div>
+      
+      <div className="relative z-10">
+        <div className="flex items-center justify-between mb-8">
+           <h3 className="text-lg font-bold text-white font-heading">AI Dispatch Center</h3>
+           <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
+             <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+             <span className="text-[10px] text-blue-400 font-bold tracking-wider">OPTIMIZING</span>
+           </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          {/* Target Load */}
+          <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10 relative overflow-hidden">
+             <div className="absolute left-0 top-0 bottom-0 w-1 bg-purple-500"></div>
+             <div>
+               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Target Grid Dispatch / Load</div>
+               <div className="text-2xl font-black text-white font-mono mt-1">{load.toFixed(1)} MW</div>
+             </div>
+             <div className="text-right">
+                <span className="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-[9px] font-bold">MATCHED</span>
+             </div>
+          </div>
+
+          <div className="text-center text-slate-500 text-xs font-mono border-l border-r border-dotted w-10 mx-auto border-slate-600 h-6">▲</div>
+
+          {/* Sources */}
+          <div className="grid grid-cols-3 gap-4">
+             {/* Solar */}
+             <div className="bg-amber-500/5 rounded-xl p-4 border border-amber-500/20 text-center relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-2"><Sun className="w-4 h-4 text-amber-400 opacity-50" /></div>
+                <div className="text-[10px] text-amber-400 font-bold uppercase tracking-wider mb-2">Solar PV</div>
+                <div className="text-xl font-bold text-white font-mono">{solGen.toFixed(1)}</div>
+                <div className="text-[9px] text-slate-400 mt-1">MW</div>
+                {/* Visual load bar */}
+                <div className="w-full bg-black/40 h-1 mt-3 rounded-full overflow-hidden">
+                   <div className="bg-amber-400 h-full w-[80%] rounded-full"></div>
+                </div>
+             </div>
+
+             {/* Wind */}
+             <div className="bg-cyan-500/5 rounded-xl p-4 border border-cyan-500/20 text-center relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-2"><Wind className="w-4 h-4 text-cyan-400 opacity-50" /></div>
+                <div className="text-[10px] text-cyan-400 font-bold uppercase tracking-wider mb-2">Wind Farm</div>
+                <div className="text-xl font-bold text-white font-mono">{windGen.toFixed(1)}</div>
+                <div className="text-[9px] text-slate-400 mt-1">MW</div>
+                 {/* Visual load bar */}
+                 <div className="w-full bg-black/40 h-1 mt-3 rounded-full overflow-hidden">
+                   <div className="bg-cyan-400 h-full w-[65%] rounded-full"></div>
+                </div>
+             </div>
+
+             {/* BESS */}
+             <div className="bg-blue-500/10 rounded-xl p-4 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.15)] text-center relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-2"><Battery className="w-4 h-4 text-blue-400 opacity-50" /></div>
+                <div className="text-[10px] text-blue-400 font-bold uppercase tracking-wider mb-2">BESS</div>
+                <div className="text-xl font-bold text-white font-mono">{(load - solGen - windGen).toFixed(1)}</div>
+                <div className="text-[9px] text-slate-400 mt-1">DISCHARGING to fill gap</div>
+                 {/* Visual load bar */}
+                 <div className="w-full bg-black/40 h-1 mt-3 rounded-full overflow-hidden relative">
+                   <div className="bg-blue-500 h-full transition-all duration-1000 rounded-full" style={{ width: `${Math.max(10, ((load - solGen - windGen) / 5) * 100)}%` }}></div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

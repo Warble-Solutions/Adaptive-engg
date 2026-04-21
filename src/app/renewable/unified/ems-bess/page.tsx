@@ -1,6 +1,7 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Battery, Zap, BarChart3, TrendingUp, Sun, Wind, CheckCircle2, Activity, Shield, Clock, DollarSign } from "lucide-react";
+import { EMSHeroDashboards, HybridPlantDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "Energy Management System - BESS | Unified Renewable Solutions | Adaptive Engineering",
@@ -10,27 +11,43 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      {/* HERO — Electric blue battery gradient */}
-      <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
+      {/* HERO — Split Layout */}
+      <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a1628] via-[#102040] to-[#0a1628]">
           <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(0deg, rgba(59,130,246,0.3) 1px, transparent 1px)', backgroundSize: '1px 20px' }}></div>
           <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-blue-500/15 rounded-full blur-[120px]"></div>
           <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[150px]"></div>
         </div>
-        <div className="z-10 max-w-7xl relative">
-          <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-blue-500/20">
-              <Battery className="w-4 h-4" />
-              <span>Unified Renewable Solution</span>
-            </div>
-            <h1 className="text-4xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
-              Energy Management<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">System — BESS</span>
-            </h1>
-            <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
-              Indigenous solution for Battery Energy Storage Systems with ML-based energy arbitrage, state of charge management, peak shaving, and grid support.
-            </p>
-          </SectionWrapper>
+        
+        <div className="z-10 max-w-7xl mx-auto w-full relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Text */}
+            <SectionWrapper>
+              <div>
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-blue-500/20">
+                  <Battery className="w-4 h-4" />
+                  <span>Unified Renewable Solution</span>
+                </div>
+                <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading leading-tight">
+                  Energy Management<br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">System — BESS</span>
+                </h1>
+                <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
+                  Indigenous solution for Battery Energy Storage Systems with ML-based energy arbitrage, state of charge management, peak shaving, and grid support.
+                </p>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                  Request Demo <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </SectionWrapper>
+
+            {/* Right — Dashboards */}
+            <SectionWrapper delay={0.3}>
+              <div className="hidden lg:block h-[500px]">
+                <EMSHeroDashboards />
+              </div>
+            </SectionWrapper>
+          </div>
         </div>
       </section>
 
@@ -51,7 +68,8 @@ export default function Page() {
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
                   <div className={`absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br ${item.gradient} rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500`}></div>
-                  <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg relative`}>
+                    <div className={`absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity animate-pulse`}></div>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -88,20 +106,8 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="space-y-4">
-                {[
-                  "Real-time dispatch optimization across sources",
-                  "Automatic frequency response (AFR)",
-                  "Ramp rate control for grid compliance",
-                  "Revenue maximization algorithms",
-                  "Battery degradation modeling",
-                  "Demand-side management integration",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:border-blue-500/30 transition-all">
-                    <CheckCircle2 className="text-blue-400 w-5 h-5 shrink-0" />
-                    <span className="text-gray-300 text-sm font-medium">{item}</span>
-                  </div>
-                ))}
+              <div className="h-full flex items-center">
+                <HybridPlantDashboard />
               </div>
             </SectionWrapper>
           </div>
