@@ -106,7 +106,7 @@ export default function Page() {
                 color: "from-fuchsia-500 to-violet-500",
                 shadow: "shadow-fuchsia-500/20",
                 items: ["MTBF & MTTR dashboards", "Cost per asset tracking", "Availability analytics", "Custom report builder"],
-                span: "lg:col-span-3 lg:w-2/3 lg:mx-auto" // Center the 7th item nicely
+                span: "lg:col-start-2" // Center the 7th item exactly within the 3-column grid
               },
             ].map((module, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
