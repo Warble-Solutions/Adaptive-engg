@@ -2,7 +2,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Monitor, Shield, Database, Cpu, Settings, CheckCircle2, Layers, BarChart3, Workflow } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
-import { ScadaMonitoringDashboard, PlantOverviewDashboard, AlarmConsoleDashboard } from "@/components/DashboardMockups";
+import { ScadaHeroDashboard, PlantOverviewDashboard, AlarmConsoleDashboard, ScadaMonitoringDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "SCADA Solutions | Adaptive Engineering",
@@ -44,7 +44,7 @@ export default function Page() {
             {/* Right — Dashboard */}
             <SectionWrapper delay={0.3}>
               <div className="h-[440px] hidden lg:block">
-                <ScadaMonitoringDashboard />
+                <ScadaHeroDashboard />
               </div>
             </SectionWrapper>
           </div>

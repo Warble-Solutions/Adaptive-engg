@@ -642,3 +642,125 @@ export function CMMSDashboard() {
     </div>
   );
 }
+
+// ─────────────────────────────────────────────
+// 10. SCADA Hero — HMI Plant Schematic Dashboard
+// ─────────────────────────────────────────────
+export function ScadaHeroDashboard() {
+  const totalPower = useLiveValue(47.8, 2.5);
+  const gridExport = useLiveValue(46.2, 2);
+  const plantLoss = useLiveValue(1.6, 0.3);
+  const pr = useLiveValue(78.4, 1.5);
+  const [flowDots, setFlowDots] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setFlowDots(p => (p + 1) % 4), 400);
+    return () => clearInterval(id);
+  }, []);
+
+  const flowAnim = "•".repeat(flowDots) + " ".repeat(3 - flowDots);
+
+  return (
+    <div className="w-full h-full bg-[#080e1a] rounded-2xl border border-emerald-500/20 overflow-hidden shadow-[0_0_60px_rgba(4,154,137,0.1)] p-5 text-white select-none flex flex-col">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4 shrink-0">
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+          <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Plant HMI</span>
+          <span className="text-[10px] text-slate-600">|</span>
+          <span className="text-[10px] text-slate-500 font-mono">Rajasthan 50MW Solar</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 rounded text-[8px] font-bold border border-emerald-500/20">GRID: SYNC</span>
+        </div>
+      </div>
+
+      {/* Schematic — Solar → Inverters → Transformer → Grid */}
+      <div className="flex-grow flex flex-col">
+        {/* Flow diagram */}
+        <div className="flex items-center justify-between gap-2 mb-4">
+          {/* Solar Array */}
+          <div className="flex-1 bg-amber-500/5 border border-amber-500/20 rounded-xl p-3 text-center">
+            <Sun className="w-5 h-5 text-amber-400 mx-auto mb-1" />
+            <div className="text-xs font-black text-amber-400 font-mono">{totalPower.toFixed(1)}</div>
+            <div className="text-[7px] text-amber-400/60 font-bold uppercase">MW DC</div>
+          </div>
+
+          {/* Flow arrow */}
+          <div className="text-emerald-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
+
+          {/* Inverters */}
+          <div className="flex-1 bg-cyan-500/5 border border-cyan-500/20 rounded-xl p-3 text-center">
+            <Zap className="w-5 h-5 text-cyan-400 mx-auto mb-1" />
+            <div className="text-xs font-black text-cyan-400 font-mono">{(totalPower * 0.97).toFixed(1)}</div>
+            <div className="text-[7px] text-cyan-400/60 font-bold uppercase">MW AC</div>
+          </div>
+
+          {/* Flow arrow */}
+          <div className="text-emerald-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
+
+          {/* Transformer */}
+          <div className="flex-1 bg-purple-500/5 border border-purple-500/20 rounded-xl p-3 text-center">
+            <Activity className="w-5 h-5 text-purple-400 mx-auto mb-1" />
+            <div className="text-xs font-black text-purple-400 font-mono">33kV</div>
+            <div className="text-[7px] text-purple-400/60 font-bold uppercase">Step-up</div>
+          </div>
+
+          {/* Flow arrow */}
+          <div className="text-emerald-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
+
+          {/* Grid */}
+          <div className="flex-1 bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-3 text-center">
+            <Gauge className="w-5 h-5 text-emerald-400 mx-auto mb-1" />
+            <div className="text-xs font-black text-emerald-400 font-mono">{gridExport.toFixed(1)}</div>
+            <div className="text-[7px] text-emerald-400/60 font-bold uppercase">MW Grid</div>
+          </div>
+        </div>
+
+        {/* Bottom KPI strip */}
+        <div className="grid grid-cols-5 gap-2 mb-3">
+          {[
+            { label: "PR", value: pr.toFixed(1) + "%", color: "text-emerald-400" },
+            { label: "CUF", value: "22.1%", color: "text-cyan-400" },
+            { label: "Today", value: "112 MWh", color: "text-amber-400" },
+            { label: "Loss", value: plantLoss.toFixed(1) + " MW", color: "text-red-400" },
+            { label: "Uptime", value: "99.4%", color: "text-purple-400" },
+          ].map((kpi, i) => (
+            <div key={i} className="bg-white/[0.02] rounded-lg p-2 text-center border border-white/[0.04]">
+              <div className={`text-sm font-black font-mono ${kpi.color}`}>{kpi.value}</div>
+              <div className="text-[7px] text-slate-500 font-bold uppercase tracking-wider">{kpi.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* String-level heatmap */}
+        <div className="bg-white/[0.02] rounded-lg p-3 border border-white/[0.04] flex-grow">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-[8px] text-slate-500 font-bold uppercase tracking-wider">String Performance Heatmap</span>
+            <span className="text-[8px] text-emerald-400 font-mono">48 strings monitored</span>
+          </div>
+          <div className="grid grid-cols-12 gap-[3px]">
+            {Array.from({ length: 48 }).map((_, i) => {
+              const perf = i === 15 || i === 31 ? 30 : i === 22 ? 55 : 70 + Math.random() * 30;
+              const color = perf > 85 ? 'bg-emerald-500' : perf > 65 ? 'bg-emerald-500/60' : perf > 50 ? 'bg-amber-500/70' : 'bg-red-500/70';
+              return (
+                <div
+                  key={i}
+                  className={`aspect-square rounded-sm ${color} hover:brightness-150 transition-all cursor-pointer`}
+                  title={`String ${i + 1}: ${perf.toFixed(0)}%`}
+                  style={{ opacity: 0.5 + perf / 200 }}
+                />
+              );
+            })}
+          </div>
+          <div className="flex items-center gap-4 mt-2">
+            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-emerald-500 rounded-sm"></div><span className="text-[7px] text-slate-500">&gt;85%</span></div>
+            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-emerald-500/60 rounded-sm"></div><span className="text-[7px] text-slate-500">65-85%</span></div>
+            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-amber-500/70 rounded-sm"></div><span className="text-[7px] text-slate-500">50-65%</span></div>
+            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-red-500/70 rounded-sm"></div><span className="text-[7px] text-slate-500">&lt;50%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
