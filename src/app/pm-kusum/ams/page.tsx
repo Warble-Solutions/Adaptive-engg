@@ -35,79 +35,100 @@ export default function Page() {
         </div>
       </section>
 
-      {/* APM MODULES — Card-based kanban style */}
-      <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
+      {/* APM MODULES — Dark Glassmorphism style */}
+      <section className="py-32 bg-transparent relative z-20 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-4xl font-bold text-slate-900 text-center mb-4 font-heading">APM Modules</h2>
-            <p className="text-slate-500 text-center max-w-2xl mx-auto mb-16">Seven integrated modules for complete asset lifecycle management</p>
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 backdrop-blur-sm text-violet-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-violet-500/20">
+                <Layers className="w-4 h-4" />
+                <span>Core Capabilities</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">APM <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Modules</span></h2>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">Seven integrated modules engineered to provide complete visibility and control over your entire asset lifecycle.</p>
+            </div>
           </SectionWrapper>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
-                icon: <Database className="w-7 h-7" />,
+                icon: <Database className="w-6 h-6" />,
                 title: "Asset Info Management",
                 desc: "Complete asset registry with hierarchy, specifications, warranty tracking, and documentation. QR code-based field identification.",
                 color: "from-violet-500 to-purple-500",
-                items: ["Asset hierarchy & classification", "Specification sheets", "Warranty & lifecycle tracking", "QR code asset tagging"]
+                shadow: "shadow-violet-500/20",
+                items: ["Asset hierarchy & classification", "Specification sheets", "Lifecycle tracking", "QR asset tagging"]
               },
               {
-                icon: <Users className="w-7 h-7" />,
+                icon: <Users className="w-6 h-6" />,
                 title: "Team Management",
                 desc: "Organize O&M teams with skills matrix, shift scheduling, and performance tracking.",
                 color: "from-blue-500 to-cyan-500",
+                shadow: "shadow-blue-500/20",
                 items: ["Skills matrix & certification", "Shift scheduling", "Attendance tracking", "Performance analytics"]
               },
               {
-                icon: <Wrench className="w-7 h-7" />,
+                icon: <Wrench className="w-6 h-6" />,
                 title: "Maintenance Management",
                 desc: "Preventive, predictive, and corrective maintenance workflows with SOP enforcement.",
                 color: "from-emerald-500 to-teal-500",
-                items: ["Preventive maintenance schedules", "Predictive maintenance triggers", "Standard Operating Procedures", "Multi-step task workflows"]
+                shadow: "shadow-emerald-500/20",
+                items: ["Preventive schedules", "Predictive triggers", "Standard Operating Proc.", "Multi-step workflows"]
               },
               {
-                icon: <Package className="w-7 h-7" />,
+                icon: <Package className="w-6 h-6" />,
                 title: "Inventory Management",
                 desc: "Track spare parts, consumables, and tools across all sites with min/max alerts.",
                 color: "from-amber-500 to-orange-500",
-                items: ["Part catalog with specifications", "Min/Max quantity alerts", "Vendor management", "Purchase order tracking"]
+                shadow: "shadow-amber-500/20",
+                items: ["Part catalog with specs", "Min/Max quantity alerts", "Vendor management", "Purchase tracking"]
               },
               {
-                icon: <ClipboardList className="w-7 h-7" />,
+                icon: <ClipboardList className="w-6 h-6" />,
                 title: "Work Order Management",
                 desc: "Create, assign, execute, and close work orders with full audit trail and photo evidence.",
                 color: "from-rose-500 to-pink-500",
-                items: ["Auto-assignment rules", "Priority & SLA tracking", "Photo evidence uploads", "Pass/Fail/Warn feedbacks"]
+                shadow: "shadow-rose-500/20",
+                items: ["Auto-assignment rules", "Priority & SLA tracking", "Photo evidence uploads", "Pass/Fail feedbacks"]
               },
               {
-                icon: <Workflow className="w-7 h-7" />,
+                icon: <Workflow className="w-6 h-6" />,
                 title: "Third-Party Integrations",
                 desc: "Connect with SCADA, ERP, billing, and other enterprise systems via open APIs.",
                 color: "from-indigo-500 to-blue-500",
+                shadow: "shadow-indigo-500/20",
                 items: ["SCADA data integration", "ERP connectivity", "Billing system sync", "REST API & webhooks"]
               },
               {
-                icon: <BarChart3 className="w-7 h-7" />,
+                icon: <BarChart3 className="w-6 h-6" />,
                 title: "Analytics & Reports",
                 desc: "Comprehensive KPIs — MTBF, MTTR, OEE, availability, and cost per asset analytics.",
                 color: "from-fuchsia-500 to-violet-500",
-                items: ["MTBF & MTTR dashboards", "Cost per asset tracking", "Availability analytics", "Custom report builder"]
+                shadow: "shadow-fuchsia-500/20",
+                items: ["MTBF & MTTR dashboards", "Cost per asset tracking", "Availability analytics", "Custom report builder"],
+                span: "lg:col-span-3 lg:w-2/3 lg:mx-auto" // Center the 7th item nicely
               },
             ].map((module, i) => (
-              <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group p-8 bg-white rounded-2xl border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
-                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${module.color}`}></div>
-                  <div className={`w-14 h-14 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                    {module.icon}
+              <SectionWrapper key={i} delay={i * 0.1}>
+                <div className={`group p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
+                  
+                  {/* Glowing background orb effect */}
+                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-20 blur-[60px] transition-opacity duration-700`}></div>
+                  
+                  <div className="flex items-center gap-4 mb-6 relative z-10">
+                    <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:scale-110 transition-transform duration-300`}>
+                      {module.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white leading-tight">{module.title}</h3>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-3">{module.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed mb-5">{module.desc}</p>
-                  <div className="space-y-2">
+                  
+                  <p className="text-sm text-gray-400 leading-relaxed mb-8 flex-grow relative z-10 group-hover:text-gray-300 transition-colors">{module.desc}</p>
+                  
+                  <div className="space-y-3 relative z-10 bg-black/20 p-5 rounded-2xl border border-white/5">
                     {module.items.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-slate-400">
-                        <div className="w-1.5 h-1.5 bg-violet-400 rounded-full shrink-0"></div>
-                        <span>{item}</span>
+                      <div key={idx} className="flex items-start gap-3 text-sm text-gray-300 group-hover:text-white transition-colors">
+                        <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 text-transparent bg-clip-text bg-gradient-to-br ${module.color}`} style={{ color: "unset" }} />
+                        <span className="font-medium">{item}</span>
                       </div>
                     ))}
                   </div>
