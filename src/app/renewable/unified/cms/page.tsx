@@ -2,6 +2,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Eye, TrendingDown, Zap, Shield, BarChart3, Globe, Activity, Database, Lock, CheckCircle2, Layers, Server, Wifi } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
+import { CMSHeroDashboards } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "Central Monitoring System (CMS) | Unified Renewable Solutions | Adaptive Engineering",
@@ -11,28 +12,43 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      {/* HERO — Data-flow gradient with particle effect */}
-      <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
+      {/* HERO — Dashboards left, text right */}
+      <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a0f1a] via-[#0d1f2d] to-[#0a1628]">
           <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(4,154,137,0.5) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
           <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/15 rounded-full blur-[120px]"></div>
           <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[150px]"></div>
         </div>
-        <div className="z-10 max-w-7xl relative">
-          <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500/10 backdrop-blur-sm text-cyan-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-cyan-500/20">
-              <Eye className="w-4 h-4" />
-              <span>Unified Renewable Solution</span>
-            </div>
-            <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
-              Central Monitoring<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">System (CMS)</span>
-            </h1>
-            <p className="text-gray-300 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed mt-6">
-              AEPL&apos;s Centralized Monitoring System provides real-time visibility and intelligent analytics for Solar, Wind, and BESS assets, enabling centralized monitoring, performance optimization, and efficient management of renewable energy portfolios.
-            </p>
-            <p className="text-primary font-bold text-sm uppercase tracking-widest mt-8">&quot;Enterprise-Level Monitoring and Portfolio Intelligence&quot;</p>
-          </SectionWrapper>
+        <div className="z-10 max-w-7xl mx-auto w-full relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Overlapping Dashboard Cards */}
+            <SectionWrapper>
+              <div className="hidden lg:block h-[480px]">
+                <CMSHeroDashboards />
+              </div>
+            </SectionWrapper>
+
+            {/* Right — Text */}
+            <SectionWrapper delay={0.3}>
+              <div>
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500/10 backdrop-blur-sm text-cyan-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-cyan-500/20">
+                  <Eye className="w-4 h-4" />
+                  <span>Unified Renewable Solution</span>
+                </div>
+                <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
+                  Central Monitoring<br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">System (CMS)</span>
+                </h1>
+                <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mt-6 mb-4">
+                  AEPL&apos;s Centralized Monitoring System provides real-time visibility and intelligent analytics for Solar, Wind, and BESS assets.
+                </p>
+                <p className="text-primary font-bold text-sm uppercase tracking-widest mb-8">&quot;Enterprise-Level Monitoring and Portfolio Intelligence&quot;</p>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                  Request Demo <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </SectionWrapper>
+          </div>
         </div>
       </section>
 

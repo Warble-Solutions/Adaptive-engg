@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera } from "lucide-react";
+import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe } from "lucide-react";
 
 // ─────────────────────────────────────────────
 // Utility: animated number that fluctuates
@@ -758,6 +758,133 @@ export function ScadaHeroDashboard() {
             <div className="flex items-center gap-1"><div className="w-2 h-2 bg-emerald-500/60 rounded-sm"></div><span className="text-[7px] text-slate-500">65-85%</span></div>
             <div className="flex items-center gap-1"><div className="w-2 h-2 bg-amber-500/70 rounded-sm"></div><span className="text-[7px] text-slate-500">50-65%</span></div>
             <div className="flex items-center gap-1"><div className="w-2 h-2 bg-red-500/70 rounded-sm"></div><span className="text-[7px] text-slate-500">&lt;50%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
+// 11. CMS Hero — Overlapping Dashboard Cards
+// ─────────────────────────────────────────────
+export function CMSHeroDashboards() {
+  const gen = useLiveValue(342, 15);
+  const pr = useLiveValue(78.4, 2);
+  const sites = useLiveValue(127, 0);
+
+  return (
+    <div className="relative w-full h-full select-none">
+      {/* Card 4 (back) — Fleet Map */}
+      <div className="absolute top-0 left-0 w-[340px] h-[200px] -rotate-6 translate-x-2 translate-y-4 z-[1]">
+        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-cyan-500/15 shadow-2xl p-4 overflow-hidden">
+          <div className="flex items-center gap-2 mb-3">
+            <Globe className="w-3.5 h-3.5 text-cyan-400" />
+            <span className="text-[9px] font-bold text-cyan-400 uppercase tracking-wider">Fleet Map</span>
+          </div>
+          {/* Dot map */}
+          <div className="relative h-24 bg-white/[0.02] rounded-lg border border-white/5 overflow-hidden">
+            {[
+              { x: 25, y: 30 }, { x: 45, y: 55 }, { x: 60, y: 35 }, { x: 35, y: 70 },
+              { x: 70, y: 60 }, { x: 55, y: 20 }, { x: 80, y: 45 }, { x: 20, y: 50 },
+            ].map((dot, i) => (
+              <div key={i} className="absolute" style={{ left: `${dot.x}%`, top: `${dot.y}%` }}>
+                <div className={`w-2 h-2 rounded-full ${i < 6 ? 'bg-emerald-400' : i === 6 ? 'bg-amber-400' : 'bg-red-400'}`}>
+                  {i < 2 && <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-40"></div>}
+                </div>
+              </div>
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
+          </div>
+          <div className="flex items-center justify-between mt-2">
+            <span className="text-[8px] text-slate-500">{Math.round(sites)} sites across 8 states</span>
+            <span className="text-[8px] text-emerald-400 font-bold">94% online</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 3 — Generation Chart */}
+      <div className="absolute top-12 left-16 w-[340px] h-[200px] -rotate-2 z-[2]">
+        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-emerald-500/15 shadow-2xl p-4 overflow-hidden">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <Zap className="w-3.5 h-3.5 text-emerald-400" />
+              <span className="text-[9px] font-bold text-emerald-400 uppercase tracking-wider">Portfolio Generation</span>
+            </div>
+            <span className="text-[9px] text-emerald-400 font-mono font-bold">{gen.toFixed(0)} MWh</span>
+          </div>
+          <div className="flex items-end gap-[3px] h-20 px-1">
+            {[45, 52, 68, 72, 85, 78, 90, 82, 88, 75, 92, 80, 86, 70, 88, 94, 85, 78].map((h, i) => (
+              <div
+                key={i}
+                className="flex-1 bg-gradient-to-t from-emerald-600/80 to-emerald-400/40 rounded-t-sm hover:brightness-125 transition-all"
+                style={{ height: `${h}%` }}
+              />
+            ))}
+          </div>
+          <div className="flex justify-between mt-1.5">
+            <span className="text-[7px] text-slate-600">6AM</span>
+            <span className="text-[7px] text-slate-600">12PM</span>
+            <span className="text-[7px] text-slate-600">6PM</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 2 — PR & Performance */}
+      <div className="absolute top-28 left-8 w-[340px] h-[200px] rotate-2 z-[3]">
+        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-purple-500/15 shadow-2xl p-4 overflow-hidden">
+          <div className="flex items-center gap-2 mb-3">
+            <Activity className="w-3.5 h-3.5 text-purple-400" />
+            <span className="text-[9px] font-bold text-purple-400 uppercase tracking-wider">Performance Summary</span>
+          </div>
+          <div className="grid grid-cols-3 gap-2 mb-3">
+            {[
+              { label: "Avg PR", value: pr.toFixed(1) + "%", color: "text-emerald-400", bar: pr },
+              { label: "Avg CUF", value: "21.8%", color: "text-cyan-400", bar: 87 },
+              { label: "Grid Avail", value: "99.1%", color: "text-purple-400", bar: 99 },
+            ].map((m, i) => (
+              <div key={i} className="bg-white/[0.03] rounded-lg p-2 border border-white/5">
+                <div className={`text-sm font-black font-mono ${m.color}`}>{m.value}</div>
+                <div className="text-[7px] text-slate-500 font-bold uppercase mb-1.5">{m.label}</div>
+                <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div className={`h-full rounded-full transition-all duration-1000 ${i === 0 ? 'bg-emerald-500' : i === 1 ? 'bg-cyan-500' : 'bg-purple-500'}`} style={{ width: `${m.bar}%` }} />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center gap-3">
+            {["Solar: 94.2%", "Wind: 91.8%", "BESS: 97.1%"].map((t, i) => (
+              <span key={i} className="text-[8px] text-slate-500 bg-white/[0.03] px-2 py-0.5 rounded border border-white/5">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Card 1 (front) — Active Alerts */}
+      <div className="absolute top-48 left-20 w-[340px] h-[200px] rotate-1 z-[4]">
+        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-amber-500/15 shadow-2xl p-4 overflow-hidden">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <Bell className="w-3.5 h-3.5 text-amber-400" />
+              <span className="text-[9px] font-bold text-amber-400 uppercase tracking-wider">Active Alerts</span>
+            </div>
+            <div className="flex gap-1.5">
+              <span className="px-1.5 py-0.5 bg-red-500/15 text-red-400 rounded text-[7px] font-bold border border-red-500/20">3</span>
+              <span className="px-1.5 py-0.5 bg-amber-500/15 text-amber-400 rounded text-[7px] font-bold border border-amber-500/20">8</span>
+            </div>
+          </div>
+          <div className="space-y-1.5">
+            {[
+              { site: "RJ-01", msg: "Inverter #7 — DC String Fault", sev: "text-red-400", bg: "bg-red-500/8" },
+              { site: "GJ-14", msg: "WMS Communication Loss", sev: "text-red-400", bg: "bg-red-500/8" },
+              { site: "MP-08", msg: "Low Irradiance Alert", sev: "text-amber-400", bg: "bg-amber-500/8" },
+              { site: "MH-22", msg: "Tracker Angle Deviation", sev: "text-amber-400", bg: "bg-amber-500/8" },
+            ].map((a, i) => (
+              <div key={i} className={`flex items-center gap-2 px-2.5 py-1.5 ${a.bg} rounded-lg`}>
+                <span className="text-[8px] font-bold text-slate-500 w-9 shrink-0">{a.site}</span>
+                <span className={`text-[9px] ${a.sev} truncate`}>{a.msg}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
