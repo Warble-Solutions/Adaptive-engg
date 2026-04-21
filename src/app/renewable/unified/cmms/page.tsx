@@ -1,7 +1,6 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wrench, ClipboardList, CheckCircle2, Bell, FileCheck, Package, QrCode, Camera, Smartphone, Clock, BarChart3, Users, Shield, Calendar, Cog } from "lucide-react";
-import { CMMSDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "CMMS | Unified Renewable Solutions | Adaptive Engineering",
@@ -21,11 +20,9 @@ export default function Page() {
           <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-amber-500/10 rounded-full blur-[150px]"></div>
         </div>
 
-        {/* Dashboard in background */}
-        <div className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none">
-          <div className="w-[900px] h-[520px] scale-[1.3] opacity-40">
-            <CMMSDashboard />
-          </div>
+        {/* Banner image in background */}
+        <div className="absolute inset-0 z-[1] pointer-events-none">
+          <img src="/imgs/cmms.png" alt="CMMS Dashboard" className="w-full h-full object-cover opacity-40" />
           {/* Blur overlay */}
           <div className="absolute inset-0 backdrop-blur-[2px]"></div>
           {/* Gradient vignette */}
