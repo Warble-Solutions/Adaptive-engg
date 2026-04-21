@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Shield, Zap, Activity, CheckCircle2, Cpu, Award, ThermometerSun, Lock, Gauge, Settings } from "lucide-react";
+import CertificateGallery from "@/components/CertificateGallery";
 
 export const metadata = {
   title: "ACDB Panel Solutions | PM-KUSUM | Adaptive Engineering",
@@ -175,38 +176,10 @@ export default function Page() {
       <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-3xl font-bold text-slate-900 text-center mb-4 font-heading">Certifications & Test Reports</h2>
-            <p className="text-slate-500 text-center max-w-xl mx-auto mb-12">All ACDB panels are type-tested and certified to IS/IEC standards</p>
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-4 font-heading">ERDA Test Reports & Certifications</h2>
+            <p className="text-slate-500 text-center max-w-xl mx-auto mb-12">All panels are type-tested at ERDA (Electrical Research & Development Association) and certified to IS/IEC standards. Click any certificate to preview.</p>
           </SectionWrapper>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              { src: "/imgs/abdc_panel_certificates/1-2.png.webp", alt: "ACDB Certificate 1" },
-              { src: "/imgs/abdc_panel_certificates/2-2.png.webp", alt: "ACDB Certificate 2" },
-              { src: "/imgs/abdc_panel_certificates/3-1.png.webp", alt: "ACDB Certificate 3" },
-              { src: "/imgs/abdc_panel_certificates/4-1.png.webp", alt: "ACDB Certificate 4" },
-              { src: "/imgs/abdc_panel_certificates/5-1.png.webp", alt: "ACDB Certificate 5" },
-              { src: "/imgs/abdc_panel_certificates/6-1.png.webp", alt: "ACDB Certificate 6" },
-            ].map((cert, i) => (
-              <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300 bg-white">
-                  <div className="relative h-64 md:h-80">
-                    <Image
-                      src={cert.src}
-                      alt={cert.alt}
-                      fill
-                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white via-white/80 to-transparent p-4">
-                    <div className="flex items-center gap-2">
-                      <Award className="w-4 h-4 text-primary" />
-                      <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">{cert.alt}</span>
-                    </div>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
-          </div>
+          <CertificateGallery />
         </div>
       </section>
 
