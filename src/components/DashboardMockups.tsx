@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe } from "lucide-react";
 
 // ─────────────────────────────────────────────
@@ -774,120 +775,142 @@ export function CMSHeroDashboards() {
   const sites = useLiveValue(127, 0);
 
   return (
-    <div className="relative w-full h-full select-none">
-      {/* Card 4 (back) — Fleet Map */}
-      <div className="absolute top-0 left-0 w-[340px] h-[200px] -rotate-6 translate-x-2 translate-y-4 z-[1]">
-        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-cyan-500/15 shadow-2xl p-4 overflow-hidden">
-          <div className="flex items-center gap-2 mb-3">
-            <Globe className="w-3.5 h-3.5 text-cyan-400" />
-            <span className="text-[9px] font-bold text-cyan-400 uppercase tracking-wider">Fleet Map</span>
-          </div>
-          {/* Dot map */}
-          <div className="relative h-24 bg-white/[0.02] rounded-lg border border-white/5 overflow-hidden">
-            {[
-              { x: 25, y: 30 }, { x: 45, y: 55 }, { x: 60, y: 35 }, { x: 35, y: 70 },
-              { x: 70, y: 60 }, { x: 55, y: 20 }, { x: 80, y: 45 }, { x: 20, y: 50 },
-            ].map((dot, i) => (
-              <div key={i} className="absolute" style={{ left: `${dot.x}%`, top: `${dot.y}%` }}>
-                <div className={`w-2 h-2 rounded-full ${i < 6 ? 'bg-emerald-400' : i === 6 ? 'bg-amber-400' : 'bg-red-400'}`}>
-                  {i < 2 && <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-40"></div>}
+    <div className="relative w-full h-[500px] select-none flex items-center justify-center">
+      {/* Background ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-cyan-500/20 rounded-full blur-[80px] pointer-events-none"></div>
+
+      {/* Card 1 (Back Left) — Fleet Map */}
+      <motion.div 
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute top-4 left-0 w-[240px] z-[1] -rotate-6"
+      >
+        <div className="w-full bg-[#0a1628]/60 backdrop-blur-xl rounded-2xl border border-cyan-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-3">
+              <Globe className="w-4 h-4 text-cyan-400" />
+              <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-wider">Fleet Status</span>
+            </div>
+            {/* Dot map abstraction */}
+            <div className="relative h-20 bg-white/5 rounded-lg border border-white/10 overflow-hidden mb-3">
+              {[
+                { x: 20, y: 30 }, { x: 45, y: 55 }, { x: 70, y: 20 },
+                { x: 30, y: 70 }, { x: 80, y: 50 }, { x: 60, y: 65 },
+              ].map((dot, i) => (
+                <div key={i} className="absolute" style={{ left: `${dot.x}%`, top: `${dot.y}%` }}>
+                  <div className={`w-1.5 h-1.5 rounded-full ${i < 4 ? 'bg-cyan-400' : 'bg-emerald-400'}`}>
+                    {i < 2 && <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-60 scale-150"></div>}
+                  </div>
                 </div>
-              </div>
-            ))}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
-          </div>
-          <div className="flex items-center justify-between mt-2">
-            <span className="text-[8px] text-slate-500">{Math.round(sites)} sites across 8 states</span>
-            <span className="text-[8px] text-emerald-400 font-bold">94% online</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Card 3 — Generation Chart */}
-      <div className="absolute top-12 left-16 w-[340px] h-[200px] -rotate-2 z-[2]">
-        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-emerald-500/15 shadow-2xl p-4 overflow-hidden">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-2">
-              <Zap className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="text-[9px] font-bold text-emerald-400 uppercase tracking-wider">Portfolio Generation</span>
+              ))}
             </div>
-            <span className="text-[9px] text-emerald-400 font-mono font-bold">{gen.toFixed(0)} MWh</span>
-          </div>
-          <div className="flex items-end gap-[3px] h-20 px-1">
-            {[45, 52, 68, 72, 85, 78, 90, 82, 88, 75, 92, 80, 86, 70, 88, 94, 85, 78].map((h, i) => (
-              <div
-                key={i}
-                className="flex-1 bg-gradient-to-t from-emerald-600/80 to-emerald-400/40 rounded-t-sm hover:brightness-125 transition-all"
-                style={{ height: `${h}%` }}
-              />
-            ))}
-          </div>
-          <div className="flex justify-between mt-1.5">
-            <span className="text-[7px] text-slate-600">6AM</span>
-            <span className="text-[7px] text-slate-600">12PM</span>
-            <span className="text-[7px] text-slate-600">6PM</span>
+            <div className="flex flex-col gap-1">
+              <div className="flex justify-between items-center"><span className="text-[9px] text-slate-400">Total Sites</span><span className="text-[10px] text-white font-mono">{Math.round(sites)}</span></div>
+              <div className="flex justify-between items-center"><span className="text-[9px] text-slate-400">Online Rate</span><span className="text-[10px] text-emerald-400 font-mono">98.5%</span></div>
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Card 2 — PR & Performance */}
-      <div className="absolute top-28 left-8 w-[340px] h-[200px] rotate-2 z-[3]">
-        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-purple-500/15 shadow-2xl p-4 overflow-hidden">
-          <div className="flex items-center gap-2 mb-3">
-            <Activity className="w-3.5 h-3.5 text-purple-400" />
-            <span className="text-[9px] font-bold text-purple-400 uppercase tracking-wider">Performance Summary</span>
-          </div>
-          <div className="grid grid-cols-3 gap-2 mb-3">
-            {[
-              { label: "Avg PR", value: pr.toFixed(1) + "%", color: "text-emerald-400", bar: pr },
-              { label: "Avg CUF", value: "21.8%", color: "text-cyan-400", bar: 87 },
-              { label: "Grid Avail", value: "99.1%", color: "text-purple-400", bar: 99 },
-            ].map((m, i) => (
-              <div key={i} className="bg-white/[0.03] rounded-lg p-2 border border-white/5">
-                <div className={`text-sm font-black font-mono ${m.color}`}>{m.value}</div>
-                <div className="text-[7px] text-slate-500 font-bold uppercase mb-1.5">{m.label}</div>
-                <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
-                  <div className={`h-full rounded-full transition-all duration-1000 ${i === 0 ? 'bg-emerald-500' : i === 1 ? 'bg-cyan-500' : 'bg-purple-500'}`} style={{ width: `${m.bar}%` }} />
+      {/* Card 2 (Bottom Right) — Active Alerts */}
+      <motion.div 
+        animate={{ y: [0, 12, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        className="absolute bottom-8 right-0 w-[260px] z-[2] rotate-3"
+      >
+        <div className="w-full bg-[#0a1628]/70 backdrop-blur-xl rounded-2xl border border-rose-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.5)] p-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-transparent"></div>
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <Bell className="w-4 h-4 text-rose-400" />
+                <span className="text-[10px] font-bold text-rose-400 uppercase tracking-wider">Critical Alerts</span>
+              </div>
+              <span className="px-1.5 py-0.5 bg-rose-500/20 text-rose-400 rounded text-[9px] font-bold border border-rose-500/30 animate-pulse">2 NEW</span>
+            </div>
+            <div className="space-y-2">
+              {[
+                { time: "2m ago", site: "RJ-Sol-1", issue: "Inverter Comm Loss", color: "text-rose-400", bg: "bg-rose-500/10", border: "border-rose-500/20" },
+                { time: "18m ago", site: "MH-Wind-4", issue: "Turbine Pitch Fault", color: "text-amber-400", bg: "bg-amber-500/10", border: "border-amber-500/20" },
+                { time: "1h ago", site: "TN-BESS-2", issue: "Temp High Warning", color: "text-amber-400", bg: "bg-amber-500/10", border: "border-amber-500/20" },
+              ].map((alert, i) => (
+                <div key={i} className={`flex flex-col gap-1 px-3 py-2 ${alert.bg} border ${alert.border} rounded-xl`}>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[9px] font-bold text-white max-w-[60%] truncate">{alert.site}</span>
+                    <span className="text-[8px] text-slate-400 font-mono">{alert.time}</span>
+                  </div>
+                  <span className={`text-[9.5px] ${alert.color}`}>{alert.issue}</span>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center gap-3">
-            {["Solar: 94.2%", "Wind: 91.8%", "BESS: 97.1%"].map((t, i) => (
-              <span key={i} className="text-[8px] text-slate-500 bg-white/[0.03] px-2 py-0.5 rounded border border-white/5">{t}</span>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Card 1 (front) — Active Alerts */}
-      <div className="absolute top-48 left-20 w-[340px] h-[200px] rotate-1 z-[4]">
-        <div className="w-full h-full bg-[#0a1628] rounded-2xl border border-amber-500/15 shadow-2xl p-4 overflow-hidden">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-2">
-              <Bell className="w-3.5 h-3.5 text-amber-400" />
-              <span className="text-[9px] font-bold text-amber-400 uppercase tracking-wider">Active Alerts</span>
-            </div>
-            <div className="flex gap-1.5">
-              <span className="px-1.5 py-0.5 bg-red-500/15 text-red-400 rounded text-[7px] font-bold border border-red-500/20">3</span>
-              <span className="px-1.5 py-0.5 bg-amber-500/15 text-amber-400 rounded text-[7px] font-bold border border-amber-500/20">8</span>
-            </div>
-          </div>
-          <div className="space-y-1.5">
-            {[
-              { site: "RJ-01", msg: "Inverter #7 — DC String Fault", sev: "text-red-400", bg: "bg-red-500/8" },
-              { site: "GJ-14", msg: "WMS Communication Loss", sev: "text-red-400", bg: "bg-red-500/8" },
-              { site: "MP-08", msg: "Low Irradiance Alert", sev: "text-amber-400", bg: "bg-amber-500/8" },
-              { site: "MH-22", msg: "Tracker Angle Deviation", sev: "text-amber-400", bg: "bg-amber-500/8" },
-            ].map((a, i) => (
-              <div key={i} className={`flex items-center gap-2 px-2.5 py-1.5 ${a.bg} rounded-lg`}>
-                <span className="text-[8px] font-bold text-slate-500 w-9 shrink-0">{a.site}</span>
-                <span className={`text-[9px] ${a.sev} truncate`}>{a.msg}</span>
+      {/* Card 3 (Center Front) — Main KPI Dashboard */}
+      <motion.div 
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] z-[3]"
+      >
+        <div className="w-full bg-[#0a1628]/80 backdrop-blur-2xl rounded-3xl border border-primary/40 shadow-[0_16px_60px_rgba(4,154,137,0.25)] p-5 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-purple-500/10 pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-center gap-2">
+                <Activity className="w-5 h-5 text-primary" />
+                <span className="text-xs font-black text-white tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-primary to-cyan-400">Live Portfolio</span>
               </div>
-            ))}
+              <div className="flex items-center gap-1.5 bg-primary/10 px-2 py-1 rounded-md border border-primary/20">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+                <span className="text-[9px] font-mono text-primary font-bold">SYNCED</span>
+              </div>
+            </div>
+
+            {/* Main KPI */}
+            <div className="mb-6">
+              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-1">Total Generation Output</div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-4xl font-black text-white font-mono tabular-nums">{gen.toFixed(1)}</span>
+                <span className="text-sm font-bold text-primary">MWh</span>
+              </div>
+            </div>
+
+            {/* Performance Strip */}
+            <div className="grid grid-cols-2 gap-3 mb-5">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-3 relative overflow-hidden">
+                <div className="absolute bottom-0 right-0 p-2 opacity-10"><Zap className="w-8 h-8 text-white" /></div>
+                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-1">Portfolio PR</div>
+                <div className="text-xl font-bold text-white font-mono">{pr.toFixed(1)}<span className="text-xs text-slate-500 ml-1">%</span></div>
+              </div>
+              <div className="bg-gradient-to-br from-primary/10 to-transparent border border-primary/20 rounded-xl p-3 relative overflow-hidden">
+                <div className="absolute bottom-0 right-0 p-2 opacity-10"><TrendingUp className="w-8 h-8 text-primary" /></div>
+                <div className="text-[10px] text-primary/80 font-bold uppercase tracking-wider mb-1">vs Yesterday</div>
+                <div className="text-xl font-bold text-primary font-mono">+4.2<span className="text-xs text-primary/60 ml-1">%</span></div>
+              </div>
+            </div>
+
+            {/* Capacity breakdown */}
+            <div className="space-y-3">
+              {[
+                { label: "Solar Asset Yield", val: "88%", color: "bg-amber-400", hex: "text-amber-400" },
+                { label: "Wind Asset Yield", val: "92%", color: "bg-cyan-400", hex: "text-cyan-400" },
+              ].map((asset, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <div className={`w-8 text-[10px] font-bold font-mono ${asset.hex} text-right`}>{asset.val}</div>
+                  <div className="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div className={`h-full ${asset.color} rounded-full`} style={{ width: asset.val }}></div>
+                  </div>
+                  <div className="w-24 text-[8px] text-slate-400 uppercase tracking-wider font-bold truncate">{asset.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
