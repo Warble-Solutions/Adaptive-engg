@@ -152,6 +152,7 @@ export default function Navbar() {
                             <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/infrastructure/tunnel">Tunnel Solutions</DropdownLink>
                                 <DropdownLink href="/infrastructure/data-center">Data Center</DropdownLink>
+                                <DropdownLink href="/infrastructure/water">Water Solutions</DropdownLink>
                                 <DropdownLink href="/infrastructure/automation">Industrial Automation</DropdownLink>
                             </div>
                         </div>

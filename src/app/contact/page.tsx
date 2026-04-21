@@ -71,7 +71,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Project Type</label>
+                                            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Inquiry Type</label>
                                             <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-700">
                                                 <option>Renewable Solutions</option>
                                                 <option>PM-KUSUM</option>
