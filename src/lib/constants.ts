@@ -36,3 +36,15 @@ export const TUNNEL_STATS = {
   remoteIoPanels: { value: 15, suffix: "+", label: "Remote I/O Panels Installed" },
 } as const;
 
+export const WATER_STATS = {
+  yearsExperience: { value: 17, suffix: "+", label: "Years Experience" },
+  mldTreatedWater: { value: 400, suffix: "+", label: "MLD Treated Water" },
+  supplySchemes: { value: 50, suffix: "+", label: "Supply Schemes" },
+  overheadTanks: { value: 1500, suffix: "+", label: "Over Head Tanks (OHT)", formatted: "1,500+" },
+  mldTreatedSewage: { value: 300, suffix: "+", label: "MLD Treated Sewage" },
+  pumpingStationsConnected: { value: 10, suffix: "+", label: "Pumping Stations Connected" },
+  mldEffluentTreated: { value: 20, suffix: "+", label: "MLD Effluent Treated" },
+  statesCovered: { value: 10, suffix: "+", label: "States Covered" },
+  irrigationPumpingStations: { value: 20, suffix: "+", label: "Irrigation Pumping Stations" },
+} as const;
+

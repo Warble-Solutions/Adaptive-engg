@@ -5,12 +5,13 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import MicroCTA from "@/components/ui/MicroCTA";
 import Counter from "@/components/ui/Counter";
-import { ArrowRight, ShieldCheck, Activity, HardHat, CheckCircle2, Blocks, Link2, Youtube } from "lucide-react";
+import { ArrowRight, ShieldCheck, Activity, HardHat, CheckCircle2, Blocks, Link2, Youtube, Monitor, Database, Layers } from "lucide-react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDraftingCompass, faIndustry, faScrewdriverWrench, faDesktop } from "@fortawesome/free-solid-svg-icons";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import { COMPANY_STATS } from "@/lib/constants";
+import { ScadaHeroDashboard } from "@/components/DashboardMockups";
 
 export default function Home() {
   return (
@@ -128,33 +129,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. TECH HIGHLIGHT (Light) */}
+      {/* 5. SCADA HIGHLIGHT (Light) */}
       <section className="py-24 bg-light z-0" >
         <SceneTrigger variant="logo" color="#0EA5E9" speed={1} />
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
           <div className="lg:w-1/2">
             <SectionWrapper>
-              <span className="text-primary font-bold uppercase text-sm tracking-widest mb-2 block">ReportWiz Platform</span>
-              <h2 className="text-5xl font-extrabold text-slate-900 mb-8 font-heading">Intelligent <br /> Monitoring</h2>
+              <span className="text-primary font-bold uppercase text-sm tracking-widest mb-2 block">SCADA Solutions</span>
+              <h2 className="text-5xl font-extrabold text-slate-900 mb-8 font-heading">Real-Time <br /> Plant Control</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Our proprietary software provides Central Plant Monitoring and Mobile Asset Management. With an installed base of over {COMPANY_STATS.installedBase.value}GW, we ensure optimal performance across {COMPANY_STATS.satisfiedCustomers.value}+ plants.
+                Our enterprise-grade SCADA handles 10 Lacs+ tags with pre-built libraries for all major inverter and turbine manufacturers. With an installed base of {COMPANY_STATS.installedBase.value}GW+ across {COMPANY_STATS.satisfiedCustomers.value}+ plants, we deliver unmatched visibility and control.
               </p>
               <div className="mb-8">
-                <MicroCTA text="Request Live Demo" variant="quote" href="/contact?subject=Demo" context="light" />
+                <MicroCTA text="Schedule Consultation" variant="quote" href="/contact?subject=SCADA" context="light" />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <Activity className="text-primary w-8 h-8 group-hover:scale-110 transition-transform" />
+              <div className="grid grid-cols-3 gap-4">
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                  <Monitor className="text-primary w-7 h-7 shrink-0" />
                   <div>
-                    <h4 className="font-bold text-slate-900">Real-Time</h4>
-                    <p className="text-xs text-slate-500">Telemetry</p>
+                    <h4 className="font-bold text-slate-900 text-sm">Real-Time</h4>
+                    <p className="text-xs text-slate-500">Monitoring</p>
                   </div>
                 </div>
-                <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <ShieldCheck className="text-primary w-8 h-8 group-hover:scale-110 transition-transform" />
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                  <Layers className="text-primary w-7 h-7 shrink-0" />
                   <div>
-                    <h4 className="font-bold text-slate-900">Secure</h4>
-                    <p className="text-xs text-slate-500">Asset Mgmt</p>
+                    <h4 className="font-bold text-slate-900 text-sm">Scalable</h4>
+                    <p className="text-xs text-slate-500">Architecture</p>
+                  </div>
+                </div>
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                  <Database className="text-primary w-7 h-7 shrink-0" />
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm">10L+</h4>
+                    <p className="text-xs text-slate-500">Tags</p>
                   </div>
                 </div>
               </div>
@@ -163,11 +171,8 @@ export default function Home() {
 
           <div className="lg:w-1/2">
             <SectionWrapper delay={0.2}>
-              <div className="aspect-video bg-gray-50 flex items-center justify-center border border-gray-100 rounded-3xl shadow-xl p-8">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto rounded-full border-4 border-t-primary border-r-primary border-b-gray-200 border-l-gray-200 animate-spin-slow mb-4"></div>
-                  <p className="font-bold text-slate-400 text-sm tracking-widest">LIVE DATA FEED</p>
-                </div>
+              <div className="h-[400px]">
+                <ScadaHeroDashboard />
               </div>
             </SectionWrapper>
           </div>

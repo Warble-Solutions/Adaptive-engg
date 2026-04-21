@@ -160,10 +160,23 @@ export default function Navbar() {
                             <button className="text-sm font-bold uppercase tracking-wider text-slate-700 hover:text-primary flex items-center gap-1 py-6">
                                 Infrastructure <ChevronDown className="w-3 h-3 opacity-50" />
                             </button>
-                            <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/infrastructure/tunnel">Tunnel Solutions</DropdownLink>
                                 <DropdownLink href="/infrastructure/data-center">Data Center</DropdownLink>
-                                <DropdownLink href="/infrastructure/water">Water Solutions</DropdownLink>
+                                <div className="relative group/water">
+                                    <Link href="/infrastructure/water" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
+                                        <span>Water Solutions</span>
+                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/water:opacity-100 transition-opacity" />
+                                    </Link>
+                                    <div className="absolute top-0 right-full w-72 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/water:opacity-100 group-hover/water:visible transition-all duration-300 transform -translate-x-2 group-hover/water:translate-x-0 mr-1 overflow-hidden z-50">
+                                        <DropdownLink href="/infrastructure/water/wtp">Water Supply & WTP</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/stp">Sewage Treatment Plant</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/etp">Effluent Treatment Plant</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/lift-irrigation">Lift Irrigation</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/micro-irrigation">Micro Irrigation</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/centralized-scada">Centralized SCADA</DropdownLink>
+                                    </div>
+                                </div>
                                 <DropdownLink href="/infrastructure/automation">Industrial Automation</DropdownLink>
                             </div>
                         </div>
