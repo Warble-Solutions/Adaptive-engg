@@ -186,18 +186,19 @@ export default function TurnkeyPage() {
 
                         {/* Bento Box 4 - Wide Rectangle */}
                         <SectionWrapper delay={0.4}>
-                            <div className="md:col-span-2 p-10 bg-[#0a1120] rounded-3xl border border-white/10 hover:border-green-500/50 transition-all duration-500 h-[350px] flex flex-col justify-center group relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-transparent"></div>
-                                <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8">
-                                    <div className="w-20 h-20 bg-green-500/20 rounded-3xl flex items-center justify-center text-green-400 shrink-0 backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.2)]">
-                                        <ShieldCheck className="w-10 h-10" />
+                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-green-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
+                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                                    <ShieldCheck className="w-48 h-48 text-green-400" />
+                                </div>
+                                <div className="relative z-10 sm:w-2/3">
+                                    <div className="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 transition-transform">
+                                        <ShieldCheck className="w-6 h-6" />
                                     </div>
-                                    <div>
-                                        <h3 className="text-3xl font-bold text-white mb-3">Earthing & Lightning</h3>
-                                        <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-                                            Rigorous earthing grid design and installation encompassing chemical earthing, engineered earth pits, and strategic lightning arrestor deployment to protect multi-million dollar assets.
-                                        </p>
-                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-3">Earthing & Lightning</h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed">
+                                        Rigorous earthing grid design and installation encompassing chemical earthing, engineered earth pits, and strategic lightning arrestor deployment to protect multi-million dollar assets.
+                                    </p>
                                 </div>
                             </div>
                         </SectionWrapper>
