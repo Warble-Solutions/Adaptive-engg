@@ -22,39 +22,45 @@ import {
 
 import SectionWrapper from "@/components/SectionWrapper";
 import { PPC_STATS } from "@/lib/constants";
+import { CMSHeroDashboards } from "@/components/DashboardMockups";
 
 export default function PPCPage() {
 
     return (
         <div className="flex flex-col w-full">
             {/* 1. HERO SECTION (Dark) */}
-            {/* 1. HERO SECTION (Dark) */}
-            <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="/imgs/ppc.jpg"
-                        alt="PPC Background"
-                        className="w-full h-full object-cover"
-                    />
-                    {/* Darker Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
+            <section className="section-hero relative min-h-screen flex items-center px-6 pt-32 pb-20 overflow-hidden">
+                {/* Background */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a1628] via-[#102040] to-[#0a1628]">
+                    <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(0deg, rgba(59,130,246,0.3) 1px, transparent 1px)', backgroundSize: '1px 20px' }}></div>
+                    <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-blue-500/15 rounded-full blur-[120px]"></div>
                 </div>
 
-                <div className="z-10 max-w-7xl relative">
-                    <SectionWrapper>
-                        <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-white/20 text-center shadow-lg">
-                            India&apos;s Preferred Renewable Energy Technology Partner
-                        </div>
+                <div className="z-10 max-w-7xl mx-auto w-full relative">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <SectionWrapper>
+                            <div className="text-left">
+                                <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
+                                    India&apos;s Preferred Renewable Energy Technology Partner
+                                </div>
+                                <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading">
+                                    Power <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Plant Control</span>
+                                </h1>
+                                <p className="text-gray-300 text-lg md:text-xl font-medium max-w-xl leading-relaxed mb-8">
+                                    Advanced, reliable and adaptable Power Plant Control (PPC) solutions for stand-alone and hybrid plants to achieve green energy goals.
+                                </p>
+                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                                    Learn More <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
+                        </SectionWrapper>
 
-                        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-                            Power <span className="text-primary drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">Plant Control</span>
-                        </h1>
-
-                        <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
-                            Advanced, reliable and adaptable Power Plant Control (PPC) solutions for stand-alone and hybrid plants to achieve green energy goals
-                        </p>
-                    </SectionWrapper>
+                        <SectionWrapper delay={0.2}>
+                            <div className="hidden lg:block h-[500px]">
+                                <CMSHeroDashboards />
+                            </div>
+                        </SectionWrapper>
+                    </div>
                 </div>
             </section>
 
