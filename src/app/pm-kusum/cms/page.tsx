@@ -15,12 +15,9 @@ export default function Page() {
 
       {/* HERO — Dashboard-inspired with grid overlay */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0d2137] to-[#06101c]"></div>
-          {/* Dashboard grid overlay */}
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_cms_1776742307616.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/80 via-[#0a1628]/60 to-[#0a1628]/90 mix-blend-multiply"></div>
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(59,130,246,0.5) 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
-          <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-blue-500/15 rounded-full blur-[130px]"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-primary/10 rounded-full blur-[120px]"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>

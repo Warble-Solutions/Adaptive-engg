@@ -17,12 +17,9 @@ export default function Page() {
 
       {/* HERO —  Terminal/console inspired */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0a1a14] to-slate-950"></div>
-          {/* Terminal grid overlay */}
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_iot_scada_1776742351594.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950/90 mix-blend-multiply"></div>
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,1) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,1) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-          <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-primary/20 rounded-full blur-[120px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-[100px]"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>

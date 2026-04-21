@@ -18,11 +18,9 @@ export default function Page() {
 
       {/* HERO — Product catalog gradient */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1a14] via-[#0d2a1e] to-[#061210]"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_acdb_1776742278308.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1a14]/80 via-[#0a1a14]/60 to-[#0a1a14]/90 mix-blend-multiply"></div>
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, rgba(4,154,137,0.5) 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
-          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-primary/15 rounded-full blur-[130px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-500/10 rounded-full blur-[100px]"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>

@@ -15,11 +15,8 @@ export default function Page() {
 
       {/* HERO — Kanban/workflow gradient */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a0f2e] via-[#1e1a3a] to-[#0f0a1e]"></div>
-          {/* Kanban-like vertical lanes */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 199px, rgba(168,85,247,0.4) 200px)', backgroundSize: '200px 100%' }}></div>
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[150px]"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_ams_1776742293340.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f2e]/80 via-[#1a0f2e]/60 to-[#1a0f2e]/90 mix-blend-multiply"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>

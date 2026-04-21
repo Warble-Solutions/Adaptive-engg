@@ -19,14 +19,8 @@ export default function PmKusumPage() {
             {/* 1. HERO SECTION (Dark) */}
             <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
                 {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="/imgs/indfarm.jpg"
-                        alt="PM KUSUM Background"
-                        className="w-full h-full object-cover"
-                    />
-                    {/* Darker Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
+                <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_main_1776742261100.png')] bg-cover bg-center">
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 mix-blend-multiply z-10"></div>
                 </div>
 
                 <div className="z-10 max-w-7xl relative">

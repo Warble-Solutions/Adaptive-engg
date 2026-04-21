@@ -16,11 +16,9 @@ export default function Page() {
 
       {/* HERO — Industrial engineering spec aesthetic */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#262626] to-[#0f0f0f]"></div>
-          {/* Blueprint grid */}
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_ht_panel_1776742333863.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/80 via-[#1a1a1a]/60 to-[#1a1a1a]/90 mix-blend-multiply"></div>
           <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(234,179,8,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(234,179,8,0.5) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-          <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-yellow-500/10 rounded-full blur-[120px]"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>

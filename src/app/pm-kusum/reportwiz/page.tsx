@@ -15,15 +15,14 @@ export default function Page() {
 
       {/* HERO — Data visualization gradient with colored accent panels */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_reportwiz_1776742405186.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/80 via-[#0f172a]/60 to-[#0f172a]/90 mix-blend-multiply"></div>
           {/* Chart-like vertical bars */}
           <div className="absolute bottom-0 left-0 w-full h-1/3 flex items-end justify-around px-20 opacity-[0.06]">
             {[40, 65, 85, 50, 70, 90, 55, 75, 60, 80, 45, 70].map((h, i) => (
               <div key={i} className="w-8 bg-gradient-to-t from-primary to-emerald-400 rounded-t-sm" style={{ height: `${h}%` }}></div>
             ))}
           </div>
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[150px]"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
