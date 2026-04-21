@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Shield, Zap, Activity, CheckCircle2, Cpu, Award, ThermometerSun, Lock, Gauge, Settings } from "lucide-react";
 import CertificateGallery from "@/components/CertificateGallery";
+import { ACDBPanelVisual } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "ACDB Panel Solutions | PM-KUSUM | Adaptive Engineering",
@@ -89,12 +90,8 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="relative h-96 bg-gradient-to-br from-slate-100 to-slate-50 rounded-3xl border border-slate-200 flex items-center justify-center">
-                <div className="text-center">
-                  <Shield className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                  <p className="text-sm font-bold text-slate-400">ACDB Panel Product Image</p>
-                  <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
-                </div>
+              <div className="h-96">
+                <ACDBPanelVisual />
               </div>
             </SectionWrapper>
           </div>

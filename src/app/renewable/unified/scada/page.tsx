@@ -2,6 +2,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Monitor, Shield, Database, Cpu, Settings, CheckCircle2, Layers, BarChart3, Workflow } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
+import { ScadaMonitoringDashboard, PlantOverviewDashboard, AlarmConsoleDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "SCADA Solutions | Adaptive Engineering",
@@ -92,31 +93,32 @@ export default function Page() {
         </div>
       </section>
 
-      {/* PLACEHOLDER IMAGES SECTION */}
+      {/* SCADA IN ACTION — Interactive Dashboards */}
       <section className="py-24 bg-white relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center font-heading">SCADA in Action</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center font-heading">SCADA in Action</h2>
+            <p className="text-slate-500 text-center max-w-xl mx-auto mb-12">Interactive preview of our SCADA interface screens</p>
           </SectionWrapper>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Real-Time Monitoring Dashboard", alt: "SCADA Dashboard" },
-              { title: "Plant Overview Screen", alt: "Plant Overview" },
-              { title: "Alarm Management Console", alt: "Alarm Console" },
-            ].map((item, i) => (
-              <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="group relative h-64 bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
-                  <img src={`/imgs/placeholder-scada-${i + 1}.jpg`} alt={item.alt} className="w-full h-full object-cover opacity-0" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <Monitor className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-                      <p className="text-sm font-bold text-slate-400">{item.title}</p>
-                      <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
-                    </div>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
+            <SectionWrapper delay={0.1}>
+              <div className="h-80">
+                <ScadaMonitoringDashboard />
+              </div>
+              <p className="text-center text-sm font-bold text-slate-700 mt-4">Real-Time Monitoring</p>
+            </SectionWrapper>
+            <SectionWrapper delay={0.2}>
+              <div className="h-80">
+                <PlantOverviewDashboard />
+              </div>
+              <p className="text-center text-sm font-bold text-slate-700 mt-4">Plant Overview</p>
+            </SectionWrapper>
+            <SectionWrapper delay={0.3}>
+              <div className="h-80">
+                <AlarmConsoleDashboard />
+              </div>
+              <p className="text-center text-sm font-bold text-slate-700 mt-4">Alarm Management</p>
+            </SectionWrapper>
           </div>
         </div>
       </section>

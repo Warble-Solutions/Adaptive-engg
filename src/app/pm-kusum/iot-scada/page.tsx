@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wifi, Monitor, Smartphone, BarChart3, Globe, Shield, Settings, CheckCircle2, Server, Radio, Cloud, Lock, Cpu, Activity, Users } from "lucide-react";
 import { KUSUM_STATS } from "@/lib/constants";
+import { IoTDevicePreview, SolarProDashboard, NocDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "IoT SCADA — SolarWiz | PM-KUSUM | Adaptive Engineering",
@@ -79,12 +80,8 @@ export default function Page() {
                   <p className="text-slate-600 leading-relaxed mb-6">
                     Ruggedized IoT gateway designed for harsh field conditions. Connects to all major inverter brands via Modbus, collects real-time data, and transmits securely to the cloud.
                   </p>
-                  <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center">
-                    <div className="text-center">
-                      <Cpu className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-                      <p className="text-sm font-bold text-slate-400">SolarEdge Device</p>
-                      <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
-                    </div>
+                  <div className="h-48">
+                    <IoTDevicePreview />
                   </div>
                 </div>
               </div>
@@ -103,12 +100,8 @@ export default function Page() {
                   <p className="text-slate-600 leading-relaxed mb-6">
                     Cloud-based monitoring platform with real-time dashboards, performance analytics, automated reporting, and mobile access. MNRE & DISCOM compliant reporting built-in.
                   </p>
-                  <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center">
-                    <div className="text-center">
-                      <Monitor className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-                      <p className="text-sm font-bold text-slate-400">SolarPro Dashboard</p>
-                      <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
-                    </div>
+                  <div className="h-48">
+                    <SolarProDashboard />
                   </div>
                 </div>
               </div>
@@ -176,12 +169,8 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="relative h-80 bg-gradient-to-br from-slate-100 to-slate-50 rounded-3xl border border-slate-200 flex items-center justify-center">
-                <div className="text-center">
-                  <Activity className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                  <p className="text-sm font-bold text-slate-400">NOC/SOC Dashboard</p>
-                  <p className="text-xs text-slate-300 mt-1">Placeholder Image</p>
-                </div>
+              <div className="h-80">
+                <NocDashboard />
               </div>
             </SectionWrapper>
           </div>

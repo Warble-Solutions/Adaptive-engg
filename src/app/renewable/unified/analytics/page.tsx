@@ -1,6 +1,7 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart } from "lucide-react";
+import { AnalyticsDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
   title: "Advanced Analytics | Unified Renewable Solutions | Adaptive Engineering",
@@ -92,12 +93,8 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="relative h-80 bg-white/5 rounded-3xl border border-white/10 overflow-hidden flex items-center justify-center">
-                <div className="text-center">
-                  <Brain className="w-16 h-16 text-purple-400/40 mx-auto mb-4" />
-                  <p className="text-sm font-bold text-gray-500">Analytics Dashboard Preview</p>
-                  <p className="text-xs text-gray-600 mt-1">Placeholder Image</p>
-                </div>
+              <div className="h-80">
+                <AnalyticsDashboard />
               </div>
             </SectionWrapper>
           </div>
