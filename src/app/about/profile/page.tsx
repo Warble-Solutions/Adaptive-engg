@@ -211,31 +211,52 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Our Values */}
-      <section className="py-24 bg-transparent relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+      {/* Our Values - S.C.A.L.E */}
+      <section className="py-32 bg-transparent relative z-20 overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0da08a]/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
             <SectionWrapper>
-              <h2 className="text-3xl font-bold text-white mb-4 font-heading">Our Values</h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">The principles that drive us to scale new heights.</p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-white/10">
+                Guiding Principles
+              </div>
+              <h2 className="text-5xl font-black text-white mb-6 font-heading">Our Values</h2>
             </SectionWrapper>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
             {[
-              { letter: "S", title: "Speed", icon: <Zap className="w-6 h-6" /> },
-              { letter: "C", title: "Courage & Commitment", icon: <ShieldCheck className="w-6 h-6" /> },
-              { letter: "A", title: "Adapt", icon: <Cpu className="w-6 h-6" /> },
-              { letter: "L", title: "Liveliness", icon: <Award className="w-6 h-6" /> },
-              { letter: "E", title: "Evolve to Excel", icon: <Activity className="w-6 h-6" /> }
+              { letter: "S", title: "Speed", icon: <Zap className="w-7 h-7" /> },
+              { letter: "C", title: "Courage & Commitment", icon: <ShieldCheck className="w-7 h-7" /> },
+              { letter: "A", title: "Adapt", icon: <Cpu className="w-7 h-7" /> },
+              { letter: "L", title: "Liveliness", icon: <Award className="w-7 h-7" /> },
+              { letter: "E", title: "Evolve to Excel", icon: <Activity className="w-7 h-7" /> }
             ].map((value, idx) => (
               <SectionWrapper key={idx} delay={idx * 0.1}>
-                <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-white/10 shadow-xl transition-shadow flex flex-col items-center text-center group">
-                  <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#0da08a] to-teal-800 mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="group relative p-8 h-[340px] rounded-[2.5rem] bg-gradient-to-b from-white/[0.08] to-white/[0.02] border border-white/[0.05] hover:border-[#0da08a]/40 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(13,160,138,0.4)] flex flex-col justify-between cursor-default">
+                  
+                  {/* Massive background letter watermark */}
+                  <div className="absolute -right-4 -bottom-12 text-[260px] font-black text-white/[0.02] group-hover:text-[#0da08a]/10 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-700 ease-out pointer-events-none select-none leading-none drop-shadow-2xl">
                     {value.letter}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-6 leading-tight">{value.title}</h3>
-                  <div className="mt-auto w-12 h-12 bg-[#0da08a]/20 rounded-full flex items-center justify-center text-[#0da08a]">
+
+                  {/* Top: Glowing Icon */}
+                  <div className="relative z-10 w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-white/40 border border-white/10 group-hover:bg-[#0da08a] group-hover:text-white group-hover:border-[#0da08a] group-hover:shadow-[0_0_30px_rgba(13,160,138,0.6)] transition-all duration-500 group-hover:scale-110">
                     {value.icon}
+                  </div>
+
+                  {/* Bottom: Text & Animated Line */}
+                  <div className="relative z-10 mt-auto">
+                     <div className="text-[10px] uppercase font-black tracking-[0.3em] text-[#0da08a] mb-3 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                       Scale Principle
+                     </div>
+                     <h3 className="text-2xl font-bold text-white group-hover:text-white tracking-tight leading-snug mb-6">
+                       {value.title}
+                     </h3>
+                     {/* Expanding Line */}
+                     <div className="w-10 h-1 bg-white/10 rounded-full group-hover:w-full group-hover:bg-[#0da08a] transition-all duration-700 ease-out"></div>
                   </div>
                 </div>
               </SectionWrapper>
