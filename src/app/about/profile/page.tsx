@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
@@ -217,45 +217,29 @@ export default function Page() {
           <div className="text-center mb-16">
             <SectionWrapper>
               <h2 className="text-3xl font-bold text-white mb-4 font-heading">Our Values</h2>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto">The principles that drive us to scale new heights.</p>
             </SectionWrapper>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <SectionWrapper delay={0}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-white/10 shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                  <CheckCircle2 className="w-6 h-6" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { letter: "S", title: "Speed", icon: <Zap className="w-6 h-6" /> },
+              { letter: "C", title: "Courage & Commitment", icon: <ShieldCheck className="w-6 h-6" /> },
+              { letter: "A", title: "Adapt", icon: <Cpu className="w-6 h-6" /> },
+              { letter: "L", title: "Liveliness", icon: <Award className="w-6 h-6" /> },
+              { letter: "E", title: "Evolve to Excel", icon: <Activity className="w-6 h-6" /> }
+            ].map((value, idx) => (
+              <SectionWrapper key={idx} delay={idx * 0.1}>
+                <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-white/10 shadow-xl transition-shadow flex flex-col items-center text-center group">
+                  <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#0da08a] to-teal-800 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {value.letter}
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-6 leading-tight">{value.title}</h3>
+                  <div className="mt-auto w-12 h-12 bg-[#0da08a]/20 rounded-full flex items-center justify-center text-[#0da08a]">
+                    {value.icon}
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">Innovation First</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">We invest heavily in R&amp;D to develop proprietary solutions that set industry benchmarks.</p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-white/10 shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                  <CheckCircle2 className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3">Client Success</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Every project is a partnership. We measure our success by the ROI we deliver to our clients.</p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-white/10 shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                  <CheckCircle2 className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3">Quality Obsession</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">ISO 9001:2015 and ISO 45001:2018 certified. Zero-defect manufacturing is our standard.</p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.3}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-white/10 shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                  <CheckCircle2 className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3">Sustainability</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Our solutions directly contribute to India&apos;s clean energy transition and carbon reduction goals.</p>
-              </div>
-            </SectionWrapper>
+              </SectionWrapper>
+            ))}
           </div>
         </div>
       </section>
