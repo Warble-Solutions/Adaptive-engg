@@ -59,7 +59,7 @@ export default function UnifiedCMSFeatures() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionWrapper>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-cyan-400 font-heading mb-6">Deep Intelligence Stack</h2>
+            <h2 className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-6">Deep Intelligence Stack</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">Explore the interactive capabilities natively integrated into AEPL's CMS.</p>
           </div>
         </SectionWrapper>
@@ -75,12 +75,12 @@ export default function UnifiedCMSFeatures() {
                     onClick={() => setActiveTab(feature.id)}
                     className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 ${
                       isActive 
-                        ? "bg-cyan-500/10 border-cyan-500/50 shadow-[0_0_30px_rgba(6,182,212,0.15)]" 
+                        ? "bg-teal-500/10 border-teal-500/50 shadow-[0_0_30px_rgba(6,182,212,0.15)]" 
                         : "bg-white/5 border-white/5 hover:bg-white/10 hover:bg-[#0da08a] border-white/20 text-gray-400 hover:bg-[#0da08a]"
                     }`}
                   >
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                      isActive ? "bg-cyan-500 text-slate-900" : "bg-white/10"
+                      isActive ? "bg-[#0da08a] text-slate-900" : "bg-white/10"
                     }`}>
                       {feature.icon}
                     </div>
@@ -113,7 +113,7 @@ export default function UnifiedCMSFeatures() {
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 w-full p-10 md:p-14 z-10 flex flex-col justify-end">
                   <div key={`${activeFeature.id}-content`} className="animate-in slide-in-from-bottom-8 fade-in duration-700">
-                    <div className="w-16 h-16 bg-cyan-500/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-cyan-400 mb-6 border border-cyan-500/30">
+                    <div className="w-16 h-16 bg-teal-500/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-teal-400 mb-6 border border-teal-500/30">
                       {activeFeature.icon}
                     </div>
                     <h3 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">{activeFeature.title}</h3>

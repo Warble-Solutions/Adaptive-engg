@@ -31,7 +31,7 @@ export default function Page() {
             </h1>
             
             <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-cyan-500"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-teal-500"></div>
               <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-6 block w-full text-center">
                 With rising awareness on road and rail safety, governments are modernizing tunnel infrastructure. At Adaptive Engineering Pvt Ltd, we are experts in providing <span className="text-white font-bold">Electrical, Instrumentation and Automation Solutions for Road, Railway and Metro Tunnels</span>.
               </p>
@@ -78,7 +78,7 @@ export default function Page() {
                     <Zap className="w-4 h-4" />
                     <span>System Advantages</span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Benefits</span></h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500">Benefits</span></h2>
                   <p className="text-slate-500 text-lg leading-relaxed mb-8">Intelligent automation that protects lives, preserves infrastructure, and slashes energy consumption.</p>
                 </SectionWrapper>
               </div>
@@ -147,27 +147,27 @@ export default function Page() {
 
             {/* Bento Box 3 - Large Tall (Image bg) */}
             <SectionWrapper delay={0.3}>
-              <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-cyan-500/50 transition-all duration-500 flex flex-col justify-end group relative overflow-hidden h-[400px] sm:h-[300px] lg:h-[400px] shadow-2xl">
+              <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 flex flex-col justify-end group relative overflow-hidden h-[400px] sm:h-[300px] lg:h-[400px] shadow-2xl">
                 <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_power_db.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/40 to-transparent"></div>
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
                      <Zap className="w-6 h-6" />
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-4">Reliable Electrical Distribution</h3>
                   
                   <ul className="space-y-4 mt-8">
                     <li className="flex items-start gap-4">
-                      <CheckCircle2 className="w-6 h-6 text-cyan-400 shrink-0" />
+                      <CheckCircle2 className="w-6 h-6 text-teal-400 shrink-0" />
                       <div>
                         <span className="font-bold text-lg text-white">Power Management</span>
                         <p className="text-gray-400 text-sm">Deep active monitoring and flawless distribution.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <CheckCircle2 className="w-6 h-6 text-cyan-400 shrink-0" />
+                      <CheckCircle2 className="w-6 h-6 text-teal-400 shrink-0" />
                       <div>
                         <span className="font-bold text-lg text-white">Reduced Downtime</span>
                         <p className="text-gray-400 text-sm">Increased passenger and transit safety mechanisms.</p>
@@ -180,7 +180,7 @@ export default function Page() {
 
             {/* Bento Box 4 - Small */}
             <SectionWrapper delay={0.4}>
-              <div className="p-8 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-md rounded-3xl border border-teal-500/20 hover:bg-[#0da08a] bg-teal-500/20 transition-all duration-500 h-full flex flex-col items-center justify-center text-center group relative overflow-hidden">
+              <div className="p-8 bg-gradient-to-br from-teal-500/10 to-teal-500/10 backdrop-blur-md rounded-3xl border border-teal-500/20 hover:bg-[#0da08a] bg-teal-500/20 transition-all duration-500 h-full flex flex-col items-center justify-center text-center group relative overflow-hidden">
                 <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white mb-4 backdrop-blur-sm group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(4,154,137,0.5)]">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
@@ -198,7 +198,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Secure Your Infrastructure</h2>
             <p className="text-slate-500 mb-8 text-lg">Partner with AEPL for unmatched automation and safety implementation.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-full font-bold hover:bg-[#0da08a] shadow-lg transition-all hover:bg-slate-900 hover:scale-105">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-500 to-teal-500 text-white rounded-full font-bold hover:bg-[#0da08a] shadow-lg transition-all hover:bg-slate-900 hover:scale-105">
               Contact Engineering Team <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

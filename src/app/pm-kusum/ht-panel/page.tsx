@@ -22,14 +22,14 @@ export default function Page() {
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-yellow-500/10 backdrop-blur-sm text-yellow-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-yellow-500/20">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
               <Zap className="w-4 h-4" />
               <span>PM-KUSUM</span>
             </div>
             <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
               HT Panel <span className="gradient-heading">Solutions</span>
             </h1>
-            <p className="text-2xl md:text-3xl font-bold text-yellow-400/80 mb-6">VCB Panel up to 33kV / 11kV</p>
+            <p className="text-2xl md:text-3xl font-bold text-teal-400/80 mb-6">VCB Panel up to 33kV / 11kV</p>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
               IS/IEC type-tested High Tension Vacuum Circuit Breaker panels manufactured in our {COMPANY_STATS.manufacturingFacility.formatted} Sq. Ft. facility for PM-KUSUM solar, substations, and industrial applications.
             </p>
@@ -48,12 +48,12 @@ export default function Page() {
                 { value: "31.5kA", label: "Short Circuit Rating", icon: <Shield className="w-5 h-5" /> },
                 { value: "IS/IEC", label: "Type Tested", icon: <Award className="w-5 h-5" /> },
               ].map((item, i) => (
-                <div key={i} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-yellow-500/30 hover:bg-[#0da08a] shadow-lg transition-all">
-                  <div className="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-600 mx-auto mb-3">
+                <div key={i} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-[#0da08a] mx-auto mb-3">
                     {item.icon}
                   </div>
                   <div className="text-3xl font-black text-slate-900 mb-1">{item.value}</div>
-                  <div className="text-xs font-bold text-yellow-600 uppercase tracking-wider">{item.label}</div>
+                  <div className="text-xs font-bold text-[#0da08a] uppercase tracking-wider">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -75,7 +75,7 @@ export default function Page() {
                     <th className="text-left p-5 font-bold text-xs uppercase tracking-wider">Parameter</th>
                     <th className="text-center p-5 font-bold text-xs uppercase tracking-wider">3.3 kV</th>
                     <th className="text-center p-5 font-bold text-xs uppercase tracking-wider">6.6 kV</th>
-                    <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-yellow-600/20 border-x border-yellow-500/30">11 kV</th>
+                    <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-teal-600/20 border-x border-teal-500/30">11 kV</th>
                     <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-primary/20 border-x border-primary/30">33 kV</th>
                   </tr>
                 </thead>
@@ -94,10 +94,10 @@ export default function Page() {
                     { param: "SCADA Integration", values: ["Optional", "Optional", "Standard", "Standard"] },
                     { param: "Compliance", values: ["ERDA Tested", "ERDA Tested", "ERDA Tested", "ERDA / CPRI Tested"] },
                   ].map((row, i) => (
-                    <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-[#0da08a] bg-yellow-50/50 transition-colors`}>
+                    <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-[#0da08a] bg-teal-50/50 transition-colors`}>
                       <td className="p-4 font-bold text-slate-900 border-b border-slate-100">{row.param}</td>
                       {row.values.map((val, j) => (
-                        <td key={j} className={`p-4 text-center text-slate-600 border-b border-slate-100 ${j === 2 ? 'bg-yellow-50/30 border-x border-yellow-100' : ''} ${j === 3 ? 'bg-primary/5 border-x border-primary/10' : ''}`}>{val}</td>
+                        <td key={j} className={`p-4 text-center text-slate-600 border-b border-slate-100 ${j === 2 ? 'bg-teal-50/30 border-x border-teal-100' : ''} ${j === 3 ? 'bg-primary/5 border-x border-primary/10' : ''}`}>{val}</td>
                       ))}
                     </tr>
                   ))}
@@ -124,8 +124,8 @@ export default function Page() {
               { icon: <ThermometerSun className="w-6 h-6" />, title: "Environmental Protection", desc: "Anti-corrosion CRCA enclosure with epoxy powder coating. Tropicalized for Indian conditions." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-yellow-500/30 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center text-yellow-400 mb-5 group-hover:scale-110 transition-transform">
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 mb-5 group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>

@@ -95,7 +95,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
             <label htmlFor="name" className="text-sm font-bold tracking-wide text-white">Full Name *</label>
             <input 
               required type="text" id="name" name="name"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
               placeholder="John Doe"
             />
           </div>
@@ -103,7 +103,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
             <label htmlFor="email" className="text-sm font-bold tracking-wide text-white">Email Address *</label>
             <input 
               required type="email" id="email" name="email"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
               placeholder="john@example.com"
             />
           </div>
@@ -113,7 +113,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
           <label htmlFor="phone" className="text-sm font-bold tracking-wide text-white">Phone Number *</label>
           <input 
             required type="tel" id="phone" name="phone"
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow"
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
             placeholder="+91 98765 43210"
           />
         </div>
@@ -123,7 +123,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
           <div className="relative">
             <input 
               required type="file" id="resume" name="resume" accept="application/pdf"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 file:bg-primary/20"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-teal-50 file:text-teal-700 file:bg-primary/20"
             />
             <Upload className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
           </div>
@@ -134,7 +134,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
           <label htmlFor="coverLetter" className="text-sm font-bold tracking-wide text-white">Cover Letter (Optional)</label>
           <textarea 
             id="coverLetter" name="coverLetter" rows={4}
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow resize-y"
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow resize-y"
             placeholder="Tell us why you are a great fit for this role..."
           />
         </div>

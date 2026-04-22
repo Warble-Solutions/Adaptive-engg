@@ -203,7 +203,7 @@ export default function PPCPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                            <Zap className="text-yellow-400 w-6 h-6" /> Power Optimization & Curtailment
+                                            <Zap className="text-teal-400 w-6 h-6" /> Power Optimization & Curtailment
                                         </h3>
                                         <p className="text-gray-400 leading-relaxed">
                                             Maximize yield with &quot;Dynamic Power Control&quot;. Intelligent algorithms optimize production across all inverters/turbines. Execute curtailment orders with precision to protect revenue.
@@ -218,7 +218,7 @@ export default function PPCPage() {
                                             <div className="text-xs text-gray-500 uppercase">Compliance</div>
                                         </div>
                                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 text-center">
-                                            <div className="text-3xl font-bold text-yellow-500 mb-1">Max</div>
+                                            <div className="text-3xl font-bold text-[#0da08a] mb-1">Max</div>
                                             <div className="text-xs text-gray-500 uppercase">Yield</div>
                                         </div>
                                     </div>
@@ -238,8 +238,8 @@ export default function PPCPage() {
                                             <div className="text-xs text-gray-400 uppercase text-center">Response Time</div>
                                         </div>
                                         <div className="flex flex-col items-center justify-center p-6 bg-white/5 rounded-2xl border border-white/5">
-                                            <div className="w-20 h-20 rounded-full border-4 border-green-500/30 flex items-center justify-center mb-3">
-                                                <span className="text-base font-black text-green-400">99.9%</span>
+                                            <div className="w-20 h-20 rounded-full border-4 border-teal-500/30 flex items-center justify-center mb-3">
+                                                <span className="text-base font-black text-teal-400">99.9%</span>
                                             </div>
                                             <div className="text-xs text-gray-400 uppercase text-center">Uptime</div>
                                         </div>
@@ -330,7 +330,7 @@ export default function PPCPage() {
                                         title="Reactive Power Control"
                                         desc="Dynamic control for ultra-fast voltage support and precision power factor management to ensure maximum uptime."
                                         imageSrc="/imgs/tam/Optimized Reactive Power Control.png"
-                                        color="text-yellow-500"
+                                        color="text-[#0da08a]"
                                     />
                                     <FeatureRow
                                         title="Ramp-Rate Control"
@@ -368,7 +368,7 @@ export default function PPCPage() {
                                         title="PF Control"
                                         desc="Optimize plant efficiency with automated phase-angle correction and seamless reactive power management."
                                         imageSrc="/imgs/tam/Enhanced Power Factor Correction.png"
-                                        color="text-green-600"
+                                        color="text-[#0da08a]"
                                     />
                                 </div>
                             </div>
@@ -458,7 +458,7 @@ export default function PPCPage() {
                                         </div>
                                         <div className="grid grid-cols-2 gap-4">
                                             <div className="flex items-center gap-2 text-gray-300 text-sm">
-                                                <Zap className="w-4 h-4 text-yellow-400" /> Inverters
+                                                <Zap className="w-4 h-4 text-teal-400" /> Inverters
                                             </div>
                                             <div className="flex items-center gap-2 text-gray-300 text-sm">
                                                 <Activity className="w-4 h-4 text-red-400" /> MFMs / Meters

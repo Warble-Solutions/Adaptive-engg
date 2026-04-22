@@ -47,7 +47,7 @@ export default function Page() {
                     <Monitor className="w-4 h-4" />
                     <span>Operational Excellence</span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Highlights</span></h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500">Highlights</span></h2>
                   <p className="text-slate-500 text-lg leading-relaxed mb-8">Achieve total transparency and granular control over your PM-KUSUM decentralized portfolio with AEPL&apos;s intelligent insights.</p>
                 </SectionWrapper>
               </div>
@@ -58,7 +58,7 @@ export default function Page() {
                 { icon: <Eye className="w-6 h-6" />, title: "Insightful View of Entire Portfolio", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "hover:bg-[#0da08a] shadow-teal-500/20 hover:bg-[#0da08a] border-teal-300" },
                 { icon: <BarChart3 className="w-6 h-6" />, title: "Targeted KPI Metrics", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "hover:bg-[#0da08a] shadow-teal-500/20 hover:bg-[#0da08a] border-teal-300" },
                 { icon: <Activity className="w-6 h-6" />, title: "ML Anomaly Detection", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "hover:bg-[#0da08a] shadow-teal-500/20 hover:bg-[#0da08a] border-teal-300" },
-                { icon: <Cpu className="w-6 h-6" />, title: "AI Assistant", color: "text-amber-600 bg-amber-50 border-amber-100", shadow: "hover:bg-[#0da08a] shadow-amber-500/20 hover:bg-[#0da08a] border-amber-300" },
+                { icon: <Cpu className="w-6 h-6" />, title: "AI Assistant", color: "text-[#0da08a] bg-teal-50 border-teal-100", shadow: "hover:bg-[#0da08a] shadow-teal-500/20 hover:bg-[#0da08a] border-teal-300" },
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
                   <div className={`p-8 rounded-3xl border ${item.color} bg-white shadow-sm transition-all duration-300 h-full flex flex-col group ${item.shadow} hover:bg-[#0da08a] -translate-y-1`}>
@@ -121,12 +121,12 @@ export default function Page() {
 
             {/* Bento Box 3 - Large Tall (Image bg) */}
             <SectionWrapper delay={0.3}>
-              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-cyan-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ams_1776742293340.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent"></div>
                 <div className="relative z-10 w-full sm:w-2/3">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-4 backdrop-blur-lg group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-4 backdrop-blur-lg group-hover:scale-110 transition-transform">
                     <Monitor className="w-6 h-6" />
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-3">Real-Time Dashboards</h3>
@@ -137,14 +137,14 @@ export default function Page() {
 
             {/* Bento Box 4 - Flow (Image bg) */}
             <SectionWrapper delay={0.4}>
-              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-cyan-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
+              <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ht_panel_1776742333863.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/60 to-transparent"></div>
                 <div className="absolute top-0 right-0 p-6 opacity-30 group-hover:bg-[#0da08a] opacity-50 transition-opacity z-10 drop-shadow-2xl">
-                  <Shield className="w-24 h-24 text-cyan-400" />
+                  <Shield className="w-24 h-24 text-teal-400" />
                 </div>
                 <div className="relative z-10 mt-auto">
-                  <div className="w-12 h-12 bg-transparent border border-cyan-500/30 rounded-2xl flex items-center justify-center text-cyan-300 mb-4 backdrop-blur-lg group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-transparent border border-teal-500/30 rounded-2xl flex items-center justify-center text-teal-300 mb-4 backdrop-blur-lg group-hover:scale-110 transition-transform">
                     <Lock className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">Secure Infrastructure</h3>
@@ -185,7 +185,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className={`p-10 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 flex flex-col md:flex-row items-center gap-10 hover:bg-white/10 transition-all ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                   <div className="w-24 h-24 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-3xl border border-white/10 flex items-center justify-center text-teal-400 shrink-0 shadow-[0_0_50px_rgba(59,130,246,0.1)]">
+                   <div className="w-24 h-24 bg-gradient-to-br from-teal-500/20 to-teal-500/20 rounded-3xl border border-white/10 flex items-center justify-center text-teal-400 shrink-0 shadow-[0_0_50px_rgba(59,130,246,0.1)]">
                      {item.icon}
                    </div>
                    <div className={`${i % 2 !== 0 ? 'md:text-right' : ''}`}>

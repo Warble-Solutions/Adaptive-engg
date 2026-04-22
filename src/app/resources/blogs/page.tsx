@@ -43,7 +43,7 @@ export default async function BlogsPage() {
                       className="object-cover group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-teal-500/20 flex items-center justify-center">
                       <span className="text-primary font-bold tracking-widest uppercase opacity-50">Adaptive</span>
                     </div>
                   )}

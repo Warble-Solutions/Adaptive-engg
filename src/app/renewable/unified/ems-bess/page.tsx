@@ -60,9 +60,9 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: <Zap className="w-8 h-8" />, title: "Indigenous Solution", desc: "Built entirely in-house by AEPL engineers. No dependency on foreign OEMs. Full control over algorithms, updates, and customizations.", gradient: "from-teal-500 to-cyan-500" },
+              { icon: <Zap className="w-8 h-8" />, title: "Indigenous Solution", desc: "Built entirely in-house by AEPL engineers. No dependency on foreign OEMs. Full control over algorithms, updates, and customizations.", gradient: "from-teal-500 to-teal-500" },
               { icon: <BarChart3 className="w-8 h-8" />, title: "ML Based Energy Arbitrage", desc: "Machine learning algorithms optimize charge/discharge cycles based on real-time electricity pricing, demand forecasting, and weather patterns.", gradient: "from-teal-500 to-teal-500" },
-              { icon: <Battery className="w-8 h-8" />, title: "State of Charge (SoC) Management", desc: "Advanced battery management algorithms maintain optimal SoC to maximize battery life while meeting operational requirements. Cell-level balancing.", gradient: "from-amber-500 to-orange-500" },
+              { icon: <Battery className="w-8 h-8" />, title: "State of Charge (SoC) Management", desc: "Advanced battery management algorithms maintain optimal SoC to maximize battery life while meeting operational requirements. Cell-level balancing.", gradient: "from-teal-500 to-teal-500" },
               { icon: <Shield className="w-8 h-8" />, title: "Peak Shaving & Grid Support", desc: "Reduce peak demand charges, provide frequency regulation, and support grid stability during renewable intermittency events.", gradient: "from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>

@@ -44,7 +44,7 @@ export default function Page() {
                 <Layers className="w-4 h-4" />
                 <span>Core Capabilities</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 tracking-tight">APM <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-fuchsia-500">Modules</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 tracking-tight">APM <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500">Modules</span></h2>
               <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">Seven integrated modules engineered to provide complete visibility and control over your entire asset lifecycle.</p>
             </div>
           </SectionWrapper>
@@ -63,7 +63,7 @@ export default function Page() {
                 icon: <Users className="w-6 h-6" />,
                 title: "Team Management",
                 desc: "Organize O&M teams with skills matrix, shift scheduling, and performance tracking.",
-                color: "from-teal-500 to-cyan-500",
+                color: "from-teal-500 to-teal-500",
                 shadow: "shadow-teal-500/20",
                 items: ["Skills matrix & certification", "Shift scheduling", "Attendance tracking", "Performance analytics"]
               },
@@ -79,16 +79,16 @@ export default function Page() {
                 icon: <Package className="w-6 h-6" />,
                 title: "Inventory Management",
                 desc: "Track spare parts, consumables, and tools across all sites with min/max alerts.",
-                color: "from-amber-500 to-orange-500",
-                shadow: "shadow-amber-500/20",
+                color: "from-teal-500 to-teal-500",
+                shadow: "shadow-teal-500/20",
                 items: ["Part catalog with specs", "Min/Max quantity alerts", "Vendor management", "Purchase tracking"]
               },
               {
                 icon: <ClipboardList className="w-6 h-6" />,
                 title: "Work Order Management",
                 desc: "Create, assign, execute, and close work orders with full audit trail and photo evidence.",
-                color: "from-rose-500 to-pink-500",
-                shadow: "shadow-rose-500/20",
+                color: "from-teal-500 to-teal-500",
+                shadow: "shadow-teal-500/20",
                 items: ["Auto-assignment rules", "Priority & SLA tracking", "Photo evidence uploads", "Pass/Fail feedbacks"]
               },
               {
@@ -103,8 +103,8 @@ export default function Page() {
                 icon: <BarChart3 className="w-6 h-6" />,
                 title: "Analytics & Reports",
                 desc: "Comprehensive KPIs — MTBF, MTTR, OEE, availability, and cost per asset analytics.",
-                color: "from-fuchsia-500 to-teal-500",
-                shadow: "shadow-fuchsia-500/20",
+                color: "from-teal-500 to-teal-500",
+                shadow: "shadow-teal-500/20",
                 items: ["MTBF & MTTR dashboards", "Cost per asset tracking", "Availability analytics", "Custom report builder"],
                 span: "lg:col-start-2" // Center the 7th item exactly within the 3-column grid
               },

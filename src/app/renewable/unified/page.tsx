@@ -74,7 +74,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-green-400 font-heading mb-4">Our 6 Integrated Solutions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">Our 6 Integrated Solutions</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">A complete digital ecosystem for renewable energy operations</p>
             </SectionWrapper>
           </div>
@@ -92,7 +92,7 @@ export default function Page() {
                 icon: <Cpu className="w-7 h-7" />,
                 href: "/ppc",
                 bullets: ["Grid Code Compliant", "HIL Type Tested", "Automatic Generation Control (AGC) Ready", "Forecast & Schedule Synchronization"],
-                gradient: "from-teal-500 to-cyan-500"
+                gradient: "from-teal-500 to-teal-500"
               },
               {
                 title: "Central Monitoring System (CMS)",
@@ -113,7 +113,7 @@ export default function Page() {
                 icon: <Wrench className="w-7 h-7" />,
                 href: "/renewable/unified/cmms",
                 bullets: ["Automated Workorder Management", "Standardized SOPs Across Enterprise", "Reduced Mean Time to Repair", "Effective Cost Control & Inventory Management"],
-                gradient: "from-amber-500 to-orange-500"
+                gradient: "from-teal-500 to-teal-500"
               },
               {
                 title: "Energy Management System - BESS",

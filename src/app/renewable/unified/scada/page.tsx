@@ -70,7 +70,7 @@ export default function Page() {
               { icon: <Layers className="w-7 h-7" />, title: "Flexible & Scalable Architecture", desc: "From 50MW single-site to multi-GW portfolios. Our modular SCADA scales horizontally without performance degradation.", color: "bg-teal-50 text-teal-600" },
               { icon: <Database className="w-7 h-7" />, title: "Rich Renewable Libraries", desc: "Pre-built driver libraries for all major inverter, turbine, and BESS manufacturers. Reduces commissioning time by 60%.", color: "bg-teal-50 text-teal-600" },
               { icon: <BarChart3 className="w-7 h-7" />, title: "Seamless Handling of 10 Lacs+ Tags", desc: "Optimized data engine capable of processing over 10,00,000+ real-time tags in a single project without latency.", color: "bg-teal-50 text-teal-600" },
-              { icon: <Settings className="w-7 h-7" />, title: "Refined Interface from Decades of Experience", desc: "Intuitive HMI screens developed through decades of operator feedback. Contextual alarms, trend analysis, and one-click diagnostics.", color: "bg-amber-50 text-amber-600" },
+              { icon: <Settings className="w-7 h-7" />, title: "Refined Interface from Decades of Experience", desc: "Intuitive HMI screens developed through decades of operator feedback. Contextual alarms, trend analysis, and one-click diagnostics.", color: "bg-teal-50 text-[#0da08a]" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group p-8 bg-white rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full">

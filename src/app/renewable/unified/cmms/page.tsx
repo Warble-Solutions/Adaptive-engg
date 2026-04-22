@@ -17,7 +17,7 @@ export default function Page() {
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#1a1a0a] via-[#2d2d16] to-[#1a1a0a]">
           <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(45deg, rgba(234,179,8,0.3) 1px, transparent 1px), linear-gradient(-45deg, rgba(234,179,8,0.3) 1px, transparent 1px)', backgroundSize: '80px 80px' }}></div>
-          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-amber-500/10 rounded-full blur-[150px]"></div>
+          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-teal-500/10 rounded-full blur-[150px]"></div>
         </div>
 
         {/* Banner image in background */}
@@ -32,7 +32,7 @@ export default function Page() {
 
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500/10 backdrop-blur-sm text-amber-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-amber-500/20">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
               <Wrench className="w-4 h-4" />
               <span>Unified Renewable Solution</span>
             </div>
@@ -54,7 +54,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-6">
           <SectionWrapper>
             <div className="mb-16">
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-widest block mb-4">What it does</span>
+              <span className="text-xs font-bold text-[#0da08a] uppercase tracking-widest block mb-4">What it does</span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight font-heading">Four pillars of<br />intelligent maintenance.</h2>
             </div>
           </SectionWrapper>
@@ -65,17 +65,17 @@ export default function Page() {
                 num: "01",
                 title: "Automated Work Orders",
                 desc: "SCADA alarm fires → work order auto-creates → nearest qualified technician gets notified → SLA clock starts ticking. No manual intervention. No delays.",
-                accent: "from-red-500/10 to-transparent",
+                accent: "from-teal-500/10 to-transparent",
                 border: "hover:bg-[#0da08a] border-red-200",
-                numColor: "text-red-500/20",
+                numColor: "text-teal-500/20",
               },
               {
                 num: "02",
                 title: "Standardized SOPs",
                 desc: "Every task follows a defined procedure with step-by-step checklists, embedded images, and mandatory photo evidence. Consistent quality across 100+ sites.",
-                accent: "from-amber-500/10 to-transparent",
-                border: "hover:bg-[#0da08a] border-amber-200",
-                numColor: "text-amber-500/20",
+                accent: "from-teal-500/10 to-transparent",
+                border: "hover:bg-[#0da08a] border-teal-200",
+                numColor: "text-teal-500/20",
               },
               {
                 num: "03",
@@ -118,7 +118,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <SectionWrapper>
             <div className="text-center mb-20">
-              <span className="text-xs font-bold text-amber-400/70 uppercase tracking-widest block mb-4">The flow</span>
+              <span className="text-xs font-bold text-teal-400/70 uppercase tracking-widest block mb-4">The flow</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white font-heading">Fault to fix.<br />Fully automated.</h2>
             </div>
           </SectionWrapper>
@@ -126,8 +126,8 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-px bg-white/[0.06] rounded-3xl overflow-hidden">
             {[
               { step: "Detect", icon: <Bell className="w-6 h-6" />, desc: "SCADA alarm triggers or scheduled PM due date reached", color: "text-red-400" },
-              { step: "Dispatch", icon: <Users className="w-6 h-6" />, desc: "Auto-assign to nearest qualified technician with SLA", color: "text-amber-400" },
-              { step: "Execute", icon: <Camera className="w-6 h-6" />, desc: "Follow SOP checklists, capture photo evidence on mobile", color: "text-yellow-400" },
+              { step: "Dispatch", icon: <Users className="w-6 h-6" />, desc: "Auto-assign to nearest qualified technician with SLA", color: "text-teal-400" },
+              { step: "Execute", icon: <Camera className="w-6 h-6" />, desc: "Follow SOP checklists, capture photo evidence on mobile", color: "text-teal-400" },
               { step: "Resolve", icon: <CheckCircle2 className="w-6 h-6" />, desc: "Verify completion, log root cause, update knowledge base", color: "text-teal-400" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
@@ -166,8 +166,8 @@ export default function Page() {
               { icon: <Cog className="w-5 h-5" />, text: "Integration with plant SCADA & ERP" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#0da08a] border-amber-500/30 hover:bg-[#0da08a] shadow-md transition-all duration-300">
-                  <span className="text-amber-500">{item.icon}</span>
+                <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] shadow-md transition-all duration-300">
+                  <span className="text-[#0da08a]">{item.icon}</span>
                   <span className="font-medium text-slate-700 text-sm">{item.text}</span>
                 </div>
               </SectionWrapper>
@@ -184,7 +184,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Streamline Your Maintenance Operations</h2>
             <p className="text-gray-400 mb-8 text-lg">See how CMMS can reduce downtime and optimize your O&M costs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-amber-500 text-slate-900 rounded-full font-bold hover:bg-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-teal-500 text-slate-900 rounded-full font-bold hover:bg-white transition-colors">
               Get Started <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

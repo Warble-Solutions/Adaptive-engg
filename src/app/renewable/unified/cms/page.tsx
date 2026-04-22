@@ -17,7 +17,7 @@ export default function Page() {
       <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a0f1a] via-[#0d1f2d] to-[#0a1628]">
           <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(4,154,137,0.5) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
-          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/15 rounded-full blur-[120px]"></div>
+          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-[120px]"></div>
           <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[150px]"></div>
         </div>
         <div className="z-10 max-w-7xl mx-auto w-full relative">
@@ -32,7 +32,7 @@ export default function Page() {
             {/* Right — Text */}
             <SectionWrapper delay={0.3}>
               <div>
-                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500/10 backdrop-blur-sm text-cyan-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-cyan-500/20">
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
                   <Eye className="w-4 h-4" />
                   <span>Unified Renewable Solution</span>
                 </div>
@@ -64,7 +64,7 @@ export default function Page() {
                     <TrendingDown className="w-4 h-4" />
                     <span>Portfolio Optimization</span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-500">Benefits</span></h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Benefits</span></h2>
                   <p className="text-slate-500 text-lg leading-relaxed mb-8">Deploying AEPL's Central Monitoring System unlocks an unparalleled suite of analytics and performance enhancements across your entire grid.</p>
                 </SectionWrapper>
               </div>
@@ -74,7 +74,7 @@ export default function Page() {
               {[
                 { icon: <Eye className="w-6 h-6" />, title: "Complete Visibility", desc: "Gain total, unimpeded oversight across disparate renewable portfolios instantly.", color: "text-teal-600 bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
                 { icon: <TrendingDown className="w-6 h-6" />, title: "Reduced Downtime", desc: "Identify underperforming strings or equipment faults seconds after they occur in the field.", color: "text-teal-600 bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
-                { icon: <Zap className="w-6 h-6" />, title: "Accurate Insights", desc: "Extract meaning from raw SCADA metrics with deeply processed automated energy insights.", color: "text-amber-600 bg-amber-50 hover:bg-[#0da08a] border-amber-300 shadow-amber-500/20" },
+                { icon: <Zap className="w-6 h-6" />, title: "Accurate Insights", desc: "Extract meaning from raw SCADA metrics with deeply processed automated energy insights.", color: "text-[#0da08a] bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
                 { icon: <Shield className="w-6 h-6" />, title: "Scalable Security", desc: "Seamless deployment elasticity built atop SOC-2 compliant encrypted data architectures.", color: "text-teal-600 bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
@@ -127,7 +127,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className={`p-10 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 flex flex-col md:flex-row items-center gap-10 hover:bg-white/10 transition-colors ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-teal-600/20 rounded-3xl border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:bg-slate-900 hover:scale-105 transition-transform">
+                   <div className="w-24 h-24 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-3xl border border-teal-500/20 flex items-center justify-center text-teal-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:bg-slate-900 hover:scale-105 transition-transform">
                      {item.icon}
                    </div>
                    <div className={`flex-grow ${i % 2 !== 0 ? 'md:text-right' : ''}`}>

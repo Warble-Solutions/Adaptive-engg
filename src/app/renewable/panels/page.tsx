@@ -82,7 +82,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-green-400 font-heading mb-4">Panel Range</h2>
+              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">Panel Range</h2>
             </SectionWrapper>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -157,12 +157,12 @@ export default function Page() {
           {/* EPSA Study Types */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {[
-              { icon: <Gauge className="w-6 h-6" />, title: "Short Circuit Study", desc: "Fault level analysis at every bus to determine equipment ratings, protective device coordination, and system adequacy.", color: "from-red-500 to-orange-500" },
-              { icon: <Activity className="w-6 h-6" />, title: "Power Factor Analysis", desc: "Harmonic analysis, reactive power compensation design, and APFC panel sizing for optimal power quality.", color: "from-teal-500 to-cyan-500" },
+              { icon: <Gauge className="w-6 h-6" />, title: "Short Circuit Study", desc: "Fault level analysis at every bus to determine equipment ratings, protective device coordination, and system adequacy.", color: "from-red-500 to-teal-500" },
+              { icon: <Activity className="w-6 h-6" />, title: "Power Factor Analysis", desc: "Harmonic analysis, reactive power compensation design, and APFC panel sizing for optimal power quality.", color: "from-teal-500 to-teal-500" },
               { icon: <Shield className="w-6 h-6" />, title: "Earthing Study", desc: "Touch and step potential analysis, soil resistivity interpretation, and earthing grid design per IS/IEEE standards.", color: "from-teal-500 to-teal-500" },
               { icon: <Settings className="w-6 h-6" />, title: "Transformer & Cable Sizing", desc: "Optimal transformer selection, cable size calculation with derating factors, voltage drop analysis, and ampacity verification.", color: "from-teal-500 to-teal-500" },
-              { icon: <ShieldCheck className="w-6 h-6" />, title: "Relay Coordination Study", desc: "Time-current curve analysis, protection grading, and relay setting calculations for selective fault isolation.", color: "from-amber-500 to-yellow-500" },
-              { icon: <BarChart3 className="w-6 h-6" />, title: "Load Flow Study", desc: "Steady-state voltage profile, branch loading, transformer loading, and system losses under various operating scenarios.", color: "from-pink-500 to-rose-500" },
+              { icon: <ShieldCheck className="w-6 h-6" />, title: "Relay Coordination Study", desc: "Time-current curve analysis, protection grading, and relay setting calculations for selective fault isolation.", color: "from-teal-500 to-teal-500" },
+              { icon: <BarChart3 className="w-6 h-6" />, title: "Load Flow Study", desc: "Steady-state voltage profile, branch loading, transformer loading, and system losses under various operating scenarios.", color: "from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
                 <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">

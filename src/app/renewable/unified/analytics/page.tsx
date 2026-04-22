@@ -59,8 +59,8 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { icon: <BarChart3 className="w-7 h-7" />, title: "Advanced Data Visualization", desc: "Interactive dashboards with drill-down capabilities. Compare performance across plants, inverters, and time periods with dynamic charts.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
-              { icon: <Target className="w-7 h-7" />, title: "Accurate Loss Buckets", desc: "Identify exactly where energy is being lost — soiling, clipping, grid curtailment, equipment degradation. Quantified to the kWh.", color: "bg-gradient-to-br from-pink-500 to-rose-500" },
-              { icon: <FileText className="w-7 h-7" />, title: "Custom Report Builder", desc: "Drag-and-drop report designer. Build custom reports for management, O&M teams, and investors with your parameters and branding.", color: "bg-gradient-to-br from-cyan-500 to-teal-500" },
+              { icon: <Target className="w-7 h-7" />, title: "Accurate Loss Buckets", desc: "Identify exactly where energy is being lost — soiling, clipping, grid curtailment, equipment degradation. Quantified to the kWh.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
+              { icon: <FileText className="w-7 h-7" />, title: "Custom Report Builder", desc: "Drag-and-drop report designer. Build custom reports for management, O&M teams, and investors with your parameters and branding.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
               { icon: <LineChart className="w-7 h-7" />, title: "Analyse Historical Data", desc: "Years of historical data at your fingertips. Trend analysis, degradation curves, seasonal patterns, and YoY performance comparison.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>

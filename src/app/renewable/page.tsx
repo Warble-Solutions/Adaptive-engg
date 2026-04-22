@@ -76,9 +76,9 @@ export default function RenewablePage() {
 
                         {/* Card 3: Projects */}
                         <SectionWrapper delay={0.3}>
-                            <a href="#turnkey" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-amber-500 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
+                            <a href="#turnkey" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-[#0da08a] hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-amber-50 rounded-2xl text-amber-600 group-hover:bg-[#0da08a] bg-amber-600 group-hover:text-white transition-colors duration-300">
+                                    <div className="p-5 bg-teal-50 rounded-2xl text-[#0da08a] group-hover:bg-[#0da08a] bg-[#0da08a] group-hover:text-white transition-colors duration-300">
                                         <Factory className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Turnkey E&I</h3>

@@ -20,7 +20,7 @@ export default async function BrochuresPage() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16">
           <h1 className="text-5xl md:text-6xl font-black text-white font-heading tracking-tight mb-6">
-            Corporate <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-500">Brochures</span>
+            Corporate <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Brochures</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl leading-relaxed">
             Download our latest corporate profiles, sector-specific solution breakdowns, and technical specifications.
@@ -45,7 +45,7 @@ export default async function BrochuresPage() {
                     className="object-cover group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/80 via-slate-800 to-primary/40 flex items-center justify-center p-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 via-slate-800 to-primary/40 flex items-center justify-center p-6">
                     <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.2) 1px, transparent 0)', backgroundSize: '16px 16px' }} />
                     <h3 className="text-xl md:text-2xl font-black text-white/90 text-center leading-tight font-heading relative z-10 drop-shadow-md">
                       {doc.title}

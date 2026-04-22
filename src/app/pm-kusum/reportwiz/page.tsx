@@ -50,10 +50,10 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: <TrendingUp className="w-7 h-7" />, title: "KPI & Performance Insights", desc: "Track PR, CUF, specific yield, GHI, PLF, and more. Auto-benchmarking against contractual targets.", accent: "border-l-teal-500 bg-teal-50/30" },
-              { icon: <Filter className="w-7 h-7" />, title: "Custom Reports", desc: "Design bespoke reports with drag-and-drop parameter selection. Custom date ranges, grouping, and filtering.", accent: "border-l-cyan-500 bg-cyan-50/30" },
+              { icon: <Filter className="w-7 h-7" />, title: "Custom Reports", desc: "Design bespoke reports with drag-and-drop parameter selection. Custom date ranges, grouping, and filtering.", accent: "border-l-cyan-500 bg-teal-50/30" },
               { icon: <BarChart3 className="w-7 h-7" />, title: "Analytics Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-teal-500 bg-teal-50/30" },
               { icon: <Brain className="w-7 h-7" />, title: "AI/ML Analytics", desc: "Anomaly detection, degradation analysis, soiling loss estimation, and predictive performance modeling.", accent: "border-l-teal-500 bg-teal-50/30" },
-              { icon: <Calendar className="w-7 h-7" />, title: "Scheduled Reporting", desc: "Auto-generate daily, weekly, monthly, and annual reports. Email to stakeholders on schedule.", accent: "border-l-amber-500 bg-amber-50/30" },
+              { icon: <Calendar className="w-7 h-7" />, title: "Scheduled Reporting", desc: "Auto-generate daily, weekly, monthly, and annual reports. Email to stakeholders on schedule.", accent: "border-l-amber-500 bg-teal-50/30" },
               { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>

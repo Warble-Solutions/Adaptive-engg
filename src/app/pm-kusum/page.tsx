@@ -25,7 +25,7 @@ export default function PmKusumPage() {
 
                 <div className="z-10 max-w-7xl relative">
                     <SectionWrapper>
-                        <div className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm text-green-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-green-500/30 shadow-lg">
+                        <div className="inline-block px-4 py-2 bg-teal-500/20 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/30 shadow-lg">
                             MNRE Compliant
                         </div>
 
@@ -58,17 +58,17 @@ export default function PmKusumPage() {
 
                         <SectionWrapper delay={0.2}>
                             <div>
-                                <div className="premium-card p-10 bg-gradient-to-br from-green-50 to-teal-50 rounded-3xl border border-green-100 shadow-xl relative overflow-hidden">
+                                <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
                                     <div className="grid grid-cols-2 gap-8 relative z-10">
                                         <div>
                                             <div className="text-4xl font-black text-slate-900 mb-1">34k<span className="text-lg text-slate-500">Cr</span></div>
-                                            <div className="text-xs font-bold text-green-600 uppercase tracking-wider">Allocation</div>
+                                            <div className="text-xs font-bold text-[#0da08a] uppercase tracking-wider">Allocation</div>
                                         </div>
                                         <div>
                                             <div className="text-4xl font-black text-slate-900 mb-1">30.8<span className="text-lg text-slate-500">GW</span></div>
-                                            <div className="text-xs font-bold text-green-600 uppercase tracking-wider">Target</div>
+                                            <div className="text-xs font-bold text-[#0da08a] uppercase tracking-wider">Target</div>
                                         </div>
-                                        <div className="col-span-2 pt-4 border-t border-green-200">
+                                        <div className="col-span-2 pt-4 border-t border-teal-200">
                                             <div className="text-xl font-bold text-slate-900">Farmers Empowered</div>
                                             <p className="text-slate-500 text-sm">Through Solar Irrigation</p>
                                         </div>
@@ -85,7 +85,7 @@ export default function PmKusumPage() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
                         <SectionWrapper>
-                            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-green-400 font-heading mb-4">End-to-End KUSUM Stack</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">End-to-End KUSUM Stack</h2>
                             <p className="text-gray-400 max-w-2xl mx-auto">Unified solution from IoT Sensors to State-Level Dashboards.</p>
                         </SectionWrapper>
                     </div>
@@ -218,7 +218,7 @@ export default function PmKusumPage() {
                                 </div>
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-6 -right-6 bg-slate-800 border border-slate-700 p-4 rounded-xl shadow-xl flex items-center gap-4 animate-bounce delay-[2000ms]">
-                                    <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                                    <div className="w-3 h-3 rounded-full bg-[#0da08a] animate-pulse"></div>
                                     <div className="text-sm font-bold text-white">99.9% Uptime</div>
                                 </div>
                             </div>
@@ -241,11 +241,11 @@ export default function PmKusumPage() {
                         {/* Card 1: Component A */}
                         <SectionWrapper delay={0}>
                             <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group h-full">
-                                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
+                                <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-[#0da08a] mb-6 group-hover:scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faSolarPanel} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component A</h3>
-                                <p className="text-xs font-bold text-orange-600 uppercase tracking-wider mb-6">The Generator</p>
+                                <p className="text-xs font-bold text-[#0da08a] uppercase tracking-wider mb-6">The Generator</p>
 
                                 <div className="space-y-4 mb-8">
                                     <div>
@@ -269,11 +269,11 @@ export default function PmKusumPage() {
                         <SectionWrapper delay={0.1}>
                             <div className="p-8 rounded-2xl bg-white border-2 border-primary/10 shadow-lg hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group relative overflow-hidden h-full">
                                 <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 transition-transform">
+                                <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-[#0da08a] mb-6 group-hover:scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faSun} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component B</h3>
-                                <p className="text-xs font-bold text-green-600 uppercase tracking-wider mb-6">The Farmer</p>
+                                <p className="text-xs font-bold text-[#0da08a] uppercase tracking-wider mb-6">The Farmer</p>
 
                                 <div className="space-y-4 mb-8">
                                     <div>
@@ -363,7 +363,7 @@ export default function PmKusumPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <SectionWrapper>
                             <div>
-                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-green-500/30">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/30">
                                     <FontAwesomeIcon icon={faShieldAlt} className="w-4 h-4" />
                                     <span>Certified Secure</span>
                                 </div>
@@ -397,7 +397,7 @@ export default function PmKusumPage() {
                                         "Real-time alerts for communication failures or tampering"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-4 text-gray-300">
-                                            <FontAwesomeIcon icon={faCheckCircle} className="text-green-400 w-5 h-5 mt-1 shrink-0" />
+                                            <FontAwesomeIcon icon={faCheckCircle} className="text-teal-400 w-5 h-5 mt-1 shrink-0" />
                                             <span className="leading-relaxed">{item}</span>
                                         </li>
                                     ))}

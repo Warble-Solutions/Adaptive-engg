@@ -48,7 +48,7 @@ export default function TurnkeyPage() {
                                     <span>Project Execution</span>
                                 </div>
                                 <h2 className="text-4xl md:text-6xl font-black text-slate-900 font-heading mb-6 leading-tight">
-                                    From <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Blueprint to Megawatts</span>
+                                    From <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500">Blueprint to Megawatts</span>
                                 </h2>
                                 <p className="text-slate-500 text-xl leading-relaxed mb-10">
                                     Turnkey E&I is our core strength. We take complete ownership of the electrical and instrumentation scope for solar power plants — from detailed engineering to final grid synchronization.
@@ -56,7 +56,7 @@ export default function TurnkeyPage() {
                                 
                                 {/* Hero Stat Bento */}
                                 <div className="p-8 bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] -mr-32 -mt-32 transition-colors duration-1000 group-hover:bg-[#0da08a] bg-cyan-500/20"></div>
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] -mr-32 -mt-32 transition-colors duration-1000 group-hover:bg-[#0da08a] bg-teal-500/20"></div>
                                     <div className="grid grid-cols-2 gap-8 relative z-10">
                                         <div>
                                             <div className="text-5xl font-black text-teal-400 mb-2">200<span className="text-2xl text-teal-600">MW+</span></div>
@@ -134,13 +134,13 @@ export default function TurnkeyPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Bento Box 1 - Wide Large */}
                         <SectionWrapper delay={0.1}>
-                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-cyan-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
+                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
                                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105 opacity-80 mix-blend-overlay"></div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                                 
                                 <div className="relative z-10 sm:w-2/3">
-                                    <div className="w-14 h-14 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 backdrop-blur-lg group-hover:scale-110 transition-transform border border-cyan-500/30">
+                                    <div className="w-14 h-14 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 backdrop-blur-lg group-hover:scale-110 transition-transform border border-teal-500/30">
                                         <Activity className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-3xl font-bold text-white mb-3">Switchyard Works</h3>
@@ -186,13 +186,13 @@ export default function TurnkeyPage() {
 
                         {/* Bento Box 4 - Wide Rectangle */}
                         <SectionWrapper delay={0.4}>
-                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-green-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
+                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:bg-[#0da08a] opacity-10 transition-opacity">
-                                    <ShieldCheck className="w-48 h-48 text-green-400" />
+                                    <ShieldCheck className="w-48 h-48 text-teal-400" />
                                 </div>
                                 <div className="relative z-10 sm:w-2/3">
-                                    <div className="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
                                         <ShieldCheck className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Earthing & Lightning</h3>
