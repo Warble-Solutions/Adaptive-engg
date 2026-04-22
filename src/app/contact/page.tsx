@@ -47,10 +47,10 @@ export default function ContactPage() {
  <section className="section-light py-24 bg-white rounded-t-[40px] relative z-20 -mt-20">
  <div className="max-w-7xl mx-auto px-6">
  <div className="flex flex-col lg:flex-row gap-16 items-stretch">
- {/* Left Column: The Form */}
- <div className="lg:w-3/5 flex flex-col">
- <SectionWrapper className="h-full">
- <div className="premium-card p-8 md:p-12 bg-white rounded-3xl border border-gray-100 shadow-xl h-full flex flex-col justify-between">
+ {/* Left Column: The Form & Contact Info */}
+ <div className="lg:w-3/5 flex flex-col gap-8">
+ <SectionWrapper className="flex-1">
+ <div className="premium-card p-8 md:p-12 bg-white rounded-3xl border border-gray-100 shadow-xl h-full">
  <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
  <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -90,40 +90,11 @@ export default function ContactPage() {
  </form>
  </div>
  </SectionWrapper>
- </div>
 
- {/* Right Column: HQ Intelligence */}
- <div className="lg:w-2/5 flex flex-col">
- <SectionWrapper delay={0.2} className="h-full">
- <div className="flex flex-col h-full gap-8">
- {/* Map Section - Installed Base */}
- <div className="w-full flex-1 min-h-[300px] bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 relative shadow-2xl group flex flex-col">
- {/* Content Overlay */}
- <div className="absolute top-0 left-0 w-full p-6 z-20 flex flex-col items-end text-right">
- <div className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-lg text-xs font-bold uppercase tracking-widest mb-2 border border-primary/20">
- Global Impact
- </div>
- <h3 className="text-3xl font-black text-white mb-1">
- 68GW<span className="text-primary">+</span>
- </h3>
- <p className="text-gray-400 font-medium text-sm">Installed Base</p>
- </div>
-
- {/* Map Image */}
- <div className="relative w-full flex-1 flex items-center justify-center pt-24 pb-6">
- <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-slate-900 to-transparent z-10"></div>
- <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-30"></div>
- <img
- src="/imgs/map.png"
- alt="Installed Base Map"
- className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
- />
- </div>
- </div>
-
- {/* Contact Info Box */}
+ {/* Contact Info Box (Moved beneath the form) */}
+ <SectionWrapper delay={0.1}>
  <div className="bg-slate-50 border border-gray-200 rounded-3xl p-8 shadow-sm">
- <div className="space-y-6">
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div className="flex items-center gap-4">
  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
  <Phone className="w-6 h-6" />
@@ -144,6 +115,34 @@ export default function ContactPage() {
  </div>
  </div>
  </div>
+ </div>
+ </SectionWrapper>
+ </div>
+
+ {/* Right Column: Map Only */}
+ <div className="lg:w-2/5 flex flex-col">
+ <SectionWrapper delay={0.2} className="h-full">
+ <div className="w-full h-full min-h-[400px] bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 relative shadow-2xl group flex flex-col">
+ {/* Content Overlay */}
+ <div className="absolute top-0 left-0 w-full p-6 z-20 flex flex-col items-end text-right">
+ <div className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-lg text-xs font-bold uppercase tracking-widest mb-2 border border-primary/20">
+ Global Impact
+ </div>
+ <h3 className="text-3xl font-black text-white mb-1">
+ 68GW<span className="text-primary">+</span>
+ </h3>
+ <p className="text-gray-400 font-medium text-sm">Installed Base</p>
+ </div>
+
+ {/* Map Image */}
+ <div className="relative w-full h-full flex items-center justify-center pt-24 pb-6">
+ <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-slate-900 to-transparent z-10"></div>
+ <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-30"></div>
+ <img
+ src="/imgs/map.png"
+ alt="Installed Base Map"
+ className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+ />
  </div>
  </div>
  </SectionWrapper>
