@@ -69,58 +69,33 @@ export default function Page() {
       </section>
 
       {/* Core Competencies */}
-      <section className="py-32 bg-transparent text-white relative z-10">
+      <section className="py-24 bg-slate-50 relative z-10 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">Core Competencies</h2>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-4 tracking-tight">Core Competencies</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">Delivering mission-critical engineering solutions across multiple domains.</p>
             </SectionWrapper>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <SectionWrapper delay={0}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Zap className="w-6 h-6" />
+            {[
+              { title: "Turnkey E&I", icon: <Zap className="w-6 h-6" />, desc: "Complete Electrical & Instrumentation execution from design to commissioning for Solar, Water, and Industrial projects." },
+              { title: "IoT & SCADA", icon: <Activity className="w-6 h-6" />, desc: "In-house developed SolarWiz, WaterWiz, and MachineWiz IoT platforms with edge computing and cloud analytics." },
+              { title: "Panel Manufacturing", icon: <ShieldCheck className="w-6 h-6" />, desc: "IS/IEC certified LT/HT panels, MCC, PCC, ACDB, DCDB panels manufactured in our state-of-the-art facility." },
+              { title: "Software & Analytics", icon: <Cpu className="w-6 h-6" />, desc: "ReportWiz, CMS, AMS — proprietary software suite for automated reporting, asset tracking, and performance monitoring." },
+            ].map((skill, i) => (
+              <SectionWrapper key={i} delay={i * 0.1}>
+                <div className="p-8 bg-white border border-slate-200 rounded-2xl hover:border-[#0da08a]/30 hover:-translate-y-2 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-default h-full flex flex-col items-start">
+                  <div className="mb-6 w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-[#0da08a] group-hover:scale-110 group-hover:bg-[#0da08a] group-hover:text-white group-hover:shadow-md transition-all duration-300">
+                    {skill.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-[#0da08a] transition-colors duration-300 leading-tight">{skill.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-800 transition-colors duration-300 flex-grow">
+                    {skill.desc}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Turnkey E&I</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
-                  Complete Electrical &amp; Instrumentation execution from design to commissioning for Solar, Water, and Industrial projects.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Activity className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">IoT & SCADA</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
-                  In-house developed SolarWiz, WaterWiz, and MachineWiz IoT platforms with edge computing and cloud analytics.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Panel Manufacturing</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
-                  IS/IEC certified LT/HT panels, MCC, PCC, ACDB, DCDB panels manufactured in our state-of-the-art facility.
-                </p>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.3}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <Cpu className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-white leading-tight">Software & Analytics</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
-                  ReportWiz, CMS, AMS — proprietary software suite for automated reporting, asset tracking, and performance monitoring.
-                </p>
-              </div>
-            </SectionWrapper>
+              </SectionWrapper>
+            ))}
           </div>
         </div>
       </section>
