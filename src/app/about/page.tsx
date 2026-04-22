@@ -22,7 +22,7 @@ export default function AboutPage() {
  {/* Background Image */}
  <div className="absolute inset-0 z-0">
  <img
- src="/imgs/about-hero.png"
+ src="/imgs/about.jpg"
  alt="About Background"
  className="w-full h-full object-cover"
  />
