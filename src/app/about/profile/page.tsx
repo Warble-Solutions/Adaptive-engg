@@ -103,15 +103,25 @@ export default function Page() {
 
 
  {/* Our Values - S.C.A.L.E Design Image */}
- <section className="py-20 bg-transparent flex justify-center w-full relative z-20">
- <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10 flex justify-center">
+ <section className="py-32 bg-transparent w-full relative z-20">
+ <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
+ <div className="text-center mb-20">
+ <SectionWrapper>
+ <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-white/10">
+ Guiding Principles
+ </div>
+ <h2 className="text-5xl font-black text-white mb-6 font-heading">Our Values</h2>
+ </SectionWrapper>
+ </div>
+ <div className="flex justify-center">
  <SectionWrapper>
  <img
  src="/imgs/Values-Design.webp"
  alt="Our Values Design: S.C.A.L.E"
- className="w-full object-contain drop-shadow-2xl hover:scale-[1.01] transition-transform duration-700"
+ className="w-full object-contain drop-shadow-2xl hover:scale-[1.01] transition-transform duration-700 rounded-3xl"
  />
  </SectionWrapper>
+ </div>
  </div>
  </section>
 
