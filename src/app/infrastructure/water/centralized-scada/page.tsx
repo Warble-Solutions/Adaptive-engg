@@ -34,7 +34,7 @@ export default function Page() {
               <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg mb-8 leading-relaxed">
                 Highly reliable, scalable, and flexible software architecture offering a bird's eye view of all decentralized water assets globally.
               </p>
-              <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+              <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
                 Request SCADA Demo <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

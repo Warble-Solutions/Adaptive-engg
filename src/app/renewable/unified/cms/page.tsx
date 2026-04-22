@@ -44,7 +44,7 @@ export default function Page() {
                   AEPL&apos;s Centralized Monitoring System provides real-time visibility and intelligent analytics for Solar, Wind, and BESS assets.
                 </p>
                 <p className="text-primary font-bold text-sm uppercase tracking-widest mb-8">&quot;Enterprise-Level Monitoring and Portfolio Intelligence&quot;</p>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
                   Request Demo <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -78,7 +78,7 @@ export default function Page() {
                 { icon: <Shield className="w-6 h-6" />, title: "Scalable Security", desc: "Seamless deployment elasticity built atop SOC-2 compliant encrypted data architectures.", color: "text-teal-600 bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
-                  <div className={`p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg ${item.color}`}>
+                  <div className={`p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:-translate-y-1 hover:shadow-lg ${item.color}`}>
                     <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border transition-transform group-hover:scale-110 ${item.color.split(' ')[0]} ${item.color.split(' ')[1]}`}>
                       {item.icon}
                     </div>

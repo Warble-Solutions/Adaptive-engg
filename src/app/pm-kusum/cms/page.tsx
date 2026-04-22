@@ -205,7 +205,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Centralize Your PM-KUSUM Monitoring</h2>
             <p className="text-slate-500 mb-8 text-lg">Get complete visibility of your PM-KUSUM portfolio with our CMS platform.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-full font-bold hover:bg-[#0da08a] from-teal-700 hover:bg-[#0da08a] to-cyan-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-all">
               Get Started <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

@@ -11,12 +11,7 @@ type MicroCTAProps = {
     className?: string;
 };
 
-export default function MicroCTA({ text, href = "/contact", variant, context = 'dark', className = "" }: MicroCTAProps) {
-    // Standard Hover Styles based on Context
-    const hoverStyles = context === 'light'
-        ? "hover:bg-slate-900 hover:text-white" // Light Context -> Dark Hover
-        : "hover:bg-white hover:text-slate-900"; // Dark Context -> Light Hover
-
+export default function MicroCTA({ text, href = "/contact", variant, className = "" }: MicroCTAProps) {
     if (variant === 'download') {
         return (
             <Link
@@ -29,22 +24,10 @@ export default function MicroCTA({ text, href = "/contact", variant, context = '
         );
     }
 
-    if (variant === 'quote') {
-        return (
-            <Link
-                href={href}
-                className={`inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] rounded-full font-bold text-white ${hoverStyles} -translate-y-1 transition-all duration-300 w-fit cursor-pointer shadow-lg shadow-[rgba(13,160,138,0.4)] ${className}`}
-            >
-                <span>{text}</span>
-                <ArrowRight className="w-4 h-4" />
-            </Link>
-        );
-    }
-
     return (
         <Link
             href={href}
-            className={`inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] rounded-full font-bold text-white ${hoverStyles} -translate-y-1 transition-all duration-300 w-fit cursor-pointer ${className}`}
+            className={`inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] rounded-full font-bold text-white hover:bg-slate-900 hover:text-white -translate-y-1 transition-all duration-300 w-fit cursor-pointer shadow-lg shadow-[rgba(13,160,138,0.3)] ${className}`}
         >
             <span>{text}</span>
             <ArrowRight className="w-4 h-4" />

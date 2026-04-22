@@ -143,7 +143,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Need Custom HT Panel Configuration?</h2>
             <p className="text-slate-500 mb-8 text-lg">Our panel engineers will design a solution matching your exact specifications.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
               Request Quote <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

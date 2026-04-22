@@ -84,7 +84,7 @@ export default function ContactPage() {
                                             <textarea rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none" placeholder="Tell us about your requirements..."></textarea>
                                         </div>
 
-                                        <button className="w-full py-4 bg-[#0da08a] text-white font-bold rounded-xl hover:bg-slate-900 transition-all flex items-center justify-center gap-2 group">
+                                        <button className="w-full py-4 bg-[#0da08a] text-white font-bold rounded-xl hover:bg-slate-900 hover:text-white transition-all flex items-center justify-center gap-2 group">
                                             Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </button>
                                     </form>

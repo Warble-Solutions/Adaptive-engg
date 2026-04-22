@@ -144,21 +144,21 @@ export default function Home() {
                 <MicroCTA text="Schedule Consultation" variant="quote" href="/contact?subject=SCADA" context="light" />
               </div>
               <div className="grid grid-cols-3 gap-4">
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg transition-all duration-300">
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                   <Monitor className="text-primary w-7 h-7 shrink-0" />
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Real-Time</h4>
                     <p className="text-xs text-slate-500">Monitoring</p>
                   </div>
                 </div>
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg transition-all duration-300">
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                   <Layers className="text-primary w-7 h-7 shrink-0" />
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Scalable</h4>
                     <p className="text-xs text-slate-500">Architecture</p>
                   </div>
                 </div>
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg transition-all duration-300">
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                   <Database className="text-primary w-7 h-7 shrink-0" />
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">10L+</h4>

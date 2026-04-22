@@ -49,7 +49,7 @@ export default function PPCPage() {
                                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-xl leading-relaxed mb-8">
                                     Advanced, reliable and adaptable Power Plant Control (PPC) solutions for stand-alone and hybrid plants to achieve green energy goals.
                                 </p>
-                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
                                     Learn More <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -515,7 +515,7 @@ export default function PPCPage() {
                             Leverage our {PPC_STATS.yearsExperience.value}+ years of expertise to configure your PPC faster and more accurately.
                             Accelerate commissioning and ensure long-term operational success.
                         </p>
-                        <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                        <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
                             Get Started <ArrowRight className="w-4 h-4" />
                         </Link>
                     </SectionWrapper>

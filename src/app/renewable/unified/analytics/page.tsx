@@ -33,7 +33,7 @@ export default function Page() {
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
                   Transform raw renewable energy data into actionable intelligence with advanced visualization, accurate loss bucket analysis, and AI-powered insights.
                 </p>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
                   Request Demo <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
