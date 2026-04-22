@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -189,10 +189,10 @@ const getLogoPosition = (i: number) => {
     const SPHERE_R = 35;
 
     const arcs = [
-        { radius: 7,  tileCount: 18, tileW: 1.0, tileH: 2.8, startAngle: -2.9, endAngle: 1.0, depth: 1.2 },
+        { radius: 7, tileCount: 18, tileW: 1.0, tileH: 2.8, startAngle: -2.9, endAngle: 1.0, depth: 1.2 },
         { radius: 14, tileCount: 11, tileW: 1.6, tileH: 3.8, startAngle: -2.0, endAngle: 1.3, depth: 1.5 },
-        { radius: 22, tileCount: 7,  tileW: 2.4, tileH: 5.0, startAngle: -1.2, endAngle: 1.2, depth: 1.8 },
-        { radius: 31, tileCount: 5,  tileW: 3.2, tileH: 6.0, startAngle: -0.5, endAngle: 1.0, depth: 2.2 },
+        { radius: 22, tileCount: 7, tileW: 2.4, tileH: 5.0, startAngle: -1.2, endAngle: 1.2, depth: 1.8 },
+        { radius: 31, tileCount: 5, tileW: 3.2, tileH: 6.0, startAngle: -0.5, endAngle: 1.0, depth: 2.2 },
     ];
 
     const totalTiles = arcs.reduce((sum, arc) => sum + arc.tileCount, 0);

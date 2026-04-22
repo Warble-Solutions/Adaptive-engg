@@ -107,13 +107,13 @@ export default function Navbar() {
                             </div>
                         </div>
 
-                        {/* Renewable Solutions */}
+                        {/* Solutions */}
                         <div className="relative group flex items-center h-full">
                             <Link href="/renewable" className={cn(
                                 "flex items-center gap-1 py-6 text-sm font-bold uppercase tracking-wider transition-colors duration-300",
                                 "text-slate-700 hover:text-primary"
                             )}>
-                                Renewable Solutions <ChevronDown className="w-3 h-3 opacity-50" />
+                                Solutions <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
                             <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <div className="relative group/sub">
@@ -133,6 +133,20 @@ export default function Navbar() {
                                 <div className="border-t border-slate-100">
                                     <DropdownLink href="/renewable/panels">Electrical Panels</DropdownLink>
                                     <DropdownLink href="/renewable/turnkey">Turnkey E&I</DropdownLink>
+                                </div>
+                                <div className="relative group/water border-t border-slate-100">
+                                    <Link href="/infrastructure/water" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
+                                        <span>Water Solutions</span>
+                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/water:opacity-100 transition-opacity" />
+                                    </Link>
+                                    <div className="absolute top-0 left-full w-72 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/water:opacity-100 group-hover/water:visible transition-all duration-300 transform translate-x-2 group-hover/water:translate-x-0 ml-1 overflow-hidden z-50">
+                                        <DropdownLink href="/infrastructure/water/wtp">Water Supply & WTP</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/stp">Sewage Treatment Plant</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/etp">Effluent Treatment Plant</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/lift-irrigation">Lift Irrigation</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/micro-irrigation">Micro Irrigation</DropdownLink>
+                                        <DropdownLink href="/infrastructure/water/centralized-scada">Centralized SCADA</DropdownLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -165,20 +179,6 @@ export default function Navbar() {
                             <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/infrastructure/tunnel">Tunnel Solutions</DropdownLink>
                                 <DropdownLink href="/infrastructure/data-center">Data Center</DropdownLink>
-                                <div className="relative group/water">
-                                    <Link href="/infrastructure/water" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
-                                        <span>Water Solutions</span>
-                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/water:opacity-100 transition-opacity" />
-                                    </Link>
-                                    <div className="absolute top-0 right-full w-72 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/water:opacity-100 group-hover/water:visible transition-all duration-300 transform -translate-x-2 group-hover/water:translate-x-0 mr-1 overflow-hidden z-50">
-                                        <DropdownLink href="/infrastructure/water/wtp">Water Supply & WTP</DropdownLink>
-                                        <DropdownLink href="/infrastructure/water/stp">Sewage Treatment Plant</DropdownLink>
-                                        <DropdownLink href="/infrastructure/water/etp">Effluent Treatment Plant</DropdownLink>
-                                        <DropdownLink href="/infrastructure/water/lift-irrigation">Lift Irrigation</DropdownLink>
-                                        <DropdownLink href="/infrastructure/water/micro-irrigation">Micro Irrigation</DropdownLink>
-                                        <DropdownLink href="/infrastructure/water/centralized-scada">Centralized SCADA</DropdownLink>
-                                    </div>
-                                </div>
                                 <DropdownLink href="/infrastructure/automation">Industrial Automation</DropdownLink>
                             </div>
                         </div>

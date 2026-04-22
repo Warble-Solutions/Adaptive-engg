@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,7 +23,7 @@ const slides = [
         tagline: "India's Most Trusted Company",
         image: "/imgs/farm.jpg",
         subtext: "Revolutionizing Agriculture through Smart Solar Pumping & Next-Gen IoT Solutions",
-        cta: "View Scheme",
+        cta: "View Solutions",
         link: "/pm-kusum",
         ctaSecondary: "Contact Us",
         linkSecondary: "/contact",

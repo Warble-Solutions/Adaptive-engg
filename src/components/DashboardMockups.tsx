@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -742,7 +742,7 @@ export function ScadaHeroDashboard() {
           </div>
           <div className="grid grid-cols-12 gap-[3px]">
             {Array.from({ length: 48 }).map((_, i) => {
-              const perf = i === 15 || i === 31 ? 30 : i === 22 ? 55 : 70 + Math.random() * 30;
+              const perf = i === 15 || i === 31 ? 30 : i === 22 ? 55 : 70 + ((i * 17) % 30);
               const color = perf > 85 ? 'bg-teal-500' : perf > 65 ? 'bg-teal-500/60' : perf > 50 ? 'bg-amber-500/70' : 'bg-red-500/70';
               return (
                 <div
