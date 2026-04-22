@@ -150,6 +150,17 @@ export default function Page() {
  </div>
  </div>
  </SectionWrapper>
+
+ {/* The concluding message requested by feedback */}
+ <SectionWrapper delay={0.5}>
+ <div className="relative pl-20 pt-8 mt-2 pb-6">
+ <div className="absolute left-[30px] top-[42px] w-2 h-2 rounded-full bg-primary shadow-[0_0_15px_rgba(4,154,137,1)] animate-ping"></div>
+ <div className="absolute left-[28px] top-[40px] w-3 h-3 rounded-full bg-primary"></div>
+ <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-400 font-heading italic opacity-90">
+ ...And the scale up journey continues
+ </h3>
+ </div>
+ </SectionWrapper>
  </div>
  </div>
  </div>
