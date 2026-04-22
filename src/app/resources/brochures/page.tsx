@@ -1,4 +1,4 @@
-﻿import { prisma } from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import Image from "next/image";
 import { Download, FileText } from "lucide-react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
@@ -42,7 +42,8 @@ export default async function BrochuresPage() {
  src={doc.thumbnailUrl}
  alt={doc.title}
  fill
- className="object-cover group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
+ sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+ className="object-cover group-hover:scale-105 transition-transform duration-500"
  />
  ) : (
  <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 via-slate-800 to-primary/40 flex items-center justify-center p-6">

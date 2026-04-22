@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -267,7 +267,7 @@ export default function PmKusumPage() {
 
  {/* Card 2: Component B */}
  <SectionWrapper delay={0.1}>
- <div className="p-8 rounded-2xl bg-white border-2 border-primary/10 shadow-lg hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl shadow-2xl transition-all duration-300 group relative overflow-hidden h-full">
+ <div className="p-8 rounded-2xl bg-white border-2 border-primary/10 shadow-lg hover:border-primary/50 hover:shadow-xl shadow-2xl transition-all duration-300 group relative overflow-hidden h-full">
  <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
  <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-[#0da08a] mb-6 group-hover:scale-110 transition-transform">
  <FontAwesomeIcon icon={faSun} className="w-6 h-6" />

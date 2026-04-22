@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { ArrowRight, ChevronRight, Server, Zap, Shield, BarChart3, Settings, Battery, CheckCircle2, Factory, Cable, Monitor, Cpu, Network, PieChart, Wrench, Sun } from "lucide-react";
@@ -52,7 +52,7 @@ export default function RenewablePage() {
  <SectionWrapper delay={0.1}>
  <a href="#unified" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-primary/50 hover:shadow-xl border-teal-500 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-3 transition-all duration-300">
  <div className="flex flex-col items-center text-center gap-6 mb-4">
- <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:border-primary/50 hover:shadow-xl bg-teal-600 group-hover:text-white transition-colors duration-300">
+ <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
  <Monitor className="w-10 h-10" />
  </div>
  <h3 className="text-2xl font-bold text-slate-900 transition-colors">Unified Renewable Solution</h3>
@@ -65,7 +65,7 @@ export default function RenewablePage() {
  <SectionWrapper delay={0.2}>
  <a href="#panels" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-primary/50 hover:shadow-xl border-teal-500 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-3 transition-all duration-300">
  <div className="flex flex-col items-center text-center gap-6 mb-4">
- <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:border-primary/50 hover:shadow-xl bg-teal-600 group-hover:text-white transition-colors duration-300">
+ <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
  <Zap className="w-10 h-10" />
  </div>
  <h3 className="text-2xl font-bold text-slate-900 transition-colors">Electrical Panels</h3>
@@ -164,7 +164,7 @@ export default function RenewablePage() {
  }
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+ <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
  {/* Clone icon to enforce size if needed, though usually css handles it. Using wrapper. */}
  <div className="w-6 h-6">{item.icon}</div>
@@ -173,7 +173,7 @@ export default function RenewablePage() {
  <ul className="space-y-3 text-gray-400 text-sm">
  {item.bullets.map((bullet, idx) => (
  <li key={idx} className="flex gap-2">
- <span className="text-primary mt-0.5">▸</span>
+ <span className="text-primary mt-0.5">â–¸</span>
  <span>{bullet}</span>
  </li>
  ))}
@@ -226,20 +226,20 @@ export default function RenewablePage() {
  <SectionWrapper delay={0.2}>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 h-[500px] rounded-3xl overflow-hidden shadow-2xl relative">
  <div className="col-span-2 row-span-2 relative group overflow-hidden">
- <Image src="/imgs/manu/15.jpg" alt="Manufacturing" fill className="object-cover group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-700" />
- <div className="absolute inset-0 bg-black/20 group-hover:border-primary/50 hover:shadow-xl bg-transparent transition-colors"></div>
+ <Image src="/imgs/manu/15.jpg" alt="Manufacturing" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+ <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
  </div>
  <div className="col-span-1 row-span-1 relative group overflow-hidden">
- <Image src="/imgs/manu/16.jpg" alt="Assembly" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+ <Image src="/imgs/manu/16.jpg" alt="Assembly" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
  </div>
  <div className="col-span-1 row-span-1 relative group overflow-hidden">
- <Image src="/imgs/manu/17.jpg" alt="Testing" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+ <Image src="/imgs/manu/17.jpg" alt="Testing" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
  </div>
  <div className="col-span-1 row-span-1 relative group overflow-hidden">
- <Image src="/imgs/manu/18.jpg" alt="Quality Control" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+ <Image src="/imgs/manu/18.jpg" alt="Quality Control" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
  </div>
  <div className="col-span-1 row-span-1 relative group overflow-hidden">
- <Image src="/imgs/manu/19.jpg" alt="Fabrication" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+ <Image src="/imgs/manu/19.jpg" alt="Fabrication" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
  </div>
 
  <div className="absolute bottom-4 left-4 z-20 bg-black/50 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
@@ -275,6 +275,7 @@ export default function RenewablePage() {
  src={item.img}
  alt={item.title}
  fill
+ sizes="(max-width: 768px) 100vw, 25vw"
  className="object-cover transition-transform duration-700 group-hover:scale-110"
  />
  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
@@ -306,10 +307,10 @@ export default function RenewablePage() {
  { title: "C&I (Commercial)", desc: "Captive power plants for heavy industry (Steel, Cement)", icon: <Factory className="w-8 h-8" /> }
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1} className="h-full">
- <div className="group relative p-10 bg-slate-50 border border-slate-200 rounded-[2rem] hover:border-primary/50 hover:shadow-xl bg-slate-900 hover:border-primary/50 hover:shadow-xl border-slate-800 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-4 transition-all duration-500 overflow-hidden h-full flex flex-col">
+ <div className="group relative p-10 bg-slate-50 border border-slate-200 rounded-[2rem] hover:bg-slate-900 hover:border-primary/50 hover:shadow-xl hover:-translate-y-4 transition-all duration-500 overflow-hidden h-full flex flex-col">
  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/0 to-primary/10 rounded-bl-[100px] transition-all duration-500 group-hover:scale-150 group-hover:border-primary/50 hover:shadow-xl to-primary/20"></div>
 
- <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-primary group-hover:border-primary/50 hover:shadow-xl group-hover:border-primary/50 hover:shadow-xl transition-all duration-500 relative z-10 shrink-0">
+ <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-primary group-hover:border-primary/50 group-hover:shadow-xl transition-all duration-500 relative z-10 shrink-0">
  {item.icon}
  </div>
 

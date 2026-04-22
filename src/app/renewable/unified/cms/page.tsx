@@ -1,4 +1,4 @@
-﻿import SectionWrapper from "@/components/SectionWrapper";
+import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Eye, TrendingDown, Zap, Shield, BarChart3, Globe, Activity, Database, Lock, CheckCircle2, Layers, Server, Wifi } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
@@ -127,7 +127,7 @@ export default function Page() {
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
  <div className={`p-10 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 flex flex-col md:flex-row items-center gap-10 hover:bg-white/10 transition-colors ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
- <div className="w-24 h-24 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-3xl border border-teal-500/20 flex items-center justify-center text-teal-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform">
+ <div className="w-24 h-24 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-3xl border border-teal-500/20 flex items-center justify-center text-teal-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
  {item.icon}
  </div>
  <div className={`flex-grow ${i % 2 !== 0 ? 'md:text-right' : ''}`}>

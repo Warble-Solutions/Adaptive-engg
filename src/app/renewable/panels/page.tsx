@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Factory, Calculator, FileText, BarChart3, Settings, Shield, Gauge } from "lucide-react";
@@ -93,7 +93,7 @@ export default function Page() {
  { icon: <Cpu className="w-6 h-6" />, title: "Automation Panels", desc: "PLC panels, VFD panels, relay protection panels, and SCADA interface panels with pre-loaded configurations." },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+ <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
  {item.icon}
  </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -139,7 +139,7 @@ export default function ContactPage() {
  <img
  src="/imgs/map.png"
  alt="Installed Base Map"
- className="w-full h-full object-contain group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
+ className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
  />
  </div>
  </div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
  { title: "HR & Careers", desc: "Explore career opportunities.", email: "hr@adaptive-engg.com", icon: <Building2 /> }
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className="dark-card p-10 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer text-center h-full">
+ <div className="dark-card p-10 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer text-center h-full">
  <div className="mb-6 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-primary mx-auto group-hover:scale-110 transition-transform">
  {item.icon}
  </div>

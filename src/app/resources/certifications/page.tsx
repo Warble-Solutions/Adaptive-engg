@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Image from "next/image";
 import Link from "next/link";
@@ -165,7 +165,7 @@ export default function CertificationsPage() {
  src={cert.image}
  alt={cert.title}
  fill
- className="object-contain p-4 group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
+ className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
  sizes="(max-width: 768px) 100vw, 50vw"
  />
  </div>
@@ -215,7 +215,7 @@ export default function CertificationsPage() {
  src={report.image}
  alt={report.title}
  fill
- className="object-contain p-3 group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
+ className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
  />
  </div>
@@ -257,7 +257,7 @@ export default function CertificationsPage() {
  src={award.image}
  alt={award.title}
  fill
- className="object-contain p-6 group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
+ className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
  sizes="(max-width: 768px) 100vw, 50vw"
  />
  </div>

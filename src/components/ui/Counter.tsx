@@ -53,5 +53,16 @@ export default function Counter({
         return () => springValue.destroy();
     }, [springValue, decimals, formatted, prefix, suffix]);
 
-    return <span ref={ref} className={className} />;
+    // Render the final value as initial content to avoid empty SSR + hydration mismatch
+    const getInitialText = () => {
+        let text = value.toFixed(decimals);
+        if (formatted) {
+            const parts = text.split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            text = parts.join(".");
+        }
+        return `${prefix}${text}${suffix}`;
+    };
+
+    return <span ref={ref} className={className} suppressHydrationWarning>{getInitialText()}</span>;
 }

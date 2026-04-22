@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -158,7 +158,7 @@ export default function PPCPage() {
  </div>
 
  {/* Icon */}
- <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:border-primary/50 hover:shadow-xl group-hover:border-primary/50 hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+ <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:border-primary/50 group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
  <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
  </div>
  </div>

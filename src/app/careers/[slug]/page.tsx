@@ -1,4 +1,4 @@
-﻿import { prisma } from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Building, Briefcase } from "lucide-react";
@@ -42,7 +42,7 @@ export default async function JobDetailPage({ params }: { params: Promise<{ slug
  href="/careers"
  className="inline-flex items-center text-slate-400 hover:text-primary font-bold tracking-wide uppercase text-sm mb-12 transition-colors group"
  >
- <ArrowLeft className="w-4 h-4 mr-2 group-hover:border-primary/50 hover:shadow-xl -translate-x-1 transition-transform" />
+ <ArrowLeft className="w-4 h-4 mr-2 group-group-hover:-translate-x-1 transition-transform" />
  Back to all openings
  </Link>
 

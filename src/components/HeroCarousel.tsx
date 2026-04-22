@@ -158,13 +158,13 @@ export default function HeroCarousel() {
             <div className="absolute bottom-12 right-12 z-20 flex gap-4">
                 <button
                     onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
-                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:bg-[#0da08a] text-dark transition-all backdrop-blur-sm"
+                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#0da08a] text-dark transition-all backdrop-blur-sm"
                 >
                     <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                     onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
-                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:bg-[#0da08a] text-dark transition-all backdrop-blur-sm"
+                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#0da08a] text-dark transition-all backdrop-blur-sm"
                 >
                     <ChevronRight className="w-6 h-6" />
                 </button>

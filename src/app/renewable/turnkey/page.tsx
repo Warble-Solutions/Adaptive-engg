@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, LayoutTemplate, Network, Factory, CheckCircle2, ChevronRight, Ruler, Lock, Monitor } from "lucide-react";
@@ -135,7 +135,7 @@ export default function TurnkeyPage() {
  {/* Bento Box 1 - Wide Large */}
  <SectionWrapper delay={0.1}>
  <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-primary/50 hover:shadow-xl border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
- <div className="absolute inset-0 bg-[url('/images/renewable/hero-turnkey-execution.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105 opacity-80 mix-blend-overlay"></div>
+ <div className="absolute inset-0 bg-[url('/images/renewable/hero-turnkey-execution.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-80 mix-blend-overlay"></div>
  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
  <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
  

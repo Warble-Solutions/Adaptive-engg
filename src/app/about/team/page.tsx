@@ -1,4 +1,4 @@
-﻿import { prisma } from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import Image from "next/image";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import { Linkedin, User } from "lucide-react";
@@ -39,7 +39,8 @@ export default async function TeamPage() {
  src={member.photoUrl}
  alt={member.name}
  fill
- className="object-cover group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:border-primary/50 hover:shadow-xl grayscale-0 group-hover:opacity-100 filter"
+ sizes="(max-width: 768px) 50vw, 25vw"
+ className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 filter"
  />
  ) : (
  <div className="w-full h-full flex items-center justify-center text-slate-300">
@@ -52,7 +53,7 @@ export default async function TeamPage() {
  href={member.linkedinUrl} 
  target="_blank" 
  rel="noreferrer"
- className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-primary hover:border-primary/50 hover:shadow-xl bg-[#0da08a] text-white hover:bg-slate-900 hover:text-white scale-110 transition-all shadow-lg"
+ className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-primary hover:bg-[#0da08a] text-white hover:bg-slate-900 hover:text-white scale-110 transition-all shadow-lg"
  >
  <Linkedin className="w-5 h-5 fill-current" />
  </a>

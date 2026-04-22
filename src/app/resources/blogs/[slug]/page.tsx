@@ -1,4 +1,4 @@
-﻿import { prisma } from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,7 +43,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
  href="/resources/blogs"
  className="inline-flex items-center text-slate-400 hover:text-primary font-bold tracking-wide uppercase text-sm mb-12 transition-colors group"
  >
- <ArrowLeft className="w-4 h-4 mr-2 group-hover:border-primary/50 hover:shadow-xl -translate-x-1 transition-transform" />
+ <ArrowLeft className="w-4 h-4 mr-2 group-group-hover:-translate-x-1 transition-transform" />
  Back to all insights
  </Link>
 
@@ -74,6 +74,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
  src={post.thumbnailUrl}
  alt={post.title}
  fill
+ sizes="100vw"
  className="object-cover"
  priority
  />

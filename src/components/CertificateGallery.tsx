@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -80,7 +80,8 @@ export default function CertificateGallery() {
                   src={cert.src}
                   alt={cert.title}
                   fill
-                  className="object-contain p-4 group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 flex items-center justify-center">

@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Share2, Lightbulb, Clock, CheckCircle2, Layers } from "lucide-react";
@@ -133,7 +133,7 @@ export default function Page() {
  {/* Bento Box 2 - Large Wide (Image bg) */}
  <SectionWrapper delay={0.2}>
  <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-primary/50 hover:shadow-xl border-teal-500/50 transition-all duration-500 h-[300px] flex flex-col justify-end group relative overflow-hidden">
- <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_scada.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105"></div>
+ <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_scada.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
  <div className="relative z-10">
  <div className="w-12 h-12 bg-transparent border border-white/20 rounded-2xl flex items-center justify-center text-white mb-4 backdrop-blur-lg group-hover:bg-white/10 transition-colors">
@@ -148,7 +148,7 @@ export default function Page() {
  {/* Bento Box 3 - Large Tall (Image bg) */}
  <SectionWrapper delay={0.3}>
  <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-primary/50 hover:shadow-xl border-teal-500/50 transition-all duration-500 flex flex-col justify-end group relative overflow-hidden h-[400px] sm:h-[300px] lg:h-[400px] shadow-2xl">
- <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_power_db.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105"></div>
+ <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_power_db.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
  <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/40 to-transparent"></div>
  
