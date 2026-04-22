@@ -190,7 +190,7 @@ export default function Home() {
  <SectionWrapper delay={0.1}>
  <div className="group cursor-pointer">
  <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
- <img src="/imgs/case-studies/1.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
+ <img src="/imgs/case-studies/cs_water.png" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
  
  </div>
  <h3 className="text-2xl font-bold text-white mb-2">Water Supply Scheme</h3>
@@ -201,7 +201,7 @@ export default function Home() {
  <SectionWrapper delay={0.2}>
  <div className="group cursor-pointer">
  <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
- <img src="/imgs/case-studies/2.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
+ <img src="/imgs/case-studies/cs_tunnel.png" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
  
  </div>
  <h3 className="text-2xl font-bold text-white mb-2">Twin Tube Tunnel</h3>
@@ -212,7 +212,7 @@ export default function Home() {
  <SectionWrapper delay={0.3}>
  <div className="group cursor-pointer">
  <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
- <img src="/imgs/case-studies/3.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
+ <img src="/imgs/case-studies/cs_solar.png" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
  
  </div>
  <h3 className="text-2xl font-bold text-white mb-2">Solar Park Automation</h3>
