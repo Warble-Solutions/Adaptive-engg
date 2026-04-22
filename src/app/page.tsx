@@ -5,7 +5,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import MicroCTA from "@/components/ui/MicroCTA";
 import Counter from "@/components/ui/Counter";
-import { ArrowRight, ShieldCheck, Activity, HardHat, CheckCircle2, Blocks, Link2, Youtube, Monitor, Database, Layers } from "lucide-react";
+import { ArrowRight, ShieldCheck, Activity, HardHat, CheckCircle2, Blocks, Link2, Youtube, Monitor, Database, Layers, Rocket, Lightbulb } from "lucide-react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDraftingCompass, faIndustry, faScrewdriverWrench, faDesktop } from "@fortawesome/free-solid-svg-icons";
@@ -80,8 +80,48 @@ export default function Home() {
 
  </div>
  </section>
+  {/* 3.5 MISSION & VISION (Light) */}
+  <section className="py-20 bg-white relative z-20 overflow-hidden">
+    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+    
+    <div className="max-w-7xl mx-auto px-6 relative">
+      <SectionWrapper>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div className="relative group">
+            <div className="absolute -right-12 top-1/2 -translate-y-1/2 text-primary/10 hidden lg:block group-hover:translate-x-4 transition-transform duration-700">
+              <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10z"></path><path d="M8 12h8"></path><path d="m12 8 4 4-4 4"></path></svg>
+            </div>
+            <div className="bg-white/80 backdrop-blur-xl border border-slate-100 p-10 md:p-14 rounded-[40px] shadow-2xl hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 z-10 relative">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-8 border border-primary/20 text-primary">
+                <Rocket className="w-10 h-10" />
+              </div>
+              <h2 className="text-4xl font-black text-slate-900 font-heading mb-4 tracking-tight">System <span className="text-primary">Vision</span></h2>
+              <p className="text-xl text-slate-600 font-medium leading-relaxed">
+                Embrace Technology To Maximize Value
+              </p>
+            </div>
+          </div>
+          <div className="relative group md:mt-20">
+            <div className="absolute -left-12 top-1/2 -translate-y-1/2 text-teal-600/10 hidden lg:block group-hover:-translate-x-4 transition-transform duration-700 rotate-180">
+              <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10z"></path><path d="M8 12h8"></path><path d="m12 8 4 4-4 4"></path></svg>
+            </div>
+            <div className="bg-white/80 backdrop-blur-xl border border-slate-100 p-10 md:p-14 rounded-[40px] shadow-2xl hover:border-teal-600/50 transition-all duration-500 hover:-translate-y-2 z-10 relative">
+              <div className="w-20 h-20 bg-gradient-to-br from-teal-600/20 to-teal-600/5 rounded-2xl flex items-center justify-center mb-8 border border-teal-600/20 text-teal-600">
+                <Lightbulb className="w-10 h-10" />
+              </div>
+              <h2 className="text-4xl font-black text-slate-900 font-heading mb-4 tracking-tight">Core <span className="text-teal-600">Mission</span></h2>
+              <p className="text-xl text-slate-600 font-medium leading-relaxed">
+                Continuously evolve to maximize value of each installation towards providing the Best Customer Experience
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+    </div>
+  </section>
 
- {/* 4. CORE SOLUTIONS (Dark) */}
+  {/* 4. CORE SOLUTIONS (Dark) */}
  <section className="py-32 bg-transparent rounded-b-[40px] z-10 relative shadow-2xl">
  <SceneTrigger variant="solar" color="#EAB308" speed={0.5} />
  <div className="w-full max-w-[1800px] mx-auto px-6 md:px-12">
@@ -514,3 +554,4 @@ export default function Home() {
  </div>
  );
 }
+
