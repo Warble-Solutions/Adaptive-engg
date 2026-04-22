@@ -329,7 +329,7 @@ export default function AboutPage() {
                                 <div className="absolute right-0 top-0 opacity-[0.03] group-hover:bg-[#0da08a] opacity-[0.06] transition-opacity">
                                     <CheckCircle2 className="w-48 h-48 text-primary" />
                                 </div>
-                                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
                                     <CheckCircle2 className="w-10 h-10" />
                                 </div>
                                 <div>
@@ -349,7 +349,7 @@ export default function AboutPage() {
                                 <div className="absolute right-0 top-0 opacity-[0.03] group-hover:bg-[#0da08a] opacity-[0.06] transition-opacity">
                                     <CheckCircle2 className="w-48 h-48 text-teal-600" />
                                 </div>
-                                <div className="w-20 h-20 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                <div className="w-20 h-20 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 group-hover:scale-110 transition-transform">
                                     <CheckCircle2 className="w-10 h-10" />
                                 </div>
                                 <div>

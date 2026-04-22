@@ -66,7 +66,7 @@ export default function Page() {
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
                   <div className={`absolute top-0 right-0 w-32 h-32 ${item.color} rounded-bl-[80px] opacity-5 group-hover:bg-[#0da08a] opacity-10 transition-opacity`}></div>
-                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform shadow-lg`}>
+                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>

@@ -42,9 +42,9 @@ export default async function CaseStudiesPage() {
                     {study.title}
                   </h3>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white transform translate-x-4 -translate-y-4 opacity-0 group-hover:bg-[#0da08a] translate-x-0 group-hover:bg-[#0da08a] translate-y-0 group-hover:bg-[#0da08a] opacity-100 transition-all duration-300">
+                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white transform translate-x-4 -translate-y-4 opacity-0 group-hover:translate-x-0 group-hover:bg-[#0da08a] translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <ArrowUpRight className="w-5 h-5" />
                 </div>
 
@@ -56,7 +56,7 @@ export default async function CaseStudiesPage() {
               </div>
               
               <div className="p-8 pb-10 flex-grow flex flex-col">
-                <h2 className="text-2xl font-black text-white font-heading mb-4 group-hover:bg-[#0da08a] text-primary transition-colors line-clamp-2 leading-tight">
+                <h2 className="text-2xl font-black text-white font-heading mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
                   {study.title}
                 </h2>
                 {study.description && (

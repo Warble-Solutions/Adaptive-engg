@@ -79,7 +79,7 @@ export default function Page() {
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
                   <div className={`p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg ${item.color}`}>
-                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border transition-transform group-hover:bg-[#0da08a] scale-110 ${item.color.split(' ')[0]} ${item.color.split(' ')[1]}`}>
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border transition-transform group-hover:scale-110 ${item.color.split(' ')[0]} ${item.color.split(' ')[1]}`}>
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>

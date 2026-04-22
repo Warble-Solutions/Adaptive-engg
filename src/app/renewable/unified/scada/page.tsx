@@ -74,7 +74,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group p-8 bg-white rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full">
-                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform`}>
+                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -99,7 +99,7 @@ export default function Page() {
             {["IEC 61850", "Modbus TCP/RTU", "OPC UA", "DNP3", "IEC 104", "MQTT", "HTTP/REST API", "Profinet"].map((protocol, i) => (
               <SectionWrapper key={i} delay={i * 0.05}>
                 <div className="p-6 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-[#0da08a] bg-primary/10 hover:bg-[#0da08a] border-primary/30 transition-all duration-300 group">
-                  <Cpu className="w-6 h-6 text-primary mx-auto mb-3 group-hover:bg-[#0da08a] scale-110 transition-transform" />
+                  <Cpu className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <span className="font-bold text-sm text-white">{protocol}</span>
                 </div>
               </SectionWrapper>

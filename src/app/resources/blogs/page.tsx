@@ -54,7 +54,7 @@ export default async function BlogsPage() {
                 </div>
                 
                 <div className="p-8">
-                  <h2 className="text-xl font-bold text-white font-heading mb-4 line-clamp-2 group-hover:bg-[#0da08a] text-primary transition-colors">
+                  <h2 className="text-xl font-bold text-white font-heading mb-4 line-clamp-2 group-hover:text-primary transition-colors">
                     {post.title}
                   </h2>
                   <p className="text-slate-300 mb-6 line-clamp-3 leading-relaxed">

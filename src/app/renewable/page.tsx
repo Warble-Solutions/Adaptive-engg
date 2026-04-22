@@ -165,7 +165,7 @@ export default function RenewablePage() {
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
                                 <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                                         {/* Clone icon to enforce size if needed, though usually css handles it. Using wrapper. */}
                                         <div className="w-6 h-6">{item.icon}</div>
                                     </div>
@@ -230,16 +230,16 @@ export default function RenewablePage() {
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-[#0da08a] bg-transparent transition-colors"></div>
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/16.jpg" alt="Assembly" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/16.jpg" alt="Assembly" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/17.jpg" alt="Testing" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/17.jpg" alt="Testing" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/18.jpg" alt="Quality Control" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/18.jpg" alt="Quality Control" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/19.jpg" alt="Fabrication" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/19.jpg" alt="Fabrication" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                                     </div>
 
                                     <div className="absolute bottom-4 left-4 z-20 bg-black/50 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
@@ -275,12 +275,12 @@ export default function RenewablePage() {
                                         src={item.img}
                                         alt={item.title}
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover:bg-[#0da08a] scale-110"
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:bg-[#0da08a] opacity-80 transition-opacity"></div>
                                     <div className="absolute inset-x-0 bottom-0 p-8 transform translate-y-2 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-300">
                                         <h3 className="text-2xl font-bold mb-3 text-white border-l-4 border-primary pl-4">{item.title}</h3>
-                                        <p className="text-gray-300 text-sm leading-relaxed pl-5 border-l-4 border-transparent opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity delay-100 duration-300">{item.desc}</p>
+                                        <p className="text-gray-300 text-sm leading-relaxed pl-5 border-l-4 border-transparent opacity-0 group-hover:opacity-100 transition-opacity delay-100 duration-300">{item.desc}</p>
                                     </div>
                                 </div>
                             </SectionWrapper>

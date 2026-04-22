@@ -116,7 +116,7 @@ export default function Page() {
                   <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:bg-[#0da08a] opacity-10 blur-[50px] transition-opacity duration-700`}></div>
                   
                   <div className="flex items-center gap-4 mb-6 relative z-10">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:bg-[#0da08a] scale-110 transition-transform duration-300`}>
+                    <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:scale-110 transition-transform duration-300`}>
                       {module.icon}
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 leading-tight">{module.title}</h3>

@@ -54,7 +54,7 @@ export default async function BrochuresPage() {
                 )}
                 
                 {/* Download Overlay */}
-                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                   <div className="bg-white text-primary p-4 rounded-full transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-all duration-300">
                     <Download className="w-6 h-6" />
                   </div>
@@ -67,7 +67,7 @@ export default async function BrochuresPage() {
                     {doc.category}
                   </span>
                 )}
-                <h2 className="text-lg font-bold text-white font-heading group-hover:bg-[#0da08a] text-primary transition-colors line-clamp-2">
+                <h2 className="text-lg font-bold text-white font-heading group-hover:text-primary transition-colors line-clamp-2">
                   {doc.title}
                 </h2>
               </div>

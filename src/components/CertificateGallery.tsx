@@ -84,7 +84,7 @@ export default function CertificateGallery() {
                 />
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-[#0da08a] bg-primary/5 transition-colors duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                     <span className="text-xs font-bold text-primary uppercase tracking-wider">Click to Preview</span>
                   </div>
                 </div>

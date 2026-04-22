@@ -153,18 +153,18 @@ export default function PPCPage() {
                                     <div className="p-8 flex flex-col flex-grow">
                                         {/* Number Badge & Icon */}
                                         <div className="flex items-start justify-between mb-6">
-                                            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center shadow-lg group-hover:bg-[#0da08a] scale-110 transition-transform duration-300">
+                                            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                                                 <span className="text-white font-black text-xl">0{i + 1}</span>
                                             </div>
 
                                             {/* Icon */}
-                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:bg-[#0da08a] bg-primary group-hover:bg-[#0da08a] group-hover:bg-[#0da08a] scale-110 transition-all duration-300">
+                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:bg-[#0da08a] bg-primary group-hover:bg-[#0da08a] group-hover:scale-110 transition-all duration-300">
                                                 <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
                                             </div>
                                         </div>
 
                                         {/* Title */}
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:bg-[#0da08a] text-primary transition-colors duration-300">{item.title}</h3>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
 
                                         {/* Description */}
                                         <p className="text-slate-600 text-sm leading-relaxed flex-grow">{item.desc}</p>
@@ -536,7 +536,7 @@ function FeatureRow({ title, desc, imageSrc, color }: { title: string; desc: str
                 ) : null}
             </div>
             <div>
-                <h4 className="text-lg font-bold text-slate-900 mb-1 group-hover:bg-[#0da08a] text-primary transition-colors">{title}</h4>
+                <h4 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">{title}</h4>
                 <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
             </div>
         </div>

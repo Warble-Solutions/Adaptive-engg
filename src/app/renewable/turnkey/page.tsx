@@ -140,7 +140,7 @@ export default function TurnkeyPage() {
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                                 
                                 <div className="relative z-10 sm:w-2/3">
-                                    <div className="w-14 h-14 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 backdrop-blur-lg group-hover:bg-[#0da08a] scale-110 transition-transform border border-cyan-500/30">
+                                    <div className="w-14 h-14 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 backdrop-blur-lg group-hover:scale-110 transition-transform border border-cyan-500/30">
                                         <Activity className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-3xl font-bold text-white mb-3">Switchyard Works</h3>
@@ -158,7 +158,7 @@ export default function TurnkeyPage() {
                                     <Zap className="w-48 h-48 text-teal-400" />
                                 </div>
                                 <div className="relative z-10">
-                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
                                         <Cpu className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Protection & Metering</h3>
@@ -173,7 +173,7 @@ export default function TurnkeyPage() {
                         <SectionWrapper delay={0.3}>
                             <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden">
                                 <div className="relative z-10">
-                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
                                         <Network className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Cable Engineering</h3>
@@ -192,7 +192,7 @@ export default function TurnkeyPage() {
                                     <ShieldCheck className="w-48 h-48 text-green-400" />
                                 </div>
                                 <div className="relative z-10 sm:w-2/3">
-                                    <div className="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 transition-transform">
                                         <ShieldCheck className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Earthing & Lightning</h3>
@@ -236,7 +236,7 @@ export default function TurnkeyPage() {
                                     "Long-term post-commissioning O&M support and remote diagnostics."
                                 ].map((item, idx) => (
                                     <div key={idx} className="group flex items-center p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:bg-[#0da08a] shadow-md hover:bg-[#0da08a] border-primary/20 transition-all duration-300 hover:bg-[#0da08a] -translate-y-1">
-                                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0 mr-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0 mr-6 group-hover:scale-110 transition-transform">
                                             <CheckCircle2 className="w-5 h-5" />
                                         </div>
                                         <p className="text-slate-700 font-semibold">{item}</p>

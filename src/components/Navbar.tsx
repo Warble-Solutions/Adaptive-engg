@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -12,7 +12,7 @@ const NavLink = ({ href, children, isScrolled }: { href: string; children: React
         href={href}
         className={cn(
             "relative text-sm font-bold uppercase tracking-wider transition-colors duration-300 py-6",
-            isScrolled ? "text-slate-700 hover:bg-[#0da08a] text-primary" : "text-slate-700 hover:bg-[#0da08a] text-primary" // Fixed header always on white/glass in design
+            isScrolled ? "text-slate-700 hover:text-primary" : "text-slate-700 hover:text-primary"
         )}
     >
         {children}
@@ -20,7 +20,7 @@ const NavLink = ({ href, children, isScrolled }: { href: string; children: React
 );
 
 const DropdownLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-    <Link href={href} className="block px-6 py-3 text-sm text-slate-600 hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] bg-teal-50 hover:bg-[#0da08a] pl-7 transition-all duration-200">
+    <Link href={href} className="block px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
         {children}
     </Link>
 );
@@ -37,12 +37,11 @@ export default function Navbar() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            // Show/Hide logic
             if (currentScrollY > 100) {
                 if (currentScrollY > lastScrollY) {
-                    setIsHidden(true); // Scrolling down
+                    setIsHidden(true);
                 } else {
-                    setIsHidden(false); // Scrolling up
+                    setIsHidden(false);
                 }
             } else {
                 setIsHidden(false);
@@ -56,7 +55,6 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY]);
 
-    // Lock body scroll when modal is open
     useEffect(() => {
         if (isInquiryOpen) {
             document.body.style.overflow = "hidden";
@@ -71,7 +69,7 @@ export default function Navbar() {
             <nav
                 className={cn(
                     "fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-black/5",
-                    "bg-white/90 backdrop-blur-md", // Always glass white as per design
+                    "bg-white/90 backdrop-blur-md",
                     isHidden ? "-translate-y-full" : "translate-y-0"
                 )}
             >
@@ -83,23 +81,24 @@ export default function Navbar() {
                             alt="Adaptive Engineering"
                             width={240}
                             height={70}
-                            className="h-20 w-auto object-contain hover:bg-[#0da08a] opacity-80 transition-opacity duration-300"
+                            className="h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                             priority
                         />
                     </Link>
 
-                    {/* Desktop Navigation - Center/Right */}
+                    {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-8 mr-6">
                         <NavLink href="/" isScrolled={isScrolled}>Home</NavLink>
 
+                        {/* About */}
                         <div className="relative group flex items-center h-full" onMouseEnter={() => setActiveDropdown('about')} onMouseLeave={() => setActiveDropdown(null)}>
                             <Link href="/about" className={cn(
                                 "flex items-center gap-1 py-6 text-sm font-bold uppercase tracking-wider transition-colors duration-300",
-                                isScrolled ? "text-slate-700 hover:bg-[#0da08a] text-primary" : "text-slate-700 hover:bg-[#0da08a] text-primary"
+                                "text-slate-700 hover:text-primary"
                             )}>
                                 About Us <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
-                            <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:bg-[#0da08a] opacity-100 group-hover:bg-[#0da08a] visible transition-all duration-300 transform translate-y-2 group-hover:bg-[#0da08a] translate-y-0">
+                            <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/about/profile">Company Profile</DropdownLink>
                                 <DropdownLink href="/about/team">Our Team</DropdownLink>
                                 <DropdownLink href="/history">Our Journey</DropdownLink>
@@ -108,20 +107,21 @@ export default function Navbar() {
                             </div>
                         </div>
 
+                        {/* Renewable Solutions */}
                         <div className="relative group flex items-center h-full">
                             <Link href="/renewable" className={cn(
                                 "flex items-center gap-1 py-6 text-sm font-bold uppercase tracking-wider transition-colors duration-300",
-                                isScrolled ? "text-slate-700 hover:bg-[#0da08a] text-primary" : "text-slate-700 hover:bg-[#0da08a] text-primary"
+                                "text-slate-700 hover:text-primary"
                             )}>
                                 Renewable Solutions <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
-                            <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:bg-[#0da08a] opacity-100 group-hover:bg-[#0da08a] visible transition-all duration-300 transform translate-y-2 group-hover:bg-[#0da08a] translate-y-0">
+                            <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <div className="relative group/sub">
-                                    <Link href="/renewable/unified" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] bg-teal-50 hover:bg-[#0da08a] pl-7 transition-all duration-200">
+                                    <Link href="/renewable/unified" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
                                         <span>Unified Renewable Solution</span>
-                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover:bg-[#0da08a]/sub:opacity-100 transition-opacity" />
+                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/sub:opacity-100 transition-opacity" />
                                     </Link>
-                                    <div className="absolute top-0 left-full w-64 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover:bg-[#0da08a]/sub:opacity-100 group-hover:bg-[#0da08a]/sub:visible transition-all duration-300 transform translate-x-2 group-hover:bg-[#0da08a]/sub:translate-x-0 ml-1 overflow-hidden z-50">
+                                    <div className="absolute top-0 left-full w-64 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 transform translate-x-2 group-hover/sub:translate-x-0 ml-1 overflow-hidden z-50">
                                         <DropdownLink href="/renewable/unified/scada">SCADA</DropdownLink>
                                         <DropdownLink href="/ppc">Power Plant Control (PPC)</DropdownLink>
                                         <DropdownLink href="/renewable/unified/cms">Central Monitoring (CMS)</DropdownLink>
@@ -137,14 +137,15 @@ export default function Navbar() {
                             </div>
                         </div>
 
+                        {/* PM-KUSUM */}
                         <div className="relative group flex items-center h-full">
                             <Link href="/pm-kusum" className={cn(
                                 "flex items-center gap-1 py-6 text-sm font-bold uppercase tracking-wider transition-colors duration-300",
-                                isScrolled ? "text-slate-700 hover:bg-[#0da08a] text-primary" : "text-slate-700 hover:bg-[#0da08a] text-primary"
+                                "text-slate-700 hover:text-primary"
                             )}>
                                 PM-KUSUM <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
-                            <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:bg-[#0da08a] opacity-100 group-hover:bg-[#0da08a] visible transition-all duration-300 transform translate-y-2 group-hover:bg-[#0da08a] translate-y-0">
+                            <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/pm-kusum/iot-scada">IoT SCADA</DropdownLink>
                                 <DropdownLink href="/pm-kusum/reportwiz">ReportWiz</DropdownLink>
                                 <DropdownLink href="/pm-kusum/cms">Central Monitoring System (CMS)</DropdownLink>
@@ -156,19 +157,20 @@ export default function Navbar() {
                             </div>
                         </div>
 
+                        {/* Infrastructure */}
                         <div className="relative group flex items-center h-full">
-                            <button className="text-sm font-bold uppercase tracking-wider text-slate-700 hover:bg-[#0da08a] text-primary flex items-center gap-1 py-6">
+                            <button className="text-sm font-bold uppercase tracking-wider text-slate-700 hover:text-primary flex items-center gap-1 py-6">
                                 Infrastructure <ChevronDown className="w-3 h-3 opacity-50" />
                             </button>
-                            <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:bg-[#0da08a] opacity-100 group-hover:bg-[#0da08a] visible transition-all duration-300 transform translate-y-2 group-hover:bg-[#0da08a] translate-y-0">
+                            <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/infrastructure/tunnel">Tunnel Solutions</DropdownLink>
                                 <DropdownLink href="/infrastructure/data-center">Data Center</DropdownLink>
                                 <div className="relative group/water">
-                                    <Link href="/infrastructure/water" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] bg-teal-50 hover:bg-[#0da08a] pl-7 transition-all duration-200">
+                                    <Link href="/infrastructure/water" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
                                         <span>Water Solutions</span>
-                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover:bg-[#0da08a]/water:opacity-100 transition-opacity" />
+                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/water:opacity-100 transition-opacity" />
                                     </Link>
-                                    <div className="absolute top-0 right-full w-72 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover:bg-[#0da08a]/water:opacity-100 group-hover:bg-[#0da08a]/water:visible transition-all duration-300 transform -translate-x-2 group-hover:bg-[#0da08a]/water:translate-x-0 mr-1 overflow-hidden z-50">
+                                    <div className="absolute top-0 right-full w-72 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/water:opacity-100 group-hover/water:visible transition-all duration-300 transform -translate-x-2 group-hover/water:translate-x-0 mr-1 overflow-hidden z-50">
                                         <DropdownLink href="/infrastructure/water/wtp">Water Supply & WTP</DropdownLink>
                                         <DropdownLink href="/infrastructure/water/stp">Sewage Treatment Plant</DropdownLink>
                                         <DropdownLink href="/infrastructure/water/etp">Effluent Treatment Plant</DropdownLink>
@@ -181,11 +183,12 @@ export default function Navbar() {
                             </div>
                         </div>
 
+                        {/* Resources */}
                         <div className="relative group flex items-center h-full">
-                            <button className="text-sm font-bold uppercase tracking-wider text-slate-700 hover:bg-[#0da08a] text-primary flex items-center gap-1 py-6">
+                            <button className="text-sm font-bold uppercase tracking-wider text-slate-700 hover:text-primary flex items-center gap-1 py-6">
                                 Resources <ChevronDown className="w-3 h-3 opacity-50" />
                             </button>
-                            <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:bg-[#0da08a] opacity-100 group-hover:bg-[#0da08a] visible transition-all duration-300 transform translate-y-2 group-hover:bg-[#0da08a] translate-y-0">
+                            <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/resources/certifications">Certification</DropdownLink>
                                 <DropdownLink href="/resources/brochures">Brochures</DropdownLink>
                                 <DropdownLink href="/resources/case-studies">Case Studies</DropdownLink>
@@ -199,7 +202,7 @@ export default function Navbar() {
                         {/* Let's Connect Button */}
                         <button
                             onClick={() => setIsInquiryOpen(true)}
-                            className="hidden lg:flex items-center gap-2 px-6 py-2.5 bg-primary text-white text-sm font-bold uppercase tracking-wider rounded-full hover:bg-[#0da08a] bg-teal-600 hover:bg-[#0da08a] shadow-lg hover:bg-[#0da08a] shadow-primary/25 transition-all duration-300 hover:bg-[#0da08a] scale-105"
+                            className="hidden lg:flex items-center gap-2 px-6 py-2.5 bg-primary text-white text-sm font-bold uppercase tracking-wider rounded-full hover:bg-[#0da08a] shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-105"
                         >
                             Let&apos;s Connect
                         </button>
@@ -267,7 +270,7 @@ export default function Navbar() {
                             {/* Close Button */}
                             <button
                                 onClick={() => setIsInquiryOpen(false)}
-                                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-[#0da08a] bg-gray-200 flex items-center justify-center text-slate-500 hover:bg-[#0da08a] text-slate-800 transition-colors z-10"
+                                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-slate-500 hover:text-slate-800 transition-colors z-10"
                             >
                                 <X className="w-5 h-5" />
                             </button>
@@ -311,8 +314,8 @@ export default function Navbar() {
                                     <textarea rows={3} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none text-sm" placeholder="Tell us about your requirements..."></textarea>
                                 </div>
 
-                                <button className="w-full py-3.5 bg-primary text-white font-bold rounded-xl hover:bg-[#0da08a] bg-teal-600 transition-all flex items-center justify-center gap-2 group text-sm">
-                                    Send Message <Send className="w-4 h-4 group-hover:bg-[#0da08a] translate-x-1 transition-transform" />
+                                <button className="w-full py-3.5 bg-primary text-white font-bold rounded-xl hover:bg-[#0da08a] transition-all flex items-center justify-center gap-2 group text-sm">
+                                    Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </form>
                         </motion.div>

@@ -85,7 +85,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <button className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-[#0da08a] bg-teal-600 transition-all flex items-center justify-center gap-2 group">
-                                            Send Message <Send className="w-4 h-4 group-hover:bg-[#0da08a] translate-x-1 transition-transform" />
+                                            Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </button>
                                     </form>
                                 </div>
@@ -167,7 +167,7 @@ export default function ContactPage() {
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
                                 <div className="dark-card p-10 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer text-center h-full">
-                                    <div className="mb-6 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-primary mx-auto group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                    <div className="mb-6 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-primary mx-auto group-hover:scale-110 transition-transform">
                                         {item.icon}
                                     </div>
                                     <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>

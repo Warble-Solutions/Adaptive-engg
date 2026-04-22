@@ -240,7 +240,7 @@ export function AlarmConsoleDashboard() {
               <span className="text-[10px] font-mono text-slate-500 w-14 shrink-0">{alarm.time}</span>
               <span className="text-[10px] font-bold text-slate-400 w-12 shrink-0">{alarm.device}</span>
               <span className={`text-[10px] ${s.text} flex-grow truncate`}>{alarm.msg}</span>
-              <span className="text-[9px] text-slate-600 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity">ACK →</span>
+              <span className="text-[9px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">ACK →</span>
             </div>
           );
         })}
@@ -435,7 +435,7 @@ export function NocDashboard() {
             </div>
             <div className="flex items-center gap-3">
               <span className="text-[9px] text-slate-500 font-mono">{site.kw} kW</span>
-              <span className="text-[9px] text-slate-600 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity">View →</span>
+              <span className="text-[9px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
             </div>
           </div>
         ))}
@@ -635,7 +635,7 @@ export function CMMSDashboard() {
             </div>
             <div className="shrink-0 text-right">
               <span className={`text-[9px] font-mono ${wo.sla === 'Completed' ? 'text-teal-400' : 'text-amber-400'}`}>{wo.sla}</span>
-              <span className="text-[8px] text-slate-600 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity block">View →</span>
+              <span className="text-[8px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity block">View →</span>
             </div>
           </div>
         ))}

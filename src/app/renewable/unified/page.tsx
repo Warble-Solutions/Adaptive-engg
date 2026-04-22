@@ -126,7 +126,7 @@ export default function Page() {
               <SectionWrapper key={i} delay={i * 0.1}>
                 <Link href={item.href} className="block h-full">
                   <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                    <div className={`mb-6 w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white group-hover:bg-[#0da08a] scale-110 transition-transform shadow-lg`}>
+                    <div className={`mb-6 w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-lg`}>
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-white">{item.title}</h3>

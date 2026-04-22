@@ -35,7 +35,7 @@ export default async function CareersPage() {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                   
                   <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-white font-heading group-hover:bg-[#0da08a] text-primary transition-colors mb-4">
+                    <h2 className="text-2xl font-bold text-white font-heading group-hover:text-primary transition-colors mb-4">
                       {job.title}
                     </h2>
                     

@@ -62,7 +62,7 @@ export default function Page() {
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
                   <div className={`p-8 rounded-3xl border ${item.color} bg-white shadow-sm transition-all duration-300 h-full flex flex-col group ${item.shadow} hover:bg-[#0da08a] -translate-y-1`}>
-                    <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 border group-hover:bg-[#0da08a] scale-110 transition-transform`}>
+                    <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 border group-hover:scale-110 transition-transform`}>
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -126,7 +126,7 @@ export default function Page() {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent"></div>
                 <div className="relative z-10 w-full sm:w-2/3">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-4 backdrop-blur-lg group-hover:bg-[#0da08a] scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-4 backdrop-blur-lg group-hover:scale-110 transition-transform">
                     <Monitor className="w-6 h-6" />
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-3">Real-Time Dashboards</h3>
@@ -144,7 +144,7 @@ export default function Page() {
                   <Shield className="w-24 h-24 text-cyan-400" />
                 </div>
                 <div className="relative z-10 mt-auto">
-                  <div className="w-12 h-12 bg-transparent border border-cyan-500/30 rounded-2xl flex items-center justify-center text-cyan-300 mb-4 backdrop-blur-lg group-hover:bg-[#0da08a] scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-transparent border border-cyan-500/30 rounded-2xl flex items-center justify-center text-cyan-300 mb-4 backdrop-blur-lg group-hover:scale-110 transition-transform">
                     <Lock className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">Secure Infrastructure</h3>

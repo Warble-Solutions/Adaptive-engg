@@ -96,7 +96,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className={`group relative p-10 md:p-14 rounded-3xl border border-slate-100 ${item.border} bg-white hover:bg-[#0da08a] shadow-xl transition-all duration-500 overflow-hidden`}>
-                  <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r ${item.accent} opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity duration-700`}></div>
+                  <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
                     <span className={`text-7xl md:text-8xl font-black ${item.numColor} select-none shrink-0 leading-none`}>{item.num}</span>
                     <div>
@@ -132,7 +132,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="bg-slate-900/80 backdrop-blur-sm p-8 md:p-10 h-full flex flex-col group hover:bg-white/[0.04] transition-colors">
-                  <div className={`${item.color} mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform`}>
+                  <div className={`${item.color} mb-6 group-hover:scale-110 transition-transform`}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.step}</h3>

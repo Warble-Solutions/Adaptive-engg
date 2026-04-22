@@ -135,7 +135,7 @@ export default function PmKusumPage() {
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
                                 <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                                         <FontAwesomeIcon icon={item.icon} className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
@@ -241,7 +241,7 @@ export default function PmKusumPage() {
                         {/* Card 1: Component A */}
                         <SectionWrapper delay={0}>
                             <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group h-full">
-                                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faSolarPanel} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component A</h3>
@@ -269,7 +269,7 @@ export default function PmKusumPage() {
                         <SectionWrapper delay={0.1}>
                             <div className="p-8 rounded-2xl bg-white border-2 border-primary/10 shadow-lg hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group relative overflow-hidden h-full">
                                 <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faSun} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component B</h3>
@@ -296,7 +296,7 @@ export default function PmKusumPage() {
                         {/* Card 3: Component C */}
                         <SectionWrapper delay={0.2}>
                             <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group h-full">
-                                <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                                <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faBolt} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component C</h3>

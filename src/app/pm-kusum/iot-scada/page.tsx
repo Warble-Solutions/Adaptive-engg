@@ -127,7 +127,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
                 <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/40 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:bg-[#0da08a] scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>

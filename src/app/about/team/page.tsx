@@ -39,7 +39,7 @@ export default async function TeamPage() {
                     src={member.photoUrl}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:bg-[#0da08a] grayscale-0 group-hover:bg-[#0da08a] opacity-100 filter"
+                    className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:bg-[#0da08a] grayscale-0 group-hover:opacity-100 filter"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-slate-300">
@@ -60,7 +60,7 @@ export default async function TeamPage() {
               </div>
               
               <div>
-                <h3 className="text-xl font-black text-white font-heading group-hover:bg-[#0da08a] text-primary transition-colors">
+                <h3 className="text-xl font-black text-white font-heading group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-primary font-bold text-sm tracking-wide uppercase mt-1 mb-3">

@@ -94,7 +94,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
+                  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
@@ -166,7 +166,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
                 <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center text-white mb-5 group-hover:bg-[#0da08a] scale-110 transition-transform shadow-lg`}>
+                  <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg`}>
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
