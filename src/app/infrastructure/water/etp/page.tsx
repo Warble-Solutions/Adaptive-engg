@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -32,7 +32,7 @@ export default function Page() {
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
               Experts in providing E&I and Automation Solutions for Effluent Treatment and MBR Technology, ensuring sustainability and compliance.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white rounded-full font-bold hover:bg-teal-500 transition-colors shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
               Discuss Your Facility <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
@@ -101,8 +101,8 @@ export default function Page() {
 
             {/* Column 2: Benefits */}
             <SectionWrapper delay={0.2}>
-              <div className="bg-teal-50 rounded-3xl p-8 border border-teal-100 h-full shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-teal-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/30">
+              <div className="bg-teal-50 rounded-3xl p-8 border border-teal-100 h-full shadow-sm hover:bg-[#0da08a] shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-teal-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-[rgba(13,160,138,0.3)]">
                   <TrendingUp className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-6 font-heading">Key Benefits</h3>

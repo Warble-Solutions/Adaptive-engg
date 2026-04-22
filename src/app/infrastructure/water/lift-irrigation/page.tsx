@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} /> {/* Violet theme for Irrigation/Scale */}
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} /> {/* Violet theme for Irrigation/Scale */}
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -27,12 +27,12 @@ export default function Page() {
               <span>Large Scale Infrastructure</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Lift Irrigation
+              Lift <span className="gradient-heading">Irrigation</span>
             </h1>
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
               Our complete solutions portfolio and the best project management skills makes us the "Preferred Project Partner" for EPC and Government agencies.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white rounded-full font-bold hover:bg-teal-500 transition-colors shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
               Partner With Us <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

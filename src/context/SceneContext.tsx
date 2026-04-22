@@ -17,7 +17,7 @@ type SceneContextType = {
 };
 
 const defaultScene: SceneState = {
-    primaryColor: "#049A89", // Default Teal
+    primaryColor: "#0da08a", // Default Teal
     secondaryColor: "#0B1120", // Slate 900
     speed: 1,
     variant: 'logo',

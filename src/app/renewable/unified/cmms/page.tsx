@@ -38,7 +38,7 @@ export default function Page() {
             </div>
             <h1 className="text-4xl md:text-7xl font-black text-white mb-6 font-heading leading-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
               Computerized Maintenance<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Management System</span>
+              <span className="gradient-heading">Management System</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               Automated workorder management, standardized SOPs across the enterprise, reduced mean time to repair, and effective cost control with inventory management.
@@ -66,7 +66,7 @@ export default function Page() {
                 title: "Automated Work Orders",
                 desc: "SCADA alarm fires → work order auto-creates → nearest qualified technician gets notified → SLA clock starts ticking. No manual intervention. No delays.",
                 accent: "from-red-500/10 to-transparent",
-                border: "hover:border-red-200",
+                border: "hover:bg-[#0da08a] border-red-200",
                 numColor: "text-red-500/20",
               },
               {
@@ -74,7 +74,7 @@ export default function Page() {
                 title: "Standardized SOPs",
                 desc: "Every task follows a defined procedure with step-by-step checklists, embedded images, and mandatory photo evidence. Consistent quality across 100+ sites.",
                 accent: "from-amber-500/10 to-transparent",
-                border: "hover:border-amber-200",
+                border: "hover:bg-[#0da08a] border-amber-200",
                 numColor: "text-amber-500/20",
               },
               {
@@ -82,7 +82,7 @@ export default function Page() {
                 title: "Reduced Mean Time to Repair",
                 desc: "AI-driven task prioritization. Auto-assignment based on proximity and skill set. Push notifications with SLA deadlines. Average MTTR reduction: 60%.",
                 accent: "from-teal-500/10 to-transparent",
-                border: "hover:border-teal-200",
+                border: "hover:bg-[#0da08a] border-teal-200",
                 numColor: "text-teal-500/20",
               },
               {
@@ -90,13 +90,13 @@ export default function Page() {
                 title: "Inventory & Cost Control",
                 desc: "Track every spare part, consumable, and tool across your fleet. Min/max quantity alerts. Vendor management. Cost-per-work-order analysis.",
                 accent: "from-teal-500/10 to-transparent",
-                border: "hover:border-teal-200",
+                border: "hover:bg-[#0da08a] border-teal-200",
                 numColor: "text-teal-500/20",
               },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className={`group relative p-10 md:p-14 rounded-3xl border border-slate-100 ${item.border} bg-white hover:shadow-xl transition-all duration-500 overflow-hidden`}>
-                  <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                <div className={`group relative p-10 md:p-14 rounded-3xl border border-slate-100 ${item.border} bg-white hover:bg-[#0da08a] shadow-xl transition-all duration-500 overflow-hidden`}>
+                  <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r ${item.accent} opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity duration-700`}></div>
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
                     <span className={`text-7xl md:text-8xl font-black ${item.numColor} select-none shrink-0 leading-none`}>{item.num}</span>
                     <div>
@@ -132,7 +132,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="bg-slate-900/80 backdrop-blur-sm p-8 md:p-10 h-full flex flex-col group hover:bg-white/[0.04] transition-colors">
-                  <div className={`${item.color} mb-6 group-hover:scale-110 transition-transform`}>
+                  <div className={`${item.color} mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform`}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.step}</h3>
@@ -166,7 +166,7 @@ export default function Page() {
               { icon: <Cog className="w-5 h-5" />, text: "Integration with plant SCADA & ERP" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-100 hover:border-amber-500/30 hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#0da08a] border-amber-500/30 hover:bg-[#0da08a] shadow-md transition-all duration-300">
                   <span className="text-amber-500">{item.icon}</span>
                   <span className="font-medium text-slate-700 text-sm">{item.text}</span>
                 </div>

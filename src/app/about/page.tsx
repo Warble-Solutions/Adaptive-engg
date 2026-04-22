@@ -193,14 +193,14 @@ export default function AboutPage() {
                                     {/* Content Card */}
                                     <div className={`w-full md:w-1/2 pl-20 ${i % 2 === 0 ? "md:pl-16 md:pr-0" : "md:pr-16 md:pl-0"}`}>
                                         <div className={`
-                                            p-8 rounded-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:-translate-y-1 group relative overflow-hidden
+                                            p-8 rounded-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-1 group relative overflow-hidden
                                             ${i % 2 === 0 ? "bg-gradient-to-br from-white/5 to-white/0" : "bg-gradient-to-bl from-white/5 to-white/0"}
                                         `}>
                                             {/* Decorative Large Background Icon */}
-                                            <item.icon className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 rotate-[-15deg] group-hover:rotate-0 transition-transform duration-500" />
+                                            <item.icon className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 rotate-[-15deg] group-hover:bg-[#0da08a] rotate-0 transition-transform duration-500" />
 
                                             <div className="flex items-center gap-4 mb-6 relative z-10">
-                                                <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
+                                                <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-[#0da08a] border-primary/50 transition-colors">
                                                     <item.icon className="w-6 h-6 text-primary" />
                                                 </div>
                                                 <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-300 font-heading">
@@ -210,8 +210,8 @@ export default function AboutPage() {
 
                                             <ul className="space-y-3 relative z-10">
                                                 {item.points.map((point, idx) => (
-                                                    <li key={idx} className="flex items-start gap-3 text-gray-300 text-sm md:text-base group-hover:text-white transition-colors">
-                                                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 group-hover:scale-125 transition-transform shrink-0"></span>
+                                                    <li key={idx} className="flex items-start gap-3 text-gray-300 text-sm md:text-base group-hover:bg-[#0da08a] transition-colors">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 group-hover:bg-[#0da08a] scale-125 transition-transform shrink-0"></span>
                                                         <span>{point}</span>
                                                     </li>
                                                 ))}
@@ -279,9 +279,9 @@ export default function AboutPage() {
                                                     animate={{ opacity: 1, scale: 1 }}
                                                     exit={{ opacity: 0, scale: 0.9 }}
                                                     transition={{ duration: 0.4 }}
-                                                    className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(25%-24px)] premium-card p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 group"
+                                                    className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(25%-24px)] premium-card p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-[#0da08a] shadow-xl hover:bg-[#0da08a] -translate-y-2 group"
                                                 >
-                                                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-md mx-auto overflow-hidden group-hover:scale-105 transition-transform border-4 border-white">
+                                                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-md mx-auto overflow-hidden group-hover:bg-[#0da08a] scale-105 transition-transform border-4 border-white">
                                                         <img
                                                             src={leader.img}
                                                             alt={leader.name}
@@ -301,13 +301,13 @@ export default function AboutPage() {
                         {/* Controls */}
                         <button
                             onClick={() => setLeaderIndex((prev) => (prev - 1 + 5) % 5)}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:text-primary hover:scale-110 transition-all z-10"
+                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] scale-110 transition-all z-10"
                         >
                             <ChevronLeft className="w-6 h-6" />
                         </button>
                         <button
                             onClick={() => setLeaderIndex((prev) => (prev + 1) % 5)}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:text-primary hover:scale-110 transition-all z-10"
+                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] scale-110 transition-all z-10"
                         >
                             <ChevronRight className="w-6 h-6" />
                         </button>
@@ -325,11 +325,11 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* ISO Certification */}
                         <SectionWrapper delay={0.1}>
-                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:border-primary/50 hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
-                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
+                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
+                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:bg-[#0da08a] opacity-[0.06] transition-opacity">
                                     <CheckCircle2 className="w-48 h-48 text-primary" />
                                 </div>
-                                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                     <CheckCircle2 className="w-10 h-10" />
                                 </div>
                                 <div>
@@ -345,11 +345,11 @@ export default function AboutPage() {
 
                         {/* TUV Certification */}
                         <SectionWrapper delay={0.2}>
-                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
-                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
+                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-teal-500/50 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
+                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:bg-[#0da08a] opacity-[0.06] transition-opacity">
                                     <CheckCircle2 className="w-48 h-48 text-teal-600" />
                                 </div>
-                                <div className="w-20 h-20 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 group-hover:scale-110 transition-transform">
+                                <div className="w-20 h-20 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                     <CheckCircle2 className="w-10 h-10" />
                                 </div>
                                 <div>
@@ -371,7 +371,7 @@ export default function AboutPage() {
                 <div className="max-w-2xl mx-auto px-6">
                     <SectionWrapper>
                         <h2 className="text-4xl font-bold mb-8 font-heading">Want to join our team?</h2>
-                        <Link href="/careers" className="inline-block px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
+                        <Link href="/careers" className="inline-block px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
                             View Careers
                         </Link>
                     </SectionWrapper>

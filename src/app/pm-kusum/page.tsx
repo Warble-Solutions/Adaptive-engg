@@ -134,15 +134,15 @@ export default function PmKusumPage() {
                             }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
-                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                                         <FontAwesomeIcon icon={item.icon} className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
-                                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors mb-6 flex-grow">
+                                    <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors mb-6 flex-grow">
                                         {item.desc}
                                     </p>
-                                    <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto hover:gap-3 transition-all">
+                                    <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto hover:bg-[#0da08a] gap-3 transition-all">
                                         Learn More <ArrowRight className="w-4 h-4" />
                                     </Link>
                                 </div>
@@ -172,7 +172,7 @@ export default function PmKusumPage() {
                                 </div>
                                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-heading leading-tight">
                                     Mission Control for <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-primary">State Agencies</span>
+                                    <span className="gradient-heading">State Agencies</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                                     Managing 10,000+ pumps requires more than a spreadsheet. Our Central Monitoring System (CMS) gives you a bird&apos;s-eye view of your entire district&apos;s performance in real-time.
@@ -240,8 +240,8 @@ export default function PmKusumPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Card 1: Component A */}
                         <SectionWrapper delay={0}>
-                            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group h-full">
-                                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
+                            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group h-full">
+                                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faSolarPanel} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component A</h3>
@@ -267,9 +267,9 @@ export default function PmKusumPage() {
 
                         {/* Card 2: Component B */}
                         <SectionWrapper delay={0.1}>
-                            <div className="p-8 rounded-2xl bg-white border-2 border-primary/10 shadow-lg hover:border-primary/50 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden h-full">
+                            <div className="p-8 rounded-2xl bg-white border-2 border-primary/10 shadow-lg hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group relative overflow-hidden h-full">
                                 <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 transition-transform">
+                                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faSun} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component B</h3>
@@ -295,8 +295,8 @@ export default function PmKusumPage() {
 
                         {/* Card 3: Component C */}
                         <SectionWrapper delay={0.2}>
-                            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group h-full">
-                                <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
+                            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group h-full">
+                                <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faBolt} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component C</h3>
@@ -345,7 +345,7 @@ export default function PmKusumPage() {
                         ].map((step, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
                                 <div className="relative z-10 flex flex-col items-center text-center">
-                                    <div className="w-20 h-20 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
+                                    <div className="w-20 h-20 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:bg-[#0da08a] scale-110 transition-transform duration-300">
                                         <FontAwesomeIcon icon={step.icon} className="w-8 h-8" />
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
@@ -430,10 +430,10 @@ export default function PmKusumPage() {
                             }
                         ].map((faq, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
-                                <div className="border border-gray-200 rounded-2xl overflow-hidden hover:border-primary/50 transition-colors">
+                                <div className="border border-gray-200 rounded-2xl overflow-hidden hover:bg-[#0da08a] border-primary/50 transition-colors">
                                     <button
                                         onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                                        className="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors text-left"
+                                        className="w-full flex items-center justify-between p-6 bg-white hover:bg-[#0da08a] bg-gray-50 transition-colors text-left"
                                     >
                                         <span className="font-bold text-lg text-slate-800">{faq.q}</span>
                                         {openFaq === i ? <ChevronUp className="text-primary w-5 h-5" /> : <ChevronDown className="text-gray-400 w-5 h-5" />}
@@ -456,7 +456,7 @@ export default function PmKusumPage() {
                     <SectionWrapper>
                         <h2 className="text-3xl font-bold text-white mb-6 font-heading">Partner for PM-KUSUM?</h2>
                         <p className="text-gray-400 mb-8 text-lg">We support EPCs and Developers with end-to-end RMS & Hardware.</p>
-                        <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
+                        <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
                             Get Quote <ArrowRight className="w-4 h-4" />
                         </Link>
                     </SectionWrapper>

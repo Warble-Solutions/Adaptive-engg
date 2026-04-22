@@ -12,7 +12,7 @@ export default function SceneController() {
         // Determine variant based on route
         if (pathname === "/about") {
             setScene({
-                primaryColor: "#049A89", // Sky Blue
+                primaryColor: "#0da08a", // Sky Blue
                 secondaryColor: "#0B1120",
                 speed: 0.5,
                 variant: "wind", // Wind Turbine
@@ -33,7 +33,7 @@ export default function SceneController() {
             });
         } else if (pathname === "/pm-kusum" || pathname.includes("kusum")) {
             setScene({
-                primaryColor: "#049A89", // Water/Sky like color for the wave
+                primaryColor: "#0da08a", // Water/Sky like color for the wave
                 secondaryColor: "#0B1120",
                 speed: 0.5,
                 variant: "wave", // Original Wave/Plane
@@ -41,7 +41,7 @@ export default function SceneController() {
         } else {
             // Default: Home, Contact
             setScene({
-                primaryColor: "#049A89", // Default Teal
+                primaryColor: "#0da08a", // Default Teal
                 secondaryColor: "#0B1120",
                 speed: 1,
                 variant: "logo", // AEPL Sunburst Logo

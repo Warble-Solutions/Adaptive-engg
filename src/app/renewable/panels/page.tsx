@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -26,7 +26,7 @@ export default function Page() {
               Renewable Energy
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Electrical Panels
+              Electrical <span className="gradient-heading">Panels</span>
             </h1>
             <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
               IS/IEC certified LT &amp; HT panel manufacturing for solar, industrial, and infrastructure applications. Manufactured in our {COMPANY_STATS.manufacturingFacility.formatted} Sq. Ft. facility.
@@ -46,10 +46,10 @@ export default function Page() {
                   Our {COMPANY_STATS.manufacturingFacility.formatted} sq ft manufacturing facility produces a comprehensive range of electrical panels designed for demanding environments. Every panel undergoes rigorous type testing and quality assurance before dispatch. We manufacture LT Panels (up to 6300A), HT Panels (up to 33kV), ACDB/DCDB for solar applications, MCC, PCC, APFC, and custom control panels — all complying with IS/IEC standards.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link href="/pm-kusum/ht-panel" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:border-primary hover:text-primary transition-all">
+                  <Link href="/pm-kusum/ht-panel" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] text-primary transition-all">
                     HT Panels <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <Link href="/pm-kusum/acdb-panels" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:border-primary hover:text-primary transition-all">
+                  <Link href="/pm-kusum/acdb-panels" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] text-primary transition-all">
                     ACDB Panels <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -93,12 +93,12 @@ export default function Page() {
               { icon: <Cpu className="w-6 h-6" />, title: "Automation Panels", desc: "PLC panels, VFD panels, relay protection panels, and SCADA interface panels with pre-loaded configurations." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">{item.desc}</p>
+                  <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">{item.desc}</p>
                 </div>
               </SectionWrapper>
             ))}
@@ -165,8 +165,8 @@ export default function Page() {
               { icon: <BarChart3 className="w-6 h-6" />, title: "Load Flow Study", desc: "Steady-state voltage profile, branch loading, transformer loading, and system losses under various operating scenarios.", color: "from-pink-500 to-rose-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-teal-500/30 hover:-translate-y-2 transition-all duration-300 h-full">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg`}>
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center text-white mb-5 group-hover:bg-[#0da08a] scale-110 transition-transform shadow-lg`}>
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
@@ -208,7 +208,7 @@ export default function Page() {
                   "Clear graphical reports",
                   "Field-validated results",
                 ].map((item, i) => (
-                  <div key={i} className="p-5 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-teal-500/10 hover:border-teal-500/30 transition-all">
+                  <div key={i} className="p-5 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-[#0da08a] bg-teal-500/10 hover:bg-[#0da08a] border-teal-500/30 transition-all">
                     <span className="text-sm font-bold text-white">{item}</span>
                   </div>
                 ))}
@@ -224,7 +224,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Need Electrical Panels or System Analysis?</h2>
             <p className="text-slate-500 mb-8 text-lg">Let our experts design the right panel configuration or conduct comprehensive power system studies for your project.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-[#0da08a] bg-slate-900 transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

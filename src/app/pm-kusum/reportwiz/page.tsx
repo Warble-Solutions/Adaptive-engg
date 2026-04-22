@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO — Data visualization gradient with colored accent panels */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -31,7 +31,7 @@ export default function Page() {
               <span>PM-KUSUM</span>
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-white mb-4 font-heading">
-              Report<span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Wiz</span>
+              Report<span className="gradient-heading">Wiz</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mt-6">
               Automated reporting platform with KPI insights, custom reports, AI/ML analytics, and scheduled multi-format exports for renewable energy portfolios.
@@ -57,8 +57,8 @@ export default function Page() {
               { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full`}>
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-700 mb-5 shadow-sm group-hover:scale-110 transition-transform">
+                <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full`}>
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-700 mb-5 shadow-sm group-hover:bg-[#0da08a] scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -141,7 +141,7 @@ export default function Page() {
               "Investor Confidence — Professional branded reports for stakeholders",
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-teal-500/30 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] shadow-lg transition-all duration-300">
                   <CheckCircle2 className="text-teal-500 w-5 h-5 shrink-0 mt-0.5" />
                   <span className="font-medium text-slate-700 text-sm">{item}</span>
                 </div>
@@ -157,7 +157,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Transform Your Reporting</h2>
             <p className="text-gray-400 mb-8 text-lg">See how ReportWiz can automate your entire reporting workflow.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-full font-bold hover:from-teal-700 hover:to-cyan-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-full font-bold hover:bg-[#0da08a] from-teal-700 hover:bg-[#0da08a] to-cyan-700 transition-all">
               Request Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

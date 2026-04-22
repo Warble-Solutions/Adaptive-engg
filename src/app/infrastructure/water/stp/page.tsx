@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} /> {/* Emerald green for waste/sustainability */}
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} /> {/* Emerald green for waste/sustainability */}
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -32,7 +32,7 @@ export default function Page() {
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
               We are experts in providing turn-key Electrical, Instrumentation and Automation Solutions for the Waste Water industry, managing large networks of geographically distributed assets.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500 text-white rounded-full font-bold hover:bg-teal-400 transition-colors shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
               Consult Our Team <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
@@ -81,7 +81,7 @@ export default function Page() {
                     { icon: <Link2 className="w-6 h-6 text-teal-500" />, title: "Manage Large Networks" },
                     { icon: <Smartphone className="w-6 h-6 text-teal-500" />, title: "Mobile Asset Management" },
                   ].map((item, i) => (
-                    <div key={i} className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:border-teal-200 transition-colors">
+                    <div key={i} className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-[#0da08a] border-teal-200 transition-colors">
                       <div className="mb-4">{item.icon}</div>
                       <h4 className="font-bold text-slate-900 text-sm">{item.title}</h4>
                     </div>

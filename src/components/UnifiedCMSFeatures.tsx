@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Globe, Activity, Database, TrendingDown, BarChart3, Server } from "lucide-react";
@@ -76,7 +76,7 @@ export default function UnifiedCMSFeatures() {
                     className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 ${
                       isActive 
                         ? "bg-cyan-500/10 border-cyan-500/50 shadow-[0_0_30px_rgba(6,182,212,0.15)]" 
-                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/20 text-gray-400 hover:text-white"
+                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:bg-[#0da08a] border-white/20 text-gray-400 hover:bg-[#0da08a]"
                     }`}
                   >
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${

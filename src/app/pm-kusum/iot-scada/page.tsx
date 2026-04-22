@@ -13,7 +13,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO —  Terminal/console inspired */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -66,7 +66,7 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* SolarEdge — Hardware */}
             <SectionWrapper delay={0.1}>
-              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-teal-50 rounded-3xl border border-teal-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
+              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-teal-50 rounded-3xl border border-teal-100 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[80px]"></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
@@ -86,7 +86,7 @@ export default function Page() {
 
             {/* SolarPro — Software */}
             <SectionWrapper delay={0.2}>
-              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-teal-50 rounded-3xl border border-teal-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
+              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-teal-50 rounded-3xl border border-teal-100 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-bl-[80px]"></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
@@ -126,8 +126,8 @@ export default function Page() {
               { icon: <Shield className="w-6 h-6" />, title: "Secure & Reliable", desc: "End-to-end encrypted data transmission. 99.9% uptime SLA with redundant cloud infrastructure." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/40 hover:-translate-y-2 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform">
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/40 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:bg-[#0da08a] scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>

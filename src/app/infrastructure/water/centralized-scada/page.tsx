@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} /> {/* Deep blue for centralized SCADA */}
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} /> {/* Deep blue for centralized SCADA */}
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
@@ -29,12 +29,12 @@ export default function Page() {
                 <span>Water Solutions Software</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading">
-                Centralized SCADA
-              </h1>
+                Centralized <span className="gradient-heading">SCADA</span>
+            </h1>
               <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg mb-8 leading-relaxed">
                 Highly reliable, scalable, and flexible software architecture offering a bird's eye view of all decentralized water assets globally.
               </p>
-              <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white rounded-full font-bold hover:bg-teal-500 transition-colors">
+              <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                 Request SCADA Demo <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -70,7 +70,7 @@ export default function Page() {
               { icon: <Layers className="w-6 h-6" />, title: "Consumable Estimation" },
             ].map((feature, i) => (
               <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center h-full hover:bg-teal-50 hover:border-teal-200 transition-colors">
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center h-full hover:bg-[#0da08a] bg-teal-50 hover:bg-[#0da08a] border-teal-200 transition-colors">
                   <div className="text-teal-500 mb-3">{feature.icon}</div>
                   <h4 className="font-bold text-slate-800 text-sm">{feature.title}</h4>
                 </div>
@@ -121,7 +121,7 @@ export default function Page() {
                   <p className="text-slate-400 leading-relaxed mb-8">
                     Decentralized water schemes produce massive amounts of raw data. Our SCADA architecture transforms this raw data into intelligent, actionable reports, standardizing operations and cutting consumable overheads significantly.
                   </p>
-                  <Link href="/contact" className="inline-flex items-center text-teal-400 font-bold hover:text-teal-300 transition-colors">
+                  <Link href="/contact" className="inline-flex items-center text-teal-400 font-bold hover:bg-[#0da08a] text-teal-300 transition-colors">
                     Talk to our Software Engineers <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>

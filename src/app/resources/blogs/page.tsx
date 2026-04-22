@@ -18,12 +18,12 @@ export default async function BlogsPage() {
 
   return (
     <main className="min-h-screen pt-32 pb-24 px-6 relative">
-      <SceneTrigger variant="wave" color="#049A89" speed={0.8} />
+      <SceneTrigger variant="wave" color="#0da08a" speed={0.8} />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16">
           <h1 className="text-5xl md:text-6xl font-black text-white font-heading tracking-tight mb-6">
-            Insights & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Updates</span>
+            Insights & <span className="gradient-heading-light">Updates</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl leading-relaxed">
             Stay up to date with the latest developments in Renewable Energy, Industrial Automation, and Infrastructure Engineering from the experts at Adaptive.
@@ -33,14 +33,14 @@ export default async function BlogsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
             <Link key={post.id} href={`/resources/blogs/${post.slug}`}>
-              <article className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+              <article className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/10 transition-all duration-300">
                 <div className="relative h-60 w-full overflow-hidden bg-slate-800">
                   {post.thumbnailUrl ? (
                     <Image
                       src={post.thumbnailUrl}
                       alt={post.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
                     />
                   ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center">
@@ -54,13 +54,13 @@ export default async function BlogsPage() {
                 </div>
                 
                 <div className="p-8">
-                  <h2 className="text-xl font-bold text-white font-heading mb-4 line-clamp-2 group-hover:text-primary transition-colors">
+                  <h2 className="text-xl font-bold text-white font-heading mb-4 line-clamp-2 group-hover:bg-[#0da08a] text-primary transition-colors">
                     {post.title}
                   </h2>
                   <p className="text-slate-300 mb-6 line-clamp-3 leading-relaxed">
                     {post.excerpt || post.content.replace(/<[^>]+>/g, "").substring(0, 120) + "..."}
                   </p>
-                  <div className="flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
+                  <div className="flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-3 transition-all">
                     Read Article <ArrowRight className="w-4 h-4 ml-2" />
                   </div>
                 </div>

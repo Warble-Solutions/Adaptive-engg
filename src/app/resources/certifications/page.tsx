@@ -71,7 +71,7 @@ const awards = [
 export default function CertificationsPage() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO */}
       <section className="section-hero relative min-h-[70vh] flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -159,13 +159,13 @@ export default function CertificationsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {isoCerts.map((cert, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow">
+                <div className="bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-lg overflow-hidden group hover:bg-[#0da08a] shadow-2xl transition-shadow">
                   <div className="relative w-full aspect-[3/4] bg-white">
                     <Image
                       src={cert.image}
                       alt={cert.title}
                       fill
-                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-4 group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
@@ -209,13 +209,13 @@ export default function CertificationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {erdaReports.map((report, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group hover:bg-white/10 hover:border-primary/30 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group hover:bg-white/10 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300">
                   <div className="relative w-full aspect-[3/4] bg-white/5">
                     <Image
                       src={report.image}
                       alt={report.title}
                       fill
-                      className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-3 group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
@@ -251,13 +251,13 @@ export default function CertificationsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {awards.map((award, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="bg-slate-50 rounded-3xl border border-slate-100 shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow">
+                <div className="bg-slate-50 rounded-3xl border border-slate-100 shadow-lg overflow-hidden group hover:bg-[#0da08a] shadow-2xl transition-shadow">
                   <div className="relative w-full aspect-[16/10] bg-white">
                     <Image
                       src={award.image}
                       alt={award.title}
                       fill
-                      className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-6 group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
@@ -294,7 +294,7 @@ export default function CertificationsPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors"
             >
               Request Documents <ArrowRight className="w-4 h-4" />
             </Link>

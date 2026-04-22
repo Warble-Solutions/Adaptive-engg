@@ -28,12 +28,12 @@ export default function Page() {
                   <span>Unified Renewable Solution</span>
                 </div>
                 <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading">
-                  Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-pink-400">Analytics</span>
+                  Advanced <span className="gradient-heading">Analytics</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
                   Transform raw renewable energy data into actionable intelligence with advanced visualization, accurate loss bucket analysis, and AI-powered insights.
                 </p>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                   Request Demo <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -64,9 +64,9 @@ export default function Page() {
               { icon: <LineChart className="w-7 h-7" />, title: "Analyse Historical Data", desc: "Years of historical data at your fingertips. Trend analysis, degradation curves, seasonal patterns, and YoY performance comparison.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
-                  <div className={`absolute top-0 right-0 w-32 h-32 ${item.color} rounded-bl-[80px] opacity-5 group-hover:opacity-10 transition-opacity`}></div>
-                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
+                  <div className={`absolute top-0 right-0 w-32 h-32 ${item.color} rounded-bl-[80px] opacity-5 group-hover:bg-[#0da08a] opacity-10 transition-opacity`}></div>
+                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform shadow-lg`}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -123,7 +123,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Unlock Your Data&apos;s Potential</h2>
             <p className="text-slate-500 mb-8 text-lg">See how advanced analytics can improve your plant performance and reduce losses.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-teal-600 text-white rounded-full font-bold hover:from-teal-700 hover:to-teal-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-teal-600 text-white rounded-full font-bold hover:bg-[#0da08a] from-teal-700 hover:bg-[#0da08a] to-teal-700 transition-all">
               Get Analytics Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

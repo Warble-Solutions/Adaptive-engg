@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} /> {/* Green theme for agriculture/micro-irrigation */}
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} /> {/* Green theme for agriculture/micro-irrigation */}
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -26,12 +26,12 @@ export default function Page() {
               <span>Smart Agriculture</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Micro Irrigation
+              Micro <span className="gradient-heading">Irrigation</span>
             </h1>
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
               Tailor-made Solutions for Outlet Management System (OMS) ensuring precise water distribution at the chak level.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white rounded-full font-bold hover:bg-green-500 transition-colors shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white rounded-full font-bold hover:bg-[#0da08a] bg-green-500 transition-colors shadow-[0_0_20px_rgba(34,197,94,0.3)]">
               Explore OMS <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
@@ -53,7 +53,7 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <SectionWrapper delay={0.1}>
-              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-green-300 hover:shadow-lg transition-all">
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:bg-[#0da08a] border-green-300 hover:bg-[#0da08a] shadow-lg transition-all">
                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
                   <Combine className="w-6 h-6" />
                 </div>
@@ -65,7 +65,7 @@ export default function Page() {
             </SectionWrapper>
 
             <SectionWrapper delay={0.2}>
-              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-green-300 hover:shadow-lg transition-all">
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:bg-[#0da08a] border-green-300 hover:bg-[#0da08a] shadow-lg transition-all">
                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
                   <Leaf className="w-6 h-6" />
                 </div>
@@ -77,7 +77,7 @@ export default function Page() {
             </SectionWrapper>
 
             <SectionWrapper delay={0.3}>
-              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-green-300 hover:shadow-lg transition-all">
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:bg-[#0da08a] border-green-300 hover:bg-[#0da08a] shadow-lg transition-all">
                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
                   <CalendarClock className="w-6 h-6" />
                 </div>
@@ -89,7 +89,7 @@ export default function Page() {
             </SectionWrapper>
 
             <SectionWrapper delay={0.4}>
-              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-green-300 hover:shadow-lg transition-all">
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:bg-[#0da08a] border-green-300 hover:bg-[#0da08a] shadow-lg transition-all">
                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
                   <ShieldAlert className="w-6 h-6" />
                 </div>

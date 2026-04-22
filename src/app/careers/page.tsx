@@ -16,12 +16,12 @@ export default async function CareersPage() {
 
   return (
     <main className="min-h-screen pt-32 pb-24 px-6 relative">
-      <SceneTrigger variant="solar" color="#049A89" speed={0.8} />
+      <SceneTrigger variant="solar" color="#0da08a" speed={0.8} />
       
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="mb-16">
           <h1 className="text-5xl md:text-6xl font-black text-white font-heading tracking-tight mb-6">
-            Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Team</span>
+            Join Our <span className="gradient-heading-light">Team</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl leading-relaxed">
             Build the future of renewable energy and critical infrastructure with India's leading turnkey E&I solutions provider.
@@ -31,11 +31,11 @@ export default async function CareersPage() {
         <div className="flex flex-col gap-6">
           {jobs.map((job) => (
             <Link key={job.id} href={`/careers/${job.slug}`}>
-              <div className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 transform hover:-translate-y-1">
+              <div className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/10 transition-all duration-300 transform hover:bg-[#0da08a] -translate-y-1">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                   
                   <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-white font-heading group-hover:text-primary transition-colors mb-4">
+                    <h2 className="text-2xl font-bold text-white font-heading group-hover:bg-[#0da08a] text-primary transition-colors mb-4">
                       {job.title}
                     </h2>
                     
@@ -55,7 +55,7 @@ export default async function CareersPage() {
                     </div>
                   </div>
 
-                  <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                  <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary group-hover:bg-[#0da08a] bg-primary group-hover:bg-[#0da08a] transition-colors flex-shrink-0">
                     <ArrowRight className="w-6 h-6" />
                   </div>
                   

@@ -36,14 +36,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <main className="min-h-screen pt-32 pb-24 relative selection:bg-teal-500/30">
-      <SceneTrigger variant="wave" color="#049A89" speed={0.4} />
+      <SceneTrigger variant="wave" color="#0da08a" speed={0.4} />
 
       <article className="max-w-4xl mx-auto px-6 relative z-10">
         <Link 
           href="/resources/blogs"
-          className="inline-flex items-center text-slate-400 hover:text-primary font-bold tracking-wide uppercase text-sm mb-12 transition-colors group"
+          className="inline-flex items-center text-slate-400 hover:bg-[#0da08a] text-primary font-bold tracking-wide uppercase text-sm mb-12 transition-colors group"
         >
-          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft className="w-4 h-4 mr-2 group-hover:bg-[#0da08a] -translate-x-1 transition-transform" />
           Back to all insights
         </Link>
 
@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8
           prose-h3:text-2xl 
           prose-p:text-white prose-p:leading-relaxed prose-p:mb-8
-          prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline
+          prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:bg-[#0da08a] prose-a:underline
           prose-li:text-white prose-li:my-2
           prose-strong:font-bold prose-strong:text-white font-heading
           prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50/50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:not-italic prose-blockquote:font-medium prose-blockquote:text-slate-800"

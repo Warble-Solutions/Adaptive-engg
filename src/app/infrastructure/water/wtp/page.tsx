@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -27,12 +27,12 @@ export default function Page() {
               <span>Water Treatment</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Water Supply & WTP
+              Water Supply & <span className="gradient-heading">WTP</span>
             </h1>
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
               Our complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills proven at Water Supply Schemes.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500 text-white rounded-full font-bold hover:bg-teal-400 transition-colors shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
               Discuss Your Scheme <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
@@ -83,7 +83,7 @@ export default function Page() {
                     { title: "Remote SCADA Connectivity", desc: "Remote connectivity of OHTs integrated directly into centralized SCADA systems." },
                     { title: "Advanced Analytics", desc: "Programmable Dashboards and relevant report generation enabling better decision making." },
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-200 transition-colors">
+                    <div key={i} className="flex gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#0da08a] border-teal-200 transition-colors">
                       <div className="mt-1">
                         <CheckCircle2 className="w-6 h-6 text-teal-500" />
                       </div>
@@ -141,7 +141,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Upgrade Your Plant?</h2>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-teal-500 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Contact Our Engineers <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

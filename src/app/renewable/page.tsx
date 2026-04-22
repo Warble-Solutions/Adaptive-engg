@@ -28,7 +28,7 @@ export default function RenewablePage() {
                 <div className="z-10 max-w-7xl relative">
                     <SectionWrapper>
                         <div className="flex items-center justify-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-6 bg-black/40 backdrop-blur-sm py-2 px-6 rounded-full inline-flex border border-white/10 shadow-lg">
-                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <Link href="/" className="hover:bg-[#0da08a] transition-colors">Home</Link>
                             <ChevronRight className="w-4 h-4" />
                             <span>Renewable Solutions</span>
                         </div>
@@ -50,9 +50,9 @@ export default function RenewablePage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
                         {/* Card 1: Software */}
                         <SectionWrapper delay={0.1}>
-                            <a href="#unified" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-teal-500 hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+                            <a href="#unified" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-teal-500 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
+                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-[#0da08a] bg-teal-600 group-hover:bg-[#0da08a] transition-colors duration-300">
                                         <Monitor className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Unified Renewable Solution</h3>
@@ -63,9 +63,9 @@ export default function RenewablePage() {
 
                         {/* Card 2: Hardware */}
                         <SectionWrapper delay={0.2}>
-                            <a href="#panels" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-teal-500 hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+                            <a href="#panels" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-teal-500 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
+                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-[#0da08a] bg-teal-600 group-hover:bg-[#0da08a] transition-colors duration-300">
                                         <Zap className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Electrical Panels</h3>
@@ -76,9 +76,9 @@ export default function RenewablePage() {
 
                         {/* Card 3: Projects */}
                         <SectionWrapper delay={0.3}>
-                            <a href="#turnkey" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-amber-500 hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+                            <a href="#turnkey" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-amber-500 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-amber-50 rounded-2xl text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                                    <div className="p-5 bg-amber-50 rounded-2xl text-amber-600 group-hover:bg-[#0da08a] bg-amber-600 group-hover:bg-[#0da08a] transition-colors duration-300">
                                         <Factory className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Turnkey E&I</h3>
@@ -164,8 +164,8 @@ export default function RenewablePage() {
                             }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
-                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                                         {/* Clone icon to enforce size if needed, though usually css handles it. Using wrapper. */}
                                         <div className="w-6 h-6">{item.icon}</div>
                                     </div>
@@ -178,7 +178,7 @@ export default function RenewablePage() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <Link href="/contact" className="mt-6 flex items-center text-primary font-bold text-sm group-hover:gap-2 transition-all">
+                                    <Link href="/contact" className="mt-6 flex items-center text-primary font-bold text-sm group-hover:bg-[#0da08a] gap-2 transition-all">
                                         Learn More <ArrowRight className="w-4 h-4 ml-1" />
                                     </Link>
                                 </div>
@@ -213,7 +213,7 @@ export default function RenewablePage() {
                                     <PanelItem title="Compact Substations" desc="CSS solutions for rapid deployment" />
                                 </div>
                                 <div className="mt-8 flex items-center gap-4 justify-start">
-                                    <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-slate-200 rounded-full font-bold text-slate-700 hover:border-primary hover:text-primary hover:-translate-y-1 transition-all duration-300">
+                                    <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-slate-200 rounded-full font-bold text-slate-700 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] -translate-y-1 transition-all duration-300">
                                         <span>Learn More</span>
                                         <ArrowRight className="w-4 h-4" />
                                     </Link>
@@ -226,20 +226,20 @@ export default function RenewablePage() {
                             <SectionWrapper delay={0.2}>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 h-[500px] rounded-3xl overflow-hidden shadow-2xl relative">
                                     <div className="col-span-2 row-span-2 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/15.jpg" alt="Manufacturing" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                                        <Image src="/imgs/manu/15.jpg" alt="Manufacturing" fill className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-700" />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-[#0da08a] bg-transparent transition-colors"></div>
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/16.jpg" alt="Assembly" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/16.jpg" alt="Assembly" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/17.jpg" alt="Testing" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/17.jpg" alt="Testing" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/18.jpg" alt="Quality Control" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/18.jpg" alt="Quality Control" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/19.jpg" alt="Fabrication" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/19.jpg" alt="Fabrication" fill className="object-cover group-hover:bg-[#0da08a] scale-110 transition-transform duration-700" />
                                     </div>
 
                                     <div className="absolute bottom-4 left-4 z-20 bg-black/50 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
@@ -275,12 +275,12 @@ export default function RenewablePage() {
                                         src={item.img}
                                         alt={item.title}
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="object-cover transition-transform duration-700 group-hover:bg-[#0da08a] scale-110"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
-                                    <div className="absolute inset-x-0 bottom-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:bg-[#0da08a] opacity-80 transition-opacity"></div>
+                                    <div className="absolute inset-x-0 bottom-0 p-8 transform translate-y-2 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-300">
                                         <h3 className="text-2xl font-bold mb-3 text-white border-l-4 border-primary pl-4">{item.title}</h3>
-                                        <p className="text-gray-300 text-sm leading-relaxed pl-5 border-l-4 border-transparent opacity-0 group-hover:opacity-100 transition-opacity delay-100 duration-300">{item.desc}</p>
+                                        <p className="text-gray-300 text-sm leading-relaxed pl-5 border-l-4 border-transparent opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity delay-100 duration-300">{item.desc}</p>
                                     </div>
                                 </div>
                             </SectionWrapper>
@@ -306,15 +306,15 @@ export default function RenewablePage() {
                             { title: "C&I (Commercial)", desc: "Captive power plants for heavy industry (Steel, Cement)", icon: <Factory className="w-8 h-8" /> }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1} className="h-full">
-                                <div className="group relative p-10 bg-slate-50 border border-slate-200 rounded-[2rem] hover:bg-slate-900 hover:border-slate-800 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 overflow-hidden h-full flex flex-col">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/0 to-primary/10 rounded-bl-[100px] transition-all duration-500 group-hover:scale-150 group-hover:to-primary/20"></div>
+                                <div className="group relative p-10 bg-slate-50 border border-slate-200 rounded-[2rem] hover:bg-[#0da08a] bg-slate-900 hover:bg-[#0da08a] border-slate-800 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-4 transition-all duration-500 overflow-hidden h-full flex flex-col">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/0 to-primary/10 rounded-bl-[100px] transition-all duration-500 group-hover:bg-[#0da08a] scale-150 group-hover:bg-[#0da08a] to-primary/20"></div>
 
-                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 relative z-10 shrink-0">
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-primary group-hover:bg-[#0da08a] bg-primary group-hover:bg-[#0da08a] transition-all duration-500 relative z-10 shrink-0">
                                         {item.icon}
                                     </div>
 
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-white transition-colors duration-300 relative z-10">{item.title}</h3>
-                                    <p className="text-slate-500 text-lg leading-relaxed group-hover:text-gray-400 transition-colors duration-300 relative z-10 flex-grow">{item.desc}</p>
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:bg-[#0da08a] transition-colors duration-300 relative z-10">{item.title}</h3>
+                                    <p className="text-slate-500 text-lg leading-relaxed group-hover:bg-[#0da08a] text-gray-400 transition-colors duration-300 relative z-10 flex-grow">{item.desc}</p>
                                 </div>
                             </SectionWrapper>
                         ))}
@@ -342,7 +342,7 @@ export default function RenewablePage() {
 // Helper for Panel List Item
 function PanelItem({ title, desc }: { title: string; desc: string }) {
     return (
-        <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100 hover:border-primary/50 hover:bg-white hover:shadow-md hover:translate-x-1 transition-all duration-300">
+        <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100 hover:bg-[#0da08a] border-primary/50 hover:bg-white hover:bg-[#0da08a] shadow-md hover:bg-[#0da08a] translate-x-1 transition-all duration-300">
             <CheckCircle2 className="w-5 h-5 text-primary mt-1 shrink-0" />
             <div>
                 <h4 className="font-bold text-slate-900 text-sm">{title}</h4>

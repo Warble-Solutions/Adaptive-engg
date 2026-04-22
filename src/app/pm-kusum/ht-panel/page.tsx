@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Shield, Activity, CheckCircle2, Settings, Gauge, ThermometerSun, Wind, Award, Cpu, Lock } from "lucide-react";
@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO — Industrial engineering spec aesthetic */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -27,7 +27,7 @@ export default function Page() {
               <span>PM-KUSUM</span>
             </div>
             <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
-              HT Panel Solutions
+              HT Panel <span className="gradient-heading">Solutions</span>
             </h1>
             <p className="text-2xl md:text-3xl font-bold text-yellow-400/80 mb-6">VCB Panel up to 33kV / 11kV</p>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -48,7 +48,7 @@ export default function Page() {
                 { value: "31.5kA", label: "Short Circuit Rating", icon: <Shield className="w-5 h-5" /> },
                 { value: "IS/IEC", label: "Type Tested", icon: <Award className="w-5 h-5" /> },
               ].map((item, i) => (
-                <div key={i} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-yellow-500/30 hover:shadow-lg transition-all">
+                <div key={i} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-yellow-500/30 hover:bg-[#0da08a] shadow-lg transition-all">
                   <div className="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-600 mx-auto mb-3">
                     {item.icon}
                   </div>
@@ -94,7 +94,7 @@ export default function Page() {
                     { param: "SCADA Integration", values: ["Optional", "Optional", "Standard", "Standard"] },
                     { param: "Compliance", values: ["ERDA Tested", "ERDA Tested", "ERDA Tested", "ERDA / CPRI Tested"] },
                   ].map((row, i) => (
-                    <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-yellow-50/50 transition-colors`}>
+                    <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-[#0da08a] bg-yellow-50/50 transition-colors`}>
                       <td className="p-4 font-bold text-slate-900 border-b border-slate-100">{row.param}</td>
                       {row.values.map((val, j) => (
                         <td key={j} className={`p-4 text-center text-slate-600 border-b border-slate-100 ${j === 2 ? 'bg-yellow-50/30 border-x border-yellow-100' : ''} ${j === 3 ? 'bg-primary/5 border-x border-primary/10' : ''}`}>{val}</td>
@@ -124,8 +124,8 @@ export default function Page() {
               { icon: <ThermometerSun className="w-6 h-6" />, title: "Environmental Protection", desc: "Anti-corrosion CRCA enclosure with epoxy powder coating. Tropicalized for Indian conditions." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-yellow-500/30 hover:-translate-y-2 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center text-yellow-400 mb-5 group-hover:scale-110 transition-transform">
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-yellow-500/30 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center text-yellow-400 mb-5 group-hover:bg-[#0da08a] scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
@@ -143,7 +143,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Need Custom HT Panel Configuration?</h2>
             <p className="text-slate-500 mb-8 text-lg">Our panel engineers will design a solution matching your exact specifications.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-yellow-500 hover:text-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Request Quote <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

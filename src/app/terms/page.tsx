@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 
 export const metadata = {
   title: "Terms & Conditions | Adaptive Engineering",
@@ -8,7 +8,7 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <main className="min-h-screen pt-32 pb-24 px-6 relative">
-      <SceneTrigger variant="wave" color="#049A89" speed={0.2} />
+      <SceneTrigger variant="wave" color="#0da08a" speed={0.2} />
       
       <div className="max-w-4xl mx-auto relative z-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl shadow-slate-200/50">
         <h1 className="text-4xl md:text-5xl font-black text-white font-heading tracking-tight mb-8">

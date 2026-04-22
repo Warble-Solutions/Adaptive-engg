@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
       
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -25,7 +25,7 @@ export default function Page() {
               History
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Our Journey
+              Our <span className="gradient-heading">Journey</span>
             </h1>
             <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
               From a small engineering firm to India&apos;s most trusted Turnkey E&amp;I solutions provider — here is how we got here.
@@ -48,7 +48,7 @@ export default function Page() {
               <SectionWrapper delay={0}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">14</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2014</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">The Beginning</h3>
                     <p className="text-slate-600 leading-relaxed">Team Strength of 15. Renewable Installed Base — 100MW. Became Authorized System Integrators for Schneider-Electric.</p>
@@ -58,7 +58,7 @@ export default function Page() {
               <SectionWrapper delay={0.07}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">16</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2016</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Panel Manufacturing</h3>
                     <p className="text-slate-600 leading-relaxed">Established our First Panel Manufacturing Factory. Achieved ISO 9001:2015 certification from TUV NORD. Renewable Installed Base grew to 250MW.</p>
@@ -68,7 +68,7 @@ export default function Page() {
               <SectionWrapper delay={0.14}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">18</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2018</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">SCADA Leadership</h3>
                     <p className="text-slate-600 leading-relaxed">Renewable Installed Base reached 4.8GW+. Expanded into HT/LT Panel production. Recognized for Highest Revenue Growth in SCADA by Schneider-Electric.</p>
@@ -78,7 +78,7 @@ export default function Page() {
               <SectionWrapper delay={0.21}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">20</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2020</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Industry Recognition</h3>
                     <p className="text-slate-600 leading-relaxed">Renewable Installed Base — 14GW+. Introduced Renewable PPC. Outstanding Achievement in Solar Segment — EQ Magazine. Best End User &amp; EPC Solution Provider — Schneider-Electric. Best Solar Monitoring Company of the Year — ET Now.</p>
@@ -88,7 +88,7 @@ export default function Page() {
               <SectionWrapper delay={0.28}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">22</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2022</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Scale &amp; Expansion</h3>
                     <p className="text-slate-600 leading-relaxed">Achieved Single location 1GW milestone. Single Largest Order — 3.6GW. Opened Second Factory — 60,000 sq.ft. Became Preferred Project Partner of Industry Leaders.</p>
@@ -98,7 +98,7 @@ export default function Page() {
               <SectionWrapper delay={0.35}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">24</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2024</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">PM-KUSUM &amp; Innovation</h3>
                     <p className="text-slate-600 leading-relaxed">Renewable Installed Base — 40GW+. Participation in International Expos. Launched Monitoring Solutions for PM KUSUM. Hardware In Loop (HIL) Testing for PPC. Introduced EMS — BESS.</p>
@@ -108,7 +108,7 @@ export default function Page() {
               <SectionWrapper delay={0.42}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">Now</div>
-                  <div className="bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-200 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Current</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Industry Leader</h3>
                     <p className="text-slate-600 leading-relaxed">Team Strength — 300+. Renewable Installed Base — 68 GW+. Sites Monitored — 1000+. Electrical Panels Supplied — 10,000+. Yearly Capacity — 25GW+.</p>
@@ -160,7 +160,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Write the Next Chapter?</h2>
             <p className="text-gray-400 mb-8 text-lg">Partner with us to build the future of energy and infrastructure.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

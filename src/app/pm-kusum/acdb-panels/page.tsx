@@ -14,7 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO — Product catalog gradient */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -29,7 +29,7 @@ export default function Page() {
               <span>PM-KUSUM</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 font-heading">
-              ACDB Panel Solutions
+              ACDB Panel <span className="gradient-heading">Solutions</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed mt-6">
               IP65 rated AC Distribution Boards for PM-KUSUM solar pump connections with surge protection and isolation. Built for India&apos;s harshest field conditions — deserts, coastal humidity, and monsoon rains.
@@ -127,7 +127,7 @@ export default function Page() {
                     { param: "UV Protection", values: ["UV-Resistant Gaskets", "Standard"] },
                     { param: "Standards", values: ["IS 61439 / IEC", "IS 61439 / IEC"] },
                   ].map((row, i) => (
-                    <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-teal-50/50 transition-colors`}>
+                    <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-[#0da08a] bg-teal-50/50 transition-colors`}>
                       <td className="p-4 font-bold text-slate-900 border-b border-slate-100">{row.param}</td>
                       <td className="p-4 text-center text-slate-600 border-b border-slate-100 bg-primary/5 border-x border-primary/10">{row.values[0]}</td>
                       <td className="p-4 text-center text-slate-600 border-b border-slate-100 bg-teal-50/30 border-x border-teal-100">{row.values[1]}</td>
@@ -154,12 +154,12 @@ export default function Page() {
               { icon: <Cpu className="w-6 h-6" />, title: "Weatherproof Design", desc: "FRP/CRCA enclosure with anti-corrosion coating, UV-resistant gaskets, and sealed cable glands." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 h-full flex flex-col items-start">
-                  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 h-full flex flex-col items-start">
+                  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">{item.desc}</p>
+                  <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">{item.desc}</p>
                 </div>
               </SectionWrapper>
             ))}
@@ -184,7 +184,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Need ACDB Panels for Your PM-KUSUM Project?</h2>
             <p className="text-gray-400 mb-8 text-lg">Get bulk pricing and custom configurations for your solar pump installations.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
               Get Quote <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

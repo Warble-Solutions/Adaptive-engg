@@ -79,7 +79,7 @@ export function ScadaMonitoringDashboard() {
           { label: "Grid Freq", value: frequency.toFixed(2), unit: "Hz", icon: <Activity className="w-3 h-3" />, color: "text-cyan-400" },
           { label: "Grid Voltage", value: gridVoltage.toFixed(1), unit: "kV", icon: <Gauge className="w-3 h-3" />, color: "text-purple-400" },
         ].map((kpi, i) => (
-          <div key={i} className="bg-white/5 rounded-lg p-2.5 border border-white/5 hover:border-white/15 transition-colors group cursor-default">
+          <div key={i} className="bg-white/5 rounded-lg p-2.5 border border-white/5 hover:bg-[#0da08a] border-white/15 transition-colors group cursor-default">
             <div className="flex items-center gap-1 mb-1">
               <span className={kpi.color}>{kpi.icon}</span>
               <span className="text-[9px] text-slate-500 font-bold uppercase tracking-wider">{kpi.label}</span>
@@ -118,7 +118,7 @@ export function ScadaMonitoringDashboard() {
             {Array.from({ length: 16 }).map((_, i) => (
               <div
                 key={i}
-                className={`w-full aspect-square rounded-sm ${i === 7 ? 'bg-amber-500/60' : i === 12 ? 'bg-red-500/50' : 'bg-teal-500/50'} hover:brightness-125 transition-all cursor-pointer`}
+                className={`w-full aspect-square rounded-sm ${i === 7 ? 'bg-amber-500/60' : i === 12 ? 'bg-red-500/50' : 'bg-teal-500/50'} hover:bg-[#0da08a] brightness-125 transition-all cursor-pointer`}
                 title={`INV-${(i + 1).toString().padStart(2, '0')}: ${i === 7 ? 'Warning' : i === 12 ? 'Offline' : 'Running'}`}
               />
             ))}
@@ -235,12 +235,12 @@ export function AlarmConsoleDashboard() {
         {alarms.map((alarm, i) => {
           const s = severityColors[alarm.severity];
           return (
-            <div key={i} className={`flex items-center gap-3 px-3 py-2 ${s.bg} rounded-lg hover:brightness-125 transition-colors cursor-pointer group`}>
+            <div key={i} className={`flex items-center gap-3 px-3 py-2 ${s.bg} rounded-lg hover:bg-[#0da08a] brightness-125 transition-colors cursor-pointer group`}>
               <span className={s.text}>{s.icon}</span>
               <span className="text-[10px] font-mono text-slate-500 w-14 shrink-0">{alarm.time}</span>
               <span className="text-[10px] font-bold text-slate-400 w-12 shrink-0">{alarm.device}</span>
               <span className={`text-[10px] ${s.text} flex-grow truncate`}>{alarm.msg}</span>
-              <span className="text-[9px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">ACK →</span>
+              <span className="text-[9px] text-slate-600 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity">ACK →</span>
             </div>
           );
         })}
@@ -286,11 +286,11 @@ export function AnalyticsDashboard() {
             )}
             <div className="w-full flex gap-[1px] items-end h-28">
               <div
-                className="flex-1 bg-gradient-to-t from-primary/80 to-primary/40 rounded-t-sm transition-all duration-300 group-hover:brightness-125"
+                className="flex-1 bg-gradient-to-t from-primary/80 to-primary/40 rounded-t-sm transition-all duration-300 group-hover:bg-[#0da08a] brightness-125"
                 style={{ height: `${prData[i]}%` }}
               />
               <div
-                className="flex-1 bg-gradient-to-t from-purple-600/80 to-purple-400/40 rounded-t-sm transition-all duration-300 group-hover:brightness-125"
+                className="flex-1 bg-gradient-to-t from-purple-600/80 to-purple-400/40 rounded-t-sm transition-all duration-300 group-hover:bg-[#0da08a] brightness-125"
                 style={{ height: `${genData[i]}%` }}
               />
             </div>
@@ -363,7 +363,7 @@ export function SolarProDashboard() {
           {[0, 0, 5, 18, 35, 52, 68, 78, 85, 82, 75, 60, 42, 25, 12, 3, 0, 0].map((h, i) => (
             <div
               key={i}
-              className="flex-1 bg-gradient-to-t from-primary to-teal-300 rounded-t-sm transition-all hover:brightness-110"
+              className="flex-1 bg-gradient-to-t from-primary to-teal-300 rounded-t-sm transition-all hover:bg-[#0da08a] brightness-110"
               style={{ height: `${h}%` }}
             />
           ))}
@@ -431,11 +431,11 @@ export function NocDashboard() {
           <div key={i} className="flex items-center justify-between px-2.5 py-1.5 bg-white/[0.02] rounded-lg hover:bg-white/5 transition-colors cursor-pointer group">
             <div className="flex items-center gap-2">
               <StatusDot status={site.status} />
-              <span className="text-[10px] font-medium text-slate-300 group-hover:text-white transition-colors">{site.name}</span>
+              <span className="text-[10px] font-medium text-slate-300 group-hover:bg-[#0da08a] transition-colors">{site.name}</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-[9px] text-slate-500 font-mono">{site.kw} kW</span>
-              <span className="text-[9px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
+              <span className="text-[9px] text-slate-600 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity">View →</span>
             </div>
           </div>
         ))}
@@ -609,7 +609,7 @@ export function CMMSDashboard() {
             className={`flex-1 py-1.5 rounded-lg text-[9px] font-bold uppercase tracking-wider transition-all ${
               activeTab === tab.key
                 ? 'bg-white/10 text-white border border-white/10'
-                : 'bg-transparent text-slate-500 hover:text-slate-300 border border-transparent'
+                : 'bg-transparent text-slate-500 hover:bg-[#0da08a] text-slate-300 border border-transparent'
             }`}
           >
             {tab.label} <span className={tab.color}>({tab.count})</span>
@@ -620,7 +620,7 @@ export function CMMSDashboard() {
       {/* Work order list */}
       <div className="flex-grow space-y-1.5 overflow-hidden">
         {workOrders[activeTab].map((wo, i) => (
-          <div key={i} className="flex items-center gap-3 px-3 py-2.5 bg-white/[0.03] rounded-xl border border-white/5 hover:bg-white/[0.07] hover:border-white/10 transition-all cursor-pointer group">
+          <div key={i} className="flex items-center gap-3 px-3 py-2.5 bg-white/[0.03] rounded-xl border border-white/5 hover:bg-white/[0.07] hover:bg-[#0da08a] border-white/10 transition-all cursor-pointer group">
             <div className={`w-1.5 h-8 ${priorityColors[wo.priority]} rounded-full shrink-0`}></div>
             <div className="flex-grow min-w-0">
               <div className="flex items-center gap-2 mb-0.5">
@@ -635,7 +635,7 @@ export function CMMSDashboard() {
             </div>
             <div className="shrink-0 text-right">
               <span className={`text-[9px] font-mono ${wo.sla === 'Completed' ? 'text-teal-400' : 'text-amber-400'}`}>{wo.sla}</span>
-              <span className="text-[8px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity block">View →</span>
+              <span className="text-[8px] text-slate-600 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity block">View →</span>
             </div>
           </div>
         ))}
@@ -747,7 +747,7 @@ export function ScadaHeroDashboard() {
               return (
                 <div
                   key={i}
-                  className={`aspect-square rounded-sm ${color} hover:brightness-150 transition-all cursor-pointer`}
+                  className={`aspect-square rounded-sm ${color} hover:bg-[#0da08a] brightness-150 transition-all cursor-pointer`}
                   title={`String ${i + 1}: ${perf.toFixed(0)}%`}
                   style={{ opacity: 0.5 + perf / 200 }}
                 />
@@ -1032,7 +1032,7 @@ export function AnalyticsHeroDashboards() {
               </div>
               <div className="flex gap-1 bg-white/5 p-1 rounded-lg border border-white/10">
                 {['Day', 'Month', 'Year'].map((t, i) => (
-                  <div key={t} className={`px-2 py-0.5 text-[8px] font-bold rounded cursor-pointer ${i === 1 ? 'bg-purple-500/40 text-white' : 'text-slate-400 hover:text-white'}`}>
+                  <div key={t} className={`px-2 py-0.5 text-[8px] font-bold rounded cursor-pointer ${i === 1 ? 'bg-purple-500/40 text-white' : 'text-slate-400 hover:bg-[#0da08a]'}`}>
                     {t}
                   </div>
                 ))}
@@ -1140,7 +1140,7 @@ export function EMSHeroDashboards() {
                 </div>
               </div>
 
-              <div className="bg-blue-500/20 border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.3)] p-2 rounded-xl text-center w-16 group hover:scale-110 transition-transform">
+              <div className="bg-blue-500/20 border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.3)] p-2 rounded-xl text-center w-16 group hover:bg-[#0da08a] scale-110 transition-transform">
                 <Battery className="w-5 h-5 text-blue-400 mx-auto mb-1" />
                 <div className="text-[9px] text-blue-400 font-bold font-mono uppercase tracking-wider">Charging</div>
               </div>

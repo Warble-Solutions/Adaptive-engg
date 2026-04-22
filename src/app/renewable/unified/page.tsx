@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -26,7 +26,7 @@ export default function Page() {
               Renewable Energy
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Unified Renewable Solution
+              Unified Renewable <span className="gradient-heading">Solution</span>
             </h1>
             <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
               A single-vendor, end-to-end approach covering SCADA, PPC, CMS, Analytics, CMMS, and EMS-BESS for solar &amp; wind parks.
@@ -125,8 +125,8 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <Link href={item.href} className="block h-full">
-                  <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                    <div className={`mb-6 w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-lg`}>
+                  <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+                    <div className={`mb-6 w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white group-hover:bg-[#0da08a] scale-110 transition-transform shadow-lg`}>
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-white">{item.title}</h3>
@@ -138,7 +138,7 @@ export default function Page() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6 flex items-center text-primary font-bold text-sm group-hover:gap-2 transition-all">
+                    <div className="mt-6 flex items-center text-primary font-bold text-sm group-hover:bg-[#0da08a] gap-2 transition-all">
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />
                     </div>
                   </div>
@@ -167,7 +167,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:bg-[#0da08a] scale-110 transition-transform duration-300">
                     <span className="text-2xl font-black">{item.step}</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -185,7 +185,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready for a Unified Approach?</h2>
             <p className="text-gray-400 mb-8 text-lg">Eliminate vendor fragmentation. Get a single point of responsibility for your renewable project.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

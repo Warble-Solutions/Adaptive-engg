@@ -44,12 +44,12 @@ export default function PPCPage() {
                                     India&apos;s Preferred Renewable Energy Technology Partner
                                 </div>
                                 <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading">
-                                    Power <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-400">Plant Control</span>
+                                    Power <span className="gradient-heading">Plant Control</span>
                                 </h1>
                                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-xl leading-relaxed mb-8">
                                     Advanced, reliable and adaptable Power Plant Control (PPC) solutions for stand-alone and hybrid plants to achieve green energy goals.
                                 </p>
-                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                                     Learn More <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -146,25 +146,25 @@ export default function PPCPage() {
                             }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1} className="h-full">
-                                <div className="group relative bg-white rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col overflow-hidden">
+                                <div className="group relative bg-white rounded-2xl border border-slate-200 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full flex flex-col overflow-hidden">
                                     {/* Gradient Top Border */}
-                                    <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:h-1.5 transition-all duration-300"></div>
+                                    <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:bg-[#0da08a] h-1.5 transition-all duration-300"></div>
 
                                     <div className="p-8 flex flex-col flex-grow">
                                         {/* Number Badge & Icon */}
                                         <div className="flex items-start justify-between mb-6">
-                                            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center shadow-lg group-hover:bg-[#0da08a] scale-110 transition-transform duration-300">
                                                 <span className="text-white font-black text-xl">0{i + 1}</span>
                                             </div>
 
                                             {/* Icon */}
-                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:bg-[#0da08a] bg-primary group-hover:bg-[#0da08a] group-hover:bg-[#0da08a] scale-110 transition-all duration-300">
                                                 <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
                                             </div>
                                         </div>
 
                                         {/* Title */}
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:bg-[#0da08a] text-primary transition-colors duration-300">{item.title}</h3>
 
                                         {/* Description */}
                                         <p className="text-slate-600 text-sm leading-relaxed flex-grow">{item.desc}</p>
@@ -392,7 +392,7 @@ export default function PPCPage() {
                                     <span>Integration Layer</span>
                                 </div>
                                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 font-heading leading-tight">
-                                    Universal <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-400">Compatibility</span>
+                                    Universal <br /> <span className="gradient-heading">Compatibility</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg mb-10 leading-relaxed">
                                     The Universal Translator for your renewable assets. Seamlessly talk to any device, any make, any protocol without complex custom engineering.
@@ -426,7 +426,7 @@ export default function PPCPage() {
 
                                 <div className="grid grid-cols-1 gap-6 relative z-10 w-full max-w-md mx-auto">
                                     {/* Protocol Card */}
-                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
+                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-[#0da08a] border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
                                         <div className="flex items-center gap-4 mb-6">
                                             <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 shrink-0">
                                                 <Database className="w-6 h-6" />
@@ -446,7 +446,7 @@ export default function PPCPage() {
                                     </div>
 
                                     {/* Device Card */}
-                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
+                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-[#0da08a] border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
                                         <div className="flex items-center gap-4 mb-6">
                                             <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 shrink-0">
                                                 <Cpu className="w-6 h-6" />
@@ -496,7 +496,7 @@ export default function PPCPage() {
                             "Faster Commissioning"
                         ].map((benefit, i) => (
                             <SectionWrapper key={i} delay={i * 0.1} className="h-full">
-                                <div className="flex items-center gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-primary/30 transition-colors h-full">
+                                <div className="flex items-center gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#0da08a] border-primary/30 transition-colors h-full">
                                     <CheckCircle2 className="text-primary w-6 h-6 shrink-0" />
                                     <span className="font-bold text-slate-700">{benefit}</span>
                                 </div>
@@ -529,14 +529,14 @@ export default function PPCPage() {
 // Helper Row for Features
 function FeatureRow({ title, desc, imageSrc, color }: { title: string; desc: string; imageSrc?: string; color: string }) {
     return (
-        <div className="flex items-start gap-5 group p-4 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 reveal">
+        <div className="flex items-start gap-5 group p-4 rounded-xl hover:bg-[#0da08a] bg-slate-50 transition-colors border border-transparent hover:bg-[#0da08a] border-slate-100 reveal">
             <div className={`w-12 h-12 rounded-lg flex items-center justify-center shrink-0 overflow-hidden`}>
                 {imageSrc ? (
                     <Image src={imageSrc} alt={title} width={48} height={48} className="object-cover" />
                 ) : null}
             </div>
             <div>
-                <h4 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">{title}</h4>
+                <h4 className="text-lg font-bold text-slate-900 mb-1 group-hover:bg-[#0da08a] text-primary transition-colors">{title}</h4>
                 <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
             </div>
         </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -84,8 +84,8 @@ export default function ContactPage() {
                                             <textarea rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none" placeholder="Tell us about your requirements..."></textarea>
                                         </div>
 
-                                        <button className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-teal-600 transition-all flex items-center justify-center gap-2 group">
-                                            Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        <button className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-[#0da08a] bg-teal-600 transition-all flex items-center justify-center gap-2 group">
+                                            Send Message <Send className="w-4 h-4 group-hover:bg-[#0da08a] translate-x-1 transition-transform" />
                                         </button>
                                     </form>
                                 </div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                                         <img
                                             src="/imgs/map.png"
                                             alt="Installed Base Map"
-                                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                                            className="w-full h-full object-contain group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
                                         />
                                     </div>
                                 </div>
@@ -166,13 +166,13 @@ export default function ContactPage() {
                             { title: "HR & Careers", desc: "Explore career opportunities.", email: "hr@adaptive-engg.com", icon: <Building2 /> }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
-                                <div className="dark-card p-10 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer text-center h-full">
-                                    <div className="mb-6 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-primary mx-auto group-hover:scale-110 transition-transform">
+                                <div className="dark-card p-10 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer text-center h-full">
+                                    <div className="mb-6 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-primary mx-auto group-hover:bg-[#0da08a] scale-110 transition-transform">
                                         {item.icon}
                                     </div>
                                     <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                                     <p className="text-gray-400 text-sm mb-6">{item.desc}</p>
-                                    <a href={`mailto:${item.email}`} className="text-primary font-bold hover:text-white transition-colors">
+                                    <a href={`mailto:${item.email}`} className="text-primary font-bold hover:bg-[#0da08a] transition-colors">
                                         {item.email}
                                     </a>
                                 </div>

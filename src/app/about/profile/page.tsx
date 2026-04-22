@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
       
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -25,7 +25,7 @@ export default function Page() {
               About Us
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Company Profile
+              Company <span className="gradient-heading">Profile</span>
             </h1>
             <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
               India&apos;s leading Turnkey Electrical, Instrumentation, and Automation company delivering end-to-end solutions since 2014.
@@ -78,45 +78,45 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <SectionWrapper delay={0}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Turnkey E&I</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
                   Complete Electrical &amp; Instrumentation execution from design to commissioning for Solar, Water, and Industrial projects.
                 </p>
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                   <Activity className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">IoT & SCADA</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
                   In-house developed SolarWiz, WaterWiz, and MachineWiz IoT platforms with edge computing and cloud analytics.
                 </p>
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Panel Manufacturing</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
                   IS/IEC certified LT/HT panels, MCC, PCC, ACDB, DCDB panels manufactured in our state-of-the-art facility.
                 </p>
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.3}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Software & Analytics</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
                   ReportWiz, CMS, AMS — proprietary software suite for automated reporting, asset tracking, and performance monitoring.
                 </p>
               </div>
@@ -139,7 +139,7 @@ export default function Page() {
               <SectionWrapper delay={0}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">14</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2014</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Foundation</h3>
                     <p className="text-slate-600 leading-relaxed">Team Strength of 15. Renewable Installed Base — 100MW. Authorized System Integrators — Schneider-Electric.</p>
@@ -149,7 +149,7 @@ export default function Page() {
               <SectionWrapper delay={0.07}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">16</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2016</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Panel Manufacturing</h3>
                     <p className="text-slate-600 leading-relaxed">First Panel Manufacturing Factory. ISO 9001:2015 — TUV NORD certified. Renewable Installed Base — 250MW.</p>
@@ -159,7 +159,7 @@ export default function Page() {
               <SectionWrapper delay={0.14}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">18</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2018</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">SCADA Leadership</h3>
                     <p className="text-slate-600 leading-relaxed">Renewable Installed Base — 4.8GW+. HT/LT Panels production. Highest Revenue Growth in SCADA — Schneider-Electric.</p>
@@ -169,7 +169,7 @@ export default function Page() {
               <SectionWrapper delay={0.21}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">20</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2020</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Industry Recognition</h3>
                     <p className="text-slate-600 leading-relaxed">Renewable Installed Base — 14GW+. Introduced Renewable PPC. Outstanding Achievement in Solar Segment — EQ Magazine. Best End User &amp; EPC Solution Provider — Schneider-Electric. Best Solar Monitoring Company of the Year — ET Now.</p>
@@ -179,7 +179,7 @@ export default function Page() {
               <SectionWrapper delay={0.28}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">22</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2022</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Scale &amp; Expansion</h3>
                     <p className="text-slate-600 leading-relaxed">Single location 1GW. Single Largest Order — 3.6GW. Second Factory — 60,000 sq.ft. Preferred Project Partner of Industry Leaders.</p>
@@ -189,7 +189,7 @@ export default function Page() {
               <SectionWrapper delay={0.35}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">24</div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2024</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">PM-KUSUM &amp; Innovation</h3>
                     <p className="text-slate-600 leading-relaxed">Renewable Installed Base — 40GW+. Participation in International Expos. Monitoring Solutions — PM KUSUM. Hardware In Loop (HIL) Testing — PPC. Introduced EMS — BESS.</p>
@@ -199,7 +199,7 @@ export default function Page() {
               <SectionWrapper delay={0.42}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">Now</div>
-                  <div className="bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-200 rounded-2xl p-6 hover:bg-[#0da08a] shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Current</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Industry Leader</h3>
                     <p className="text-slate-600 leading-relaxed">Team Strength — 300+. Renewable Installed Base — 68 GW+. Sites Monitored — 1000+. Electrical Panels Supplied — 10,000+. Yearly Capacity — 25GW+.</p>
@@ -221,7 +221,7 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <SectionWrapper delay={0}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:shadow-xl transition-shadow">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-[#0da08a] shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
@@ -230,7 +230,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:shadow-xl transition-shadow">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-[#0da08a] shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
@@ -239,7 +239,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:shadow-xl transition-shadow">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-[#0da08a] shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
@@ -248,7 +248,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.3}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:shadow-xl transition-shadow">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl h-full hover:bg-[#0da08a] shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
@@ -266,7 +266,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Partner with Us?</h2>
             <p className="text-gray-400 mb-8 text-lg">Get in touch to discuss how we can support your next project.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-primary hover:text-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

@@ -110,7 +110,7 @@ export default function HeroCarousel() {
                                         initial={{ y: "100%" }}
                                         animate={{ y: 0 }}
                                         transition={{ delay: 0.4 + (i * 0.1), duration: 0.6, ease: "backOut" }}
-                                        className={`inline-block mr-4 ${word.includes("Solution") ? "text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-400" : ""}`}
+                                        className={`inline-block mr-4 ${word.includes("Solution") ? "gradient-heading" : ""}`}
                                     >
                                         {word}
                                     </motion.span>
@@ -135,10 +135,10 @@ export default function HeroCarousel() {
                                 {/* Primary Button */}
                                 <Link
                                     href={slide.link}
-                                    className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold uppercase tracking-wider hover:bg-white hover:text-primary transition-all duration-300 shadow-lg shadow-teal-900/40 group overflow-hidden relative"
+                                    className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold uppercase tracking-wider hover:bg-white hover:bg-[#0da08a] text-primary transition-all duration-300 shadow-lg shadow-teal-900/40 group overflow-hidden relative"
                                 >
                                     <span className="relative z-10">{slide.cta}</span>
-                                    <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+                                    <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:bg-[#0da08a] translate-x-0 transition-transform duration-300 ease-out z-0"></div>
                                 </Link>
 
                                 {/* Secondary Button */}
@@ -158,13 +158,13 @@ export default function HeroCarousel() {
             <div className="absolute bottom-12 right-12 z-20 flex gap-4">
                 <button
                     onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
-                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all backdrop-blur-sm"
+                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:bg-[#0da08a] text-dark transition-all backdrop-blur-sm"
                 >
                     <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                     onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
-                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all backdrop-blur-sm"
+                    className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:bg-[#0da08a] text-dark transition-all backdrop-blur-sm"
                 >
                     <ChevronRight className="w-6 h-6" />
                 </button>

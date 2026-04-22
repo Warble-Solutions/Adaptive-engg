@@ -24,7 +24,7 @@ export default function Home() {
           <span className="text-[10px] uppercase tracking-[0.3em] text-white">Scroll</span>
           <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
         </div>
-        <SceneTrigger variant="logo" color="#049A89" />
+        <SceneTrigger variant="logo" color="#0da08a" />
       </section>
 
       {/* 2. MARQUEE SECTION (Light) */}
@@ -40,7 +40,7 @@ export default function Home() {
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-96 w-auto object-contain hover:scale-110 transition-all duration-300"
+                  className="h-96 w-auto object-contain hover:bg-[#0da08a] scale-110 transition-all duration-300"
                 />
               </div>
             ))}
@@ -50,7 +50,7 @@ export default function Home() {
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-96 w-auto object-contain hover:scale-110 transition-all duration-300"
+                  className="h-96 w-auto object-contain hover:bg-[#0da08a] scale-110 transition-all duration-300"
                 />
               </div>
             ))}
@@ -98,29 +98,29 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SectionWrapper delay={0.1}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-primary hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=150&q=80" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="Renewable" />
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=150&q=80" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:bg-[#0da08a] scale-110 transition-transform duration-500" alt="Renewable" />
                 <h3 className="text-2xl font-bold text-white mb-4">Renewable Solutions</h3>
                 <p className="text-gray-400 leading-relaxed mb-8">End-to-end services: Conceptualizing, designing, and commissioning electrical systems up to 66KV. Solar, Wind, and Hybrid plant integration.</p>
-                <Link href="/renewable" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors z-20 relative">Learn More</Link>
+                <Link href="/renewable" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:bg-[#0da08a] text-primary transition-colors z-20 relative">Learn More</Link>
               </div>
             </SectionWrapper>
 
             <SectionWrapper delay={0.2}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-primary hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full relative">
-                <img src="https://adaptive-engg.com/wp-content/uploads/2024/10/Untitled-design-13-1-480x340.png" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="KUSUM" />
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full relative">
+                <img src="https://adaptive-engg.com/wp-content/uploads/2024/10/Untitled-design-13-1-480x340.png" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:bg-[#0da08a] scale-110 transition-transform duration-500" alt="KUSUM" />
                 <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM Solutions</h3>
                 <p className="text-gray-400 leading-relaxed mb-8">Industrial IoT powered by SolarWiz, WaterWiz, and MachineWiz. Real-time telemetry for agricultural pumps and water supply schemes.</p>
-                <Link href="/pm-kusum" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors z-20 relative">Learn More</Link>
+                <Link href="/pm-kusum" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:bg-[#0da08a] text-primary transition-colors z-20 relative">Learn More</Link>
               </div>
             </SectionWrapper>
 
             <SectionWrapper delay={0.3}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-primary hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                <img src="https://adaptive-engg.com/wp-content/uploads/2023/08/tunnel-mp.png.webp" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="Infra" />
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+                <img src="https://adaptive-engg.com/wp-content/uploads/2023/08/tunnel-mp.png.webp" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:bg-[#0da08a] scale-110 transition-transform duration-500" alt="Infra" />
                 <h3 className="text-2xl font-bold text-white mb-4">Infrastructure Solutions</h3>
                 <p className="text-gray-400 leading-relaxed mb-8">Specialized automation for Tunnels and Data Centers. In-house manufacturing of HT/LT Panels, MCC, and PCC for heavy industry.</p>
-                <Link href="/infrastructure/tunnel" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors">Learn More</Link>
+                <Link href="/infrastructure/tunnel" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:bg-[#0da08a] text-primary transition-colors">Learn More</Link>
               </div>
             </SectionWrapper>
           </div>
@@ -131,7 +131,7 @@ export default function Home() {
 
       {/* 5. SCADA HIGHLIGHT (Light) */}
       <section className="py-24 bg-light z-0" >
-        <SceneTrigger variant="logo" color="#049A89" speed={1} />
+        <SceneTrigger variant="logo" color="#0da08a" speed={1} />
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
           <div className="lg:w-1/2">
             <SectionWrapper>
@@ -144,21 +144,21 @@ export default function Home() {
                 <MicroCTA text="Schedule Consultation" variant="quote" href="/contact?subject=SCADA" context="light" />
               </div>
               <div className="grid grid-cols-3 gap-4">
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg transition-all duration-300">
                   <Monitor className="text-primary w-7 h-7 shrink-0" />
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Real-Time</h4>
                     <p className="text-xs text-slate-500">Monitoring</p>
                   </div>
                 </div>
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg transition-all duration-300">
                   <Layers className="text-primary w-7 h-7 shrink-0" />
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Scalable</h4>
                     <p className="text-xs text-slate-500">Architecture</p>
                   </div>
                 </div>
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg transition-all duration-300">
                   <Database className="text-primary w-7 h-7 shrink-0" />
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">10L+</h4>
@@ -187,14 +187,14 @@ export default function Home() {
             <SectionWrapper>
               <h2 className="text-5xl font-bold text-white font-heading">Case Studies</h2>
             </SectionWrapper>
-            <Link href="/resources/case-studies" className="text-primary font-bold hover:text-white transition hidden md:block">View All Projects</Link>
+            <Link href="/resources/case-studies" className="text-primary font-bold hover:bg-[#0da08a] transition hidden md:block">View All Projects</Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SectionWrapper delay={0.1}>
               <div className="group cursor-pointer">
                 <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/1.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
+                  <img src="/imgs/case-studies/1.jpg" className="w-full h-full object-cover opacity-60 group-hover:bg-[#0da08a] opacity-100 transition duration-700 group-hover:bg-[#0da08a] scale-105" alt="Project" />
                   <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-xs font-bold rounded-full">GUJARAT</div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Water Supply Scheme</h3>
@@ -205,7 +205,7 @@ export default function Home() {
             <SectionWrapper delay={0.2}>
               <div className="group cursor-pointer">
                 <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/2.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
+                  <img src="/imgs/case-studies/2.jpg" className="w-full h-full object-cover opacity-60 group-hover:bg-[#0da08a] opacity-100 transition duration-700 group-hover:bg-[#0da08a] scale-105" alt="Project" />
                   <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-xs font-bold rounded-full">HIGHWAY</div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Twin Tube Tunnel</h3>
@@ -216,7 +216,7 @@ export default function Home() {
             <SectionWrapper delay={0.3}>
               <div className="group cursor-pointer">
                 <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/3.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
+                  <img src="/imgs/case-studies/3.jpg" className="w-full h-full object-cover opacity-60 group-hover:bg-[#0da08a] opacity-100 transition duration-700 group-hover:bg-[#0da08a] scale-105" alt="Project" />
                   <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-xs font-bold rounded-full">MNRE</div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Solar Park Automation</h3>
@@ -244,8 +244,8 @@ export default function Home() {
               { title: "Grid Future-Proofing", desc: "Stay ahead of regulations. Our systems are pre-configured for the latest IEGC grid codes, frequency response norms, and upcoming scheduling requirements.", icon: <ShieldCheck className="w-6 h-6" /> }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="premium-card p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm text-primary group-hover:scale-110 transition-transform">
+                <div className="premium-card p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-[#0da08a] shadow-xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 group h-full">
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-[#0da08a] scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
@@ -322,23 +322,23 @@ export default function Home() {
                 <div key={i} className={`group relative overflow-hidden rounded-3xl cursor-pointer ${item.span}`}>
                   {/* Background Image */}
                   <div className="absolute inset-0">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:via-black/40"></div>
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:bg-[#0da08a] scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:bg-[#0da08a] via-black/40"></div>
                   </div>
 
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end">
-                    <div className="flex items-center gap-4 mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <span className="text-5xl font-black text-white/20 select-none group-hover:text-primary transition-colors">{item.step}</span>
-                      <div className="h-[1px] flex-grow bg-white/20 group-hover:bg-primary transition-colors"></div>
+                    <div className="flex items-center gap-4 mb-2 transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500">
+                      <span className="text-5xl font-black text-white/20 select-none group-hover:bg-[#0da08a] text-primary transition-colors">{item.step}</span>
+                      <div className="h-[1px] flex-grow bg-white/20 group-hover:bg-[#0da08a] bg-primary transition-colors"></div>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{item.title}</h3>
-                    <p className="text-gray-300 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100 opacity-0 group-hover:opacity-100">{item.desc}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500 delay-75">{item.title}</h3>
+                    <p className="text-gray-300 text-sm transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500 delay-100 opacity-0 group-hover:bg-[#0da08a] opacity-100">{item.desc}</p>
                   </div>
 
                   {/* Corner Accents */}
-                  <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-white/20 rounded-tr-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-white/20 rounded-tr-xl opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity duration-500"></div>
                 </div>
               ))}
             </div>
@@ -369,7 +369,7 @@ export default function Home() {
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/xGRlPBasltI?loading=lazy" title="Corporate Profile" allowFullScreen></iframe>
               </div>
               <div className="mt-4">
-                <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors">Corporate Profile</h4>
+                <h4 className="text-white font-bold text-lg leading-tight group-hover:bg-[#0da08a] text-primary transition-colors">Corporate Profile</h4>
                 <p className="text-sm text-gray-500 mt-1">An inside look at our capabilities.</p>
               </div>
             </SectionWrapper>
@@ -380,7 +380,7 @@ export default function Home() {
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/9WUw0TAABCM?loading=lazy" title="Life at AEPL" allowFullScreen></iframe>
               </div>
               <div className="mt-4">
-                <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors">Life at AEPL</h4>
+                <h4 className="text-white font-bold text-lg leading-tight group-hover:bg-[#0da08a] text-primary transition-colors">Life at AEPL</h4>
                 <p className="text-sm text-gray-500 mt-1">Work Hard, Party Harder!</p>
               </div>
             </SectionWrapper>
@@ -391,7 +391,7 @@ export default function Home() {
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/6-5EexkEQvA?loading=lazy" title="ReportWiz Demo" allowFullScreen></iframe>
               </div>
               <div className="mt-4">
-                <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors">ReportWiz Demo</h4>
+                <h4 className="text-white font-bold text-lg leading-tight group-hover:bg-[#0da08a] text-primary transition-colors">ReportWiz Demo</h4>
                 <p className="text-sm text-gray-500 mt-1">PM-KUSUM Subsidy Automation.</p>
               </div>
             </SectionWrapper>
@@ -402,7 +402,7 @@ export default function Home() {
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/0JhExHWzK6Y?loading=lazy" title="LT Panel Manufacturing" allowFullScreen></iframe>
               </div>
               <div className="mt-4">
-                <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors">Manufacturing Facility</h4>
+                <h4 className="text-white font-bold text-lg leading-tight group-hover:bg-[#0da08a] text-primary transition-colors">Manufacturing Facility</h4>
                 <p className="text-sm text-gray-500 mt-1">Inside our {COMPANY_STATS.manufacturingFacility.formatted} Sq. Ft. Plant.</p>
               </div>
             </SectionWrapper>
@@ -413,7 +413,7 @@ export default function Home() {
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/unreC-D1cKk?loading=lazy" title="REI Expo Highlights" allowFullScreen></iframe>
               </div>
               <div className="mt-4">
-                <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors">REI Expo Highlights</h4>
+                <h4 className="text-white font-bold text-lg leading-tight group-hover:bg-[#0da08a] text-primary transition-colors">REI Expo Highlights</h4>
                 <p className="text-sm text-gray-500 mt-1">Showcasing innovation at REI.</p>
               </div>
             </SectionWrapper>
@@ -424,7 +424,7 @@ export default function Home() {
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/grmVOLbojBA?loading=lazy" title="Director's Vision" allowFullScreen></iframe>
               </div>
               <div className="mt-4">
-                <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors">Director&apos;s Vision</h4>
+                <h4 className="text-white font-bold text-lg leading-tight group-hover:bg-[#0da08a] text-primary transition-colors">Director&apos;s Vision</h4>
                 <p className="text-sm text-gray-500 mt-1">Customer Talk with Mr. Jay Patel.</p>
               </div>
             </SectionWrapper>
@@ -436,10 +436,10 @@ export default function Home() {
             <a
               href="https://youtube.com/@adaptiveengineeringpvt.ltd.?si=C_3FYNQtQxYz9B_D"
               target="_blank"
-              className="inline-flex items-center gap-3 px-8 py-3 bg-white/5 border border-white/10 hover:bg-red-600 hover:border-red-600 text-white rounded-full font-bold transition-all group"
+              className="inline-flex items-center gap-3 px-8 py-3 bg-white/5 border border-white/10 hover:bg-[#0da08a] bg-red-600 hover:bg-[#0da08a] border-red-600 text-white rounded-full font-bold transition-all group"
             >
               <span>View All 50+ Videos</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:bg-[#0da08a] translate-x-1 transition-transform" />
             </a>
           </SectionWrapper>
 
@@ -482,19 +482,19 @@ export default function Home() {
                 Our best-in-class manufacturing facility is certified by TUV Nord. We maintain stringent safety standards and a Zero Harm policy.
               </p>
               <div className="mt-8">
-                <Link href="/resources/certifications" className="text-primary font-bold border-b-2 border-primary pb-1 hover:text-slate-900 transition-colors">View Certifications</Link>
+                <Link href="/resources/certifications" className="text-primary font-bold border-b-2 border-primary pb-1 hover:bg-white hover:text-slate-900 transition-colors">View Certifications</Link>
               </div>
             </SectionWrapper>
           </div>
           <div className="flex gap-6">
             <SectionWrapper delay={0.1}>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center w-48 hover:-translate-y-1 transition-transform">
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center w-48 hover:bg-[#0da08a] -translate-y-1 transition-transform">
                 <HardHat className="mx-auto w-10 h-10 mb-4 text-accent" />
                 <div className="text-xs font-bold uppercase text-slate-900">Safety First</div>
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center w-48 hover:-translate-y-1 transition-transform">
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center w-48 hover:bg-[#0da08a] -translate-y-1 transition-transform">
                 <img src="/logos/tuv-nord-vector-logo.png" alt="TUV Nord" className="mx-auto h-12 w-auto mb-4 object-contain" />
                 <div className="text-xs font-bold uppercase text-slate-900">TUV Nord</div>
               </div>
@@ -509,7 +509,7 @@ export default function Home() {
           <SectionWrapper>
             <h2 className="text-4xl md:text-6xl mb-8 font-black text-white font-heading">Ready to <span className="text-primary">Scale?</span></h2>
             <p className="text-xl text-gray-400 mb-12">Partner with the &quot;Preferred Project Partner&quot; of India&apos;s largest corporate houses.</p>
-            <Link href="/contact" className="inline-block px-12 py-4 bg-gradient-to-r from-primary to-teal-700 text-white rounded-full font-bold uppercase tracking-wider text-lg shadow-xl shadow-teal-900/50 hover:scale-105 transition-transform">
+            <Link href="/contact" className="inline-block px-12 py-4 bg-gradient-to-r from-primary to-teal-700 text-white rounded-full font-bold uppercase tracking-wider text-lg shadow-xl shadow-teal-900/50 hover:bg-[#0da08a] scale-105 transition-transform">
               Start Discussion
             </Link>
           </SectionWrapper>

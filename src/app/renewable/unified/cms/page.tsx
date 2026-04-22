@@ -38,7 +38,7 @@ export default function Page() {
                 </div>
                 <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
                   Central Monitoring<br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">System (CMS)</span>
+                  <span className="gradient-heading">System (CMS)</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mt-6 mb-4">
                   AEPL&apos;s Centralized Monitoring System provides real-time visibility and intelligent analytics for Solar, Wind, and BESS assets.
@@ -72,14 +72,14 @@ export default function Page() {
             
             <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { icon: <Eye className="w-6 h-6" />, title: "Complete Visibility", desc: "Gain total, unimpeded oversight across disparate renewable portfolios instantly.", color: "text-teal-600 bg-teal-50 hover:border-teal-300 shadow-teal-500/20" },
-                { icon: <TrendingDown className="w-6 h-6" />, title: "Reduced Downtime", desc: "Identify underperforming strings or equipment faults seconds after they occur in the field.", color: "text-teal-600 bg-teal-50 hover:border-teal-300 shadow-teal-500/20" },
-                { icon: <Zap className="w-6 h-6" />, title: "Accurate Insights", desc: "Extract meaning from raw SCADA metrics with deeply processed automated energy insights.", color: "text-amber-600 bg-amber-50 hover:border-amber-300 shadow-amber-500/20" },
-                { icon: <Shield className="w-6 h-6" />, title: "Scalable Security", desc: "Seamless deployment elasticity built atop SOC-2 compliant encrypted data architectures.", color: "text-teal-600 bg-teal-50 hover:border-teal-300 shadow-teal-500/20" },
+                { icon: <Eye className="w-6 h-6" />, title: "Complete Visibility", desc: "Gain total, unimpeded oversight across disparate renewable portfolios instantly.", color: "text-teal-600 bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
+                { icon: <TrendingDown className="w-6 h-6" />, title: "Reduced Downtime", desc: "Identify underperforming strings or equipment faults seconds after they occur in the field.", color: "text-teal-600 bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
+                { icon: <Zap className="w-6 h-6" />, title: "Accurate Insights", desc: "Extract meaning from raw SCADA metrics with deeply processed automated energy insights.", color: "text-amber-600 bg-amber-50 hover:bg-[#0da08a] border-amber-300 shadow-amber-500/20" },
+                { icon: <Shield className="w-6 h-6" />, title: "Scalable Security", desc: "Seamless deployment elasticity built atop SOC-2 compliant encrypted data architectures.", color: "text-teal-600 bg-teal-50 hover:bg-[#0da08a] border-teal-300 shadow-teal-500/20" },
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
-                  <div className={`p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:-translate-y-1 hover:shadow-lg ${item.color}`}>
-                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border transition-transform group-hover:scale-110 ${item.color.split(' ')[0]} ${item.color.split(' ')[1]}`}>
+                  <div className={`p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:bg-[#0da08a] -translate-y-1 hover:bg-[#0da08a] shadow-lg ${item.color}`}>
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border transition-transform group-hover:bg-[#0da08a] scale-110 ${item.color.split(' ')[0]} ${item.color.split(' ')[1]}`}>
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -101,7 +101,7 @@ export default function Page() {
           <SectionWrapper>
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-black font-heading mb-6 leading-tight">
-                Gain Superior Control with <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">AEPL CMS</span>
+                Gain Superior Control with <span className="gradient-heading">AEPL CMS</span>
               </h2>
               <p className="text-gray-400 text-lg max-w-2xl mx-auto">Built to handle the immense scale and data complexity of modern renewable enterprise portfolios.</p>
             </div>
@@ -127,7 +127,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className={`p-10 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 flex flex-col md:flex-row items-center gap-10 hover:bg-white/10 transition-colors ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-teal-600/20 rounded-3xl border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
+                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-teal-600/20 rounded-3xl border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:bg-[#0da08a] scale-105 transition-transform">
                      {item.icon}
                    </div>
                    <div className={`flex-grow ${i % 2 !== 0 ? 'md:text-right' : ''}`}>
@@ -147,7 +147,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Ready to Centralize Your Monitoring?</h2>
             <p className="text-slate-500 mb-8 text-lg">Get complete visibility of your renewable portfolio with AEPL CMS.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-[#0da08a] bg-slate-900 transition-colors">
               Request Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

@@ -30,8 +30,8 @@ export default function Page() {
                   <span>Unified Renewable Solution</span>
                 </div>
                 <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading">
-                  SCADA
-                </h1>
+                  <span className="gradient-heading">SCADA</span>
+            </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
                   Flexible & scalable SCADA architecture with rich renewable libraries, handling millions of tags with a refined interface built from decades of field experience.
                 </p>
@@ -73,8 +73,8 @@ export default function Page() {
               { icon: <Settings className="w-7 h-7" />, title: "Refined Interface from Decades of Experience", desc: "Intuitive HMI screens developed through decades of operator feedback. Contextual alarms, trend analysis, and one-click diagnostics.", color: "bg-amber-50 text-amber-600" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="group p-8 bg-white rounded-2xl border border-slate-100 hover:border-primary/30 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full">
-                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                <div className="group p-8 bg-white rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full">
+                  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform`}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -98,8 +98,8 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {["IEC 61850", "Modbus TCP/RTU", "OPC UA", "DNP3", "IEC 104", "MQTT", "HTTP/REST API", "Profinet"].map((protocol, i) => (
               <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="p-6 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                  <Cpu className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <div className="p-6 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-[#0da08a] bg-primary/10 hover:bg-[#0da08a] border-primary/30 transition-all duration-300 group">
+                  <Cpu className="w-6 h-6 text-primary mx-auto mb-3 group-hover:bg-[#0da08a] scale-110 transition-transform" />
                   <span className="font-bold text-sm text-white">{protocol}</span>
                 </div>
               </SectionWrapper>

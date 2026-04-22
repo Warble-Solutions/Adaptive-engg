@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -73,18 +73,18 @@ export default function CertificateGallery() {
           <SectionWrapper key={i} delay={i * 0.08}>
             <button
               onClick={() => openPreview(i)}
-              className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300 bg-white w-full text-left cursor-pointer"
+              className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] shadow-xl transition-all duration-300 bg-white w-full text-left cursor-pointer"
             >
               <div className="relative h-64 md:h-80">
                 <Image
                   src={cert.src}
                   alt={cert.title}
                   fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain p-4 group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
                 />
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-[#0da08a] bg-primary/5 transition-colors duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                     <span className="text-xs font-bold text-primary uppercase tracking-wider">Click to Preview</span>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function CertificateGallery() {
                 </div>
                 <button
                   onClick={closePreview}
-                  className="w-10 h-10 rounded-full bg-slate-100 hover:bg-red-50 hover:text-red-500 flex items-center justify-center text-slate-600 transition-colors"
+                  className="w-10 h-10 rounded-full bg-slate-100 hover:bg-[#0da08a] bg-red-50 hover:bg-[#0da08a] text-red-500 flex items-center justify-center text-slate-600 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -168,7 +168,7 @@ export default function CertificateGallery() {
               <div className="flex items-center justify-between px-6 py-3 border-t border-slate-100 bg-slate-50 shrink-0">
                 <button
                   onClick={goPrev}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-100 text-slate-600 text-sm font-bold transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-[#0da08a] bg-slate-100 text-slate-600 text-sm font-bold transition-colors"
                 >
                   <ChevronLeft className="w-4 h-4" /> Previous
                 </button>
@@ -177,7 +177,7 @@ export default function CertificateGallery() {
                 </span>
                 <button
                   onClick={goNext}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-100 text-slate-600 text-sm font-bold transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-[#0da08a] bg-slate-100 text-slate-600 text-sm font-bold transition-colors"
                 >
                   Next <ChevronRight className="w-4 h-4" />
                 </button>

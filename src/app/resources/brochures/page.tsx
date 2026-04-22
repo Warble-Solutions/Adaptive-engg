@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import Image from "next/image";
 import { Download, FileText } from "lucide-react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
@@ -15,7 +15,7 @@ export default async function BrochuresPage() {
 
   return (
     <main className="min-h-screen pt-32 pb-24 px-6 relative">
-      <SceneTrigger variant="battery" color="#049A89" speed={1.2} />
+      <SceneTrigger variant="battery" color="#0da08a" speed={1.2} />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16">
@@ -34,7 +34,7 @@ export default async function BrochuresPage() {
               href={doc.pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300"
+              className="group flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/20 transition-all duration-300"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 {doc.thumbnailUrl ? (
@@ -42,7 +42,7 @@ export default async function BrochuresPage() {
                     src={doc.thumbnailUrl}
                     alt={doc.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/80 via-slate-800 to-primary/40 flex items-center justify-center p-6">
@@ -54,8 +54,8 @@ export default async function BrochuresPage() {
                 )}
                 
                 {/* Download Overlay */}
-                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
-                  <div className="bg-white text-primary p-4 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:bg-[#0da08a] opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                  <div className="bg-white text-primary p-4 rounded-full transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-all duration-300">
                     <Download className="w-6 h-6" />
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export default async function BrochuresPage() {
                     {doc.category}
                   </span>
                 )}
-                <h2 className="text-lg font-bold text-white font-heading group-hover:text-primary transition-colors line-clamp-2">
+                <h2 className="text-lg font-bold text-white font-heading group-hover:bg-[#0da08a] text-primary transition-colors line-clamp-2">
                   {doc.title}
                 </h2>
               </div>

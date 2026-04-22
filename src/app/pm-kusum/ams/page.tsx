@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#049A89" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* HERO — Kanban/workflow gradient */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
@@ -26,7 +26,7 @@ export default function Page() {
             </div>
             <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
               Asset Management<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-fuchsia-400">System (AMS)</span>
+              <span className="gradient-heading">System (AMS)</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mt-6">
               Comprehensive Asset Performance Management for PM-KUSUM installations. Manage assets, teams, maintenance, inventory, and work orders from a single platform.
@@ -110,23 +110,23 @@ export default function Page() {
               },
             ].map((module, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className={`group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
+                <div className={`group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
                   
                   {/* Glowing background orb effect */}
-                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-10 blur-[50px] transition-opacity duration-700`}></div>
+                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:bg-[#0da08a] opacity-10 blur-[50px] transition-opacity duration-700`}></div>
                   
                   <div className="flex items-center gap-4 mb-6 relative z-10">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:bg-[#0da08a] scale-110 transition-transform duration-300`}>
                       {module.icon}
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 leading-tight">{module.title}</h3>
                   </div>
                   
-                  <p className="text-sm text-slate-600 leading-relaxed mb-8 flex-grow relative z-10 group-hover:text-slate-700 transition-colors">{module.desc}</p>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-8 flex-grow relative z-10 group-hover:bg-[#0da08a] text-slate-700 transition-colors">{module.desc}</p>
                   
-                  <div className="space-y-3 relative z-10 bg-slate-100/80 group-hover:bg-slate-50 p-5 rounded-2xl border border-slate-200/60 transition-colors">
+                  <div className="space-y-3 relative z-10 bg-slate-100/80 group-hover:bg-[#0da08a] bg-slate-50 p-5 rounded-2xl border border-slate-200/60 transition-colors">
                     {module.items.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-3 text-sm text-slate-600 group-hover:text-slate-900 transition-colors">
+                      <div key={idx} className="flex items-start gap-3 text-sm text-slate-600 group-hover:bg-white hover:text-slate-900 transition-colors">
                         <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 text-transparent bg-clip-text bg-gradient-to-br ${module.color}`} style={{ color: "unset" }} />
                         <span className="font-medium">{item}</span>
                       </div>
@@ -155,7 +155,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-slate-800 border-4 border-teal-500/30 rounded-full flex items-center justify-center text-teal-400 mb-6 shadow-lg hover:scale-110 transition-transform">
+                  <div className="w-20 h-20 bg-slate-800 border-4 border-teal-500/30 rounded-full flex items-center justify-center text-teal-400 mb-6 shadow-lg hover:bg-[#0da08a] scale-110 transition-transform">
                     <span className="text-2xl font-black">{item.step}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
@@ -173,7 +173,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Optimize Your Asset Lifecycle</h2>
             <p className="text-slate-500 mb-8 text-lg">See how AMS can streamline maintenance and maximize asset ROI.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-fuchsia-600 text-white rounded-full font-bold hover:from-teal-700 hover:to-fuchsia-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-fuchsia-600 text-white rounded-full font-bold hover:bg-[#0da08a] from-teal-700 hover:bg-[#0da08a] to-fuchsia-700 transition-all">
               Schedule Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

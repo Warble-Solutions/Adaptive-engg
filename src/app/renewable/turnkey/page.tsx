@@ -18,15 +18,15 @@ export default function TurnkeyPage() {
                 <div className="z-10 max-w-7xl relative mx-auto w-full">
                     <SectionWrapper>
                         <div className="flex items-center justify-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-6">
-                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <Link href="/" className="hover:bg-[#0da08a] transition-colors">Home</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <Link href="/renewable" className="hover:text-white transition-colors">Renewable</Link>
+                            <Link href="/renewable" className="hover:bg-[#0da08a] transition-colors">Renewable</Link>
                             <ChevronRight className="w-4 h-4" />
                             <span className="text-white">Turnkey E&I</span>
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-black text-white mb-6 font-heading drop-shadow-2xl tracking-tight">
-                            Turnkey <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Execution</span>
+                            Turnkey <br /> <span className="gradient-heading">Execution</span>
                         </h1>
 
                         <p className="text-gray-300 text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
@@ -56,7 +56,7 @@ export default function TurnkeyPage() {
                                 
                                 {/* Hero Stat Bento */}
                                 <div className="p-8 bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] -mr-32 -mt-32 transition-colors duration-1000 group-hover:bg-cyan-500/20"></div>
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] -mr-32 -mt-32 transition-colors duration-1000 group-hover:bg-[#0da08a] bg-cyan-500/20"></div>
                                     <div className="grid grid-cols-2 gap-8 relative z-10">
                                         <div>
                                             <div className="text-5xl font-black text-teal-400 mb-2">200<span className="text-2xl text-teal-600">MW+</span></div>
@@ -78,8 +78,8 @@ export default function TurnkeyPage() {
                         {/* Scroll Content */}
                         <div className="space-y-8 lg:pt-16">
                             <SectionWrapper delay={0.2}>
-                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:border-teal-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
+                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:bg-[#0da08a] border-teal-200 transition-colors duration-500 group">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:bg-[#0da08a] text-teal-600 transition-colors">
                                         <Ruler className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Detailed Engineering</h3>
@@ -90,8 +90,8 @@ export default function TurnkeyPage() {
                             </SectionWrapper>
 
                             <SectionWrapper delay={0.3}>
-                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:border-teal-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
+                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:bg-[#0da08a] border-teal-200 transition-colors duration-500 group">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:bg-[#0da08a] text-teal-600 transition-colors">
                                         <Network className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Meticulous Execution</h3>
@@ -102,8 +102,8 @@ export default function TurnkeyPage() {
                             </SectionWrapper>
 
                             <SectionWrapper delay={0.4}>
-                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:border-teal-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
+                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:bg-[#0da08a] border-teal-200 transition-colors duration-500 group">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:bg-[#0da08a] text-teal-600 transition-colors">
                                         <Monitor className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Testing & Commissioning</h3>
@@ -126,7 +126,7 @@ export default function TurnkeyPage() {
                                 <LayoutTemplate className="w-4 h-4" />
                                 <span>Core Capabilities</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">Scope of <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Work</span></h2>
+                            <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">Scope of <span className="gradient-heading">Work</span></h2>
                             <p className="text-gray-400 max-w-2xl mx-auto text-lg">End-to-end electrical mastery across the power value chain.</p>
                         </div>
                     </SectionWrapper>
@@ -134,13 +134,13 @@ export default function TurnkeyPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Bento Box 1 - Wide Large */}
                         <SectionWrapper delay={0.1}>
-                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
-                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-80 mix-blend-overlay"></div>
+                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-cyan-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
+                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-[#0da08a] scale-105 opacity-80 mix-blend-overlay"></div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                                 
                                 <div className="relative z-10 sm:w-2/3">
-                                    <div className="w-14 h-14 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 backdrop-blur-lg group-hover:scale-110 transition-transform border border-cyan-500/30">
+                                    <div className="w-14 h-14 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 backdrop-blur-lg group-hover:bg-[#0da08a] scale-110 transition-transform border border-cyan-500/30">
                                         <Activity className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-3xl font-bold text-white mb-3">Switchyard Works</h3>
@@ -153,12 +153,12 @@ export default function TurnkeyPage() {
 
                         {/* Bento Box 2 - Tall Square */}
                         <SectionWrapper delay={0.2}>
-                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-between group relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-between group relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:bg-[#0da08a] opacity-10 transition-opacity">
                                     <Zap className="w-48 h-48 text-teal-400" />
                                 </div>
                                 <div className="relative z-10">
-                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                         <Cpu className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Protection & Metering</h3>
@@ -171,9 +171,9 @@ export default function TurnkeyPage() {
 
                         {/* Bento Box 3 - Square */}
                         <SectionWrapper delay={0.3}>
-                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden">
+                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden">
                                 <div className="relative z-10">
-                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                         <Network className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Cable Engineering</h3>
@@ -186,13 +186,13 @@ export default function TurnkeyPage() {
 
                         {/* Bento Box 4 - Wide Rectangle */}
                         <SectionWrapper delay={0.4}>
-                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-green-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
+                            <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-green-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
-                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:bg-[#0da08a] opacity-10 transition-opacity">
                                     <ShieldCheck className="w-48 h-48 text-green-400" />
                                 </div>
                                 <div className="relative z-10 sm:w-2/3">
-                                    <div className="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400 mb-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                         <ShieldCheck className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Earthing & Lightning</h3>
@@ -219,7 +219,7 @@ export default function TurnkeyPage() {
                                     Avoid the nightmare of multi-vendor coordination. We provide a holistic, single-source solution that radically de-risks critical infrastructure deployment.
                                 </p>
                                 
-                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-primary transition-colors shadow-xl hover:shadow-2xl">
+                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-[#0da08a] bg-primary transition-colors shadow-xl hover:bg-[#0da08a] shadow-2xl">
                                     Schedule a Consultation <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -235,8 +235,8 @@ export default function TurnkeyPage() {
                                     "Dedicated project managers providing real-time progress tracking tools.",
                                     "Long-term post-commissioning O&M support and remote diagnostics."
                                 ].map((item, idx) => (
-                                    <div key={idx} className="group flex items-center p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 hover:-translate-y-1">
-                                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0 mr-6 group-hover:scale-110 transition-transform">
+                                    <div key={idx} className="group flex items-center p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:bg-[#0da08a] shadow-md hover:bg-[#0da08a] border-primary/20 transition-all duration-300 hover:bg-[#0da08a] -translate-y-1">
+                                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0 mr-6 group-hover:bg-[#0da08a] scale-110 transition-transform">
                                             <CheckCircle2 className="w-5 h-5" />
                                         </div>
                                         <p className="text-slate-700 font-semibold">{item}</p>

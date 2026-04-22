@@ -15,7 +15,7 @@ export default async function TeamPage() {
 
   return (
     <main className="min-h-screen pt-32 pb-24 px-6 relative">
-      <SceneTrigger variant="wave" color="#049A89" speed={1} />
+      <SceneTrigger variant="wave" color="#0da08a" speed={1} />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16 text-center">
@@ -31,7 +31,7 @@ export default async function TeamPage() {
           {team.map((member) => (
             <div 
               key={member.id} 
-              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300"
+              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/10 transition-all duration-300"
             >
               <div className="relative aspect-square w-full rounded-2xl bg-slate-800 overflow-hidden mb-6">
                 {member.photoUrl ? (
@@ -39,7 +39,7 @@ export default async function TeamPage() {
                     src={member.photoUrl}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 filter"
+                    className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:bg-[#0da08a] grayscale-0 group-hover:bg-[#0da08a] opacity-100 filter"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-slate-300">
@@ -52,7 +52,7 @@ export default async function TeamPage() {
                     href={member.linkedinUrl} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-primary hover:text-white hover:bg-primary hover:scale-110 transition-all shadow-lg"
+                    className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-primary hover:bg-[#0da08a] hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] scale-110 transition-all shadow-lg"
                   >
                     <Linkedin className="w-5 h-5 fill-current" />
                   </a>
@@ -60,7 +60,7 @@ export default async function TeamPage() {
               </div>
               
               <div>
-                <h3 className="text-xl font-black text-white font-heading group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-black text-white font-heading group-hover:bg-[#0da08a] text-primary transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-primary font-bold text-sm tracking-wide uppercase mt-1 mb-3">
