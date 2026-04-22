@@ -16,7 +16,7 @@ export default function Page() {
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1920&q=80" alt="Micro Irrigation Field" className="w-full h-full object-cover" />
+          <img src="/images/water/hero-micro-irrigation.png" alt="Micro Irrigation Field" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-teal-950/80 via-black/60 to-[#0B1120] z-10"></div>
         </div>
         <div className="z-10 max-w-7xl relative mx-auto flex flex-col items-center">
