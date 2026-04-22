@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -322,19 +322,19 @@ export default function Home() {
                 <div key={i} className={`group relative overflow-hidden rounded-3xl cursor-pointer ${item.span}`}>
                   {/* Background Image */}
                   <div className="absolute inset-0">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:bg-slate-900 hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:bg-[#0da08a] via-black/40"></div>
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 group-hover:via-black/40 transition-all duration-500"></div>
                   </div>
 
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end">
-                    <div className="flex items-center gap-4 mb-2 transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500">
-                      <span className="text-5xl font-black text-white/20 select-none group-hover:text-primary transition-colors">{item.step}</span>
-                      <div className="h-[1px] flex-grow bg-white/20 group-hover:text-white transition-colors"></div>
+                    <div className="flex items-center gap-4 mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <span className="text-5xl font-black text-white/20 select-none group-hover:text-primary transition-colors duration-300">{item.step}</span>
+                      <div className="h-[1px] flex-grow bg-white/20 group-hover:bg-white/50 transition-colors duration-300"></div>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500 delay-75">{item.title}</h3>
-                    <p className="text-gray-300 text-sm transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500 delay-100 opacity-0 group-hover:opacity-100">{item.desc}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{item.title}</h3>
+                    <p className="text-gray-300 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100 opacity-0 group-hover:opacity-100">{item.desc}</p>
                   </div>
 
                   {/* Corner Accents */}
