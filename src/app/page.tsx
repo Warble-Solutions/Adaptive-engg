@@ -80,46 +80,52 @@ export default function Home() {
 
  </div>
  </section>
-  {/* 3.5 MISSION & VISION (Light) */}
-  <section className="py-20 bg-white relative z-20 overflow-hidden">
-    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
-    
-    <div className="max-w-7xl mx-auto px-6 relative">
+  {/* 3.5 MISSION & VISION */}
+  <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative z-20 overflow-hidden">
+    <div className="max-w-7xl mx-auto px-6">
       <SectionWrapper>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-          <div className="relative group">
-            <div className="absolute -right-12 top-1/2 -translate-y-1/2 text-primary/10 hidden lg:block group-hover:translate-x-4 transition-transform duration-700">
-              <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10z"></path><path d="M8 12h8"></path><path d="m12 8 4 4-4 4"></path></svg>
-            </div>
-            <div className="bg-white/80 backdrop-blur-xl border border-slate-100 p-10 md:p-14 rounded-[40px] shadow-2xl hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 z-10 relative">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-8 border border-primary/20 text-primary">
-                <Rocket className="w-10 h-10" />
-              </div>
-              <h2 className="text-4xl font-black text-slate-900 font-heading mb-4 tracking-tight">System <span className="text-primary">Vision</span></h2>
-              <p className="text-xl text-slate-600 font-medium leading-relaxed">
-                Embrace Technology To Maximize Value
-              </p>
-            </div>
-          </div>
-          <div className="relative group md:mt-20">
-            <div className="absolute -left-12 top-1/2 -translate-y-1/2 text-teal-600/10 hidden lg:block group-hover:-translate-x-4 transition-transform duration-700 rotate-180">
-              <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10z"></path><path d="M8 12h8"></path><path d="m12 8 4 4-4 4"></path></svg>
-            </div>
-            <div className="bg-white/80 backdrop-blur-xl border border-slate-100 p-10 md:p-14 rounded-[40px] shadow-2xl hover:border-teal-600/50 transition-all duration-500 hover:-translate-y-2 z-10 relative">
-              <div className="w-20 h-20 bg-gradient-to-br from-teal-600/20 to-teal-600/5 rounded-2xl flex items-center justify-center mb-8 border border-teal-600/20 text-teal-600">
-                <Lightbulb className="w-10 h-10" />
-              </div>
-              <h2 className="text-4xl font-black text-slate-900 font-heading mb-4 tracking-tight">Core <span className="text-teal-600">Mission</span></h2>
-              <p className="text-xl text-slate-600 font-medium leading-relaxed">
-                Continuously evolve to maximize value of each installation towards providing the Best Customer Experience
-              </p>
-            </div>
-          </div>
+        <div className="text-center mb-16">
+          <span className="text-primary font-bold uppercase text-sm tracking-widest mb-4 block">What Drives Us</span>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight">Vision & Mission</h2>
         </div>
       </SectionWrapper>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-0 max-w-5xl mx-auto">
+        {/* Vision */}
+        <SectionWrapper delay={0.1}>
+          <div className="relative h-full p-10 md:p-12 md:pr-16 border-b md:border-b-0 md:border-r border-slate-200">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <Rocket className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-black text-slate-900 font-heading">Vision</h3>
+            </div>
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              Embrace Technology To Maximize Value
+            </p>
+            {/* decorative accent */}
+            <div className="absolute bottom-0 left-10 right-10 md:bottom-auto md:top-10 md:left-auto md:right-0 md:w-px md:h-[calc(100%-80px)] bg-gradient-to-b from-transparent via-primary/30 to-transparent hidden md:block"></div>
+          </div>
+        </SectionWrapper>
+
+        {/* Mission */}
+        <SectionWrapper delay={0.2}>
+          <div className="h-full p-10 md:p-12 md:pl-16">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-teal-600/10 flex items-center justify-center text-teal-600 shrink-0">
+                <Lightbulb className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-black text-slate-900 font-heading">Mission</h3>
+            </div>
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              Continuously evolve to maximize value of each installation towards providing the Best Customer Experience
+            </p>
+          </div>
+        </SectionWrapper>
+      </div>
     </div>
   </section>
+
 
   {/* 4. CORE SOLUTIONS (Dark) */}
  <section className="py-32 bg-transparent rounded-b-[40px] z-10 relative shadow-2xl">
