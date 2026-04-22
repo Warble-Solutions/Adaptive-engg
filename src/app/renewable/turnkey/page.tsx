@@ -135,7 +135,7 @@ export default function TurnkeyPage() {
                         {/* Bento Box 1 - Wide Large */}
                         <SectionWrapper delay={0.1}>
                             <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-cyan-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
-                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-[#0da08a] scale-105 opacity-80 mix-blend-overlay"></div>
+                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105 opacity-80 mix-blend-overlay"></div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                                 
@@ -219,7 +219,7 @@ export default function TurnkeyPage() {
                                     Avoid the nightmare of multi-vendor coordination. We provide a holistic, single-source solution that radically de-risks critical infrastructure deployment.
                                 </p>
                                 
-                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-[#0da08a] bg-primary transition-colors shadow-xl hover:bg-[#0da08a] shadow-2xl">
+                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-[#0da08a] transition-colors shadow-xl hover:bg-[#0da08a] shadow-2xl">
                                     Schedule a Consultation <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>

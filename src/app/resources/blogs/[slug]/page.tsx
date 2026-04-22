@@ -41,7 +41,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <article className="max-w-4xl mx-auto px-6 relative z-10">
         <Link 
           href="/resources/blogs"
-          className="inline-flex items-center text-slate-400 hover:bg-[#0da08a] text-primary font-bold tracking-wide uppercase text-sm mb-12 transition-colors group"
+          className="inline-flex items-center text-slate-400 hover:text-primary font-bold tracking-wide uppercase text-sm mb-12 transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:bg-[#0da08a] -translate-x-1 transition-transform" />
           Back to all insights

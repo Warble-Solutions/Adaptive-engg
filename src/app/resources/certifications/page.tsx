@@ -165,7 +165,7 @@ export default function CertificationsPage() {
                       src={cert.image}
                       alt={cert.title}
                       fill
-                      className="object-contain p-4 group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
+                      className="object-contain p-4 group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
@@ -215,7 +215,7 @@ export default function CertificationsPage() {
                       src={report.image}
                       alt={report.title}
                       fill
-                      className="object-contain p-3 group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
+                      className="object-contain p-3 group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
@@ -257,7 +257,7 @@ export default function CertificationsPage() {
                       src={award.image}
                       alt={award.title}
                       fill
-                      className="object-contain p-6 group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
+                      className="object-contain p-6 group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
@@ -294,7 +294,7 @@ export default function CertificationsPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors"
             >
               Request Documents <ArrowRight className="w-4 h-4" />
             </Link>

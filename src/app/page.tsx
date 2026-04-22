@@ -194,7 +194,7 @@ export default function Home() {
             <SectionWrapper delay={0.1}>
               <div className="group cursor-pointer">
                 <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/1.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:bg-[#0da08a] scale-105" alt="Project" />
+                  <img src="/imgs/case-studies/1.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:bg-slate-900 hover:scale-105" alt="Project" />
                   <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-xs font-bold rounded-full">GUJARAT</div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Water Supply Scheme</h3>
@@ -205,7 +205,7 @@ export default function Home() {
             <SectionWrapper delay={0.2}>
               <div className="group cursor-pointer">
                 <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/2.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:bg-[#0da08a] scale-105" alt="Project" />
+                  <img src="/imgs/case-studies/2.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:bg-slate-900 hover:scale-105" alt="Project" />
                   <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-xs font-bold rounded-full">HIGHWAY</div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Twin Tube Tunnel</h3>
@@ -216,7 +216,7 @@ export default function Home() {
             <SectionWrapper delay={0.3}>
               <div className="group cursor-pointer">
                 <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/3.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:bg-[#0da08a] scale-105" alt="Project" />
+                  <img src="/imgs/case-studies/3.jpg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:bg-slate-900 hover:scale-105" alt="Project" />
                   <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-xs font-bold rounded-full">MNRE</div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Solar Park Automation</h3>
@@ -322,7 +322,7 @@ export default function Home() {
                 <div key={i} className={`group relative overflow-hidden rounded-3xl cursor-pointer ${item.span}`}>
                   {/* Background Image */}
                   <div className="absolute inset-0">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:bg-[#0da08a] scale-105" />
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:bg-slate-900 hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:bg-[#0da08a] via-black/40"></div>
                   </div>
 
@@ -330,7 +330,7 @@ export default function Home() {
                   <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end">
                     <div className="flex items-center gap-4 mb-2 transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500">
                       <span className="text-5xl font-black text-white/20 select-none group-hover:text-primary transition-colors">{item.step}</span>
-                      <div className="h-[1px] flex-grow bg-white/20 group-hover:bg-[#0da08a] bg-primary transition-colors"></div>
+                      <div className="h-[1px] flex-grow bg-white/20 group-hover:text-white transition-colors"></div>
                     </div>
 
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 transform translate-y-4 group-hover:bg-[#0da08a] translate-y-0 transition-transform duration-500 delay-75">{item.title}</h3>
@@ -509,7 +509,7 @@ export default function Home() {
           <SectionWrapper>
             <h2 className="text-4xl md:text-6xl mb-8 font-black text-white font-heading">Ready to <span className="text-primary">Scale?</span></h2>
             <p className="text-xl text-gray-400 mb-12">Partner with the &quot;Preferred Project Partner&quot; of India&apos;s largest corporate houses.</p>
-            <Link href="/contact" className="inline-block px-12 py-4 bg-gradient-to-r from-primary to-teal-700 text-white rounded-full font-bold uppercase tracking-wider text-lg shadow-xl shadow-teal-900/50 hover:bg-[#0da08a] scale-105 transition-transform">
+            <Link href="/contact" className="inline-block px-12 py-4 bg-gradient-to-r from-primary to-teal-700 text-white rounded-full font-bold uppercase tracking-wider text-lg shadow-xl shadow-teal-900/50 hover:bg-slate-900 hover:scale-105 transition-transform">
               Start Discussion
             </Link>
           </SectionWrapper>

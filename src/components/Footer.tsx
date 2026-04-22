@@ -25,11 +25,11 @@ export default function Footer() {
                         India&apos;s most trusted company for Renewable Energy, PM-KUSUM, and Industrial Automation solutions.
                     </p>
                     <div className="flex gap-4">
-                        <Link href="https://www.facebook.com/profile.php?id=61551473856862" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] bg-primary transition-colors"><Facebook className="w-5 h-5" /></Link>
-                        <Link href="https://www.instagram.com/adaptive_engg_pvt_ltd" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] bg-primary transition-colors"><Instagram className="w-5 h-5" /></Link>
-                        <Link href="https://www.linkedin.com/company/adaptive-engineering-pvt-ltd/" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] bg-primary transition-colors"><Linkedin className="w-5 h-5" /></Link>
-                        <Link href="https://x.com/Adaptive_Engg/" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] bg-primary transition-colors"><Twitter className="w-5 h-5" /></Link>
-                        <Link href="https://www.youtube.com/@AdaptiveEngineeringPvt.Ltd." target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] bg-primary transition-colors"><Youtube className="w-5 h-5" /></Link>
+                        <Link href="https://www.facebook.com/profile.php?id=61551473856862" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] transition-colors"><Facebook className="w-5 h-5" /></Link>
+                        <Link href="https://www.instagram.com/adaptive_engg_pvt_ltd" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] transition-colors"><Instagram className="w-5 h-5" /></Link>
+                        <Link href="https://www.linkedin.com/company/adaptive-engineering-pvt-ltd/" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] transition-colors"><Linkedin className="w-5 h-5" /></Link>
+                        <Link href="https://x.com/Adaptive_Engg/" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] transition-colors"><Twitter className="w-5 h-5" /></Link>
+                        <Link href="https://www.youtube.com/@AdaptiveEngineeringPvt.Ltd." target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0da08a] transition-colors"><Youtube className="w-5 h-5" /></Link>
                     </div>
                 </div>
 
@@ -37,12 +37,12 @@ export default function Footer() {
                 <div>
                     <h5 className="text-white font-bold mb-6 text-lg tracking-wide">Quick Links</h5>
                     <ul className="space-y-4 text-sm text-gray-400 font-medium">
-                        <li><Link href="/" className="hover:bg-[#0da08a] text-primary transition-colors">Home</Link></li>
-                        <li><Link href="/about/profile" className="hover:bg-[#0da08a] text-primary transition-colors">Company Profile</Link></li>
-                        <li><Link href="/resources/certifications" className="hover:bg-[#0da08a] text-primary transition-colors">Certifications</Link></li>
-                        <li><Link href="/resources/blogs" className="hover:bg-[#0da08a] text-primary transition-colors">Blogs & Insights</Link></li>
-                        <li><Link href="/careers" className="hover:bg-[#0da08a] text-primary transition-colors">Careers</Link></li>
-                        <li><Link href="/contact" className="hover:bg-[#0da08a] text-primary transition-colors">Contact Us</Link></li>
+                        <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
+                        <li><Link href="/about/profile" className="hover:text-primary transition-colors">Company Profile</Link></li>
+                        <li><Link href="/resources/certifications" className="hover:text-primary transition-colors">Certifications</Link></li>
+                        <li><Link href="/resources/blogs" className="hover:text-primary transition-colors">Blogs & Insights</Link></li>
+                        <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
+                        <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
                     </ul>
                 </div>
 
@@ -50,13 +50,13 @@ export default function Footer() {
                 <div>
                     <h5 className="text-white font-bold mb-6 text-lg tracking-wide">Solutions</h5>
                     <ul className="space-y-4 text-sm text-gray-400 font-medium">
-                        <li><Link href="/renewable/unified" className="hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] pl-1 transition-all">Unified Renewable Solution</Link></li>
-                        <li><Link href="/renewable/panels" className="hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] pl-1 transition-all">Electrical Panel</Link></li>
-                        <li><Link href="/renewable/turnkey" className="hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] pl-1 transition-all">Turnkey E&I</Link></li>
-                        <li><Link href="/pm-kusum/iot-scada" className="hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] pl-1 transition-all">PM KUSUM & IoT SCADA</Link></li>
-                        <li><Link href="/infrastructure/tunnel" className="hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] pl-1 transition-all">Tunnel Infrastructure</Link></li>
-                        <li><Link href="/privacy-policy" className="hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] pl-1 transition-all">Privacy Policy</Link></li>
-                        <li><Link href="/terms" className="hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] pl-1 transition-all">Terms & Conditions</Link></li>
+                        <li><Link href="/renewable/unified" className="hover:text-primary hover:pl-1 transition-all">Unified Renewable Solution</Link></li>
+                        <li><Link href="/renewable/panels" className="hover:text-primary hover:pl-1 transition-all">Electrical Panel</Link></li>
+                        <li><Link href="/renewable/turnkey" className="hover:text-primary hover:pl-1 transition-all">Turnkey E&I</Link></li>
+                        <li><Link href="/pm-kusum/iot-scada" className="hover:text-primary hover:pl-1 transition-all">PM KUSUM & IoT SCADA</Link></li>
+                        <li><Link href="/infrastructure/tunnel" className="hover:text-primary hover:pl-1 transition-all">Tunnel Infrastructure</Link></li>
+                        <li><Link href="/privacy-policy" className="hover:text-primary hover:pl-1 transition-all">Privacy Policy</Link></li>
+                        <li><Link href="/terms" className="hover:text-primary hover:pl-1 transition-all">Terms & Conditions</Link></li>
                     </ul>
                 </div>
 

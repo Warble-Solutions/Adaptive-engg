@@ -118,7 +118,7 @@ export function ScadaMonitoringDashboard() {
             {Array.from({ length: 16 }).map((_, i) => (
               <div
                 key={i}
-                className={`w-full aspect-square rounded-sm ${i === 7 ? 'bg-amber-500/60' : i === 12 ? 'bg-red-500/50' : 'bg-teal-500/50'} hover:bg-[#0da08a] brightness-125 transition-all cursor-pointer`}
+                className={`w-full aspect-square rounded-sm ${i === 7 ? 'bg-amber-500/60' : i === 12 ? 'bg-red-500/50' : 'bg-teal-500/50'} hover:brightness-125 transition-all cursor-pointer`}
                 title={`INV-${(i + 1).toString().padStart(2, '0')}: ${i === 7 ? 'Warning' : i === 12 ? 'Offline' : 'Running'}`}
               />
             ))}
@@ -235,7 +235,7 @@ export function AlarmConsoleDashboard() {
         {alarms.map((alarm, i) => {
           const s = severityColors[alarm.severity];
           return (
-            <div key={i} className={`flex items-center gap-3 px-3 py-2 ${s.bg} rounded-lg hover:bg-[#0da08a] brightness-125 transition-colors cursor-pointer group`}>
+            <div key={i} className={`flex items-center gap-3 px-3 py-2 ${s.bg} rounded-lg hover:brightness-125 transition-colors cursor-pointer group`}>
               <span className={s.text}>{s.icon}</span>
               <span className="text-[10px] font-mono text-slate-500 w-14 shrink-0">{alarm.time}</span>
               <span className="text-[10px] font-bold text-slate-400 w-12 shrink-0">{alarm.device}</span>
@@ -286,11 +286,11 @@ export function AnalyticsDashboard() {
             )}
             <div className="w-full flex gap-[1px] items-end h-28">
               <div
-                className="flex-1 bg-gradient-to-t from-primary/80 to-primary/40 rounded-t-sm transition-all duration-300 group-hover:bg-[#0da08a] brightness-125"
+                className="flex-1 bg-gradient-to-t from-primary/80 to-primary/40 rounded-t-sm transition-all duration-300 group-hover:brightness-125"
                 style={{ height: `${prData[i]}%` }}
               />
               <div
-                className="flex-1 bg-gradient-to-t from-purple-600/80 to-purple-400/40 rounded-t-sm transition-all duration-300 group-hover:bg-[#0da08a] brightness-125"
+                className="flex-1 bg-gradient-to-t from-purple-600/80 to-purple-400/40 rounded-t-sm transition-all duration-300 group-hover:brightness-125"
                 style={{ height: `${genData[i]}%` }}
               />
             </div>
@@ -363,7 +363,7 @@ export function SolarProDashboard() {
           {[0, 0, 5, 18, 35, 52, 68, 78, 85, 82, 75, 60, 42, 25, 12, 3, 0, 0].map((h, i) => (
             <div
               key={i}
-              className="flex-1 bg-gradient-to-t from-primary to-teal-300 rounded-t-sm transition-all hover:bg-[#0da08a] brightness-110"
+              className="flex-1 bg-gradient-to-t from-primary to-teal-300 rounded-t-sm transition-all hover:brightness-110"
               style={{ height: `${h}%` }}
             />
           ))}
@@ -431,7 +431,7 @@ export function NocDashboard() {
           <div key={i} className="flex items-center justify-between px-2.5 py-1.5 bg-white/[0.02] rounded-lg hover:bg-white/5 transition-colors cursor-pointer group">
             <div className="flex items-center gap-2">
               <StatusDot status={site.status} />
-              <span className="text-[10px] font-medium text-slate-300 group-hover:bg-[#0da08a] transition-colors">{site.name}</span>
+              <span className="text-[10px] font-medium text-slate-300 group-hover:text-white transition-colors">{site.name}</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-[9px] text-slate-500 font-mono">{site.kw} kW</span>
@@ -620,7 +620,7 @@ export function CMMSDashboard() {
       {/* Work order list */}
       <div className="flex-grow space-y-1.5 overflow-hidden">
         {workOrders[activeTab].map((wo, i) => (
-          <div key={i} className="flex items-center gap-3 px-3 py-2.5 bg-white/[0.03] rounded-xl border border-white/5 hover:bg-white/[0.07] hover:bg-[#0da08a] border-white/10 transition-all cursor-pointer group">
+          <div key={i} className="flex items-center gap-3 px-3 py-2.5 bg-white/[0.03] rounded-xl border border-white/5 hover:bg-white/[0.07] hover:border-white/10 transition-all cursor-pointer group">
             <div className={`w-1.5 h-8 ${priorityColors[wo.priority]} rounded-full shrink-0`}></div>
             <div className="flex-grow min-w-0">
               <div className="flex items-center gap-2 mb-0.5">
@@ -747,7 +747,7 @@ export function ScadaHeroDashboard() {
               return (
                 <div
                   key={i}
-                  className={`aspect-square rounded-sm ${color} hover:bg-[#0da08a] brightness-150 transition-all cursor-pointer`}
+                  className={`aspect-square rounded-sm ${color} hover:brightness-150 transition-all cursor-pointer`}
                   title={`String ${i + 1}: ${perf.toFixed(0)}%`}
                   style={{ opacity: 0.5 + perf / 200 }}
                 />

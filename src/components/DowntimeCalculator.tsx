@@ -11,7 +11,7 @@ export default function DowntimeCalculator() {
     return (
         <div className="w-full max-w-4xl mx-auto bg-slate-900 rounded-3xl border border-slate-800 p-8 md:p-12 shadow-2xl relative overflow-hidden group">
             {/* Background Glow */}
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl group-hover:bg-[#0da08a] bg-primary/30 transition duration-700"></div>
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition duration-700"></div>
 
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
@@ -59,7 +59,7 @@ export default function DowntimeCalculator() {
 
                     <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg">
                         <p className="text-gray-300 text-sm mb-3">Maximize your uptime with <span className="text-white font-bold">SolarWiz SCADA</span>.</p>
-                        <button className="w-full bg-white text-slate-900 font-bold py-2 rounded hover:bg-[#0da08a] bg-gray-200 transition">
+                        <button className="w-full bg-gray-200 text-slate-900 font-bold py-2 rounded hover:bg-slate-300 transition">
                             Get SCADA Quote
                         </button>
                     </div>

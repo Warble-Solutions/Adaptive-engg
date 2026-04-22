@@ -133,7 +133,7 @@ export default function Page() {
             {/* Bento Box 2 - Large Wide (Image bg) */}
             <SectionWrapper delay={0.2}>
               <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[300px] flex flex-col justify-end group relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_scada.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-[#0da08a] scale-105"></div>
+                <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_scada.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-transparent border border-white/20 rounded-2xl flex items-center justify-center text-white mb-4 backdrop-blur-lg group-hover:bg-white/10 transition-colors">
@@ -148,7 +148,7 @@ export default function Page() {
             {/* Bento Box 3 - Large Tall (Image bg) */}
             <SectionWrapper delay={0.3}>
               <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-cyan-500/50 transition-all duration-500 flex flex-col justify-end group relative overflow-hidden h-[400px] sm:h-[300px] lg:h-[400px] shadow-2xl">
-                <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_power_db.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-[#0da08a] scale-105"></div>
+                <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_power_db.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/40 to-transparent"></div>
                 
@@ -198,7 +198,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Secure Your Infrastructure</h2>
             <p className="text-slate-500 mb-8 text-lg">Partner with AEPL for unmatched automation and safety implementation.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-full font-bold hover:bg-[#0da08a] shadow-lg transition-all hover:bg-[#0da08a] scale-105">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-full font-bold hover:bg-[#0da08a] shadow-lg transition-all hover:bg-slate-900 hover:scale-105">
               Contact Engineering Team <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

@@ -52,7 +52,7 @@ export default function RenewablePage() {
                         <SectionWrapper delay={0.1}>
                             <a href="#unified" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-teal-500 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-[#0da08a] bg-teal-600 group-hover:bg-[#0da08a] transition-colors duration-300">
+                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-[#0da08a] bg-teal-600 group-hover:text-white transition-colors duration-300">
                                         <Monitor className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Unified Renewable Solution</h3>
@@ -65,7 +65,7 @@ export default function RenewablePage() {
                         <SectionWrapper delay={0.2}>
                             <a href="#panels" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-teal-500 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-[#0da08a] bg-teal-600 group-hover:bg-[#0da08a] transition-colors duration-300">
+                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-[#0da08a] bg-teal-600 group-hover:text-white transition-colors duration-300">
                                         <Zap className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Electrical Panels</h3>
@@ -78,7 +78,7 @@ export default function RenewablePage() {
                         <SectionWrapper delay={0.3}>
                             <a href="#turnkey" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:bg-[#0da08a] border-amber-500 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-amber-50 rounded-2xl text-amber-600 group-hover:bg-[#0da08a] bg-amber-600 group-hover:bg-[#0da08a] transition-colors duration-300">
+                                    <div className="p-5 bg-amber-50 rounded-2xl text-amber-600 group-hover:bg-[#0da08a] bg-amber-600 group-hover:text-white transition-colors duration-300">
                                         <Factory className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Turnkey E&I</h3>
@@ -213,7 +213,7 @@ export default function RenewablePage() {
                                     <PanelItem title="Compact Substations" desc="CSS solutions for rapid deployment" />
                                 </div>
                                 <div className="mt-8 flex items-center gap-4 justify-start">
-                                    <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-slate-200 rounded-full font-bold text-slate-700 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] text-primary hover:bg-[#0da08a] -translate-y-1 transition-all duration-300">
+                                    <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-slate-200 rounded-full font-bold text-slate-700 hover:bg-[#0da08a] border-primary hover:text-primary hover:bg-[#0da08a] -translate-y-1 transition-all duration-300">
                                         <span>Learn More</span>
                                         <ArrowRight className="w-4 h-4" />
                                     </Link>
@@ -226,7 +226,7 @@ export default function RenewablePage() {
                             <SectionWrapper delay={0.2}>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 h-[500px] rounded-3xl overflow-hidden shadow-2xl relative">
                                     <div className="col-span-2 row-span-2 relative group overflow-hidden">
-                                        <Image src="/imgs/manu/15.jpg" alt="Manufacturing" fill className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-700" />
+                                        <Image src="/imgs/manu/15.jpg" alt="Manufacturing" fill className="object-cover group-hover:bg-slate-900 hover:scale-105 transition-transform duration-700" />
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-[#0da08a] bg-transparent transition-colors"></div>
                                     </div>
                                     <div className="col-span-1 row-span-1 relative group overflow-hidden">
@@ -313,8 +313,8 @@ export default function RenewablePage() {
                                         {item.icon}
                                     </div>
 
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:bg-[#0da08a] transition-colors duration-300 relative z-10">{item.title}</h3>
-                                    <p className="text-slate-500 text-lg leading-relaxed group-hover:bg-[#0da08a] text-gray-400 transition-colors duration-300 relative z-10 flex-grow">{item.desc}</p>
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-white transition-colors duration-300 relative z-10">{item.title}</h3>
+                                    <p className="text-slate-500 text-lg leading-relaxed group-hover:text-white transition-colors duration-300 relative z-10 flex-grow">{item.desc}</p>
                                 </div>
                             </SectionWrapper>
                         ))}

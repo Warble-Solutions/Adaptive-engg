@@ -55,7 +55,7 @@ export default async function CareersPage() {
                     </div>
                   </div>
 
-                  <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary group-hover:bg-[#0da08a] bg-primary group-hover:bg-[#0da08a] transition-colors flex-shrink-0">
+                  <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary group-hover:bg-[#0da08a] bg-primary group-hover:text-white transition-colors flex-shrink-0">
                     <ArrowRight className="w-6 h-6" />
                   </div>
                   

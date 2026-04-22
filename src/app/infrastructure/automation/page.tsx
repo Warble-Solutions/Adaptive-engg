@@ -83,7 +83,7 @@ export default function Page() {
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">PLC Programming</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Ladder, ST, FBD, SFC programming for Siemens S7, Allen Bradley, Schneider M340/M580, and ABB AC500 platforms.
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function Page() {
                   <Activity className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">SCADA & HMI</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   WinCC, FactoryTalk, Ignition, and Wonderware implementations with custom dashboards, trending, and alarming.
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function Page() {
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Drive Systems</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   VFD selection, programming, and commissioning for pumps, conveyors, mixers, and centrifuges with energy optimization.
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function Page() {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">MachineWiz IoT</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Our proprietary IoT platform for machine monitoring — OEE tracking, vibration analysis, and predictive maintenance.
                 </p>
               </div>
@@ -172,7 +172,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Interested in Industrial Automation?</h2>
             <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your needs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

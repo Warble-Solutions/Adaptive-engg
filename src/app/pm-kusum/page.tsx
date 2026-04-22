@@ -139,7 +139,7 @@ export default function PmKusumPage() {
                                         <FontAwesomeIcon icon={item.icon} className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
-                                    <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors mb-6 flex-grow">
+                                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors mb-6 flex-grow">
                                         {item.desc}
                                     </p>
                                     <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto hover:bg-[#0da08a] gap-3 transition-all">
@@ -456,7 +456,7 @@ export default function PmKusumPage() {
                     <SectionWrapper>
                         <h2 className="text-3xl font-bold text-white mb-6 font-heading">Partner for PM-KUSUM?</h2>
                         <p className="text-gray-400 mb-8 text-lg">We support EPCs and Developers with end-to-end RMS & Hardware.</p>
-                        <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
+                        <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                             Get Quote <ArrowRight className="w-4 h-4" />
                         </Link>
                     </SectionWrapper>

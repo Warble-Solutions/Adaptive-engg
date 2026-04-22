@@ -83,7 +83,7 @@ export default function Page() {
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Turnkey E&I</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Complete Electrical &amp; Instrumentation execution from design to commissioning for Solar, Water, and Industrial projects.
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function Page() {
                   <Activity className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">IoT & SCADA</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   In-house developed SolarWiz, WaterWiz, and MachineWiz IoT platforms with edge computing and cloud analytics.
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function Page() {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Panel Manufacturing</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   IS/IEC certified LT/HT panels, MCC, PCC, ACDB, DCDB panels manufactured in our state-of-the-art facility.
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function Page() {
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Software & Analytics</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   ReportWiz, CMS, AMS — proprietary software suite for automated reporting, asset tracking, and performance monitoring.
                 </p>
               </div>
@@ -266,7 +266,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Partner with Us?</h2>
             <p className="text-gray-400 mb-8 text-lg">Get in touch to discuss how we can support your next project.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

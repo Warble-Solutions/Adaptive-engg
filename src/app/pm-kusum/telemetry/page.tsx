@@ -82,7 +82,7 @@ export default function Page() {
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Remote Terminal Unit</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Industrial RTU with IEC 60870-5-104, DNP3, and Modbus protocols. Dual communication channels for redundancy.
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function Page() {
                   <Activity className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Signal Conditioning</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Analog (4-20mA, 0-10V) and digital signal acquisition from CTs, PTs, energy meters, and weather stations.
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function Page() {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Communication</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Dedicated fiber optic or leased line connection to SLDC. Backup 4G cellular channel for failover.
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function Page() {
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Cyber Security</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   CERC cyber security guidelines compliant with encrypted communication, access control, and audit logging.
                 </p>
               </div>
@@ -171,7 +171,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Interested in Telemetry System?</h2>
             <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your needs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

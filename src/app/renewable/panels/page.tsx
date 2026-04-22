@@ -46,10 +46,10 @@ export default function Page() {
                   Our {COMPANY_STATS.manufacturingFacility.formatted} sq ft manufacturing facility produces a comprehensive range of electrical panels designed for demanding environments. Every panel undergoes rigorous type testing and quality assurance before dispatch. We manufacture LT Panels (up to 6300A), HT Panels (up to 33kV), ACDB/DCDB for solar applications, MCC, PCC, APFC, and custom control panels — all complying with IS/IEC standards.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link href="/pm-kusum/ht-panel" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] text-primary transition-all">
+                  <Link href="/pm-kusum/ht-panel" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:bg-[#0da08a] border-primary hover:text-primary transition-all">
                     HT Panels <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <Link href="/pm-kusum/acdb-panels" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:bg-[#0da08a] border-primary hover:bg-[#0da08a] text-primary transition-all">
+                  <Link href="/pm-kusum/acdb-panels" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-bold text-sm text-slate-700 hover:bg-[#0da08a] border-primary hover:text-primary transition-all">
                     ACDB Panels <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -98,7 +98,7 @@ export default function Page() {
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">{item.desc}</p>
+                  <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">{item.desc}</p>
                 </div>
               </SectionWrapper>
             ))}

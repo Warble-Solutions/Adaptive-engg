@@ -82,7 +82,7 @@ export default function Page() {
                   <Activity className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Pyranometer</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Secondary standard pyranometer for GHI measurement. Reference cell for GTI. Both calibrated with NABL traceability.
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function Page() {
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Temperature Sensors</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   PT100 RTD sensors for module back-surface temperature and ambient temperature with ±0.3°C accuracy.
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function Page() {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Wind Sensor</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Ultrasonic anemometer for wind speed and direction measurement. No moving parts — maintenance-free operation.
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function Page() {
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Data Logger</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Campbell Scientific compatible logger with 1-second sampling, 1-minute averaging, and Modbus/MQTT output.
                 </p>
               </div>
@@ -171,7 +171,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Interested in Weather Monitoring System?</h2>
             <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your needs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

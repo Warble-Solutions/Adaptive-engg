@@ -123,7 +123,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
           <div className="relative">
             <input 
               required type="file" id="resume" name="resume" accept="application/pdf"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 hover:bg-[#0da08a] file:bg-primary/20"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 file:bg-primary/20"
             />
             <Upload className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
           </div>
@@ -142,7 +142,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
         <button 
           type="submit" 
           disabled={loading}
-          className="w-full bg-primary hover:bg-[#0da08a] bg-primary-light text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+          className="w-full bg-primary hover:bg-slate-900 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {loading ? (
             <span className="flex items-center gap-2">

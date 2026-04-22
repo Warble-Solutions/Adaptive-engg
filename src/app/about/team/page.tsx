@@ -39,7 +39,7 @@ export default async function TeamPage() {
                     src={member.photoUrl}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:bg-[#0da08a] grayscale-0 group-hover:opacity-100 filter"
+                    className="object-cover group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:bg-[#0da08a] grayscale-0 group-hover:opacity-100 filter"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-slate-300">
@@ -52,7 +52,7 @@ export default async function TeamPage() {
                     href={member.linkedinUrl} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-primary hover:bg-[#0da08a] hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] scale-110 transition-all shadow-lg"
+                    className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-primary hover:bg-[#0da08a] bg-[#0da08a] text-white hover:bg-slate-900 hover:text-white scale-110 transition-all shadow-lg"
                   >
                     <Linkedin className="w-5 h-5 fill-current" />
                   </a>

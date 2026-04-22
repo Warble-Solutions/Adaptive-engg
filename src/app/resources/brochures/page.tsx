@@ -42,7 +42,7 @@ export default async function BrochuresPage() {
                     src={doc.thumbnailUrl}
                     alt={doc.title}
                     fill
-                    className="object-cover group-hover:bg-[#0da08a] scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/80 via-slate-800 to-primary/40 flex items-center justify-center p-6">

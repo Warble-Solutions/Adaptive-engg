@@ -83,7 +83,7 @@ export default function Page() {
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Critical Power</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   UPS, DRUPS, STS, ATS design and installation with 2N and 2(N+1) redundancy architectures for zero transfer time.
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function Page() {
                   <Activity className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Power Distribution</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Medium voltage switchgear, transformer substations, busway systems, and intelligent PDUs with per-outlet monitoring.
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function Page() {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">Precision Cooling</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   CRAC/CRAH design, hot/cold aisle containment, in-row cooling, and free cooling economizer integration.
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function Page() {
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white leading-tight">DCIM Platform</h3>
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:bg-[#0da08a] text-gray-300 transition-colors flex-grow">
+                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
                   Real-time PUE monitoring, thermal mapping, capacity planning, and predictive analytics for proactive management.
                 </p>
               </div>
@@ -180,7 +180,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Interested in Data Center Infrastructure?</h2>
             <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your needs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

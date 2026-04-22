@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Monitor, Shield, PieChart, Wrench, Battery } from "lucide-react";
@@ -125,12 +125,12 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <Link href={item.href} className="block h-full">
-                  <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+                  <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col">
                     <div className={`mb-6 w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-lg`}>
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-white">{item.title}</h3>
-                    <ul className="space-y-3 text-gray-400 text-sm">
+                    <ul className="space-y-3 text-gray-400 text-sm flex-1">
                       {item.bullets.map((bullet, idx) => (
                         <li key={idx} className="flex gap-2">
                           <span className="text-primary mt-0.5">▸</span>
@@ -138,8 +138,8 @@ export default function Page() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6 flex items-center text-primary font-bold text-sm group-hover:bg-[#0da08a] gap-2 transition-all">
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                    <div className="mt-6 flex items-center text-primary font-bold text-sm gap-2 group-hover:gap-3 transition-all">
+                      Learn More <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
                 </Link>
@@ -166,9 +166,9 @@ export default function Page() {
               { step: "4", title: "Go-Live", desc: "Testing, commissioning, grid synchronization, and handover with 24/7 monitoring activation." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:bg-[#0da08a] scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-black">{item.step}</span>
+                <div className="relative z-10 flex flex-col items-center text-center group/step">
+                  <div className="w-20 h-20 bg-white border-4 border-primary/20 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg group-hover/step:bg-primary group-hover/step:border-primary group-hover/step:scale-110 transition-all duration-300">
+                    <span className="text-2xl font-black group-hover/step:text-white transition-colors duration-300">{item.step}</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-slate-500 leading-relaxed px-4">{item.desc}</p>
@@ -185,7 +185,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready for a Unified Approach?</h2>
             <p className="text-gray-400 mb-8 text-lg">Eliminate vendor fragmentation. Get a single point of responsibility for your renewable project.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-[#0da08a] bg-primary hover:bg-[#0da08a] transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-[rgba(13,160,138,0.3)]">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
