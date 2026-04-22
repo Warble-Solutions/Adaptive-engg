@@ -19,11 +19,7 @@ export default function Home() {
       {/* 1. HERO CAROUSEL */}
       <section className="relative min-h-screen pt-32 md:pt-0 bg-transparent">
         <HeroCarousel />
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 z-20 animate-bounce">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-white">Scroll</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
-        </div>
+
         <SceneTrigger variant="logo" color="#0da08a" />
       </section>
 
