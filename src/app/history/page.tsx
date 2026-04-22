@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
@@ -51,7 +51,11 @@ export default function Page() {
  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl shadow-lg transition-shadow">
  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2014</div>
  <h3 className="text-xl font-bold text-slate-900 mb-2">The Beginning</h3>
- <p className="text-slate-600 leading-relaxed">Team Strength of 15. Renewable Installed Base — 100MW. Became Authorized System Integrators for Schneider-Electric.</p>
+  <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
+    <li>Team Strength of 15</li>
+    <li>Renewable Installed Base — 100MW</li>
+    <li>Became Authorized System Integrators for Schneider-Electric</li>
+  </ul>
  </div>
  </div>
  </SectionWrapper>
@@ -61,7 +65,11 @@ export default function Page() {
  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl shadow-lg transition-shadow">
  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2016</div>
  <h3 className="text-xl font-bold text-slate-900 mb-2">Panel Manufacturing</h3>
- <p className="text-slate-600 leading-relaxed">Established our First Panel Manufacturing Factory. Achieved ISO 9001:2015 certification from TUV NORD. Renewable Installed Base grew to 250MW.</p>
+  <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
+    <li>Established our First Panel Manufacturing Factory</li>
+    <li>Achieved ISO 9001:2015 certification from TUV NORD</li>
+    <li>Renewable Installed Base grew to 250MW</li>
+  </ul>
  </div>
  </div>
  </SectionWrapper>
@@ -71,7 +79,11 @@ export default function Page() {
  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl shadow-lg transition-shadow">
  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2018</div>
  <h3 className="text-xl font-bold text-slate-900 mb-2">SCADA Leadership</h3>
- <p className="text-slate-600 leading-relaxed">Renewable Installed Base reached 4.8GW+. Expanded into HT/LT Panel production. Recognized for Highest Revenue Growth in SCADA by Schneider-Electric.</p>
+  <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
+    <li>Renewable Installed Base reached 4.8GW+</li>
+    <li>Expanded into HT/LT Panel production</li>
+    <li>Recognized for Highest Revenue Growth in SCADA by Schneider-Electric</li>
+  </ul>
  </div>
  </div>
  </SectionWrapper>
@@ -81,7 +93,13 @@ export default function Page() {
  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl shadow-lg transition-shadow">
  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2020</div>
  <h3 className="text-xl font-bold text-slate-900 mb-2">Industry Recognition</h3>
- <p className="text-slate-600 leading-relaxed">Renewable Installed Base — 14GW+. Introduced Renewable PPC. Outstanding Achievement in Solar Segment — EQ Magazine. Best End User &amp; EPC Solution Provider — Schneider-Electric. Best Solar Monitoring Company of the Year — ET Now.</p>
+  <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
+    <li>Renewable Installed Base — 14GW+</li>
+    <li>Introduced Renewable PPC</li>
+    <li>Outstanding Achievement in Solar Segment — EQ Magazine</li>
+    <li>Best End User &amp; EPC Solution Provider — Schneider-Electric</li>
+    <li>Best Solar Monitoring Company of the Year — ET Now</li>
+  </ul>
  </div>
  </div>
  </SectionWrapper>
@@ -91,7 +109,12 @@ export default function Page() {
  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl shadow-lg transition-shadow">
  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2022</div>
  <h3 className="text-xl font-bold text-slate-900 mb-2">Scale &amp; Expansion</h3>
- <p className="text-slate-600 leading-relaxed">Achieved Single location 1GW milestone. Single Largest Order — 3.6GW. Opened Second Factory — 60,000 sq.ft. Became Preferred Project Partner of Industry Leaders.</p>
+  <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
+    <li>Achieved Single location 1GW milestone</li>
+    <li>Single Largest Order — 3.6GW</li>
+    <li>Opened Second Factory — 60,000 sq.ft.</li>
+    <li>Became Preferred Project Partner of Industry Leaders</li>
+  </ul>
  </div>
  </div>
  </SectionWrapper>
@@ -101,7 +124,13 @@ export default function Page() {
  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl shadow-lg transition-shadow">
  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2024</div>
  <h3 className="text-xl font-bold text-slate-900 mb-2">PM-KUSUM &amp; Innovation</h3>
- <p className="text-slate-600 leading-relaxed">Renewable Installed Base — 40GW+. Participation in International Expos. Launched Monitoring Solutions for PM KUSUM. Hardware In Loop (HIL) Testing for PPC. Introduced EMS — BESS.</p>
+  <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
+    <li>Renewable Installed Base — 40GW+</li>
+    <li>Participation in International Expos</li>
+    <li>Launched Monitoring Solutions for PM KUSUM</li>
+    <li>Hardware In Loop (HIL) Testing for PPC</li>
+    <li>Introduced EMS — BESS</li>
+  </ul>
  </div>
  </div>
  </SectionWrapper>
@@ -111,7 +140,13 @@ export default function Page() {
  <div className="bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-200 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl shadow-lg transition-shadow">
  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Current</div>
  <h3 className="text-xl font-bold text-slate-900 mb-2">Industry Leader</h3>
- <p className="text-slate-600 leading-relaxed">Team Strength — 300+. Renewable Installed Base — 68 GW+. Sites Monitored — 1000+. Electrical Panels Supplied — 10,000+. Yearly Capacity — 25GW+.</p>
+  <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
+    <li>Team Strength — 300+</li>
+    <li>Renewable Installed Base — 68 GW+</li>
+    <li>Sites Monitored — 1000+</li>
+    <li>Electrical Panels Supplied — 10,000+</li>
+    <li>Yearly Capacity — 25GW+</li>
+  </ul>
  </div>
  </div>
  </SectionWrapper>
