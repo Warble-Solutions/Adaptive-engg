@@ -32,7 +32,7 @@ export default function Page() {
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
               Our complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills proven at Water Supply Schemes.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
               Discuss Your Scheme <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
@@ -141,7 +141,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Upgrade Your Plant?</h2>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Contact Our Engineers <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

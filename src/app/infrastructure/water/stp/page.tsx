@@ -32,7 +32,7 @@ export default function Page() {
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
               We are experts in providing turn-key Electrical, Instrumentation and Automation Solutions for the Waste Water industry, managing large networks of geographically distributed assets.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-[0_0_20px_rgba(13,160,138,0.3)]">
               Consult Our Team <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

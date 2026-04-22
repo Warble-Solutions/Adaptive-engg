@@ -11,7 +11,12 @@ type MicroCTAProps = {
     className?: string;
 };
 
-export default function MicroCTA({ text, href = "/contact", variant, className = "" }: MicroCTAProps) {
+export default function MicroCTA({ text, href = "/contact", variant, context = 'dark', className = "" }: MicroCTAProps) {
+    // Dark bg → hover white; Light bg → hover dark slate
+    const hoverClass = context === 'light'
+        ? "hover:bg-slate-900 hover:text-white"
+        : "hover:bg-white hover:text-slate-900";
+
     if (variant === 'download') {
         return (
             <Link
@@ -27,7 +32,7 @@ export default function MicroCTA({ text, href = "/contact", variant, className =
     return (
         <Link
             href={href}
-            className={`inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] rounded-full font-bold text-white hover:bg-slate-900 hover:text-white -translate-y-1 transition-all duration-300 w-fit cursor-pointer shadow-lg shadow-[rgba(13,160,138,0.3)] ${className}`}
+            className={`inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] rounded-full font-bold text-white ${hoverClass} -translate-y-1 transition-all duration-300 w-fit cursor-pointer shadow-lg shadow-[rgba(13,160,138,0.3)] ${className}`}
         >
             <span>{text}</span>
             <ArrowRight className="w-4 h-4" />

@@ -35,7 +35,7 @@ export default function Page() {
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
                   Flexible & scalable SCADA architecture with rich renewable libraries, handling millions of tags with a refined interface built from decades of field experience.
                 </p>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                   Schedule Consultation <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -144,7 +144,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Modernize Your SCADA?</h2>
             <p className="text-gray-400 mb-8 text-lg">Talk to our SCADA engineers to design a system tailored to your plant requirements.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
               Schedule Consultation <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

@@ -44,7 +44,7 @@ export default function Page() {
                   AEPL&apos;s Centralized Monitoring System provides real-time visibility and intelligent analytics for Solar, Wind, and BESS assets.
                 </p>
                 <p className="text-primary font-bold text-sm uppercase tracking-widest mb-8">&quot;Enterprise-Level Monitoring and Portfolio Intelligence&quot;</p>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                   Request Demo <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -147,7 +147,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Ready to Centralize Your Monitoring?</h2>
             <p className="text-slate-500 mb-8 text-lg">Get complete visibility of your renewable portfolio with AEPL CMS.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-full font-bold hover:bg-[#0da08a] bg-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white hover:bg-[#0da08a] bg-slate-900 transition-colors">
               Request Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
