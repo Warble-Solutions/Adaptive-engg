@@ -10,7 +10,7 @@ const slides = [
         id: 1,
         title: "Renewable Solutions",
         tagline: "Powering Tomorrow",
-        image: "/imgs/banner/4.jpg",
+        image: "/imgs/banner/hero_renewable_solar_bess.png",
         subtext: "Unifying Manufacturing Power with Digital Intelligence to build the Future of Energy",
         cta: "Our Solutions",
         link: "/renewable",
