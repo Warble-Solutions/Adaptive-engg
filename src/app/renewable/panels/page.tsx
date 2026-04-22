@@ -17,7 +17,7 @@ export default function Page() {
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1920&q=80" alt="Electrical Panels Background" className="w-full h-full object-cover" />
+          <img src="/images/renewable/hero-electrical-panels.png" alt="Electrical Panels Background" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
         </div>
         <div className="z-10 max-w-7xl relative">

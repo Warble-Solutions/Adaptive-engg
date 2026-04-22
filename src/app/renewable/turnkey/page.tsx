@@ -11,7 +11,7 @@ export default function TurnkeyPage() {
             <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
                 {/* Background Image & Scrims */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2964&auto=format&fit=crop')] bg-cover bg-center" />
+                    <div className="absolute inset-0 bg-[url('/images/renewable/hero-turnkey-execution.png')] bg-cover bg-center" />
                     <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/90 via-[#0a1628]/70 to-[#0a1628] z-10" />
                 </div>
 
@@ -135,7 +135,7 @@ export default function TurnkeyPage() {
                         {/* Bento Box 1 - Wide Large */}
                         <SectionWrapper delay={0.1}>
                             <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
-                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105 opacity-80 mix-blend-overlay"></div>
+                                <div className="absolute inset-0 bg-[url('/images/renewable/hero-turnkey-execution.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105 opacity-80 mix-blend-overlay"></div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                                 
