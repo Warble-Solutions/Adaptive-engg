@@ -1,183 +1,202 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import { AUTOMATION_STATS } from "@/lib/constants";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Zap, Target, ShieldCheck, Settings, CheckCircle2, Factory, MonitorSmartphone, Server, Droplet, Wind, CircleDollarSign, TrendingUp, Sun } from "lucide-react";
+import Counter from "@/components/ui/Counter";
 
 export const metadata = {
- title: "Industrial Automation | Adaptive Engineering",
- description: "PLC, SCADA, DCS, and IoT integration for intelligent manufacturing and process optimization.",
+    title: "Industrial Automation | Adaptive Engineering",
+    description: "Industry 4.0 PLC, SCADA, DCS, and IoT integration for intelligent manufacturing.",
 };
 
 export default function Page() {
- return (
- <div className="flex flex-col w-full">
- <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
- 
- {/* HERO */}
- <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
- <div className="absolute inset-0 z-0">
- <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1920&q=80" alt="Industrial Automation Background" className="w-full h-full object-cover" />
- <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
- </div>
- <div className="z-10 max-w-7xl relative">
- <SectionWrapper>
- <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 shadow-lg">
- Infrastructure
- </div>
- <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
- Industrial <span className="gradient-heading">Automation</span>
- </h1>
- <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
- PLC, SCADA, DCS, and IoT integration for intelligent manufacturing and process optimization.
- </p>
- </SectionWrapper>
- </div>
- </section>
+    return (
+        <div className="flex flex-col w-full">
+            <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
- {/* Industry 4.0, Delivered */}
- <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
- <div className="max-w-7xl mx-auto px-6">
- <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
- <SectionWrapper>
- <div>
- <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Industry 4.0, Delivered</h2>
- <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
- The factory of the future is connected, intelligent, and self-optimizing. AEPL brings Industry 4.0 to the shop floor with end-to-end automation solutions — from PLC programming and HMI design to enterprise SCADA and MES integration. We work with all major platforms including Siemens, Rockwell, Schneider, and ABB, ensuring vendor-agnostic solutions that grow with your operations.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.2}>
- <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
- <div className="grid grid-cols-3 gap-8 relative z-10">
- <div>
- <div className="text-4xl font-black text-slate-900 mb-1">30%</div>
- <div className="text-xs font-bold text-primary uppercase tracking-wider">OEE Improvement</div>
- </div>
- <div>
- <div className="text-4xl font-black text-slate-900 mb-1">50+</div>
- <div className="text-xs font-bold text-primary uppercase tracking-wider">Plants Automated</div>
- </div>
- <div>
- <div className="text-4xl font-black text-slate-900 mb-1">24/7</div>
- <div className="text-xs font-bold text-primary uppercase tracking-wider">Remote Monitoring</div>
- </div>
- </div>
- </div>
- </SectionWrapper>
- </div>
- </div>
- </section>
+            {/* HERO */}
+            <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <img src="/imgs/banner/hero_industrial_automation.png" alt="Industrial Automation Background" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
+                </div>
+                <div className="z-10 max-w-7xl relative">
+                    <SectionWrapper>
+                        <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 shadow-lg">
+                            Infrastructure
+                        </div>
+                        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+                            Industrial <span className="gradient-heading">Automation</span>
+                        </h1>
+                        <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
+                            Empowering intelligent manufacturing and process optimization with world-class system integration and SCADA solutions.
+                        </p>
+                    </SectionWrapper>
+                </div>
+            </section>
 
- {/* Automation Services */}
- <section className="py-32 bg-transparent text-white relative z-10">
- <div className="max-w-7xl mx-auto px-6">
- <div className="text-center mb-16">
- <SectionWrapper>
- <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">Automation Services</h2>
- </SectionWrapper>
- </div>
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
- <SectionWrapper delay={0}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <Cpu className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">PLC Programming</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- Ladder, ST, FBD, SFC programming for Siemens S7, Allen Bradley, Schneider M340/M580, and ABB AC500 platforms.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.1}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <Activity className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">SCADA & HMI</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- WinCC, FactoryTalk, Ignition, and Wonderware implementations with custom dashboards, trending, and alarming.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.2}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <Zap className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">Drive Systems</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- VFD selection, programming, and commissioning for pumps, conveyors, mixers, and centrifuges with energy optimization.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.3}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <ShieldCheck className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">MachineWiz IoT</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- Our proprietary IoT platform for machine monitoring — OEE tracking, vibration analysis, and predictive maintenance.
- </p>
- </div>
- </SectionWrapper>
- </div>
- </div>
- </section>
+            {/* IMPACT STATS - FLOATING GLASS BAND */}
+            <section className="relative z-30 -mt-24 mb-16 mx-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2.5rem] shadow-2xl p-8 lg:p-12">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-0 lg:divide-x lg:divide-white/10">
+                            {Object.values(AUTOMATION_STATS).map((stat, i) => (
+                                <SectionWrapper key={i} delay={i * 0.1}>
+                                    <div className="text-center px-4 flex flex-col justify-center h-full hover:scale-105 transition-transform duration-300">
+                                        <div className="text-4xl lg:text-5xl font-black text-white mb-3 font-heading drop-shadow-md">
+                                            <Counter value={stat.value} suffix={stat.suffix} />
+                                        </div>
+                                        <div className="text-xs font-bold text-primary/90 uppercase tracking-widest">{stat.label}</div>
+                                    </div>
+                                </SectionWrapper>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
 
- {/* Industry Applications */}
- <section className="py-24 bg-white relative z-20">
- <div className="max-w-7xl mx-auto px-6">
- <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
- <SectionWrapper>
- <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Industry Applications</h2>
- </SectionWrapper>
- <SectionWrapper delay={0.2}>
- <div className="bg-slate-50 rounded-3xl p-10 border border-slate-100">
- <ul className="space-y-5">
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Pharmaceutical: Batch process control with 21 CFR Part 11 compliance</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Cement: Kiln optimization, raw mill automation, and packing plant control</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Water Treatment: WTP/ETP/STP automation with chemical dosing and SCADA</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Food &amp; Beverage: Clean-in-place (CIP), pasteurization, and recipe management</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Textile: Dyeing machine automation, boiler control, and effluent treatment</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Oil &amp; Gas: Pipeline SCADA, tank farm automation, and safety instrumented systems</span>
- </li>
- </ul>
- </div>
- </SectionWrapper>
- </div>
- </div>
- </section>
+            {/* OUR SOLUTIONS */}
+            <section className="py-24 bg-light relative z-10">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <SectionWrapper>
+                            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 font-heading mb-4">Our Solutions</h2>
+                            <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                        </SectionWrapper>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { title: "RTU / PLC System", icon: <Settings className="w-8 h-8" /> },
+                            { title: "SCADA System", icon: <Server className="w-8 h-8" /> },
+                            { title: "Soft Starters & VFD", icon: <Zap className="w-8 h-8" /> },
+                            { title: "HMIs", icon: <MonitorSmartphone className="w-8 h-8" /> },
+                            { title: "Automation Panels", icon: <Factory className="w-8 h-8" /> },
+                            { title: "Central Monitoring System", icon: <Target className="w-8 h-8" /> }
+                        ].map((sol, idx) => (
+                            <SectionWrapper key={idx} delay={idx * 0.1}>
+                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary/50 transition-all duration-300 group flex items-start gap-4 h-full">
+                                    <div className="p-3 bg-teal-50 text-primary rounded-xl group-hover:scale-110 transition-transform">
+                                        {sol.icon}
+                                    </div>
+                                    <div className="pt-2">
+                                        <h3 className="text-xl font-bold text-slate-900 leading-tight">{sol.title}</h3>
+                                    </div>
+                                </div>
+                            </SectionWrapper>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
- {/* CTA */}
- <section className="py-20 bg-transparent text-center relative z-10">
- <div className="max-w-2xl mx-auto px-6">
- <SectionWrapper>
- <h2 className="text-3xl font-bold text-white mb-6 font-heading">Interested in Industrial Automation?</h2>
- <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your needs.</p>
- <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
- Get in Touch <ArrowRight className="w-4 h-4" />
- </Link>
- </SectionWrapper>
- </div>
- </section>
- </div>
- );
+            {/* AEPL EXPERTISE */}
+            <section className="py-24 bg-[#0B1221] text-white relative z-10 border-t border-slate-800">
+                <div className="max-w-7xl mx-auto px-6">
+                    <SectionWrapper>
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            <div className="lg:w-1/3">
+                                <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">AEPL Expertise</h2>
+                                <p className="text-gray-400 leading-relaxed mb-6">We bring our proven automation systems across multiple heavy industry verticals.</p>
+                            </div>
+                            <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+                                <div className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center group hover:bg-primary/20 hover:border-primary transition-all duration-300">
+                                    <Sun className="w-10 h-10 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                                    <div className="font-bold">Renewable</div>
+                                </div>
+                                <div className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center group hover:bg-primary/20 hover:border-primary transition-all duration-300">
+                                    <Droplet className="w-10 h-10 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                                    <div className="font-bold">Water</div>
+                                </div>
+                                <div className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center group hover:bg-primary/20 hover:border-primary transition-all duration-300">
+                                    <Factory className="w-10 h-10 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                                    <div className="font-bold">Infra</div>
+                                </div>
+                                <div className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center group hover:bg-primary/20 hover:border-primary transition-all duration-300">
+                                    <Wind className="w-10 h-10 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                                    <div className="font-bold">CGD</div>
+                                </div>
+                            </div>
+                        </div>
+                    </SectionWrapper>
+                </div>
+            </section>
+
+            {/* BENEFITS & VALUE CREATION */}
+            <section className="py-24 bg-white relative z-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        
+                        {/* Benefits */}
+                        <SectionWrapper>
+                            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 h-full">
+                                <h2 className="text-3xl font-bold text-slate-900 mb-8 font-heading">Benefits</h2>
+                                <ul className="space-y-4">
+                                    {[
+                                        { text: "Enhanced Safety", icon: <ShieldCheck /> },
+                                        { text: "Reduced Operating Cost", icon: <CircleDollarSign /> },
+                                        { text: "Increased Productivity", icon: <TrendingUp /> },
+                                        { text: "Better Energy Efficiency", icon: <Zap /> },
+                                        { text: "Increased Accuracy and Reliability", icon: <CheckCircle2 /> },
+                                        { text: "Lesser Maintenance", icon: <Settings /> }
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-center gap-4 text-slate-700 bg-white p-4 rounded-xl shadow-sm border border-gray-50">
+                                            <div className="text-primary">{item.icon}</div>
+                                            <span className="font-semibold">{item.text}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </SectionWrapper>
+
+                        {/* Value Creation */}
+                        <SectionWrapper delay={0.2}>
+                            <div className="bg-gradient-to-br from-teal-50 to-white p-10 rounded-3xl border border-teal-100 h-full shadow-lg">
+                                <h2 className="text-3xl font-bold text-slate-900 mb-8 font-heading">Value Creation</h2>
+                                <ul className="space-y-6">
+                                    <li className="flex items-start gap-4">
+                                        <CheckCircle2 className="text-primary w-6 h-6 mt-1 shrink-0" />
+                                        <span className="text-slate-700 leading-relaxed font-medium">Globally Recognized System Integrators of Schneider Electric</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <CheckCircle2 className="text-primary w-6 h-6 mt-1 shrink-0" />
+                                        <span className="text-slate-700 leading-relaxed font-medium">ISO 9001:2015 Certification by TUV Nord for Quality Management System</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <CheckCircle2 className="text-primary w-6 h-6 mt-1 shrink-0" />
+                                        <span className="text-slate-700 leading-relaxed font-medium">Best in class quality products meeting stringent safety standards</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <CheckCircle2 className="text-primary w-6 h-6 mt-1 shrink-0" />
+                                        <span className="text-slate-700 leading-relaxed font-medium">Core competency in Project Management, System Designing, Software Development and Site Commissioning</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <CheckCircle2 className="text-primary w-6 h-6 mt-1 shrink-0" />
+                                        <span className="text-slate-700 leading-relaxed font-medium">Highest level of &lsquo;Customer Satisfaction&rsquo;</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <CheckCircle2 className="text-primary w-6 h-6 mt-1 shrink-0" />
+                                        <span className="text-slate-700 leading-relaxed font-medium">Best in class &lsquo;Customer Service&rsquo;</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </SectionWrapper>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-20 bg-transparent text-center relative z-10">
+                <div className="max-w-2xl mx-auto px-6">
+                    <SectionWrapper>
+                        <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Automate?</h2>
+                        <p className="text-gray-400 mb-8 text-lg">Let our experts help you find the right solution for your plant&apos;s digital transformation.</p>
+                        <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                            Get in Touch <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </SectionWrapper>
+                </div>
+            </section>
+        </div>
+    );
 }

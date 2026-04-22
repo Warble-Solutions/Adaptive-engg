@@ -274,7 +274,7 @@ export default function Home() {
  <SectionWrapper key={i} delay={i * 0.1}>
  <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 transition-all duration-300 flex flex-col justify-between h-full">
  <div>
- <div className="mb-6 text-primary text-4xl">â</div>
+ <div className="mb-6 text-primary text-4xl">&ldquo;</div>
  <p className="text-gray-300 leading-relaxed italic mb-8 text-sm">&quot;{item.quote}&quot;</p>
  </div>
  <div className="flex items-center gap-4">

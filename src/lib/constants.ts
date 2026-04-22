@@ -48,3 +48,11 @@ export const WATER_STATS = {
   irrigationPumpingStations: { value: 20, suffix: "+", label: "Irrigation Pumping Stations" },
 } as const;
 
+export const AUTOMATION_STATS = {
+  yearsExperience: { value: 17, suffix: "+", label: "Years of Experience" },
+  scadaInstalled: { value: 1000, suffix: "+", label: "SCADA System Installed" },
+  systemsPerYear: { value: 3500, suffix: "+", label: "Systems Per Year" },
+  scadaTags: { value: 500000, suffix: "+", label: "SCADA Tag Configured in a Single Project" },
+  redundantSystems: { value: 50, suffix: "+", label: "Hot Redundant Systems Commissioned per Year" },
+} as const;
+
