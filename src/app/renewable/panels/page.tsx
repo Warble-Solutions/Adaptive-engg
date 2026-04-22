@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Factory, Calculator, FileText, BarChart3, Settings, Shield, Gauge } from "lucide-react";
@@ -224,7 +224,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Need Electrical Panels or System Analysis?</h2>
             <p className="text-slate-500 mb-8 text-lg">Let our experts design the right panel configuration or conduct comprehensive power system studies for your project.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white hover:bg-[#0da08a] bg-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

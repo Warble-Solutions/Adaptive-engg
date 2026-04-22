@@ -219,7 +219,7 @@ export default function TurnkeyPage() {
                                     Avoid the nightmare of multi-vendor coordination. We provide a holistic, single-source solution that radically de-risks critical infrastructure deployment.
                                 </p>
                                 
-                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white hover:bg-[#0da08a] transition-colors shadow-xl hover:bg-[#0da08a] shadow-2xl">
+                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors shadow-xl hover:shadow-2xl">
                                     Schedule a Consultation <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
