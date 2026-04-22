@@ -1,4 +1,4 @@
-﻿import SectionWrapper from "@/components/SectionWrapper";
+import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wrench, ClipboardList, CheckCircle2, Bell, FileCheck, Package, QrCode, Camera, Smartphone, Clock, BarChart3, Users, Shield, Calendar, Cog } from "lucide-react";
 
@@ -65,43 +65,30 @@ export default function Page() {
                 num: "01",
                 title: "Automated Work Orders",
                 desc: "SCADA alarm fires → work order auto-creates → nearest qualified technician gets notified → SLA clock starts ticking. No manual intervention. No delays.",
-                accent: "from-teal-500/10 to-transparent",
-                border: "hover:bg-[#0da08a] border-red-200",
-                numColor: "text-teal-500/20",
               },
               {
                 num: "02",
                 title: "Standardized SOPs",
                 desc: "Every task follows a defined procedure with step-by-step checklists, embedded images, and mandatory photo evidence. Consistent quality across 100+ sites.",
-                accent: "from-teal-500/10 to-transparent",
-                border: "hover:bg-[#0da08a] border-teal-200",
-                numColor: "text-teal-500/20",
               },
               {
                 num: "03",
                 title: "Reduced Mean Time to Repair",
                 desc: "AI-driven task prioritization. Auto-assignment based on proximity and skill set. Push notifications with SLA deadlines. Average MTTR reduction: 60%.",
-                accent: "from-teal-500/10 to-transparent",
-                border: "hover:bg-[#0da08a] border-teal-200",
-                numColor: "text-teal-500/20",
               },
               {
                 num: "04",
                 title: "Inventory & Cost Control",
                 desc: "Track every spare part, consumable, and tool across your fleet. Min/max quantity alerts. Vendor management. Cost-per-work-order analysis.",
-                accent: "from-teal-500/10 to-transparent",
-                border: "hover:bg-[#0da08a] border-teal-200",
-                numColor: "text-teal-500/20",
               },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className={`group relative p-10 md:p-14 rounded-3xl border border-slate-100 ${item.border} bg-white hover:bg-[#0da08a] shadow-xl transition-all duration-500 overflow-hidden`}>
-                  <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                <div className="group relative p-10 md:p-14 rounded-3xl border border-slate-100 hover:border-[#0da08a] bg-white hover:bg-[#0da08a] shadow-xl transition-all duration-500 overflow-hidden">
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
-                    <span className={`text-7xl md:text-8xl font-black ${item.numColor} select-none shrink-0 leading-none`}>{item.num}</span>
+                    <span className="text-7xl md:text-8xl font-black text-teal-500/30 group-hover:text-white/80 select-none shrink-0 leading-none transition-colors duration-300">{item.num}</span>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3 tracking-tight">{item.title}</h3>
-                      <p className="text-slate-500 text-base md:text-lg leading-relaxed max-w-2xl">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-bold text-slate-900 group-hover:text-white mb-3 tracking-tight transition-colors duration-300">{item.title}</h3>
+                      <p className="text-slate-500 group-hover:text-white/80 text-base md:text-lg leading-relaxed max-w-2xl transition-colors duration-300">{item.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -166,9 +153,9 @@ export default function Page() {
               { icon: <Cog className="w-5 h-5" />, text: "Integration with plant SCADA & ERP" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] shadow-md transition-all duration-300">
-                  <span className="text-[#0da08a]">{item.icon}</span>
-                  <span className="font-medium text-slate-700 text-sm">{item.text}</span>
+                <div className="group flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#0da08a] hover:border-[#0da08a] shadow-md transition-all duration-300">
+                  <span className="text-[#0da08a] group-hover:text-white transition-colors">{item.icon}</span>
+                  <span className="font-medium text-slate-700 group-hover:text-white text-sm transition-colors">{item.text}</span>
                 </div>
               </SectionWrapper>
             ))}
@@ -184,7 +171,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Streamline Your Maintenance Operations</h2>
             <p className="text-gray-400 mb-8 text-lg">See how CMMS can reduce downtime and optimize your O&M costs.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-teal-500 text-slate-900 rounded-full font-bold hover:bg-white transition-colors">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-[rgba(13,160,138,0.3)]">
               Get Started <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
