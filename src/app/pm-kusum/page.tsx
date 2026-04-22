@@ -134,7 +134,7 @@ export default function PmKusumPage() {
                             }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
-                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
                                     <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                                         <FontAwesomeIcon icon={item.icon} className="w-6 h-6" />
                                     </div>

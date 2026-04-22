@@ -76,7 +76,7 @@ export default function UnifiedCMSFeatures() {
                     className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 ${
                       isActive 
                         ? "bg-teal-500/10 border-teal-500/50 shadow-[0_0_30px_rgba(6,182,212,0.15)]" 
-                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:bg-[#0da08a] border-white/20 text-gray-400 hover:bg-[#0da08a]"
+                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:bg-white/10 border-white/20 text-gray-400 hover:bg-white/10"
                     }`}
                   >
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${

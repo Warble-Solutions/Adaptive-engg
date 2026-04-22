@@ -33,7 +33,7 @@ export default async function CaseStudiesPage() {
               href={study.pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/20 transition-all duration-300"
+              className="group flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:bg-[#0da08a] shadow-2xl hover:bg-white/10 shadow-primary/20 transition-all duration-300"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-slate-800 to-teal-900/40 flex items-center justify-center p-8">
@@ -44,7 +44,7 @@ export default async function CaseStudiesPage() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white transform translate-x-4 -translate-y-4 opacity-0 group-hover:translate-x-0 group-hover:bg-[#0da08a] translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white transform translate-x-4 -translate-y-4 opacity-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <ArrowUpRight className="w-5 h-5" />
                 </div>
 

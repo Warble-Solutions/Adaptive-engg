@@ -197,10 +197,10 @@ export default function AboutPage() {
                                             ${i % 2 === 0 ? "bg-gradient-to-br from-white/5 to-white/0" : "bg-gradient-to-bl from-white/5 to-white/0"}
                                         `}>
                                             {/* Decorative Large Background Icon */}
-                                            <item.icon className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 rotate-[-15deg] group-hover:bg-[#0da08a] rotate-0 transition-transform duration-500" />
+                                            <item.icon className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 rotate-[-15deg] group-hover:rotate-0 transition-transform duration-500" />
 
                                             <div className="flex items-center gap-4 mb-6 relative z-10">
-                                                <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-[#0da08a] border-primary/50 transition-colors">
+                                                <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
                                                     <item.icon className="w-6 h-6 text-primary" />
                                                 </div>
                                                 <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-300 font-heading">
@@ -211,7 +211,7 @@ export default function AboutPage() {
                                             <ul className="space-y-3 relative z-10">
                                                 {item.points.map((point, idx) => (
                                                     <li key={idx} className="flex items-start gap-3 text-gray-300 text-sm md:text-base group-hover:text-white transition-colors">
-                                                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 group-hover:bg-[#0da08a] scale-125 transition-transform shrink-0"></span>
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 group-hover:scale-125 transition-transform shrink-0"></span>
                                                         <span>{point}</span>
                                                     </li>
                                                 ))}
@@ -281,7 +281,7 @@ export default function AboutPage() {
                                                     transition={{ duration: 0.4 }}
                                                     className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(25%-24px)] premium-card p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-[#0da08a] shadow-xl hover:bg-[#0da08a] -translate-y-2 group"
                                                 >
-                                                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-md mx-auto overflow-hidden group-hover:bg-slate-900 hover:scale-105 transition-transform border-4 border-white">
+                                                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-md mx-auto overflow-hidden group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform border-4 border-white">
                                                         <img
                                                             src={leader.img}
                                                             alt={leader.name}
@@ -326,7 +326,7 @@ export default function AboutPage() {
                         {/* ISO Certification */}
                         <SectionWrapper delay={0.1}>
                             <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:border-primary/50 hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
-                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:bg-[#0da08a] opacity-[0.06] transition-opacity">
+                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
                                     <CheckCircle2 className="w-48 h-48 text-primary" />
                                 </div>
                                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
@@ -346,7 +346,7 @@ export default function AboutPage() {
                         {/* TUV Certification */}
                         <SectionWrapper delay={0.2}>
                             <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-teal-500/50 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
-                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:bg-[#0da08a] opacity-[0.06] transition-opacity">
+                                <div className="absolute right-0 top-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
                                     <CheckCircle2 className="w-48 h-48 text-teal-600" />
                                 </div>
                                 <div className="w-20 h-20 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 group-hover:scale-110 transition-transform">

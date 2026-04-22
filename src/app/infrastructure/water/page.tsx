@@ -91,10 +91,10 @@ export default function Page() {
                     <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                       <Droplets className="w-7 h-7" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:bg-[#0da08a] text-teal-600 transition-colors">Water Supply & WTP</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:text-teal-600 transition-colors">Water Supply & WTP</h3>
                     <p className="text-slate-500 leading-relaxed mb-6">Complete turn-key E&I solutions from raw water intake to distribution networks.</p>
                   </div>
-                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-2 transition-all">
+                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
                     Explore Solutions <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
@@ -108,10 +108,10 @@ export default function Page() {
                     <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                       <Activity className="w-7 h-7" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:bg-[#0da08a] text-teal-600 transition-colors">Sewage Treatment (STP)</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:text-teal-600 transition-colors">Sewage Treatment (STP)</h3>
                     <p className="text-slate-500 leading-relaxed mb-6">Electrical, Instrumentation and Automation Solutions for Waste Water industry.</p>
                   </div>
-                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-2 transition-all">
+                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
                     Explore Solutions <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
@@ -125,10 +125,10 @@ export default function Page() {
                     <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                       <Settings className="w-7 h-7" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:bg-[#0da08a] text-teal-600 transition-colors">Effluent Treatment (ETP)</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:text-teal-600 transition-colors">Effluent Treatment (ETP)</h3>
                     <p className="text-slate-500 leading-relaxed mb-6">Optimized process control and SCADA architecture for MBR and RO technologies.</p>
                   </div>
-                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-2 transition-all">
+                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
                     Explore Solutions <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
@@ -142,10 +142,10 @@ export default function Page() {
                     <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                       <LineChart className="w-7 h-7" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:bg-[#0da08a] text-teal-600 transition-colors">Lift Irrigation</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:text-teal-600 transition-colors">Lift Irrigation</h3>
                     <p className="text-slate-500 leading-relaxed mb-6">Complete E&I packages for pump houses, optimizing energy management and control.</p>
                   </div>
-                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-2 transition-all">
+                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
                     Explore Solutions <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
@@ -159,10 +159,10 @@ export default function Page() {
                     <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                       <Anchor className="w-7 h-7" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:bg-[#0da08a] text-teal-600 transition-colors">Micro Irrigation</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3 font-heading group-hover:text-teal-600 transition-colors">Micro Irrigation</h3>
                     <p className="text-slate-500 leading-relaxed mb-6">Outlet Management Systems (OMS) for control and monitoring of hydraulic parameters.</p>
                   </div>
-                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-2 transition-all">
+                  <div className="flex items-center text-teal-600 font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
                     Explore Solutions <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export default function Page() {
                     <h3 className="text-2xl font-bold text-white mb-3 font-heading">Centralized SCADA</h3>
                     <p className="text-teal-100 leading-relaxed mb-6">Overall monitoring of quantitative and qualitative parameters with advanced data mining.</p>
                   </div>
-                  <div className="relative z-10 flex items-center text-white font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-2 transition-all">
+                  <div className="relative z-10 flex items-center text-white font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
                     Explore Platform <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>

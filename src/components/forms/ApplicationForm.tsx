@@ -142,7 +142,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
         <button 
           type="submit" 
           disabled={loading}
-          className="w-full bg-primary hover:bg-slate-900 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+          className="w-full bg-primary hover:bg-slate-900 hover:text-white text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {loading ? (
             <span className="flex items-center gap-2">

@@ -135,7 +135,7 @@ export default function HeroCarousel() {
                                 {/* Primary Button */}
                                 <Link
                                     href={slide.link}
-                                    className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold uppercase tracking-wider hover:bg-white hover:text-primary transition-all duration-300 shadow-lg shadow-teal-900/40 group overflow-hidden relative"
+                                    className="inline-flex items-center gap-3 px-10 py-5 bg-[#0da08a] text-white rounded-full font-bold uppercase tracking-wider hover:bg-white hover:text-primary transition-all duration-300 shadow-lg shadow-teal-900/40 group overflow-hidden relative"
                                 >
                                     <span className="relative z-10">{slide.cta}</span>
                                     <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>

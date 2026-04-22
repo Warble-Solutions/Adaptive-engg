@@ -113,7 +113,7 @@ export default function Page() {
                 <div className={`group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
                   
                   {/* Glowing background orb effect */}
-                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:bg-[#0da08a] opacity-10 blur-[50px] transition-opacity duration-700`}></div>
+                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-10 blur-[50px] transition-opacity duration-700`}></div>
                   
                   <div className="flex items-center gap-4 mb-6 relative z-10">
                     <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:scale-110 transition-transform duration-300`}>
@@ -122,7 +122,7 @@ export default function Page() {
                     <h3 className="text-xl font-bold text-slate-900 leading-tight">{module.title}</h3>
                   </div>
                   
-                  <p className="text-sm text-slate-600 leading-relaxed mb-8 flex-grow relative z-10 group-hover:bg-[#0da08a] text-slate-700 transition-colors">{module.desc}</p>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-8 flex-grow relative z-10 group-hover:text-slate-700 transition-colors">{module.desc}</p>
                   
                   <div className="space-y-3 relative z-10 bg-slate-100/80 group-hover:bg-[#0da08a] bg-slate-50 p-5 rounded-2xl border border-slate-200/60 transition-colors">
                     {module.items.map((item, idx) => (
@@ -155,7 +155,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-slate-800 border-4 border-teal-500/30 rounded-full flex items-center justify-center text-teal-400 mb-6 shadow-lg hover:bg-[#0da08a] scale-110 transition-transform">
+                  <div className="w-20 h-20 bg-slate-800 border-4 border-teal-500/30 rounded-full flex items-center justify-center text-teal-400 mb-6 shadow-lg hover:bg-slate-700 scale-110 transition-transform">
                     <span className="text-2xl font-black">{item.step}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>

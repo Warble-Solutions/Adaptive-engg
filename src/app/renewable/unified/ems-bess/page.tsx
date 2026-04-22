@@ -67,9 +67,9 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
-                  <div className={`absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br ${item.gradient} rounded-full opacity-10 group-hover:bg-[#0da08a] opacity-20 group-hover:bg-[#0da08a] scale-150 transition-all duration-500`}></div>
+                  <div className={`absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br ${item.gradient} rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500`}></div>
                   <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg relative`}>
-                    <div className={`absolute inset-0 bg-white opacity-0 group-hover:bg-[#0da08a] opacity-20 rounded-2xl transition-opacity animate-pulse`}></div>
+                    <div className={`absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity animate-pulse`}></div>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -97,7 +97,7 @@ export default function Page() {
                     { icon: <Wind className="w-8 h-8" />, label: "Wind" },
                     { icon: <Battery className="w-8 h-8" />, label: "BESS" },
                   ].map((item, i) => (
-                    <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center hover:bg-[#0da08a] bg-primary/10 hover:bg-[#0da08a] border-primary/30 transition-all">
+                    <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center hover:bg-[#0da08a] /10 hover:bg-white/10 border-primary/30 transition-all">
                       <div className="text-primary mb-3 flex justify-center">{item.icon}</div>
                       <span className="text-sm font-bold text-white">{item.label}</span>
                     </div>

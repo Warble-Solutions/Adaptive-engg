@@ -165,7 +165,7 @@ export default function CertificationsPage() {
                       src={cert.image}
                       alt={cert.title}
                       fill
-                      className="object-contain p-4 group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-4 group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
@@ -209,13 +209,13 @@ export default function CertificationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {erdaReports.map((report, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group hover:bg-white/10 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group hover:bg-white/10 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300">
                   <div className="relative w-full aspect-[3/4] bg-white/5">
                     <Image
                       src={report.image}
                       alt={report.title}
                       fill
-                      className="object-contain p-3 group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-3 group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
@@ -257,7 +257,7 @@ export default function CertificationsPage() {
                       src={award.image}
                       alt={award.title}
                       fill
-                      className="object-contain p-6 group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-6 group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>

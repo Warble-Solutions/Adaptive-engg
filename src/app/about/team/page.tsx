@@ -31,7 +31,7 @@ export default async function TeamPage() {
           {team.map((member) => (
             <div 
               key={member.id} 
-              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/10 transition-all duration-300"
+              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-[#0da08a] shadow-2xl hover:bg-white/10 shadow-primary/10 transition-all duration-300"
             >
               <div className="relative aspect-square w-full rounded-2xl bg-slate-800 overflow-hidden mb-6">
                 {member.photoUrl ? (
@@ -39,7 +39,7 @@ export default async function TeamPage() {
                     src={member.photoUrl}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:bg-[#0da08a] grayscale-0 group-hover:opacity-100 filter"
+                    className="object-cover group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500 grayscale opacity-80 group-hover:bg-[#0da08a] grayscale-0 group-hover:opacity-100 filter"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-slate-300">

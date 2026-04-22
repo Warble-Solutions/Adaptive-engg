@@ -93,7 +93,7 @@ export default function Page() {
               { icon: <Cpu className="w-6 h-6" />, title: "Automation Panels", desc: "PLC panels, VFD panels, relay protection panels, and SCADA interface panels with pre-loaded configurations." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-[#0da08a] shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+                <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
                   <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
@@ -165,7 +165,7 @@ export default function Page() {
               { icon: <BarChart3 className="w-6 h-6" />, title: "Load Flow Study", desc: "Steady-state voltage profile, branch loading, transformer loading, and system losses under various operating scenarios.", color: "from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-teal-500/30 hover:bg-[#0da08a] -translate-y-2 transition-all duration-300 h-full">
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-teal-500/30 hover:bg-white/10 -translate-y-2 transition-all duration-300 h-full">
                   <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg`}>
                     {item.icon}
                   </div>
@@ -208,7 +208,7 @@ export default function Page() {
                   "Clear graphical reports",
                   "Field-validated results",
                 ].map((item, i) => (
-                  <div key={i} className="p-5 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-[#0da08a] bg-teal-500/10 hover:bg-[#0da08a] border-teal-500/30 transition-all">
+                  <div key={i} className="p-5 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-[#0da08a] bg-teal-500/10 hover:bg-white/10 border-teal-500/30 transition-all">
                     <span className="text-sm font-bold text-white">{item}</span>
                   </div>
                 ))}

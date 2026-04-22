@@ -148,7 +148,7 @@ export default function PPCPage() {
                             <SectionWrapper key={i} delay={i * 0.1} className="h-full">
                                 <div className="group relative bg-white rounded-2xl border border-slate-200 hover:bg-[#0da08a] border-primary/30 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full flex flex-col overflow-hidden">
                                     {/* Gradient Top Border */}
-                                    <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:bg-[#0da08a] h-1.5 transition-all duration-300"></div>
+                                    <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:h-1.5 transition-all duration-300"></div>
 
                                     <div className="p-8 flex flex-col flex-grow">
                                         {/* Number Badge & Icon */}
@@ -158,7 +158,7 @@ export default function PPCPage() {
                                             </div>
 
                                             {/* Icon */}
-                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:bg-[#0da08a] bg-primary group-hover:bg-[#0da08a] group-hover:scale-110 transition-all duration-300">
+                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:bg-[#0da08a]  group-hover:bg-[#0da08a] group-hover:scale-110 transition-all duration-300">
                                                 <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
                                             </div>
                                         </div>
@@ -426,7 +426,7 @@ export default function PPCPage() {
 
                                 <div className="grid grid-cols-1 gap-6 relative z-10 w-full max-w-md mx-auto">
                                     {/* Protocol Card */}
-                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-[#0da08a] border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
+                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
                                         <div className="flex items-center gap-4 mb-6">
                                             <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 shrink-0">
                                                 <Database className="w-6 h-6" />
@@ -446,7 +446,7 @@ export default function PPCPage() {
                                     </div>
 
                                     {/* Device Card */}
-                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-[#0da08a] border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
+                                    <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
                                         <div className="flex items-center gap-4 mb-6">
                                             <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 shrink-0">
                                                 <Cpu className="w-6 h-6" />

@@ -92,7 +92,7 @@ export default function Page() {
             {/* Bento Box 1 - Medium (Image bg) */}
             <SectionWrapper delay={0.1}>
               <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_telemetry_1776742420287.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
+                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_telemetry_1776742420287.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="relative z-10">
                   <div className="w-10 h-10 bg-transparent border border-white/20 rounded-xl flex items-center justify-center text-white mb-3 backdrop-blur-lg group-hover:bg-white/10 transition-colors">
@@ -107,7 +107,7 @@ export default function Page() {
             {/* Bento Box 2 - Large Wide (Image bg) */}
             <SectionWrapper delay={0.2}>
               <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_iot_scada_v2.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
+                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_iot_scada_v2.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-transparent border border-white/20 rounded-2xl flex items-center justify-center text-white mb-4 backdrop-blur-lg group-hover:bg-white/10 transition-colors">
@@ -122,7 +122,7 @@ export default function Page() {
             {/* Bento Box 3 - Large Tall (Image bg) */}
             <SectionWrapper delay={0.3}>
               <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ams_1776742293340.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
+                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ams_1776742293340.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent"></div>
                 <div className="relative z-10 w-full sm:w-2/3">
@@ -138,9 +138,9 @@ export default function Page() {
             {/* Bento Box 4 - Flow (Image bg) */}
             <SectionWrapper delay={0.4}>
               <div className="p-8 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ht_panel_1776742333863.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105"></div>
+                <div className="absolute inset-0 bg-[url('/imgs/pm-kusum/kusum_ht_panel_1776742333863.png')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/60 to-transparent"></div>
-                <div className="absolute top-0 right-0 p-6 opacity-30 group-hover:bg-[#0da08a] opacity-50 transition-opacity z-10 drop-shadow-2xl">
+                <div className="absolute top-0 right-0 p-6 opacity-30 group-hover:opacity-50 transition-opacity z-10 drop-shadow-2xl">
                   <Shield className="w-24 h-24 text-teal-400" />
                 </div>
                 <div className="relative z-10 mt-auto">

@@ -33,14 +33,14 @@ export default async function BlogsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
             <Link key={post.id} href={`/resources/blogs/${post.slug}`}>
-              <article className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/10 transition-all duration-300">
+              <article className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:bg-[#0da08a] shadow-2xl hover:bg-white/10 shadow-primary/10 transition-all duration-300">
                 <div className="relative h-60 w-full overflow-hidden bg-slate-800">
                   {post.thumbnailUrl ? (
                     <Image
                       src={post.thumbnailUrl}
                       alt={post.title}
                       fill
-                      className="object-cover group-hover:bg-slate-900 hover:scale-105 transition-transform duration-500"
+                      className="object-cover group-hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-teal-500/20 flex items-center justify-center">
@@ -60,7 +60,7 @@ export default async function BlogsPage() {
                   <p className="text-slate-300 mb-6 line-clamp-3 leading-relaxed">
                     {post.excerpt || post.content.replace(/<[^>]+>/g, "").substring(0, 120) + "..."}
                   </p>
-                  <div className="flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:bg-[#0da08a] gap-3 transition-all">
+                  <div className="flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
                     Read Article <ArrowRight className="w-4 h-4 ml-2" />
                   </div>
                 </div>

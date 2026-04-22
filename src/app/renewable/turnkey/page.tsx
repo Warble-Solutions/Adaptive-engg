@@ -79,7 +79,7 @@ export default function TurnkeyPage() {
                         <div className="space-y-8 lg:pt-16">
                             <SectionWrapper delay={0.2}>
                                 <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:bg-[#0da08a] border-teal-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:bg-[#0da08a] text-teal-600 transition-colors">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:text-teal-600 transition-colors">
                                         <Ruler className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Detailed Engineering</h3>
@@ -91,7 +91,7 @@ export default function TurnkeyPage() {
 
                             <SectionWrapper delay={0.3}>
                                 <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:bg-[#0da08a] border-teal-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:bg-[#0da08a] text-teal-600 transition-colors">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:text-teal-600 transition-colors">
                                         <Network className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Meticulous Execution</h3>
@@ -103,7 +103,7 @@ export default function TurnkeyPage() {
 
                             <SectionWrapper delay={0.4}>
                                 <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:bg-[#0da08a] border-teal-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:bg-[#0da08a] text-teal-600 transition-colors">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-[#0da08a] bg-teal-50 group-hover:text-teal-600 transition-colors">
                                         <Monitor className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Testing & Commissioning</h3>
@@ -135,7 +135,7 @@ export default function TurnkeyPage() {
                         {/* Bento Box 1 - Wide Large */}
                         <SectionWrapper delay={0.1}>
                             <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-end group relative overflow-hidden shadow-2xl">
-                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:scale-105 opacity-80 mix-blend-overlay"></div>
+                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548345680-f5475ea90f5c?q=80&w=2938&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:bg-slate-900 hover:text-white hover:scale-105 opacity-80 mix-blend-overlay"></div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] to-transparent"></div>
                                 
@@ -154,7 +154,7 @@ export default function TurnkeyPage() {
                         {/* Bento Box 2 - Tall Square */}
                         <SectionWrapper delay={0.2}>
                             <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-between group relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:bg-[#0da08a] opacity-10 transition-opacity">
+                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                                     <Zap className="w-48 h-48 text-teal-400" />
                                 </div>
                                 <div className="relative z-10">
@@ -188,7 +188,7 @@ export default function TurnkeyPage() {
                         <SectionWrapper delay={0.4}>
                             <div className="md:col-span-2 p-10 bg-slate-900 rounded-3xl border border-white/10 hover:bg-[#0da08a] border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-end group relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
-                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:bg-[#0da08a] opacity-10 transition-opacity">
+                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                                     <ShieldCheck className="w-48 h-48 text-teal-400" />
                                 </div>
                                 <div className="relative z-10 sm:w-2/3">

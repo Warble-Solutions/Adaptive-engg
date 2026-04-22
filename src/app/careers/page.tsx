@@ -31,7 +31,7 @@ export default async function CareersPage() {
         <div className="flex flex-col gap-6">
           {jobs.map((job) => (
             <Link key={job.id} href={`/careers/${job.slug}`}>
-              <div className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/10 transition-all duration-300 transform hover:bg-[#0da08a] -translate-y-1">
+              <div className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] shadow-primary/10 transition-all duration-300 transform hover:bg-white/10 -translate-y-1">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                   
                   <div className="flex-1">
@@ -55,7 +55,7 @@ export default async function CareersPage() {
                     </div>
                   </div>
 
-                  <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary group-hover:bg-[#0da08a] bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                  <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary group-hover:bg-[#0da08a]  group-hover:text-white transition-colors flex-shrink-0">
                     <ArrowRight className="w-6 h-6" />
                   </div>
                   
