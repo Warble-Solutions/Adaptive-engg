@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import Image from "next/image";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import { Linkedin, User } from "lucide-react";
@@ -20,7 +20,7 @@ export default async function TeamPage() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16 text-center">
           <h1 className="text-5xl md:text-6xl font-black text-white font-heading tracking-tight mb-6">
-            Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Experts</span>
+            Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-500">Experts</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Driven by a passionate team of engineers under the guidance of founders with over two decades of rich experience.

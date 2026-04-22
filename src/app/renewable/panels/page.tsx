@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Factory, Calculator, FileText, BarChart3, Settings, Shield, Gauge } from "lucide-react";
@@ -56,7 +56,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
+              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
                 <div className="grid grid-cols-3 gap-8 relative z-10">
                   <div>
                     <div className="text-4xl font-black text-slate-900 mb-1">{COMPANY_STATS.manufacturingFacility.formatted}</div>
@@ -143,7 +143,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                 <Calculator className="w-4 h-4" />
                 <span>Engineering Services</span>
               </div>
@@ -158,14 +158,14 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {[
               { icon: <Gauge className="w-6 h-6" />, title: "Short Circuit Study", desc: "Fault level analysis at every bus to determine equipment ratings, protective device coordination, and system adequacy.", color: "from-red-500 to-orange-500" },
-              { icon: <Activity className="w-6 h-6" />, title: "Power Factor Analysis", desc: "Harmonic analysis, reactive power compensation design, and APFC panel sizing for optimal power quality.", color: "from-blue-500 to-cyan-500" },
-              { icon: <Shield className="w-6 h-6" />, title: "Earthing Study", desc: "Touch and step potential analysis, soil resistivity interpretation, and earthing grid design per IS/IEEE standards.", color: "from-emerald-500 to-teal-500" },
-              { icon: <Settings className="w-6 h-6" />, title: "Transformer & Cable Sizing", desc: "Optimal transformer selection, cable size calculation with derating factors, voltage drop analysis, and ampacity verification.", color: "from-purple-500 to-indigo-500" },
+              { icon: <Activity className="w-6 h-6" />, title: "Power Factor Analysis", desc: "Harmonic analysis, reactive power compensation design, and APFC panel sizing for optimal power quality.", color: "from-teal-500 to-cyan-500" },
+              { icon: <Shield className="w-6 h-6" />, title: "Earthing Study", desc: "Touch and step potential analysis, soil resistivity interpretation, and earthing grid design per IS/IEEE standards.", color: "from-teal-500 to-teal-500" },
+              { icon: <Settings className="w-6 h-6" />, title: "Transformer & Cable Sizing", desc: "Optimal transformer selection, cable size calculation with derating factors, voltage drop analysis, and ampacity verification.", color: "from-teal-500 to-teal-500" },
               { icon: <ShieldCheck className="w-6 h-6" />, title: "Relay Coordination Study", desc: "Time-current curve analysis, protection grading, and relay setting calculations for selective fault isolation.", color: "from-amber-500 to-yellow-500" },
               { icon: <BarChart3 className="w-6 h-6" />, title: "Load Flow Study", desc: "Steady-state voltage profile, branch loading, transformer loading, and system losses under various operating scenarios.", color: "from-pink-500 to-rose-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
-                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-300 h-full">
+                <div className="group p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-teal-500/30 hover:-translate-y-2 transition-all duration-300 h-full">
                   <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg`}>
                     {item.icon}
                   </div>
@@ -190,7 +190,7 @@ export default function Page() {
                   "Simplified maintenance with clear protection settings",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="text-blue-400 w-5 h-5 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="text-teal-400 w-5 h-5 shrink-0 mt-0.5" />
                     <span className="text-gray-300 text-sm font-medium">{item}</span>
                   </div>
                 ))}
@@ -208,7 +208,7 @@ export default function Page() {
                   "Clear graphical reports",
                   "Field-validated results",
                 ].map((item, i) => (
-                  <div key={i} className="p-5 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-blue-500/10 hover:border-blue-500/30 transition-all">
+                  <div key={i} className="p-5 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-teal-500/10 hover:border-teal-500/30 transition-all">
                     <span className="text-sm font-bold text-white">{item}</span>
                   </div>
                 ))}

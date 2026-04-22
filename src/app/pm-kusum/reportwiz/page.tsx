@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, FileText, BarChart3, PieChart, Brain, Clock, Download, TrendingUp, CheckCircle2, Table2, LineChart, Calendar, Filter, Layers } from "lucide-react";
@@ -16,22 +16,22 @@ export default function Page() {
       {/* HERO — Data visualization gradient with colored accent panels */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[url('/imgs/pm-kusum/kusum_reportwiz_1776742405186.png')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/80 via-[#0f172a]/60 to-[#0f172a]/90 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/80 via-[#0B1120]/60 to-[#0B1120]/90 mix-blend-multiply"></div>
           {/* Chart-like vertical bars */}
           <div className="absolute bottom-0 left-0 w-full h-1/3 flex items-end justify-around px-20 opacity-[0.06]">
             {[40, 65, 85, 50, 70, 90, 55, 75, 60, 80, 45, 70].map((h, i) => (
-              <div key={i} className="w-8 bg-gradient-to-t from-primary to-emerald-400 rounded-t-sm" style={{ height: `${h}%` }}></div>
+              <div key={i} className="w-8 bg-gradient-to-t from-primary to-teal-400 rounded-t-sm" style={{ height: `${h}%` }}></div>
             ))}
           </div>
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-500/10 backdrop-blur-sm text-indigo-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-indigo-500/20">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
               <FileText className="w-4 h-4" />
               <span>PM-KUSUM</span>
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-white mb-4 font-heading">
-              Report<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Wiz</span>
+              Report<span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Wiz</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mt-6">
               Automated reporting platform with KPI insights, custom reports, AI/ML analytics, and scheduled multi-format exports for renewable energy portfolios.
@@ -49,10 +49,10 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <TrendingUp className="w-7 h-7" />, title: "KPI & Performance Insights", desc: "Track PR, CUF, specific yield, GHI, PLF, and more. Auto-benchmarking against contractual targets.", accent: "border-l-indigo-500 bg-indigo-50/30" },
+              { icon: <TrendingUp className="w-7 h-7" />, title: "KPI & Performance Insights", desc: "Track PR, CUF, specific yield, GHI, PLF, and more. Auto-benchmarking against contractual targets.", accent: "border-l-teal-500 bg-teal-50/30" },
               { icon: <Filter className="w-7 h-7" />, title: "Custom Reports", desc: "Design bespoke reports with drag-and-drop parameter selection. Custom date ranges, grouping, and filtering.", accent: "border-l-cyan-500 bg-cyan-50/30" },
-              { icon: <BarChart3 className="w-7 h-7" />, title: "Analytics Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-emerald-500 bg-emerald-50/30" },
-              { icon: <Brain className="w-7 h-7" />, title: "AI/ML Analytics", desc: "Anomaly detection, degradation analysis, soiling loss estimation, and predictive performance modeling.", accent: "border-l-purple-500 bg-purple-50/30" },
+              { icon: <BarChart3 className="w-7 h-7" />, title: "Analytics Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-teal-500 bg-teal-50/30" },
+              { icon: <Brain className="w-7 h-7" />, title: "AI/ML Analytics", desc: "Anomaly detection, degradation analysis, soiling loss estimation, and predictive performance modeling.", accent: "border-l-teal-500 bg-teal-50/30" },
               { icon: <Calendar className="w-7 h-7" />, title: "Scheduled Reporting", desc: "Auto-generate daily, weekly, monthly, and annual reports. Email to stakeholders on schedule.", accent: "border-l-amber-500 bg-amber-50/30" },
               { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
             ].map((item, i) => (
@@ -101,7 +101,7 @@ export default function Page() {
             {/* Analytic Reports */}
             <SectionWrapper delay={0.2}>
               <div className="p-10 bg-white/5 border border-white/10 rounded-3xl h-full">
-                <div className="inline-block px-4 py-2 bg-purple-500/20 text-purple-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Analytic Reports</div>
+                <div className="inline-block px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Analytic Reports</div>
                 <h3 className="text-2xl font-bold text-white mb-6">AI-Powered Insights</h3>
                 <div className="space-y-4">
                   {[
@@ -114,7 +114,7 @@ export default function Page() {
                     "Revenue impact quantification",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="text-purple-400 w-5 h-5 shrink-0" />
+                      <CheckCircle2 className="text-teal-400 w-5 h-5 shrink-0" />
                       <span className="text-gray-300 text-sm">{item}</span>
                     </div>
                   ))}
@@ -141,8 +141,8 @@ export default function Page() {
               "Investor Confidence — Professional branded reports for stakeholders",
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-indigo-500/30 hover:shadow-lg transition-all duration-300">
-                  <CheckCircle2 className="text-indigo-500 w-5 h-5 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-teal-500/30 hover:shadow-lg transition-all duration-300">
+                  <CheckCircle2 className="text-teal-500 w-5 h-5 shrink-0 mt-0.5" />
                   <span className="font-medium text-slate-700 text-sm">{item}</span>
                 </div>
               </SectionWrapper>
@@ -157,7 +157,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-white mb-6 font-heading">Transform Your Reporting</h2>
             <p className="text-gray-400 mb-8 text-lg">See how ReportWiz can automate your entire reporting workflow.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white rounded-full font-bold hover:from-indigo-700 hover:to-cyan-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-full font-bold hover:from-teal-700 hover:to-cyan-700 transition-all">
               Request Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

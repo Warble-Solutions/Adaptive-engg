@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import { Briefcase, MapPin, Building, ArrowRight } from "lucide-react";
@@ -49,7 +49,7 @@ export default async function CareersPage() {
                         {job.department}
                       </div>
                       <div className="flex items-center gap-1.5 bg-slate-800 px-3 py-1.5 rounded-lg text-white">
-                        <Briefcase className="w-4 h-4 text-blue-500" />
+                        <Briefcase className="w-4 h-4 text-teal-500" />
                         {job.type}
                       </div>
                     </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, LayoutTemplate, Network, Factory, CheckCircle2, ChevronRight, Ruler, Lock, Monitor } from "lucide-react";
@@ -26,7 +26,7 @@ export default function TurnkeyPage() {
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-black text-white mb-6 font-heading drop-shadow-2xl tracking-tight">
-                            Turnkey <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Execution</span>
+                            Turnkey <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Execution</span>
                         </h1>
 
                         <p className="text-gray-300 text-xl font-medium max-w-3xl mx-auto leading-relaxed mb-10">
@@ -43,12 +43,12 @@ export default function TurnkeyPage() {
                         {/* Sticky Sidebar */}
                         <div className="lg:sticky lg:top-36 self-start">
                             <SectionWrapper>
-                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 text-emerald-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-emerald-500/20">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                                     <Activity className="w-4 h-4" />
                                     <span>Project Execution</span>
                                 </div>
                                 <h2 className="text-4xl md:text-6xl font-black text-slate-900 font-heading mb-6 leading-tight">
-                                    From <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">Blueprint to Megawatts</span>
+                                    From <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Blueprint to Megawatts</span>
                                 </h2>
                                 <p className="text-slate-500 text-xl leading-relaxed mb-10">
                                     Turnkey E&I is our core strength. We take complete ownership of the electrical and instrumentation scope for solar power plants — from detailed engineering to final grid synchronization.
@@ -56,14 +56,14 @@ export default function TurnkeyPage() {
                                 
                                 {/* Hero Stat Bento */}
                                 <div className="p-8 bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -mr-32 -mt-32 transition-colors duration-1000 group-hover:bg-cyan-500/20"></div>
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] -mr-32 -mt-32 transition-colors duration-1000 group-hover:bg-cyan-500/20"></div>
                                     <div className="grid grid-cols-2 gap-8 relative z-10">
                                         <div>
-                                            <div className="text-5xl font-black text-emerald-400 mb-2">200<span className="text-2xl text-emerald-600">MW+</span></div>
+                                            <div className="text-5xl font-black text-teal-400 mb-2">200<span className="text-2xl text-teal-600">MW+</span></div>
                                             <div className="text-xs font-bold text-gray-400 uppercase tracking-wider">Largest Single Project</div>
                                         </div>
                                         <div>
-                                            <div className="text-5xl font-black text-emerald-400 mb-2">15<span className="text-2xl text-emerald-600">+</span></div>
+                                            <div className="text-5xl font-black text-teal-400 mb-2">15<span className="text-2xl text-teal-600">+</span></div>
                                             <div className="text-xs font-bold text-gray-400 uppercase tracking-wider">States Covered</div>
                                         </div>
                                         <div className="col-span-2 pt-6 border-t border-white/10">
@@ -78,8 +78,8 @@ export default function TurnkeyPage() {
                         {/* Scroll Content */}
                         <div className="space-y-8 lg:pt-16">
                             <SectionWrapper delay={0.2}>
-                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:border-emerald-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:border-teal-200 transition-colors duration-500 group">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
                                         <Ruler className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Detailed Engineering</h3>
@@ -90,8 +90,8 @@ export default function TurnkeyPage() {
                             </SectionWrapper>
 
                             <SectionWrapper delay={0.3}>
-                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:border-blue-200 transition-colors duration-500 group">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                                <div className="p-10 bg-slate-50 border border-slate-100 rounded-[2rem] hover:border-teal-200 transition-colors duration-500 group">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
                                         <Network className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Meticulous Execution</h3>
@@ -122,11 +122,11 @@ export default function TurnkeyPage() {
                 <div className="max-w-7xl mx-auto px-6">
                     <SectionWrapper>
                         <div className="text-center mb-16">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                                 <LayoutTemplate className="w-4 h-4" />
                                 <span>Core Capabilities</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">Scope of <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Work</span></h2>
+                            <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">Scope of <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Work</span></h2>
                             <p className="text-gray-400 max-w-2xl mx-auto text-lg">End-to-end electrical mastery across the power value chain.</p>
                         </div>
                     </SectionWrapper>
@@ -153,12 +153,12 @@ export default function TurnkeyPage() {
 
                         {/* Bento Box 2 - Tall Square */}
                         <SectionWrapper delay={0.2}>
-                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 h-[400px] flex flex-col justify-between group relative overflow-hidden">
+                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-teal-500/50 transition-all duration-500 h-[400px] flex flex-col justify-between group relative overflow-hidden">
                                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    <Zap className="w-48 h-48 text-blue-400" />
+                                    <Zap className="w-48 h-48 text-teal-400" />
                                 </div>
                                 <div className="relative z-10">
-                                    <div className="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
                                         <Cpu className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Protection & Metering</h3>
@@ -171,9 +171,9 @@ export default function TurnkeyPage() {
 
                         {/* Bento Box 3 - Square */}
                         <SectionWrapper delay={0.3}>
-                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden">
+                            <div className="p-10 bg-slate-900 rounded-3xl border border-white/10 hover:border-teal-500/50 transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden">
                                 <div className="relative z-10">
-                                    <div className="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
                                         <Network className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-3">Cable Engineering</h3>

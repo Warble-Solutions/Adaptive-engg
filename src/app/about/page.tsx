@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -345,18 +345,18 @@ export default function AboutPage() {
 
                         {/* TUV Certification */}
                         <SectionWrapper delay={0.2}>
-                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:border-blue-500/50 hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
+                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
                                 <div className="absolute right-0 top-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
-                                    <CheckCircle2 className="w-48 h-48 text-blue-600" />
+                                    <CheckCircle2 className="w-48 h-48 text-teal-600" />
                                 </div>
-                                <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 shrink-0 group-hover:scale-110 transition-transform">
+                                <div className="w-20 h-20 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 group-hover:scale-110 transition-transform">
                                     <CheckCircle2 className="w-10 h-10" />
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-slate-900 mb-2">TUV Nord Certified</h3>
                                     <p className="text-slate-500 font-medium">Global Safety & Quality Standards</p>
-                                    <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider">
-                                        <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></div>
+                                    <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-teal-600 uppercase tracking-wider">
+                                        <div className="w-2 h-2 rounded-full bg-teal-600 animate-pulse"></div>
                                         Verified
                                     </div>
                                 </div>

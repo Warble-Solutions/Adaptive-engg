@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import Image from "next/image";
@@ -50,7 +50,7 @@ export default function Page() {
                 { value: "Type 1+2", label: "SPD Protection" },
                 { value: "40kA", label: "Surge Rating" },
               ].map((item, i) => (
-                <div key={i} className="p-5 bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl border border-teal-100">
+                <div key={i} className="p-5 bg-gradient-to-br from-teal-50 to-teal-50 rounded-2xl border border-teal-100">
                   <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">{item.value}</div>
                   <div className="text-xs font-bold text-primary uppercase tracking-wider">{item.label}</div>
                 </div>
@@ -109,7 +109,7 @@ export default function Page() {
                   <tr className="bg-slate-900 text-white">
                     <th className="text-left p-5 font-bold text-xs uppercase tracking-wider">Parameter</th>
                     <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-primary/20 border-x border-primary/30">800V ACDB</th>
-                    <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-emerald-600/20 border-x border-emerald-500/30">415V LT Panel</th>
+                    <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-teal-600/20 border-x border-teal-500/30">415V LT Panel</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -130,7 +130,7 @@ export default function Page() {
                     <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-teal-50/50 transition-colors`}>
                       <td className="p-4 font-bold text-slate-900 border-b border-slate-100">{row.param}</td>
                       <td className="p-4 text-center text-slate-600 border-b border-slate-100 bg-primary/5 border-x border-primary/10">{row.values[0]}</td>
-                      <td className="p-4 text-center text-slate-600 border-b border-slate-100 bg-emerald-50/30 border-x border-emerald-100">{row.values[1]}</td>
+                      <td className="p-4 text-center text-slate-600 border-b border-slate-100 bg-teal-50/30 border-x border-teal-100">{row.values[1]}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -144,7 +144,7 @@ export default function Page() {
       <section className="py-28 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 font-heading bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400">Panel Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 font-heading bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400">Panel Features</h2>
           </SectionWrapper>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[

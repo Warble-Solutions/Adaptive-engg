@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -33,23 +33,23 @@ export default function PPCPage() {
                 {/* Background */}
                 <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a1628] via-[#102040] to-[#0a1628]">
                     <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(0deg, rgba(59,130,246,0.3) 1px, transparent 1px)', backgroundSize: '1px 20px' }}></div>
-                    <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-blue-500/15 rounded-full blur-[120px]"></div>
+                    <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-teal-500/15 rounded-full blur-[120px]"></div>
                 </div>
 
                 <div className="z-10 max-w-7xl mx-auto w-full relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <SectionWrapper>
                             <div className="text-left">
-                                <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
+                                <div className="inline-flex items-center px-4 py-2 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                                     India&apos;s Preferred Renewable Energy Technology Partner
                                 </div>
                                 <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading">
-                                    Power <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Plant Control</span>
+                                    Power <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-400">Plant Control</span>
                                 </h1>
                                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-xl leading-relaxed mb-8">
                                     Advanced, reliable and adaptable Power Plant Control (PPC) solutions for stand-alone and hybrid plants to achieve green energy goals.
                                 </p>
-                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                                     Learn More <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -148,7 +148,7 @@ export default function PPCPage() {
                             <SectionWrapper key={i} delay={i * 0.1} className="h-full">
                                 <div className="group relative bg-white rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col overflow-hidden">
                                     {/* Gradient Top Border */}
-                                    <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-blue-500 group-hover:h-1.5 transition-all duration-300"></div>
+                                    <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:h-1.5 transition-all duration-300"></div>
 
                                     <div className="p-8 flex flex-col flex-grow">
                                         {/* Number Badge & Icon */}
@@ -244,8 +244,8 @@ export default function PPCPage() {
                                             <div className="text-xs text-gray-400 uppercase text-center">Uptime</div>
                                         </div>
                                         <div className="flex flex-col items-center justify-center p-6 bg-white/5 rounded-2xl border border-white/5">
-                                            <div className="w-20 h-20 rounded-full border-4 border-blue-500/30 flex items-center justify-center mb-3">
-                                                <span className="text-base font-black text-blue-400">24/7</span>
+                                            <div className="w-20 h-20 rounded-full border-4 border-teal-500/30 flex items-center justify-center mb-3">
+                                                <span className="text-base font-black text-teal-400">24/7</span>
                                             </div>
                                             <div className="text-xs text-gray-400 uppercase text-center">Monitoring</div>
                                         </div>
@@ -262,7 +262,7 @@ export default function PPCPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                            <Server className="text-blue-400 w-6 h-6" /> Reliability & Fail-Safe
+                                            <Server className="text-teal-400 w-6 h-6" /> Reliability & Fail-Safe
                                         </h3>
                                         <p className="text-gray-400 leading-relaxed">
                                             Master-Slave hot-redundancy ensures 100% availability. Multi-layered Fail-Safe Mode with &quot;Heartbeat&quot; monitoring automatically transitions to safe local setpoints during network interruptions.
@@ -278,7 +278,7 @@ export default function PPCPage() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
                                     <div>
                                         <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                            <Lock className="text-emerald-400 w-6 h-6" /> Cyber Security
+                                            <Lock className="text-teal-400 w-6 h-6" /> Cyber Security
                                         </h3>
                                         <p className="text-gray-400 leading-relaxed">
                                             &quot;Secure-by-design&quot; per IEC 62443 standards. Encrypted communication, firewalls, and RBAC protect critical infrastructure from unauthorized access.
@@ -286,7 +286,7 @@ export default function PPCPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                            <Database className="text-purple-400 w-6 h-6" /> Analytics & Reporting
+                                            <Database className="text-teal-400 w-6 h-6" /> Analytics & Reporting
                                         </h3>
                                         <p className="text-gray-400 leading-relaxed">
                                             Real-time granular monitoring and custom dashboards. Automated reporting for compliance and O&M. Advanced analytics identify underperforming assets.
@@ -314,7 +314,7 @@ export default function PPCPage() {
                         <SectionWrapper>
                             <div>
                                 <div className="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
-                                    <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                    <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
                                         <Zap className="w-5 h-5" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900">Precise Power Management</h3>
@@ -324,7 +324,7 @@ export default function PPCPage() {
                                         title="Active Power Control"
                                         desc="Maximize profitability with precision dispatch, intelligent curtailment, and high-speed response to utility commands."
                                         imageSrc="/imgs/tam/Active Power Management.png"
-                                        color="text-blue-600"
+                                        color="text-teal-600"
                                     />
                                     <FeatureRow
                                         title="Reactive Power Control"
@@ -346,7 +346,7 @@ export default function PPCPage() {
                         <SectionWrapper delay={0.2}>
                             <div>
                                 <div className="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
-                                    <div className="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                                    <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
                                         <ShieldCheck className="w-5 h-5" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900">Grid Resilience & Stability</h3>
@@ -356,7 +356,7 @@ export default function PPCPage() {
                                         title="Voltage Control"
                                         desc="Maintain perfect grid harmony with instantaneous reactive support and automated regulation for equipment protection."
                                         imageSrc="/imgs/tam/Voltage Control.png"
-                                        color="text-purple-600"
+                                        color="text-teal-600"
                                     />
                                     <FeatureRow
                                         title="Frequency Control"
@@ -428,7 +428,7 @@ export default function PPCPage() {
                                     {/* Protocol Card */}
                                     <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
                                         <div className="flex items-center gap-4 mb-6">
-                                            <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
+                                            <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 shrink-0">
                                                 <Database className="w-6 h-6" />
                                             </div>
                                             <div>
@@ -448,7 +448,7 @@ export default function PPCPage() {
                                     {/* Device Card */}
                                     <div className="p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:border-primary/40 transition-colors duration-300 w-full min-h-[220px] flex flex-col justify-between">
                                         <div className="flex items-center gap-4 mb-6">
-                                            <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 shrink-0">
+                                            <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 shrink-0">
                                                 <Cpu className="w-6 h-6" />
                                             </div>
                                             <div>
@@ -464,10 +464,10 @@ export default function PPCPage() {
                                                 <Activity className="w-4 h-4 text-red-400" /> MFMs / Meters
                                             </div>
                                             <div className="flex items-center gap-2 text-gray-300 text-sm">
-                                                <Server className="w-4 h-4 text-purple-400" /> BESS PCS
+                                                <Server className="w-4 h-4 text-teal-400" /> BESS PCS
                                             </div>
                                             <div className="flex items-center gap-2 text-gray-300 text-sm">
-                                                <Globe className="w-4 h-4 text-blue-400" /> Weather Stations
+                                                <Globe className="w-4 h-4 text-teal-400" /> Weather Stations
                                             </div>
                                         </div>
                                     </div>

@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Monitor, Shield, PieChart, Wrench, Battery } from "lucide-react";
@@ -48,7 +48,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
+              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
                 <div className="grid grid-cols-3 gap-8 relative z-10">
                   <div>
                     <div className="text-4xl font-black text-slate-900 mb-1">40%</div>
@@ -85,28 +85,28 @@ export default function Page() {
                 icon: <Monitor className="w-7 h-7" />,
                 href: "/renewable/unified/scada",
                 bullets: ["Flexible & Scalable Architecture", "Rich set of Renewable Libraries", "Seamless Handling of 10 Lacs+ Tags", "Refined interface from decades of experience"],
-                gradient: "from-teal-500 to-emerald-500"
+                gradient: "from-teal-500 to-teal-500"
               },
               {
                 title: "Power Plant Controller (PPC)",
                 icon: <Cpu className="w-7 h-7" />,
                 href: "/ppc",
                 bullets: ["Grid Code Compliant", "HIL Type Tested", "Automatic Generation Control (AGC) Ready", "Forecast & Schedule Synchronization"],
-                gradient: "from-blue-500 to-cyan-500"
+                gradient: "from-teal-500 to-cyan-500"
               },
               {
                 title: "Central Monitoring System (CMS)",
                 icon: <Shield className="w-7 h-7" />,
                 href: "/renewable/unified/cms",
                 bullets: ["Insightful View of Entire Portfolio", "Measure KPIs against Targeted Data", "ML Based Anomaly Detection", "Conversational AI Assistant"],
-                gradient: "from-indigo-500 to-blue-500"
+                gradient: "from-teal-500 to-teal-500"
               },
               {
                 title: "Advanced Analytics",
                 icon: <PieChart className="w-7 h-7" />,
                 href: "/renewable/unified/analytics",
                 bullets: ["Advanced Data Visualization", "Accurate Loss Buckets", "Custom Report Builder", "Analyse Historical Data"],
-                gradient: "from-purple-500 to-indigo-500"
+                gradient: "from-teal-500 to-teal-500"
               },
               {
                 title: "CMMS",
@@ -120,7 +120,7 @@ export default function Page() {
                 icon: <Battery className="w-7 h-7" />,
                 href: "/renewable/unified/ems-bess",
                 bullets: ["Indigenous Solution", "ML Based Energy Arbitrage", "State of Charge (SoC) Management", "Peak Shaving, Grid Support"],
-                gradient: "from-emerald-500 to-teal-500"
+                gradient: "from-teal-500 to-teal-500"
               },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>

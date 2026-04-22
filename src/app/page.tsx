@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -30,7 +30,7 @@ export default function Home() {
       {/* 2. MARQUEE SECTION (Light) */}
       <section className="pt-20 pb-10 bg-light rounded-t-[40px] relative z-20 -mt-10">
         <div className="max-w-7xl mx-auto px-6 mb-12">
-          <p className="text-center text-gray-400 text-lg font-bold uppercase tracking-[0.2em]">Preferred Partner for Industry Leaders</p>
+          <p className="text-center text-gray-400 text-lg font-bold uppercase tracking-[0.2em]">Industry Leaders Trust Us</p>
         </div>
         <div className="flex overflow-hidden relative">
           <div className="flex animate-marquee gap-16 min-w-full px-10">
@@ -131,7 +131,7 @@ export default function Home() {
 
       {/* 5. SCADA HIGHLIGHT (Light) */}
       <section className="py-24 bg-light z-0" >
-        <SceneTrigger variant="logo" color="#0EA5E9" speed={1} />
+        <SceneTrigger variant="logo" color="#049A89" speed={1} />
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
           <div className="lg:w-1/2">
             <SectionWrapper>

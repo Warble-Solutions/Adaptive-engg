@@ -1,4 +1,4 @@
-import SectionWrapper from "@/components/SectionWrapper";
+﻿import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart } from "lucide-react";
 import { AnalyticsDashboard, AnalyticsHeroDashboards } from "@/components/DashboardMockups";
@@ -15,7 +15,7 @@ export default function Page() {
       <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#1a0a2e] via-[#16213e] to-[#0f3460]">
           <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(139,92,246,0.3) 50px), repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(139,92,246,0.3) 50px)' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[150px]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-600/10 rounded-full blur-[150px]"></div>
         </div>
         
         <div className="z-10 max-w-7xl mx-auto w-full relative">
@@ -23,17 +23,17 @@ export default function Page() {
             {/* Left — Text */}
             <SectionWrapper>
               <div>
-                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-500/10 backdrop-blur-sm text-purple-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-purple-500/20">
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
                   <PieChart className="w-4 h-4" />
                   <span>Unified Renewable Solution</span>
                 </div>
                 <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading">
-                  Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Analytics</span>
+                  Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-pink-400">Analytics</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
                   Transform raw renewable energy data into actionable intelligence with advanced visualization, accurate loss bucket analysis, and AI-powered insights.
                 </p>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-purple-500 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                   Request Demo <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -58,10 +58,10 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: <BarChart3 className="w-7 h-7" />, title: "Advanced Data Visualization", desc: "Interactive dashboards with drill-down capabilities. Compare performance across plants, inverters, and time periods with dynamic charts.", color: "bg-gradient-to-br from-purple-500 to-indigo-500" },
+              { icon: <BarChart3 className="w-7 h-7" />, title: "Advanced Data Visualization", desc: "Interactive dashboards with drill-down capabilities. Compare performance across plants, inverters, and time periods with dynamic charts.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
               { icon: <Target className="w-7 h-7" />, title: "Accurate Loss Buckets", desc: "Identify exactly where energy is being lost — soiling, clipping, grid curtailment, equipment degradation. Quantified to the kWh.", color: "bg-gradient-to-br from-pink-500 to-rose-500" },
-              { icon: <FileText className="w-7 h-7" />, title: "Custom Report Builder", desc: "Drag-and-drop report designer. Build custom reports for management, O&M teams, and investors with your parameters and branding.", color: "bg-gradient-to-br from-cyan-500 to-blue-500" },
-              { icon: <LineChart className="w-7 h-7" />, title: "Analyse Historical Data", desc: "Years of historical data at your fingertips. Trend analysis, degradation curves, seasonal patterns, and YoY performance comparison.", color: "bg-gradient-to-br from-emerald-500 to-teal-500" },
+              { icon: <FileText className="w-7 h-7" />, title: "Custom Report Builder", desc: "Drag-and-drop report designer. Build custom reports for management, O&M teams, and investors with your parameters and branding.", color: "bg-gradient-to-br from-cyan-500 to-teal-500" },
+              { icon: <LineChart className="w-7 h-7" />, title: "Analyse Historical Data", desc: "Years of historical data at your fingertips. Trend analysis, degradation curves, seasonal patterns, and YoY performance comparison.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
@@ -79,12 +79,12 @@ export default function Page() {
       </section>
 
       {/* AI / ML Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 text-white relative z-10">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SectionWrapper>
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-purple-500/20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                   <Brain className="w-4 h-4" />
                   <span>AI/ML Powered</span>
                 </div>
@@ -101,7 +101,7 @@ export default function Page() {
                     "Equipment comparison and benchmarking",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="text-purple-400 w-5 h-5 shrink-0" />
+                      <CheckCircle2 className="text-teal-400 w-5 h-5 shrink-0" />
                       <span className="text-gray-300">{item}</span>
                     </div>
                   ))}
@@ -123,7 +123,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Unlock Your Data&apos;s Potential</h2>
             <p className="text-slate-500 mb-8 text-lg">See how advanced analytics can improve your plant performance and reduce losses.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-bold hover:from-purple-700 hover:to-indigo-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-teal-600 text-white rounded-full font-bold hover:from-teal-700 hover:to-teal-700 transition-all">
               Get Analytics Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

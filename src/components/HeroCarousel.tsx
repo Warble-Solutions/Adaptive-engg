@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -110,7 +110,7 @@ export default function HeroCarousel() {
                                         initial={{ y: "100%" }}
                                         animate={{ y: 0 }}
                                         transition={{ delay: 0.4 + (i * 0.1), duration: 0.6, ease: "backOut" }}
-                                        className={`inline-block mr-4 ${word.includes("Solution") ? "text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400" : ""}`}
+                                        className={`inline-block mr-4 ${word.includes("Solution") ? "text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-400" : ""}`}
                                     >
                                         {word}
                                     </motion.span>

@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wrench, Users, Package, ClipboardList, BarChart3, Settings, CheckCircle2, Layers, FileText, QrCode, Bell, Workflow, Shield, Database } from "lucide-react";
@@ -20,13 +20,13 @@ export default function Page() {
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-violet-500/10 backdrop-blur-sm text-violet-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-violet-500/20">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
               <Wrench className="w-4 h-4" />
               <span>PM-KUSUM</span>
             </div>
             <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
               Asset Management<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">System (AMS)</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-fuchsia-400">System (AMS)</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed mt-6">
               Comprehensive Asset Performance Management for PM-KUSUM installations. Manage assets, teams, maintenance, inventory, and work orders from a single platform.
@@ -40,11 +40,11 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 backdrop-blur-sm text-violet-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-violet-500/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 backdrop-blur-sm text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                 <Layers className="w-4 h-4" />
                 <span>Core Capabilities</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 tracking-tight">APM <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Modules</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 tracking-tight">APM <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-fuchsia-500">Modules</span></h2>
               <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">Seven integrated modules engineered to provide complete visibility and control over your entire asset lifecycle.</p>
             </div>
           </SectionWrapper>
@@ -55,24 +55,24 @@ export default function Page() {
                 icon: <Database className="w-6 h-6" />,
                 title: "Asset Info Management",
                 desc: "Complete asset registry with hierarchy, specifications, warranty tracking, and documentation. QR code-based field identification.",
-                color: "from-violet-500 to-purple-500",
-                shadow: "shadow-violet-500/20",
+                color: "from-teal-500 to-teal-500",
+                shadow: "shadow-teal-500/20",
                 items: ["Asset hierarchy & classification", "Specification sheets", "Lifecycle tracking", "QR asset tagging"]
               },
               {
                 icon: <Users className="w-6 h-6" />,
                 title: "Team Management",
                 desc: "Organize O&M teams with skills matrix, shift scheduling, and performance tracking.",
-                color: "from-blue-500 to-cyan-500",
-                shadow: "shadow-blue-500/20",
+                color: "from-teal-500 to-cyan-500",
+                shadow: "shadow-teal-500/20",
                 items: ["Skills matrix & certification", "Shift scheduling", "Attendance tracking", "Performance analytics"]
               },
               {
                 icon: <Wrench className="w-6 h-6" />,
                 title: "Maintenance Management",
                 desc: "Preventive, predictive, and corrective maintenance workflows with SOP enforcement.",
-                color: "from-emerald-500 to-teal-500",
-                shadow: "shadow-emerald-500/20",
+                color: "from-teal-500 to-teal-500",
+                shadow: "shadow-teal-500/20",
                 items: ["Preventive schedules", "Predictive triggers", "Standard Operating Proc.", "Multi-step workflows"]
               },
               {
@@ -95,15 +95,15 @@ export default function Page() {
                 icon: <Workflow className="w-6 h-6" />,
                 title: "Third-Party Integrations",
                 desc: "Connect with SCADA, ERP, billing, and other enterprise systems via open APIs.",
-                color: "from-indigo-500 to-blue-500",
-                shadow: "shadow-indigo-500/20",
+                color: "from-teal-500 to-teal-500",
+                shadow: "shadow-teal-500/20",
                 items: ["SCADA data integration", "ERP connectivity", "Billing system sync", "REST API & webhooks"]
               },
               {
                 icon: <BarChart3 className="w-6 h-6" />,
                 title: "Analytics & Reports",
                 desc: "Comprehensive KPIs — MTBF, MTTR, OEE, availability, and cost per asset analytics.",
-                color: "from-fuchsia-500 to-violet-500",
+                color: "from-fuchsia-500 to-teal-500",
                 shadow: "shadow-fuchsia-500/20",
                 items: ["MTBF & MTTR dashboards", "Cost per asset tracking", "Availability analytics", "Custom report builder"],
                 span: "lg:col-start-2" // Center the 7th item exactly within the 3-column grid
@@ -146,7 +146,7 @@ export default function Page() {
             <h2 className="text-3xl font-bold text-center mb-16 font-heading">Implementation Services</h2>
           </SectionWrapper>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-[60px] left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-violet-500/30"></div>
+            <div className="hidden md:block absolute top-[60px] left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-teal-500/30"></div>
             {[
               { step: "1", title: "Assess", desc: "Site survey, asset inventory, and maintenance process audit" },
               { step: "2", title: "Configure", desc: "System setup, asset hierarchy, SOP templates, and user roles" },
@@ -155,7 +155,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-slate-800 border-4 border-violet-500/30 rounded-full flex items-center justify-center text-violet-400 mb-6 shadow-lg hover:scale-110 transition-transform">
+                  <div className="w-20 h-20 bg-slate-800 border-4 border-teal-500/30 rounded-full flex items-center justify-center text-teal-400 mb-6 shadow-lg hover:scale-110 transition-transform">
                     <span className="text-2xl font-black">{item.step}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
@@ -173,7 +173,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Optimize Your Asset Lifecycle</h2>
             <p className="text-slate-500 mb-8 text-lg">See how AMS can streamline maintenance and maximize asset ROI.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-full font-bold hover:from-violet-700 hover:to-fuchsia-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-fuchsia-600 text-white rounded-full font-bold hover:from-teal-700 hover:to-fuchsia-700 transition-all">
               Schedule Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

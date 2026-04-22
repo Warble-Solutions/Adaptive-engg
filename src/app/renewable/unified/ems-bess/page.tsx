@@ -1,4 +1,4 @@
-import SectionWrapper from "@/components/SectionWrapper";
+﻿import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Battery, Zap, BarChart3, TrendingUp, Sun, Wind, CheckCircle2, Activity, Shield, Clock, DollarSign } from "lucide-react";
 import { EMSHeroDashboards, HybridPlantDashboard } from "@/components/DashboardMockups";
@@ -15,8 +15,8 @@ export default function Page() {
       <section className="section-hero relative min-h-screen flex items-center px-6 pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a1628] via-[#102040] to-[#0a1628]">
           <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(0deg, rgba(59,130,246,0.3) 1px, transparent 1px)', backgroundSize: '1px 20px' }}></div>
-          <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-blue-500/15 rounded-full blur-[120px]"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[150px]"></div>
+          <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-teal-500/15 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-[150px]"></div>
         </div>
         
         <div className="z-10 max-w-7xl mx-auto w-full relative">
@@ -24,18 +24,18 @@ export default function Page() {
             {/* Left — Text */}
             <SectionWrapper>
               <div>
-                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 backdrop-blur-sm text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-blue-500/20">
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-teal-500/20">
                   <Battery className="w-4 h-4" />
                   <span>Unified Renewable Solution</span>
                 </div>
                 <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading leading-tight">
                   Energy Management<br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">System — BESS</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-400">System — BESS</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
                   Indigenous solution for Battery Energy Storage Systems with ML-based energy arbitrage, state of charge management, peak shaving, and grid support.
                 </p>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
                   Request Demo <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -60,10 +60,10 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: <Zap className="w-8 h-8" />, title: "Indigenous Solution", desc: "Built entirely in-house by AEPL engineers. No dependency on foreign OEMs. Full control over algorithms, updates, and customizations.", gradient: "from-blue-500 to-cyan-500" },
-              { icon: <BarChart3 className="w-8 h-8" />, title: "ML Based Energy Arbitrage", desc: "Machine learning algorithms optimize charge/discharge cycles based on real-time electricity pricing, demand forecasting, and weather patterns.", gradient: "from-emerald-500 to-teal-500" },
+              { icon: <Zap className="w-8 h-8" />, title: "Indigenous Solution", desc: "Built entirely in-house by AEPL engineers. No dependency on foreign OEMs. Full control over algorithms, updates, and customizations.", gradient: "from-teal-500 to-cyan-500" },
+              { icon: <BarChart3 className="w-8 h-8" />, title: "ML Based Energy Arbitrage", desc: "Machine learning algorithms optimize charge/discharge cycles based on real-time electricity pricing, demand forecasting, and weather patterns.", gradient: "from-teal-500 to-teal-500" },
               { icon: <Battery className="w-8 h-8" />, title: "State of Charge (SoC) Management", desc: "Advanced battery management algorithms maintain optimal SoC to maximize battery life while meeting operational requirements. Cell-level balancing.", gradient: "from-amber-500 to-orange-500" },
-              { icon: <Shield className="w-8 h-8" />, title: "Peak Shaving & Grid Support", desc: "Reduce peak demand charges, provide frequency regulation, and support grid stability during renewable intermittency events.", gradient: "from-purple-500 to-indigo-500" },
+              { icon: <Shield className="w-8 h-8" />, title: "Peak Shaving & Grid Support", desc: "Reduce peak demand charges, provide frequency regulation, and support grid stability during renewable intermittency events.", gradient: "from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
@@ -120,7 +120,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Ready for Energy Storage?</h2>
             <p className="text-slate-500 mb-8 text-lg">Explore how our indigenous EMS solution can maximize your BESS ROI.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-full font-bold hover:from-blue-700 hover:to-emerald-700 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-teal-600 text-white rounded-full font-bold hover:from-teal-700 hover:to-teal-700 transition-all">
               Get EMS Demo <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

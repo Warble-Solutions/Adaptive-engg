@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Monitor, Droplets, BatteryCharging, Shield, Activity, Search, RefreshCw, Layers, Database, Lock } from "lucide-react";
@@ -12,19 +12,19 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#0369a1" speed={0.5} /> {/* Deep blue for centralized SCADA */}
+      <SceneTrigger variant="logo" color="#049A89" speed={0.5} /> {/* Deep blue for centralized SCADA */}
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#021f3b] to-slate-950">
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#0B1120] to-slate-950">
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(14,165,233,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(14,165,233,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-600/10 rounded-full blur-[120px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-600/10 rounded-full blur-[120px]"></div>
         </div>
         
         <div className="z-10 max-w-7xl w-full relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <SectionWrapper>
             <div>
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-sky-500/10 backdrop-blur-sm text-sky-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-sky-500/20">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
                 <Monitor className="w-4 h-4" />
                 <span>Water Solutions Software</span>
               </div>
@@ -34,14 +34,14 @@ export default function Page() {
               <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg mb-8 leading-relaxed">
                 Highly reliable, scalable, and flexible software architecture offering a bird's eye view of all decentralized water assets globally.
               </p>
-              <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-sky-600 text-white rounded-full font-bold hover:bg-sky-500 transition-colors">
+              <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white rounded-full font-bold hover:bg-teal-500 transition-colors">
                 Request SCADA Demo <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </SectionWrapper>
           
           <SectionWrapper delay={0.2}>
-            <div className="h-[440px] hidden lg:block rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(14,165,233,0.15)] border border-sky-900/50">
+            <div className="h-[440px] hidden lg:block rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(14,165,233,0.15)] border border-teal-900/50">
               <ScadaHeroDashboard />
             </div>
           </SectionWrapper>
@@ -53,7 +53,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <span className="text-sky-500 font-bold uppercase text-sm tracking-widest mb-2 block">System Capabilities</span>
+              <span className="text-teal-500 font-bold uppercase text-sm tracking-widest mb-2 block">System Capabilities</span>
               <h2 className="text-4xl font-bold text-slate-900 font-heading">Total Ecosystem Visibility</h2>
             </SectionWrapper>
           </div>
@@ -70,8 +70,8 @@ export default function Page() {
               { icon: <Layers className="w-6 h-6" />, title: "Consumable Estimation" },
             ].map((feature, i) => (
               <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center h-full hover:bg-sky-50 hover:border-sky-200 transition-colors">
-                  <div className="text-sky-500 mb-3">{feature.icon}</div>
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center h-full hover:bg-teal-50 hover:border-teal-200 transition-colors">
+                  <div className="text-teal-500 mb-3">{feature.icon}</div>
                   <h4 className="font-bold text-slate-800 text-sm">{feature.title}</h4>
                 </div>
               </SectionWrapper>
@@ -102,7 +102,7 @@ export default function Page() {
                     "Supports the latest analytics with bird's eye view dashboards"
                   ].map((benefit, i) => (
                     <div key={i} className="flex gap-4 p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                      <div className="text-sky-400 mt-0.5"><Shield className="w-5 h-5"/></div>
+                      <div className="text-teal-400 mt-0.5"><Shield className="w-5 h-5"/></div>
                       <span className="font-medium text-slate-200 text-sm leading-relaxed">{benefit}</span>
                     </div>
                   ))}
@@ -112,16 +112,16 @@ export default function Page() {
 
             <SectionWrapper delay={0.2}>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-sky-600/20 to-blue-900/20 blur-3xl rounded-[40px]"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-teal-600/20 to-teal-900/20 blur-3xl rounded-[40px]"></div>
                 <div className="bg-slate-800 border border-slate-700 rounded-[32px] p-10 relative z-10 shadow-2xl">
-                  <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center text-sky-400 mb-8 border border-slate-600">
+                  <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center text-teal-400 mb-8 border border-slate-600">
                     <Database className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 font-heading">Data is your greatest asset.</h3>
                   <p className="text-slate-400 leading-relaxed mb-8">
                     Decentralized water schemes produce massive amounts of raw data. Our SCADA architecture transforms this raw data into intelligent, actionable reports, standardizing operations and cutting consumable overheads significantly.
                   </p>
-                  <Link href="/contact" className="inline-flex items-center text-sky-400 font-bold hover:text-sky-300 transition-colors">
+                  <Link href="/contact" className="inline-flex items-center text-teal-400 font-bold hover:text-teal-300 transition-colors">
                     Talk to our Software Engineers <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>

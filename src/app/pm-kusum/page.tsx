@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -58,7 +58,7 @@ export default function PmKusumPage() {
 
                         <SectionWrapper delay={0.2}>
                             <div>
-                                <div className="premium-card p-10 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl border border-green-100 shadow-xl relative overflow-hidden">
+                                <div className="premium-card p-10 bg-gradient-to-br from-green-50 to-teal-50 rounded-3xl border border-green-100 shadow-xl relative overflow-hidden">
                                     <div className="grid grid-cols-2 gap-8 relative z-10">
                                         <div>
                                             <div className="text-4xl font-black text-slate-900 mb-1">34k<span className="text-lg text-slate-500">Cr</span></div>
@@ -166,13 +166,13 @@ export default function PmKusumPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <SectionWrapper>
                             <div>
-                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/30">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/30">
                                     <FontAwesomeIcon icon={faNetworkWired} className="w-4 h-4" />
                                     <span>Desktop Intelligence</span>
                                 </div>
                                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-heading leading-tight">
                                     Mission Control for <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">State Agencies</span>
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-primary">State Agencies</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                                     Managing 10,000+ pumps requires more than a spreadsheet. Our Central Monitoring System (CMS) gives you a bird&apos;s-eye view of your entire district&apos;s performance in real-time.
@@ -185,7 +185,7 @@ export default function PmKusumPage() {
                                         { text: "Fault Forensics: Remote diagnosis of pump vs. grid issues.", icon: faTasks }
                                     ].map((feature, i) => (
                                         <li key={i} className="flex items-start gap-4 text-gray-300">
-                                            <div className="mt-1 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                                            <div className="mt-1 w-6 h-6 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 shrink-0">
                                                 <FontAwesomeIcon icon={feature.icon} className="w-3 h-3" />
                                             </div>
                                             <span className="leading-relaxed"><strong className="text-white">{feature.text.split(":")[0]}:</strong> {feature.text.split(":")[1]}</span>
@@ -201,7 +201,7 @@ export default function PmKusumPage() {
                             <div className="relative">
                                 {/* Abstract Dashboard Visual */}
                                 <div className="relative aspect-square md:aspect-video bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm p-6 group">
-                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-teal-500"></div>
                                     {/* Mock Chart Elements */}
                                     <div className="flex gap-4 mb-6">
                                         <div className="w-1/3 h-24 bg-white/5 rounded-lg border border-white/5 animate-pulse"></div>
@@ -209,7 +209,7 @@ export default function PmKusumPage() {
                                         <div className="w-1/3 h-24 bg-white/5 rounded-lg border border-white/5 animate-pulse delay-150"></div>
                                     </div>
                                     <div className="w-full h-40 bg-white/5 rounded-lg border border-white/5 mb-4 overflow-hidden relative">
-                                        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
+                                        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-teal-500/20 to-transparent"></div>
                                     </div>
                                     <div className="flex justify-between items-center text-xs text-gray-500 font-mono mt-4 border-t border-white/5 pt-4">
                                         <span>SYSTEM_STATUS: ONLINE</span>
@@ -296,11 +296,11 @@ export default function PmKusumPage() {
                         {/* Card 3: Component C */}
                         <SectionWrapper delay={0.2}>
                             <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group h-full">
-                                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                                <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                                     <FontAwesomeIcon icon={faBolt} className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Component C</h3>
-                                <p className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-6">The Utility</p>
+                                <p className="text-xs font-bold text-teal-600 uppercase tracking-wider mb-6">The Utility</p>
 
                                 <div className="space-y-4 mb-8">
                                     <div>

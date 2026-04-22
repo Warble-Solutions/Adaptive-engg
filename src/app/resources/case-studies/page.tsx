@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import { ArrowUpRight } from "lucide-react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 
@@ -36,7 +36,7 @@ export default async function CaseStudiesPage() {
               className="group flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-slate-800 to-emerald-900/40 flex items-center justify-center p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-slate-800 to-teal-900/40 flex items-center justify-center p-8">
                   <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)', backgroundSize: '24px 24px' }} />
                   <h3 className="text-2xl md:text-3xl font-black text-white/90 text-center leading-tight font-heading relative z-10 drop-shadow-lg">
                     {study.title}

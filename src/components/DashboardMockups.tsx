@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -33,7 +33,7 @@ function MiniBar({ heights, color = "bg-primary" }: { heights: number[]; color?:
 }
 
 function StatusDot({ status }: { status: "online" | "warning" | "offline" }) {
-  const colors = { online: "bg-emerald-400", warning: "bg-amber-400", offline: "bg-red-400" };
+  const colors = { online: "bg-teal-400", warning: "bg-amber-400", offline: "bg-red-400" };
   return (
     <span className="relative flex h-2.5 w-2.5">
       {status === "online" && <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${colors[status]} opacity-75`}></span>}
@@ -64,8 +64,8 @@ export function ScadaMonitoringDashboard() {
       {/* Title bar */}
       <div className="flex items-center justify-between mb-4 px-2">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
-          <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">Live</span>
+          <div className="w-3 h-3 rounded-full bg-teal-400 animate-pulse"></div>
+          <span className="text-xs font-bold text-teal-400 uppercase tracking-wider">Live</span>
           <span className="text-xs text-slate-500">• Plant SCADA Overview</span>
         </div>
         <span className="text-[10px] text-slate-500 font-mono">{new Date().toLocaleDateString()}</span>
@@ -74,7 +74,7 @@ export function ScadaMonitoringDashboard() {
       {/* KPI Cards Row */}
       <div className="grid grid-cols-4 gap-2 mb-4">
         {[
-          { label: "Active Power", value: power.toFixed(1), unit: "MW", icon: <Zap className="w-3 h-3" />, color: "text-emerald-400" },
+          { label: "Active Power", value: power.toFixed(1), unit: "MW", icon: <Zap className="w-3 h-3" />, color: "text-teal-400" },
           { label: "Irradiance", value: Math.round(irradiance).toString(), unit: "W/m²", icon: <Sun className="w-3 h-3" />, color: "text-amber-400" },
           { label: "Grid Freq", value: frequency.toFixed(2), unit: "Hz", icon: <Activity className="w-3 h-3" />, color: "text-cyan-400" },
           { label: "Grid Voltage", value: gridVoltage.toFixed(1), unit: "kV", icon: <Gauge className="w-3 h-3" />, color: "text-purple-400" },
@@ -98,13 +98,13 @@ export function ScadaMonitoringDashboard() {
         <div className="col-span-2 bg-white/5 rounded-lg p-3 border border-white/5">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Power Output (MW)</span>
-            <span className="text-[9px] text-emerald-400 font-mono">{power.toFixed(1)} MW</span>
+            <span className="text-[9px] text-teal-400 font-mono">{power.toFixed(1)} MW</span>
           </div>
           <div className="flex items-end gap-[3px] h-16">
             {bars.map((h, i) => (
               <div
                 key={i}
-                className="flex-1 bg-gradient-to-t from-primary/80 to-emerald-400/60 rounded-t-sm transition-all duration-700"
+                className="flex-1 bg-gradient-to-t from-primary/80 to-teal-400/60 rounded-t-sm transition-all duration-700"
                 style={{ height: `${h}%` }}
               />
             ))}
@@ -118,13 +118,13 @@ export function ScadaMonitoringDashboard() {
             {Array.from({ length: 16 }).map((_, i) => (
               <div
                 key={i}
-                className={`w-full aspect-square rounded-sm ${i === 7 ? 'bg-amber-500/60' : i === 12 ? 'bg-red-500/50' : 'bg-emerald-500/50'} hover:brightness-125 transition-all cursor-pointer`}
+                className={`w-full aspect-square rounded-sm ${i === 7 ? 'bg-amber-500/60' : i === 12 ? 'bg-red-500/50' : 'bg-teal-500/50'} hover:brightness-125 transition-all cursor-pointer`}
                 title={`INV-${(i + 1).toString().padStart(2, '0')}: ${i === 7 ? 'Warning' : i === 12 ? 'Offline' : 'Running'}`}
               />
             ))}
           </div>
           <div className="flex items-center gap-3 mt-2">
-            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-emerald-500/50 rounded-sm"></div><span className="text-[8px] text-slate-500">OK</span></div>
+            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-teal-500/50 rounded-sm"></div><span className="text-[8px] text-slate-500">OK</span></div>
             <div className="flex items-center gap-1"><div className="w-2 h-2 bg-amber-500/60 rounded-sm"></div><span className="text-[8px] text-slate-500">Warn</span></div>
             <div className="flex items-center gap-1"><div className="w-2 h-2 bg-red-500/50 rounded-sm"></div><span className="text-[8px] text-slate-500">Off</span></div>
           </div>
@@ -152,7 +152,7 @@ export function PlantOverviewDashboard() {
       {/* Gauge-like KPIs */}
       <div className="grid grid-cols-3 gap-3 mb-3">
         {[
-          { label: "PR", value: pr.toFixed(1), unit: "%", bar: pr, color: "bg-emerald-500" },
+          { label: "PR", value: pr.toFixed(1), unit: "%", bar: pr, color: "bg-teal-500" },
           { label: "CUF", value: cuf.toFixed(1), unit: "%", bar: cuf * 4, color: "bg-cyan-500" },
           { label: "Today Gen", value: gen.toFixed(0), unit: "MWh", bar: gen / 1.5, color: "bg-amber-500" },
         ].map((g, i) => (
@@ -310,7 +310,7 @@ export function AnalyticsDashboard() {
           <div key={i} className="bg-white/5 rounded-lg px-2 py-2 border border-white/5">
             <span className="text-[8px] text-slate-500 font-bold uppercase tracking-wider">{s.label}</span>
             <div className="text-sm font-black font-mono text-white mt-0.5">{s.value}</div>
-            <div className={`flex items-center gap-0.5 mt-0.5 ${s.up ? 'text-emerald-400' : 'text-red-400'}`}>
+            <div className={`flex items-center gap-0.5 mt-0.5 ${s.up ? 'text-teal-400' : 'text-red-400'}`}>
               {s.up ? <TrendingUp className="w-2.5 h-2.5" /> : <TrendingDown className="w-2.5 h-2.5" />}
               <span className="text-[8px] font-bold">{s.trend}</span>
             </div>
@@ -346,9 +346,9 @@ export function SolarProDashboard() {
 
       {/* Mini KPIs */}
       <div className="grid grid-cols-2 gap-2 mb-3">
-        <div className="bg-emerald-50 rounded-lg p-2.5 border border-emerald-100">
-          <span className="text-[8px] text-emerald-600 font-bold uppercase tracking-wider">Today Gen</span>
-          <div className="text-lg font-black text-emerald-700 font-mono">{gen.toFixed(1)} <span className="text-xs font-normal">kWh</span></div>
+        <div className="bg-teal-50 rounded-lg p-2.5 border border-teal-100">
+          <span className="text-[8px] text-teal-600 font-bold uppercase tracking-wider">Today Gen</span>
+          <div className="text-lg font-black text-teal-700 font-mono">{gen.toFixed(1)} <span className="text-xs font-normal">kWh</span></div>
         </div>
         <div className="bg-blue-50 rounded-lg p-2.5 border border-blue-100">
           <span className="text-[8px] text-blue-600 font-bold uppercase tracking-wider">PR</span>
@@ -363,7 +363,7 @@ export function SolarProDashboard() {
           {[0, 0, 5, 18, 35, 52, 68, 78, 85, 82, 75, 60, 42, 25, 12, 3, 0, 0].map((h, i) => (
             <div
               key={i}
-              className="flex-1 bg-gradient-to-t from-primary to-emerald-300 rounded-t-sm transition-all hover:brightness-110"
+              className="flex-1 bg-gradient-to-t from-primary to-teal-300 rounded-t-sm transition-all hover:brightness-110"
               style={{ height: `${h}%` }}
             />
           ))}
@@ -411,9 +411,9 @@ export function NocDashboard() {
 
       {/* Summary bar */}
       <div className="grid grid-cols-3 gap-2 mb-3">
-        <div className="bg-emerald-500/10 rounded-lg p-2 text-center border border-emerald-500/20">
-          <div className="text-lg font-black text-emerald-400">6</div>
-          <span className="text-[8px] text-emerald-400/70 font-bold uppercase">Online</span>
+        <div className="bg-teal-500/10 rounded-lg p-2 text-center border border-teal-500/20">
+          <div className="text-lg font-black text-teal-400">6</div>
+          <span className="text-[8px] text-teal-400/70 font-bold uppercase">Online</span>
         </div>
         <div className="bg-amber-500/10 rounded-lg p-2 text-center border border-amber-500/20">
           <div className="text-lg font-black text-amber-400">1</div>
@@ -468,7 +468,7 @@ export function IoTDevicePreview() {
         <div className="flex items-center gap-2 mb-3">
           {["PWR", "NET", "ERR", "DATA"].map((label, i) => (
             <div key={i} className="flex flex-col items-center gap-0.5">
-              <div className={`w-2 h-2 rounded-full ${leds[i] ? (i === 2 ? 'bg-red-400 animate-pulse' : 'bg-emerald-400') : 'bg-slate-600'} transition-colors`} />
+              <div className={`w-2 h-2 rounded-full ${leds[i] ? (i === 2 ? 'bg-red-400 animate-pulse' : 'bg-teal-400') : 'bg-slate-600'} transition-colors`} />
               <span className="text-[6px] text-slate-500 font-bold">{label}</span>
             </div>
           ))}
@@ -501,7 +501,7 @@ export function IoTDevicePreview() {
 // ─────────────────────────────────────────────
 export function ACDBPanelVisual() {
   return (
-    <div className="w-full h-full bg-gradient-to-br from-slate-100 to-emerald-50 rounded-2xl border border-slate-200 overflow-hidden shadow-xl flex items-center justify-center p-6">
+    <div className="w-full h-full bg-gradient-to-br from-slate-100 to-teal-50 rounded-2xl border border-slate-200 overflow-hidden shadow-xl flex items-center justify-center p-6">
       {/* Panel Box Mockup */}
       <div className="relative">
         <div className="w-52 h-64 bg-gradient-to-b from-slate-300 to-slate-400 rounded-lg border-2 border-slate-500 shadow-2xl relative overflow-hidden">
@@ -563,7 +563,7 @@ export function CMMSDashboard() {
   const tabs = [
     { key: "open" as const, label: "Open", count: 2, color: "text-red-400" },
     { key: "progress" as const, label: "In Progress", count: 2, color: "text-amber-400" },
-    { key: "done" as const, label: "Completed", count: 2, color: "text-emerald-400" },
+    { key: "done" as const, label: "Completed", count: 2, color: "text-teal-400" },
   ];
 
   return (
@@ -591,7 +591,7 @@ export function CMMSDashboard() {
           { label: "Today's WO", value: "12", color: "text-white" },
           { label: "Open", value: "2", color: "text-red-400" },
           { label: "In Progress", value: "2", color: "text-amber-400" },
-          { label: "Closed", value: "8", color: "text-emerald-400" },
+          { label: "Closed", value: "8", color: "text-teal-400" },
         ].map((s, i) => (
           <div key={i} className="bg-white/5 rounded-lg p-2 text-center border border-white/5">
             <div className={`text-base font-black font-mono ${s.color}`}>{s.value}</div>
@@ -634,7 +634,7 @@ export function CMMSDashboard() {
               </div>
             </div>
             <div className="shrink-0 text-right">
-              <span className={`text-[9px] font-mono ${wo.sla === 'Completed' ? 'text-emerald-400' : 'text-amber-400'}`}>{wo.sla}</span>
+              <span className={`text-[9px] font-mono ${wo.sla === 'Completed' ? 'text-teal-400' : 'text-amber-400'}`}>{wo.sla}</span>
               <span className="text-[8px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity block">View →</span>
             </div>
           </div>
@@ -662,17 +662,17 @@ export function ScadaHeroDashboard() {
   const flowAnim = "•".repeat(flowDots) + " ".repeat(3 - flowDots);
 
   return (
-    <div className="w-full h-full bg-[#080e1a] rounded-2xl border border-emerald-500/20 overflow-hidden shadow-[0_0_60px_rgba(4,154,137,0.1)] p-5 text-white select-none flex flex-col">
+    <div className="w-full h-full bg-[#080e1a] rounded-2xl border border-teal-500/20 overflow-hidden shadow-[0_0_60px_rgba(4,154,137,0.1)] p-5 text-white select-none flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between mb-4 shrink-0">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-          <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Plant HMI</span>
+          <div className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></div>
+          <span className="text-[10px] font-bold text-teal-400 uppercase tracking-wider">Plant HMI</span>
           <span className="text-[10px] text-slate-600">|</span>
           <span className="text-[10px] text-slate-500 font-mono">Rajasthan 50MW Solar</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 rounded text-[8px] font-bold border border-emerald-500/20">GRID: SYNC</span>
+          <span className="px-2 py-0.5 bg-teal-500/10 text-teal-400 rounded text-[8px] font-bold border border-teal-500/20">GRID: SYNC</span>
         </div>
       </div>
 
@@ -688,7 +688,7 @@ export function ScadaHeroDashboard() {
           </div>
 
           {/* Flow arrow */}
-          <div className="text-emerald-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
+          <div className="text-teal-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
 
           {/* Inverters */}
           <div className="flex-1 bg-cyan-500/5 border border-cyan-500/20 rounded-xl p-3 text-center">
@@ -698,7 +698,7 @@ export function ScadaHeroDashboard() {
           </div>
 
           {/* Flow arrow */}
-          <div className="text-emerald-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
+          <div className="text-teal-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
 
           {/* Transformer */}
           <div className="flex-1 bg-purple-500/5 border border-purple-500/20 rounded-xl p-3 text-center">
@@ -708,20 +708,20 @@ export function ScadaHeroDashboard() {
           </div>
 
           {/* Flow arrow */}
-          <div className="text-emerald-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
+          <div className="text-teal-500/40 text-xs font-mono tracking-widest shrink-0">{flowAnim}→</div>
 
           {/* Grid */}
-          <div className="flex-1 bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-3 text-center">
-            <Gauge className="w-5 h-5 text-emerald-400 mx-auto mb-1" />
-            <div className="text-xs font-black text-emerald-400 font-mono">{gridExport.toFixed(1)}</div>
-            <div className="text-[7px] text-emerald-400/60 font-bold uppercase">MW Grid</div>
+          <div className="flex-1 bg-teal-500/5 border border-teal-500/20 rounded-xl p-3 text-center">
+            <Gauge className="w-5 h-5 text-teal-400 mx-auto mb-1" />
+            <div className="text-xs font-black text-teal-400 font-mono">{gridExport.toFixed(1)}</div>
+            <div className="text-[7px] text-teal-400/60 font-bold uppercase">MW Grid</div>
           </div>
         </div>
 
         {/* Bottom KPI strip */}
         <div className="grid grid-cols-5 gap-2 mb-3">
           {[
-            { label: "PR", value: pr.toFixed(1) + "%", color: "text-emerald-400" },
+            { label: "PR", value: pr.toFixed(1) + "%", color: "text-teal-400" },
             { label: "CUF", value: "22.1%", color: "text-cyan-400" },
             { label: "Today", value: "112 MWh", color: "text-amber-400" },
             { label: "Loss", value: plantLoss.toFixed(1) + " MW", color: "text-red-400" },
@@ -738,12 +738,12 @@ export function ScadaHeroDashboard() {
         <div className="bg-white/[0.02] rounded-lg p-3 border border-white/[0.04] flex-grow">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[8px] text-slate-500 font-bold uppercase tracking-wider">String Performance Heatmap</span>
-            <span className="text-[8px] text-emerald-400 font-mono">48 strings monitored</span>
+            <span className="text-[8px] text-teal-400 font-mono">48 strings monitored</span>
           </div>
           <div className="grid grid-cols-12 gap-[3px]">
             {Array.from({ length: 48 }).map((_, i) => {
               const perf = i === 15 || i === 31 ? 30 : i === 22 ? 55 : 70 + Math.random() * 30;
-              const color = perf > 85 ? 'bg-emerald-500' : perf > 65 ? 'bg-emerald-500/60' : perf > 50 ? 'bg-amber-500/70' : 'bg-red-500/70';
+              const color = perf > 85 ? 'bg-teal-500' : perf > 65 ? 'bg-teal-500/60' : perf > 50 ? 'bg-amber-500/70' : 'bg-red-500/70';
               return (
                 <div
                   key={i}
@@ -755,8 +755,8 @@ export function ScadaHeroDashboard() {
             })}
           </div>
           <div className="flex items-center gap-4 mt-2">
-            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-emerald-500 rounded-sm"></div><span className="text-[7px] text-slate-500">&gt;85%</span></div>
-            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-emerald-500/60 rounded-sm"></div><span className="text-[7px] text-slate-500">65-85%</span></div>
+            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-teal-500 rounded-sm"></div><span className="text-[7px] text-slate-500">&gt;85%</span></div>
+            <div className="flex items-center gap-1"><div className="w-2 h-2 bg-teal-500/60 rounded-sm"></div><span className="text-[7px] text-slate-500">65-85%</span></div>
             <div className="flex items-center gap-1"><div className="w-2 h-2 bg-amber-500/70 rounded-sm"></div><span className="text-[7px] text-slate-500">50-65%</span></div>
             <div className="flex items-center gap-1"><div className="w-2 h-2 bg-red-500/70 rounded-sm"></div><span className="text-[7px] text-slate-500">&lt;50%</span></div>
           </div>
@@ -799,7 +799,7 @@ export function CMSHeroDashboards() {
                 { x: 30, y: 70 }, { x: 80, y: 50 }, { x: 60, y: 65 },
               ].map((dot, i) => (
                 <div key={i} className="absolute" style={{ left: `${dot.x}%`, top: `${dot.y}%` }}>
-                  <div className={`w-1.5 h-1.5 rounded-full ${i < 4 ? 'bg-cyan-400' : 'bg-emerald-400'}`}>
+                  <div className={`w-1.5 h-1.5 rounded-full ${i < 4 ? 'bg-cyan-400' : 'bg-teal-400'}`}>
                     {i < 2 && <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-60 scale-150"></div>}
                   </div>
                 </div>
@@ -807,7 +807,7 @@ export function CMSHeroDashboards() {
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex justify-between items-center"><span className="text-[9px] text-slate-400">Total Sites</span><span className="text-[10px] text-white font-mono">{Math.round(sites)}</span></div>
-              <div className="flex justify-between items-center"><span className="text-[9px] text-slate-400">Online Rate</span><span className="text-[10px] text-emerald-400 font-mono">98.5%</span></div>
+              <div className="flex justify-between items-center"><span className="text-[9px] text-slate-400">Online Rate</span><span className="text-[10px] text-teal-400 font-mono">98.5%</span></div>
             </div>
           </div>
         </div>
@@ -946,7 +946,7 @@ export function AnalyticsHeroDashboards() {
                 { label: "Soiling Loss", val: -4, color: "bg-rose-400" },
                 { label: "Grid Curtailment", val: -2, color: "bg-rose-400" },
                 { label: "Eqp. Downtime", val: -1.5, color: "bg-rose-400" },
-                { label: "Actual Yield", val: 92.5, color: "bg-emerald-400" },
+                { label: "Actual Yield", val: 92.5, color: "bg-teal-400" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <div className="w-[55px] text-[8px] text-slate-400 font-bold tracking-wider truncate">{item.label}</div>
@@ -1046,7 +1046,7 @@ export function AnalyticsHeroDashboards() {
                 <div className="text-2xl font-bold text-white font-mono gap-1 flex items-baseline">
                   24.8<span className="text-xs text-slate-500">%</span>
                 </div>
-                <div className="mt-1 flex items-center gap-1 text-[9px] text-emerald-400">
+                <div className="mt-1 flex items-center gap-1 text-[9px] text-teal-400">
                   <TrendingUp className="w-3 h-3" /> +1.2% YoY
                 </div>
               </div>
@@ -1160,15 +1160,15 @@ export function EMSHeroDashboards() {
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         className="absolute bottom-6 right-0 w-[260px] z-[2] rotate-3"
       >
-        <div className="w-full bg-[#0a1628]/70 backdrop-blur-xl rounded-2xl border border-emerald-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.5)] p-4 overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent"></div>
+        <div className="w-full bg-[#0a1628]/70 backdrop-blur-xl rounded-2xl border border-teal-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.5)] p-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-emerald-400" />
-                <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">ML Arbitrage</span>
+                <TrendingUp className="w-4 h-4 text-teal-400" />
+                <span className="text-[10px] font-bold text-teal-400 uppercase tracking-wider">ML Arbitrage</span>
               </div>
-              <span className="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded text-[9px] font-bold border border-emerald-500/30 animate-pulse">BUYING</span>
+              <span className="px-1.5 py-0.5 bg-teal-500/20 text-teal-400 rounded text-[9px] font-bold border border-teal-500/30 animate-pulse">BUYING</span>
             </div>
             
             <div className="flex items-center gap-4 mb-3">
@@ -1181,7 +1181,7 @@ export function EMSHeroDashboards() {
               <div className="h-8 w-px bg-white/10"></div>
               <div>
                 <div className="text-[8px] text-slate-400 uppercase font-bold tracking-wider mb-1">Signal</div>
-                <div className="text-sm font-bold text-emerald-400">CHARGE BESS</div>
+                <div className="text-sm font-bold text-teal-400">CHARGE BESS</div>
               </div>
             </div>
 
@@ -1199,7 +1199,7 @@ export function EMSHeroDashboards() {
                   </linearGradient>
                 </defs>
                </svg>
-               <div className="absolute top-[3px] right-0 w-1.5 h-1.5 bg-emerald-400 rounded-full shadow-[0_0_8px_#10b981]"></div>
+               <div className="absolute top-[3px] right-0 w-1.5 h-1.5 bg-teal-400 rounded-full shadow-[0_0_8px_#10b981]"></div>
             </div>
           </div>
         </div>
@@ -1212,14 +1212,14 @@ export function EMSHeroDashboards() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] z-[3]"
       >
         <div className="w-full bg-[#0a1628]/80 backdrop-blur-2xl rounded-3xl border border-blue-500/40 shadow-[0_16px_60px_rgba(59,130,246,0.25)] p-6 overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-emerald-500/10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-teal-500/10 pointer-events-none"></div>
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full"></div>
           
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
                 <Battery className="w-5 h-5 text-blue-400" />
-                <span className="text-xs font-black text-white tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">BESS State of Charge</span>
+                <span className="text-xs font-black text-white tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">BESS State of Charge</span>
               </div>
               <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
             </div>
@@ -1245,7 +1245,7 @@ export function EMSHeroDashboards() {
                 </div>
                 <div>
                   <div className="text-[9px] text-slate-400 font-bold uppercase tracking-wider mb-1">Health (SOH)</div>
-                  <div className="text-lg font-bold text-emerald-400 font-mono">99.4 <span className="text-xs text-slate-500">%</span></div>
+                  <div className="text-lg font-bold text-teal-400 font-mono">99.4 <span className="text-xs text-slate-500">%</span></div>
                 </div>
               </div>
             </div>
@@ -1306,7 +1306,7 @@ export function HybridPlantDashboard() {
                <div className="text-2xl font-black text-white font-mono mt-1">{load.toFixed(1)} MW</div>
              </div>
              <div className="text-right">
-                <span className="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-[9px] font-bold">MATCHED</span>
+                <span className="px-2 py-1 bg-teal-500/20 text-teal-400 rounded text-[9px] font-bold">MATCHED</span>
              </div>
           </div>
 

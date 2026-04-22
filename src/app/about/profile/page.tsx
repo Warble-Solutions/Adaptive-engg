@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
@@ -47,7 +47,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
+              <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
                 <div className="grid grid-cols-3 gap-8 relative z-10">
                   <div>
                     <div className="text-4xl font-black text-slate-900 mb-1">68GW+</div>
@@ -199,7 +199,7 @@ export default function Page() {
               <SectionWrapper delay={0.42}>
                 <div className="relative pl-20">
                   <div className="absolute left-4 top-1 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shadow-lg">Now</div>
-                  <div className="bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
                     <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Current</div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Industry Leader</h3>
                     <p className="text-slate-600 leading-relaxed">Team Strength — 300+. Renewable Installed Base — 68 GW+. Sites Monitored — 1000+. Electrical Panels Supplied — 10,000+. Yearly Capacity — 25GW+.</p>

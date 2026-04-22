@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useScene, SceneVariant } from "@/context/SceneContext";
@@ -19,7 +19,7 @@ export default function SceneTrigger({ variant, color, speed = 1 }: SceneTrigger
                 setScene({
                     variant,
                     primaryColor: color,
-                    secondaryColor: "#0F172A",
+                    secondaryColor: "#0B1120",
                     speed
                 });
             }}

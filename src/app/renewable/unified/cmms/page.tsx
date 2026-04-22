@@ -1,4 +1,4 @@
-import SectionWrapper from "@/components/SectionWrapper";
+﻿import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wrench, ClipboardList, CheckCircle2, Bell, FileCheck, Package, QrCode, Camera, Smartphone, Clock, BarChart3, Users, Shield, Calendar, Cog } from "lucide-react";
 
@@ -81,17 +81,17 @@ export default function Page() {
                 num: "03",
                 title: "Reduced Mean Time to Repair",
                 desc: "AI-driven task prioritization. Auto-assignment based on proximity and skill set. Push notifications with SLA deadlines. Average MTTR reduction: 60%.",
-                accent: "from-emerald-500/10 to-transparent",
-                border: "hover:border-emerald-200",
-                numColor: "text-emerald-500/20",
+                accent: "from-teal-500/10 to-transparent",
+                border: "hover:border-teal-200",
+                numColor: "text-teal-500/20",
               },
               {
                 num: "04",
                 title: "Inventory & Cost Control",
                 desc: "Track every spare part, consumable, and tool across your fleet. Min/max quantity alerts. Vendor management. Cost-per-work-order analysis.",
-                accent: "from-blue-500/10 to-transparent",
-                border: "hover:border-blue-200",
-                numColor: "text-blue-500/20",
+                accent: "from-teal-500/10 to-transparent",
+                border: "hover:border-teal-200",
+                numColor: "text-teal-500/20",
               },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
@@ -128,7 +128,7 @@ export default function Page() {
               { step: "Detect", icon: <Bell className="w-6 h-6" />, desc: "SCADA alarm triggers or scheduled PM due date reached", color: "text-red-400" },
               { step: "Dispatch", icon: <Users className="w-6 h-6" />, desc: "Auto-assign to nearest qualified technician with SLA", color: "text-amber-400" },
               { step: "Execute", icon: <Camera className="w-6 h-6" />, desc: "Follow SOP checklists, capture photo evidence on mobile", color: "text-yellow-400" },
-              { step: "Resolve", icon: <CheckCircle2 className="w-6 h-6" />, desc: "Verify completion, log root cause, update knowledge base", color: "text-emerald-400" },
+              { step: "Resolve", icon: <CheckCircle2 className="w-6 h-6" />, desc: "Verify completion, log root cause, update knowledge base", color: "text-teal-400" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="bg-slate-900/80 backdrop-blur-sm p-8 md:p-10 h-full flex flex-col group hover:bg-white/[0.04] transition-colors">

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Upload, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
@@ -68,7 +68,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
 
   if (success) {
     return (
-      <div className="bg-emerald-50 border border-emerald-500 rounded-2xl p-8 text-center flex flex-col items-center">
+      <div className="bg-teal-50 border border-teal-500 rounded-2xl p-8 text-center flex flex-col items-center">
         <CheckCircle2 className="w-16 h-16 text-primary mb-4" />
         <h3 className="text-2xl font-bold text-white font-heading mb-2">Application Submitted!</h3>
         <p className="text-slate-300">

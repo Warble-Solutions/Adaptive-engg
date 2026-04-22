@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Leaf, Sprout, Combine, CalendarClock, ShieldAlert, Cpu } from "lucide-react";
@@ -11,13 +11,13 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col w-full">
-      <SceneTrigger variant="logo" color="#22c55e" speed={0.5} /> {/* Green theme for agriculture/micro-irrigation */}
+      <SceneTrigger variant="logo" color="#049A89" speed={0.5} /> {/* Green theme for agriculture/micro-irrigation */}
 
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1920&q=80" alt="Micro Irrigation Field" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-green-950/80 via-black/60 to-[#0f172a] z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-green-950/80 via-black/60 to-[#0B1120] z-10"></div>
         </div>
         <div className="z-10 max-w-7xl relative mx-auto flex flex-col items-center">
           <SectionWrapper>
@@ -101,7 +101,7 @@ export default function Page() {
             </SectionWrapper>
             
             <SectionWrapper delay={0.5}>
-              <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-green-600 to-emerald-800 rounded-3xl p-8 text-white relative overflow-hidden h-full flex flex-col justify-center shadow-xl">
+              <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-green-600 to-teal-800 rounded-3xl p-8 text-white relative overflow-hidden h-full flex flex-col justify-center shadow-xl">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl rounded-full"></div>
                 <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
                   <div className="w-20 h-20 bg-white/20 backdrop-blur-sm shadow-inner rounded-full flex items-center justify-center shrink-0 border border-white/30">

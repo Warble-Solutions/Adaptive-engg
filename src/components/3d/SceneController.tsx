@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -12,15 +12,15 @@ export default function SceneController() {
         // Determine variant based on route
         if (pathname === "/about") {
             setScene({
-                primaryColor: "#0EA5E9", // Sky Blue
-                secondaryColor: "#0F172A",
+                primaryColor: "#049A89", // Sky Blue
+                secondaryColor: "#0B1120",
                 speed: 0.5,
                 variant: "wind", // Wind Turbine
             });
         } else if (pathname === "/renewable" || pathname.startsWith("/renewable/")) {
             setScene({
                 primaryColor: "#EAB308", // Sun Yellow
-                secondaryColor: "#0F172A",
+                secondaryColor: "#0B1120",
                 speed: 0.4,
                 variant: "solar", // Solar Array
             });
@@ -33,8 +33,8 @@ export default function SceneController() {
             });
         } else if (pathname === "/pm-kusum" || pathname.includes("kusum")) {
             setScene({
-                primaryColor: "#0ea5e9", // Water/Sky like color for the wave
-                secondaryColor: "#0F172A",
+                primaryColor: "#049A89", // Water/Sky like color for the wave
+                secondaryColor: "#0B1120",
                 speed: 0.5,
                 variant: "wave", // Original Wave/Plane
             });
@@ -42,7 +42,7 @@ export default function SceneController() {
             // Default: Home, Contact
             setScene({
                 primaryColor: "#049A89", // Default Teal
-                secondaryColor: "#0F172A",
+                secondaryColor: "#0B1120",
                 speed: 1,
                 variant: "logo", // AEPL Sunburst Logo
             });

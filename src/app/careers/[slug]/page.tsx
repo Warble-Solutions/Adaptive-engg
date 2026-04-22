@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Building, Briefcase } from "lucide-react";
@@ -64,7 +64,7 @@ export default async function JobDetailPage({ params }: { params: Promise<{ slug
                   {job.department}
                 </div>
                 <div className="flex items-center gap-1.5 bg-slate-800/80 backdrop-blur-sm px-4 py-2 rounded-xl text-white">
-                  <Briefcase className="w-4 h-4 text-blue-500" />
+                  <Briefcase className="w-4 h-4 text-teal-500" />
                   {job.type}
                 </div>
               </div>

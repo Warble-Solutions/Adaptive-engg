@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
 
@@ -18,7 +18,7 @@ type SceneContextType = {
 
 const defaultScene: SceneState = {
     primaryColor: "#049A89", // Default Teal
-    secondaryColor: "#0F172A", // Slate 900
+    secondaryColor: "#0B1120", // Slate 900
     speed: 1,
     variant: 'logo',
 };

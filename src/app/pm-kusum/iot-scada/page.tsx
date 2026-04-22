@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wifi, Monitor, Smartphone, BarChart3, Globe, Shield, Settings, CheckCircle2, Server, Radio, Cloud, Lock, Cpu, Activity, Users } from "lucide-react";
@@ -66,7 +66,7 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* SolarEdge — Hardware */}
             <SectionWrapper delay={0.1}>
-              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-emerald-50 rounded-3xl border border-emerald-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
+              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-teal-50 rounded-3xl border border-teal-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[80px]"></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
@@ -86,13 +86,13 @@ export default function Page() {
 
             {/* SolarPro — Software */}
             <SectionWrapper delay={0.2}>
-              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-blue-50 rounded-3xl border border-blue-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-[80px]"></div>
+              <div className="group relative p-10 bg-gradient-to-br from-slate-50 to-teal-50 rounded-3xl border border-teal-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-bl-[80px]"></div>
                 <div className="relative z-10">
-                  <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                  <div className="w-16 h-16 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
                     <Monitor className="w-8 h-8" />
                   </div>
-                  <div className="inline-block px-3 py-1 bg-blue-500/10 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Software</div>
+                  <div className="inline-block px-3 py-1 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Software</div>
                   <h3 className="text-3xl font-black text-slate-900 mb-4">SolarPro</h3>
                   <p className="text-slate-600 leading-relaxed mb-6">
                     Cloud-based monitoring platform with real-time dashboards, performance analytics, automated reporting, and mobile access. MNRE & DISCOM compliant reporting built-in.
@@ -112,7 +112,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400 font-heading mb-4">Features & Benefits</h2>
+              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">Features & Benefits</h2>
             </div>
           </SectionWrapper>
 

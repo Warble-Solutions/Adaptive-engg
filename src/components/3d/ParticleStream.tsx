@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -415,7 +415,7 @@ export default function ParticleStream() {
                 <Canvas camera={{ position: [0, 0, 70], fov: 60 }} gl={{ powerPreference: "default", alpha: true }}>
                     <MorphingParticles />
                     {/* Fog for depth */}
-                    <fog attach="fog" args={['#0F172A', 40, 100]} />
+                    <fog attach="fog" args={['#0B1120', 40, 100]} />
                 </Canvas>
             </ErrorBoundary>
         </div>

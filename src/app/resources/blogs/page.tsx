@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import { format } from "date-fns";
@@ -43,7 +43,7 @@ export default async function BlogsPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center">
                       <span className="text-primary font-bold tracking-widest uppercase opacity-50">Adaptive</span>
                     </div>
                   )}

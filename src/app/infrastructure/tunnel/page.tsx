@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Share2, Lightbulb, Clock, CheckCircle2, Layers } from "lucide-react";
@@ -23,19 +23,19 @@ export default function Page() {
         
         <div className="z-10 max-w-7xl relative mt-20">
           <SectionWrapper>
-            <div className="inline-block px-5 py-2.5 bg-emerald-500/10 backdrop-blur-md text-emerald-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-emerald-500/20 shadow-[0_0_30px_rgba(4,154,137,0.3)]">
+            <div className="inline-block px-5 py-2.5 bg-teal-500/10 backdrop-blur-md text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20 shadow-[0_0_30px_rgba(4,154,137,0.3)]">
               Infrastructure Experts
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-8 font-heading leading-tight drop-shadow-2xl">
-              Tunnel <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Infrastructure</span>
+              Tunnel <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Infrastructure</span>
             </h1>
             
             <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-cyan-500"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-cyan-500"></div>
               <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-6 block w-full text-center">
                 With rising awareness on road and rail safety, governments are modernizing tunnel infrastructure. At Adaptive Engineering Pvt Ltd, we are experts in providing <span className="text-white font-bold">Electrical, Instrumentation and Automation Solutions for Road, Railway and Metro Tunnels</span>.
               </p>
-              <p className="text-emerald-400 font-bold tracking-wider uppercase text-sm block w-full text-center">
+              <p className="text-teal-400 font-bold tracking-wider uppercase text-sm block w-full text-center">
                 The "Preferred Project Partner" in Turn-Key Projects for EPCs.
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function Page() {
       </section>
 
       {/* 2. STAGGERED STATISTICS ROW (Bridging Dark to Light transition) */}
-      <section className="py-16 bg-white rounded-t-[50px] relative z-20 -mt-20 border-t-4 border-emerald-500 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+      <section className="py-16 bg-white rounded-t-[50px] relative z-20 -mt-20 border-t-4 border-teal-500 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100">
             {[
@@ -57,7 +57,7 @@ export default function Page() {
               <SectionWrapper key={idx} delay={idx * 0.1}>
                 <div className="text-center p-4">
                   <div className="text-4xl font-black text-slate-900 mb-2 tracking-tight">
-                    {stat.val}<span className="text-emerald-500">{stat.suf}</span>
+                    {stat.val}<span className="text-teal-500">{stat.suf}</span>
                   </div>
                   <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest">{stat.label}</div>
                 </div>
@@ -74,11 +74,11 @@ export default function Page() {
             <div className="lg:w-1/3">
               <div className="lg:sticky lg:top-32">
                 <SectionWrapper>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 text-emerald-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-emerald-500/20">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                     <Zap className="w-4 h-4" />
                     <span>System Advantages</span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">Benefits</span></h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Benefits</span></h2>
                   <p className="text-slate-500 text-lg leading-relaxed mb-8">Intelligent automation that protects lives, preserves infrastructure, and slashes energy consumption.</p>
                 </SectionWrapper>
               </div>
@@ -94,8 +94,8 @@ export default function Page() {
                 { icon: <Clock className="w-6 h-6" />, title: "Manage Emergencies", desc: "Immediate isolation and suppression protocols executed natively within the automation architecture." },
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
-                  <div className="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:border-emerald-200">
-                    <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 border border-emerald-100 group-hover:scale-110 transition-transform">
+                  <div className="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:border-teal-200">
+                    <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 border border-teal-100 group-hover:scale-110 transition-transform">
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -113,7 +113,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Value Creation</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Value Creation</span></h2>
             </div>
           </SectionWrapper>
 
@@ -121,8 +121,8 @@ export default function Page() {
             
             {/* Bento Box 1 - Medium */}
             <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:bg-white/10 hover:border-emerald-500/50 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:bg-white/10 hover:border-teal-500/50 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
+                <div className="w-12 h-12 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 relative z-10">Scalable Projects</h3>
@@ -132,7 +132,7 @@ export default function Page() {
 
             {/* Bento Box 2 - Large Wide (Image bg) */}
             <SectionWrapper delay={0.2}>
-              <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 h-[300px] flex flex-col justify-end group relative overflow-hidden">
+              <div className="md:col-span-2 p-8 bg-slate-900 rounded-3xl border border-white/10 hover:border-teal-500/50 transition-all duration-500 h-[300px] flex flex-col justify-end group relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/imgs/tunnel/tunnel_scada.png')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent"></div>
                 <div className="relative z-10">
@@ -180,12 +180,12 @@ export default function Page() {
 
             {/* Bento Box 4 - Small */}
             <SectionWrapper delay={0.4}>
-              <div className="p-8 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 backdrop-blur-md rounded-3xl border border-emerald-500/20 hover:bg-emerald-500/20 transition-all duration-500 h-full flex flex-col items-center justify-center text-center group relative overflow-hidden">
+              <div className="p-8 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-md rounded-3xl border border-teal-500/20 hover:bg-teal-500/20 transition-all duration-500 h-full flex flex-col items-center justify-center text-center group relative overflow-hidden">
                 <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white mb-4 backdrop-blur-sm group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(4,154,137,0.5)]">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 relative z-10">Professional Management</h3>
-                <p className="text-emerald-300 font-bold text-sm leading-relaxed relative z-10">Highly Professional PMO Team.</p>
+                <p className="text-teal-300 font-bold text-sm leading-relaxed relative z-10">Highly Professional PMO Team.</p>
               </div>
             </SectionWrapper>
           </div>
@@ -198,7 +198,7 @@ export default function Page() {
           <SectionWrapper>
             <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Secure Your Infrastructure</h2>
             <p className="text-slate-500 mb-8 text-lg">Partner with AEPL for unmatched automation and safety implementation.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-full font-bold hover:shadow-lg transition-all hover:scale-105">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-full font-bold hover:shadow-lg transition-all hover:scale-105">
               Contact Engineering Team <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

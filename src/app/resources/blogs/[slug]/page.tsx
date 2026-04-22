@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <main className="min-h-screen pt-32 pb-24 relative selection:bg-blue-500/30">
+    <main className="min-h-screen pt-32 pb-24 relative selection:bg-teal-500/30">
       <SceneTrigger variant="wave" color="#049A89" speed={0.4} />
 
       <article className="max-w-4xl mx-auto px-6 relative z-10">
@@ -93,7 +93,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline
           prose-li:text-white prose-li:my-2
           prose-strong:font-bold prose-strong:text-white font-heading
-          prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50/50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:not-italic prose-blockquote:font-medium prose-blockquote:text-slate-800"
+          prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50/50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:not-italic prose-blockquote:font-medium prose-blockquote:text-slate-800"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
         

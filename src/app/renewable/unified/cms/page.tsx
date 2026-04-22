@@ -1,4 +1,4 @@
-import SectionWrapper from "@/components/SectionWrapper";
+﻿import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Eye, TrendingDown, Zap, Shield, BarChart3, Globe, Activity, Database, Lock, CheckCircle2, Layers, Server, Wifi } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
@@ -60,7 +60,7 @@ export default function Page() {
             <div className="lg:w-1/3">
               <div className="lg:sticky lg:top-32">
                 <SectionWrapper>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                     <TrendingDown className="w-4 h-4" />
                     <span>Portfolio Optimization</span>
                   </div>
@@ -72,10 +72,10 @@ export default function Page() {
             
             <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { icon: <Eye className="w-6 h-6" />, title: "Complete Visibility", desc: "Gain total, unimpeded oversight across disparate renewable portfolios instantly.", color: "text-blue-600 bg-blue-50 hover:border-blue-300 shadow-blue-500/20" },
-                { icon: <TrendingDown className="w-6 h-6" />, title: "Reduced Downtime", desc: "Identify underperforming strings or equipment faults seconds after they occur in the field.", color: "text-emerald-600 bg-emerald-50 hover:border-emerald-300 shadow-emerald-500/20" },
+                { icon: <Eye className="w-6 h-6" />, title: "Complete Visibility", desc: "Gain total, unimpeded oversight across disparate renewable portfolios instantly.", color: "text-teal-600 bg-teal-50 hover:border-teal-300 shadow-teal-500/20" },
+                { icon: <TrendingDown className="w-6 h-6" />, title: "Reduced Downtime", desc: "Identify underperforming strings or equipment faults seconds after they occur in the field.", color: "text-teal-600 bg-teal-50 hover:border-teal-300 shadow-teal-500/20" },
                 { icon: <Zap className="w-6 h-6" />, title: "Accurate Insights", desc: "Extract meaning from raw SCADA metrics with deeply processed automated energy insights.", color: "text-amber-600 bg-amber-50 hover:border-amber-300 shadow-amber-500/20" },
-                { icon: <Shield className="w-6 h-6" />, title: "Scalable Security", desc: "Seamless deployment elasticity built atop SOC-2 compliant encrypted data architectures.", color: "text-purple-600 bg-purple-50 hover:border-purple-300 shadow-purple-500/20" },
+                { icon: <Shield className="w-6 h-6" />, title: "Scalable Security", desc: "Seamless deployment elasticity built atop SOC-2 compliant encrypted data architectures.", color: "text-teal-600 bg-teal-50 hover:border-teal-300 shadow-teal-500/20" },
               ].map((item, i) => (
                 <SectionWrapper key={i} delay={i * 0.1}>
                   <div className={`p-8 rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 h-full flex flex-col group hover:-translate-y-1 hover:shadow-lg ${item.color}`}>
@@ -127,7 +127,7 @@ export default function Page() {
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className={`p-10 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 flex flex-col md:flex-row items-center gap-10 hover:bg-white/10 transition-colors ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-3xl border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
+                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-teal-600/20 rounded-3xl border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0 shadow-[0_0_50px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
                      {item.icon}
                    </div>
                    <div className={`flex-grow ${i % 2 !== 0 ? 'md:text-right' : ''}`}>

@@ -1,4 +1,4 @@
-import SceneTrigger from "@/components/3d/SceneTrigger";
+﻿import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Image from "next/image";
 import Link from "next/link";
@@ -159,7 +159,7 @@ export default function CertificationsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {isoCerts.map((cert, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl border border-teal-100 shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow">
+                <div className="bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow">
                   <div className="relative w-full aspect-[3/4] bg-white">
                     <Image
                       src={cert.image}

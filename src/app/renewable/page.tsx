@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { ArrowRight, ChevronRight, Server, Zap, Shield, BarChart3, Settings, Battery, CheckCircle2, Factory, Cable, Monitor, Cpu, Network, PieChart, Wrench, Sun } from "lucide-react";
@@ -50,9 +50,9 @@ export default function RenewablePage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
                         {/* Card 1: Software */}
                         <SectionWrapper delay={0.1}>
-                            <a href="#unified" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-blue-500 hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+                            <a href="#unified" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-teal-500 hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-blue-50 rounded-2xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
                                         <Monitor className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Unified Renewable Solution</h3>
@@ -63,9 +63,9 @@ export default function RenewablePage() {
 
                         {/* Card 2: Hardware */}
                         <SectionWrapper delay={0.2}>
-                            <a href="#panels" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-emerald-500 hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+                            <a href="#panels" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-teal-500 hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
                                 <div className="flex flex-col items-center text-center gap-6 mb-4">
-                                    <div className="p-5 bg-emerald-50 rounded-2xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                                    <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
                                         <Zap className="w-10 h-10" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 transition-colors">Electrical Panels</h3>
