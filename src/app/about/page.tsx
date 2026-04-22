@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { CheckCircle2, Rocket, Factory, TrendingUp, Trophy, MapPin, Cpu, Activity } from "lucide-react";
+import { CheckCircle2, Rocket, Factory, TrendingUp, Trophy, MapPin, Cpu, Activity, Wrench, Users, Award, Zap } from "lucide-react";
+import { WATER_STATS, TUNNEL_STATS } from "@/lib/constants";
 import MicroCTA from "@/components/ui/MicroCTA";
 import Counter from "@/components/ui/Counter";
 import { COMPANY_STATS } from "@/lib/constants";
@@ -89,141 +90,82 @@ export default function AboutPage() {
  </div>
  </section>
 
- {/* 3. HISTORY TIMELINE (Dark) */}
+ {/* 3. WHO WE ARE (Dark) */}
  <section className="section-dark py-32 bg-transparent text-white relative z-10">
- <div className="max-w-4xl mx-auto px-6">
+ <div className="max-w-7xl mx-auto px-6">
  <SectionWrapper>
- <h2 className="text-4xl font-bold text-center mb-20 font-heading">Our Journey</h2>
+ <div className="text-center mb-20">
+ <span className="text-primary font-bold uppercase text-sm tracking-widest mb-4 block">Who We Are</span>
+ <h2 className="text-4xl md:text-5xl font-bold font-heading">Engineering Excellence,<br className="hidden md:block" /> End to End</h2>
+ </div>
  </SectionWrapper>
 
- <div className="relative max-w-5xl mx-auto px-6">
- {/* Central Line (Desktop) */}
- <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 hidden md:block transform -translate-x-1/2"></div>
+ {/* Main Content Grid */}
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+ {/* Left: Company Description */}
+ <div className="space-y-10">
+ <SectionWrapper delay={0.1}>
+ <div className="flex items-start gap-5">
+ <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 mt-1">
+ <Wrench className="w-6 h-6 text-primary" />
+ </div>
+ <div>
+ <h3 className="text-xl font-bold mb-3">Complete Turnkey Solutions</h3>
+ <p className="text-gray-400 leading-relaxed">
+ AEPL offers end-to-end solutions starting from conceptualizing, designing, supplying, installing, testing, commissioning and maintaining of complete industrial automation and electrical (upto 66KV) systems. It also provides customized software solutions for Central Plant Monitoring and Mobile Asset Management packages to make the most of any installation.
+ </p>
+ </div>
+ </div>
+ </SectionWrapper>
 
- {/* Central Line (Mobile) */}
- <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 md:hidden"></div>
+ <SectionWrapper delay={0.2}>
+ <div className="flex items-start gap-5">
+ <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 mt-1">
+ <Users className="w-6 h-6 text-primary" />
+ </div>
+ <div>
+ <h3 className="text-xl font-bold mb-3">Passionate Team, Proven Results</h3>
+ <p className="text-gray-400 leading-relaxed">
+ Driven by a passionate team of {COMPANY_STATS.manpower.value}+ engineers under the guidance of the founders carrying rich experience of more than {COMPANY_STATS.yearsExperience.value}+ years, team AEPL has successfully completed {COMPANY_STATS.scadaInstalled.value}+ projects across India. Completing projects before time with the demonstration of the best quality work and use of latest technologies enables AEPL to deliver maximum value.
+ </p>
+ </div>
+ </div>
+ </SectionWrapper>
 
+ <SectionWrapper delay={0.3}>
+ <div className="flex items-start gap-5">
+ <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 mt-1">
+ <Award className="w-6 h-6 text-primary" />
+ </div>
+ <div>
+ <h3 className="text-xl font-bold mb-3">Preferred Project Partner</h3>
+ <p className="text-gray-400 leading-relaxed">
+ AEPL has achieved an exceptional track record of managing Renewable Plant Monitoring Software with an installed base of {COMPANY_STATS.installedBase.value}GW+ at {COMPANY_STATS.satisfiedCustomers.value}+ plants across India. It also manages {WATER_STATS.supplySchemes.value}+ Water Supply Schemes and India&apos;s widest highway twin-tunnel of {TUNNEL_STATS.twinTubeRoad.value}KM where complete E&I packages are delivered. With such a vast experience, cost leadership, faster execution and quality of work, the company is considered a &ldquo;Preferred Project Partner&rdquo; by large corporate houses of India.
+ </p>
+ </div>
+ </div>
+ </SectionWrapper>
+ </div>
+
+ {/* Right: Key Highlights */}
+ <SectionWrapper delay={0.2} className="h-full">
+ <div className="grid grid-cols-2 gap-6 h-full">
  {[
- {
- year: "2014",
- icon: Rocket,
- points: [
- "Team Strength - 15",
- "Renewable Installed Capacity - 100MW",
- "Authorized System Integrators - Schneider-Electric"
- ]
- },
- {
- year: "2016",
- icon: Factory,
- points: [
- "First Panel Manufacturing Factory",
- "ISO 9001:2015 - TUV NORD",
- "Renewable Installed Capacity - 250MW"
- ]
- },
- {
- year: "2018",
- icon: TrendingUp,
- points: [
- "Renewable Installed Capacity - 4.8GW+",
- "HT/LT Panels",
- "Highest Revenue Growth in SCADA - Schneider-Electric"
- ]
- },
- {
- year: "2020",
- icon: Trophy,
- points: [
- "Renewable Installed Capacity - 14GW+",
- "Introduced Renewable PPC",
- "Outstanding Achievement in Solar Segment - EQ Magazine",
- "Best End User & EPC Solution Provider - Schneider-Electric",
- "Best Solar Monitoring Company of the Year - ET Now"
- ]
- },
- {
- year: "2022",
- icon: MapPin,
- points: [
- "Single location 1GW",
- "Single Largest Order - 3.6GW",
- "Second Factory - 60,000/- sq.ft.",
- "Preferred Project Partner of Industry Leaders"
- ]
- },
- {
- year: "2024",
- icon: Cpu,
- points: [
- "Renewable Installed Capacity - 40GW+",
- "New Office - 100+ workstations",
- "Participation in International Expos",
- "Monitoring Solutions - PM KUSUM",
- "SCADA Tags in a single project - 10,00,000+",
- "Hardware In Loop (HIL) Testing - PPC",
- "Introduced EMS - BESS",
- "Transition From commissioning (2014) to configuration (2024)",
- "Highest Revenue in Digitization - Schneider-Electric"
- ]
- },
- {
- year: "Current",
- icon: Activity,
- points: [
- "Team Strength - 300+",
- "Solar Installed Capacity - 51GW+",
- "PPC - 49GW+",
- "Years of Experience - 30+",
- "Renewable Energy Plants Monitored - 650+",
- "Electrical Panels Supplied - 10,000+",
- "Projects Completed - 1000+",
- "Yearly Capacity - 25GW+"
- ]
- }
+ { icon: Zap, value: `${COMPANY_STATS.installedBase.value}GW+`, label: "Installed Base" },
+ { icon: Users, value: `${COMPANY_STATS.manpower.value}+`, label: "Engineers" },
+ { icon: Factory, value: COMPANY_STATS.electricalPanels.formatted, label: "Panels Supplied" },
+ { icon: Activity, value: `${COMPANY_STATS.satisfiedCustomers.value}+`, label: "Plants Monitored" },
+ { icon: MapPin, value: `${WATER_STATS.supplySchemes.value}+`, label: "Water Schemes" },
+ { icon: Trophy, value: `${COMPANY_STATS.yearsExperience.value}+`, label: "Years Experience" },
  ].map((item, i) => (
- <SectionWrapper key={i} delay={i * 0.1}>
- <div className={`relative flex flex-col md:flex-row items-center mb-16 md:mb-24 ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
-
- {/* Timeline Node */}
- <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-slate-900 border-4 border-primary shadow-[0_0_15px_rgba(4,154,137,0.5)] z-20 flex items-center justify-center">
- <div className="w-3 h-3 bg-white rounded-full"></div>
+ <div key={i} className="p-6 flex flex-col justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 group hover:-translate-y-1 h-full">
+ <item.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
+ <div className="text-3xl font-black text-white font-heading mb-1">{item.value}</div>
+ <div className="text-xs font-bold text-gray-400 uppercase tracking-wider">{item.label}</div>
  </div>
-
- {/* Content Card */}
- <div className={`w-full md:w-1/2 pl-20 ${i % 2 === 0 ? "md:pl-16 md:pr-0" : "md:pr-16 md:pl-0"}`}>
- <div className={`
- p-8 rounded-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:-translate-y-1 group relative overflow-hidden
- ${i % 2 === 0 ? "bg-gradient-to-br from-white/5 to-white/0" : "bg-gradient-to-bl from-white/5 to-white/0"}
- `}>
- {/* Decorative Large Background Icon */}
- <item.icon className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 rotate-[-15deg] group-hover:rotate-0 transition-transform duration-500" />
-
- <div className="flex items-center gap-4 mb-6 relative z-10">
- <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
- <item.icon className="w-6 h-6 text-primary" />
- </div>
- <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-300 font-heading">
- {item.year}
- </h3>
- </div>
-
- <ul className="space-y-3 relative z-10">
- {item.points.map((point, idx) => (
- <li key={idx} className="flex items-start gap-3 text-gray-300 text-sm md:text-base group-hover:text-white transition-colors">
- <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 group-hover:scale-125 transition-transform shrink-0"></span>
- <span>{point}</span>
- </li>
  ))}
- </ul>
- </div>
- </div>
-
- {/* Spacer for opposite side */}
- <div className="hidden md:block w-1/2"></div>
  </div>
  </SectionWrapper>
- ))}
  </div>
  </div>
  </section>
