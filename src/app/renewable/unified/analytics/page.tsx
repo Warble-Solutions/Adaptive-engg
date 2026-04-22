@@ -1,4 +1,4 @@
-﻿import SectionWrapper from "@/components/SectionWrapper";
+import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart } from "lucide-react";
 import { AnalyticsDashboard, AnalyticsHeroDashboards } from "@/components/DashboardMockups";
@@ -64,7 +64,7 @@ export default function Page() {
               { icon: <LineChart className="w-7 h-7" />, title: "Analyse Historical Data", desc: "Years of historical data at your fingertips. Trend analysis, degradation curves, seasonal patterns, and YoY performance comparison.", color: "bg-gradient-to-br from-teal-500 to-teal-500" },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
+                <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:border-slate-300 shadow-xl hover:shadow-2xl -translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
                   <div className={`absolute top-0 right-0 w-32 h-32 ${item.color} rounded-bl-[80px] opacity-5 group-hover:opacity-10 transition-opacity`}></div>
                   <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     {item.icon}
@@ -99,6 +99,7 @@ export default function Page() {
                     "Automated root cause analysis",
                     "Weather-correlated performance modeling",
                     "Equipment comparison and benchmarking",
+                    "Export Analysis to Third Party Software (e.g. Power BI)",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <CheckCircle2 className="text-teal-400 w-5 h-5 shrink-0" />

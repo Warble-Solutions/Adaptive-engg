@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
@@ -42,7 +42,7 @@ export default function Page() {
               <div>
                 <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Zero Downtime Architecture</h2>
                 <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-                  In a connected world, data centers are the backbone of every digital business. A single minute of downtime can cost millions. AEPL designs and builds electrical infrastructure that meets Tier III and Tier IV availability standards — from redundant power distribution and precision cooling to comprehensive DCIM solutions that give operators complete visibility into their facility.
+                  In a connected world, data centers are the backbone of every digital business. A single minute of downtime can cost millions. AEPL designs and builds electrical infrastructure that meets Tier III and Tier IV availability standards � from redundant power distribution and precision cooling to comprehensive DCIM solutions that give operators complete visibility into their facility.
                 </p>
               </div>
             </SectionWrapper>
@@ -78,7 +78,7 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <SectionWrapper delay={0}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-white/30 hover:bg-[#0da08a] hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
                 <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                   <Zap className="w-6 h-6" />
                 </div>
@@ -89,7 +89,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.1}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-white/30 hover:bg-[#0da08a] hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
                 <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                   <Activity className="w-6 h-6" />
                 </div>
@@ -100,7 +100,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-white/30 hover:bg-[#0da08a] hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
                 <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
@@ -111,7 +111,7 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.3}>
-              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-white/30 hover:bg-[#0da08a] hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
                 <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                   <Cpu className="w-6 h-6" />
                 </div>
@@ -146,6 +146,10 @@ export default function Page() {
                   <li className="flex items-start gap-4 text-slate-700">
                     <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
                     <span className="leading-relaxed">Integrated BMS/EMS for energy management and optimization</span>
+                  </li>
+                  <li className="flex items-start gap-4 text-slate-700">
+                    <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
+                    <span className="leading-relaxed">Facility AnalytiX (FDD) for predictive building automation diagnostics</span>
                   </li>
                   <li className="flex items-start gap-4 text-slate-700">
                     <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />

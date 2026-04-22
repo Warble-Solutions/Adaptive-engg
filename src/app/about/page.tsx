@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -193,7 +193,7 @@ export default function AboutPage() {
                                     {/* Content Card */}
                                     <div className={`w-full md:w-1/2 pl-20 ${i % 2 === 0 ? "md:pl-16 md:pr-0" : "md:pr-16 md:pl-0"}`}>
                                         <div className={`
-                                            p-8 rounded-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] shadow-2xl hover:bg-[#0da08a] -translate-y-1 group relative overflow-hidden
+                                            p-8 rounded-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:-translate-y-1 group relative overflow-hidden
                                             ${i % 2 === 0 ? "bg-gradient-to-br from-white/5 to-white/0" : "bg-gradient-to-bl from-white/5 to-white/0"}
                                         `}>
                                             {/* Decorative Large Background Icon */}
@@ -345,7 +345,7 @@ export default function AboutPage() {
 
                         {/* TUV Certification */}
                         <SectionWrapper delay={0.2}>
-                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:bg-[#0da08a] border-teal-500/50 hover:bg-[#0da08a] shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
+                            <div className="premium-card p-10 bg-white rounded-2xl border border-slate-100 hover:border-teal-500 hover:shadow-xl shadow-xl transition-all duration-300 group relative overflow-hidden flex items-center gap-8">
                                 <div className="absolute right-0 top-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
                                     <CheckCircle2 className="w-48 h-48 text-teal-600" />
                                 </div>

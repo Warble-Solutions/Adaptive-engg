@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -134,15 +134,15 @@ export default function PmKusumPage() {
                             }
                         ].map((item, i) => (
                             <SectionWrapper key={i} delay={i * 0.1}>
-                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:bg-[#0da08a] border-primary/50 hover:bg-[#0da08a] -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
-                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-[#0da08a] hover:border-white/30 shadow-2xl transition-all duration-300 group cursor-default h-full flex flex-col items-start hover:-translate-y-2">
+                                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-white group-hover:text-[#0da08a] transition-all duration-300">
                                         <FontAwesomeIcon icon={item.icon} className="w-6 h-6" />
                                     </div>
-                                    <h3 className="text-lg font-bold mb-3 text-white leading-tight">{item.title}</h3>
-                                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors mb-6 flex-grow">
+                                    <h3 className="text-xl font-bold mb-3 text-white transition-colors leading-tight">{item.title}</h3>
+                                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-teal-50 transition-colors mb-6 flex-grow">
                                         {item.desc}
                                     </p>
-                                    <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto hover:bg-[#0da08a] gap-3 transition-all">
+                                    <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto group-hover:text-white group-hover:gap-3 transition-all">
                                         Learn More <ArrowRight className="w-4 h-4" />
                                     </Link>
                                 </div>
