@@ -46,11 +46,11 @@ export default function ContactPage() {
  {/* 2. CONTACT INTERFACE (Light - Split Layout) */}
  <section className="section-light py-24 bg-white rounded-t-[40px] relative z-20 -mt-20">
  <div className="max-w-7xl mx-auto px-6">
- <div className="flex flex-col lg:flex-row gap-16">
+ <div className="flex flex-col lg:flex-row gap-16 items-stretch">
  {/* Left Column: The Form */}
- <div className="lg:w-3/5">
- <SectionWrapper>
- <div className="premium-card p-8 md:p-12 bg-white rounded-3xl border border-gray-100 shadow-xl">
+ <div className="lg:w-3/5 flex flex-col">
+ <SectionWrapper className="h-full">
+ <div className="premium-card p-8 md:p-12 bg-white rounded-3xl border border-gray-100 shadow-xl h-full flex flex-col justify-between">
  <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
  <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,54 +93,57 @@ export default function ContactPage() {
  </div>
 
  {/* Right Column: HQ Intelligence */}
- <div className="lg:w-2/5 space-y-12">
- <SectionWrapper delay={0.2}>
- <div>
- <div className="space-y-8">
- <div className="flex items-start gap-4">
- <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
- <Phone className="w-6 h-6" />
- </div>
- <div>
- <h4 className="font-bold text-slate-900 text-lg mb-1">Phone</h4>
- <p className="text-slate-500 font-medium">+91 79 6926 9000</p>
- </div>
- </div>
-
- <div className="flex items-start gap-4">
- <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
- <Mail className="w-6 h-6" />
- </div>
- <div>
- <h4 className="font-bold text-slate-900 text-lg mb-1">Email</h4>
- <p className="text-slate-500 font-medium">info@adaptive-engg.com</p>
- </div>
- </div>
- </div>
- </div>
-
+ <div className="lg:w-2/5 flex flex-col">
+ <SectionWrapper delay={0.2} className="h-full">
+ <div className="flex flex-col h-full gap-8">
  {/* Map Section - Installed Base */}
- <div className="w-full bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 relative mt-12 shadow-2xl group">
+ <div className="w-full flex-1 min-h-[300px] bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 relative shadow-2xl group flex flex-col">
  {/* Content Overlay */}
- <div className="absolute top-0 left-0 w-full p-8 z-20 flex flex-col items-end text-right">
+ <div className="absolute top-0 left-0 w-full p-6 z-20 flex flex-col items-end text-right">
  <div className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-lg text-xs font-bold uppercase tracking-widest mb-2 border border-primary/20">
  Global Impact
  </div>
- <h3 className="text-4xl font-black text-white mb-1">
+ <h3 className="text-3xl font-black text-white mb-1">
  68GW<span className="text-primary">+</span>
  </h3>
- <p className="text-gray-400 font-medium">Installed Base</p>
+ <p className="text-gray-400 font-medium text-sm">Installed Base</p>
  </div>
 
  {/* Map Image */}
- <div className="relative w-full h-[500px] flex items-center justify-center pt-20">
- <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-slate-900 to-transparent z-10"></div>
+ <div className="relative w-full flex-1 flex items-center justify-center pt-24 pb-6">
+ <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-slate-900 to-transparent z-10"></div>
  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-30"></div>
  <img
  src="/imgs/map.png"
  alt="Installed Base Map"
  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
  />
+ </div>
+ </div>
+
+ {/* Contact Info Box */}
+ <div className="bg-slate-50 border border-gray-200 rounded-3xl p-8 shadow-sm">
+ <div className="space-y-6">
+ <div className="flex items-center gap-4">
+ <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+ <Phone className="w-6 h-6" />
+ </div>
+ <div>
+ <h4 className="font-bold text-slate-900 text-base mb-0.5">Phone</h4>
+ <p className="text-slate-500 font-medium text-sm">+91 79 6926 9000</p>
+ </div>
+ </div>
+
+ <div className="flex items-center gap-4">
+ <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+ <Mail className="w-6 h-6" />
+ </div>
+ <div>
+ <h4 className="font-bold text-slate-900 text-base mb-0.5">Email</h4>
+ <p className="text-slate-500 font-medium text-sm">info@adaptive-engg.com</p>
+ </div>
+ </div>
+ </div>
  </div>
  </div>
  </SectionWrapper>
