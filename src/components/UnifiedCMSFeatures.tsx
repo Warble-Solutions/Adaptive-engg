@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Globe, Activity, Database, TrendingDown, BarChart3, Server } from "lucide-react";
@@ -64,7 +64,7 @@ export default function UnifiedCMSFeatures() {
           </div>
         </SectionWrapper>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 lg:items-stretch">
           {/* Navigation Tabs (Left) */}
           <div className="lg:w-1/3 flex flex-col gap-3">
             {FEATURES.map((feature, i) => {
@@ -97,8 +97,8 @@ export default function UnifiedCMSFeatures() {
 
           {/* Interactive Display Area (Right) */}
           <div className="lg:w-2/3">
-            <SectionWrapper>
-              <div className="h-full min-h-[500px] w-full bg-slate-900 rounded-[40px] border border-white/10 p-2 relative overflow-hidden group">
+            <SectionWrapper className="h-full flex flex-col">
+              <div className="h-full w-full bg-slate-900 rounded-[40px] border border-white/10 p-2 relative overflow-hidden group" style={{ minHeight: '500px' }}>
                 {/* Background Image transitioning */}
                 <div 
                   key={activeFeature.id} /* force re-render for animation */

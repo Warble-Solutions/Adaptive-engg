@@ -165,6 +165,44 @@ export default function Page() {
  </div>
  </section>
 
+
+ {/* OTHER SOLUTIONS */}
+ <section className="py-24 bg-white relative z-20">
+ <div className="max-w-7xl mx-auto px-6">
+ <SectionWrapper>
+ <div className="text-center mb-12">
+ <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/20">
+ PM-KUSUM Suite
+ </div>
+ <h2 className="text-3xl font-bold text-slate-900 font-heading">Explore Other Solutions</h2>
+ <p className="text-slate-500 mt-3 max-w-xl mx-auto">AEPL&apos;s complete PM-KUSUM offering covers every layer — from hardware panels to cloud-based monitoring and compliance.</p>
+ </div>
+ </SectionWrapper>
+ <div className="flex flex-wrap justify-center gap-6">
+ {[
+ { href: "/pm-kusum/iot-scada", abbr: "IoT SCADA", label: "IoT SCADA — SolarWiz", desc: "Real-time plant monitoring gateway with multi-protocol support and state portal integration." },
+ { href: "/pm-kusum/reportwiz", abbr: "ReportWiz", label: "ReportWiz", desc: "Automated reporting suite with custom builders, KPI tracking, and multi-format export." },
+ { href: "/pm-kusum/cms", abbr: "CMS", label: "Central Monitoring System", desc: "Portfolio-level monitoring with ML anomaly detection and AI assistant." },
+ { href: "/pm-kusum/ams", abbr: "AMS", label: "Asset Management System", desc: "End-to-end asset, maintenance, inventory, and work order management." },
+ { href: "/pm-kusum/ht-panel", abbr: "HT Panel", label: "HT Panel Solutions", desc: "VCB panels up to 33kV with numerical protection and motorized racking." },
+ { href: "/pm-kusum/acdb-panels", abbr: "ACDB", label: "ACDB Panel Solutions", desc: "IP65 rated AC Distribution Boards with surge protection for solar pump connections." },
+ { href: "/pm-kusum/wms", abbr: "WMS", label: "Weather Monitoring System", desc: "Real-time irradiance, wind, and temperature sensors for performance benchmarking." },
+ ].map((sol, i) => (
+ <SectionWrapper key={i} delay={i * 0.07} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
+ <Link href={sol.href} className="group flex flex-col h-full p-6 bg-white border border-slate-100 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 hover:-translate-y-1">
+ <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-black uppercase tracking-widest mb-4">{sol.abbr}</div>
+ <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">{sol.label}</h3>
+ <p className="text-slate-500 text-sm leading-relaxed flex-1">{sol.desc}</p>
+ <div className="flex items-center gap-1 text-primary font-bold text-sm mt-4 group-hover:gap-2 transition-all">
+ Learn More <ArrowRight className="w-4 h-4" />
+ </div>
+ </Link>
+ </SectionWrapper>
+ ))}
+ </div>
+ </div>
+ </section>
+
  {/* CTA */}
  <section className="py-20 bg-transparent text-center relative z-10">
  <div className="max-w-2xl mx-auto px-6">

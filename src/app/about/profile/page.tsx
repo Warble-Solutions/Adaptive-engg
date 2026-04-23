@@ -86,7 +86,7 @@ export default function Page() {
  ].map((skill, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
  <div className="p-8 bg-white border border-slate-200 rounded-2xl hover:border-[#0da08a]/30 hover:-translate-y-2 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-default h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-[#0da08a] group-hover:scale-110 group-hover:border-primary/50 hover:shadow-xl group-hover:text-white group-hover:shadow-md transition-all duration-300">
+ <div className="mb-6 w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-[#0da08a] group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-md transition-all duration-300">
  {skill.icon}
  </div>
  <h3 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-[#0da08a] transition-colors duration-300 leading-tight">{skill.title}</h3>

@@ -1,4 +1,4 @@
-﻿import SectionWrapper from "@/components/SectionWrapper";
+import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Battery, Zap, BarChart3, TrendingUp, Sun, Wind, CheckCircle2, Activity, Shield, Clock, DollarSign } from "lucide-react";
 import { EMSHeroDashboards, HybridPlantDashboard } from "@/components/DashboardMockups";
@@ -29,8 +29,7 @@ export default function Page() {
  <span>Unified Renewable Solution</span>
  </div>
  <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading leading-tight">
- Energy Management<br />
- <span className="gradient-heading">System — BESS</span>
+ <span className="gradient-heading">EMS for BESS</span>
  </h1>
  <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
  Indigenous solution for Battery Energy Storage Systems with ML-based energy arbitrage, state of charge management, peak shaving, and grid support.
@@ -110,6 +109,41 @@ export default function Page() {
  <HybridPlantDashboard />
  </div>
  </SectionWrapper>
+ </div>
+ </div>
+ </section>
+
+
+ {/* OTHER SOLUTIONS */}
+ <section className="py-24 bg-white relative z-20">
+ <div className="max-w-7xl mx-auto px-6">
+ <SectionWrapper>
+ <div className="text-center mb-12">
+ <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/20">
+ Unified Renewable Suite
+ </div>
+ <h2 className="text-3xl font-bold text-slate-900 font-heading">Explore Other Solutions</h2>
+ <p className="text-slate-500 mt-3 max-w-xl mx-auto">Each module is designed to work seamlessly together as part of AEPL&apos;s end-to-end unified renewable platform.</p>
+ </div>
+ </SectionWrapper>
+ <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ {[
+ { href: "/renewable/unified/scada", label: "SCADA", abbr: "SCADA", desc: "Scalable SCADA architecture with rich renewable libraries handling millions of real-time tags." },
+ { href: "/renewable/unified/cms", label: "Central Monitoring System", abbr: "CMS", desc: "Multi-site portfolio monitoring with real-time visibility across all your renewable assets." },
+ { href: "/renewable/unified/analytics", label: "Advanced Analytics", abbr: "Analytics", desc: "Data visualization, loss buckets, custom report builder and historical analysis." },
+ { href: "/renewable/unified/cmms", label: "Computerised Maintenance Management", abbr: "CMMS", desc: "Automated work orders, SOPs and inventory management for O&M teams." },
+ ].map((sol, i) => (
+ <SectionWrapper key={i} delay={i * 0.1}>
+ <Link href={sol.href} className="group flex flex-col h-full p-6 bg-white border border-slate-100 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 hover:-translate-y-1">
+ <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-black uppercase tracking-widest mb-4">{sol.abbr}</div>
+ <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">{sol.label}</h3>
+ <p className="text-slate-500 text-sm leading-relaxed flex-1">{sol.desc}</p>
+ <div className="flex items-center gap-1 text-primary font-bold text-sm mt-4 group-hover:gap-2 transition-all">
+ Learn More <ArrowRight className="w-4 h-4" />
+ </div>
+ </Link>
+ </SectionWrapper>
+ ))}
  </div>
  </div>
  </section>

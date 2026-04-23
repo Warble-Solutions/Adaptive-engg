@@ -1,4 +1,4 @@
-﻿import SectionWrapper from "@/components/SectionWrapper";
+import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wrench, ClipboardList, CheckCircle2, Bell, FileCheck, Package, QrCode, Camera, Smartphone, Clock, BarChart3, Users, Shield, Calendar, Cog } from "lucide-react";
 
@@ -85,10 +85,10 @@ export default function Page() {
  <SectionWrapper key={i} delay={i * 0.1}>
  <div className="group relative p-10 md:p-14 rounded-3xl border border-slate-100 hover:border-[#0da08a] bg-white hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-500 overflow-hidden">
  <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
- <span className="text-7xl md:text-8xl font-black text-teal-500/30 group-hover:text-white/80 select-none shrink-0 leading-none transition-colors duration-300">{item.num}</span>
+ <span className="text-7xl md:text-8xl font-black text-teal-500/30 group-hover:text-primary/40 select-none shrink-0 leading-none transition-colors duration-300">{item.num}</span>
  <div>
- <h3 className="text-2xl md:text-3xl font-bold text-slate-900 group-hover:text-white mb-3 tracking-tight transition-colors duration-300">{item.title}</h3>
- <p className="text-slate-500 group-hover:text-white/80 text-base md:text-lg leading-relaxed max-w-2xl transition-colors duration-300">{item.desc}</p>
+ <h3 className="text-2xl md:text-3xl font-bold text-slate-900 group-hover:text-primary mb-3 tracking-tight transition-colors duration-300">{item.title}</h3>
+ <p className="text-slate-500 group-hover:text-slate-700 text-base md:text-lg leading-relaxed max-w-2xl transition-colors duration-300">{item.desc}</p>
  </div>
  </div>
  </div>
@@ -154,9 +154,44 @@ export default function Page() {
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.05}>
  <div className="group flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-100 hover:border-primary/50 hover:shadow-xl hover:border-[#0da08a] shadow-md transition-all duration-300">
- <span className="text-[#0da08a] group-hover:text-white transition-colors">{item.icon}</span>
- <span className="font-medium text-slate-700 group-hover:text-white text-sm transition-colors">{item.text}</span>
+ <span className="text-[#0da08a] transition-colors">{item.icon}</span>
+ <span className="font-medium text-slate-700 text-sm transition-colors">{item.text}</span>
  </div>
+ </SectionWrapper>
+ ))}
+ </div>
+ </div>
+ </section>
+
+
+ {/* OTHER SOLUTIONS */}
+ <section className="py-24 bg-white relative z-20">
+ <div className="max-w-7xl mx-auto px-6">
+ <SectionWrapper>
+ <div className="text-center mb-12">
+ <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/20">
+ Unified Renewable Suite
+ </div>
+ <h2 className="text-3xl font-bold text-slate-900 font-heading">Explore Other Solutions</h2>
+ <p className="text-slate-500 mt-3 max-w-xl mx-auto">Each module is designed to work seamlessly together as part of AEPL&apos;s end-to-end unified renewable platform.</p>
+ </div>
+ </SectionWrapper>
+ <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ {[
+ { href: "/renewable/unified/scada", label: "SCADA", abbr: "SCADA", desc: "Scalable SCADA architecture with rich renewable libraries handling millions of real-time tags." },
+ { href: "/renewable/unified/cms", label: "Central Monitoring System", abbr: "CMS", desc: "Multi-site portfolio monitoring with real-time visibility across all your renewable assets." },
+ { href: "/renewable/unified/analytics", label: "Advanced Analytics", abbr: "Analytics", desc: "Data visualization, loss buckets, custom report builder and historical analysis." },
+ { href: "/renewable/unified/ems-bess", label: "Energy Management System", abbr: "EMS-BESS", desc: "ML-based energy arbitrage, SoC management, and peak shaving for battery storage." },
+ ].map((sol, i) => (
+ <SectionWrapper key={i} delay={i * 0.1}>
+ <Link href={sol.href} className="group flex flex-col h-full p-6 bg-white border border-slate-100 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 hover:-translate-y-1">
+ <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-black uppercase tracking-widest mb-4">{sol.abbr}</div>
+ <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">{sol.label}</h3>
+ <p className="text-slate-500 text-sm leading-relaxed flex-1">{sol.desc}</p>
+ <div className="flex items-center gap-1 text-primary font-bold text-sm mt-4 group-hover:gap-2 transition-all">
+ Learn More <ArrowRight className="w-4 h-4" />
+ </div>
+ </Link>
  </SectionWrapper>
  ))}
  </div>
