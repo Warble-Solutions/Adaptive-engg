@@ -209,7 +209,7 @@ export default function CertificationsPage() {
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
  {erdaReports.map((report, i) => (
  <SectionWrapper key={i} delay={i * 0.08}>
- <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary/30 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300">
+ <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group hover:bg-white/10 border-primary/30 hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300">
  <div className="relative w-full aspect-[3/4] bg-white/5">
  <Image
  src={report.image}

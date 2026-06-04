@@ -240,7 +240,7 @@ export default function PmKusumPage() {
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
  {/* Card 1: Component A */}
  <SectionWrapper delay={0}>
- <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 hover:shadow-xl border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 group h-full">
+ <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 group h-full">
  <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-[#0da08a] mb-6 group-hover:scale-110 transition-transform">
  <FontAwesomeIcon icon={faSolarPanel} className="w-6 h-6" />
  </div>
@@ -295,7 +295,7 @@ export default function PmKusumPage() {
 
  {/* Card 3: Component C */}
  <SectionWrapper delay={0.2}>
- <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 hover:shadow-xl border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 group h-full">
+ <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 group h-full">
  <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
  <FontAwesomeIcon icon={faBolt} className="w-6 h-6" />
  </div>

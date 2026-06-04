@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Droplets, Activity, CheckCircle2, ShieldCheck, Settings, LineChart, Cpu, Anchor } from "lucide-react";
@@ -46,25 +46,25 @@ export default function Page() {
  </SectionWrapper>
  <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
  <SectionWrapper delay={0.1}>
- <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
+ <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
  <div className="text-5xl font-black text-slate-900 mb-2">{WATER_STATS.yearsExperience.value}<span className="text-teal-500">{WATER_STATS.yearsExperience.suffix}</span></div>
  <p className="text-sm font-bold text-slate-500 uppercase tracking-wider">{WATER_STATS.yearsExperience.label}</p>
  </div>
  </SectionWrapper>
  <SectionWrapper delay={0.2}>
- <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
+ <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
  <div className="text-5xl font-black text-slate-900 mb-2">{WATER_STATS.mldTreatedWater.value}<span className="text-teal-500">{WATER_STATS.mldTreatedWater.suffix}</span></div>
  <p className="text-sm font-bold text-slate-500 uppercase tracking-wider">{WATER_STATS.mldTreatedWater.label}</p>
  </div>
  </SectionWrapper>
  <SectionWrapper delay={0.3}>
- <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
+ <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
  <div className="text-5xl font-black text-slate-900 mb-2">{WATER_STATS.supplySchemes.value}<span className="text-teal-500">{WATER_STATS.supplySchemes.suffix}</span></div>
  <p className="text-sm font-bold text-slate-500 uppercase tracking-wider">{WATER_STATS.supplySchemes.label}</p>
  </div>
  </SectionWrapper>
  <SectionWrapper delay={0.4}>
- <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full hover:border-primary/50 hover:shadow-xl shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
+ <div className="p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center h-full shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-2">
  <div className="text-5xl font-black text-slate-900 mb-2">1,500<span className="text-teal-500">{WATER_STATS.overheadTanks.suffix}</span></div>
  <p className="text-sm font-bold text-slate-500 uppercase tracking-wider">{WATER_STATS.overheadTanks.label}</p>
  </div>
@@ -86,7 +86,7 @@ export default function Page() {
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
  <SectionWrapper delay={0.1}>
  <Link href="/infrastructure/water/wtp" className="block group h-full">
- <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:border-primary/50 hover:shadow-xl shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
+ <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
  <div>
  <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
  <Droplets className="w-7 h-7" />
@@ -103,7 +103,7 @@ export default function Page() {
 
  <SectionWrapper delay={0.2}>
  <Link href="/infrastructure/water/stp" className="block group h-full">
- <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:border-primary/50 hover:shadow-xl shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
+ <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
  <div>
  <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
  <Activity className="w-7 h-7" />
@@ -120,7 +120,7 @@ export default function Page() {
 
  <SectionWrapper delay={0.3}>
  <Link href="/infrastructure/water/etp" className="block group h-full">
- <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:border-primary/50 hover:shadow-xl shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
+ <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
  <div>
  <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
  <Settings className="w-7 h-7" />
@@ -137,7 +137,7 @@ export default function Page() {
 
  <SectionWrapper delay={0.4}>
  <Link href="/infrastructure/water/lift-irrigation" className="block group h-full">
- <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:border-primary/50 hover:shadow-xl shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
+ <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
  <div>
  <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
  <LineChart className="w-7 h-7" />
@@ -154,7 +154,7 @@ export default function Page() {
 
  <SectionWrapper delay={0.5}>
  <Link href="/infrastructure/water/micro-irrigation" className="block group h-full">
- <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:border-primary/50 hover:shadow-xl shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
+ <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm shadow-xl hover:border-primary/50 hover:shadow-xl border-teal-200 transition-all duration-500 h-full flex flex-col justify-between">
  <div>
  <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
  <Anchor className="w-7 h-7" />
@@ -171,7 +171,7 @@ export default function Page() {
 
  <SectionWrapper delay={0.6}>
  <Link href="/infrastructure/water/centralized-scada" className="block group h-full">
- <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-8 shadow-xl hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full flex flex-col justify-between overflow-hidden relative">
+ <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-8 shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full flex flex-col justify-between overflow-hidden relative">
  <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
  <div className="relative z-10">
  <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">

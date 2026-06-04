@@ -110,7 +110,7 @@ export default function Page() {
  },
  ].map((module, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className={`group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
+ <div className={`group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
  
  {/* Glowing background orb effect */}
  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-10 blur-[50px] transition-opacity duration-700`}></div>

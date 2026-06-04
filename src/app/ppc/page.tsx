@@ -146,7 +146,7 @@ export default function PPCPage() {
  }
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1} className="h-full">
- <div className="group relative bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full flex flex-col overflow-hidden">
+ <div className="group relative bg-white rounded-2xl border border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-2xl -translate-y-2 transition-all duration-500 h-full flex flex-col overflow-hidden">
  {/* Gradient Top Border */}
  <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:h-1.5 transition-all duration-300"></div>
 
@@ -529,7 +529,7 @@ export default function PPCPage() {
 // Helper Row for Features
 function FeatureRow({ title, desc, imageSrc, color }: { title: string; desc: string; imageSrc?: string; color: string }) {
  return (
- <div className="flex items-start gap-5 group p-4 rounded-xl hover:border-primary/50 hover:shadow-xl bg-slate-50 transition-colors border border-transparent hover:border-primary/50 hover:shadow-xl border-slate-100 reveal">
+ <div className="flex items-start gap-5 group p-4 rounded-xl bg-slate-50 transition-colors border border-slate-100 hover:border-primary/50 hover:shadow-xl reveal">
  <div className={`w-12 h-12 rounded-lg flex items-center justify-center shrink-0 overflow-hidden`}>
  {imageSrc ? (
  <Image src={imageSrc} alt={title} width={48} height={48} className="object-cover" />

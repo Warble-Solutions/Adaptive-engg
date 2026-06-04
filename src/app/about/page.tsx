@@ -221,7 +221,7 @@ export default function AboutPage() {
  animate={{ opacity: 1, scale: 1 }}
  exit={{ opacity: 0, scale: 0.9 }}
  transition={{ duration: 0.4 }}
- className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(25%-24px)] premium-card p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:shadow-xl shadow-xl hover:border-primary/50 hover:shadow-xl -translate-y-2 group"
+ className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(25%-24px)] premium-card p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-xl hover:border-primary/50 hover:shadow-xl -translate-y-2 group"
  >
  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-md mx-auto overflow-hidden group-hover:scale-105 transition-transform border-4 border-white">
  <img

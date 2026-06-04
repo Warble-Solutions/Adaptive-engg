@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Leaf, Sprout, Combine, CalendarClock, ShieldAlert, Cpu } from "lucide-react";
@@ -53,7 +53,7 @@ export default function Page() {
 
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
  <SectionWrapper delay={0.1}>
- <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-primary/50 hover:shadow-xl border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
+ <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
  <div className="w-12 h-12 bg-teal-100 text-[#0da08a] rounded-xl flex items-center justify-center mb-6">
  <Combine className="w-6 h-6" />
  </div>
@@ -65,7 +65,7 @@ export default function Page() {
  </SectionWrapper>
 
  <SectionWrapper delay={0.2}>
- <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-primary/50 hover:shadow-xl border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
+ <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
  <div className="w-12 h-12 bg-teal-100 text-[#0da08a] rounded-xl flex items-center justify-center mb-6">
  <Leaf className="w-6 h-6" />
  </div>
@@ -77,7 +77,7 @@ export default function Page() {
  </SectionWrapper>
 
  <SectionWrapper delay={0.3}>
- <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-primary/50 hover:shadow-xl border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
+ <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
  <div className="w-12 h-12 bg-teal-100 text-[#0da08a] rounded-xl flex items-center justify-center mb-6">
  <CalendarClock className="w-6 h-6" />
  </div>
@@ -89,7 +89,7 @@ export default function Page() {
  </SectionWrapper>
 
  <SectionWrapper delay={0.4}>
- <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:border-primary/50 hover:shadow-xl border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
+ <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full border-teal-300 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
  <div className="w-12 h-12 bg-teal-100 text-[#0da08a] rounded-xl flex items-center justify-center mb-6">
  <ShieldAlert className="w-6 h-6" />
  </div>

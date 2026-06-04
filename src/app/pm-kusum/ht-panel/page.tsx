@@ -48,7 +48,7 @@ export default function Page() {
  { value: "31.5kA", label: "Short Circuit Rating", icon: <Shield className="w-5 h-5" /> },
  { value: "IS/IEC", label: "Type Tested", icon: <Award className="w-5 h-5" /> },
  ].map((item, i) => (
- <div key={i} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-primary/50 hover:shadow-xl border-teal-500/30 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
+ <div key={i} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 border-teal-500/30 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all">
  <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-[#0da08a] mx-auto mb-3">
  {item.icon}
  </div>

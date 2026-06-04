@@ -73,7 +73,7 @@ export default function Page() {
  { icon: <Settings className="w-7 h-7" />, title: "Refined Interface from Decades of Experience", desc: "Intuitive HMI screens developed through decades of operator feedback. Contextual alarms, trend analysis, and one-click diagnostics.", color: "bg-teal-50 text-[#0da08a]" },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className="group p-8 bg-white rounded-2xl border border-slate-100 hover:border-primary/50 hover:shadow-xl border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full">
+ <div className="group p-8 bg-white rounded-2xl border border-primary/30 hover:border-primary/50 hover:shadow-xl shadow-2xl -translate-y-2 transition-all duration-500 h-full">
  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
  {item.icon}
  </div>

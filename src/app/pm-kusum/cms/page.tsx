@@ -55,13 +55,13 @@ export default function Page() {
  
  <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
  {[
- { icon: <Eye className="w-6 h-6" />, title: "Insightful View of Entire Portfolio", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "hover:border-primary/50 hover:shadow-xl shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
- { icon: <BarChart3 className="w-6 h-6" />, title: "Targeted KPI Metrics", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "hover:border-primary/50 hover:shadow-xl shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
- { icon: <Activity className="w-6 h-6" />, title: "ML Anomaly Detection", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "hover:border-primary/50 hover:shadow-xl shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
- { icon: <Cpu className="w-6 h-6" />, title: "AI Assistant", color: "text-[#0da08a] bg-teal-50 border-teal-100", shadow: "hover:border-primary/50 hover:shadow-xl shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
+ { icon: <Eye className="w-6 h-6" />, title: "Insightful View of Entire Portfolio", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
+ { icon: <BarChart3 className="w-6 h-6" />, title: "Targeted KPI Metrics", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
+ { icon: <Activity className="w-6 h-6" />, title: "ML Anomaly Detection", color: "text-teal-600 bg-teal-50 border-teal-100", shadow: "shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
+ { icon: <Cpu className="w-6 h-6" />, title: "AI Assistant", color: "text-[#0da08a] bg-teal-50 border-teal-100", shadow: "shadow-teal-500/20 hover:border-primary/50 hover:shadow-xl border-teal-300" },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className={`p-8 rounded-3xl border ${item.color} bg-white shadow-sm transition-all duration-300 h-full flex flex-col group ${item.shadow} hover:border-primary/50 hover:shadow-xl -translate-y-1`}>
+ <div className={`p-8 rounded-3xl border ${item.color} bg-white shadow-sm transition-all duration-300 h-full flex flex-col group ${item.shadow} -translate-y-1`}>
  <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 border group-hover:scale-110 transition-transform`}>
  {item.icon}
  </div>

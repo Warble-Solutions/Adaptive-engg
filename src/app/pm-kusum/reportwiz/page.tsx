@@ -57,7 +57,7 @@ export default function Page() {
  { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.08}>
- <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full`}>
+ <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full`}>
  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-700 mb-5 shadow-sm group-hover:scale-110 transition-transform">
  {item.icon}
  </div>
@@ -141,7 +141,7 @@ export default function Page() {
  "Investor Confidence — Professional branded reports for stakeholders",
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.06}>
- <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-primary/50 hover:shadow-xl border-teal-500/30 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all duration-300">
+ <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 border-teal-500/30 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all duration-300">
  <CheckCircle2 className="text-teal-500 w-5 h-5 shrink-0 mt-0.5" />
  <span className="font-medium text-slate-700 text-sm">{item}</span>
  </div>

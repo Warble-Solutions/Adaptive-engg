@@ -50,7 +50,7 @@ export default function RenewablePage() {
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
  {/* Card 1: Software */}
  <SectionWrapper delay={0.1}>
- <a href="#unified" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-primary/50 hover:shadow-xl border-teal-500 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-3 transition-all duration-300">
+ <a href="#unified" className="block h-full group p-8 bg-white border border-teal-500 rounded-3xl hover:border-primary/50 hover:shadow-xl shadow-2xl -translate-y-3 transition-all duration-300">
  <div className="flex flex-col items-center text-center gap-6 mb-4">
  <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
  <Monitor className="w-10 h-10" />
@@ -63,7 +63,7 @@ export default function RenewablePage() {
 
  {/* Card 2: Hardware */}
  <SectionWrapper delay={0.2}>
- <a href="#panels" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-primary/50 hover:shadow-xl border-teal-500 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-3 transition-all duration-300">
+ <a href="#panels" className="block h-full group p-8 bg-white border border-teal-500 rounded-3xl hover:border-primary/50 hover:shadow-xl shadow-2xl -translate-y-3 transition-all duration-300">
  <div className="flex flex-col items-center text-center gap-6 mb-4">
  <div className="p-5 bg-teal-50 rounded-2xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
  <Zap className="w-10 h-10" />
@@ -76,7 +76,7 @@ export default function RenewablePage() {
 
  {/* Card 3: Projects */}
  <SectionWrapper delay={0.3}>
- <a href="#turnkey" className="block h-full group p-8 bg-white border border-slate-200 rounded-3xl hover:border-primary/50 hover:shadow-xl border-[#0da08a] hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-3 transition-all duration-300">
+ <a href="#turnkey" className="block h-full group p-8 bg-white border border-[#0da08a] rounded-3xl hover:border-primary/50 hover:shadow-xl shadow-2xl -translate-y-3 transition-all duration-300">
  <div className="flex flex-col items-center text-center gap-6 mb-4">
  <div className="p-5 bg-teal-50 rounded-2xl text-[#0da08a] group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
  <Factory className="w-10 h-10" />
@@ -213,7 +213,7 @@ export default function RenewablePage() {
  <PanelItem title="Compact Substations" desc="CSS solutions for rapid deployment" />
  </div>
  <div className="mt-8 flex items-center gap-4 justify-start">
- <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-slate-200 rounded-full font-bold text-slate-700 hover:border-primary/50 hover:shadow-xl border-primary hover:text-primary hover:border-primary/50 hover:shadow-xl -translate-y-1 transition-all duration-300">
+ <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary rounded-full font-bold text-slate-700 hover:border-primary/50 hover:shadow-xl hover:text-primary -translate-y-1 transition-all duration-300">
  <span>Learn More</span>
  <ArrowRight className="w-4 h-4" />
  </Link>
@@ -343,7 +343,7 @@ export default function RenewablePage() {
 // Helper for Panel List Item
 function PanelItem({ title, desc }: { title: string; desc: string }) {
  return (
- <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100 hover:border-primary/50 hover:shadow-xl border-primary/50 hover:bg-white hover:border-primary/50 hover:shadow-xl shadow-md hover:border-primary/50 hover:shadow-xl translate-x-1 transition-all duration-300">
+ <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-primary/50 hover:border-primary/50 hover:shadow-xl hover:bg-white shadow-md translate-x-1 transition-all duration-300">
  <CheckCircle2 className="w-5 h-5 text-primary mt-1 shrink-0" />
  <div>
  <h4 className="font-bold text-slate-900 text-sm">{title}</h4>

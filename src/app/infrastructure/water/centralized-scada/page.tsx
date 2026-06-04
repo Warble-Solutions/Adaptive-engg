@@ -1,4 +1,4 @@
-﻿import SceneTrigger from "@/components/3d/SceneTrigger";
+import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Monitor, Droplets, BatteryCharging, Shield, Activity, Search, RefreshCw, Layers, Database, Lock } from "lucide-react";
@@ -70,7 +70,7 @@ export default function Page() {
  { icon: <Layers className="w-6 h-6" />, title: "Consumable Estimation" },
  ].map((feature, i) => (
  <SectionWrapper key={i} delay={i * 0.05}>
- <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center h-full hover:border-primary/50 hover:shadow-xl bg-teal-50 hover:border-primary/50 hover:shadow-xl border-teal-200 transition-colors">
+ <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center h-full bg-teal-50 hover:border-primary/50 hover:shadow-xl border-teal-200 transition-colors">
  <div className="text-teal-500 mb-3">{feature.icon}</div>
  <h4 className="font-bold text-slate-800 text-sm">{feature.title}</h4>
  </div>

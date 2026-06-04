@@ -36,7 +36,7 @@ export default function Home() {
  <img
  src={`/imgs/logos/${i + 1}.webp`}
  alt={`Partner ${i + 1}`}
- className="h-96 w-auto object-contain"
+ className="h-16 w-auto object-contain"
  />
  </div>
  ))}
@@ -46,7 +46,7 @@ export default function Home() {
  <img
  src={`/imgs/logos/${i + 1}.webp`}
  alt={`Partner ${i + 1}`}
- className="h-96 w-auto object-contain"
+ className="h-16 w-auto object-contain"
  />
  </div>
  ))}
@@ -140,7 +140,7 @@ export default function Home() {
 
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
  <SectionWrapper delay={0.1}>
- <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+ <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
  <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=150&q=80" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="Renewable" />
  <h3 className="text-2xl font-bold text-white mb-4">Renewable Solutions</h3>
  <p className="text-gray-400 leading-relaxed mb-8">End-to-end services: Conceptualizing, designing, and commissioning electrical systems up to 66KV. Solar, Wind, and Hybrid plant integration.</p>
@@ -149,7 +149,7 @@ export default function Home() {
  </SectionWrapper>
 
  <SectionWrapper delay={0.2}>
- <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full relative">
+ <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full relative">
  <img src="https://adaptive-engg.com/wp-content/uploads/2024/10/Untitled-design-13-1-480x340.png" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="KUSUM" />
  <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM Solutions</h3>
  <p className="text-gray-400 leading-relaxed mb-8">Industrial IoT powered by SolarWiz, WaterWiz, and MachineWiz. Real-time telemetry for agricultural pumps and water supply schemes.</p>
@@ -158,7 +158,7 @@ export default function Home() {
  </SectionWrapper>
 
  <SectionWrapper delay={0.3}>
- <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-primary/50 hover:shadow-xl border-primary hover:border-primary/50 hover:shadow-xl -translate-y-2 hover:bg-white/10 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
+ <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
  <img src="https://adaptive-engg.com/wp-content/uploads/2023/08/tunnel-mp.png.webp" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="Infra" />
  <h3 className="text-2xl font-bold text-white mb-4">Infrastructure Solutions</h3>
  <p className="text-gray-400 leading-relaxed mb-8">Specialized automation for Tunnels and Data Centers. In-house manufacturing of HT/LT Panels, MCC, and PCC for heavy industry.</p>
@@ -172,7 +172,7 @@ export default function Home() {
  </section>
 
  {/* 5. SCADA HIGHLIGHT (Light) */}
- <section className="py-24 bg-light z-0" >
+ <section className="py-24 bg-light z-0">
  <SceneTrigger variant="logo" color="#0da08a" speed={1} />
  <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
  <div className="lg:w-1/2">
@@ -222,7 +222,7 @@ export default function Home() {
  </section>
 
  {/* 6. PROJECTS (Dark) */}
- <section className="py-32 bg-transparent rounded-t-[40px] z-10 relative" >
+ <section className="py-32 bg-transparent rounded-t-[40px] z-10 relative">
  <SceneTrigger variant="wind" color="#f97316" speed={0.6} />
  <div className="max-w-7xl mx-auto px-6">
  <div className="flex justify-between items-end mb-16 border-b border-white/10 pb-6">
@@ -270,7 +270,7 @@ export default function Home() {
  </section>
 
  {/* 7. SCALABILITY (Light) */}
- <section className="section-light py-24 bg-white relative z-20" >
+ <section className="section-light py-24 bg-white relative z-20">
  <SceneTrigger variant="battery" color="#10B981" speed={0.8} />
  <div className="max-w-7xl mx-auto px-6">
  <div className="text-center mb-16">
@@ -286,7 +286,7 @@ export default function Home() {
  { title: "Grid Future-Proofing", desc: "Stay ahead of regulations. Our systems are pre-configured for the latest IEGC grid codes, frequency response norms, and upcoming scheduling requirements.", icon: <ShieldCheck className="w-6 h-6" /> }
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className="premium-card p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:shadow-xl shadow-xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-300 group h-full">
+ <div className="premium-card p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:shadow-xl shadow-xl -translate-y-2 transition-all duration-300 group h-full">
  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm text-primary group-hover:scale-110 transition-transform">
  {item.icon}
  </div>
@@ -303,7 +303,7 @@ export default function Home() {
  </section>
 
  {/* 8. TESTIMONIALS (Dark) */}
- <section className="section-dark py-24 bg-transparent relative z-10" >
+ <section className="section-dark py-24 bg-transparent relative z-10">
  <div className="max-w-7xl mx-auto px-6">
  <div className="text-center mb-16">
  <SectionWrapper>
@@ -340,7 +340,7 @@ export default function Home() {
  </section>
 
  {/* 9. PROTOCOL (Light) */}
- <section className="py-24 bg-light z-20" >
+ <section className="py-24 bg-light z-20">
  <SceneTrigger variant="wave" color="#06b6d4" speed={0.5} />
  <div className="max-w-[1800px] mx-auto px-6">
  <SectionWrapper>
@@ -389,7 +389,7 @@ export default function Home() {
  </section>
 
  {/* 9. MEDIA GALLERY (YouTube Widget) */}
- <section className="section-dark py-24 px-6 relative overflow-hidden bg-transparent border-t border-white/5" >
+ <section className="section-dark py-24 px-6 relative overflow-hidden bg-transparent border-t border-white/5">
  <div className="max-w-7xl mx-auto">
 
  {/* Header */}
@@ -489,7 +489,7 @@ export default function Home() {
  </section>
 
  {/* 8. IMPACT (Dark) */}
- <section className="py-32 bg-transparent" >
+ <section className="py-32 bg-transparent">
  <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 text-white">
  <SectionWrapper>
  <h2 className="text-4xl font-bold mb-4 font-heading">Impact & Scale</h2>
@@ -515,7 +515,7 @@ export default function Home() {
  </section>
 
  {/* 9. SAFETY (Light) */}
- <section className="py-24 bg-light border-t border-gray-100" >
+ <section className="py-24 bg-light border-t border-gray-100">
  <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
  <div className="md:w-1/2">
  <SectionWrapper>
@@ -546,7 +546,7 @@ export default function Home() {
  </section>
 
  {/* 10. CTA (Dark) */}
- <section className="py-40 bg-transparent text-center relative z-10" >
+ <section className="py-40 bg-transparent text-center relative z-10">
  <div className="max-w-3xl mx-auto px-6">
  <SectionWrapper>
  <h2 className="text-4xl md:text-6xl mb-8 font-black text-white font-heading">Ready to <span className="text-primary">Scale?</span></h2>

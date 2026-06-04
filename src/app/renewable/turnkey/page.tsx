@@ -235,7 +235,7 @@ export default function TurnkeyPage() {
  "Dedicated project managers providing real-time progress tracking tools.",
  "Long-term post-commissioning O&M support and remote diagnostics."
  ].map((item, idx) => (
- <div key={idx} className="group flex items-center p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-primary/50 hover:shadow-xl shadow-md hover:border-primary/50 hover:shadow-xl border-primary/20 transition-all duration-300 hover:border-primary/50 hover:shadow-xl -translate-y-1">
+ <div key={idx} className="group flex items-center p-6 bg-white rounded-2xl border border-primary/20 shadow-md hover:border-primary/50 hover:shadow-xl transition-all duration-300 -translate-y-1">
  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0 mr-6 group-hover:scale-110 transition-transform">
  <CheckCircle2 className="w-5 h-5" />
  </div>

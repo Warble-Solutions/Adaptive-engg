@@ -1,4 +1,4 @@
-﻿import { prisma } from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import { Briefcase, MapPin, Building, ArrowRight } from "lucide-react";
@@ -31,7 +31,7 @@ export default async function CareersPage() {
  <div className="flex flex-col gap-6">
  {jobs.map((job) => (
  <Link key={job.id} href={`/careers/${job.slug}`}>
- <div className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl shadow-primary/10 transition-all duration-300 transform hover:bg-white/10 -translate-y-1">
+ <div className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl hover:border-primary/50 hover:shadow-xl shadow-primary/10 transition-all duration-300 transform hover:bg-white/10 -translate-y-1">
  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
  
  <div className="flex-1">

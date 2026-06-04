@@ -65,7 +65,7 @@ export default function Page() {
  { icon: <Shield className="w-8 h-8" />, title: "Peak Shaving & Grid Support", desc: "Reduce peak demand charges, provide frequency regulation, and support grid stability during renewable intermittency events.", gradient: "from-teal-500 to-teal-500" },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
- <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:border-primary/50 hover:shadow-xl shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
+ <div className="group p-10 bg-white rounded-3xl border border-slate-100 hover:border-primary/50 hover:shadow-xl shadow-2xl -translate-y-2 transition-all duration-500 h-full relative overflow-hidden">
  <div className={`absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br ${item.gradient} rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500`}></div>
  <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg relative`}>
  <div className={`absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity animate-pulse`}></div>
