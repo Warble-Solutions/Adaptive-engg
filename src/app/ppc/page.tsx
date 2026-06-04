@@ -177,7 +177,7 @@ export default function PPCPage() {
  </section>
 
  {/* 4. ADAPTIVE PPC CORE (Dark) */}
- <section className="section-dark py-32 bg-transparent text-white relative z-10">
+ <section className="py-32 bg-transparent text-white relative z-10">
  <div className="max-w-7xl mx-auto px-6">
  <div className="text-center mb-16">
  <SectionWrapper>
@@ -377,11 +377,11 @@ export default function PPCPage() {
  <div className="flex justify-center">
  <MicroCTA text="Schedule Technical Demo" variant="connect" href="/contact" context="light" />
  </div>
- </div >
- </section >
+ </div>
+ </section>
 
- {/* 6. ECOSYSTEM INTEGRATION (Dark - Redesigned) */}
- < section className="section-dark py-32 bg-transparent text-white relative z-10 -mt-20 pt-40" >
+ {/* 6. ECOSYSTEM INTEGRATION (Dark) */}
+ <section className="py-28 bg-transparent text-white relative z-10">
  <div className="max-w-7xl mx-auto px-6">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
  {/* Left Column: Context */}
@@ -479,7 +479,7 @@ export default function PPCPage() {
  </section >
 
  {/* 7. BENEFITS SUMMARY (Light) */}
- < section className="py-24 bg-white border-t border-slate-100 relative z-20" >
+ <section className="py-24 bg-white border-t border-slate-100 relative z-20">
  <div className="max-w-7xl mx-auto px-6">
  <SectionWrapper>
  <h2 className="text-3xl font-bold text-slate-900 text-center mb-16 font-heading">Benefits of AEPL-PPC</h2>
@@ -506,8 +506,8 @@ export default function PPCPage() {
  </div>
  </section >
 
- {/* 8. CTA (Light) */}
- < section className="py-20 bg-transparent text-center relative z-10" >
+ {/* 8. CTA (Dark) */}
+ <section className="py-20 bg-transparent text-center relative z-10">
  <div className="max-w-2xl mx-auto px-6">
  <SectionWrapper>
  <h2 className="text-4xl font-bold text-white mb-6 font-heading">Partner with AEPL</h2>
@@ -520,8 +520,8 @@ export default function PPCPage() {
  </Link>
  </SectionWrapper>
  </div>
- </section >
- </div >
+ </section>
+ </div>
  );
 }
 

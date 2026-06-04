@@ -6,7 +6,7 @@ import SceneTrigger from "./3d/SceneTrigger";
 
 export default function Footer() {
     return (
-        <footer className="bg-transparent text-white pt-24 pb-12 relative z-50">
+        <footer className="bg-transparent text-white pt-24 pb-12 relative z-50 border-t border-slate-800/50">
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/20 -z-10 pointer-events-none"></div>
             <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
@@ -79,7 +79,7 @@ export default function Footer() {
 
             <div className="max-w-7xl mx-auto px-6 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-gray-500 text-sm">© {new Date().getFullYear()} ADAPTIVE ENGINEERING PVT. LTD. All Rights Reserved.</p>
-                <div className="flex items-center gap-4 opacity-70 hover:bg-[#0da08a] opacity-100 transition-opacity cursor-default">
+                <div className="flex items-center gap-4 opacity-70 hover:opacity-100 transition-opacity cursor-default">
                     <span className="text-sm text-gray-500">Powered by</span>
                     <div className="flex items-center gap-2">
                         <Image
