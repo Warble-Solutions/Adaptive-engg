@@ -61,38 +61,187 @@ export default function Page() {
       {/* OUR EXPERTISE */}
       <section className="py-24 bg-white relative z-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-            <SectionWrapper className="flex flex-col">
-              <div className="flex flex-col h-full">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20 w-fit">
-                  Our Expertise
-                </div>
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 font-heading leading-tight">
-                  Central Monitoring <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Portal</span>
+          {/* Top Header Row */}
+          <SectionWrapper className="mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/20 w-fit">
+              SolarWiz Telemetry Core
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+              <div className="lg:col-span-7">
+                <h2 className="text-4xl md:text-6xl font-black text-slate-900 font-heading leading-tight tracking-tight">
+                  Where Edge Hardware Meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Cloud Intelligence</span>
                 </h2>
-                <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                  SolarWiz collects, aggregates, presents, and executes different data model algorithms to calculate individual plant KPIs — giving operators complete intelligence across their entire renewable portfolio from a single screen.
+              </div>
+              <div className="lg:col-span-5">
+                <p className="text-slate-600 leading-relaxed text-lg">
+                  Adaptive Engineering Pvt. Ltd. integrates robust field instrumentation with advanced analytics. We capture raw electrical telemetry at the solar field and process it into actionable executive intelligence.
                 </p>
-                <div className="space-y-4 flex-1">
-                  {[
-                    { icon: <Database className="w-5 h-5" />, text: "Collects and aggregates data from all connected assets" },
-                    { icon: <TrendingUp className="w-5 h-5" />, text: "Executes data model algorithms for plant KPI calculation" },
-                    { icon: <Eye className="w-5 h-5" />, text: "Monitor and analyse plants across geographies centrally" },
-                    { icon: <Cloud className="w-5 h-5" />, text: "Secure cloud synchronisation with edge data preprocessing" },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                      <div className="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">{item.icon}</div>
-                      <span className="text-slate-700 font-medium text-sm">{item.text}</span>
+              </div>
+            </div>
+          </SectionWrapper>
+
+          {/* Core Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            {/* The Telemetry Pipeline (Left 7 Columns) */}
+            <div className="lg:col-span-7 flex flex-col gap-6">
+              {/* Step 1: Edge Acquisition */}
+              <SectionWrapper delay={0.05} className="flex-1">
+                <div className="group relative p-6 bg-slate-50 hover:bg-slate-100/70 border border-slate-100 hover:border-primary/30 rounded-2xl transition-all duration-300 flex flex-col md:flex-row gap-6">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                    <Cpu className="w-7 h-7" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap gap-2 items-center mb-2">
+                      <span className="text-xs font-bold uppercase text-primary tracking-wider">Layer 01</span>
+                      <span className="text-slate-400">•</span>
+                      <span className="text-xs font-bold uppercase text-slate-500 bg-slate-200/50 px-2 py-0.5 rounded">Physical Layer</span>
                     </div>
-                  ))}
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Edge Telemetry Acquisition</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                      Direct connection to inverter registers, multi-function energy meters, and weather sensors via RS-485 Modbus RTU/TCP protocols.
+                    </p>
+                    
+                    {/* Visual schematic inside card */}
+                    <div className="bg-slate-900 rounded-xl p-4 border border-slate-800 font-mono text-[10px] text-emerald-400/90 flex flex-wrap gap-3 items-center justify-between shadow-inner">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>MODBUS POLLING [Active]</span>
+                      </div>
+                      <div className="flex gap-4">
+                        <span className="text-slate-500">P_AC: <span className="text-emerald-300">42.8 kW</span></span>
+                        <span className="text-slate-500">V_DC: <span className="text-emerald-300">680 V</span></span>
+                        <span className="text-slate-500">PR: <span className="text-emerald-300">84.2%</span></span>
+                      </div>
+                      <span className="bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded text-[9px] font-bold">Growatt / Solis / Delta</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-xl w-full h-[480px]">
-                <SolarProDashboard />
-              </div>
-            </SectionWrapper>
+              </SectionWrapper>
+
+              {/* Step 2: Edge-to-Cloud Synchronization */}
+              <SectionWrapper delay={0.1} className="flex-1">
+                <div className="group relative p-6 bg-slate-50 hover:bg-slate-100/70 border border-slate-100 hover:border-primary/30 rounded-2xl transition-all duration-300 flex flex-col md:flex-row gap-6">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                    <Radio className="w-7 h-7" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap gap-2 items-center mb-2">
+                      <span className="text-xs font-bold uppercase text-primary tracking-wider">Layer 02</span>
+                      <span className="text-slate-400">•</span>
+                      <span className="text-xs font-bold uppercase text-slate-500 bg-slate-200/50 px-2 py-0.5 rounded">Data Link Layer</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Secure Sync &amp; Store-and-Forward</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                      On-device preprocessing filter reduces bandwidth consumption. If GPRS/4G connectivity is lost, data is queued in local solid-state storage and auto-synchronized upon recovery.
+                    </p>
+
+                    {/* Store & Forward simulation visual */}
+                    <div className="bg-slate-900 rounded-xl p-4 border border-slate-800 font-mono text-[10px] text-teal-400/90 flex flex-wrap gap-3 items-center justify-between shadow-inner">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+                        <span>TELEMETRY QUEUE [Synchronized]</span>
+                      </div>
+                      <div className="flex gap-4">
+                        <span className="text-slate-500">Queue Buffer: <span className="text-teal-300">0 Bytes</span></span>
+                        <span className="text-slate-500">Latency: <span className="text-teal-300">184ms</span></span>
+                        <span className="text-slate-500">Uplink: <span className="text-teal-300">4G GPRS</span></span>
+                      </div>
+                      <span className="bg-teal-950 text-teal-400 px-2 py-0.5 rounded text-[9px] font-bold">TLS 1.3 SECURE</span>
+                    </div>
+                  </div>
+                </div>
+              </SectionWrapper>
+
+              {/* Step 3: Analytical Engine */}
+              <SectionWrapper delay={0.15} className="flex-1">
+                <div className="group relative p-6 bg-slate-50 hover:bg-slate-100/70 border border-slate-100 hover:border-primary/30 rounded-2xl transition-all duration-300 flex flex-col md:flex-row gap-6">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                    <BarChart3 className="w-7 h-7" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap gap-2 items-center mb-2">
+                      <span className="text-xs font-bold uppercase text-primary tracking-wider">Layer 03</span>
+                      <span className="text-slate-400">•</span>
+                      <span className="text-xs font-bold uppercase text-slate-500 bg-slate-200/50 px-2 py-0.5 rounded">Analytics Layer</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">SolarPro Analytics &amp; KPI Engine</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                      Automated execution of performance ratio (PR), CUF calculations, carbon offset tracking, and ML-based anomaly rules checking for string or inverter failures.
+                    </p>
+
+                    {/* KPI metrics display */}
+                    <div className="bg-slate-900 rounded-xl p-4 border border-slate-800 font-mono text-[10px] text-cyan-400/90 flex flex-wrap gap-3 items-center justify-between shadow-inner">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                        <span>KPI ANALYTICS RUNNING</span>
+                      </div>
+                      <div className="flex gap-4">
+                        <span className="text-slate-500">Avg CUF: <span className="text-cyan-300">22.4%</span></span>
+                        <span className="text-slate-500">CO2 Saved: <span className="text-cyan-300">12.5 Tons</span></span>
+                        <span className="text-slate-500">Fault Detection: <span className="text-cyan-300">0 Anomalies</span></span>
+                      </div>
+                      <span className="bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded text-[9px] font-bold">AUTO REPORTS</span>
+                    </div>
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Server Node Monitor Container (Right 5 Columns) */}
+            <div className="lg:col-span-5 flex flex-col justify-between">
+              <SectionWrapper delay={0.2} className="h-full flex flex-col justify-between">
+                <div className="relative border border-slate-200/80 rounded-3xl bg-slate-950 p-6 flex flex-col justify-between shadow-2xl h-full overflow-hidden group">
+                  {/* Decorative background grid and neon glow */}
+                  <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '15px 15px' }}></div>
+                  <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-primary/20 transition-all duration-700"></div>
+                  
+                  <div>
+                    {/* Header Panel mock details */}
+                    <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
+                      <div className="flex items-center gap-3">
+                        <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                        <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        <span className="text-slate-500 font-mono text-xs ml-2">NOC_NODE_04 // active</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 bg-primary/10 text-primary border border-primary/20 px-2.5 py-1 rounded-md text-[10px] font-black tracking-widest font-mono font-bold">
+                        SSL SECURE
+                      </div>
+                    </div>
+
+                    <h3 className="text-2xl font-black text-white font-heading mb-3">Live Portal Diagnostic Dashboard</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      This diagnostic interface simulates the visual backend of SolarPro telemetry, streaming data aggregates from hundreds of solar arrays across multiple states.
+                    </p>
+
+                    {/* Stats details within the server node container */}
+                    <div className="grid grid-cols-2 gap-4 mb-6 font-mono">
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+                        <div className="text-[10px] text-slate-500 uppercase font-bold">SYSTEM UPTIME</div>
+                        <div className="text-lg font-black text-white mt-1">99.98%</div>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+                        <div className="text-[10px] text-slate-500 uppercase font-bold">ACTIVE FIELD NODES</div>
+                        <div className="text-lg font-black text-primary mt-1">2,840+</div>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+                        <div className="text-[10px] text-slate-500 uppercase font-bold">REFRESH RATE</div>
+                        <div className="text-lg font-black text-teal-400 mt-1">15 Sec</div>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+                        <div className="text-[10px] text-slate-500 uppercase font-bold">API STATUS</div>
+                        <div className="text-lg font-black text-emerald-400 mt-1">OPERATIONAL</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* High fidelity DashboardMockups embedded inside monitor frame */}
+                  <div className="rounded-2xl overflow-hidden border border-white/10 shadow-lg w-full h-[220px] bg-slate-900 relative mt-auto">
+                    <SolarProDashboard />
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
           </div>
         </div>
       </section>

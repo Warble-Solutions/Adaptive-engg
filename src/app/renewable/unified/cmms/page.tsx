@@ -1,6 +1,7 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Wrench, ClipboardList, CheckCircle2, Bell, FileCheck, Package, QrCode, Camera, Smartphone, Clock, BarChart3, Users, Shield, Calendar, Cog } from "lucide-react";
+import { CMMSDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
  title: "CMMS | Unified Renewable Solutions | Adaptive Engineering",
@@ -12,38 +13,47 @@ export default function Page() {
  <div className="flex flex-col w-full">
 
  {/* ═══════════════════════════════════════════ */}
- {/* HERO — Dashboard background with blur */}
- {/* ═══════════════════════════════════════════ */}
- <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
- <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#1a1a0a] via-[#2d2d16] to-[#1a1a0a]">
- <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(45deg, rgba(234,179,8,0.3) 1px, transparent 1px), linear-gradient(-45deg, rgba(234,179,8,0.3) 1px, transparent 1px)', backgroundSize: '80px 80px' }}></div>
- <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-teal-500/10 rounded-full blur-[150px]"></div>
+ {/* HERO — Split layout: text left, dashboard right */}
+ <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
+ <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#0a2a2a] to-slate-950">
+ {/* Animated grid lines */}
+ <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+ <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+ <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-teal-600/15 rounded-full blur-[100px]"></div>
  </div>
-
- {/* Banner image in background */}
- <div className="absolute inset-0 z-[1] pointer-events-none">
- <img src="/imgs/cmms.png" alt="CMMS Dashboard" className="w-full h-full object-cover opacity-40" />
- {/* Blur overlay */}
- <div className="absolute inset-0 backdrop-blur-[2px]"></div>
- {/* Gradient vignette */}
- <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a0a]/50 via-transparent to-[#1a1a0a]/70"></div>
- <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a0a]/40 via-transparent to-[#1a1a0a]/40"></div>
- </div>
-
- <div className="z-10 max-w-7xl relative">
+ <div className="z-10 max-w-7xl mx-auto w-full relative">
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+ {/* Left — Text */}
  <SectionWrapper>
- <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-teal-500/20">
+ <div>
+ <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20">
  <Wrench className="w-4 h-4" />
  <span>Unified Renewable Solution</span>
  </div>
- <h1 className="text-4xl md:text-7xl font-black text-white mb-6 font-heading leading-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
+ <h1 className="text-4xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
  Computerized Maintenance<br />
  <span className="gradient-heading">Management System</span>
  </h1>
- <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+ <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
  Automated workorder management, standardized SOPs across the enterprise, reduced mean time to repair, and effective cost control with inventory management.
  </p>
+ <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors">
+ Request Demo <ArrowRight className="w-4 h-4" />
+ </Link>
+ </div>
  </SectionWrapper>
+
+ {/* Right — Dashboard */}
+ <SectionWrapper delay={0.3}>
+ <div className="h-[440px] hidden lg:block">
+ <CMMSDashboard />
+ </div>
+ </SectionWrapper>
+ </div>
+ </div>
+ {/* Scroll indicator */}
+ <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 z-10 animate-bounce">
+ <div className="w-[1px] h-16 bg-gradient-to-b from-primary to-transparent"></div>
  </div>
  </section>
 
@@ -163,6 +173,44 @@ export default function Page() {
  </div>
  </section>
 
+ {/* MAINTENANCE FIELD OPERATIONS IMAGE SECTION */}
+ <section className="py-20 bg-slate-50 relative z-20">
+ <div className="max-w-7xl mx-auto px-6">
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+ <SectionWrapper>
+ <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+ <img 
+ src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80" 
+ alt="Technician maintaining solar installation" 
+ className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+ />
+ <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+ <div className="absolute bottom-6 left-6 text-white">
+ <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">Field Services</p>
+ <h4 className="text-lg font-bold">Technician Performing Preventive Maintenance</h4>
+ </div>
+ </div>
+ </SectionWrapper>
+ <SectionWrapper delay={0.2}>
+ <div>
+ <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Operations & Maintenance</span>
+ <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-heading">Empowering field technicians with standardized checklists</h3>
+ <p className="text-slate-600 leading-relaxed mb-6">
+ Close the loop on system alerts immediately. Technicians receive detailed work order sheets directly on their mobile devices, outlining standard procedures, target metrics, and mandatory photo verification requirements to ensure consistent compliance across your fleet.
+ </p>
+ <div className="flex items-center gap-3 text-sm font-bold text-slate-800">
+ <CheckCircle2 className="text-primary w-5 h-5" />
+ <span>Offline-first mobile capabilities</span>
+ </div>
+ <div className="flex items-center gap-3 text-sm font-bold text-slate-800 mt-2">
+ <CheckCircle2 className="text-primary w-5 h-5" />
+ <span>Standardized verification flow with photos</span>
+ </div>
+ </div>
+ </SectionWrapper>
+ </div>
+ </div>
+ </section>
 
  {/* OTHER SOLUTIONS */}
  <section className="py-24 bg-white relative z-20">

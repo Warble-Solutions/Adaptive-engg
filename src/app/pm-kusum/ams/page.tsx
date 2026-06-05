@@ -49,93 +49,92 @@ export default function Page() {
  </div>
  </SectionWrapper>
 
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
- {[
- {
- icon: <Database className="w-6 h-6" />,
- title: "Asset Info Management",
- desc: "Complete asset registry with hierarchy, specifications, warranty tracking, and documentation. QR code-based field identification.",
- color: "from-teal-500 to-teal-500",
- shadow: "shadow-teal-500/20",
- items: ["Asset hierarchy & classification", "Specification sheets", "Lifecycle tracking", "QR asset tagging"]
- },
- {
- icon: <Users className="w-6 h-6" />,
- title: "Team Management",
- desc: "Organize O&M teams with skills matrix, shift scheduling, and performance tracking.",
- color: "from-teal-500 to-teal-500",
- shadow: "shadow-teal-500/20",
- items: ["Skills matrix & certification", "Shift scheduling", "Attendance tracking", "Performance analytics"]
- },
- {
- icon: <Wrench className="w-6 h-6" />,
- title: "Maintenance Management",
- desc: "Preventive, predictive, and corrective maintenance workflows with SOP enforcement.",
- color: "from-teal-500 to-teal-500",
- shadow: "shadow-teal-500/20",
- items: ["Preventive schedules", "Predictive triggers", "Standard Operating Proc.", "Multi-step workflows"]
- },
- {
- icon: <Package className="w-6 h-6" />,
- title: "Inventory Management",
- desc: "Track spare parts, consumables, and tools across all sites with min/max alerts.",
- color: "from-teal-500 to-teal-500",
- shadow: "shadow-teal-500/20",
- items: ["Part catalog with specs", "Min/Max quantity alerts", "Vendor management", "Purchase tracking"]
- },
- {
- icon: <ClipboardList className="w-6 h-6" />,
- title: "Work Order Management",
- desc: "Create, assign, execute, and close work orders with full audit trail and photo evidence.",
- color: "from-teal-500 to-teal-500",
- shadow: "shadow-teal-500/20",
- items: ["Auto-assignment rules", "Priority & SLA tracking", "Photo evidence uploads", "Pass/Fail feedbacks"]
- },
- {
- icon: <Workflow className="w-6 h-6" />,
- title: "Third-Party Integrations",
- desc: "Connect with SCADA, ERP, billing, and other enterprise systems via open APIs.",
- color: "from-teal-500 to-teal-500",
- shadow: "shadow-teal-500/20",
- items: ["SCADA data integration", "ERP connectivity", "Billing system sync", "REST API & webhooks"]
- },
- {
- icon: <BarChart3 className="w-6 h-6" />,
- title: "Analytics & Reports",
- desc: "Comprehensive KPIs — MTBF, MTTR, OEE, availability, and cost per asset analytics.",
- color: "from-teal-500 to-teal-500",
- shadow: "shadow-teal-500/20",
- items: ["MTBF & MTTR dashboards", "Cost per asset tracking", "Availability analytics", "Custom report builder"],
- span: "lg:col-start-2" // Center the 7th item exactly within the 3-column grid
- },
- ].map((module, i) => (
- <SectionWrapper key={i} delay={i * 0.1}>
- <div className={`group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col ${module.span || ''}`}>
- 
- {/* Glowing background orb effect */}
- <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-10 blur-[50px] transition-opacity duration-700`}></div>
- 
- <div className="flex items-center gap-4 mb-6 relative z-10">
- <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:scale-110 transition-transform duration-300`}>
- {module.icon}
- </div>
- <h3 className="text-xl font-bold text-slate-900 leading-tight">{module.title}</h3>
- </div>
- 
- <p className="text-sm text-slate-600 leading-relaxed mb-8 flex-grow relative z-10 group-hover:text-slate-700 transition-colors">{module.desc}</p>
- 
- <div className="space-y-3 relative z-10 bg-slate-100/80 group-hover:border-primary/50 hover:shadow-xl bg-slate-50 p-5 rounded-2xl border border-slate-200/60 transition-colors">
- {module.items.map((item, idx) => (
- <div key={idx} className="flex items-start gap-3 text-sm text-slate-600 group-hover:bg-white hover:text-slate-900 transition-colors">
- <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 text-transparent bg-clip-text bg-gradient-to-br ${module.color}`} style={{ color: "unset" }} />
- <span className="font-medium">{item}</span>
- </div>
- ))}
- </div>
- </div>
- </SectionWrapper>
- ))}
- </div>
+ <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+  {[
+  {
+  icon: <Database className="w-6 h-6" />,
+  title: "Asset Info Management",
+  desc: "Complete asset registry with hierarchy, specifications, warranty tracking, and documentation. QR code-based field identification.",
+  color: "from-teal-500 to-teal-500",
+  shadow: "shadow-teal-500/20",
+  items: ["Asset hierarchy & classification", "Specification sheets", "Lifecycle tracking", "QR asset tagging"]
+  },
+  {
+  icon: <Users className="w-6 h-6" />,
+  title: "Team Management",
+  desc: "Organize O&M teams with skills matrix, shift scheduling, and performance tracking.",
+  color: "from-teal-500 to-teal-500",
+  shadow: "shadow-teal-500/20",
+  items: ["Skills matrix & certification", "Shift scheduling", "Attendance tracking", "Performance analytics"]
+  },
+  {
+  icon: <Wrench className="w-6 h-6" />,
+  title: "Maintenance Management",
+  desc: "Preventive, predictive, and corrective maintenance workflows with SOP enforcement.",
+  color: "from-teal-500 to-teal-500",
+  shadow: "shadow-teal-500/20",
+  items: ["Preventive schedules", "Predictive triggers", "Standard Operating Proc.", "Multi-step workflows"]
+  },
+  {
+  icon: <Package className="w-6 h-6" />,
+  title: "Inventory Management",
+  desc: "Track spare parts, consumables, and tools across all sites with min/max alerts.",
+  color: "from-teal-500 to-teal-500",
+  shadow: "shadow-teal-500/20",
+  items: ["Part catalog with specs", "Min/Max quantity alerts", "Vendor management", "Purchase tracking"]
+  },
+  {
+  icon: <ClipboardList className="w-6 h-6" />,
+  title: "Work Order Management",
+  desc: "Create, assign, execute, and close work orders with full audit trail and photo evidence.",
+  color: "from-teal-500 to-teal-500",
+  shadow: "shadow-teal-500/20",
+  items: ["Auto-assignment rules", "Priority & SLA tracking", "Photo evidence uploads", "Pass/Fail feedbacks"]
+  },
+  {
+  icon: <Workflow className="w-6 h-6" />,
+  title: "Third-Party Integrations",
+  desc: "Connect with SCADA, ERP, billing, and other enterprise systems via open APIs.",
+  color: "from-teal-500 to-teal-500",
+  shadow: "shadow-teal-500/20",
+  items: ["SCADA data integration", "ERP connectivity", "Billing system sync", "REST API & webhooks"]
+  },
+  {
+  icon: <BarChart3 className="w-6 h-6" />,
+  title: "Analytics & Reports",
+  desc: "Comprehensive KPIs — MTBF, MTTR, OEE, availability, and cost per asset analytics.",
+  color: "from-teal-500 to-teal-500",
+  shadow: "shadow-teal-500/20",
+  items: ["MTBF & MTTR dashboards", "Cost per asset tracking", "Availability analytics", "Custom report builder"],
+  },
+  ].map((module, i) => (
+  <SectionWrapper key={i} delay={i * 0.1} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)] flex flex-col">
+  <div className="group p-8 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-200 hover:bg-white shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full relative overflow-hidden flex flex-col">
+  
+  {/* Glowing background orb effect */}
+  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${module.color} rounded-full opacity-0 group-hover:opacity-10 blur-[50px] transition-opacity duration-700`}></div>
+  
+  <div className="flex items-center gap-4 mb-6 relative z-10">
+  <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center text-white shadow-lg ${module.shadow} group-hover:scale-110 transition-transform duration-300`}>
+  {module.icon}
+  </div>
+  <h3 className="text-xl font-bold text-slate-900 leading-tight">{module.title}</h3>
+  </div>
+  
+  <p className="text-sm text-slate-600 leading-relaxed mb-8 flex-grow relative z-10 group-hover:text-slate-700 transition-colors">{module.desc}</p>
+  
+  <div className="space-y-3 relative z-10 bg-slate-100/80 group-hover:border-primary/50 hover:shadow-xl bg-slate-50 p-5 rounded-2xl border border-slate-200/60 transition-colors">
+  {module.items.map((item, idx) => (
+  <div key={idx} className="flex items-start gap-3 text-sm text-slate-600 group-hover:bg-white hover:text-slate-900 transition-colors">
+  <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 text-transparent bg-clip-text bg-gradient-to-br ${module.color}`} style={{ color: "unset" }} />
+  <span className="font-medium">{item}</span>
+  </div>
+  ))}
+  </div>
+  </div>
+  </SectionWrapper>
+  ))}
+  </div>
  </div>
  </section>
 

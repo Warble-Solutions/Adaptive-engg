@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe, PieChart, Brain, BarChart3 } from "lucide-react";
+import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe, PieChart, Brain, BarChart3, Fan, Lightbulb, ShieldCheck } from "lucide-react";
 
 // ─────────────────────────────────────────────
 // Utility: animated number that fluctuates
@@ -1349,6 +1349,141 @@ export function HybridPlantDashboard() {
                    <div className="bg-blue-500 h-full transition-all duration-1000 rounded-full" style={{ width: `${Math.max(10, ((load - solGen - windGen) / 5) * 100)}%` }}></div>
                 </div>
              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
+// 11. Tunnel SCADA HMI Dashboard
+// ─────────────────────────────────────────────
+export function TunnelSCADADashboard() {
+  const coLevel = useLiveValue(24.5, 1.5);
+  const visibility = useLiveValue(94.2, 0.8);
+  const extLux = useLiveValue(8420, 250);
+  const intDimming = useLiveValue(74.5, 2.5);
+  const [fanRot, setFanRot] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setFanRot(p => (p + 15) % 360);
+    }, 50);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="w-full h-full bg-[#0a1220] rounded-2xl border border-slate-700/50 overflow-hidden shadow-2xl p-4 text-white select-none flex flex-col">
+      {/* Title bar */}
+      <div className="flex items-center justify-between mb-3 px-1 shrink-0">
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 bg-teal-500/20 rounded-lg flex items-center justify-center">
+            <Activity className="w-4 h-4 text-teal-400" />
+          </div>
+          <div>
+            <span className="text-xs font-bold text-white block leading-tight">Tunnel SCADA HMI</span>
+            <span className="text-[8px] text-slate-500 font-mono">Twin-Tube Road Tunnel System</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="px-2 py-0.5 bg-teal-500/10 text-teal-400 rounded text-[8px] font-bold border border-teal-500/20 flex items-center gap-1">
+            <StatusDot status="online" />
+            SYS ACTIVE
+          </span>
+        </div>
+      </div>
+
+      {/* Grid of panels */}
+      <div className="grid grid-cols-2 gap-3 flex-grow overflow-hidden">
+        {/* Panel 1: Ventilation */}
+        <div className="bg-white/5 border border-white/5 rounded-xl p-3 flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Ventilation (Jet Fans)</span>
+            <Fan className="w-3.5 h-3.5 text-teal-400 shrink-0" style={{ transform: `rotate(${fanRot}deg)` }} />
+          </div>
+          <div className="space-y-1.5 flex-grow justify-center flex flex-col">
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">Jet Fans 1-4:</span>
+              <span className="font-mono text-teal-400 font-bold">85% RPM</span>
+            </div>
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">CO Level:</span>
+              <span className={`font-mono font-bold ${coLevel > 28 ? 'text-amber-400' : 'text-slate-200'}`}>{coLevel.toFixed(1)} ppm</span>
+            </div>
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">Visibility:</span>
+              <span className="font-mono text-slate-200 font-bold">{visibility.toFixed(1)}%</span>
+            </div>
+          </div>
+          <div className="h-1.5 w-full bg-black/40 rounded-full overflow-hidden mt-1">
+            <div className="h-full bg-teal-400 rounded-full" style={{ width: `${visibility}%` }}></div>
+          </div>
+        </div>
+
+        {/* Panel 2: Adaptive Lighting */}
+        <div className="bg-white/5 border border-white/5 rounded-xl p-3 flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Adaptive Lighting</span>
+            <Lightbulb className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+          </div>
+          <div className="space-y-1.5 flex-grow justify-center flex flex-col">
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">Exterior Lux:</span>
+              <span className="font-mono text-amber-400 font-bold">{Math.round(extLux)} Lux</span>
+            </div>
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">Interior Dim:</span>
+              <span className="font-mono text-slate-200 font-bold">{intDimming.toFixed(1)}%</span>
+            </div>
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">Luminance Mode:</span>
+              <span className="font-bold text-teal-400 text-[9px] uppercase">Transition Boost</span>
+            </div>
+          </div>
+          <div className="h-1.5 w-full bg-black/40 rounded-full overflow-hidden mt-1">
+            <div className="h-full bg-amber-400 rounded-full animate-pulse" style={{ width: `${intDimming}%` }}></div>
+          </div>
+        </div>
+
+        {/* Panel 3: Traffic Control VMS */}
+        <div className="bg-white/5 border border-white/5 rounded-xl p-3 flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Signage & VMS</span>
+            <Globe className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+          </div>
+          <div className="flex-grow flex items-center justify-center">
+            {/* Visual speed limit sign mockup */}
+            <div className="bg-black border-2 border-red-500 rounded-full w-12 h-12 flex items-center justify-center flex-col shrink-0 shadow-lg shadow-red-500/20">
+              <span className="text-base font-black text-white leading-none font-mono">60</span>
+              <span className="text-[5px] text-red-500 font-bold leading-none uppercase font-mono">LIMIT</span>
+            </div>
+            <div className="ml-3 space-y-1">
+              <div className="text-[8px] bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded text-emerald-400 font-mono font-bold leading-none">LANE 1: GO</div>
+              <div className="text-[8px] bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded text-emerald-400 font-mono font-bold leading-none">LANE 2: GO</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Panel 4: Fire Safety & Power */}
+        <div className="bg-white/5 border border-white/5 rounded-xl p-3 flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Safety & Power</span>
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+          </div>
+          <div className="space-y-1.5 flex-grow justify-center flex flex-col">
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">LHD Status:</span>
+              <span className="font-bold text-emerald-400 uppercase text-[9px]">Healthy</span>
+            </div>
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">Substation:</span>
+              <span className="font-mono text-slate-200 font-bold">11kV (Normal)</span>
+            </div>
+            <div className="flex justify-between items-center text-xs">
+              <span className="text-slate-400">UPS Power:</span>
+              <span className="font-mono text-slate-200 font-bold">100% Armed</span>
+            </div>
           </div>
         </div>
       </div>

@@ -33,39 +33,48 @@ export default function Page() {
  </div>
  </section>
 
- {/* Grid Visibility, Guaranteed */}
- <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
- <div className="max-w-7xl mx-auto px-6">
- <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
- <SectionWrapper>
- <div>
- <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Grid Visibility, Guaranteed</h2>
- <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
- For grid-connected solar plants, real-time data transmission to the State Load Despatch Centre (SLDC) and Regional Load Despatch Centre (RLDC) is mandatory. Our Telemetry System provides IEC 60870-5-104 and DNP3 compliant data communication through dedicated RTUs, ensuring your plant remains visible to grid operators and avoids penalties for non-compliance.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.2}>
- <div className="premium-card p-10 bg-gradient-to-br from-teal-50 to-teal-50 rounded-3xl border border-teal-100 shadow-xl relative overflow-hidden">
- <div className="grid grid-cols-3 gap-8 relative z-10">
- <div>
- <div className="text-4xl font-black text-slate-900 mb-1">IEC 104</div>
- <div className="text-xs font-bold text-primary uppercase tracking-wider">Protocol Support</div>
- </div>
- <div>
- <div className="text-4xl font-black text-slate-900 mb-1">99.9%</div>
- <div className="text-xs font-bold text-primary uppercase tracking-wider">Data Availability</div>
- </div>
- <div>
- <div className="text-4xl font-black text-slate-900 mb-1">SLDC/RLDC</div>
- <div className="text-xs font-bold text-primary uppercase tracking-wider">Direct Link</div>
- </div>
- </div>
- </div>
- </SectionWrapper>
- </div>
- </div>
- </section>
+  {/* Grid Visibility, Guaranteed */}
+  <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
+  <div className="max-w-7xl mx-auto px-6">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <SectionWrapper>
+  <div>
+  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Grid Visibility, Guaranteed</h2>
+  <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
+  For grid-connected solar plants, real-time data transmission to the State Load Despatch Centre (SLDC) and Regional Load Despatch Centre (RLDC) is mandatory. Our Telemetry System provides IEC 60870-5-104 and DNP3 compliant data communication through dedicated RTUs, ensuring your plant remains visible to grid operators and avoids penalties for non-compliance.
+  </p>
+  
+  <div className="premium-card p-8 bg-gradient-to-br from-teal-50 to-teal-50/30 rounded-2xl border border-teal-100 shadow-md">
+    <div className="grid grid-cols-3 gap-6 relative z-10 text-center">
+      <div>
+        <div className="text-2xl font-black text-slate-900 mb-1">IEC 104</div>
+        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Protocol Support</div>
+      </div>
+      <div>
+        <div className="text-2xl font-black text-slate-900 mb-1">99.9%</div>
+        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Data Availability</div>
+      </div>
+      <div>
+        <div className="text-2xl font-black text-slate-900 mb-1">SLDC</div>
+        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Direct Link</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </SectionWrapper>
+  <SectionWrapper delay={0.2}>
+  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 h-[380px] group">
+    <img src="/imgs/pm-kusum/scada_control_room.png" alt="SCADA Telemetry SLDC Link" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
+    <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md rounded-2xl border border-white/20">
+      <p className="text-slate-900 font-bold text-sm">SLDC Telemetry Integration</p>
+      <p className="text-slate-500 text-xs mt-0.5">Real-time RTU interface tracking power exports</p>
+    </div>
+  </div>
+  </SectionWrapper>
+  </div>
+  </div>
+  </section>
 
  {/* System Components */}
  <section className="py-32 bg-transparent text-white relative z-10">

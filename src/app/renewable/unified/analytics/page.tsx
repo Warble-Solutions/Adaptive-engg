@@ -13,10 +13,12 @@ export default function Page() {
  <div className="flex flex-col w-full">
  {/* HERO — Split Layout: Text left, Dashboards Right */}
  <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
- <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#1a0a2e] via-[#16213e] to-[#0f3460]">
- <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(139,92,246,0.3) 50px), repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(139,92,246,0.3) 50px)' }}></div>
- <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-600/10 rounded-full blur-[150px]"></div>
- </div>
+  <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#0a2a2a] to-slate-950">
+  {/* Animated grid lines */}
+  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+  <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+  <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-teal-600/15 rounded-full blur-[100px]"></div>
+  </div>
  
  <div className="z-10 max-w-7xl mx-auto w-full relative">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -118,6 +120,44 @@ export default function Page() {
  </div>
  </section>
 
+  {/* ADVANCED LOSS ANALYSIS IMAGE SECTION */}
+  <section className="py-20 bg-slate-50 relative z-20">
+  <div className="max-w-7xl mx-auto px-6">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <SectionWrapper>
+  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+  <img 
+  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
+  alt="Data Analytics and Modeling" 
+  className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+  <div className="absolute bottom-6 left-6 text-white">
+  <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">AI Modeling</p>
+  <h4 className="text-lg font-bold">Predictive Loss Bucket Identification</h4>
+  </div>
+  </div>
+  </SectionWrapper>
+  <SectionWrapper delay={0.2}>
+  <div>
+  <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Deep Data Insights</span>
+  <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-heading">Pinpoint inefficiencies with granular accuracy</h3>
+  <p className="text-slate-600 leading-relaxed mb-6">
+  Don't guess where your losses are. Our advanced analytics engine breaks down performance deficits into distinct loss buckets like inverter clipping, grid limits, dirt/soiling, and heat degradation. Real-time data visualization helps O&M crews act immediately, maximizing generation efficiency.
+  </p>
+  <div className="flex items-center gap-3 text-sm font-bold text-slate-800">
+  <CheckCircle2 className="text-primary w-5 h-5" />
+  <span>Automated degradation alerts</span>
+  </div>
+  <div className="flex items-center gap-3 text-sm font-bold text-slate-800 mt-2">
+  <CheckCircle2 className="text-primary w-5 h-5" />
+  <span>Custom CSV and Excel report exports</span>
+  </div>
+  </div>
+  </SectionWrapper>
+  </div>
+  </div>
+  </section>
 
  {/* OTHER SOLUTIONS */}
  <section className="py-24 bg-white relative z-20">

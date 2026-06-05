@@ -15,11 +15,12 @@ export default function Page() {
  <div className="flex flex-col w-full">
  {/* HERO — Dashboards left, text right */}
  <section className="section-hero relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
- <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a0f1a] via-[#0d1f2d] to-[#0a1628]">
- <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(4,154,137,0.5) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
- <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-[120px]"></div>
- <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[150px]"></div>
- </div>
+  <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#0a2a2a] to-slate-950">
+  {/* Animated grid lines */}
+  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+  <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+  <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-teal-600/15 rounded-full blur-[100px]"></div>
+  </div>
  <div className="z-10 max-w-7xl mx-auto w-full relative">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
  {/* Left — Overlapping Dashboard Cards */}
@@ -96,7 +97,7 @@ export default function Page() {
  <UnifiedCMSFeatures />
 
  {/* GAIN SUPERIOR CONTROL — Z-Pattern High-End Dark Blocks */}
- <section className="py-24 bg-gradient-to-br from-[#0a0f1a] to-[#0a1628] text-white relative z-10 border-t border-white/5">
+  <section className="py-24 bg-gradient-to-br from-slate-950 via-[#081a1a] to-slate-900 text-white relative z-10 border-t border-white/5">
  <div className="max-w-7xl mx-auto px-6">
  <SectionWrapper>
  <div className="text-center mb-20">
@@ -141,6 +142,44 @@ export default function Page() {
  </div>
  </section>
 
+  {/* PORTFOLIO VISUALIZATION IMAGE SECTION */}
+  <section className="py-20 bg-slate-50 relative z-20">
+  <div className="max-w-7xl mx-auto px-6">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <SectionWrapper>
+  <div>
+  <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Global Intelligence</span>
+  <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-heading">Multi-GW portfolio monitoring from a unified dashboard</h3>
+  <p className="text-slate-600 leading-relaxed mb-6">
+  Unlock centralized oversight across multiple states and assets. The Central Monitoring System aggregates performance metrics across heterogeneous solar and wind sites, enabling asset managers to compare yield, identify systemic faults, and run diagnostics without traveling to the field.
+  </p>
+  <div className="flex items-center gap-3 text-sm font-bold text-slate-800">
+  <CheckCircle2 className="text-primary w-5 h-5" />
+  <span>Cross-site performance analytics</span>
+  </div>
+  <div className="flex items-center gap-3 text-sm font-bold text-slate-800 mt-2">
+  <CheckCircle2 className="text-primary w-5 h-5" />
+  <span>SLA and maintenance dispatch tracking</span>
+  </div>
+  </div>
+  </SectionWrapper>
+  <SectionWrapper delay={0.2}>
+  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+  <img 
+  src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" 
+  alt="Renewable Energy Infrastructure" 
+  className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+  <div className="absolute bottom-6 left-6 text-white">
+  <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">Global Assets</p>
+  <h4 className="text-lg font-bold">Utility-Scale Solar Field Monitoring</h4>
+  </div>
+  </div>
+  </SectionWrapper>
+  </div>
+  </div>
+  </section>
 
  {/* OTHER SOLUTIONS */}
  <section className="py-24 bg-white relative z-20">

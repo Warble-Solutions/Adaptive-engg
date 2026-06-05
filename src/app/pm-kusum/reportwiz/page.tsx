@@ -40,35 +40,47 @@ export default function Page() {
  </div>
  </section>
 
- {/* CORE FEATURES — Colored accent panels */}
- <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
- <div className="max-w-7xl mx-auto px-6">
- <SectionWrapper>
- <h2 className="text-4xl font-bold text-slate-900 text-center mb-16 font-heading">Reporting Capabilities</h2>
- </SectionWrapper>
+  {/* CORE FEATURES — Colored accent panels */}
+  <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10">
+    <div className="max-w-7xl mx-auto px-6">
+      <SectionWrapper>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0da08a]/10 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-[#0da08a]/20">
+            ReportWiz Workspace
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading">
+            Enterprise Reporting Capabilities
+          </h2>
+          <p className="text-slate-500 mt-4 max-w-xl mx-auto">
+            Design, schedule, and automate compliance reports for your entire solar fleet.
+          </p>
+        </div>
+      </SectionWrapper>
 
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
- {[
- { icon: <TrendingUp className="w-7 h-7" />, title: "KPI & Performance Insights", desc: "Track PR, CUF, specific yield, GHI, PLF, and more. Auto-benchmarking against contractual targets.", accent: "border-l-teal-500 bg-teal-50/30" },
- { icon: <Filter className="w-7 h-7" />, title: "Custom Reports", desc: "Design bespoke reports with drag-and-drop parameter selection. Custom date ranges, grouping, and filtering.", accent: "border-l-cyan-500 bg-teal-50/30" },
- { icon: <BarChart3 className="w-7 h-7" />, title: "Analytics Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-teal-500 bg-teal-50/30" },
- { icon: <Brain className="w-7 h-7" />, title: "AI/ML Analytics", desc: "Anomaly detection, degradation analysis, soiling loss estimation, and predictive performance modeling.", accent: "border-l-teal-500 bg-teal-50/30" },
- { icon: <Calendar className="w-7 h-7" />, title: "Scheduled Reporting", desc: "Auto-generate daily, weekly, monthly, and annual reports. Email to stakeholders on schedule.", accent: "border-l-amber-500 bg-teal-50/30" },
- { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
- ].map((item, i) => (
- <SectionWrapper key={i} delay={i * 0.08}>
- <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 shadow-2xl hover:border-primary/50 hover:shadow-xl -translate-y-2 transition-all duration-500 h-full`}>
- <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-700 mb-5 shadow-sm group-hover:scale-110 transition-transform">
- {item.icon}
- </div>
- <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
- <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
- </div>
- </SectionWrapper>
- ))}
- </div>
- </div>
- </section>
+      {/* Grid: 3 Columns of Feature Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        {[
+          { icon: <TrendingUp className="w-7 h-7" />, title: "KPI & Performance Insights", desc: "Track PR, CUF, specific yield, GHI, PLF, and more. Auto-benchmarking against contractual targets.", accent: "border-l-teal-500 bg-teal-50/30" },
+          { icon: <Filter className="w-7 h-7" />, title: "Custom Reports", desc: "Design bespoke reports with drag-and-drop parameter selection. Custom date ranges, grouping, and filtering.", accent: "border-l-cyan-500 bg-teal-50/30" },
+          { icon: <BarChart3 className="w-7 h-7" />, title: "Analytics Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-teal-500 bg-teal-50/30" },
+          { icon: <Brain className="w-7 h-7" />, title: "AI/ML Analytics", desc: "Anomaly detection, degradation analysis, soiling loss estimation, and predictive performance modeling.", accent: "border-l-teal-500 bg-teal-50/30" },
+          { icon: <Calendar className="w-7 h-7" />, title: "Scheduled Reporting", desc: "Auto-generate daily, weekly, monthly, and annual reports. Email to stakeholders on schedule.", accent: "border-l-amber-500 bg-teal-50/30" },
+          { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
+        ].map((item, i) => (
+          <SectionWrapper key={i} delay={i * 0.08}>
+            <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 shadow-xl hover:border-primary/50 hover:shadow-2xl -translate-y-1 transition-all duration-300 h-full`}>
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-700 mb-5 shadow-md group-hover:scale-110 transition-transform">
+                {item.icon}
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+            </div>
+          </SectionWrapper>
+        ))}
+      </div>
+
+    </div>
+  </section>
 
  {/* REPORT TYPES */}
  <section className="py-28 bg-transparent text-white relative z-10">

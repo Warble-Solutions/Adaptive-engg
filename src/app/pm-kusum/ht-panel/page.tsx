@@ -108,6 +108,45 @@ export default function Page() {
  </div>
  </section>
 
+ {/* PRODUCT SHOWCASE */}
+ <section className="py-20 bg-slate-50 relative z-20 border-b border-slate-200">
+ <div className="max-w-7xl mx-auto px-6">
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+ <SectionWrapper>
+ <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 h-[380px] group">
+   <img src="/imgs/pm-kusum/electrical_panel_manufacturing.png" alt="High Tension Panel Manufacturing Floor" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
+   <div className="absolute bottom-6 left-6 p-4 bg-white/95 backdrop-blur-sm rounded-2xl border border-white/20">
+     <p className="text-slate-900 font-bold text-xs">Adaptive Engineering Factory Floor</p>
+     <p className="text-slate-500 text-xs mt-0.5">Custom panels undergoing routing & testing</p>
+   </div>
+ </div>
+ </SectionWrapper>
+ <SectionWrapper delay={0.2}>
+ <div>
+ <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">
+   Production Excellence
+ </div>
+ <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">ERDA Type-Tested Structural Design</h2>
+ <p className="text-lg text-slate-600 leading-relaxed mb-6">
+   Every High Tension VCB Panel is fabricated using premium CRCA switchgear-grade sheet steel, subjected to a 7-tank chemical pre-treatment process, and epoxy powder coated for extreme environmental durability. Our structural engineering ensures full containment under internal arc fault conditions.
+ </p>
+ <div className="space-y-4">
+   <div className="flex items-center gap-3">
+     <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+     <span className="text-slate-700 font-medium text-sm">Fully partitioned metal-clad switchgear structure</span>
+   </div>
+   <div className="flex items-center gap-3">
+     <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+     <span className="text-slate-700 font-medium text-sm">Automatic safety shutters with padlock facilities</span>
+   </div>
+ </div>
+ </div>
+ </SectionWrapper>
+ </div>
+ </div>
+ </section>
+
  {/* PANEL FEATURES */}
  <section className="py-28 bg-transparent text-white relative z-10">
  <div className="max-w-7xl mx-auto px-6">
