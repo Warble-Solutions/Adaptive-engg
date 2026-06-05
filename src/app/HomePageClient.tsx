@@ -421,7 +421,7 @@ export default function HomePageClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayVideos.map((video, idx) => (
-              <SectionWrapper key={video.id} className="group" delay={idx * 0.1}>
+              <SectionWrapper key={`${video.id}-${idx}`} className="group" delay={idx * 0.1}>
                 <div className="aspect-video w-full bg-slate-800 rounded-2xl overflow-hidden border border-white/10 relative shadow-lg cursor-pointer">
                   {playingVideos[video.id] ? (
                     <iframe
