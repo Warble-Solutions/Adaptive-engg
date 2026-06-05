@@ -105,20 +105,11 @@ export default function Page() {
  <SectionWrapper delay={0.2}>
  <div className="relative">
  <div className="absolute -inset-4 bg-gradient-to-br from-teal-500/20 to-transparent rounded-[40px] blur-2xl"></div>
- <div className="relative bg-slate-50 rounded-[32px] p-10 border border-slate-200 shadow-xl">
- <div className="grid grid-cols-2 gap-6">
- {[
- { value: `${WATER_STATS.yearsExperience.value}${WATER_STATS.yearsExperience.suffix}`, label: "Years Experience", icon: <TrendingUp className="w-5 h-5" /> },
- { value: `${WATER_STATS.mldTreatedWater.value}${WATER_STATS.mldTreatedWater.suffix}`, label: "MLD Treated Water", icon: <Droplets className="w-5 h-5" /> },
- { value: `${WATER_STATS.supplySchemes.value}${WATER_STATS.supplySchemes.suffix}`, label: "Supply Schemes", icon: <Activity className="w-5 h-5" /> },
- { value: WATER_STATS.overheadTanks.formatted, label: "Overhead Tanks", icon: <Gauge className="w-5 h-5" /> },
- ].map((stat, i) => (
- <div key={i} className="text-center p-5 bg-white rounded-2xl border border-slate-100 shadow-sm">
- <div className="w-10 h-10 mx-auto bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-3">{stat.icon}</div>
- <div className="text-2xl font-black text-slate-900 mb-1">{stat.value}</div>
- <p className="text-slate-500 text-xs font-bold uppercase tracking-wider">{stat.label}</p>
- </div>
- ))}
+ <div className="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl">
+ <Image src="/imgs/wtp-scada-control-room.png" alt="SCADA Control Room for Water Treatment Operations" width={800} height={600} className="w-full h-auto object-cover" />
+ <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+ <p className="text-white font-bold text-lg">Centralized SCADA Monitoring</p>
+ <p className="text-gray-300 text-sm">Real-time control across all water treatment assets</p>
  </div>
  </div>
  </div>
@@ -251,19 +242,26 @@ export default function Page() {
  </SectionWrapper>
 
  <SectionWrapper delay={0.2}>
- <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[32px] p-10">
- <h3 className="text-2xl font-bold text-white mb-6 font-heading flex items-center gap-3">
- <Handshake className="text-teal-400 w-6 h-6" /> Government Approved
+ <div className="space-y-8">
+ <div className="relative rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+ <Image src="/imgs/wtp-panel-manufacturing.png" alt="Electrical Panel Manufacturing Facility" width={800} height={500} className="w-full h-[320px] object-cover" />
+ <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+ <p className="text-white font-bold">125,000+ Sq. Ft. Manufacturing Facility</p>
+ <p className="text-gray-300 text-sm">In-house panel manufacturing for quality & speed</p>
+ </div>
+ </div>
+
+ <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+ <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-3">
+ <Handshake className="text-teal-400 w-5 h-5" /> Government Approved
  </h3>
- <p className="text-slate-400 mb-8 leading-relaxed">
- We are recognized by major government bodies and international agencies for the quality and reliability of our water infrastructure solutions.
- </p>
  <div className="flex flex-wrap gap-3">
  {GOVERNMENT_APPROVALS_WATER.map((agency, i) => (
  <span key={i} className="px-4 py-2 bg-white/10 border border-white/20 text-teal-300 text-sm font-bold rounded-full hover:bg-teal-500/20 transition-colors">
  {agency}
  </span>
  ))}
+ </div>
  </div>
  </div>
  </SectionWrapper>
@@ -307,7 +305,31 @@ export default function Page() {
  </div>
  </section>
 
- {/* 8. OTHER SOLUTIONS (Light) */}
+ {/* 8. INFRASTRUCTURE SHOWCASE */}
+ <section className="relative z-20 overflow-hidden">
+ <div className="relative h-[400px]">
+ <Image src="/imgs/wtp-overhead-tanks.png" alt="Water Distribution Infrastructure with Overhead Tanks" fill className="object-cover" />
+ <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
+ <div className="absolute inset-0 flex items-center">
+ <div className="max-w-7xl mx-auto px-6 w-full">
+ <SectionWrapper>
+ <div className="max-w-lg">
+ <span className="text-teal-400 font-bold uppercase text-sm tracking-widest mb-3 block">Infrastructure at Scale</span>
+ <h2 className="text-4xl font-bold text-white mb-4 font-heading">{WATER_STATS.overheadTanks.formatted} Overhead Tanks Connected</h2>
+ <p className="text-gray-300 leading-relaxed mb-6">
+ Our SCADA networks span across {WATER_STATS.statesCovered.value}{WATER_STATS.statesCovered.suffix} states, monitoring and controlling distribution from treatment plants to the last mile overhead tanks.
+ </p>
+ <Link href="/infrastructure/water/centralized-scada" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors text-sm">
+ Explore Centralized SCADA <ArrowRight className="w-4 h-4" />
+ </Link>
+ </div>
+ </SectionWrapper>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ {/* 9. OTHER SOLUTIONS (Light) */}
  <section className="py-24 bg-slate-50 relative z-20 border-t border-slate-200">
  <div className="max-w-7xl mx-auto px-6">
  <SectionWrapper>
