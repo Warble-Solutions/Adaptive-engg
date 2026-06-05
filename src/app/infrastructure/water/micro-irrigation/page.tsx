@@ -2,6 +2,7 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Leaf, Sprout, Combine, CalendarClock, ShieldAlert, Cpu } from "lucide-react";
+import { WATER_SOLUTIONS } from "@/lib/constants";
 
 export const metadata = {
  title: "Micro Irrigation | Adaptive Engineering",
@@ -9,7 +10,10 @@ export const metadata = {
 };
 
 export default function Page() {
- return (
+  const currentPath = "/infrastructure/water/micro-irrigation";
+  const otherSolutions = WATER_SOLUTIONS.filter(s => s.href !== currentPath);
+
+  return (
  <div className="flex flex-col w-full">
  <SceneTrigger variant="logo" color="#0da08a" speed={0.5} /> {/* Green theme for agriculture/micro-irrigation */}
 
@@ -120,6 +124,36 @@ export default function Page() {
  </div>
  </div>
  </section>
- </div>
+
+  {/* OTHER SOLUTIONS */}
+  <section className="py-24 bg-slate-50 relative z-20 border-t border-slate-200">
+  <div className="max-w-7xl mx-auto px-6">
+  <SectionWrapper>
+  <div className="text-center mb-12">
+  <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-teal-500/20">
+  Water Solutions Suite
+  </div>
+  <h2 className="text-3xl font-bold text-slate-900 font-heading">Explore Other Solutions</h2>
+  <p className="text-slate-500 mt-3 max-w-xl mx-auto">AEPL&apos;s complete water infrastructure offering covers every aspect — from treatment plants to centralized SCADA monitoring.</p>
+  </div>
+  </SectionWrapper>
+  <div className="flex flex-wrap justify-center gap-6">
+  {otherSolutions.map((sol, i) => (
+  <SectionWrapper key={i} delay={i * 0.07} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(20%-20px)]">
+  <Link href={sol.href} className="group flex flex-col h-full p-6 bg-white border border-slate-100 rounded-2xl hover:border-teal-500/50 hover:shadow-xl shadow-md transition-all duration-300 hover:-translate-y-1">
+  <div className="inline-block px-3 py-1 bg-teal-500/10 text-teal-600 rounded-lg text-xs font-black uppercase tracking-widest mb-4">{sol.abbr}</div>
+  <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">{sol.label}</h3>
+  <p className="text-slate-500 text-sm leading-relaxed flex-1">{sol.desc}</p>
+  <div className="flex items-center gap-1 text-teal-600 font-bold text-sm mt-4 group-hover:gap-2 transition-all">
+  Learn More <ArrowRight className="w-4 h-4" />
+  </div>
+  </Link>
+  </SectionWrapper>
+  ))}
+  </div>
+  </div>
+  </section>
+
+  </div>
  );
 }

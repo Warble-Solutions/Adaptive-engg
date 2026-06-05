@@ -56,3 +56,22 @@ export const AUTOMATION_STATS = {
   redundantSystems: { value: 50, suffix: "+", label: "Hot Redundant Systems Commissioned per Year" },
 } as const;
 
+export const GOVERNMENT_APPROVALS_WATER = [
+  "GWSSB (Gujarat)",
+  "MPJNM (Madhya Pradesh)",
+  "MPUDC (Madhya Pradesh)",
+  "MPUADD (Madhya Pradesh)",
+  "UPJNM (Uttar Pradesh)",
+  "RWS&S (Odisha)",
+  "JICA Assisted (Assam)",
+] as const;
+
+export const WATER_SOLUTIONS = [
+  { href: "/infrastructure/water/wtp", abbr: "WTP", label: "Water Supply & WTP", desc: "End-to-end E&I and SCADA solutions for Water Supply Schemes and Water Treatment Plants." },
+  { href: "/infrastructure/water/stp", abbr: "STP", label: "Sewage Treatment Plant", desc: "Turn-key Electrical, Instrumentation and Automation Solutions for the Waste Water industry." },
+  { href: "/infrastructure/water/etp", abbr: "ETP", label: "Effluent Treatment Plant", desc: "Optimized process control and SCADA architecture for MBR and RO technologies." },
+  { href: "/infrastructure/water/lift-irrigation", abbr: "Lift", label: "Lift Irrigation", desc: "Complete E&I packages for pump houses with advanced SCADA and energy management." },
+  { href: "/infrastructure/water/micro-irrigation", abbr: "Micro", label: "Micro Irrigation", desc: "Tailor-made Outlet Management Systems (OMS) for precise water distribution." },
+  { href: "/infrastructure/water/centralized-scada", abbr: "SCADA", label: "Centralized SCADA", desc: "Highly reliable, scalable software architecture for centralized water monitoring." },
+] as const;
+
