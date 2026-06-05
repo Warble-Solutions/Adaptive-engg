@@ -308,7 +308,7 @@ export default function Page() {
  {/* 8. INFRASTRUCTURE SHOWCASE */}
  <section className="relative z-20 overflow-hidden">
  <div className="relative h-[400px]">
- <Image src="/imgs/wtp-overhead-tanks.png" alt="Water Distribution Infrastructure with Overhead Tanks" fill className="object-cover" />
+ <Image src="/imgs/wtp-infrastructure-scale.png" alt="Water Distribution Infrastructure with Overhead Tanks" fill className="object-cover" />
  <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
  <div className="absolute inset-0 flex items-center">
  <div className="max-w-7xl mx-auto px-6 w-full">
