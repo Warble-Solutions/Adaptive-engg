@@ -62,25 +62,27 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <p className="text-center text-gray-400 text-lg font-bold uppercase tracking-[0.2em]">Industry Leaders Trust Us</p>
         </div>
-        <div className="flex overflow-hidden relative">
-          <div className="flex animate-marquee gap-20 min-w-full px-10">
-            {/* Original Set */}
+        <div className="flex flex-nowrap overflow-hidden relative w-full">
+          {/* Sibling Container 1 */}
+          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={i} className="flex-shrink-0 flex items-center justify-center">
+              <div key={i} className="flex-shrink-0 flex items-center justify-center w-32 h-10">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-72 w-auto object-contain"
+                  className="max-h-full max-w-full object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
-            {/* Duplicate Set for Seamless Loop */}
+          </div>
+          {/* Sibling Container 2 (Clone) */}
+          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28" aria-hidden="true">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center">
+              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-32 h-10">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-72 w-auto object-contain"
+                  className="max-h-full max-w-full object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
