@@ -1,14 +1,67 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, Mail, Send, Briefcase, LifeBuoy, Building2, ChevronDown } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export default function ContactPageClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    company: "",
+    subject: "Renewable Solutions",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const subjectParam = params.get("subject");
+      if (subjectParam) {
+        setFormData(prev => ({ ...prev, subject: subjectParam }));
+      }
+    }
+  }, []);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          company: "",
+          subject: "Renewable Solutions",
+          message: ""
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (err) {
+      console.error(err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -47,40 +100,101 @@ export default function ContactPageClient() {
               <SectionWrapper className="flex-1">
                 <div className="premium-card p-8 md:p-12 bg-white rounded-3xl border border-gray-100 shadow-xl h-full">
                   <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
-                  <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                  
+                  {submitStatus === "success" && (
+                    <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm font-medium">
+                      Thank you! Your message has been sent successfully. We'll get back to you shortly.
+                    </div>
+                  )}
+
+                  {submitStatus === "error" && (
+                    <div className="mb-6 p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-sm font-medium">
+                      Something went wrong. Please check your inputs and try again.
+                    </div>
+                  )}
+
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Name</label>
-                        <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all" placeholder="Enter your name" />
+                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Name *</label>
+                        <input 
+                          type="text" 
+                          required
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
+                          placeholder="Enter your name" 
+                        />
                       </div>
                       <div className="space-y-2">
                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Phone</label>
-                        <input type="tel" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all" placeholder="+91..." />
+                        <input 
+                          type="tel" 
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
+                          placeholder="+91..." 
+                        />
                       </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email</label>
-                      <input type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all" placeholder="name@company.com" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email *</label>
+                        <input 
+                          type="email" 
+                          required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
+                          placeholder="name@company.com" 
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Company</label>
+                        <input 
+                          type="text" 
+                          value={formData.company}
+                          onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
+                          placeholder="Enter company name" 
+                        />
+                      </div>
                     </div>
 
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Inquiry Type</label>
-                      <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-700">
-                        <option>Renewable Solutions</option>
-                        <option>PM-KUSUM</option>
-                        <option>Infrastructure</option>
-                        <option>Other</option>
+                      <select 
+                        value={formData.subject}
+                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-700"
+                      >
+                        <option value="Renewable Solutions">Renewable Solutions</option>
+                        <option value="PM-KUSUM">PM-KUSUM</option>
+                        <option value="Infrastructure">Infrastructure</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message</label>
-                      <textarea rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none" placeholder="Tell us about your requirements..."></textarea>
+                      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message *</label>
+                      <textarea 
+                        rows={4} 
+                        required
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none text-slate-900" 
+                        placeholder="Tell us about your requirements..."
+                      ></textarea>
                     </div>
 
-                    <button className="w-full py-4 bg-[#0da08a] text-white font-bold rounded-xl hover:bg-slate-900 hover:text-white transition-all flex items-center justify-center gap-2 group">
-                      Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <button 
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full py-4 bg-[#0da08a] hover:bg-[#0bc0a4] text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"} 
+                      {!isSubmitting && <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
                     </button>
                   </form>
                 </div>
