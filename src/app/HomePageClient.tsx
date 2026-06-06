@@ -64,25 +64,25 @@ export default function HomePageClient() {
         </div>
         <div className="flex flex-nowrap overflow-hidden relative w-full">
           {/* Sibling Container 1 */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-36 shrink-0 min-w-full items-center pr-36">
+          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={i} className="flex-shrink-0 flex items-center justify-center w-24 h-8">
+              <div key={i} className="flex-shrink-0 flex items-center justify-center w-48 h-16">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="max-h-full max-w-full object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
             ))}
           </div>
           {/* Sibling Container 2 (Clone) */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-36 shrink-0 min-w-full items-center pr-36" aria-hidden="true">
+          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28" aria-hidden="true">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-24 h-8">
+              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-48 h-16">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="max-h-full max-w-full object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
             ))}
