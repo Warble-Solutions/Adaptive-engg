@@ -20,9 +20,13 @@ export default function Page() {
 
       {/* 1. HERO SECTION (Clean Dark Theme with dashboard) */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#0B1120] to-slate-950">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(13,160,138,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(13,160,138,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px]"></div>
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/imgs/central-scada-hero.png"
+            alt="Centralized SCADA Control Room"
+            className="w-full h-full object-cover animate-fade-in"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-[#0B1120] z-10"></div>
         </div>
         
         <div className="z-10 max-w-7xl w-full relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
