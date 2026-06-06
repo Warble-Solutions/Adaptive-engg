@@ -637,10 +637,10 @@ export default function RenewablePageClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Switchyards", desc: "Design & erection up to 220kV.", img: "/imgs/turnkey/7.jpg" },
-              { title: "Transmission", desc: "ROW, towers & stringing.", img: "/imgs/turnkey/8.jpg" },
-              { title: "Liasioning", desc: "CEIG & DISCOM approvals.", img: "/imgs/turnkey/9.jpg" },
-              { title: "Testing", desc: "Pre-commissioning & Sync.", img: "/imgs/turnkey/10.jpg" }
+              { title: "Switchyard Works", desc: "HT transformer installation, CT/PT structure mounting, isolator erection, breaker wiring, and HT panel commissioning up to 66kV.", img: "/imgs/turnkey/7.jpg" },
+              { title: "Cable Engineering", desc: "Routing of DC/AC cables, layout of ladder-type cable trays, deep burial trench execution, and certified HT/LT termination joints.", img: "/imgs/turnkey/8.jpg" },
+              { title: "Protection & Metering", desc: "Calibration of numerical relays, secondary current injection loop checks, CT ratio records, and ABT metering integration for grid compliance.", img: "/imgs/turnkey/9.jpg" },
+              { title: "Earthing & Lightning", desc: "IEEE 80 compliant low-impedance earthing systems, chemical earth pit installation, lightning terminals, and copper tape routing.", img: "/imgs/turnkey/10.jpg" }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="group relative h-[400px] rounded-3xl overflow-hidden shadow-xl border border-white/5">

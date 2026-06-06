@@ -35,7 +35,7 @@ const slides = [
         image: "/imgs/tunnel.jpg",
         subtext: "Delivering Critical Turnkey E&I Infrastructure for Tunnels, Data Centers & Heavy Industry",
         cta: "View Projects",
-        link: "/#projects",
+        link: "/resources/case-studies",
         ctaSecondary: "Get Quote",
         linkSecondary: "/contact",
     },
