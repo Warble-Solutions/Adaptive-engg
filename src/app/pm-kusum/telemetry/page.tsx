@@ -80,7 +80,7 @@ export default function Page() {
                   <Activity className="w-4 h-4" />
                   <span>PM-KUSUM Compliance Suite</span>
                 </div>
-                <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading leading-none">
+                <h1 className="text-5xl md:text-8xl font-black text-white mb-6 font-heading leading-tight py-2">
                   Telemetry <span className="gradient-heading block">System</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
