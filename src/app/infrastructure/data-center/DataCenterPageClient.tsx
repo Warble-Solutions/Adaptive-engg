@@ -432,11 +432,16 @@ export default function DataCenterPageClient() {
                     
                     <div className="border-t border-slate-100 pt-6">
                       <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-4">Compliance Checklist Metrics</span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700 font-semibold">
+                      <div className="flex flex-col gap-3.5">
                         {standards[activeStandard].metrics.map((metric, mIdx) => (
-                          <div key={mIdx} className="flex items-center gap-2">
-                            <CheckCircle2 className="w-4.5 h-4.5 text-primary shrink-0" />
-                            <span>{metric}</span>
+                          <div 
+                            key={mIdx} 
+                            className="flex items-center gap-4 py-4 px-5 bg-slate-50 border border-slate-200/50 rounded-2xl hover:border-primary/30 transition-all hover:bg-white hover:shadow-sm duration-300"
+                          >
+                            <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-primary">
+                              <CheckCircle2 className="w-5 h-5" />
+                            </div>
+                            <span className="text-sm md:text-base font-extrabold text-slate-800 leading-snug">{metric}</span>
                           </div>
                         ))}
                       </div>
