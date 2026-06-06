@@ -1697,7 +1697,7 @@ export function Scale500GWDashboard() {
           Active Ingestion Capacity
         </span>
         <div className="text-2xl font-black text-white font-mono leading-none tracking-tight flex items-baseline justify-center gap-1">
-          {capacity.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          {capacity.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           <span className="text-xs font-bold text-teal-400">MW</span>
         </div>
         <div className="mt-1 flex items-center justify-center gap-2 text-[9px] text-slate-400">
