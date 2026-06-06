@@ -1,7 +1,7 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart, Monitor, Eye, Zap, Wrench, Battery } from "lucide-react";
-import { AnalyticsDashboard, AnalyticsHeroDashboards } from "@/components/DashboardMockups";
+import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart, Monitor, Eye, Zap, Wrench, Battery, Mail, Bell } from "lucide-react";
+import { AnalyticsDashboard, AnalyticsHeroDashboards, AnalyticsVisibilityDashboard, Scale500GWDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
  title: "Advanced Analytics | Unified Renewable Solutions | Adaptive Engineering",
@@ -85,6 +85,102 @@ export default function Page() {
  </div>
  </section>
 
+  {/* GAIN SUPERIOR VISIBILITY WITH AEPL ADVANCE ANALYTICS */}
+  <section className="py-24 bg-slate-50 border-t border-slate-100 relative z-20">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        {/* Left column: Intro & Live Mockup */}
+        <div className="lg:col-span-5 lg:sticky lg:top-28">
+          <SectionWrapper>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
+              <FileText className="w-4 h-4" />
+              <span>Visibility & Reports</span>
+            </div>
+            <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading leading-tight">
+              Gain Superior Visibility with AEPL Advanced Analytics
+            </h2>
+            <p className="text-slate-600 mb-8 leading-relaxed">
+              Standardize, automate, and secure your plant reporting workflows. Our enterprise-grade custom report engine allows operators and managers to design, schedule, and distribute high-fidelity KPI reports across teams and stakeholders.
+            </p>
+            <div className="h-80 w-full mb-8">
+              <AnalyticsVisibilityDashboard />
+            </div>
+          </SectionWrapper>
+        </div>
+
+        {/* Right column: 10 capabilities list */}
+        <div className="lg:col-span-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Real-Time & Scheduled Performance Reports",
+                desc: "Instant summaries or automatically scheduled daily, weekly, and monthly reports with detailed KPI insights (PR, CUF, losses).",
+                icon: <Clock className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Secure Data Archiving & Long-Term Storage",
+                desc: "High-integrity storage of portfolio records for years, supporting historic audits, regulatory compliance, and trend analysis.",
+                icon: <Layers className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Seamless Data Integration",
+                desc: "Ingest and process heterogeneous data streams from solar, wind, hybrid, and BESS plants under a unified semantic structure.",
+                icon: <Activity className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Role-Based Access Control & Secure Sharing",
+                desc: "Define custom access permissions. Securely share automated reports with clients, O&M partners, and executives.",
+                icon: <Monitor className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Automated Report Generation",
+                desc: "Eliminate manual report compilation. Automated scripts run on triggers to package metrics into premium PDF and CSV layouts.",
+                icon: <Zap className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Flexible & Enterprise Custom Report Builder",
+                desc: "Drag-and-drop report layout constructor. Define custom formulas, charts, and branding components without writing code.",
+                icon: <FileText className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Event, Alarm & Downtime Reporting",
+                desc: "Comprehensive logs capturing plant outages, communication drops, and grid limits, correlated directly with yield impacts.",
+                icon: <Bell className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Conversational AI-Based Insights",
+                desc: "Query-based reporting engine that responds to natural language queries. Get graphs instantly by talking to your data.",
+                icon: <Brain className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "AI/ML-Driven & Anomaly-Based Reporting",
+                desc: "Continuous background scans of inverter and tracker behavior to automatically flag anomalies and predictive maintenance needs.",
+                icon: <BarChart3 className="w-5 h-5 text-teal-600" />
+              },
+              {
+                title: "Intelligent Scheduling & Queuing",
+                desc: "Reliable mail distribution pipelines. Queue large batches of files to ensure delivery without mail server throttles.",
+                icon: <Mail className="w-5 h-5 text-teal-600" />
+              }
+            ].map((cap, i) => (
+              <SectionWrapper key={i} delay={i * 0.05}>
+                <div className="p-6 bg-white rounded-2xl border border-slate-100 hover:border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
+                      {cap.icon}
+                    </div>
+                    <h3 className="text-sm font-extrabold text-slate-950 mb-2">{cap.title}</h3>
+                    <p className="text-xs text-slate-500 leading-relaxed">{cap.desc}</p>
+                  </div>
+                </div>
+              </SectionWrapper>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
  {/* AI / ML Section */}
  <section className="py-24 bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 text-white relative z-10">
  <div className="max-w-7xl mx-auto px-6">
@@ -162,6 +258,69 @@ export default function Page() {
   </SectionWrapper>
   </div>
   </div>
+  </section>
+
+  {/* THE ROAD TO 500GW+ */}
+  <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-slate-900 relative z-20">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-16">
+        <div className="lg:col-span-7">
+          <SectionWrapper>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
+              <Layers className="w-4 h-4" />
+              <span>Next-Gen Portfolios</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading leading-tight">
+              The Road to 500GW+
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed mb-4">
+              As global energy goals expand to hundreds of gigawatts, operators must transition from static local reporting to unified, real-time, portfolio-scale telemetry pipelines.
+            </p>
+            <p className="text-gray-400 text-base leading-relaxed">
+              Standardizing multi-OEM tech stacks, handling petabytes of data, and running consistent KPI logic across heterogeneous assets represents a major operational hurdle. Here are the 12 core challenges solved by Adaptive's data layers:
+            </p>
+          </SectionWrapper>
+        </div>
+        <div className="lg:col-span-5 h-[420px]">
+          <SectionWrapper delay={0.2}>
+            <Scale500GWDashboard />
+          </SectionWrapper>
+        </div>
+      </div>
+
+      {/* 12 Challenges Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: "Massive Data Volumes", desc: "Ingesting and processing millions of telemetry data points per second across expanding sites and fine time intervals." },
+          { title: "Report Standardization", desc: "Enforcing unified report templates across diverse sites, generation technologies, and legacy OEM protocols." },
+          { title: "Heterogeneous Data Sources", desc: "Integrating field devices using Modbus, OPC UA, WebAPIs, and legacy files into one clean schema." },
+          { title: "Hybrid Plant Reporting", desc: "Correlating solar, wind, BESS, and grid data to calculate accurate system-level performance indices." },
+          { title: "Real-Time Reporting", desc: "Delivering near-instantaneous reports for dispatch centers, switching gears from traditional batch processing." },
+          { title: "KPI Logic Consistency", desc: "Ensuring complex KPI formulas (like equivalent PR, soil loss, and curtailment) evaluate identically across sites." },
+          { title: "Data Accuracy & Availability", desc: "Filtering telemetry noise, handling sensor drops, and backfilling missing data to ensure high report integrity." },
+          { title: "Multi-Stakeholder Customization", desc: "Distributing different levels of data granularity to operators, investment groups, partners, and regulators." },
+          { title: "Historical Data Storage", desc: "Architecting high-frequency time-series databases to allow instant queries across decades of archive logs." },
+          { title: "Cybersecurity & Access Safety", desc: "Implementing absolute data isolation, encrypted channels (AES-256), and secure role permission structures." },
+          { title: "Scalable Distribution", desc: "Orchestrating automated mail pipelines to deliver thousands of customized documents on-schedule without lag." },
+          { title: "Expanding Portfolio Consistency", desc: "Seamlessly onboarding new assets to the centralized monitoring hub without requiring rewrite of reporting layouts." }
+        ].map((item, i) => (
+          <SectionWrapper key={i} delay={i * 0.05}>
+            <div className="p-6 bg-slate-900/60 border border-slate-800 hover:border-teal-500/40 rounded-2xl transition-all duration-300 h-full flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="text-xs font-mono font-bold text-teal-400 bg-teal-500/10 px-2 py-1 rounded">
+                    Challenge {(i + 1).toString().padStart(2, "0")}
+                  </div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-teal-500/50 group-hover:bg-teal-400 transition-colors"></div>
+                </div>
+                <h3 className="text-base font-extrabold text-white mb-2 group-hover:text-teal-400 transition-colors">{item.title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          </SectionWrapper>
+        ))}
+      </div>
+    </div>
   </section>
 
  {/* OTHER SOLUTIONS */}

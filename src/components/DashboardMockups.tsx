@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe, PieChart, Brain, BarChart3, Fan, Lightbulb, ShieldCheck } from "lucide-react";
+import { Activity, Zap, Sun, Wind, Battery, ThermometerSun, Gauge, Bell, CheckCircle2, AlertTriangle, XCircle, Wifi, TrendingUp, TrendingDown, Wrench, ClipboardList, Clock, Camera, Globe, PieChart, Brain, BarChart3, Fan, Lightbulb, ShieldCheck, FileText, Mail, Download, Layers, Cpu, Database, ChevronRight } from "lucide-react";
 
 // ─────────────────────────────────────────────
 // Utility: animated number that fluctuates
@@ -1486,6 +1486,202 @@ export function TunnelSCADADashboard() {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
+// 12. Analytics Visibility Dashboard (Automated Reports / Custom Builder)
+// ─────────────────────────────────────────────
+export function AnalyticsVisibilityDashboard() {
+  const [reports, setReports] = useState([
+    { id: "REP-01", name: "Daily Yield & PR Report", type: "Scheduled", time: "06:00 AM", status: "Sent", recipients: "12 users" },
+    { id: "REP-02", name: "Monthly Performance Audit", type: "Automated", time: "1st of Month", status: "Ready", recipients: "24 users" },
+    { id: "REP-03", name: "Inverter Degradation Summary", type: "AI-Generated", time: "Weekly Mon", status: "Sent", recipients: "8 users" },
+  ]);
+
+  const [activeReportIdx, setActiveReportIdx] = useState(0);
+  const [isDistributing, setIsDistributing] = useState(false);
+  const [distStatus, setDistStatus] = useState("Queue Idle");
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIsDistributing(true);
+      setDistStatus("Generating PDF...");
+      setTimeout(() => {
+        setDistStatus("Attaching CSV Data...");
+        setTimeout(() => {
+          setDistStatus("Sending to Recipients...");
+          setTimeout(() => {
+            setIsDistributing(false);
+            setDistStatus("Sent (12 Stakeholders)");
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    }, 12000);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="w-full h-full bg-[#0a1220] rounded-2xl border border-slate-700/50 overflow-hidden shadow-2xl p-4 text-white select-none flex flex-col justify-between">
+      {/* Title */}
+      <div className="flex items-center justify-between mb-3 shrink-0">
+        <div className="flex items-center gap-2">
+          <FileText className="w-4 h-4 text-teal-400" />
+          <span className="text-xs font-bold text-slate-300">Automated Report Distribution</span>
+        </div>
+        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-0.5 rounded border border-white/10">
+          <Mail className="w-3 h-3 text-teal-400" />
+          <span className="text-[8px] text-teal-400 font-mono tracking-wider">SMTP ACTIVE</span>
+        </div>
+      </div>
+
+      {/* Reports List */}
+      <div className="space-y-1.5 flex-grow">
+        {reports.map((rep, idx) => (
+          <div
+            key={rep.id}
+            onClick={() => setActiveReportIdx(idx)}
+            className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
+              activeReportIdx === idx
+                ? "bg-teal-500/10 border-teal-500/30"
+                : "bg-white/[0.02] border-white/5 hover:bg-white/5"
+            }`}
+          >
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[10px] font-mono text-slate-500">{rep.id}</span>
+              <span className="text-[9px] px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300">
+                {rep.type}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold text-white truncate max-w-[140px]">{rep.name}</span>
+              <span className="text-[9px] text-teal-400 font-mono flex items-center gap-1">
+                <Clock className="w-2.5 h-2.5 text-slate-500" /> {rep.time}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Live Distribution Console & Custom Builder Mockup */}
+      <div className="mt-3 bg-white/5 border border-white/5 rounded-xl p-3 space-y-2 shrink-0">
+        <div className="flex items-center justify-between text-[9px] text-slate-400 font-bold uppercase tracking-wider">
+          <span>Enterprise Custom Builder</span>
+          <span className="text-teal-400 font-mono">Drag & Drop Active</span>
+        </div>
+        
+        {/* Mock Drag/Drop Elements */}
+        <div className="grid grid-cols-3 gap-1.5">
+          <div className="bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[8px] font-bold py-1 rounded text-center cursor-move hover:brightness-125">
+            + KPI Tiles
+          </div>
+          <div className="bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[8px] font-bold py-1 rounded text-center cursor-move hover:brightness-125">
+            + Power Curve
+          </div>
+          <div className="bg-pink-500/10 border border-pink-500/20 text-pink-400 text-[8px] font-bold py-1 rounded text-center cursor-move hover:brightness-125">
+            + Loss Pie
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between pt-1 border-t border-white/5 text-[9px]">
+          <span className="text-slate-500">Scheduled Trigger Status:</span>
+          <span className={`font-mono font-bold ${isDistributing ? 'text-teal-400 animate-pulse' : 'text-slate-300'}`}>
+            {distStatus}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
+// 13. Scale 500GW+ Dashboard
+// ─────────────────────────────────────────────
+export function Scale500GWDashboard() {
+  const [capacity, setCapacity] = useState(384295.42);
+  const ingestionRate = useLiveValue(14.8, 0.4);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCapacity(prev => prev + 0.15 + Math.random() * 0.2);
+    }, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const oems = [
+    { site: "Rajasthan Wind", oem: "SUNGROW", protocol: "OPC UA", status: "OK", latency: "42ms" },
+    { site: "Gujarat Solar", oem: "SMA", protocol: "Modbus TCP", status: "OK", latency: "18ms" },
+    { site: "MP Hybrid", oem: "ABB SCADA", protocol: "WebAPI", status: "OK", latency: "95ms" },
+  ];
+
+  return (
+    <div className="w-full h-full bg-[#080e1a] rounded-2xl border border-teal-500/20 overflow-hidden shadow-[0_0_60px_rgba(4,154,137,0.08)] p-4 text-white select-none flex flex-col justify-between">
+      {/* Title */}
+      <div className="flex items-center justify-between mb-3 shrink-0">
+        <div className="flex items-center gap-2">
+          <Layers className="w-4 h-4 text-teal-400" />
+          <span className="text-xs font-bold text-slate-300">Gigawatt-Scale Portfolio Data Hub</span>
+        </div>
+        <div className="flex items-center gap-1.5 bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20">
+          <Cpu className="w-3 h-3 text-teal-400" />
+          <span className="text-[8px] text-teal-400 font-mono tracking-wider">AES-256</span>
+        </div>
+      </div>
+
+      {/* Active Capacity Counter */}
+      <div className="bg-white/5 border border-white/5 rounded-xl p-3 text-center shrink-0">
+        <span className="text-[9px] text-slate-500 font-bold uppercase tracking-wider block mb-1">
+          Active Ingestion Capacity
+        </span>
+        <div className="text-2xl font-black text-white font-mono leading-none tracking-tight flex items-baseline justify-center gap-1">
+          {capacity.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          <span className="text-xs font-bold text-teal-400">MW</span>
+        </div>
+        <div className="mt-1 flex items-center justify-center gap-2 text-[9px] text-slate-400">
+          <span className="flex items-center gap-1 text-teal-400">
+            <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-ping"></span>
+            {ingestionRate.toFixed(1)}M tags/sec
+          </span>
+          <span>•</span>
+          <span>1,420+ Sites Ingested</span>
+        </div>
+      </div>
+
+      {/* OEM Standardization Status */}
+      <div className="my-3 space-y-1.5 flex-grow">
+        <span className="text-[9px] text-slate-500 font-bold uppercase tracking-wider block px-1">
+          Heterogeneous OEM Standardization
+        </span>
+        <div className="space-y-1">
+          {oems.map((oem, idx) => (
+            <div key={idx} className="flex items-center justify-between px-2.5 py-1.5 bg-white/[0.02] border border-white/5 rounded-lg text-[10px]">
+              <div className="flex flex-col">
+                <span className="font-bold text-slate-200">{oem.site}</span>
+                <span className="text-[8px] text-slate-500">{oem.oem} ({oem.protocol})</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-slate-400">{oem.latency}</span>
+                <span className="bg-teal-500/20 text-teal-400 border border-teal-500/20 text-[8px] px-1.5 py-0.5 rounded font-mono font-bold">
+                  {oem.status}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Cyber Security Status */}
+      <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 flex items-center justify-between text-[10px] shrink-0">
+        <div className="flex items-center gap-2">
+          <Database className="w-4 h-4 text-teal-400" />
+          <div>
+            <span className="font-bold text-white block">Historical Storage</span>
+            <span className="text-[8px] text-slate-400">Optimized Cold & Hot Path</span>
+          </div>
+        </div>
+        <span className="text-teal-400 font-mono font-bold">1.2 PB Archived</span>
       </div>
     </div>
   );
