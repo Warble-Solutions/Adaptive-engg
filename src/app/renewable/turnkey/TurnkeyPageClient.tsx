@@ -52,11 +52,13 @@ export default function TurnkeyPageClient() {
 
       {/* 1. HERO SECTION (Dark Immersive) */}
       <section className="section-hero relative min-h-screen flex items-center px-6 py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#061822] to-slate-950">
-          {/* Tech overlay */}
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-          <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-primary/25 rounded-full blur-[140px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-[120px]"></div>
+        {/* Background Image with Tint */}
+        <div className="absolute inset-0 z-0">
+          <img src="/images/renewable/turnkey-hero-bg.png" alt="Turnkey E&I Execution" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-slate-950/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-transparent to-slate-950/90"></div>
+          <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[140px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-[120px]"></div>
         </div>
 
         <div className="z-10 max-w-7xl mx-auto w-full relative">
