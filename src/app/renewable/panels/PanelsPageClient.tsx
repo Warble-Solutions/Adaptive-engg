@@ -396,101 +396,15 @@ export default function PanelsPageClient() {
                       {mfgSteps[activeMfgStep].desc}
                     </p>
                     
-                    <div className="border-t border-slate-100 pt-6">
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-4">Operations & QA Parameters</span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700 font-semibold">
+                    <div className="border-t border-slate-100 pt-8 mt-6">
+                      <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest block mb-4.5">Operations & QA Parameters</span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-800 font-bold">
                         {mfgSteps[activeMfgStep].features.map((feature, fIdx) => (
-                          <div key={fIdx} className="flex items-center gap-2">
-                            <CheckCircle2 className="w-4.5 h-4.5 text-primary shrink-0" />
-                            <span>{feature}</span>
+                          <div key={fIdx} className="flex items-start gap-4 p-4.5 bg-slate-50 border border-slate-200/50 rounded-2xl hover:border-primary/30 hover:bg-slate-100/30 hover:shadow-md transition-all duration-300">
+                            <CheckCircle2 className="w-5.5 h-5.5 text-primary shrink-0 mt-0.5" />
+                            <span className="text-xs md:text-sm leading-relaxed">{feature}</span>
                           </div>
                         ))}
-                      </div>
-                    </div>
-
-                    {/* Visualizer Feed for Manufacturing Phase */}
-                    <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60 flex flex-col md:flex-row items-center gap-6 mt-6">
-                      <div className="w-full md:w-5/12 text-left">
-                        <span className="text-[9px] text-[#0da08a] font-bold uppercase block mb-1">Visualizer Feed</span>
-                        <h5 className="text-xs font-bold text-slate-900 mb-1">{mfgSteps[activeMfgStep].title} Diagram</h5>
-                        <p className="text-[10px] text-slate-500 leading-relaxed font-sans">
-                          Technical process schematic and quality checkpoint mapping.
-                        </p>
-                      </div>
-                      <div className="w-full md:w-7/12 h-[120px] bg-white rounded-xl border border-slate-200 p-3 flex items-center justify-center relative overflow-hidden">
-                        {activeMfgStep === 0 && (
-                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                            <rect x="0" y="0" width="300" height="100" fill="rgba(13,160,138,0.01)" rx="4" />
-                            <path d="M 0,20 L 300,20 M 0,40 L 300,40 M 0,60 L 300,60 M 0,80 L 300,80" stroke="rgba(0,0,0,0.03)" strokeWidth="1" />
-                            <path d="M 50,0 L 50,100 M 100,0 L 100,100 M 150,0 L 150,100 M 200,0 L 200,100 M 250,0 L 250,100" stroke="rgba(0,0,0,0.03)" strokeWidth="1" />
-                            <rect x="60" y="20" width="180" height="60" rx="4" stroke="#94a3b8" strokeWidth="2" fill="rgba(148,163,184,0.05)" />
-                            <circle cx="100" cy="50" r="12" stroke="#0da08a" strokeWidth="1.5" strokeDasharray="3,3" />
-                            <circle cx="200" cy="50" r="12" stroke="#0da08a" strokeWidth="1.5" strokeDasharray="3,3" />
-                            <rect x="130" y="40" width="40" height="20" rx="2" stroke="#0da08a" strokeWidth="1.5" strokeDasharray="3,3" />
-                            <line x1="100" y1="50" x2="100" y2="10" stroke="#ef4444" strokeWidth="1.5" />
-                            <circle cx="100" cy="50" r="3" fill="#ef4444" />
-                            <path d="M 97,53 L 95,57 M 103,53 L 105,57 M 100,53 L 100,59" stroke="#f59e0b" strokeWidth="1" />
-                            <text x="110" y="18" fill="#ef4444" className="text-[8px] font-sans font-bold">LASER HEAD ACTIVE</text>
-                            <text x="110" y="28" fill="#0da08a" className="text-[7px] font-sans">COORDINATE: X:100.0, Y:50.0</text>
-                          </svg>
-                        )}
-                        {activeMfgStep === 1 && (
-                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                            <path d="M 20,25 L 280,25" stroke="#b45309" strokeWidth="6" strokeLinecap="round" />
-                            <rect x="200" y="22" width="40" height="6" fill="#cbd5e1" rx="1" />
-                            <path d="M 20,50 L 280,50" stroke="#b45309" strokeWidth="6" strokeLinecap="round" />
-                            <rect x="200" y="47" width="40" height="6" fill="#cbd5e1" rx="1" />
-                            <path d="M 20,75 L 280,75" stroke="#b45309" strokeWidth="6" strokeLinecap="round" />
-                            <rect x="200" y="72" width="40" height="6" fill="#cbd5e1" rx="1" />
-                            <circle cx="220" cy="50" r="8" stroke="#0da08a" strokeWidth="1" strokeDasharray="2,2" />
-                            <line x1="220" y1="50" x2="245" y2="35" stroke="#0da08a" strokeWidth="1" />
-                            <text x="250" y="38" fill="#0da08a" className="text-[7px] font-sans font-bold">Silver Electroplated Join</text>
-                            <text x="250" y="46" fill="#888" className="text-[6px] font-sans">Torque Spec: 45 Nm</text>
-                            <text x="5" y="15" fill="#b45309" className="text-[8px] font-sans font-bold">99.9% Electrolytic Copper Busbars</text>
-                          </svg>
-                        )}
-                        {activeMfgStep === 2 && (
-                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                            <rect x="70" y="10" width="160" height="80" rx="6" stroke="#475569" strokeWidth="2" fill="rgba(71,85,105,0.02)" />
-                            <line x1="70" y1="36" x2="230" y2="36" stroke="#475569" strokeWidth="1.5" />
-                            <line x1="70" y1="63" x2="230" y2="63" stroke="#475569" strokeWidth="1.5" />
-                            <line x1="150" y1="10" x2="150" y2="90" stroke="#475569" strokeWidth="1.5" strokeDasharray="2,2" />
-                            <rect x="80" y="16" width="60" height="15" rx="2" stroke="#0da08a" strokeWidth="1.2" fill="rgba(13,160,138,0.05)" />
-                            <text x="85" y="26" fill="#0da08a" className="text-[6px] font-sans font-bold">INCOMER VCB</text>
-                            <rect x="160" y="16" width="28" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
-                            <circle cx="174" cy="23" r="3" fill="#ef4444" />
-                            <rect x="194" y="16" width="28" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
-                            <text x="198" y="25" fill="#0da08a" className="text-[6px]">METER</text>
-                            <rect x="80" y="42" width="60" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
-                            <text x="85" y="52" fill="#0da08a" className="text-[6px]">OUTGOER 1</text>
-                            <rect x="160" y="42" width="60" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
-                            <text x="165" y="52" fill="#0da08a" className="text-[6px]">OUTGOER 2</text>
-                            <path d="M 65,30 L 50,30 L 50,70 L 65,70" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2,2" />
-                            <text x="10" y="48" fill="#f59e0b" className="text-[7px] font-sans">Wire Duct</text>
-                            <text x="10" y="56" fill="#f59e0b" className="text-[7px] font-sans">Routing</text>
-                            <text x="80" y="80" fill="#475569" className="text-[8px] font-sans font-bold">Form 4b Compartmentalization</text>
-                          </svg>
-                        )}
-                        {activeMfgStep === 3 && (
-                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                            <rect x="30" y="10" width="240" height="80" rx="8" stroke="#334155" strokeWidth="2" fill="#0f172a" />
-                            <rect x="42" y="20" width="130" height="60" rx="4" fill="#020617" stroke="#334155" strokeWidth="1" />
-                            <path d="M 45,50 Q 60,30 75,50 T 105,50 T 135,50 T 165,50" stroke="#0da08a" strokeWidth="1.5" />
-                            <circle cx="60" cy="35" r="0.5" fill="rgba(255,255,255,0.1)" />
-                            <circle cx="100" cy="35" r="0.5" fill="rgba(255,255,255,0.1)" />
-                            <circle cx="140" cy="35" r="0.5" fill="rgba(255,255,255,0.1)" />
-                            <circle cx="60" cy="65" r="0.5" fill="rgba(255,255,255,0.1)" />
-                            <circle cx="100" cy="65" r="0.5" fill="rgba(255,255,255,0.1)" />
-                            <circle cx="140" cy="65" r="0.5" fill="rgba(255,255,255,0.1)" />
-                            <text x="185" y="32" fill="#0da08a" className="text-[8px] font-sans font-bold">HV TEST: PASS</text>
-                            <text x="185" y="44" fill="white" className="text-[7px] font-sans">INSULATION: &gt;200 MΩ</text>
-                            <text x="185" y="54" fill="white" className="text-[7px] font-sans">INJECTION: 2.0 kV</text>
-                            <text x="185" y="64" fill="white" className="text-[7px] font-sans">CONTACT RES: 12 μΩ</text>
-                            <circle cx="245" cy="50" r="10" fill="rgba(13,160,138,0.1)" stroke="#0da08a" strokeWidth="1.5" />
-                            <circle cx="245" cy="50" r="5" fill="#0da08a" />
-                            <text x="233" y="72" fill="#0da08a" className="text-[6px] font-sans font-bold">FAT STATUS: OK</text>
-                          </svg>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -579,131 +493,45 @@ export default function PanelsPageClient() {
 
                     {/* Simulation readouts */}
                     <div className="flex-grow space-y-6 py-2">
-                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-900/50 p-6 rounded-2xl border border-white/5 relative overflow-hidden">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-slate-900/50 p-8 rounded-2xl border border-white/5 relative overflow-hidden">
                         <div>
                           <span className="text-[10px] text-primary font-bold uppercase tracking-wider block mb-1">Active Study</span>
-                          <h4 className="text-base font-bold text-white mb-2 leading-tight">
+                          <h4 className="text-lg font-bold text-white mb-2 leading-tight">
                             {analysisStudies[activeAnalysis].title}
                           </h4>
-                          <p className="text-[11px] text-gray-400 leading-relaxed max-w-md font-sans">
+                          <p className="text-xs text-gray-400 leading-relaxed max-w-lg font-sans">
                             {analysisStudies[activeAnalysis].desc}
                           </p>
                         </div>
                         
                         {/* Simulation Status circular pill */}
                         <div className="shrink-0 flex flex-col items-center justify-center">
-                          <div className={`px-4 py-2 border rounded-xl font-black text-xs text-center min-w-[120px] ${analysisStudies[activeAnalysis].simStatusColor}`}>
+                          <div className={`px-6 py-3 border rounded-xl font-black text-sm text-center min-w-[140px] ${analysisStudies[activeAnalysis].simStatusColor}`}>
                             {analysisStudies[activeAnalysis].simStatus}
                           </div>
-                          <span className="text-[9px] text-gray-500 mt-1 font-bold uppercase">Report Status</span>
+                          <span className="text-[10px] text-gray-500 mt-2 font-bold uppercase">Report Status</span>
                         </div>
                       </div>
 
                       {/* Diagnostic specifications */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="bg-slate-900/30 p-4 rounded-xl border border-white/5">
-                          <span className="text-[9px] text-gray-500 font-bold uppercase block mb-2">Simulated Parameter Output</span>
-                          <div className="flex justify-between items-baseline py-1">
-                            <span className="text-[10px] text-gray-400">{analysisStudies[activeAnalysis].simName}</span>
-                            <span className="text-xs font-bold text-white">{analysisStudies[activeAnalysis].simValue}</span>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-slate-900/40 p-6 md:p-8 rounded-2xl border border-white/5 flex flex-col justify-center min-h-[160px]">
+                          <span className="text-[10px] text-gray-500 font-bold uppercase block mb-3">Simulated Parameter Output</span>
+                          <div className="flex justify-between items-baseline py-2 border-b border-white/5">
+                            <span className="text-xs text-gray-400">{analysisStudies[activeAnalysis].simName}</span>
+                            <span className="text-base font-bold text-white">{analysisStudies[activeAnalysis].simValue}</span>
                           </div>
-                          <div className="flex justify-between items-baseline py-1 border-t border-white/5 mt-1.5 pt-1.5">
-                            <span className="text-[9px] text-gray-500">{analysisStudies[activeAnalysis].simMetric}</span>
-                            <span className="text-[10px] text-gray-400">{analysisStudies[activeAnalysis].simLimit}</span>
+                          <div className="flex justify-between items-baseline py-2 mt-2">
+                            <span className="text-[10px] text-gray-500">{analysisStudies[activeAnalysis].simMetric}</span>
+                            <span className="text-xs text-gray-400">{analysisStudies[activeAnalysis].simLimit}</span>
                           </div>
                         </div>
 
-                        <div className="bg-slate-900/30 p-4 rounded-xl border border-white/5 flex flex-col justify-between">
-                          <span className="text-[9px] text-gray-500 font-bold uppercase block mb-1">Live Engine Log Stream</span>
-                          <div className="text-[9px] text-slate-400 bg-slate-950 p-2.5 rounded border border-white/5 whitespace-nowrap overflow-x-auto">
-                            {analysisStudies[activeAnalysis].simCode}
+                        <div className="bg-slate-900/40 p-6 md:p-8 rounded-2xl border border-white/5 flex flex-col justify-between min-h-[160px]">
+                          <span className="text-[10px] text-gray-500 font-bold uppercase block mb-3">Live Engine Log Stream</span>
+                          <div className="text-xs text-slate-300 bg-slate-950 p-4 rounded-xl border border-white/5 whitespace-nowrap overflow-x-auto font-mono flex-grow flex items-center">
+                            <code>{analysisStudies[activeAnalysis].simCode}</code>
                           </div>
-                        </div>
-                      </div>
-
-                      {/* Interactive Simulation Visualizer */}
-                      <div className="bg-slate-900/40 p-5 rounded-2xl border border-white/5 flex flex-col md:flex-row items-center gap-6 mt-4">
-                        <div className="w-full md:w-5/12 text-left">
-                          <span className="text-[9px] text-[#0da08a] font-bold uppercase block mb-1">Visualizer Feed</span>
-                          <h5 className="text-xs font-bold text-white mb-1">{analysisStudies[activeAnalysis].simName} Trace</h5>
-                          <p className="text-[10px] text-slate-400 leading-relaxed font-sans">
-                            Real-time simulation trace of transient response, phase coordination, and safety limits.
-                          </p>
-                        </div>
-                        <div className="w-full md:w-7/12 h-[120px] bg-slate-950 rounded-xl border border-white/5 p-3 flex items-center justify-center relative overflow-hidden">
-                          {activeAnalysis === 0 && (
-                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                              <line x1="0" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.05)" />
-                              <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(255,255,255,0.05)" />
-                              <line x1="150" y1="0" x2="150" y2="100" stroke="rgba(255,255,255,0.05)" />
-                              <path d="M 10,50 L 50,50 Q 60,10 70,85 T 90,30 T 110,65 T 130,42 T 150,54 T 170,48 T 190,51 L 290,50" stroke="#0da08a" strokeWidth="2" />
-                              <line x1="0" y1="20" x2="300" y2="20" stroke="#ef4444" strokeWidth="1" strokeDasharray="3,3" />
-                              <text x="5" y="15" fill="#ef4444" className="text-[8px] font-sans">65kA Limit</text>
-                              <text x="235" y="45" fill="#0da08a" className="text-[8px] font-sans">51.2kA Peak</text>
-                            </svg>
-                          )}
-                          {activeAnalysis === 1 && (
-                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                              <line x1="0" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.05)" />
-                              <path d="M 10,50 Q 40,10 70,50 T 130,50 T 190,50 T 250,50" stroke="#3b82f6" strokeWidth="1.5" />
-                              <path d="M 10,50 Q 40,20 70,50 T 130,50 T 190,50 T 250,50" stroke="#0da08a" strokeWidth="2" strokeDasharray="2,2" />
-                              <text x="5" y="15" fill="#3b82f6" className="text-[8px] font-sans">Voltage (33kV)</text>
-                              <text x="5" y="27" fill="#0da08a" className="text-[8px] font-sans">Current (Compensated)</text>
-                            </svg>
-                          )}
-                          {activeAnalysis === 2 && (
-                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                              <ellipse cx="150" cy="55" rx="90" ry="35" stroke="rgba(13,160,138,0.1)" strokeWidth="1" />
-                              <ellipse cx="150" cy="55" rx="70" ry="27" stroke="rgba(13,160,138,0.2)" strokeWidth="1" />
-                              <ellipse cx="150" cy="55" rx="50" ry="20" stroke="rgba(13,160,138,0.4)" strokeWidth="1.5" />
-                              <ellipse cx="150" cy="55" rx="30" ry="12" stroke="#0da08a" strokeWidth="2" />
-                              <line x1="150" y1="55" x2="150" y2="20" stroke="#ef4444" strokeWidth="2" />
-                              <circle cx="150" cy="20" r="3" fill="#ef4444" />
-                              <text x="160" y="23" fill="#ef4444" className="text-[8px] font-sans">Fault Point</text>
-                              <text x="5" y="15" fill="#0da08a" className="text-[8px] font-sans">Safe Earth Potential Grid</text>
-                            </svg>
-                          )}
-                          {activeAnalysis === 3 && (
-                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                              <rect x="30" y="30" width="30" height="50" fill="rgba(255,255,255,0.05)" rx="2" />
-                              <rect x="30" y="45" width="30" height="35" fill="#0da08a" rx="2" />
-                              <text x="32" y="93" fill="#888" className="text-[7px]">Phase A</text>
-                              <rect x="80" y="30" width="30" height="50" fill="rgba(255,255,255,0.05)" rx="2" />
-                              <rect x="80" y="40" width="30" height="40" fill="#0da08a" rx="2" />
-                              <text x="82" y="93" fill="#888" className="text-[7px]">Phase B</text>
-                              <rect x="130" y="30" width="30" height="50" fill="rgba(255,255,255,0.05)" rx="2" />
-                              <rect x="130" y="38" width="30" height="42" fill="#0da08a" rx="2" />
-                              <text x="132" y="93" fill="#888" className="text-[7px]">Phase C</text>
-                              <line x1="20" y1="30" x2="180" y2="30" stroke="#ef4444" strokeWidth="1" strokeDasharray="3,3" />
-                              <text x="185" y="33" fill="#ef4444" className="text-[8px]">90°C Limit</text>
-                              <text x="185" y="48" fill="#0da08a" className="text-[8px]">Cable Temp: 68°C</text>
-                            </svg>
-                          )}
-                          {activeAnalysis === 4 && (
-                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                              <path d="M 20,90 L 280,90 M 20,70 L 280,70 M 20,50 L 280,50 M 20,30 L 280,30" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
-                              <path d="M 50,10 L 50,90 M 100,10 L 100,90 M 150,10 L 150,90 M 200,10 L 200,90" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
-                              <path d="M 30,15 C 60,18 100,45 100,85" stroke="#ef4444" strokeWidth="1.5" />
-                              <text x="105" y="25" fill="#ef4444" className="text-[8px] font-sans">Main VCB</text>
-                              <path d="M 60,15 C 90,18 130,45 130,85" stroke="#0da08a" strokeWidth="2" />
-                              <text x="135" y="55" fill="#0da08a" className="text-[8px] font-sans">Feeder Relay</text>
-                              <path d="M 100,50 L 130,50" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2,2" />
-                              <text x="102" y="45" fill="#f59e0b" className="text-[7px]">Margin: 200ms</text>
-                            </svg>
-                          )}
-                          {activeAnalysis === 5 && (
-                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
-                              <circle cx="50" cy="50" r="10" fill="rgba(13,160,138,0.2)" stroke="#0da08a" strokeWidth="1.5" />
-                              <text x="47" y="53" fill="white" className="text-[8px] font-sans font-bold">G</text>
-                              <line x1="60" y1="50" x2="120" y2="50" stroke="#0da08a" strokeWidth="1.5" />
-                              <circle cx="130" cy="50" r="8" stroke="#0da08a" strokeWidth="1.5" />
-                              <circle cx="138" cy="50" r="8" stroke="#0da08a" strokeWidth="1.5" />
-                              <line x1="146" y1="50" x2="210" y2="50" stroke="#0da08a" strokeWidth="1.5" />
-                              <polygon points="220,45 235,50 220,55" fill="#ef4444" />
-                              <text x="215" y="38" fill="#ef4444" className="text-[7px]">4.85 MW Load</text>
-                              <text x="5" y="15" fill="#0da08a" className="text-[8px] font-sans">Active Load Flow Grid</text>
-                            </svg>
-                          )}
                         </div>
                       </div>
                     </div>
