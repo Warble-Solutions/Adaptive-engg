@@ -64,7 +64,7 @@ export default function Page() {
   </SectionWrapper>
   <SectionWrapper delay={0.2}>
   <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 h-[380px] group">
-    <img src="/imgs/pm-kusum/scada_control_room.png" alt="SCADA Telemetry SLDC Link" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+    <img src="/imgs/pm-kusum/kusum_iot_scada_1776742351594.png" alt="SCADA Telemetry SLDC Link" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
     <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md rounded-2xl border border-white/20">
       <p className="text-slate-900 font-bold text-sm">SLDC Telemetry Integration</p>

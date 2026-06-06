@@ -201,7 +201,7 @@ export default function Page() {
                       <div className="flex items-center gap-3">
                         <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                         <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
                         <span className="text-slate-500 font-mono text-xs ml-2">NOC_NODE_04 // active</span>
                       </div>
                       <div className="flex items-center gap-1.5 bg-primary/10 text-primary border border-primary/20 px-2.5 py-1 rounded-md text-[10px] font-black tracking-widest font-mono font-bold">

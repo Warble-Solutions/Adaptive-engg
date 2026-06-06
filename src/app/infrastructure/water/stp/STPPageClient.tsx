@@ -52,7 +52,7 @@ export default function STPPageClient() {
 
   return (
     <div className="flex flex-col w-full text-slate-100 bg-slate-950">
-      <SceneTrigger variant="logo" color="#10b981" speed={0.5} />
+      <SceneTrigger variant="logo" color="#0da08a" speed={0.5} />
 
       {/* 1. HERO SECTION (Dark environment theme) */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">

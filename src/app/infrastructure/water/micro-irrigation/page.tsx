@@ -383,7 +383,7 @@ export default function Page() {
       {/* 7. INFRASTRUCTURE SHOWCASE */}
       <section className="relative z-20 overflow-hidden">
         <div className="relative h-[400px]">
-          <Image src="/imgs/micro-irrigation-showcase.png" alt="Crop fields Micro Irrigation sprinkler systems" fill className="object-cover" />
+          <Image src="/imgs/micro-irrigation-showcase-v2.png" alt="Crop fields Micro Irrigation sprinkler systems" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
           <div className="absolute inset-0 flex items-center">
             <div className="max-w-7xl mx-auto px-6 w-full">

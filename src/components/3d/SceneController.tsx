@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -26,8 +26,8 @@ export default function SceneController() {
             });
         } else if (pathname === "/ppc" || pathname.includes("storage")) {
             setScene({
-                primaryColor: "#10B981", // Emerald Green
-                secondaryColor: "#064E3B",
+                primaryColor: "#0da08a", // Adaptive Green
+                secondaryColor: "#022621",
                 speed: 1,
                 variant: "battery", // Battery Stack
             });

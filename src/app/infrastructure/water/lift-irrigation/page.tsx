@@ -21,7 +21,7 @@ export default function Page() {
       {/* 1. HERO SECTION (Brand Green Theme) */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/imgs/lift-irrigation-hero.png" alt="Large Scale Lift Irrigation Pumping Station" fill className="object-cover" priority />
+          <Image src="/imgs/lift-irrigation-hero-v2.png" alt="Large Scale Lift Irrigation Pumping Station" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-[#0B1120] z-10"></div>
         </div>
         <div className="z-10 max-w-7xl relative mx-auto flex flex-col items-center">

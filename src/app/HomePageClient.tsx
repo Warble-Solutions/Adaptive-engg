@@ -324,9 +324,8 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* 7. SCALABILITY (Light) */}
       <section className="section-light py-24 bg-white relative z-20">
-        <SceneTrigger variant="battery" color="#10B981" speed={0.8} />
+        <SceneTrigger variant="battery" color="#0da08a" speed={0.8} />
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>

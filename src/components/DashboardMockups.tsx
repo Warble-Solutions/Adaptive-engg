@@ -1190,16 +1190,16 @@ export function EMSHeroDashboards() {
                <div className="absolute bottom-0 w-full h-[1px] bg-red-500/30"></div>
                {/* Trend visualization */}
                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-                 <path d="M0,40 Q20,35 40,30 T80,35 T120,40 T160,20 T200,5" fill="none" stroke="#10b981" strokeWidth="2" />
+                 <path d="M0,40 Q20,35 40,30 T80,35 T120,40 T160,20 T200,5" fill="none" stroke="#0da08a" strokeWidth="2" />
                  <path d="M0,40 Q20,35 40,30 T80,35 T120,40 T160,20 T200,5 L200,48 L0,48 Z" fill="url(#emerald-gradient)" />
                  <defs>
                   <linearGradient id="emerald-gradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="rgba(16,185,129,0.3)" />
-                    <stop offset="100%" stopColor="rgba(16,185,129,0)" />
+                    <stop offset="0%" stopColor="rgba(13,160,138,0.3)" />
+                    <stop offset="100%" stopColor="rgba(13,160,138,0)" />
                   </linearGradient>
                 </defs>
                </svg>
-               <div className="absolute top-[3px] right-0 w-1.5 h-1.5 bg-teal-400 rounded-full shadow-[0_0_8px_#10b981]"></div>
+               <div className="absolute top-[3px] right-0 w-1.5 h-1.5 bg-teal-400 rounded-full shadow-[0_0_8px_#0da08a]"></div>
             </div>
           </div>
         </div>

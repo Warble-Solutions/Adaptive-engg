@@ -3,12 +3,38 @@
 
 @theme {
   --color-primary: #0da08a;
-  --color-primary-light: #34d399;
+  --color-primary-light: #33a693;
   --color-accent: #F59E0B;
   --color-dark: #0B1120;
   --color-light: #FFFFFF;
   --color-glass-dark: rgba(11, 17, 32, 0.7);
   --color-glass-light: rgba(255, 255, 255, 0.7);
+
+  /* Override emerald with Adaptive's Green shades */
+  --color-emerald-50: #eaf6f4;
+  --color-emerald-100: #cbeae4;
+  --color-emerald-200: #97d4c9;
+  --color-emerald-300: #5dbca9;
+  --color-emerald-400: #33a693;
+  --color-emerald-500: #0da08a;
+  --color-emerald-600: #09806e;
+  --color-emerald-700: #076658;
+  --color-emerald-800: #065247;
+  --color-emerald-900: #05443b;
+  --color-emerald-950: #022621;
+
+  /* Override teal with Adaptive's Green shades */
+  --color-teal-50: #eaf6f4;
+  --color-teal-100: #cbeae4;
+  --color-teal-200: #97d4c9;
+  --color-teal-300: #5dbca9;
+  --color-teal-400: #33a693;
+  --color-teal-500: #0da08a;
+  --color-teal-600: #09806e;
+  --color-teal-700: #076658;
+  --color-teal-800: #065247;
+  --color-teal-900: #05443b;
+  --color-teal-950: #022621;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
@@ -75,5 +101,5 @@ h6 {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(135deg, #0da08a 0%, #34d399 100%);
+  background-image: linear-gradient(135deg, #0da08a 0%, #33a693 100%);
 }
