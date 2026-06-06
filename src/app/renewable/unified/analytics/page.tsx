@@ -102,7 +102,7 @@ export default function Page() {
             <p className="text-slate-600 mb-8 leading-relaxed">
               Standardize, automate, and secure your plant reporting workflows. Our enterprise-grade custom report engine allows operators and managers to design, schedule, and distribute high-fidelity KPI reports across teams and stakeholders.
             </p>
-            <div className="h-80 w-full mb-8">
+            <div className="h-[480px] w-full mb-8">
               <AnalyticsVisibilityDashboard />
             </div>
           </SectionWrapper>

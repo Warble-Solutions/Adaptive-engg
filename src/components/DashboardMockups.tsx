@@ -1499,11 +1499,35 @@ export function AnalyticsVisibilityDashboard() {
     { id: "REP-01", name: "Daily Yield & PR Report", type: "Scheduled", time: "06:00 AM", status: "Sent", recipients: "12 users" },
     { id: "REP-02", name: "Monthly Performance Audit", type: "Automated", time: "1st of Month", status: "Ready", recipients: "24 users" },
     { id: "REP-03", name: "Inverter Degradation Summary", type: "AI-Generated", time: "Weekly Mon", status: "Sent", recipients: "8 users" },
+    { id: "REP-04", name: "Event & Downtime Log", type: "On-Demand", time: "Just now", status: "Ready", recipients: "6 users" },
   ]);
 
   const [activeReportIdx, setActiveReportIdx] = useState(0);
   const [isDistributing, setIsDistributing] = useState(false);
   const [distStatus, setDistStatus] = useState("Queue Idle");
+  const [activeFormat, setActiveFormat] = useState("PDF");
+
+  const [logs, setLogs] = useState([
+    "System initialized. SMTP channel verified.",
+    "REP-01 scheduled job generated (PDF format).",
+    "Sent Daily Report to 12 plant stakeholders.",
+  ]);
+
+  useEffect(() => {
+    const logInterval = setInterval(() => {
+      const msgs = [
+        "Scanning inverter sensors for degradation...",
+        "Calculated equivalent PR for Rajasthan Wind...",
+        "REP-04 compiled successfully. CSV size: 2.4 MB.",
+        "SMTP queue: 0 messages pending.",
+        "Secure storage archive: sync complete.",
+        "Anomaly threshold report dispatched.",
+      ];
+      const randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
+      setLogs(prev => [...prev.slice(1), randomMsg]);
+    }, 4000);
+    return () => clearInterval(logInterval);
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -1538,25 +1562,25 @@ export function AnalyticsVisibilityDashboard() {
       </div>
 
       {/* Reports List */}
-      <div className="space-y-1.5 flex-grow">
+      <div className="space-y-1.5 flex-grow overflow-y-auto max-h-[160px] pr-0.5">
         {reports.map((rep, idx) => (
           <div
             key={rep.id}
             onClick={() => setActiveReportIdx(idx)}
-            className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
+            className={`p-2 rounded-xl border transition-all cursor-pointer ${
               activeReportIdx === idx
                 ? "bg-teal-500/10 border-teal-500/30"
                 : "bg-white/[0.02] border-white/5 hover:bg-white/5"
             }`}
           >
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-[10px] font-mono text-slate-500">{rep.id}</span>
-              <span className="text-[9px] px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300">
+            <div className="flex items-center justify-between mb-0.5">
+              <span className="text-[9px] font-mono text-slate-500">{rep.id}</span>
+              <span className="text-[8px] px-1.5 py-0.2 bg-white/5 border border-white/10 rounded text-slate-300">
                 {rep.type}
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-white truncate max-w-[140px]">{rep.name}</span>
+              <span className="text-xs font-bold text-white truncate max-w-[150px]">{rep.name}</span>
               <span className="text-[9px] text-teal-400 font-mono flex items-center gap-1">
                 <Clock className="w-2.5 h-2.5 text-slate-500" /> {rep.time}
               </span>
@@ -1565,32 +1589,69 @@ export function AnalyticsVisibilityDashboard() {
         ))}
       </div>
 
-      {/* Live Distribution Console & Custom Builder Mockup */}
-      <div className="mt-3 bg-white/5 border border-white/5 rounded-xl p-3 space-y-2 shrink-0">
+      {/* Export Format Selector */}
+      <div className="my-2.5 shrink-0">
+        <span className="text-[8px] text-slate-500 font-bold uppercase tracking-wider block mb-1">
+          Export & Share Formats
+        </span>
+        <div className="grid grid-cols-4 gap-1">
+          {["PDF", "CSV", "Excel", "BI Link"].map(fmt => (
+            <button
+              key={fmt}
+              onClick={() => setActiveFormat(fmt)}
+              className={`py-1 text-[8px] font-bold rounded transition-colors ${
+                activeFormat === fmt
+                  ? "bg-teal-500 text-slate-900"
+                  : "bg-white/5 text-slate-300 hover:bg-white/10"
+              }`}
+            >
+              {fmt}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Custom Report Layout Mockup */}
+      <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 space-y-2 shrink-0">
         <div className="flex items-center justify-between text-[9px] text-slate-400 font-bold uppercase tracking-wider">
-          <span>Enterprise Custom Builder</span>
-          <span className="text-teal-400 font-mono">Drag & Drop Active</span>
+          <span>Report Builder Visual</span>
+          <span className="text-teal-400 font-mono text-[8px]">Canvas Active</span>
         </div>
         
         {/* Mock Drag/Drop Elements */}
-        <div className="grid grid-cols-3 gap-1.5">
+        <div className="grid grid-cols-3 gap-1">
           <div className="bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[8px] font-bold py-1 rounded text-center cursor-move hover:brightness-125">
-            + KPI Tiles
+            + KPIs
           </div>
           <div className="bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[8px] font-bold py-1 rounded text-center cursor-move hover:brightness-125">
-            + Power Curve
+            + Charts
           </div>
           <div className="bg-pink-500/10 border border-pink-500/20 text-pink-400 text-[8px] font-bold py-1 rounded text-center cursor-move hover:brightness-125">
-            + Loss Pie
+            + Table
           </div>
         </div>
+      </div>
 
-        <div className="flex items-center justify-between pt-1 border-t border-white/5 text-[9px]">
-          <span className="text-slate-500">Scheduled Trigger Status:</span>
-          <span className={`font-mono font-bold ${isDistributing ? 'text-teal-400 animate-pulse' : 'text-slate-300'}`}>
-            {distStatus}
-          </span>
+      {/* Real-time Activity Logs */}
+      <div className="mt-2.5 bg-black/40 border border-white/5 rounded-lg p-2 shrink-0 font-mono text-[7.5px] leading-tight text-slate-400">
+        <span className="text-[7px] text-slate-500 uppercase tracking-wider block mb-1">
+          Real-time Distribution Log
+        </span>
+        <div className="space-y-0.5">
+          {logs.map((log, idx) => (
+            <div key={idx} className="truncate text-teal-500/90">
+              <span className="text-slate-600 font-sans mr-1">&gt;</span>
+              {log}
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div className="flex items-center justify-between mt-2.5 pt-2 border-t border-white/5 text-[9px] shrink-0">
+        <span className="text-slate-500">Scheduler Queue:</span>
+        <span className={`font-mono font-bold ${isDistributing ? 'text-teal-400 animate-pulse' : 'text-slate-300'}`}>
+          {distStatus}
+        </span>
       </div>
     </div>
   );
