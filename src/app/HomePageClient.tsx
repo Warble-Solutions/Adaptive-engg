@@ -113,85 +113,136 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* 3.5 MISSION & VISION (Overhauled Premium Glassmorphic Dark Design) */}
+      {/* 3.5 MISSION & VISION (Industrial Schematic & Technical Blueprint Design) */}
       <section className="py-32 bg-slate-950 rounded-t-[40px] z-20 relative -mt-10 overflow-hidden border-b border-white/5">
-        {/* Ambient Decorative Glows */}
-        <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        {/* Engineering Grid Paper Background Effect */}
+        <div 
+          className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+          style={{ 
+            backgroundImage: `
+              linear-gradient(to right, #0da08a 1px, transparent 1px),
+              linear-gradient(to bottom, #0da08a 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px' 
+          }}
+        ></div>
         
+        {/* Subtle circular grid targets */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-primary/5 rounded-full pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-primary/5 border-dashed rounded-full pointer-events-none"></div>
+
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionWrapper>
-            <div className="text-center mb-20">
-              <span className="text-primary font-bold uppercase text-xs tracking-[0.25em] mb-4 block">WHAT DRIVES AEPL</span>
-              <h2 className="text-4xl md:text-6xl font-black text-white font-heading tracking-tight">
+            <div className="text-center mb-24 relative">
+              <span className="text-primary font-mono text-xs tracking-[0.3em] mb-4 block uppercase">[ AEPL SYSTEM CORE ]</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white font-heading tracking-tight">
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-400">Core Compass</span>
               </h2>
-              <p className="text-slate-400 max-w-xl mx-auto mt-4 text-sm md:text-base font-medium">
-                The principles and aspirations that guide our engineering excellence and customer commitment daily.
-              </p>
+              <div className="w-16 h-px bg-primary/40 mx-auto mt-4"></div>
             </div>
           </SectionWrapper>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Vision Card */}
-            <SectionWrapper delay={0.1}>
-              <div className="group relative h-full bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 hover:border-primary/50 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
-                {/* Accent hover glow */}
-                <div className="absolute -right-20 -top-20 w-40 h-40 bg-primary/15 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                
-                <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110 shadow-lg shadow-primary/10">
-                      <Rocket className="w-7 h-7" />
-                    </div>
-                    <span className="text-7xl font-black text-white/5 font-sans select-none group-hover:text-primary/10 transition-colors duration-500">01</span>
-                  </div>
-                  
-                  <h3 className="text-2xl md:text-3xl font-bold text-white font-heading mb-6 tracking-tight">
-                    Our Vision
-                  </h3>
-                  
-                  <p className="text-xl text-slate-300 leading-relaxed font-semibold font-heading tracking-wide group-hover:text-white transition-colors duration-300">
-                    Embrace Technology To Maximize Value
-                  </p>
-                </div>
-                
-                <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-widest font-mono">Future Outlook</span>
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></div>
-                </div>
-              </div>
-            </SectionWrapper>
+          {/* Visual connecting line (Bus line) for desktop */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* The horizontal connecting circuit wire */}
+            <div className="absolute top-1/2 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-primary/10 via-primary/50 to-teal-500/10 -translate-y-1/2 hidden md:block z-0">
+              {/* Pulsing signal dot moving along the bus */}
+              <div className="absolute top-0 w-2 h-2 rounded-full bg-primary -translate-y-1/2 animate-ping left-1/2"></div>
+            </div>
 
-            {/* Mission Card */}
-            <SectionWrapper delay={0.2}>
-              <div className="group relative h-full bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 hover:border-teal-500/50 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
-                {/* Accent hover glow */}
-                <div className="absolute -right-20 -top-20 w-40 h-40 bg-teal-500/15 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                
-                <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 group-hover:bg-teal-500 group-hover:text-white transition-all duration-500 group-hover:scale-110 shadow-lg shadow-teal-500/10">
-                      <Lightbulb className="w-7 h-7" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
+              {/* Vision Node - Style of an Industrial Controller/Panel Module */}
+              <SectionWrapper delay={0.1}>
+                <div className="group relative h-full bg-slate-900/40 backdrop-blur-md border border-slate-800 rounded-2xl p-8 md:p-10 hover:border-primary/50 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
+                  {/* Grid overlay for hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.04] pointer-events-none transition-opacity duration-500"
+                    style={{
+                      backgroundImage: `radial-gradient(circle, #0da08a 1px, transparent 1px)`,
+                      backgroundSize: '16px 16px'
+                    }}
+                  ></div>
+
+                  {/* Corner engineering bracket decorations */}
+                  <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
+                  <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
+
+                  <div>
+                    {/* Node Header Info */}
+                    <div className="flex items-center justify-between mb-8 border-b border-slate-800/60 pb-4">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        <span className="font-mono text-[9px] text-slate-500 tracking-widest uppercase">MODULE: VISION_NODE_01</span>
+                      </div>
+                      <span className="font-mono text-[10px] text-primary/80 font-bold bg-primary/10 px-2 py-0.5 rounded border border-primary/20">ACTIVE</span>
                     </div>
-                    <span className="text-7xl font-black text-white/5 font-sans select-none group-hover:text-teal-400/10 transition-colors duration-500">02</span>
+
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center text-primary group-hover:border-primary/50 transition-all duration-500">
+                        <Rocket className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white font-heading tracking-wide">Our Vision</h3>
+                    </div>
+
+                    <p className="text-2xl text-slate-200 leading-relaxed font-bold font-heading tracking-wide group-hover:text-white transition-colors duration-300">
+                      Embrace Technology To Maximize Value
+                    </p>
                   </div>
-                  
-                  <h3 className="text-2xl md:text-3xl font-bold text-white font-heading mb-6 tracking-tight">
-                    Our Mission
-                  </h3>
-                  
-                  <p className="text-lg text-slate-300 leading-relaxed font-medium group-hover:text-white transition-colors duration-300">
-                    Continuously evolve to maximize value of each installation towards providing the <span className="text-teal-400 font-semibold">Best Customer Experience</span>.
-                  </p>
+
+                  <div className="mt-8 pt-6 border-t border-slate-800/60 flex items-center justify-between text-[9px] font-mono text-slate-500">
+                    <span>SYS_TARGET: VALUE_MAXIMIZATION</span>
+                    <span>VER: 4.0</span>
+                  </div>
                 </div>
-                
-                <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-widest font-mono">Daily Execution</span>
-                  <div className="h-1.5 w-1.5 rounded-full bg-teal-500 animate-pulse"></div>
+              </SectionWrapper>
+
+              {/* Mission Node - Style of an Industrial Controller/Panel Module */}
+              <SectionWrapper delay={0.2}>
+                <div className="group relative h-full bg-slate-900/40 backdrop-blur-md border border-slate-800 rounded-2xl p-8 md:p-10 hover:border-teal-500/50 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
+                  {/* Grid overlay for hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.04] pointer-events-none transition-opacity duration-500"
+                    style={{
+                      backgroundImage: `radial-gradient(circle, #0d9488 1px, transparent 1px)`,
+                      backgroundSize: '16px 16px'
+                    }}
+                  ></div>
+
+                  {/* Corner engineering bracket decorations */}
+                  <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
+                  <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
+
+                  <div>
+                    {/* Node Header Info */}
+                    <div className="flex items-center justify-between mb-8 border-b border-slate-800/60 pb-4">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+                        <span className="font-mono text-[9px] text-slate-500 tracking-widest uppercase">MODULE: MISSION_NODE_02</span>
+                      </div>
+                      <span className="font-mono text-[10px] text-teal-400 font-bold bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20">ACTIVE</span>
+                    </div>
+
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center text-teal-400 group-hover:border-teal-500/50 transition-all duration-500">
+                        <Lightbulb className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white font-heading tracking-wide">Our Mission</h3>
+                    </div>
+
+                    <p className="text-lg text-slate-200 leading-relaxed font-semibold group-hover:text-white transition-colors duration-300">
+                      Continuously evolve to maximize value of each installation towards providing the <span className="text-teal-400 font-bold">Best Customer Experience</span>.
+                    </p>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-slate-800/60 flex items-center justify-between text-[9px] font-mono text-slate-500">
+                    <span>SYS_TARGET: CUSTOMER_EXPERIENCE</span>
+                    <span>VER: 4.0</span>
+                  </div>
                 </div>
-              </div>
-            </SectionWrapper>
+              </SectionWrapper>
+            </div>
           </div>
         </div>
       </section>
