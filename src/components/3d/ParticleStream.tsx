@@ -183,93 +183,122 @@ const getWavePosition = (i: number) => {
     return vec;
 };
 
-// 6. AEPL Sunburst Logo for 'logo'
+// 6. 3D Recreation of the Adaptive Segmented Globe Logo
 const getLogoPosition = (i: number) => {
-    // AEPL logo mapped onto a spherical surface for real 3D depth
-    const SPHERE_R = 35;
+    const R = 28; // Sphere radius
 
-    const arcs = [
-        { radius: 7, tileCount: 18, tileW: 1.0, tileH: 2.8, startAngle: -2.9, endAngle: 1.0, depth: 1.2 },
-        { radius: 14, tileCount: 11, tileW: 1.6, tileH: 3.8, startAngle: -2.0, endAngle: 1.3, depth: 1.5 },
-        { radius: 22, tileCount: 7, tileW: 2.4, tileH: 5.0, startAngle: -1.2, endAngle: 1.2, depth: 1.8 },
-        { radius: 31, tileCount: 5, tileW: 3.2, tileH: 6.0, startAngle: -0.5, endAngle: 1.0, depth: 2.2 },
+    // Define the columns in local angular coords relative to the off-center opening
+    // omega is azimuth around the opening, rows represent polar angles (distance from opening center)
+    const columns = [
+        { omega: 2.45, rows: [0.55, 0.85, 1.15] },
+        { omega: 2.05, rows: [0.55, 0.85, 1.15, 1.45] },
+        { omega: 1.65, rows: [0.55, 0.85, 1.15, 1.45, 1.75] },
+        { omega: 1.25, rows: [0.55, 0.85, 1.15, 1.45, 1.75, 2.05] },
+        { omega: 0.85, rows: [0.55, 0.85, 1.15, 1.45, 1.75, 2.05] },
+        { omega: 0.45, rows: [0.55, 0.85, 1.15, 1.45, 1.75, 2.05] },
+        { omega: 0.05, rows: [0.55, 0.85, 1.15, 1.45, 1.75] },
+        { omega: -0.35, rows: [0.55, 0.85, 1.15, 1.45] },
     ];
 
-    const totalTiles = arcs.reduce((sum, arc) => sum + arc.tileCount, 0);
+    const totalTiles = columns.reduce((sum, col) => sum + col.rows.length, 0);
     const particlesPerTile = Math.floor(COUNT / totalTiles);
 
     let tileIndex = Math.floor(i / particlesPerTile);
     let localI = i % particlesPerTile;
 
-    let arcIndex = 0;
-    let tileInArc = 0;
-    let cumulative = 0;
+    if (tileIndex >= totalTiles) {
+        tileIndex = totalTiles - 1;
+        localI = (i % particlesPerTile) + (i - totalTiles * particlesPerTile);
+    }
 
-    for (let a = 0; a < arcs.length; a++) {
-        if (tileIndex < cumulative + arcs[a].tileCount) {
-            arcIndex = a;
-            tileInArc = tileIndex - cumulative;
+    // Map tileIndex to column and row indices
+    let colIdx = 0;
+    let rowIdx = 0;
+    let cumulative = 0;
+    for (let c = 0; c < columns.length; c++) {
+        const numRows = columns[c].rows.length;
+        if (tileIndex < cumulative + numRows) {
+            colIdx = c;
+            rowIdx = tileIndex - cumulative;
             break;
         }
-        cumulative += arcs[a].tileCount;
+        cumulative += numRows;
     }
 
-    if (tileIndex >= totalTiles) {
-        arcIndex = arcs.length - 1;
-        tileInArc = arcs[arcIndex].tileCount - 1;
-        localI = i % particlesPerTile;
-    }
+    const col = columns[colIdx];
+    const omega = col.omega;
+    const psi = col.rows[rowIdx];
 
-    const arc = arcs[arcIndex];
-    const angleRange = arc.endAngle - arc.startAngle;
-    const tileAngle = arc.startAngle + (tileInArc / Math.max(arc.tileCount - 1, 1)) * angleRange;
+    // Local coordinate axes for off-center circular opening (bottom-left)
+    const theta_0 = -0.7; // Leftward rotation
+    const phi_0 = -0.4;   // Downward rotation
 
-    const flatCx = Math.cos(tileAngle) * arc.radius;
-    const flatCy = Math.sin(tileAngle) * arc.radius;
+    // Direction vector of the opening center
+    const uz = new THREE.Vector3(
+        Math.cos(phi_0) * Math.cos(theta_0),
+        Math.sin(phi_0),
+        Math.cos(phi_0) * Math.sin(theta_0)
+    ).normalize();
 
-    // Depth layers for tile thickness
+    // Orthonormal basis
+    const ux = new THREE.Vector3().crossVectors(uz, new THREE.Vector3(0, 1, 0)).normalize();
+    const uy = new THREE.Vector3().crossVectors(ux, uz).normalize();
+
+    // Compute tile center on sphere
+    const sinPsi = Math.sin(psi);
+    const cosPsi = Math.cos(psi);
+    const cosOmega = Math.cos(omega);
+    const sinOmega = Math.sin(omega);
+
+    const v_global = new THREE.Vector3()
+        .addScaledVector(ux, sinPsi * cosOmega)
+        .addScaledVector(uy, sinPsi * sinOmega)
+        .addScaledVector(uz, cosPsi)
+        .normalize();
+
+    const C = v_global.clone().multiplyScalar(R);
+
+    // Tangent vectors for aligning tile panels
+    const t1 = new THREE.Vector3()
+        .addScaledVector(ux, -sinOmega)
+        .addScaledVector(uy, cosOmega)
+        .normalize();
+
+    const t2 = new THREE.Vector3()
+        .addScaledVector(ux, cosPsi * cosOmega)
+        .addScaledVector(uy, cosPsi * sinOmega)
+        .addScaledVector(uz, -sinPsi)
+        .normalize();
+
+    // Tile dimensions (larger/wider as they move out from center)
+    const tileW = (0.045 + 0.13 * psi) * R * 0.72;
+    const tileH = 0.09 * R;
+    const tileD = 1.0;
+
+    // Distribute particles in 3D grid inside the tile
     const depthLayers = 3;
-    const surfaceParticles = Math.max(Math.floor(particlesPerTile / depthLayers), 1);
-    const depthLayer = Math.min(Math.floor(localI / surfaceParticles), depthLayers - 1);
-    const surfaceI = localI % surfaceParticles;
+    const gridRows = 5;
+    const gridCols = 5;
+    const gridTotal = depthLayers * gridRows * gridCols; // 75
 
-    const cols = Math.max(Math.ceil(Math.sqrt(surfaceParticles * (arc.tileW / arc.tileH))), 2);
-    const rows = Math.max(Math.ceil(surfaceParticles / cols), 2);
-    const row = Math.floor(surfaceI / cols);
-    const col = surfaceI % cols;
+    const localIdx = localI % gridTotal;
+    const depthLayer = localIdx % depthLayers;
+    const row = Math.floor((localIdx % (gridRows * depthLayers)) / depthLayers);
+    const colVal = Math.floor(localIdx / (gridRows * depthLayers));
 
-    const lx = (col / Math.max(cols - 1, 1) - 0.5) * arc.tileW;
-    const ly = (row / Math.max(rows - 1, 1) - 0.5) * arc.tileH;
+    const u = (colVal / Math.max(gridCols - 1, 1) - 0.5) * tileW;
+    const v = (row / Math.max(gridRows - 1, 1) - 0.5) * tileH;
+    const w = (depthLayer / Math.max(depthLayers - 1, 1) - 0.5) * tileD;
 
-    const rx = lx * Math.cos(tileAngle) - ly * Math.sin(tileAngle);
-    const ry = lx * Math.sin(tileAngle) + ly * Math.cos(tileAngle);
+    // Final position vector
+    const vec = C.clone()
+        .addScaledVector(t1, u)
+        .addScaledVector(t2, v)
+        .addScaledVector(v_global, w);
 
-    const flatX = (flatCx + rx) * 1.1;
-    const flatY = (flatCy + ry) * 1.1;
-
-    // Map flat 2D onto sphere surface for 3D curvature
-    const theta = flatX / SPHERE_R;
-    const phi = flatY / SPHERE_R;
-
-    const x = SPHERE_R * Math.sin(theta) * Math.cos(phi);
-    const y = SPHERE_R * Math.sin(phi);
-    const z = SPHERE_R * (Math.cos(theta) * Math.cos(phi) - 1);
-
-    // Extrude tile outward along sphere normal for thickness
-    const depthOffset = (depthLayer / Math.max(depthLayers - 1, 1) - 0.5) * arc.depth;
-    const nx = Math.sin(theta) * Math.cos(phi);
-    const ny = Math.sin(phi);
-    const nz = Math.cos(theta) * Math.cos(phi);
-
-    const vec = new THREE.Vector3(
-        x + nx * depthOffset,
-        y + ny * depthOffset,
-        z + nz * depthOffset
-    );
-
-    // Tilt for dramatic 3D perspective
-    vec.applyAxisAngle(new THREE.Vector3(1, 0, 0), 0.25);
-    vec.applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.15);
+    // Apply global tilt for best viewing angle
+    vec.applyAxisAngle(new THREE.Vector3(1, 0, 0), 0.2);
+    vec.applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.3);
 
     return vec;
 };
