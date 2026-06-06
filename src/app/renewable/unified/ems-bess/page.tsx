@@ -165,11 +165,12 @@ export default function Page() {
  <p className="text-slate-500 mt-3 max-w-xl mx-auto">Each module is designed to work seamlessly together as part of AEPL&apos;s end-to-end unified renewable platform.</p>
  </div>
  </SectionWrapper>
- <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
  {[
  { href: "/renewable/unified/scada", label: "SCADA", abbr: "SCADA", desc: "Scalable SCADA architecture with rich renewable libraries handling millions of real-time tags." },
  { href: "/renewable/unified/cms", label: "Central Monitoring System", abbr: "CMS", desc: "Multi-site portfolio monitoring with real-time visibility across all your renewable assets." },
  { href: "/renewable/unified/analytics", label: "Advanced Analytics", abbr: "Analytics", desc: "Data visualization, loss buckets, custom report builder and historical analysis." },
+ { href: "/ppc", label: "Power Plant Controller", abbr: "PPC", desc: "Grid-compliant active/reactive power regulation, ramp-rate control, and voltage support." },
  { href: "/renewable/unified/cmms", label: "Computerised Maintenance Management", abbr: "CMMS", desc: "Automated work orders, SOPs and inventory management for O&M teams." },
  ].map((sol, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
