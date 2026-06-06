@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { Activity, Monitor, AlertTriangle, Clock, TrendingUp, Layers, Battery, BarChart3, Shield, Zap, CheckCircle2 } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
+import { BessMonitoringDashboard, BessArbitrageDashboard, BessCellBalancingDashboard } from "./BessDashboardMockups";
 
 interface BulletPoint {
   icon: React.ReactNode;
@@ -189,14 +192,11 @@ export default function BessFeaturesAlternating() {
                         </div>
                       </div>
 
-                      {/* Main Image */}
-                      <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-slate-950 border border-white/5 mt-3">
-                        <img
-                          src={pillar.image}
-                          alt={pillar.title}
-                          className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent pointer-events-none"></div>
+                      {/* Interactive Dashboard Mockup */}
+                      <div className="mt-3">
+                        {idx === 0 && <BessMonitoringDashboard />}
+                        {idx === 1 && <BessArbitrageDashboard />}
+                        {idx === 2 && <BessCellBalancingDashboard />}
                       </div>
                     </div>
                   </SectionWrapper>
