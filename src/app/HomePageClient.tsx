@@ -64,9 +64,9 @@ export default function HomePageClient() {
         </div>
         <div className="flex flex-nowrap overflow-hidden relative w-full">
           {/* Sibling Container 1 */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28">
+          <div className="flex flex-nowrap animate-marquee-seamless gap-36 shrink-0 min-w-full items-center pr-36">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={i} className="flex-shrink-0 flex items-center justify-center w-32 h-10">
+              <div key={i} className="flex-shrink-0 flex items-center justify-center w-24 h-8">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
@@ -76,9 +76,9 @@ export default function HomePageClient() {
             ))}
           </div>
           {/* Sibling Container 2 (Clone) */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28" aria-hidden="true">
+          <div className="flex flex-nowrap animate-marquee-seamless gap-36 shrink-0 min-w-full items-center pr-36" aria-hidden="true">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-32 h-10">
+              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-24 h-8">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
@@ -108,7 +108,7 @@ export default function HomePageClient() {
                   suffix={stat.suffix}
                   className="text-5xl font-extrabold text-slate-900 font-heading mb-2 block"
                 />
-                <div className="text-xs uppercase tracking-widest text-primary font-bold">{stat.label}</div>
+                <div className="text-sm md:text-base uppercase tracking-widest text-primary font-bold">{stat.label}</div>
               </SectionWrapper>
             ))}
           </div>
