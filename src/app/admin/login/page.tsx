@@ -21,16 +21,24 @@ function LoginForm() {
     setLoading(true);
     setError("");
 
-    const res = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
+    try {
+      const res = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
 
-    if (res?.ok) {
-      router.push(callbackUrl);
-    } else {
-      setError("Invalid email or password. Please try again.");
+      console.log("NextAuth signIn response:", res);
+
+      if (res?.ok) {
+        router.push(callbackUrl);
+      } else {
+        setError(res?.error || "Invalid email or password. Please try again.");
+        setLoading(false);
+      }
+    } catch (err) {
+      console.error("Login submission error:", err);
+      setError("An unexpected error occurred. Please try again.");
       setLoading(false);
     }
   };
