@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Share2, Lightbulb, Clock, CheckCircle2, Fan, Settings, Shield, Bell, Layers, FileText } from "lucide-react";
@@ -10,6 +10,10 @@ import { TunnelSCADADashboard } from "@/components/DashboardMockups";
 export default function TunnelPageClient() {
   const [activeTab, setActiveTab] = useState<"ventilation" | "lighting" | "power" | "safety">("ventilation");
   const [activePillar, setActivePillar] = useState<number>(0);
+  const [fanSpeed, setFanSpeed] = useState(65);
+  const [lightMode, setLightMode] = useState<"day" | "dusk" | "night">("day");
+  const [activePowerSource, setActivePowerSource] = useState<"grid1" | "grid2" | "ups">("grid1");
+  const [alarmActive, setAlarmActive] = useState(false);
 
   const stats = [
     { val: COMPANY_STATS.yearsExperience.value, suf: COMPANY_STATS.yearsExperience.suffix, label: COMPANY_STATS.yearsExperience.label },
@@ -208,8 +212,8 @@ export default function TunnelPageClient() {
         </div>
       </section>
 
-      {/* 4. DYNAMIC SYSTEM SPECIFICATIONS (Interactive tabs) */}
-      <section id="technical-specs" className="py-24 bg-white relative z-20 border-t border-slate-100 scroll-mt-20">
+      {/* 4. DYNAMIC SYSTEM SPECIFICATIONS (Interactive tabs & simulators) */}
+      <section id="technical-specs" className="py-24 bg-white relative z-20 border-t border-slate-100 scroll-mt-20 text-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
@@ -219,9 +223,9 @@ export default function TunnelPageClient() {
             </SectionWrapper>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
             {/* Left - Tab selector */}
-            <div className="w-full lg:w-1/3 flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 shrink-0">
+            <div className="w-full lg:w-1/4 flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 shrink-0">
               {specTabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -238,35 +242,243 @@ export default function TunnelPageClient() {
               ))}
             </div>
 
-            {/* Right - Tab Content */}
-            <div className="w-full lg:w-2/3 min-h-[380px]">
+            {/* Middle & Right - Interactive Simulator & Specs */}
+            <div className="w-full lg:w-3/4 flex flex-col xl:flex-row gap-8 items-stretch">
               {specTabs.map((tab) => {
                 if (tab.id !== activeTab) return null;
                 return (
-                  <SectionWrapper key={tab.id} delay={0.1}>
-                    <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10 shadow-sm">
-                      <div className="flex items-center gap-3 text-primary mb-4">
-                        {tab.icon}
-                        <span className="text-xs font-black uppercase tracking-widest">Active System Specs</span>
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 font-heading leading-tight">{tab.title}</h3>
-                      <p className="text-slate-500 text-sm mb-8 leading-relaxed max-w-2xl">{tab.desc}</p>
-                      
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {tab.items.map((item, idx) => (
-                          <div key={idx} className="bg-white p-5 rounded-2xl border border-slate-200/50 shadow-sm flex items-start gap-4 hover:border-primary/30 transition-colors">
-                            <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-primary">
-                              <CheckCircle2 className="w-4 h-4" />
+                  <Fragment key={tab.id}>
+                    {/* Interactive Simulator Card (Left Panel) */}
+                    <SectionWrapper className="w-full xl:w-1/2 flex" delay={0.1}>
+                      <div className="w-full bg-slate-950 text-white rounded-3xl p-6 border border-white/10 shadow-xl flex flex-col justify-between select-none">
+                        <div className="border-b border-white/5 pb-3 mb-4 flex justify-between items-center text-[10px] font-mono text-slate-500">
+                          <span className="flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+                            SYSTEM SIMULATOR
+                          </span>
+                          <span>{tab.label.toUpperCase()}</span>
+                        </div>
+
+                        {/* Ventilation Simulator */}
+                        {tab.id === "ventilation" && (
+                          <div className="flex-grow flex flex-col justify-between py-2">
+                            <div className="flex items-center justify-between">
+                              <span className="text-xs text-slate-400">Jet Fan Speed Regulator</span>
+                              <span className="text-sm font-bold text-teal-400 font-mono">{fanSpeed}% RPM</span>
                             </div>
-                            <div>
-                              <h4 className="text-sm font-bold text-slate-900 mb-1 leading-snug">{item.label}</h4>
-                              <p className="text-xs text-slate-500 leading-relaxed font-medium">{item.desc}</p>
+
+                            {/* Rotating Fan Animation */}
+                            <div className="flex justify-center my-6">
+                              <div 
+                                className="w-20 h-20 rounded-full border-4 border-slate-800 flex items-center justify-center relative overflow-hidden transition-all duration-300"
+                                style={{ transform: `rotate(${fanSpeed * 4}deg)` }}
+                              >
+                                <div className="absolute w-1 h-16 bg-slate-500 rounded"></div>
+                                <div className="absolute w-16 h-1 bg-slate-500 rounded"></div>
+                                <div className="w-4 h-4 bg-teal-400 rounded-full z-10 shadow-lg shadow-teal-500/50"></div>
+                              </div>
+                            </div>
+
+                            {/* Live Stats */}
+                            <div className="grid grid-cols-2 gap-2 text-[10px] font-mono bg-slate-900/60 p-3 rounded-xl border border-white/5">
+                              <div>
+                                <span className="text-slate-500 block">Carbon Monoxide (CO)</span>
+                                <span className={`font-bold ${Math.max(10, Math.floor(100 - fanSpeed * 1.1)) > 50 ? 'text-amber-400' : 'text-teal-400'}`}>
+                                  {Math.max(10, Math.floor(100 - fanSpeed * 1.1))} ppm
+                                </span>
+                              </div>
+                              <div>
+                                <span className="text-slate-500 block">Energy Efficiency</span>
+                                <span className="text-teal-400 font-bold">+{Math.max(0, Math.floor(45 - (fanSpeed - 50) * 0.5))}% saved</span>
+                              </div>
+                            </div>
+
+                            <input 
+                              type="range" 
+                              min="20" 
+                              max="100" 
+                              value={fanSpeed}
+                              onChange={(e) => setFanSpeed(Number(e.target.value))}
+                              className="w-full accent-primary mt-4 cursor-pointer" 
+                            />
+                          </div>
+                        )}
+
+                        {/* Lighting Simulator */}
+                        {tab.id === "lighting" && (
+                          <div className="flex-grow flex flex-col justify-between py-2">
+                            <span className="text-xs text-slate-400 mb-2">Exterior-to-Interior CIE Lux Curve</span>
+
+                            {/* Lux bars */}
+                            <div className="space-y-3 my-4">
+                              {[
+                                { zone: "Threshold (Portal)", max: 12000, day: 100, dusk: 50, night: 10 },
+                                { zone: "Transition Zone", max: 4000, day: 45, dusk: 25, night: 10 },
+                                { zone: "Tunnel Interior", max: 800, day: 10, dusk: 10, night: 10 },
+                              ].map((bar, bIdx) => {
+                                const level = lightMode === "day" ? bar.day : lightMode === "dusk" ? bar.dusk : bar.night;
+                                return (
+                                  <div key={bIdx} className="space-y-1">
+                                    <div className="flex justify-between text-[9px] font-mono">
+                                      <span className="text-slate-400">{bar.zone}</span>
+                                      <span className="text-teal-400 font-bold">{Math.round(bar.max * (level / 100))} Lux</span>
+                                    </div>
+                                    <div className="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-white/5">
+                                      <div 
+                                        className="h-full bg-gradient-to-r from-amber-400 to-yellow-300 rounded-full transition-all duration-500"
+                                        style={{ width: `${level}%` }}
+                                      ></div>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+
+                            {/* Mode Selectors */}
+                            <div className="grid grid-cols-3 gap-2 mt-2">
+                              {(["day", "dusk", "night"] as const).map((mode) => (
+                                <button
+                                  key={mode}
+                                  onClick={() => setLightMode(mode)}
+                                  className={`px-3 py-1.5 rounded-lg text-[9px] font-bold uppercase transition-all ${
+                                    lightMode === mode
+                                      ? "bg-teal-500 text-slate-950 font-extrabold shadow-md shadow-teal-500/20"
+                                      : "bg-white/5 border border-white/5 text-slate-400 hover:bg-white/10"
+                                  }`}
+                                >
+                                  {mode} Profile
+                                </button>
+                              ))}
                             </div>
                           </div>
-                        ))}
+                        )}
+
+                        {/* Power Simulator */}
+                        {tab.id === "power" && (
+                          <div className="flex-grow flex flex-col justify-between py-2">
+                            <span className="text-xs text-slate-400">Main Substation Feeder Line</span>
+
+                            <div className="my-4 space-y-3 text-[10px] font-mono">
+                              <div className="flex items-center justify-between p-2.5 bg-slate-900 border border-white/5 rounded-xl">
+                                <span className="flex items-center gap-2">
+                                  <span className={`w-2 h-2 rounded-full ${activePowerSource === "grid1" ? "bg-teal-400 animate-pulse" : "bg-slate-600"}`}></span>
+                                  GRID FEED 1 (33kV Primary)
+                                </span>
+                                <span className={`font-bold ${activePowerSource === "grid1" ? "text-teal-400" : "text-slate-500"}`}>
+                                  {activePowerSource === "grid1" ? "CLOSED (ACTIVE)" : "OPEN (STBY)"}
+                                </span>
+                              </div>
+                              <div className="flex items-center justify-between p-2.5 bg-slate-900 border border-white/5 rounded-xl">
+                                <span className="flex items-center gap-2">
+                                  <span className={`w-2 h-2 rounded-full ${activePowerSource === "grid2" ? "bg-teal-400 animate-pulse" : "bg-slate-600"}`}></span>
+                                  GRID FEED 2 (33kV Back-up)
+                                </span>
+                                <span className={`font-bold ${activePowerSource === "grid2" ? "text-teal-400" : "text-slate-500"}`}>
+                                  {activePowerSource === "grid2" ? "CLOSED (ACTIVE)" : "OPEN (STBY)"}
+                                </span>
+                              </div>
+                              <div className="flex items-center justify-between p-2.5 bg-slate-900 border border-white/5 rounded-xl">
+                                <span className="flex items-center gap-2">
+                                  <span className={`w-2 h-2 rounded-full ${activePowerSource === "ups" ? "bg-amber-400 animate-pulse" : "bg-slate-600"}`}></span>
+                                  0ms UPS BATTERY BUFFER
+                                </span>
+                                <span className={`font-bold ${activePowerSource === "ups" ? "text-amber-400" : "text-slate-500"}`}>
+                                  {activePowerSource === "ups" ? "DISCHARGING (0ms TRANS)" : "STANDBY (FLOAT)"}
+                                </span>
+                              </div>
+                            </div>
+
+                            <button 
+                              onClick={() => {
+                                if (activePowerSource === "grid1") {
+                                  setActivePowerSource("ups");
+                                  setTimeout(() => setActivePowerSource("grid2"), 1200);
+                                } else {
+                                  setActivePowerSource("ups");
+                                  setTimeout(() => setActivePowerSource("grid1"), 1200);
+                                }
+                              }}
+                              className="w-full py-2 bg-red-600 text-white rounded-lg text-[9px] font-bold uppercase hover:bg-red-500 transition-colors mt-2"
+                            >
+                              Simulate Grid Failover Trip
+                            </button>
+                          </div>
+                        )}
+
+                        {/* Safety Simulator */}
+                        {tab.id === "safety" && (
+                          <div className="flex-grow flex flex-col justify-between py-2">
+                            <span className="text-xs text-slate-400">Alarm Annunciation Panel</span>
+
+                            <div className={`my-4 p-4 rounded-2xl border transition-all duration-300 ${
+                              alarmActive 
+                                ? "bg-red-500/15 border-red-500/40 text-red-400 animate-pulse"
+                                : "bg-slate-900 border-white/5 text-slate-400"
+                            }`}>
+                              <h5 className="text-[10px] font-bold uppercase tracking-wider mb-2">Linear Heat Detector Cable</h5>
+                              <div className="flex justify-between items-baseline text-xs font-mono">
+                                <span>STATUS:</span>
+                                <span className="font-extrabold">{alarmActive ? "CRITICAL: ZONE 4 FIRE" : "NOMINAL"}</span>
+                              </div>
+                              {alarmActive && (
+                                <div className="mt-2 text-[8px] font-mono leading-relaxed bg-red-950/40 p-2 rounded border border-red-500/20">
+                                  WARNING: PA evac broadcast active. Deluge water valves open at Zone 4 + 75m.
+                                </div>
+                              )}
+                            </div>
+
+                            <button
+                              onClick={() => setAlarmActive(!alarmActive)}
+                              className={`w-full py-2 rounded-lg text-[9px] font-bold uppercase transition-colors ${
+                                alarmActive
+                                  ? "bg-slate-800 text-white hover:bg-slate-700"
+                                  : "bg-red-600 text-white hover:bg-red-500"
+                              }`}
+                            >
+                              {alarmActive ? "Reset Annunciator" : "Trigger Thermal Alert (Test)"}
+                            </button>
+                          </div>
+                        )}
+
+                        {/* Console Footer */}
+                        <div className="border-t border-white/5 pt-3 mt-4 flex justify-between items-center text-[8px] font-mono text-slate-500">
+                          <span>AEPL CORE COMPONENT LAB v1.2</span>
+                          <span className="flex items-center gap-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                            <span>READY</span>
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </SectionWrapper>
+                    </SectionWrapper>
+
+                    {/* Specs Details Card (Right Panel) */}
+                    <SectionWrapper className="w-full xl:w-1/2 flex" delay={0.2}>
+                      <div className="w-full bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10 shadow-sm flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-center gap-3 text-primary mb-4">
+                            {tab.icon}
+                            <span className="text-xs font-black uppercase tracking-widest">Active System Specs</span>
+                          </div>
+                          <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 font-heading leading-tight">{tab.title}</h3>
+                          <p className="text-slate-500 text-xs mb-8 leading-relaxed">{tab.desc}</p>
+                          
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {tab.items.map((item, idx) => (
+                              <div key={idx} className="bg-white p-4 rounded-2xl border border-slate-200/50 shadow-sm flex items-start gap-3.5 hover:border-primary/30 transition-colors">
+                                <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-primary">
+                                  <CheckCircle2 className="w-4 h-4" />
+                                </div>
+                                <div>
+                                  <h4 className="text-xs font-extrabold text-slate-900 mb-1 leading-snug">{item.label}</h4>
+                                  <p className="text-[10px] text-slate-500 leading-relaxed font-medium">{item.desc}</p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </SectionWrapper>
+                  </Fragment>
                 );
               })}
             </div>
