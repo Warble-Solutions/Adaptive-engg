@@ -534,6 +534,92 @@ export default function PanelsPageClient() {
                           </div>
                         </div>
                       </div>
+
+                      {/* Interactive Simulation Visualizer */}
+                      <div className="bg-slate-900/40 p-5 rounded-2xl border border-white/5 flex flex-col md:flex-row items-center gap-6 mt-4">
+                        <div className="w-full md:w-5/12 text-left">
+                          <span className="text-[9px] text-[#0da08a] font-bold uppercase block mb-1">Visualizer Feed</span>
+                          <h5 className="text-xs font-bold text-white mb-1">{analysisStudies[activeAnalysis].simName} Trace</h5>
+                          <p className="text-[10px] text-slate-400 leading-relaxed font-sans">
+                            Real-time simulation trace of transient response, phase coordination, and safety limits.
+                          </p>
+                        </div>
+                        <div className="w-full md:w-7/12 h-[120px] bg-slate-950 rounded-xl border border-white/5 p-3 flex items-center justify-center relative overflow-hidden">
+                          {activeAnalysis === 0 && (
+                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                              <line x1="0" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.05)" />
+                              <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(255,255,255,0.05)" />
+                              <line x1="150" y1="0" x2="150" y2="100" stroke="rgba(255,255,255,0.05)" />
+                              <path d="M 10,50 L 50,50 Q 60,10 70,85 T 90,30 T 110,65 T 130,42 T 150,54 T 170,48 T 190,51 L 290,50" stroke="#0da08a" strokeWidth="2" />
+                              <line x1="0" y1="20" x2="300" y2="20" stroke="#ef4444" strokeWidth="1" strokeDasharray="3,3" />
+                              <text x="5" y="15" fill="#ef4444" className="text-[8px] font-sans">65kA Limit</text>
+                              <text x="235" y="45" fill="#0da08a" className="text-[8px] font-sans">51.2kA Peak</text>
+                            </svg>
+                          )}
+                          {activeAnalysis === 1 && (
+                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                              <line x1="0" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.05)" />
+                              <path d="M 10,50 Q 40,10 70,50 T 130,50 T 190,50 T 250,50" stroke="#3b82f6" strokeWidth="1.5" />
+                              <path d="M 10,50 Q 40,20 70,50 T 130,50 T 190,50 T 250,50" stroke="#0da08a" strokeWidth="2" strokeDasharray="2,2" />
+                              <text x="5" y="15" fill="#3b82f6" className="text-[8px] font-sans">Voltage (33kV)</text>
+                              <text x="5" y="27" fill="#0da08a" className="text-[8px] font-sans">Current (Compensated)</text>
+                            </svg>
+                          )}
+                          {activeAnalysis === 2 && (
+                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                              <ellipse cx="150" cy="55" rx="90" ry="35" stroke="rgba(13,160,138,0.1)" strokeWidth="1" />
+                              <ellipse cx="150" cy="55" rx="70" ry="27" stroke="rgba(13,160,138,0.2)" strokeWidth="1" />
+                              <ellipse cx="150" cy="55" rx="50" ry="20" stroke="rgba(13,160,138,0.4)" strokeWidth="1.5" />
+                              <ellipse cx="150" cy="55" rx="30" ry="12" stroke="#0da08a" strokeWidth="2" />
+                              <line x1="150" y1="55" x2="150" y2="20" stroke="#ef4444" strokeWidth="2" />
+                              <circle cx="150" cy="20" r="3" fill="#ef4444" />
+                              <text x="160" y="23" fill="#ef4444" className="text-[8px] font-sans">Fault Point</text>
+                              <text x="5" y="15" fill="#0da08a" className="text-[8px] font-sans">Safe Earth Potential Grid</text>
+                            </svg>
+                          )}
+                          {activeAnalysis === 3 && (
+                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                              <rect x="30" y="30" width="30" height="50" fill="rgba(255,255,255,0.05)" rx="2" />
+                              <rect x="30" y="45" width="30" height="35" fill="#0da08a" rx="2" />
+                              <text x="32" y="93" fill="#888" className="text-[7px]">Phase A</text>
+                              <rect x="80" y="30" width="30" height="50" fill="rgba(255,255,255,0.05)" rx="2" />
+                              <rect x="80" y="40" width="30" height="40" fill="#0da08a" rx="2" />
+                              <text x="82" y="93" fill="#888" className="text-[7px]">Phase B</text>
+                              <rect x="130" y="30" width="30" height="50" fill="rgba(255,255,255,0.05)" rx="2" />
+                              <rect x="130" y="38" width="30" height="42" fill="#0da08a" rx="2" />
+                              <text x="132" y="93" fill="#888" className="text-[7px]">Phase C</text>
+                              <line x1="20" y1="30" x2="180" y2="30" stroke="#ef4444" strokeWidth="1" strokeDasharray="3,3" />
+                              <text x="185" y="33" fill="#ef4444" className="text-[8px]">90°C Limit</text>
+                              <text x="185" y="48" fill="#0da08a" className="text-[8px]">Cable Temp: 68°C</text>
+                            </svg>
+                          )}
+                          {activeAnalysis === 4 && (
+                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                              <path d="M 20,90 L 280,90 M 20,70 L 280,70 M 20,50 L 280,50 M 20,30 L 280,30" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
+                              <path d="M 50,10 L 50,90 M 100,10 L 100,90 M 150,10 L 150,90 M 200,10 L 200,90" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
+                              <path d="M 30,15 C 60,18 100,45 100,85" stroke="#ef4444" strokeWidth="1.5" />
+                              <text x="105" y="25" fill="#ef4444" className="text-[8px] font-sans">Main VCB</text>
+                              <path d="M 60,15 C 90,18 130,45 130,85" stroke="#0da08a" strokeWidth="2" />
+                              <text x="135" y="55" fill="#0da08a" className="text-[8px] font-sans">Feeder Relay</text>
+                              <path d="M 100,50 L 130,50" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2,2" />
+                              <text x="102" y="45" fill="#f59e0b" className="text-[7px]">Margin: 200ms</text>
+                            </svg>
+                          )}
+                          {activeAnalysis === 5 && (
+                            <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                              <circle cx="50" cy="50" r="10" fill="rgba(13,160,138,0.2)" stroke="#0da08a" strokeWidth="1.5" />
+                              <text x="47" y="53" fill="white" className="text-[8px] font-sans font-bold">G</text>
+                              <line x1="60" y1="50" x2="120" y2="50" stroke="#0da08a" strokeWidth="1.5" />
+                              <circle cx="130" cy="50" r="8" stroke="#0da08a" strokeWidth="1.5" />
+                              <circle cx="138" cy="50" r="8" stroke="#0da08a" strokeWidth="1.5" />
+                              <line x1="146" y1="50" x2="210" y2="50" stroke="#0da08a" strokeWidth="1.5" />
+                              <polygon points="220,45 235,50 220,55" fill="#ef4444" />
+                              <text x="215" y="38" fill="#ef4444" className="text-[7px]">4.85 MW Load</text>
+                              <text x="5" y="15" fill="#0da08a" className="text-[8px] font-sans">Active Load Flow Grid</text>
+                            </svg>
+                          )}
+                        </div>
+                      </div>
                     </div>
 
                     {/* Console Footer */}
