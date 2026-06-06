@@ -307,18 +307,18 @@ export default function WaterPageClient() {
         </div>
       </section>
 
-      {/* DOMAINS BENTO GRID (Premium Asymmetrical Dark Bento Grid Overhaul) */}
-      <section className="py-28 bg-slate-950 text-white relative z-20 border-t border-b border-white/5">
+      {/* DOMAINS BENTO GRID (Premium Asymmetrical Light Bento Grid Overhaul) */}
+      <section className="py-28 bg-slate-50 text-slate-900 relative z-20 border-t border-b border-slate-200">
         {/* Subtle background ambient glows */}
-        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-teal-500/5 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-teal-500/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionWrapper>
             <div className="mb-20 text-center md:text-left">
               <span className="text-primary font-bold uppercase text-xs tracking-[0.25em] mb-3 block">OUR SOLUTIONS</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white font-heading tracking-tight">
-                Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-400">End-to-End</span> Delivery
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight">
+                Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">End-to-End</span> Delivery
               </h2>
               <div className="w-20 h-1 bg-primary rounded-full mt-6 hidden md:block"></div>
             </div>
@@ -328,28 +328,28 @@ export default function WaterPageClient() {
             {/* 1. Water Supply & WTP (Spans 2 columns) */}
             <SectionWrapper delay={0.1} className="md:col-span-2">
               <Link href="/infrastructure/water/wtp" className="block group h-full">
-                <div className="bg-slate-900/40 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-white/10 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between overflow-hidden relative">
-                  <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500"></div>
+                <div className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/80 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between overflow-hidden relative shadow-sm hover:-translate-y-1">
+                  <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary/[0.03] rounded-full blur-3xl group-hover:bg-primary/[0.08] transition-colors duration-500"></div>
                   
                   <div className="flex flex-col md:flex-row md:items-center gap-6 justify-between mb-8">
                     <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-lg shadow-primary/5">
+                      <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
                         <Droplets className="w-7 h-7" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white font-heading group-hover:text-primary transition-colors">Water Supply & WTP</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 font-heading group-hover:text-primary transition-colors">Water Supply & WTP</h3>
                         <span className="text-xs text-slate-500 font-mono">CORE SYSTEM INTEGRATION</span>
                       </div>
                     </div>
                     
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-300 font-mono">Intake Pumps</span>
-                      <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-300 font-mono">Filter Beds</span>
-                      <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-300 font-mono">Distribution</span>
+                      <span className="px-2.5 py-1 bg-slate-100 border border-slate-200/60 rounded-md text-[10px] text-slate-600 font-mono">Intake Pumps</span>
+                      <span className="px-2.5 py-1 bg-slate-100 border border-slate-200/60 rounded-md text-[10px] text-slate-600 font-mono">Filter Beds</span>
+                      <span className="px-2.5 py-1 bg-slate-100 border border-slate-200/60 rounded-md text-[10px] text-slate-600 font-mono">Distribution</span>
                     </div>
                   </div>
 
-                  <p className="text-slate-300 leading-relaxed mb-8 max-w-xl text-base">
+                  <p className="text-slate-600 leading-relaxed mb-8 max-w-xl text-base">
                     Complete turn-key Electrical & Instrumentation solutions designed to handle raw water intake, sand filtering beds, chemical dosing pumps, and urban distribution piping systems.
                   </p>
 
@@ -363,17 +363,18 @@ export default function WaterPageClient() {
             {/* 2. Sewage Treatment (STP) - 1 Column */}
             <SectionWrapper delay={0.2}>
               <Link href="/infrastructure/water/stp" className="block group h-full">
-                <div className="bg-slate-900/40 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between">
+                <div className="bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between shadow-sm hover:-translate-y-1 relative overflow-hidden">
+                  <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/[0.03] rounded-full blur-3xl group-hover:bg-primary/[0.08] transition-colors duration-500"></div>
                   <div>
-                    <div className="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-teal-500/5">
+                    <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform shadow-sm">
                       <Activity className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 font-heading group-hover:text-teal-400 transition-colors">Sewage Treatment (STP)</h3>
-                    <p className="text-slate-400 leading-relaxed mb-6 text-sm">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 font-heading group-hover:text-primary transition-colors">Sewage Treatment (STP)</h3>
+                    <p className="text-slate-600 leading-relaxed mb-6 text-sm">
                       Electrical, Instrumentation and Automation Solutions tailored for the complex demands of modern municipal Waste Water recycling plants.
                     </p>
                   </div>
-                  <div className="flex items-center text-teal-400 font-bold text-xs uppercase tracking-wider group-hover:underline">
+                  <div className="flex items-center text-primary font-bold text-xs uppercase tracking-wider group-hover:underline">
                     Explore STP Solutions <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -383,17 +384,18 @@ export default function WaterPageClient() {
             {/* 3. Effluent Treatment (ETP) - 1 Column */}
             <SectionWrapper delay={0.3}>
               <Link href="/infrastructure/water/etp" className="block group h-full">
-                <div className="bg-slate-900/40 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between">
+                <div className="bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between shadow-sm hover:-translate-y-1 relative overflow-hidden">
+                  <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/[0.03] rounded-full blur-3xl group-hover:bg-primary/[0.08] transition-colors duration-500"></div>
                   <div>
-                    <div className="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-teal-500/5">
+                    <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform shadow-sm">
                       <Settings className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 font-heading group-hover:text-teal-400 transition-colors">Effluent Treatment (ETP)</h3>
-                    <p className="text-slate-400 leading-relaxed mb-6 text-sm">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 font-heading group-hover:text-primary transition-colors">Effluent Treatment (ETP)</h3>
+                    <p className="text-slate-600 leading-relaxed mb-6 text-sm">
                       Optimized process control and SCADA architecture for heavy industrial effluent treatment incorporating advanced MBR and RO membranes.
                     </p>
                   </div>
-                  <div className="flex items-center text-teal-400 font-bold text-xs uppercase tracking-wider group-hover:underline">
+                  <div className="flex items-center text-primary font-bold text-xs uppercase tracking-wider group-hover:underline">
                     Explore ETP Solutions <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -403,17 +405,18 @@ export default function WaterPageClient() {
             {/* 4. Lift Irrigation - 1 Column */}
             <SectionWrapper delay={0.4}>
               <Link href="/infrastructure/water/lift-irrigation" className="block group h-full">
-                <div className="bg-slate-900/40 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between">
+                <div className="bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between shadow-sm hover:-translate-y-1 relative overflow-hidden">
+                  <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/[0.03] rounded-full blur-3xl group-hover:bg-primary/[0.08] transition-colors duration-500"></div>
                   <div>
-                    <div className="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-teal-500/5">
+                    <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform shadow-sm">
                       <LineChart className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 font-heading group-hover:text-teal-400 transition-colors">Lift Irrigation</h3>
-                    <p className="text-slate-400 leading-relaxed mb-6 text-sm">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 font-heading group-hover:text-primary transition-colors">Lift Irrigation</h3>
+                    <p className="text-slate-600 leading-relaxed mb-6 text-sm">
                       Complete E&I engineering packages for rural pump houses, optimized for power factor correction, motor soft-starters, and safe grid load shifts.
                     </p>
                   </div>
-                  <div className="flex items-center text-teal-400 font-bold text-xs uppercase tracking-wider group-hover:underline">
+                  <div className="flex items-center text-primary font-bold text-xs uppercase tracking-wider group-hover:underline">
                     Explore Pump Systems <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -423,17 +426,18 @@ export default function WaterPageClient() {
             {/* 5. Micro Irrigation - 1 Column */}
             <SectionWrapper delay={0.5}>
               <Link href="/infrastructure/water/micro-irrigation" className="block group h-full">
-                <div className="bg-slate-900/40 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between">
+                <div className="bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between shadow-sm hover:-translate-y-1 relative overflow-hidden">
+                  <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/[0.03] rounded-full blur-3xl group-hover:bg-primary/[0.08] transition-colors duration-500"></div>
                   <div>
-                    <div className="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-teal-500/5">
+                    <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform shadow-sm">
                       <Anchor className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 font-heading group-hover:text-teal-400 transition-colors">Micro Irrigation</h3>
-                    <p className="text-slate-400 leading-relaxed mb-6 text-sm">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 font-heading group-hover:text-primary transition-colors">Micro Irrigation</h3>
+                    <p className="text-slate-600 leading-relaxed mb-6 text-sm">
                       Intelligent Outlet Management Systems (OMS) integrating solar power and low-power telemetry to coordinate field valve automation.
                     </p>
                   </div>
-                  <div className="flex items-center text-teal-400 font-bold text-xs uppercase tracking-wider group-hover:underline">
+                  <div className="flex items-center text-primary font-bold text-xs uppercase tracking-wider group-hover:underline">
                     Explore Micro Systems <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -443,35 +447,32 @@ export default function WaterPageClient() {
             {/* 6. Centralized SCADA (Spans 2 columns) */}
             <SectionWrapper delay={0.6} className="md:col-span-2">
               <Link href="/infrastructure/water/centralized-scada" className="block group h-full">
-                <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-8 md:p-10 shadow-2xl hover:shadow-teal-500/10 transition-all duration-500 h-full flex flex-col justify-between overflow-hidden relative border border-transparent hover:border-teal-400/50">
-                  {/* Glowing light background detail */}
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/80 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col justify-between overflow-hidden relative shadow-sm hover:-translate-y-1">
+                  <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary/[0.03] rounded-full blur-3xl group-hover:bg-primary/[0.08] transition-colors duration-500"></div>
                   
-                  <div className="relative z-10 text-white">
-                    <div className="flex flex-col md:flex-row md:items-center gap-6 justify-between mb-8">
-                      <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-lg">
-                          <Cpu className="w-7 h-7" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-white font-heading">Centralized SCADA Portal</h3>
-                          <span className="text-xs text-teal-200 font-mono">ENTERPRISE TELEMETRY ENGINE</span>
-                        </div>
+                  <div className="flex flex-col md:flex-row md:items-center gap-6 justify-between mb-8">
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
+                        <Cpu className="w-7 h-7" />
                       </div>
-                      
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-2.5 py-1 bg-white/15 rounded-md text-[10px] text-white font-mono">Data Mining</span>
-                        <span className="px-2.5 py-1 bg-white/15 rounded-md text-[10px] text-white font-mono">HMI Interface</span>
-                        <span className="px-2.5 py-1 bg-white/15 rounded-md text-[10px] text-white font-mono">Predictive Analytics</span>
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-900 font-heading group-hover:text-primary transition-colors">Centralized SCADA Portal</h3>
+                        <span className="text-xs text-slate-500 font-mono">ENTERPRISE TELEMETRY ENGINE</span>
                       </div>
                     </div>
-
-                    <p className="text-teal-50 leading-relaxed mb-8 max-w-xl text-base">
-                      State-of-the-art municipal control core aggregating telemetry data, providing localized HMI readouts, managing automated dosing triggers, and logging compliance analytics across the network.
-                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2.5 py-1 bg-slate-100 border border-slate-200/60 rounded-md text-[10px] text-slate-600 font-mono">Data Mining</span>
+                      <span className="px-2.5 py-1 bg-slate-100 border border-slate-200/60 rounded-md text-[10px] text-slate-600 font-mono">HMI Interface</span>
+                      <span className="px-2.5 py-1 bg-slate-100 border border-slate-200/60 rounded-md text-[10px] text-slate-600 font-mono">Predictive Analytics</span>
+                    </div>
                   </div>
-                  
-                  <div className="relative z-10 flex items-center text-white font-bold text-sm uppercase tracking-wider group-hover:underline">
+
+                  <p className="text-slate-600 leading-relaxed mb-8 max-w-xl text-base">
+                    State-of-the-art municipal control core aggregating telemetry data, providing localized HMI readouts, managing automated dosing triggers, and logging compliance analytics across the network.
+                  </p>
+
+                  <div className="flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:underline">
                     Explore SCADA Platform <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
