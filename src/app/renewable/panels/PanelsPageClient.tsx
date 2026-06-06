@@ -392,7 +392,7 @@ export default function PanelsPageClient() {
                     <h3 className="text-2xl font-bold text-slate-900 mb-4 font-heading leading-snug">
                       {mfgSteps[activeMfgStep].title}
                     </h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-8">
+                     <p className="text-slate-500 text-sm leading-relaxed mb-8 min-h-[48px]">
                       {mfgSteps[activeMfgStep].desc}
                     </p>
                     
@@ -400,7 +400,7 @@ export default function PanelsPageClient() {
                       <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest block mb-4.5">Operations & QA Parameters</span>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-800 font-bold">
                         {mfgSteps[activeMfgStep].features.map((feature, fIdx) => (
-                          <div key={fIdx} className="flex items-start gap-4 p-4.5 bg-slate-50 border border-slate-200/50 rounded-2xl hover:border-primary/30 hover:bg-slate-100/30 hover:shadow-md transition-all duration-300">
+                          <div key={fIdx} className="flex items-start gap-4 p-4.5 bg-slate-50 border border-slate-200/50 rounded-2xl hover:border-primary/30 hover:bg-slate-100/30 hover:shadow-md transition-all duration-300 min-h-[72px]">
                             <CheckCircle2 className="w-5.5 h-5.5 text-primary shrink-0 mt-0.5" />
                             <span className="text-xs md:text-sm leading-relaxed">{feature}</span>
                           </div>
@@ -473,7 +473,7 @@ export default function PanelsPageClient() {
             {/* Right ETAP Simulation Console Screen */}
             <div className="w-full lg:w-8/12 flex">
               <SectionWrapper delay={0.2} className="w-full">
-                <div className="w-full h-full bg-slate-950 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden min-h-[460px] font-mono">
+                <div className="w-full h-full bg-slate-950 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden lg:h-[540px] min-h-[540px] font-mono">
                   {/* Neon screen grid mesh overlay */}
                   <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '15px 15px' }}></div>
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -499,7 +499,7 @@ export default function PanelsPageClient() {
                           <h4 className="text-lg font-bold text-white mb-2 leading-tight">
                             {analysisStudies[activeAnalysis].title}
                           </h4>
-                          <p className="text-xs text-gray-400 leading-relaxed max-w-lg font-sans">
+                          <p className="text-xs text-gray-400 leading-relaxed max-w-lg font-sans min-h-[48px] md:min-h-[36px]">
                             {analysisStudies[activeAnalysis].desc}
                           </p>
                         </div>
