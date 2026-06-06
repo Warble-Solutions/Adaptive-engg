@@ -11,14 +11,19 @@ export const metadata = {
 export default function Page() {
  return (
  <div className="flex flex-col w-full">
- {/* HERO — Split Layout */}
- <section className="section-hero relative min-h-screen flex items-center px-6 pt-32 pb-20 overflow-hidden">
-  <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#0a2a2a] to-slate-950">
-  {/* Animated grid lines */}
-  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-  <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
-  <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-teal-600/15 rounded-full blur-[100px]"></div>
-  </div>
+  {/* HERO — Split Layout */}
+  <section className="section-hero relative min-h-screen flex items-center px-6 pt-32 pb-20 overflow-hidden">
+   {/* Background Image with Tint */}
+   <div className="absolute inset-0 z-0">
+    <img src="/images/renewable/ems-bess-hero-bg.png" alt="EMS-BESS Solutions" className="w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-slate-950/85"></div>
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-transparent to-slate-950/90"></div>
+   </div>
+
+   <div className="absolute inset-0 z-0">
+    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+    <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-teal-600/10 rounded-full blur-[100px]"></div>
+   </div>
  
  <div className="z-10 max-w-7xl mx-auto w-full relative">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
