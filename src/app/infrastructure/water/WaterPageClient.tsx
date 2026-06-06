@@ -153,8 +153,8 @@ export default function WaterPageClient() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Left Column: Flow & Dials SCADA mockup */}
-            <div className="lg:col-span-8 flex flex-col gap-6">
-              <SectionWrapper>
+            <div className="lg:col-span-8">
+              <SectionWrapper className="h-full">
                 <div className="p-8 bg-slate-900 border border-slate-800 rounded-3xl relative overflow-hidden shadow-2xl h-full flex flex-col justify-between">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
                   
@@ -263,7 +263,7 @@ export default function WaterPageClient() {
 
             {/* Right Column: Live compliant ticker events */}
             <div className="lg:col-span-4">
-              <SectionWrapper delay={0.2}>
+              <SectionWrapper delay={0.2} className="h-full">
                 <div className="p-8 bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl h-full flex flex-col justify-between">
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">Compliance Event Log</h3>
