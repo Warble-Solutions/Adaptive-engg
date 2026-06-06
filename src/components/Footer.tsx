@@ -1,10 +1,19 @@
+"use client";
+
 import { MapPin, Phone, Mail, Linkedin, Twitter, Youtube, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import SceneTrigger from "./3d/SceneTrigger";
 
 export default function Footer() {
+    const pathname = usePathname();
+
+    if (pathname?.startsWith("/admin")) {
+        return null;
+    }
+
     return (
         <footer className="bg-transparent text-white pt-24 pb-12 relative z-50 border-t border-slate-800/50">
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/20 -z-10 pointer-events-none"></div>

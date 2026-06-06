@@ -5,6 +5,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { useScene } from "@/context/SceneContext";
+import { usePathname } from "next/navigation";
 
 // --- SHAPE GENERATORS ---
 
@@ -432,11 +433,16 @@ const MorphingParticles = () => {
 
 
 export default function ParticleStream() {
+    const pathname = usePathname();
     const FallbackInfo = (
         <div className="w-full h-full bg-dark relative overflow-hidden">
             {/* Simple Gradient Fallback */}
         </div>
     );
+
+    if (pathname?.startsWith("/admin")) {
+        return null;
+    }
 
     return (
         <div className="fixed inset-0 -z-10 bg-dark pointer-events-none">

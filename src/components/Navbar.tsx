@@ -25,11 +25,18 @@ const DropdownLink = ({ href, children }: { href: string; children: React.ReactN
     </Link>
 );
 
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    if (pathname?.startsWith("/admin")) {
+        return null;
+    }
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
