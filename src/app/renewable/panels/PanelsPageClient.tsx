@@ -407,6 +407,92 @@ export default function PanelsPageClient() {
                         ))}
                       </div>
                     </div>
+
+                    {/* Visualizer Feed for Manufacturing Phase */}
+                    <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60 flex flex-col md:flex-row items-center gap-6 mt-6">
+                      <div className="w-full md:w-5/12 text-left">
+                        <span className="text-[9px] text-[#0da08a] font-bold uppercase block mb-1">Visualizer Feed</span>
+                        <h5 className="text-xs font-bold text-slate-900 mb-1">{mfgSteps[activeMfgStep].title} Diagram</h5>
+                        <p className="text-[10px] text-slate-500 leading-relaxed font-sans">
+                          Technical process schematic and quality checkpoint mapping.
+                        </p>
+                      </div>
+                      <div className="w-full md:w-7/12 h-[120px] bg-white rounded-xl border border-slate-200 p-3 flex items-center justify-center relative overflow-hidden">
+                        {activeMfgStep === 0 && (
+                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                            <rect x="0" y="0" width="300" height="100" fill="rgba(13,160,138,0.01)" rx="4" />
+                            <path d="M 0,20 L 300,20 M 0,40 L 300,40 M 0,60 L 300,60 M 0,80 L 300,80" stroke="rgba(0,0,0,0.03)" strokeWidth="1" />
+                            <path d="M 50,0 L 50,100 M 100,0 L 100,100 M 150,0 L 150,100 M 200,0 L 200,100 M 250,0 L 250,100" stroke="rgba(0,0,0,0.03)" strokeWidth="1" />
+                            <rect x="60" y="20" width="180" height="60" rx="4" stroke="#94a3b8" strokeWidth="2" fill="rgba(148,163,184,0.05)" />
+                            <circle cx="100" cy="50" r="12" stroke="#0da08a" strokeWidth="1.5" strokeDasharray="3,3" />
+                            <circle cx="200" cy="50" r="12" stroke="#0da08a" strokeWidth="1.5" strokeDasharray="3,3" />
+                            <rect x="130" y="40" width="40" height="20" rx="2" stroke="#0da08a" strokeWidth="1.5" strokeDasharray="3,3" />
+                            <line x1="100" y1="50" x2="100" y2="10" stroke="#ef4444" strokeWidth="1.5" />
+                            <circle cx="100" cy="50" r="3" fill="#ef4444" />
+                            <path d="M 97,53 L 95,57 M 103,53 L 105,57 M 100,53 L 100,59" stroke="#f59e0b" strokeWidth="1" />
+                            <text x="110" y="18" fill="#ef4444" className="text-[8px] font-sans font-bold">LASER HEAD ACTIVE</text>
+                            <text x="110" y="28" fill="#0da08a" className="text-[7px] font-sans">COORDINATE: X:100.0, Y:50.0</text>
+                          </svg>
+                        )}
+                        {activeMfgStep === 1 && (
+                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                            <path d="M 20,25 L 280,25" stroke="#b45309" strokeWidth="6" strokeLinecap="round" />
+                            <rect x="200" y="22" width="40" height="6" fill="#cbd5e1" rx="1" />
+                            <path d="M 20,50 L 280,50" stroke="#b45309" strokeWidth="6" strokeLinecap="round" />
+                            <rect x="200" y="47" width="40" height="6" fill="#cbd5e1" rx="1" />
+                            <path d="M 20,75 L 280,75" stroke="#b45309" strokeWidth="6" strokeLinecap="round" />
+                            <rect x="200" y="72" width="40" height="6" fill="#cbd5e1" rx="1" />
+                            <circle cx="220" cy="50" r="8" stroke="#0da08a" strokeWidth="1" strokeDasharray="2,2" />
+                            <line x1="220" y1="50" x2="245" y2="35" stroke="#0da08a" strokeWidth="1" />
+                            <text x="250" y="38" fill="#0da08a" className="text-[7px] font-sans font-bold">Silver Electroplated Join</text>
+                            <text x="250" y="46" fill="#888" className="text-[6px] font-sans">Torque Spec: 45 Nm</text>
+                            <text x="5" y="15" fill="#b45309" className="text-[8px] font-sans font-bold">99.9% Electrolytic Copper Busbars</text>
+                          </svg>
+                        )}
+                        {activeMfgStep === 2 && (
+                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                            <rect x="70" y="10" width="160" height="80" rx="6" stroke="#475569" strokeWidth="2" fill="rgba(71,85,105,0.02)" />
+                            <line x1="70" y1="36" x2="230" y2="36" stroke="#475569" strokeWidth="1.5" />
+                            <line x1="70" y1="63" x2="230" y2="63" stroke="#475569" strokeWidth="1.5" />
+                            <line x1="150" y1="10" x2="150" y2="90" stroke="#475569" strokeWidth="1.5" strokeDasharray="2,2" />
+                            <rect x="80" y="16" width="60" height="15" rx="2" stroke="#0da08a" strokeWidth="1.2" fill="rgba(13,160,138,0.05)" />
+                            <text x="85" y="26" fill="#0da08a" className="text-[6px] font-sans font-bold">INCOMER VCB</text>
+                            <rect x="160" y="16" width="28" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
+                            <circle cx="174" cy="23" r="3" fill="#ef4444" />
+                            <rect x="194" y="16" width="28" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
+                            <text x="198" y="25" fill="#0da08a" className="text-[6px]">METER</text>
+                            <rect x="80" y="42" width="60" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
+                            <text x="85" y="52" fill="#0da08a" className="text-[6px]">OUTGOER 1</text>
+                            <rect x="160" y="42" width="60" height="15" rx="2" stroke="#0da08a" strokeWidth="1" />
+                            <text x="165" y="52" fill="#0da08a" className="text-[6px]">OUTGOER 2</text>
+                            <path d="M 65,30 L 50,30 L 50,70 L 65,70" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2,2" />
+                            <text x="10" y="48" fill="#f59e0b" className="text-[7px] font-sans">Wire Duct</text>
+                            <text x="10" y="56" fill="#f59e0b" className="text-[7px] font-sans">Routing</text>
+                            <text x="80" y="80" fill="#475569" className="text-[8px] font-sans font-bold">Form 4b Compartmentalization</text>
+                          </svg>
+                        )}
+                        {activeMfgStep === 3 && (
+                          <svg className="w-full h-full" viewBox="0 0 300 100" fill="none">
+                            <rect x="30" y="10" width="240" height="80" rx="8" stroke="#334155" strokeWidth="2" fill="#0f172a" />
+                            <rect x="42" y="20" width="130" height="60" rx="4" fill="#020617" stroke="#334155" strokeWidth="1" />
+                            <path d="M 45,50 Q 60,30 75,50 T 105,50 T 135,50 T 165,50" stroke="#0da08a" strokeWidth="1.5" />
+                            <circle cx="60" cy="35" r="0.5" fill="rgba(255,255,255,0.1)" />
+                            <circle cx="100" cy="35" r="0.5" fill="rgba(255,255,255,0.1)" />
+                            <circle cx="140" cy="35" r="0.5" fill="rgba(255,255,255,0.1)" />
+                            <circle cx="60" cy="65" r="0.5" fill="rgba(255,255,255,0.1)" />
+                            <circle cx="100" cy="65" r="0.5" fill="rgba(255,255,255,0.1)" />
+                            <circle cx="140" cy="65" r="0.5" fill="rgba(255,255,255,0.1)" />
+                            <text x="185" y="32" fill="#0da08a" className="text-[8px] font-sans font-bold">HV TEST: PASS</text>
+                            <text x="185" y="44" fill="white" className="text-[7px] font-sans">INSULATION: &gt;200 MΩ</text>
+                            <text x="185" y="54" fill="white" className="text-[7px] font-sans">INJECTION: 2.0 kV</text>
+                            <text x="185" y="64" fill="white" className="text-[7px] font-sans">CONTACT RES: 12 μΩ</text>
+                            <circle cx="245" cy="50" r="10" fill="rgba(13,160,138,0.1)" stroke="#0da08a" strokeWidth="1.5" />
+                            <circle cx="245" cy="50" r="5" fill="#0da08a" />
+                            <text x="233" y="72" fill="#0da08a" className="text-[6px] font-sans font-bold">FAT STATUS: OK</text>
+                          </svg>
+                        )}
+                      </div>
+                    </div>
                   </div>
 
                   <div className="mt-10 pt-6 border-t border-slate-100 flex justify-between items-center text-[10px] text-slate-400 font-mono">
