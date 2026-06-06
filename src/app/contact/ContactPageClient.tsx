@@ -238,7 +238,7 @@ export default function ContactPageClient() {
                       Global Impact
                     </div>
                     <h3 className="text-3xl font-black text-white mb-1">
-                      6.8GW<span className="text-primary">+</span>
+                      68GW<span className="text-primary">+</span>
                     </h3>
                     <p className="text-gray-400 font-medium text-sm">Installed Base</p>
                   </div>
