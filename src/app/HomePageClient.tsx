@@ -70,7 +70,7 @@ export default function HomePageClient() {
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-40 w-auto object-contain"
+                  className="h-56 w-auto object-contain"
                 />
               </div>
             ))}
@@ -80,7 +80,7 @@ export default function HomePageClient() {
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-40 w-auto object-contain"
+                  className="h-56 w-auto object-contain"
                 />
               </div>
             ))}
