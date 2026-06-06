@@ -2,6 +2,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Battery, Zap, BarChart3, TrendingUp, Sun, Wind, CheckCircle2, Activity, Shield, Clock, DollarSign, Monitor, Eye, Wrench, AlertTriangle, Layers } from "lucide-react";
 import { EMSHeroDashboards, HybridPlantDashboard } from "@/components/DashboardMockups";
+import BessFeaturesShowcase from "@/components/BessFeaturesShowcase";
 
 export const metadata = {
  title: "Energy Management System - BESS | Unified Renewable Solutions | Adaptive Engineering",
@@ -87,46 +88,7 @@ export default function Page() {
  </section>
 
   {/* FEATURES & BENEFITS */}
-  <section className="py-24 bg-slate-50 border-t border-slate-100 relative z-20">
-    <div className="max-w-7xl mx-auto px-6">
-      <SectionWrapper>
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Comprehensive Features</span>
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Features & Benefits</h2>
-          <p className="text-slate-600 leading-relaxed">
-            Our Energy Management System provides a highly detailed feature set to supervise, automate, and protect utility-scale battery storage installations.
-          </p>
-        </div>
-      </SectionWrapper>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-          { icon: <Activity className="w-5 h-5 text-teal-600" />, title: "Data Acquisition & Real-Time Monitoring", desc: "Supervise active power, state of charge, temperatures, and cell voltages instantly with direct Modbus and OPC UA connections." },
-          { icon: <BarChart3 className="w-5 h-5 text-teal-600" />, title: "Advanced Analytics", desc: "Gain deep visibility into system performance with calculations of efficiency, battery health index, and cycle counts." },
-          { icon: <Battery className="w-5 h-5 text-teal-600" />, title: "Cell-Level Monitoring", desc: "Supervise internal cell balance, temperature thresholds, and charge ratios to prevent single-cell wear from affecting the pack." },
-          { icon: <Clock className="w-5 h-5 text-teal-600" />, title: "Time-of-Use (ToU) Optimization", desc: "Shift energy automatically. Charge during low-tariff hours and discharge during peak-rate periods to capture arbitrage revenue." },
-          { icon: <Layers className="w-5 h-5 text-teal-600" />, title: "Multiple Operating Modes", desc: "Run your BESS under diverse strategies including peak shaving, solar-following, load-following, and frequency support." },
-          { icon: <Shield className="w-5 h-5 text-teal-600" />, title: "Grid Code Compliance", desc: "Strict adherence to national utility grid limits for active and reactive power limits, voltage ride-through, and ramp controls." },
-          { icon: <Zap className="w-5 h-5 text-teal-600" />, title: "Intelligent Control", desc: "State-of-charge tracking algorithms that dynamically manage charge/discharge rates to prioritize cell temperature and health." },
-          { icon: <TrendingUp className="w-5 h-5 text-teal-600" />, title: "Peak Shaving & Load Shifting", desc: "Avoid peak demand tariffs by shaving load spikes. Keep facility consumption under specified utility thresholds." },
-          { icon: <AlertTriangle className="w-5 h-5 text-teal-600" />, title: "Fault Management & Diagnostics", desc: "Real-time alerts, remote emergency stops, and diagnostic logs to flag cell drift or thermal anomalies before they scale." },
-          { icon: <Monitor className="w-5 h-5 text-teal-600" />, title: "SCADA & Third-Party Integration", desc: "Interface seamlessly with centralized SCADA controls, local HMIs, or third-party power scheduling dashboards." },
-        ].map((item, i) => (
-          <SectionWrapper key={i} delay={i * 0.05}>
-            <div className="p-8 bg-white border border-slate-100 rounded-3xl hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between">
-              <div>
-                <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center mb-6">
-                  {item.icon}
-                </div>
-                <h3 className="text-base font-extrabold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
-            </div>
-          </SectionWrapper>
-        ))}
-      </div>
-    </div>
-  </section>
+  <BessFeaturesShowcase />
 
  {/* HYBRID INTEGRATION */}
  <section className="py-24 bg-transparent text-white relative z-10">
