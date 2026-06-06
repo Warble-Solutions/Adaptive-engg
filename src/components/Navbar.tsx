@@ -33,6 +33,68 @@ export default function Navbar() {
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
+    // Form states
+    const [formData, setFormData] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        company: "",
+        subject: "Renewable Solutions",
+        message: ""
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+    useEffect(() => {
+        if (!isInquiryOpen) {
+            setFormData({
+                name: "",
+                phone: "",
+                email: "",
+                company: "",
+                subject: "Renewable Solutions",
+                message: ""
+            });
+            setSubmitStatus("idle");
+        }
+    }, [isInquiryOpen]);
+
+    const handleFormSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus("idle");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            if (res.ok) {
+                setSubmitStatus("success");
+                setFormData({
+                    name: "",
+                    phone: "",
+                    email: "",
+                    company: "",
+                    subject: "Renewable Solutions",
+                    message: ""
+                });
+                setTimeout(() => {
+                    setIsInquiryOpen(false);
+                }, 1500);
+            } else {
+                setSubmitStatus("error");
+            }
+        } catch (err) {
+            console.error(err);
+            setSubmitStatus("error");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
@@ -281,41 +343,102 @@ export default function Navbar() {
                                 <p className="text-sm text-slate-500 mt-1">Tell us about your requirements and we&apos;ll get back to you shortly.</p>
                             </div>
 
+                            {/* Status Banners */}
+                            {submitStatus === "success" && (
+                                <div className="mx-8 mb-4 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm font-medium">
+                                    Thank you! Your message has been sent successfully. We&apos;ll get back to you shortly.
+                                </div>
+                            )}
+
+                            {submitStatus === "error" && (
+                                <div className="mx-8 mb-4 p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-sm font-medium">
+                                    Something went wrong. Please check your inputs and try again.
+                                </div>
+                            )}
+
                             {/* Form */}
-                            <form className="px-8 pb-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+                            <form className="px-8 pb-8 space-y-5" onSubmit={handleFormSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Name</label>
-                                        <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-sm" placeholder="Enter your name" />
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Name *</label>
+                                        <input 
+                                            type="text" 
+                                            required
+                                            value={formData.name}
+                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900 text-sm" 
+                                            placeholder="Enter your name" 
+                                        />
                                     </div>
                                     <div className="space-y-1.5">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Phone</label>
-                                        <input type="tel" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-sm" placeholder="+91..." />
+                                        <input 
+                                            type="tel" 
+                                            value={formData.phone}
+                                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900 text-sm" 
+                                            placeholder="+91..." 
+                                        />
                                     </div>
                                 </div>
 
-                                <div className="space-y-1.5">
-                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email</label>
-                                    <input type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-sm" placeholder="name@company.com" />
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div className="space-y-1.5">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email *</label>
+                                        <input 
+                                            type="email" 
+                                            required
+                                            value={formData.email}
+                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900 text-sm" 
+                                            placeholder="name@company.com" 
+                                        />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Company</label>
+                                        <input 
+                                            type="text" 
+                                            value={formData.company}
+                                            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900 text-sm" 
+                                            placeholder="Enter company name" 
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Inquiry Type</label>
-                                    <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-700 text-sm">
-                                        <option>Renewable Solutions</option>
-                                        <option>PM-KUSUM</option>
-                                        <option>Infrastructure</option>
-                                        <option>Other</option>
+                                    <select 
+                                        value={formData.subject}
+                                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-700 text-sm"
+                                    >
+                                        <option value="Renewable Solutions">Renewable Solutions</option>
+                                        <option value="PM-KUSUM">PM-KUSUM</option>
+                                        <option value="Infrastructure">Infrastructure</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
 
                                 <div className="space-y-1.5">
-                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message</label>
-                                    <textarea rows={3} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none text-sm" placeholder="Tell us about your requirements..."></textarea>
+                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message *</label>
+                                    <textarea 
+                                        rows={3} 
+                                        required
+                                        value={formData.message}
+                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none text-slate-900 text-sm" 
+                                        placeholder="Tell us about your requirements..."
+                                    ></textarea>
                                 </div>
 
-                                <button className="w-full py-3.5 bg-primary text-white font-bold rounded-xl hover:bg-[#0da08a] transition-all flex items-center justify-center gap-2 group text-sm">
-                                    Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                <button 
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="w-full py-3.5 bg-primary hover:bg-[#0da08a] text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group text-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                                >
+                                    {isSubmitting ? "Sending..." : "Send Message"}
+                                    {!isSubmitting && <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
                                 </button>
                             </form>
                         </motion.div>
