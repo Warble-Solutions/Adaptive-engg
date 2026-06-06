@@ -37,7 +37,7 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
       id: "static-analytics",
       title: "Advanced Analytics Brochure",
       slug: "advanced-analytics-brochure",
-      thumbnailUrl: "",
+      thumbnailUrl: "/imgs/brochures/analytics_brochure.png",
       pdfUrl: "/brochures/Advanced analytics_Brochure.pdf",
       category: "Unified Platform",
       sortOrder: -3
@@ -46,7 +46,7 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
       id: "static-cms",
       title: "Central Monitoring System (CMS) Brochure",
       slug: "cms-brochure",
-      thumbnailUrl: "",
+      thumbnailUrl: "/imgs/brochures/cms_brochure.png",
       pdfUrl: "/brochures/CMS_Brochure.pdf",
       category: "Unified Platform",
       sortOrder: -2
@@ -55,7 +55,7 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
       id: "static-scada",
       title: "SCADA Solutions Brochure",
       slug: "scada-brochure",
-      thumbnailUrl: "",
+      thumbnailUrl: "/imgs/brochures/scada_brochure.png",
       pdfUrl: "/brochures/SCADA_Brochure.pdf",
       category: "SCADA & Automation",
       sortOrder: -1
