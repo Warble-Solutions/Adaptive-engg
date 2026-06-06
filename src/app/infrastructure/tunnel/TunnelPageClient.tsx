@@ -223,16 +223,16 @@ export default function TunnelPageClient() {
             </SectionWrapper>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
-            {/* Left - Tab selector */}
-            <div className="w-full lg:w-1/4 flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 shrink-0">
+          <div className="flex flex-col gap-10">
+            {/* Top - Tab selector */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
               {specTabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-4 px-6 py-4 rounded-2xl font-bold text-left text-sm transition-all whitespace-nowrap lg:whitespace-normal shrink-0 ${
+                  className={`flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold text-center text-sm transition-all w-full ${
                     activeTab === tab.id
-                      ? "bg-primary text-white shadow-lg shadow-teal-500/20 translate-x-1"
+                      ? "bg-primary text-white shadow-lg shadow-teal-500/20 scale-[1.02]"
                       : "bg-slate-50 text-slate-600 hover:bg-slate-100"
                   }`}
                 >
@@ -243,7 +243,7 @@ export default function TunnelPageClient() {
             </div>
 
             {/* Middle & Right - Interactive Simulator & Specs */}
-            <div className="w-full lg:w-3/4 flex flex-col xl:flex-row gap-8 items-stretch">
+            <div className="w-full flex flex-col xl:flex-row gap-8 items-stretch">
               {specTabs.map((tab) => {
                 if (tab.id !== activeTab) return null;
                 return (
