@@ -30,10 +30,11 @@ function LoginForm() {
 
       console.log("NextAuth signIn response:", res);
 
-      if (res?.ok) {
+      if (res?.ok && !res?.error) {
         router.push(callbackUrl);
       } else {
-        setError(res?.error || "Invalid email or password. Please try again.");
+        const isCredsError = res?.error === "CredentialsSignin" || res?.error === "credentials";
+        setError(isCredsError ? "Invalid email or password. Please try again." : (res?.error || "Invalid email or password. Please try again."));
         setLoading(false);
       }
     } catch (err) {
