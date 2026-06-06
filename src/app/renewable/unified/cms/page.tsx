@@ -1,6 +1,6 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, Eye, TrendingDown, Zap, Shield, BarChart3, Globe, Activity, Database, Lock, CheckCircle2, Layers, Server, Wifi } from "lucide-react";
+import { ArrowRight, Eye, TrendingDown, Zap, Shield, BarChart3, Globe, Activity, Database, Lock, CheckCircle2, Layers, Server, Wifi, Monitor, Wrench, Battery } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
 import { CMSHeroDashboards } from "@/components/DashboardMockups";
 import UnifiedCMSFeatures from "@/components/UnifiedCMSFeatures";
@@ -194,24 +194,46 @@ export default function Page() {
  </div>
  </SectionWrapper>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
- {[
- { href: "/renewable/unified/scada", label: "SCADA", abbr: "SCADA", desc: "Scalable SCADA architecture with rich renewable libraries handling millions of real-time tags." },
- { href: "/renewable/unified/analytics", label: "Advanced Analytics", abbr: "Analytics", desc: "Data visualization, loss buckets, custom report builder and historical analysis." },
- { href: "/ppc", label: "Power Plant Controller", abbr: "PPC", desc: "Grid-compliant active/reactive power regulation, ramp-rate control, and voltage support." },
- { href: "/renewable/unified/cmms", label: "Computerised Maintenance Management", abbr: "CMMS", desc: "Automated work orders, SOPs and inventory management for O&M teams." },
- { href: "/renewable/unified/ems-bess", label: "Energy Management System", abbr: "EMS-BESS", desc: "ML-based energy arbitrage, SoC management, and peak shaving for battery storage." },
- ].map((sol, i) => (
- <SectionWrapper key={i} delay={i * 0.1}>
- <Link href={sol.href} className="group flex flex-col h-full p-6 bg-white border border-slate-100 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 hover:-translate-y-1">
- <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-black uppercase tracking-widest mb-4">{sol.abbr}</div>
- <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">{sol.label}</h3>
- <p className="text-slate-500 text-sm leading-relaxed flex-1">{sol.desc}</p>
- <div className="flex items-center gap-1 text-primary font-bold text-sm mt-4 group-hover:gap-2 transition-all">
- Learn More <ArrowRight className="w-4 h-4" />
- </div>
- </Link>
- </SectionWrapper>
- ))}
+  {[
+    { href: "/renewable/unified/scada", label: "SCADA", abbr: "SCADA", icon: <Monitor className="w-5 h-5" />, desc: "Scalable SCADA architecture with rich renewable libraries handling millions of real-time tags." },
+    { href: "/renewable/unified/analytics", label: "Advanced Analytics", abbr: "Analytics", icon: <BarChart3 className="w-5 h-5" />, desc: "Data visualization, loss buckets, custom report builder and historical analysis." },
+    { href: "/ppc", label: "Power Plant Controller", abbr: "PPC", icon: <Zap className="w-5 h-5" />, desc: "Grid-compliant active/reactive power regulation, ramp-rate control, and voltage support." },
+    { href: "/renewable/unified/cmms", label: "Computerised Maintenance Management", abbr: "CMMS", icon: <Wrench className="w-5 h-5" />, desc: "Automated work orders, SOPs and inventory management for O&M teams." },
+    { href: "/renewable/unified/ems-bess", label: "Energy Management System", abbr: "EMS-BESS", icon: <Battery className="w-5 h-5" />, desc: "ML-based energy arbitrage, SoC management, and peak shaving for battery storage." },
+  ].map((sol, i) => (
+    <SectionWrapper key={i} delay={i * 0.1}>
+      <Link href={sol.href} className="group relative flex flex-col h-full p-8 bg-gradient-to-br from-white to-slate-50/50 border border-slate-200/80 rounded-3xl hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1.5 overflow-hidden text-left">
+        {/* Subtle top-right ambient hover highlight */}
+        <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-primary/[0.04] to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        
+        {/* Category Abbr Pill */}
+        <div className="flex items-center justify-between mb-6">
+          <span className="inline-flex items-center px-2.5 py-1 bg-primary/5 border border-primary/10 text-primary rounded-md text-[10px] font-mono tracking-wider font-bold group-hover:bg-primary group-hover:text-white group-hover:border-transparent transition-all duration-300">
+            {sol.abbr}
+          </span>
+          <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 group-hover:bg-primary/10 group-hover:text-primary group-hover:border-primary/20 group-hover:scale-110 transition-all duration-300 shadow-sm">
+            {sol.icon}
+          </div>
+        </div>
+
+        {/* Text Details */}
+        <div className="flex-1 flex flex-col">
+          <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug group-hover:text-primary transition-colors">
+            {sol.label}
+          </h3>
+          <p className="text-slate-500 text-sm leading-relaxed flex-grow">
+            {sol.desc}
+          </p>
+        </div>
+
+        {/* Learn More Action Link */}
+        <div className="flex items-center gap-1.5 text-primary font-bold text-sm mt-6 group-hover:gap-2.5 transition-all">
+          <span>Learn More</span>
+          <ArrowRight className="w-4 h-4" />
+        </div>
+      </Link>
+    </SectionWrapper>
+  ))}
  </div>
  </div>
  </section>
