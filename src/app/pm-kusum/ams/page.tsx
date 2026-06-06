@@ -138,7 +138,51 @@ export default function Page() {
  </div>
  </section>
 
- {/* IMPLEMENTATION SERVICES */}
+  {/* MOBILE O&M SHOWCASE */}
+  <section className="py-24 bg-slate-50 relative z-20 border-y border-slate-200 text-slate-900">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <SectionWrapper>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 h-[380px] group">
+            <img 
+              src="/imgs/pm-kusum/ams_field_om.png" 
+              alt="Field Technician scanning QR code on solar pump controller" 
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 p-4 bg-white/95 backdrop-blur-sm rounded-2xl border border-white/20">
+              <p className="text-slate-900 font-bold text-xs">Mobile Field App Integration</p>
+              <p className="text-slate-500 text-xs mt-0.5">Asset scanning and proof-of-work O&M dispatch</p>
+            </div>
+          </div>
+        </SectionWrapper>
+
+        <SectionWrapper delay={0.2}>
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">
+              Field Execution
+            </div>
+            <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Empower Your Field Operations</h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              Our mobile companion app gives field teams direct access to the asset database. Technicians can scan QR tags on pump controllers and solar junction panels to view maintenance logs, record meter readings, and submit geo-tagged proof-of-work photos instantly.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+                <span className="text-slate-700 font-medium text-sm">Offline data synchronization for remote areas</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+                <span className="text-slate-700 font-medium text-sm">GPS verification for field visits and routing</span>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+      </div>
+    </div>
+  </section>
+
+  {/* IMPLEMENTATION SERVICES */}
  <section className="py-28 bg-transparent text-white relative z-10">
  <div className="max-w-7xl mx-auto px-6">
  <SectionWrapper>

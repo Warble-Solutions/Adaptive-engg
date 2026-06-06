@@ -82,7 +82,52 @@ export default function Page() {
     </div>
   </section>
 
- {/* REPORT TYPES */}
+
+  {/* BILLING & SUBSIDY SHOWCASE */}
+  <section className="py-24 bg-slate-50 relative z-20 border-y border-slate-200 text-slate-900">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <SectionWrapper delay={0.2}>
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">
+              Compliance & Auditing
+            </div>
+            <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Automated JMR & Subsidy Auditing</h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              ReportWiz simplifies the subsidy release cycle by auto-compiling Joint Meter Readings (JMR). It verifies energy export data directly from certified utility incomer meters, eliminating manual calculation errors and speeding up commercial clearance with state DISCOMs.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+                <span className="text-slate-700 font-medium text-sm">One-click export of verified DISCOM-format sheets</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+                <span className="text-slate-700 font-medium text-sm">Historical generation correlation to detect meter tampering</span>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 h-[380px] group">
+            <img 
+              src="/imgs/pm-kusum/reportwiz_dashboard.png" 
+              alt="ReportWiz Generation and Billing Audit Dashboard" 
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 p-4 bg-white/95 backdrop-blur-sm rounded-2xl border border-white/20">
+              <p className="text-slate-900 font-bold text-xs">JMR Generation Dashboard</p>
+              <p className="text-slate-500 text-xs mt-0.5">Automated billing telemetry audit module</p>
+            </div>
+          </div>
+        </SectionWrapper>
+      </div>
+    </div>
+  </section>
+
+  {/* REPORT TYPES */}
  <section className="py-28 bg-transparent text-white relative z-10">
  <div className="max-w-7xl mx-auto px-6">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
