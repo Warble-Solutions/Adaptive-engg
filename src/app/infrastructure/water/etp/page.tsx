@@ -299,7 +299,7 @@ export default function Page() {
               <div className="space-y-8">
                 
                 <div className="relative rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
-                  <Image src="/imgs/wtp-panel-manufacturing.png" alt="Control panel manufacturing facility" width={800} height={500} className="w-full h-[320px] object-cover" />
+                  <Image src="/imgs/etp-advantage.png" alt="Control panel manufacturing facility" width={800} height={500} className="w-full h-[320px] object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
                     <p className="text-white font-bold">In-House Manufacturing (125,000+ Sq. Ft.)</p>
                     <p className="text-gray-300 text-xs">Quality panel fabrication and certified FAT checks before dispatch</p>

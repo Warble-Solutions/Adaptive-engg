@@ -92,10 +92,10 @@ export default function Page() {
   <div className="flex flex-col gap-6 h-full">
     {/* Real Image */}
     <div className="relative rounded-2xl overflow-hidden border border-slate-100 shadow-lg h-[240px] group shrink-0">
-      <img src="/imgs/pm-kusum/electrical_panel_manufacturing.png" alt="AEPL Panel Manufacturing Floor" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+      <img src="/imgs/pm-kusum/acdb-panel-manufacturing.png" alt="AEPL ACDB Panel Manufacturing Floor" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
       <div className="absolute bottom-4 left-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-white/20">
-        <span className="text-slate-900 font-bold text-xs">AEPL Manufacturing Floor</span>
+        <span className="text-slate-900 font-bold text-xs">AEPL ACDB Panel Manufacturing Floor</span>
       </div>
     </div>
     {/* Canvas Diagram Mockup */}

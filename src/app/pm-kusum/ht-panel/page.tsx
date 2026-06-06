@@ -114,11 +114,11 @@ export default function Page() {
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
  <SectionWrapper>
  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 h-[380px] group">
-   <img src="/imgs/pm-kusum/electrical_panel_manufacturing.png" alt="High Tension Panel Manufacturing Floor" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+   <img src="/imgs/pm-kusum/ht-panel-manufacturing.png" alt="High Tension Panel Manufacturing Floor" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
    <div className="absolute bottom-6 left-6 p-4 bg-white/95 backdrop-blur-sm rounded-2xl border border-white/20">
      <p className="text-slate-900 font-bold text-xs">Adaptive Engineering Factory Floor</p>
-     <p className="text-slate-500 text-xs mt-0.5">Custom panels undergoing routing & testing</p>
+     <p className="text-slate-500 text-xs mt-0.5">High tension panels undergoing routing & testing</p>
    </div>
  </div>
  </SectionWrapper>
