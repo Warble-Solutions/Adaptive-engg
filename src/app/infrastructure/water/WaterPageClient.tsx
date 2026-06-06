@@ -238,12 +238,12 @@ export default function WaterPageClient() {
                   </div>
 
                   {/* Visual wave diagram simulation */}
-                  <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-2xl">
+                  <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-2xl flex-grow flex flex-col justify-between">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-xs font-bold font-mono text-slate-400">POI LOOP HARMONY CHART</span>
                       <span className="text-[10px] font-mono text-slate-500">FREQUENCY: 50.02 Hz</span>
                     </div>
-                    <div className="h-20 w-full flex items-end gap-1.5 overflow-hidden">
+                    <div className="h-40 w-full flex items-end gap-1.5 overflow-hidden">
                       {Array.from({ length: 24 }).map((_, i) => {
                         const heights = [30, 45, 55, 40, 65, 80, 75, 50, 60, 45, 35, 50, 70, 85, 90, 60, 45, 55, 68, 72, 85, 50, 40, 30];
                         return (
