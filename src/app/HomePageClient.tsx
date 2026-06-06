@@ -63,14 +63,14 @@ export default function HomePageClient() {
           <p className="text-center text-gray-400 text-lg font-bold uppercase tracking-[0.2em]">Industry Leaders Trust Us</p>
         </div>
         <div className="flex overflow-hidden relative">
-          <div className="flex animate-marquee gap-16 min-w-full px-10">
+          <div className="flex animate-marquee gap-20 min-w-full px-10">
             {/* Original Set */}
             {Array.from({ length: 40 }).map((_, i) => (
               <div key={i} className="flex-shrink-0 flex items-center justify-center">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-56 w-auto object-contain"
+                  className="h-72 w-auto object-contain"
                 />
               </div>
             ))}
@@ -80,7 +80,7 @@ export default function HomePageClient() {
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
-                  className="h-56 w-auto object-contain"
+                  className="h-72 w-auto object-contain"
                 />
               </div>
             ))}

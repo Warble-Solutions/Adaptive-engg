@@ -374,12 +374,12 @@ export default function TurnkeyPageClient() {
               <div className="space-y-6">
                 
                 {/* Traditional Card */}
-                <div className="p-6 bg-white border border-red-200 rounded-2xl shadow-md flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center shrink-0">
+                <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-md flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 flex items-center justify-center shrink-0">
                     <Lock className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-red-600 font-bold text-sm mb-1.5">Traditional Multi-Vendor Route</h4>
+                    <h4 className="text-slate-800 font-bold text-sm mb-1.5">Traditional Multi-Vendor Route</h4>
                     <p className="text-slate-500 text-xs leading-relaxed font-medium">
                       Requires managing separate contracts for panel supply, on-site cable layers, and programming. Leads to finger-pointing when parameters clash during hot testing.
                     </p>
@@ -403,6 +403,88 @@ export default function TurnkeyPageClient() {
 
               </div>
             </SectionWrapper>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Creation Section */}
+      <section className="py-28 bg-transparent text-white relative z-10 border-t border-white/5">
+        {/* Subtle background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <SectionWrapper>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-primary font-bold uppercase text-xs tracking-widest mb-3 block">Corporate Competencies</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">Value Creation</h2>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Empowering industrial utility and power infrastructure with engineering precision, integrated manufacturing, and comprehensive project execution.
+              </p>
+            </div>
+          </SectionWrapper>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "68GW+ Experience",
+                desc: "Massive execution and monitoring pedigree across utility-scale power assets.",
+                icon: Zap
+              },
+              {
+                title: "Turn-key E&I Solutions",
+                desc: "End-to-end execution scope comprising system drawing designs, switchyards, and grid synchronization.",
+                icon: ShieldCheck
+              },
+              {
+                title: "Inhouse Panel Manufacturing",
+                desc: "Quality-tested HT switchgear, LT distribution panels, PCC, MCC, and ACDB panels fabricated in our facility.",
+                icon: Factory
+              },
+              {
+                title: "Industrial electrical, automation solutions",
+                desc: "Sleek electrical engineering, custom panel designs, and advanced PLC/SCADA integrations.",
+                icon: Cpu
+              },
+              {
+                title: "Project management team",
+                desc: "Dedicated lifecycle managers tracking milestones, engineering compliance, and safety standards.",
+                icon: Compass
+              },
+              {
+                title: "Experience Team",
+                desc: "Highly skilled field engineering crew executing complex grid synchronization, cabling, and substation erection.",
+                icon: Network
+              },
+              {
+                title: "Water Segments Pumping",
+                desc: "Pioneering pumping scheme E&I layouts, automated pump house controls, and telemetry grids.",
+                icon: Activity
+              },
+              {
+                title: "Government Approved",
+                desc: "Licensed A-grade electrical contracting, CEIG safety clearances, and DISCOM approvals.",
+                icon: Lock
+              }
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <SectionWrapper key={idx} delay={idx * 0.05}>
+                  <div className="h-full p-6 bg-white/[0.02] border border-white/10 rounded-2xl hover:border-primary/50 hover:bg-white/[0.04] transition-all duration-500 group flex flex-col justify-between">
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/5 text-primary flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <h4 className="text-white font-bold text-base mb-3 group-hover:text-primary transition-colors duration-300 leading-snug">
+                        {item.title}
+                      </h4>
+                      <p className="text-slate-400 text-xs leading-relaxed font-medium">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </SectionWrapper>
+              );
+            })}
           </div>
         </div>
       </section>
