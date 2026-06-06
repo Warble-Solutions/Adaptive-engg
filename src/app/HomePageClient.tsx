@@ -64,9 +64,9 @@ export default function HomePageClient() {
         </div>
         <div className="flex flex-nowrap overflow-hidden relative w-full">
           {/* Sibling Container 1 */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28">
+          <div className="flex flex-nowrap animate-marquee-seamless gap-32 shrink-0 min-w-full items-center pr-32">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={i} className="flex-shrink-0 flex items-center justify-center w-48 h-16">
+              <div key={i} className="flex-shrink-0 flex items-center justify-center w-56 h-20">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
@@ -76,9 +76,9 @@ export default function HomePageClient() {
             ))}
           </div>
           {/* Sibling Container 2 (Clone) */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-28 shrink-0 min-w-full items-center pr-28" aria-hidden="true">
+          <div className="flex flex-nowrap animate-marquee-seamless gap-32 shrink-0 min-w-full items-center pr-32" aria-hidden="true">
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-48 h-16">
+              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-56 h-20">
                 <img
                   src={`/imgs/logos/${i + 1}.webp`}
                   alt={`Partner ${i + 1}`}
