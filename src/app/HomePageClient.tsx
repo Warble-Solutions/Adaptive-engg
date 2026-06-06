@@ -113,136 +113,76 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* 3.5 MISSION & VISION (Industrial Schematic & Technical Blueprint Design) */}
-      <section className="py-32 bg-slate-950 rounded-t-[40px] z-20 relative -mt-10 overflow-hidden border-b border-white/5">
-        {/* Engineering Grid Paper Background Effect */}
-        <div 
-          className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-          style={{ 
-            backgroundImage: `
-              linear-gradient(to right, #0da08a 1px, transparent 1px),
-              linear-gradient(to bottom, #0da08a 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px' 
-          }}
-        ></div>
-        
-        {/* Subtle circular grid targets */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-primary/5 rounded-full pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-primary/5 border-dashed rounded-full pointer-events-none"></div>
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+      {/* 3.5 MISSION & VISION (Overhauled Premium Light Design) */}
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative z-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
-            <div className="text-center mb-24 relative">
-              <span className="text-primary font-mono text-xs tracking-[0.3em] mb-4 block uppercase">[ AEPL SYSTEM CORE ]</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white font-heading tracking-tight">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-400">Core Compass</span>
+            <div className="text-center mb-16">
+              <span className="text-primary font-bold uppercase text-xs tracking-widest bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20 inline-block mb-4">
+                What Drives AEPL
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">Vision & Mission</span>
               </h2>
-              <div className="w-16 h-px bg-primary/40 mx-auto mt-4"></div>
             </div>
           </SectionWrapper>
 
-          {/* Visual connecting line (Bus line) for desktop */}
-          <div className="relative max-w-5xl mx-auto">
-            {/* The horizontal connecting circuit wire */}
-            <div className="absolute top-1/2 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-primary/10 via-primary/50 to-teal-500/10 -translate-y-1/2 hidden md:block z-0">
-              {/* Pulsing signal dot moving along the bus */}
-              <div className="absolute top-0 w-2 h-2 rounded-full bg-primary -translate-y-1/2 animate-ping left-1/2"></div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
-              {/* Vision Node - Style of an Industrial Controller/Panel Module */}
-              <SectionWrapper delay={0.1}>
-                <div className="group relative h-full bg-slate-900/40 backdrop-blur-md border border-slate-800 rounded-2xl p-8 md:p-10 hover:border-primary/50 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
-                  {/* Grid overlay for hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.04] pointer-events-none transition-opacity duration-500"
-                    style={{
-                      backgroundImage: `radial-gradient(circle, #0da08a 1px, transparent 1px)`,
-                      backgroundSize: '16px 16px'
-                    }}
-                  ></div>
-
-                  {/* Corner engineering bracket decorations */}
-                  <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
-                  <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-slate-800 group-hover:border-primary transition-colors duration-500"></div>
-
-                  <div>
-                    {/* Node Header Info */}
-                    <div className="flex items-center justify-between mb-8 border-b border-slate-800/60 pb-4">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                        <span className="font-mono text-[9px] text-slate-500 tracking-widest uppercase">MODULE: VISION_NODE_01</span>
-                      </div>
-                      <span className="font-mono text-[10px] text-primary/80 font-bold bg-primary/10 px-2 py-0.5 rounded border border-primary/20">ACTIVE</span>
-                    </div>
-
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center text-primary group-hover:border-primary/50 transition-all duration-500">
-                        <Rocket className="w-6 h-6" />
-                      </div>
-                      <h3 className="text-xl font-bold text-white font-heading tracking-wide">Our Vision</h3>
-                    </div>
-
-                    <p className="text-2xl text-slate-200 leading-relaxed font-bold font-heading tracking-wide group-hover:text-white transition-colors duration-300">
-                      Embrace Technology To Maximize Value
-                    </p>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-slate-800/60 flex items-center justify-between text-[9px] font-mono text-slate-500">
-                    <span>SYS_TARGET: VALUE_MAXIMIZATION</span>
-                    <span>VER: 4.0</span>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto relative">
+            {/* Vision Card */}
+            <SectionWrapper delay={0.1}>
+              <div className="group relative h-full bg-white border border-slate-100 rounded-3xl p-10 md:p-12 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-lg shadow-slate-100/40">
+                {/* Large Background Watermark Letter */}
+                <div className="absolute right-6 bottom-6 text-slate-100/80 font-black text-[12rem] leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-primary/5 font-heading">
+                  V
                 </div>
-              </SectionWrapper>
-
-              {/* Mission Node - Style of an Industrial Controller/Panel Module */}
-              <SectionWrapper delay={0.2}>
-                <div className="group relative h-full bg-slate-900/40 backdrop-blur-md border border-slate-800 rounded-2xl p-8 md:p-10 hover:border-teal-500/50 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
-                  {/* Grid overlay for hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.04] pointer-events-none transition-opacity duration-500"
-                    style={{
-                      backgroundImage: `radial-gradient(circle, #0d9488 1px, transparent 1px)`,
-                      backgroundSize: '16px 16px'
-                    }}
-                  ></div>
-
-                  {/* Corner engineering bracket decorations */}
-                  <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
-                  <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-slate-800 group-hover:border-teal-500 transition-colors duration-500"></div>
-
-                  <div>
-                    {/* Node Header Info */}
-                    <div className="flex items-center justify-between mb-8 border-b border-slate-800/60 pb-4">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
-                        <span className="font-mono text-[9px] text-slate-500 tracking-widest uppercase">MODULE: MISSION_NODE_02</span>
-                      </div>
-                      <span className="font-mono text-[10px] text-teal-400 font-bold bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20">ACTIVE</span>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-md">
+                      <Rocket className="w-6 h-6" />
                     </div>
-
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center text-teal-400 group-hover:border-teal-500/50 transition-all duration-500">
-                        <Lightbulb className="w-6 h-6" />
-                      </div>
-                      <h3 className="text-xl font-bold text-white font-heading tracking-wide">Our Mission</h3>
-                    </div>
-
-                    <p className="text-lg text-slate-200 leading-relaxed font-semibold group-hover:text-white transition-colors duration-300">
-                      Continuously evolve to maximize value of each installation towards providing the <span className="text-teal-400 font-bold">Best Customer Experience</span>.
-                    </p>
+                    <h3 className="text-2xl font-black text-slate-900 font-heading">Vision</h3>
                   </div>
-
-                  <div className="mt-8 pt-6 border-t border-slate-800/60 flex items-center justify-between text-[9px] font-mono text-slate-500">
-                    <span>SYS_TARGET: CUSTOMER_EXPERIENCE</span>
-                    <span>VER: 4.0</span>
-                  </div>
+                  
+                  <p className="text-xl text-slate-700 leading-relaxed font-semibold font-heading tracking-wide">
+                    Embrace Technology To Maximize Value
+                  </p>
                 </div>
-              </SectionWrapper>
-            </div>
+                
+                <div className="mt-8 pt-8 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
+                  <span>GUIDING STAR</span>
+                  <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
+                </div>
+              </div>
+            </SectionWrapper>
+
+            {/* Mission Card */}
+            <SectionWrapper delay={0.2}>
+              <div className="group relative h-full bg-white border border-slate-100 rounded-3xl p-10 md:p-12 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-lg shadow-slate-100/40">
+                {/* Large Background Watermark Letter */}
+                <div className="absolute right-6 bottom-6 text-slate-100/80 font-black text-[12rem] leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-primary/5 font-heading">
+                  M
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-14 h-14 rounded-2xl bg-teal-600/10 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-500 shadow-md">
+                      <Lightbulb className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-2xl font-black text-slate-900 font-heading">Mission</h3>
+                  </div>
+                  
+                  <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                    Continuously evolve to maximize value of each installation towards providing the <span className="text-primary font-bold">Best Customer Experience</span>.
+                  </p>
+                </div>
+                
+                <div className="mt-8 pt-8 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
+                  <span>DAILY COMPASS</span>
+                  <div className="h-2 w-2 rounded-full bg-teal-600 animate-pulse"></div>
+                </div>
+              </div>
+            </SectionWrapper>
           </div>
         </div>
       </section>
