@@ -1,6 +1,6 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart, Monitor, Eye, Zap, Wrench, Battery, Mail, Bell } from "lucide-react";
+import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart, Monitor, Eye, Zap, Wrench, Battery, Mail, Bell, Database } from "lucide-react";
 import { AnalyticsDashboard, AnalyticsHeroDashboards, AnalyticsVisibilityDashboard, Scale500GWDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
@@ -88,95 +88,243 @@ export default function Page() {
   {/* GAIN SUPERIOR VISIBILITY WITH AEPL ADVANCE ANALYTICS */}
   <section className="py-24 bg-slate-50 border-t border-slate-100 relative z-20">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-        {/* Left column: Intro & Live Mockup */}
-        <div className="lg:col-span-5 lg:sticky lg:top-28">
-          <SectionWrapper>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
-              <FileText className="w-4 h-4" />
-              <span>Visibility & Reports</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading leading-tight">
-              Gain Superior Visibility with AEPL Advanced Analytics
-            </h2>
-            <p className="text-slate-600 mb-8 leading-relaxed">
-              Standardize, automate, and secure your plant reporting workflows. Our enterprise-grade custom report engine allows operators and managers to design, schedule, and distribute high-fidelity KPI reports across teams and stakeholders.
-            </p>
-            <div className="h-[480px] w-full mb-8">
-              <AnalyticsVisibilityDashboard />
-            </div>
-          </SectionWrapper>
-        </div>
-
-        {/* Right column: 10 capabilities list */}
-        <div className="lg:col-span-7">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Real-Time & Scheduled Performance Reports",
-                desc: "Instant summaries or automatically scheduled daily, weekly, and monthly reports with detailed KPI insights (PR, CUF, losses).",
-                icon: <Clock className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Secure Data Archiving & Long-Term Storage",
-                desc: "High-integrity storage of portfolio records for years, supporting historic audits, regulatory compliance, and trend analysis.",
-                icon: <Layers className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Seamless Data Integration",
-                desc: "Ingest and process heterogeneous data streams from solar, wind, hybrid, and BESS plants under a unified semantic structure.",
-                icon: <Activity className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Role-Based Access Control & Secure Sharing",
-                desc: "Define custom access permissions. Securely share automated reports with clients, O&M partners, and executives.",
-                icon: <Monitor className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Automated Report Generation",
-                desc: "Eliminate manual report compilation. Automated scripts run on triggers to package metrics into premium PDF and CSV layouts.",
-                icon: <Zap className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Flexible & Enterprise Custom Report Builder",
-                desc: "Drag-and-drop report layout constructor. Define custom formulas, charts, and branding components without writing code.",
-                icon: <FileText className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Event, Alarm & Downtime Reporting",
-                desc: "Comprehensive logs capturing plant outages, communication drops, and grid limits, correlated directly with yield impacts.",
-                icon: <Bell className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Conversational AI-Based Insights",
-                desc: "Query-based reporting engine that responds to natural language queries. Get graphs instantly by talking to your data.",
-                icon: <Brain className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "AI/ML-Driven & Anomaly-Based Reporting",
-                desc: "Continuous background scans of inverter and tracker behavior to automatically flag anomalies and predictive maintenance needs.",
-                icon: <BarChart3 className="w-5 h-5 text-teal-600" />
-              },
-              {
-                title: "Intelligent Scheduling & Queuing",
-                desc: "Reliable mail distribution pipelines. Queue large batches of files to ensure delivery without mail server throttles.",
-                icon: <Mail className="w-5 h-5 text-teal-600" />
-              }
-            ].map((cap, i) => (
-              <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="p-6 bg-white rounded-2xl border border-slate-100 hover:border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between">
-                  <div>
-                    <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
-                      {cap.icon}
-                    </div>
-                    <h3 className="text-sm font-extrabold text-slate-950 mb-2">{cap.title}</h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">{cap.desc}</p>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
+      <SectionWrapper>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
+            <FileText className="w-4 h-4" />
+            <span>Visibility & Reports</span>
           </div>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 font-heading leading-tight">
+            Gain Superior Visibility with AEPL Advanced Analytics
+          </h2>
+          <p className="text-slate-600 text-lg leading-relaxed">
+            Standardize, automate, and secure your plant reporting workflows. Eliminate manual data collection and compile portfolio performance insights into custom, beautiful templates.
+          </p>
         </div>
+      </SectionWrapper>
+
+      {/* Bento Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        {/* Card 1: Enterprise Custom Report Builder (col-span-2) */}
+        <SectionWrapper delay={0.1} className="md:col-span-2">
+          <div className="p-8 md:p-10 bg-white border border-slate-100 rounded-3xl shadow-xl hover:shadow-2xl hover:border-slate-200 transition-all duration-500 h-full flex flex-col md:flex-row gap-8 justify-between relative overflow-hidden group">
+            <div className="flex-1 flex flex-col justify-between z-10">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-950 mb-3">Enterprise Custom Report Builder</h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                  Build custom layouts with our drag-and-drop report designer. Set up rules for automated report generation on schedule, instantly converting live plant data into polished PDF and CSV files.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-bold text-teal-600">
+                <span>Real-Time & Scheduled KPI Insights</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </div>
+            </div>
+            
+            {/* Visual: Report Builder Canvas Preview */}
+            <div className="flex-1 bg-slate-950/95 border border-slate-800 rounded-2xl p-4 text-white flex flex-col justify-between min-h-[240px] md:min-h-0 relative select-none">
+              <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Canvas: Monthly PR Template</span>
+                <span className="text-[8px] bg-teal-500/10 border border-teal-500/20 text-teal-400 px-1.5 py-0.5 rounded font-mono">DRAFT</span>
+              </div>
+              
+              <div className="space-y-2 flex-grow flex flex-col justify-center">
+                <div className="bg-white/5 border border-white/10 rounded-lg p-2 flex items-center justify-between text-[10px] cursor-move hover:bg-[#0da08a]/20 hover:border-[#0da08a]/40 transition-colors">
+                  <span className="font-bold text-slate-300">Section 1: Portfolio CUF Tile</span>
+                  <span className="text-[8px] text-slate-500 font-mono">2x1 Grid</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-lg p-2 flex items-center justify-between text-[10px] cursor-move hover:bg-purple-500/20 hover:border-purple-500/40 transition-colors">
+                  <span className="font-bold text-slate-300">Section 2: Generation Curve</span>
+                  <span className="text-[8px] text-slate-500 font-mono">2x3 Grid</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-lg p-2 flex items-center justify-between text-[10px] cursor-move hover:bg-pink-500/20 hover:border-pink-500/40 transition-colors">
+                  <span className="font-bold text-slate-300">Section 3: Loss Breakdown Pie</span>
+                  <span className="text-[8px] text-slate-500 font-mono">1x2 Grid</span>
+                </div>
+              </div>
+              
+              <div className="mt-4 pt-2 border-t border-white/5 flex items-center justify-between text-[9px] text-slate-500">
+                <span>Formats: PDF • CSV • XLS</span>
+                <span className="text-teal-400 font-mono font-bold">Preview Live</span>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+
+        {/* Card 2: Conversational AI-Based Insights (col-span-1) */}
+        <SectionWrapper delay={0.2}>
+          <div className="p-8 bg-slate-950 border border-slate-900 rounded-3xl shadow-xl hover:shadow-2xl hover:border-teal-500/30 transition-all duration-500 h-full flex flex-col justify-between relative overflow-hidden group">
+            {/* Ambient Background glow */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-[60px] pointer-events-none"></div>
+            
+            <div className="z-10">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-6 border border-purple-500/20">
+                <Brain className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Conversational AI Insights</h3>
+              <p className="text-slate-400 text-xs leading-relaxed mb-6">
+                Query reports via natural language. AI scans telemetry patterns to detect anomalies, log degradation, and suggest maintenance tasks.
+              </p>
+            </div>
+            
+            {/* Visual: Chat Interface */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-3 font-sans select-none shrink-0 z-10">
+              <div className="flex items-start gap-2">
+                <div className="w-4 h-4 rounded-full bg-slate-700 flex-shrink-0 flex items-center justify-center text-[8px] text-slate-300 font-bold">U</div>
+                <div className="bg-white/5 border border-white/5 text-[9px] rounded-lg p-2 text-slate-200 leading-snug">
+                  What caused the generation dip at Rajasthan Site Block B yesterday?
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-4 h-4 rounded-full bg-teal-500/20 text-teal-400 flex-shrink-0 flex items-center justify-center text-[8px] font-bold border border-teal-500/30">AI</div>
+                <div className="bg-teal-500/10 border border-teal-500/20 text-[9px] rounded-lg p-2 text-teal-300 leading-snug">
+                  Block B was affected by severe dirt buildup on panels. Estimated loss: <span className="font-mono text-white font-bold">1.8 MWh</span>. 
+                  <span className="block mt-1 font-bold text-white underline cursor-pointer">Schedule Cleaning Job?</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+
+        {/* Card 3: Seamless Integration (col-span-1) */}
+        <SectionWrapper delay={0.3}>
+          <div className="p-8 bg-white border border-slate-100 rounded-3xl shadow-xl hover:shadow-2xl hover:border-slate-200 transition-all duration-500 h-full flex flex-col justify-between relative overflow-hidden group">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center mb-6">
+                <Activity className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-950 mb-3">Seamless Integration</h3>
+              <p className="text-slate-500 text-xs leading-relaxed mb-6">
+                Ingest diverse Modbus, OPC UA, and WebAPI streams from heterogeneous solar and wind OEMs into a standardized, unified semantic structure.
+              </p>
+            </div>
+            
+            {/* Visual: Data pipeline visualization */}
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 flex items-center justify-between text-[10px] font-mono select-none">
+              <div className="space-y-1 text-slate-500">
+                <div className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>Modbus</div>
+                <div className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>OPC UA</div>
+                <div className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-purple-400"></div>WebAPI</div>
+              </div>
+              <div className="text-slate-400 animate-pulse text-[8px] shrink-0 font-bold px-2">➔</div>
+              <div className="bg-teal-500/10 border border-teal-500/20 text-teal-600 rounded-xl px-3 py-2 text-center flex flex-col items-center justify-center">
+                <Database className="w-4 h-4 mb-1" />
+                <span className="font-bold text-[8px]">Standardized</span>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+
+        {/* Card 4: Secure Storage & RBAC (col-span-1) */}
+        <SectionWrapper delay={0.4}>
+          <div className="p-8 bg-white border border-slate-100 rounded-3xl shadow-xl hover:shadow-2xl hover:border-slate-200 transition-all duration-500 h-full flex flex-col justify-between relative overflow-hidden group">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center mb-6">
+                <Layers className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-950 mb-3">Secure Archival & Sharing</h3>
+              <p className="text-slate-500 text-xs leading-relaxed mb-6">
+                Safely store historical records for decades. Grant secure access to internal and external partners using role-based permissions.
+              </p>
+            </div>
+            
+            {/* Visual: Role list */}
+            <div className="space-y-1 bg-slate-50 border border-slate-100 rounded-2xl p-3 select-none">
+              {[
+                { role: "Administrator", rights: "Full Controls", badge: "bg-teal-500/10 text-teal-600" },
+                { role: "O&M Contractor", rights: "Alarms & Logs", badge: "bg-amber-500/10 text-amber-600" },
+                { role: "Investor Group", rights: "Read-Only reports", badge: "bg-blue-500/10 text-blue-600" },
+              ].map((rbac, idx) => (
+                <div key={idx} className="flex items-center justify-between text-[9px] py-1 border-b border-slate-100 last:border-0">
+                  <span className="font-bold text-slate-700">{rbac.role}</span>
+                  <span className={`px-1.5 py-0.2 rounded font-mono ${rbac.badge}`}>{rbac.rights}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </SectionWrapper>
+
+        {/* Card 5: Event, Alarm & Downtime (col-span-1) */}
+        <SectionWrapper delay={0.5}>
+          <div className="p-8 bg-white border border-slate-100 rounded-3xl shadow-xl hover:shadow-2xl hover:border-slate-200 transition-all duration-500 h-full flex flex-col justify-between relative overflow-hidden group">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center mb-6">
+                <Bell className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-950 mb-3">Alarms & Downtime Reports</h3>
+              <p className="text-slate-500 text-xs leading-relaxed mb-6">
+                Detailed audit logs capturing exact plant drop reasons, equipment shutdowns, and grid curtailment penalties quantified to the kWh.
+              </p>
+            </div>
+            
+            {/* Visual: Mini Alarm log */}
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-3 space-y-1.5 select-none font-mono text-[9px]">
+              <div className="flex justify-between items-center text-red-500 bg-red-50 border border-red-100 px-2 py-1 rounded">
+                <span>[INV-07] DC Ground Fault</span>
+                <span className="font-bold">-4.5 MWh</span>
+              </div>
+              <div className="flex justify-between items-center text-amber-600 bg-amber-50 border border-amber-100 px-2 py-1 rounded">
+                <span>[SUB-03] Grid Curtailment</span>
+                <span className="font-bold">-2.1 MWh</span>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+
+        {/* Card 6: Automated Distribution at Scale (col-span-3) */}
+        <SectionWrapper delay={0.6} className="md:col-span-3">
+          <div className="p-8 bg-white border border-slate-100 rounded-3xl shadow-xl hover:shadow-2xl hover:border-slate-200 transition-all duration-500 h-full flex flex-col md:flex-row gap-8 justify-between relative overflow-hidden group">
+            <div className="flex-1 flex flex-col justify-between z-10">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-950 mb-3">Intelligent Scheduling & Queued Distribution</h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                  Distribute reports to hundreds of stakeholders simultaneously and reliably. Built-in message queuing and SMTP retry policies ensure report packages are sent without email server failures or limits.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-bold text-teal-600">
+                <span>Automatic Scheduling Queue Dashboard</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </div>
+            </div>
+            
+            {/* Visual: Delivery status bar */}
+            <div className="flex-1 bg-slate-950 border border-slate-800 rounded-2xl p-5 text-white flex flex-col justify-between min-h-[220px] md:min-h-0 relative select-none">
+              <div className="flex items-center justify-between border-b border-white/5 pb-2">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Queue: Weekly Performance Mailer</span>
+                <span className="text-[8px] bg-teal-500/10 border border-teal-500/20 text-teal-400 px-1.5 py-0.5 rounded font-mono">PROCESSING</span>
+              </div>
+              
+              <div className="space-y-3 my-4">
+                <div className="flex items-center justify-between text-[10px]">
+                  <span className="text-slate-400">Total Recipients:</span>
+                  <span className="font-bold text-white font-mono">148 Stakeholders</span>
+                </div>
+                {/* Progress bar */}
+                <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden border border-white/10">
+                  <div className="h-full bg-teal-400 rounded-full animate-pulse" style={{ width: '74%' }}></div>
+                </div>
+                <div className="flex justify-between items-center text-[9px] text-slate-500">
+                  <span>Sent: 110 (74%)</span>
+                  <span>Failed: 0 (0%)</span>
+                  <span className="text-teal-400 font-bold animate-pulse">Delivering...</span>
+                </div>
+              </div>
+              
+              <div className="text-[8px] font-mono text-slate-500 pt-2 border-t border-white/5 flex justify-between items-center">
+                <span>Relay server: SMTP-01.AEPL</span>
+                <span className="text-teal-400 font-bold uppercase">SMTP Secure Connected</span>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+
       </div>
     </div>
   </section>
