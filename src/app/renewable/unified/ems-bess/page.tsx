@@ -2,7 +2,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Battery, Zap, BarChart3, TrendingUp, Sun, Wind, CheckCircle2, Activity, Shield, Clock, DollarSign, Monitor, Eye, Wrench, AlertTriangle, Layers } from "lucide-react";
 import { EMSHeroDashboards, HybridPlantDashboard } from "@/components/DashboardMockups";
-import BessFeaturesShowcase from "@/components/BessFeaturesShowcase";
+import BessFeaturesAlternating from "@/components/BessFeaturesAlternating";
 
 export const metadata = {
  title: "Energy Management System - BESS | Unified Renewable Solutions | Adaptive Engineering",
@@ -88,7 +88,7 @@ export default function Page() {
  </section>
 
   {/* FEATURES & BENEFITS */}
-  <BessFeaturesShowcase />
+  <BessFeaturesAlternating />
 
  {/* HYBRID INTEGRATION */}
  <section className="py-24 bg-transparent text-white relative z-10">
