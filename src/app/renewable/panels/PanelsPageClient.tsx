@@ -262,6 +262,72 @@ export default function PanelsPageClient() {
         </div>
       </section>
 
+      {/* 1.5 OUR EXPERTISE (Intelligent Design & Engineering Strength) */}
+      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-white/5">
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            {/* Left Block: Description */}
+            <div className="lg:col-span-7">
+              <SectionWrapper>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">
+                  <Award className="w-4 h-4" />
+                  <span>Our Expertise</span>
+                </div>
+                
+                <h2 className="text-3xl md:text-5xl font-bold font-heading mb-8 leading-tight text-white">
+                  Intelligent Design &<br />
+                  Solid Engineering Strength
+                </h2>
+
+                <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
+                  <p>
+                    The core strength of our best-in-class Electrical Panels is our intelligent design concepts and the way they are implemented. With over 17+ years of experience, we meet the complex and varying needs of customers with a wide range of tailor-made products.
+                  </p>
+                  <p>
+                    Our solid engineering strength allows us to provide a full range of electric and automation solutions from conceptualizing, designing, manufacturing, installing, and supporting in-house systems.
+                  </p>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Right Block: Ahmedabad Facility Feature Card */}
+            <div className="lg:col-span-5">
+              <SectionWrapper delay={0.2}>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[40px] pointer-events-none"></div>
+                  
+                  <h3 className="text-xl font-bold font-heading text-white mb-4">State of the Art Facility</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed mb-6 font-medium">
+                    Our comprehensive manufacturing facility at Ahmedabad spread across 65,000 sq.ft. is equipped with basic and advanced machineries.
+                  </p>
+
+                  <div className="space-y-4">
+                    {[
+                      { title: "Advanced Sheet Metal Fab", desc: "Equipped with CNC laser cutting and heavy punching tools." },
+                      { title: "Precision Assembly Line", desc: "Managed under the supervision of highly skilled professionals." },
+                      { title: "In-house Testing Lab", desc: "Equipped with calibrated HT, IR, and Megger test systems." }
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex gap-3">
+                        <CheckCircle2 className="w-4.5 h-4.5 text-primary shrink-0 mt-0.5" />
+                        <div>
+                          <h4 className="text-xs font-bold text-white">{item.title}</h4>
+                          <p className="text-[11px] text-gray-400 mt-0.5 leading-relaxed">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* 2. PANEL RANGE (State-Based Switchboard Drawer) */}
       <section id="panel-range" className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
@@ -450,6 +516,51 @@ export default function PanelsPageClient() {
         </div>
       </section>
 
+      {/* 3.5 BENEFITS SECTION (Clean Light Theme) */}
+      <section className="py-24 bg-white text-slate-900 relative z-20 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Operational Benefits</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">Why Choose AEPL Panels?</h2>
+              <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+                Discover the engineering advantages and operational benefits of our custom-built electrical and automation panels.
+              </p>
+            </SectionWrapper>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Enhanced Safety", desc: "Engineered with maximum protection, type-tested short circuit compliance, and touch-safe configurations.", icon: <Shield className="w-6 h-6 text-primary" /> },
+              { title: "Better Energy Efficiency", desc: "Intelligent components and busbar designs minimize electrical resistance and optimize power delivery.", icon: <Zap className="w-6 h-6 text-primary" /> },
+              { title: "Increased Reliability", desc: "Heavy-duty components and robust enclosures ensure failure-free operations in extreme industrial environments.", icon: <Activity className="w-6 h-6 text-primary" /> },
+              { title: "Equipment Optimization", desc: "Integrated power controls and protectors improve efficiency and maximize the service life of connected machinery.", icon: <Cpu className="w-6 h-6 text-primary" /> },
+              { title: "Lesser Maintenance", desc: "High-integrity connections and dust-proof layouts significantly reduce maintenance windows and operations cost.", icon: <Settings className="w-6 h-6 text-primary" /> },
+              { title: "IoT Ready Capabilities", desc: "Built-in smart sensors and communication interfaces for real-time telemetry, SCADA, and remote monitoring.", icon: <Gauge className="w-6 h-6 text-primary" /> },
+              { title: "Internationally Compliant", desc: "Manufactured in accordance with local and global standards, fully prepared for export and multi-region deployment.", icon: <Award className="w-6 h-6 text-primary" /> },
+              { title: "Spike & Transient Protection", desc: "Equipped with advanced surge suppressors (SPDs) protecting sensitive automation components from grid spikes.", icon: <Sliders className="w-6 h-6 text-primary" /> },
+              { title: "Dust Proof Design", desc: "Fully sealed IP55 weatherproof enclosures preventing particulate ingress and guaranteeing optimal component life.", icon: <Layers className="w-6 h-6 text-primary" /> }
+            ].map((benefit, idx) => (
+              <SectionWrapper key={idx} delay={idx * 0.05}>
+                <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 md:p-8 hover:bg-slate-100/50 hover:border-slate-300 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center mb-6 shadow-sm">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-lg font-bold mb-3 font-heading leading-tight text-slate-950">{benefit.title}</h3>
+                    <p className="text-slate-500 text-xs leading-relaxed font-medium">
+                      {benefit.desc}
+                    </p>
+                  </div>
+                </div>
+              </SectionWrapper>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* 4. ELECTRICAL POWER SYSTEM ANALYSIS (Interactive ETAP Simulator Console) */}
       <section className="py-28 bg-transparent text-white relative z-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
@@ -580,65 +691,74 @@ export default function PanelsPageClient() {
             </div>
           </div>
 
-          {/* EPSA Benefits Table */}
-          <SectionWrapper>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Card 1: Core Benefits */}
-              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-[60px] pointer-events-none"></div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
-                    <Shield className="w-5 h-5 text-primary" /> Core Benefits
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[
-                      "Enhanced safety",
-                      "Better energy efficiency",
-                      "Increased reliability",
-                      "Increased efficiency & optimization",
-                      "Lesser maintenance requirements",
-                      "IoT ready & smart integrations",
-                      "Internationally compliant",
-                      "Spike & transient protection",
-                      "Dust proof enclosure options"
-                    ].map((benefit, idx) => (
-                      <div key={idx} className="flex items-start gap-3 bg-white/5 border border-white/5 p-3.5 rounded-xl hover:border-primary/20 hover:bg-white/10 transition-all duration-300">
-                        <CheckCircle2 className="text-primary w-4.5 h-4.5 shrink-0 mt-0.5" />
-                        <span className="text-gray-300 text-xs leading-relaxed font-semibold font-sans">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+        </div>
+      </section>
 
-              {/* Card 2: Value Creation */}
-              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm">
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-teal-500/5 rounded-full blur-[60px] pointer-events-none"></div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
-                    <Award className="w-5 h-5 text-teal-400" /> Value Creation & Quality
-                  </h3>
-                  <div className="grid grid-cols-1 gap-3.5">
-                    {[
-                      "TYPE Test Certificate: 50KA, 65KA Short circuit, IP55, Temperature rise (4000Amp)",
-                      "ISO 9001:2015 certified by TUV Nord for Quality Management System",
-                      "Inhouse Testing Facility – HT, IR and Megger",
-                      "Vertical expertise like Renewable, Water and Infra Projects",
-                      "Products and accessories suited to satisfy local and global needs",
-                      "Superior quality products meeting stringent safety standards",
-                      "On time delivery guarantees highest level of 'Customer Satisfaction'",
-                      "Best in class 'Customer Service'"
-                    ].map((valueItem, idx) => (
-                      <div key={idx} className="flex items-start gap-3 bg-white/5 border border-white/5 p-3.5 rounded-xl hover:border-primary/20 hover:bg-white/10 transition-all duration-300">
-                        <CheckCircle2 className="text-teal-400 w-4.5 h-4.5 shrink-0 mt-0.5" />
-                        <span className="text-gray-300 text-xs leading-relaxed font-semibold font-sans">{valueItem}</span>
-                      </div>
-                    ))}
-                  </div>
+      {/* 4.5 VALUE CREATION SECTION (Dark Premium) */}
+      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-white/5">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <span className="text-xs font-bold text-teal-400 uppercase tracking-widest block mb-4">Value Creation</span>
+              <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 text-white">Quality Benchmarks & Standards</h2>
+              <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
+                Our commitment to superior quality and international standards guarantees highest level of customer satisfaction.
+              </p>
+            </SectionWrapper>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Column 1: Certifications & Testing */}
+            <SectionWrapper>
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm h-full">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-[40px] pointer-events-none"></div>
+                <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
+                  <ShieldCheck className="w-5 h-5 text-primary" /> Technical Certifications & Testing
+                </h3>
+                
+                <div className="space-y-4">
+                  {[
+                    { title: "Type Test Certificate", desc: "50KA, 65KA short circuit, IP55 protection, and 4000Amp temperature rise certified." },
+                    { title: "ISO 9001:2015 Certified", desc: "Certified by TUV Nord for Quality Management Systems, ensuring process control." },
+                    { title: "In-house Test Facility", desc: "Equipped with dedicated testing benches for HT, IR, and Megger insulation diagnostics." }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl hover:border-primary/20 transition-all duration-300">
+                      <h4 className="text-sm font-bold text-white mb-1">{item.title}</h4>
+                      <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-          </SectionWrapper>
+            </SectionWrapper>
+
+            {/* Column 2: Customer Satisfaction & Global Standards */}
+            <SectionWrapper delay={0.2}>
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm h-full">
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-500/5 rounded-full blur-[40px] pointer-events-none"></div>
+                <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
+                  <Award className="w-5 h-5 text-teal-400" /> Customer Satisfaction & Services
+                </h3>
+
+                <div className="space-y-4">
+                  {[
+                    { title: "Vertical Engineering Expertise", desc: "Proven track record in engineering switchboards for Renewable Energy, Water, and Infra projects." },
+                    { title: "Custom Solutions for Local & Global Needs", desc: "Design and accessories tailored to satisfy both local regulations and stringent global requirements." },
+                    { title: "On-Time Delivery Guarantee", desc: "Rigorous planning and consulting ensure we deliver custom solutions on schedule with highest quality standards." },
+                    { title: "Best-in-Class Customer Service", desc: "Continuous technical support, documentation, site support, and customized post-commissioning service." }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl hover:border-teal-500/20 transition-all duration-300">
+                      <h4 className="text-sm font-bold text-white mb-1">{item.title}</h4>
+                      <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </SectionWrapper>
+
+          </div>
         </div>
       </section>
 
