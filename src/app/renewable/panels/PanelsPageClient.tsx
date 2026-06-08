@@ -19,54 +19,76 @@ export default function PanelsPageClient() {
     {
       title: "LT Panels",
       icon: <Zap className="w-6 h-6" />,
-      desc: "PCC, MCC, APFC, Bus Duct, and custom control panels rated up to 6300A for industrial and utility applications.",
+      desc: "Power Control Centre (PCC), Motor Control Centre (MCC), Intelligent MCC, APFC, PDB/LDB, and Change Over panels rated up to 6300A.",
       specs: [
         { label: "Rated Current", value: "Up to 6300A" },
-        { label: "Short Circuit Rating", value: "100kA for 1s" },
-        { label: "IP Protection Class", value: "IP42 / IP52 / IP54 / IP55" },
-        { label: "Busbar Material", value: "99.9% Electrolytic Copper / Aluminium" },
-        { label: "Form Configuration", value: "Form 3b / Form 4a / Form 4b" }
+        { label: "Short Circuit Rating", value: "50kA / 65kA Type Tested" },
+        { label: "IP Protection Class", value: "IP55 Certified" },
+        { label: "Busbar Temp Rise", value: "4000A Rating" },
+        { label: "Quality Certification", value: "ISO 9001:2015" }
       ],
-      typesList: ["Power Control Centers (PCC)", "Motor Control Centers (MCC)", "APFC Panels (Harmonic Filtered)", "Busducts & Sandwiched Busways"]
+      typesList: [
+        "Power Control Centre (PCC)", 
+        "Motor Control Centre (MCC)", 
+        "Intelligent Motor Control Centre (IMCC)", 
+        "Automatic Power Factor Correction (APFC)", 
+        "PDB/LDB Panels", 
+        "Change Over Panels"
+      ]
     },
     {
-      title: "HT Panels",
+      title: "HT & Power Panels",
       icon: <ShieldCheck className="w-6 h-6" />,
-      desc: "11kV and 33kV VCB panels, Ring Main Units (RMU), and metering panels for substation applications.",
+      desc: "11kV/33kV HT Panels, Control and Relay Panels (CRP), and high-voltage substation switchgear.",
       specs: [
-        { label: "Rated System Voltage", value: "11kV / 22kV / 33kV" },
-        { label: "Short Time Current", value: "26.3kA / 31.5kA for 3s" },
+        { label: "Rated System Voltage", value: "11kV / 33kV" },
         { label: "Breaker Medium", value: "Vacuum Circuit Breaker (VCB)" },
-        { label: "Internal Arc Class", value: "IAC AFLR 31.5kA/1s" },
-        { label: "Enclosure Type", value: "Metal Clad LSC2B-PM" }
+        { label: "Contacts Coating", value: "Silver Plated Contacts" },
+        { label: "Inhouse Testing", value: "HT, IR & Megger Tested" },
+        { label: "Quality Standards", value: "TUV Nord QMS Certified" }
       ],
-      typesList: ["Substation Incomer VCBs", "Ring Main Units (RMU)", "HT Metering Kiosks", "Outdoor Breaker Enclosures"]
+      typesList: [
+        "HT Panel (11kV / 33kV)", 
+        "Control and Relay Panel (CRP)", 
+        "Substation Incomer VCBs", 
+        "HT Metering Kiosks"
+      ]
     },
     {
-      title: "Solar Panels",
+      title: "Solar & Battery Panels",
       icon: <Activity className="w-6 h-6" />,
-      desc: "ACDB, DCDB, String Combiner Boxes, Inverter Duty Panels with IP65 protection for harsh outdoor environments.",
+      desc: "AC/DB Panels, UPS and Battery Isolation Panels, and Combiner Boxes designed for renewable energy systems.",
       specs: [
         { label: "DC Input Voltage", value: "Up to 1500V DC" },
         { label: "AC Output Voltage", value: "Up to 800V AC" },
-        { label: "Protection Index", value: "IP65 / IP66 Outdoor Weatherproof" },
-        { label: "Surge Protection", value: "Type 1 + Type 2 DC SPDs" },
-        { label: "Communication Protocol", value: "Modbus TCP / RTU / Fiber Optic" }
+        { label: "Weatherproof Class", value: "IP65 Weatherproof" },
+        { label: "Surge Protection", value: "Type 1 + Type 2 SPDs" },
+        { label: "Isolation Configuration", value: "UPS & Battery Isolation" }
       ],
-      typesList: ["AC Distribution Boards (ACDB)", "DC Distribution Boards (DCDB)", "String Combiner & Monitoring Boxes", "Inverter Duty LT Panels"]
+      typesList: [
+        "AC/DB Panels", 
+        "UPS and Battery Isolation Panels", 
+        "String Combiner & Monitoring Boxes", 
+        "Inverter Duty LT Panels"
+      ]
     },
     {
       title: "Automation Panels",
       icon: <Cpu className="w-6 h-6" />,
-      desc: "PLC panels, VFD panels, relay protection panels, and SCADA interface panels with pre-loaded configurations.",
+      desc: "PLC panels, Soft Starter & VFD panels, and custom SCADA telemetry automation solutions.",
       specs: [
         { label: "PLC Redundancy", value: "Hot-Standby Dual Processor" },
-        { label: "VFD Filtering", value: "Harmonics AHF / Line Reactors" },
-        { label: "Control System", value: "Siemens / Rockwell / Schneider" },
-        { label: "Network Ring Topology", value: "MRP / DLR High-Speed Fiber" },
-        { label: "Surge & EMI Protection", value: "Integrated Shielding & TVSS" }
+        { label: "VFD Filtering", value: "Harmonic Filters & Line Reactors" },
+        { label: "SCADA Ready", value: "I/O Marshalling Compartment" },
+        { label: "Controller Support", value: "Siemens / Rockwell / Schneider" },
+        { label: "Network Integration", value: "Modbus TCP / RTU / Fiber" }
       ],
-      typesList: ["SCADA Remote I/O Marshalling Panels", "Variable Frequency Drive (VFD) Panels", "DCS/RTU Automation Cabinets", "Relay Control & Annunciation Panels"]
+      typesList: [
+        "PLC Panels", 
+        "Soft Starter and VFD Panels", 
+        "Automation Panels", 
+        "SCADA Remote I/O Panels"
+      ]
     }
   ];
 
@@ -193,7 +215,7 @@ export default function PanelsPageClient() {
                   <span className="gradient-heading">Panels</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
-                  Engineering type-tested HT & LT panels alongside comprehensive ETAP-based power system analysis.
+                  The core strength of our best-in-class Electrical Panels is our intelligent design concepts and the way they are implemented. With over 17+ years of experience, we meet the complex and varying needs of customers with a wide range of tailor-made products.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-teal-500/20">
@@ -209,21 +231,29 @@ export default function PanelsPageClient() {
             {/* Hero Stats Bento */}
             <SectionWrapper delay={0.3}>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
-                  <div className="text-4xl md:text-5xl font-black text-white mb-1 font-mono tracking-tight">40k<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-2">Sq. Ft. Manufacturing Space</span>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">17<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Years Experience</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
-                  <div className="text-4xl md:text-5xl font-black text-white mb-1 font-mono tracking-tight">25k<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-2">Panels Dispatched & Commissioned</span>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">2,500<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Panels / Year</span>
                 </div>
-                <div className="col-span-2 bg-gradient-to-br from-primary/10 to-teal-500/5 border border-primary/30 rounded-3xl p-8 hover:border-primary/50 transition-all duration-300 flex items-center justify-between">
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">500<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Satisfied Customers</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">1,000<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Projects Delivered</span>
+                </div>
+                <div className="col-span-2 bg-gradient-to-br from-primary/10 to-teal-500/5 border border-primary/30 rounded-3xl p-6 hover:border-primary/50 transition-all duration-300 flex items-center justify-between">
                   <div>
-                    <div className="text-2xl font-bold text-white mb-1">IS/IEC 61439</div>
-                    <span className="text-xs text-gray-300">Type-tested for short circuit & temperature rise</span>
+                    <div className="text-xl font-bold text-white mb-1">65,000+ sq. ft.</div>
+                    <span className="text-[11px] text-gray-300 block">Comprehensive manufacturing facility in Ahmedabad</span>
                   </div>
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
-                    <ShieldCheck className="w-6 h-6" />
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary shrink-0">
+                    <ShieldCheck className="w-5 h-5" />
                   </div>
                 </div>
               </div>
@@ -239,8 +269,8 @@ export default function PanelsPageClient() {
             <SectionWrapper>
               <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Product Catalog</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">Engineered Panel Range</h2>
-              <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
-                Explore our comprehensive range of high and low-voltage custom-built switchboards manufactured for solar, utility, and heavy industries.
+              <p className="text-slate-500 max-w-2xl mx-auto text-sm leading-relaxed">
+                Our State of the Art comprehensive manufacturing facility at Ahmedabad spread across 65,000 sq.ft. is equipped with basic and advanced machinery, delivering optimum quality components deployed under the supervision of highly skilled professionals.
               </p>
             </SectionWrapper>
           </div>
@@ -348,7 +378,7 @@ export default function PanelsPageClient() {
                   Manufacturing Excellence
                 </h2>
                 <p className="text-slate-600 text-base leading-relaxed font-medium mb-10">
-                  Our ISO-certified manufacturing process combines CNC automation, advanced busbar layout computations, and strict type-testing to deliver industry-leading switchboards.
+                  Our solid engineering strength allows us to provide a full range of electrical and automation solutions, spanning conceptualizing, designing, manufacturing, installing, and supporting in-house systems.
                 </p>
 
                 {/* Timeline Buttons list */}
@@ -552,27 +582,59 @@ export default function PanelsPageClient() {
 
           {/* EPSA Benefits Table */}
           <SectionWrapper>
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] pointer-events-none"></div>
-              
-              <div className="relative z-10">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-8 text-center font-heading">
-                  Why Professional ETAP Simulation Matters
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-                  {[
-                    "Protects electrical assets from massive thermal/magnetic fault stresses",
-                    "Reduces power bills via reactive power and harmonic calculations",
-                    "Assures strict compliance with IEEE/IS grid synchronization standards",
-                    "Protects operators from step and touch potential shock loops",
-                    "Reduces installation capital expenditure via optimized sizing grids",
-                    "Speeds up grid synchronization approval with compliant drawings"
-                  ].map((benefit, bIdx) => (
-                    <div key={bIdx} className="flex items-start gap-3 bg-white/5 border border-white/5 p-4 rounded-xl hover:border-primary/20 hover:bg-white/10 transition-all duration-300">
-                      <CheckCircle2 className="text-primary w-5 h-5 shrink-0 mt-0.5" />
-                      <span className="text-gray-300 text-xs leading-relaxed font-semibold font-sans">{benefit}</span>
-                    </div>
-                  ))}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Card 1: Core Benefits */}
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-[60px] pointer-events-none"></div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
+                    <Shield className="w-5 h-5 text-primary" /> Core Benefits
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {[
+                      "Enhanced safety",
+                      "Better energy efficiency",
+                      "Increased reliability",
+                      "Increased efficiency & optimization",
+                      "Lesser maintenance requirements",
+                      "IoT ready & smart integrations",
+                      "Internationally compliant",
+                      "Spike & transient protection",
+                      "Dust proof enclosure options"
+                    ].map((benefit, idx) => (
+                      <div key={idx} className="flex items-start gap-3 bg-white/5 border border-white/5 p-3.5 rounded-xl hover:border-primary/20 hover:bg-white/10 transition-all duration-300">
+                        <CheckCircle2 className="text-primary w-4.5 h-4.5 shrink-0 mt-0.5" />
+                        <span className="text-gray-300 text-xs leading-relaxed font-semibold font-sans">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Value Creation */}
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-teal-500/5 rounded-full blur-[60px] pointer-events-none"></div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
+                    <Award className="w-5 h-5 text-teal-400" /> Value Creation & Quality
+                  </h3>
+                  <div className="grid grid-cols-1 gap-3.5">
+                    {[
+                      "TYPE Test Certificate: 50KA, 65KA Short circuit, IP55, Temperature rise (4000Amp)",
+                      "ISO 9001:2015 certified by TUV Nord for Quality Management System",
+                      "Inhouse Testing Facility – HT, IR and Megger",
+                      "Vertical expertise like Renewable, Water and Infra Projects",
+                      "Products and accessories suited to satisfy local and global needs",
+                      "Superior quality products meeting stringent safety standards",
+                      "On time delivery guarantees highest level of 'Customer Satisfaction'",
+                      "Best in class 'Customer Service'"
+                    ].map((valueItem, idx) => (
+                      <div key={idx} className="flex items-start gap-3 bg-white/5 border border-white/5 p-3.5 rounded-xl hover:border-primary/20 hover:bg-white/10 transition-all duration-300">
+                        <CheckCircle2 className="text-teal-400 w-4.5 h-4.5 shrink-0 mt-0.5" />
+                        <span className="text-gray-300 text-xs leading-relaxed font-semibold font-sans">{valueItem}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
