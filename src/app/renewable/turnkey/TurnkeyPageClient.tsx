@@ -523,14 +523,14 @@ export default function TurnkeyPageClient() {
       </section>
 
       {/* Value Creation Section */}
-      <section className="py-28 bg-transparent text-white relative z-10 border-t border-white/5">
+      <section className="py-24 bg-slate-950 text-white relative z-10 border-t border-white/5">
         {/* Subtle background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionWrapper>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-primary font-bold uppercase text-xs tracking-widest mb-3 block">Corporate Competencies</span>
+              <span className="text-teal-400 font-bold uppercase text-xs tracking-widest mb-3 block">Corporate Competencies</span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">Value Creation</h2>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Empowering industrial utility and power infrastructure with engineering precision, integrated manufacturing, and comprehensive project execution.
@@ -538,68 +538,62 @@ export default function TurnkeyPageClient() {
             </div>
           </SectionWrapper>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Professional Project Management",
-                desc: "Highly Professional Project Management Team tracking E&I compliance, milestone timelines, and safety standards.",
-                icon: Compass
-              },
-              {
-                title: "Industrial E&I Solutions",
-                desc: "Complete expertise in Industrial Electrical, Automation, and Instrumentation engineering.",
-                icon: Cpu
-              },
-              {
-                title: "Turn-key E&I execution",
-                desc: "Execution of highly scalable turn-key E&I projects from layout drawing to final grid synchronization.",
-                icon: ShieldCheck
-              },
-              {
-                title: "Renewable solar/wind pedigree",
-                desc: "Deep expertise in Solar & Wind verticals with massive 68GW+ execution and monitoring experience.",
-                icon: Zap
-              },
-              {
-                title: "Government Approved licensed",
-                desc: "A-grade licensing with GWSSB (Gujarat), MPJNM, MPUDC & MPUADD (MP), UPJNM (UP), RWS&S (Odisha), and JICA Assisted (Assam).",
-                icon: Lock
-              },
-              {
-                title: "Comprehensive Water segment",
-                desc: "Complete E&I expertise in all water segments, including WTP, STP, ETP, and automated pumping telemetry.",
-                icon: Activity
-              },
-              {
-                title: "In-House manufacturing control",
-                desc: "Quality-tested HT switchgear, LT distribution panels, PCC, MCC, and ACDB panels fabricated in our Ahmedabad facility.",
-                icon: Factory
-              },
-              {
-                title: "Tunnel Turn-key execution team",
-                desc: "Experienced engineering team executing turnkey E&I solutions for large twin-tube road tunnels.",
-                icon: Network
-              }
-            ].map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <SectionWrapper key={idx} delay={idx * 0.05}>
-                  <div className="h-full p-6 bg-white/[0.02] border border-white/10 rounded-2xl hover:border-primary/50 hover:bg-white/[0.04] transition-all duration-500 group flex flex-col justify-between">
-                    <div>
-                      <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/5 text-primary flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
-                        <Icon className="w-6 h-6" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Column 1: Core E&I Capabilities */}
+            <SectionWrapper>
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm h-full">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-[40px] pointer-events-none"></div>
+                <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
+                  <ShieldCheck className="w-5 h-5 text-primary" /> E&I Engineering Capabilities
+                </h3>
+                
+                <div className="space-y-5">
+                  {[
+                    { title: "Scalable Turn-key E&I Solutions", desc: "End-to-end execution scope spanning drawing designs, switchyard setups, and final grid synchronization.", icon: <ShieldCheck className="w-5 h-5 text-primary" /> },
+                    { title: "Professional Project Management", desc: "Highly professional project management team tracking E&I compliance, milestones, and safety standards.", icon: <Compass className="w-5 h-5 text-primary" /> },
+                    { title: "Industrial Electrical & Automation", desc: "Sleek electrical engineering, custom control panel designs, and advanced PLC/SCADA configurations.", icon: <Cpu className="w-5 h-5 text-primary" /> },
+                    { title: "Renewable Energy Pedigree", desc: "Proven track record in Solar and Wind utility verticals with over 68GW+ of execution and monitoring experience.", icon: <Zap className="w-5 h-5 text-primary" /> }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl hover:border-primary/20 transition-all duration-300 flex items-start gap-4">
+                      <div className="mt-1 text-primary shrink-0">{item.icon}</div>
+                      <div>
+                        <h4 className="text-sm font-bold text-white mb-1">{item.title}</h4>
+                        <p className="text-xs text-gray-300 leading-relaxed font-medium">{item.desc}</p>
                       </div>
-                      <h4 className="text-white font-bold text-base mb-3 group-hover:text-primary transition-colors duration-300 leading-snug">
-                        {item.title}
-                      </h4>
-                      <p className="text-slate-400 text-xs leading-relaxed font-medium">
-                        {item.desc}
-                      </p>
                     </div>
-                  </div>
-                </SectionWrapper>
-              );
-            })}
+                  ))}
+                </div>
+              </div>
+            </SectionWrapper>
+
+            {/* Column 2: Sectors & Government Approvals */}
+            <SectionWrapper delay={0.2}>
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm h-full">
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-500/5 rounded-full blur-[40px] pointer-events-none"></div>
+                <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
+                  <Award className="w-5 h-5 text-teal-400" /> Verticals & Credentials
+                </h3>
+
+                <div className="space-y-5">
+                  {[
+                    { title: "Government Approved Contractor", desc: "Licensed A-grade contracting credentials with GWSSB (Gujarat), MPJNM, MPUDC & MPUADD (MP), UPJNM (UP), RWS&S (Odisha), and JICA Assisted (Assam).", icon: <Lock className="w-5 h-5 text-teal-400" /> },
+                    { title: "In-house Panel Manufacturing", desc: "Quality-tested HT switchgear, LT distribution panels, PCC, MCC, and ACDB panels fabricated in our Ahmedabad facility.", icon: <Factory className="w-5 h-5 text-teal-400" /> },
+                    { title: "Comprehensive Water Segment Expertise", desc: "Pioneering E&I solutions across all water segment plants, including WTP, STP, ETP, and pumping telemetry.", icon: <Activity className="w-5 h-5 text-teal-400" /> },
+                    { title: "Tunnel Turn-key E&I execution", desc: "Dedicated, highly experienced field engineering crew executing complex E&I layouts for road and traffic twin-tube tunnels.", icon: <Network className="w-5 h-5 text-teal-400" /> }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl hover:border-teal-500/20 transition-all duration-300 flex items-start gap-4">
+                      <div className="mt-1 text-teal-400 shrink-0">{item.icon}</div>
+                      <div>
+                        <h4 className="text-sm font-bold text-white mb-1">{item.title}</h4>
+                        <p className="text-xs text-gray-300 leading-relaxed font-medium">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </SectionWrapper>
+
           </div>
         </div>
       </section>
