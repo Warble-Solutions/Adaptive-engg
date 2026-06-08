@@ -1,7 +1,7 @@
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const metadata = {
  title: "Weather Monitoring System | Adaptive Engineering",
@@ -39,24 +39,24 @@ export default function Page() {
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
   <SectionWrapper>
   <div>
-  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Precision Weather Intelligence</h2>
+  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Precision Weather Integration</h2>
   <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-  Accurate Performance Ratio (PR) calculation requires precise environmental data. Our Weather Monitoring System provides industrial-grade measurements of Global Horizontal Irradiance (GHI), Global Tilted Irradiance (GTI), module temperature, ambient temperature, wind speed, and humidity. Without accurate weather data, you cannot determine whether underperformance is due to equipment issues or environmental conditions.
+  Accurate Performance Ratio (PR) calculation requires precise environmental data. SolarWiz integrates with local weather sensors and satellite weather forecasting systems to monitor Global Horizontal Irradiance (GHI), Global Tilted Irradiance (GTI), module temperature, ambient temperature, wind speed, and humidity. Without accurate weather data integration, you cannot determine whether underperformance is due to equipment issues or environmental conditions.
   </p>
   
   <div className="premium-card p-8 bg-gradient-to-br from-teal-50 to-teal-50/30 rounded-2xl border border-teal-100 shadow-md">
     <div className="grid grid-cols-3 gap-6 relative z-10 text-center">
       <div>
-        <div className="text-2xl font-black text-slate-900 mb-1">±2%</div>
-        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Irradiance Accuracy</div>
+        <div className="text-2xl font-black text-slate-900 mb-1">Live</div>
+        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Data Sync</div>
       </div>
       <div>
-        <div className="text-2xl font-black text-slate-900 mb-1">6</div>
-        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Sensor Parameters</div>
+        <div className="text-2xl font-black text-slate-900 mb-1">6+</div>
+        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Weather Parameters</div>
       </div>
       <div>
-        <div className="text-2xl font-black text-slate-900 mb-1">IEC 61724</div>
-        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Compliant</div>
+        <div className="text-2xl font-black text-slate-900 mb-1">Forecasting</div>
+        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Integrated</div>
       </div>
     </div>
   </div>
@@ -64,116 +64,17 @@ export default function Page() {
   </SectionWrapper>
   <SectionWrapper delay={0.2}>
   <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 h-[380px] group">
-    <img src="/imgs/pm-kusum/wms_station.png" alt="WMS Weather Station Pyranometer" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+    <img src="/imgs/pm-kusum/wms_station.png" alt="WMS Weather Integration" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
     <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md rounded-2xl border border-white/20">
-      <p className="text-slate-900 font-bold text-sm">Industrial Weather Station (WMS)</p>
-      <p className="text-slate-500 text-xs mt-0.5">Field-deployed Pyranometer and Back-of-module RTD sensors</p>
+      <p className="text-slate-900 font-bold text-sm">Weather Forecasting & Monitoring</p>
+      <p className="text-slate-500 text-xs mt-0.5">Automated meteorological data processing & charting</p>
     </div>
   </div>
   </SectionWrapper>
   </div>
   </div>
   </section>
-
- {/* Sensor Suite */}
- <section className="py-32 bg-transparent text-white relative z-10">
- <div className="max-w-7xl mx-auto px-6">
- <div className="text-center mb-16">
- <SectionWrapper>
- <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">Sensor Suite</h2>
- </SectionWrapper>
- </div>
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
- <SectionWrapper delay={0}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <Activity className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">Pyranometer</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- Secondary standard pyranometer for GHI measurement. Reference cell for GTI. Both calibrated with NABL traceability.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.1}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <Zap className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">Temperature Sensors</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- PT100 RTD sensors for module back-surface temperature and ambient temperature with ±0.3°C accuracy.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.2}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <ShieldCheck className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">Wind Sensor</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- Ultrasonic anemometer for wind speed and direction measurement. No moving parts — maintenance-free operation.
- </p>
- </div>
- </SectionWrapper>
- <SectionWrapper delay={0.3}>
- <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start">
- <div className="mb-6 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
- <Cpu className="w-6 h-6" />
- </div>
- <h3 className="text-lg font-bold mb-3 text-white leading-tight">Data Logger</h3>
- <p className="text-sm text-gray-400 leading-relaxed group-hover:text-white transition-colors flex-grow">
- Campbell Scientific compatible logger with 1-second sampling, 1-minute averaging, and Modbus/MQTT output.
- </p>
- </div>
- </SectionWrapper>
- </div>
- </div>
- </section>
-
- {/* Installation Standards */}
- <section className="py-24 bg-white relative z-20">
- <div className="max-w-7xl mx-auto px-6">
- <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
- <SectionWrapper>
- <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Installation Standards</h2>
- </SectionWrapper>
- <SectionWrapper delay={0.2}>
- <div className="bg-slate-50 rounded-3xl p-10 border border-slate-100">
- <ul className="space-y-5">
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Mounting structures as per IEC 61724 guidelines for PV monitoring</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Calibration certificates with NABL accreditation traceability</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Anti-soiling coating on pyranometer domes for reduced maintenance</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Lightning protection with dedicated earth pit for weather station</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Direct integration with SolarWiz for automated PR calculation</span>
- </li>
- <li className="flex items-start gap-4 text-slate-700">
- <CheckCircle2 className="text-primary w-5 h-5 mt-1 shrink-0" />
- <span className="leading-relaxed">Annual recalibration service available with on-site replacement</span>
- </li>
- </ul>
- </div>
- </SectionWrapper>
- </div>
- </div>
- </section>
-
 
  {/* OTHER SOLUTIONS */}
  <section className="py-24 bg-white relative z-20">

@@ -1,0 +1,160 @@
+<USER_REQUEST>
+we are going to make a few more new pages now 
+it'll be like 
+industrial IoT (under it will be)
+SolarWiz
+WaterWiz
+MachineWiz
+
+main industrial IoT page content 
+
+SolarWiz
+Our 17+ years of extensive industry experience coupled with adaptation of new technologies and working with all major Industry giants ensures:
+
+More power to make the most of solar power plants
+Complete installation of Solar Plant Monitoring Solutions in-line with tailored specifications
+Fast and reliable project execution
+
+WaterWiz
+We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Water Industry including Drinking Water, Waste Water and Effluent Treatment.
+
+MachineWiz
+Over years, our customers are achieving operational excellence using our innovative technology backed by years of experience in Machine Learning, Production Monitoring, Condition Monitoring, Predictive Maintenance, Process Optimization and Mobile Asset Management.
+
+SolarWiz content 
+SolarEdge
+An IOT based Edge Computing Device to acquire data from Renewable Assets Equipments. It comprises Intelligent Data Pre-Processing and Synchronize with SolarPro. The SolarEdge stores and forwards data during Cloud Connection Interruption and Restore.
+SolarPro
+A cloud-based comprehensive, highly secure, available, reliable and scalable software package for data monitoring, analysis, reporting, O&M and multi-plant configuration.
+
+A Comprehensive Set of Functions
+Monitor Renewable Assets from Anywhere
+Rich Set of Dashboards to Enhance Plant Performance
+Central dashboards to monitor entire renewable portfolio
+Site dashboards for Plant KPIs
+Equipment dashboards for Performance Enhancement (WMS, Inverters, Strings, Transformers, MFM & Switchgears)
+Display of parameter values and trends to get more insights on current condition/s
+Choose your own Color Themes
+
+Analyze Asset Performances
+Advanced Analytic Toolset to convert data into action
+Advanced Analytics Tools Library
+Compare the ‘Best’ and 
+<truncated 3914 bytes>
+ scalable solution for manufacturers that can be self-installed to simply gather data from any piece of machinery and provide actionable machine insights in a matter of minutes.
+
+Collect Data From Machine Controller
+
+Flexible Deployment
+
+Transform Data Instantly
+
+Remote Edge Management
+ANALYZE
+
+MachineWiz Data Platform guarantees that all your data is captured and processed in one centralised location so that you can have secure, reliable remote access from any part of the world.
+
+
+Remote Data Collection / Storage
+
+Data Integration
+
+Rules Based Workflows
+
+API Access
+
+ACTION
+Our out-of-the-box applications give use cases that enable rapid actionability including real-time dashboards, historical information, rules-based workflows, and text/email alerts that bring optimised processes to factory employees.
+
+Production Monitoring
+
+Condition Monitoring
+
+Predictive Maintenance
+
+Process Optimization
+
+Assest Management
+
+Build Your Own Apps
+
+Industries
+
+Plastic
+Manufacturing
+→
+
+
+Pharma Machine
+Manufacturing
+→
+
+
+Packaging Machine
+Manufacturing
+→
+
+
+Textile Machine
+Manufacturing
+→
+
+
+Machine
+Tools
+→
+
+
+Process Plant
+Industries
+→
+
+Applications
+
+Production
+Monitoring
+→
+
+
+Condition
+Monitoring
+→
+
+
+Predictive
+Maintenance
+→
+
+
+Process
+Optimization
+→
+
+
+Asset
+Management
+→
+
+
+The MachineWiz Value
+Ease In Deployment
+Plug-and-play, simple to use, and easy to scale.
+
+Autonomous Data Collection
+Autonomous collection of production data without any manual intervention.
+
+Drive Immediate Value
+Out-of-the-box apps without any initial development.
+
+Connects To Everything
+Easily capture data from modern and legacy assets.
+
+Deep Manufacturing Vertical Expertise
+Provides necessary context to enable data actionability.
+
+Drive Systems With Accurate Production Data
+Extensible and flexible. Built to drive ERP/MES systems.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-06-08T12:41:58+05:30.
+</ADDITIONAL_METADATA>

@@ -123,7 +123,7 @@ export default function Page() {
  title: "SCADA",
  icon: <Monitor className="w-7 h-7" />,
  href: "/renewable/unified/scada",
- bullets: ["Flexible & Scalable Architecture", "Rich set of Renewable Libraries", "Seamless Handling of 10 Lacs+ Tags", "Refined interface from decades of experience"],
+ bullets: ["Flexible & Scalable Architecture", "Rich set of Renewable Libraries", "Seamless Handling of 10 Lakh+ tags", "Refined interface from decades of experience"],
  gradient: "from-teal-500 to-teal-500"
  },
  {

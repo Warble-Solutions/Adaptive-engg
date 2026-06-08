@@ -2,7 +2,7 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Server, Lock, Network, Shield, AlertTriangle } from "lucide-react";
-import TelemetryFlowSimulator from "@/components/TelemetryFlowSimulator";
+
 
 export const metadata = {
   title: "Telemetry System | PM-KUSUM Compliance | Adaptive Engineering",
@@ -224,30 +224,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 3 — Live Telemetry Packet Flow simulator */}
-      <section className="py-28 bg-slate-950 text-white relative z-20 border-b border-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-16 max-w-2xl mx-auto">
-              <span className="text-xs font-bold text-teal-400 uppercase tracking-widest block mb-4">
-                Interactive Link Overview
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold font-heading">
-                Telemetry Routing Architecture
-              </h2>
-              <p className="text-gray-400 leading-relaxed text-sm mt-3">
-                Inspect how solar parameters are acquired by local RTUs, encrypted, and transmitted directly to load dispatch centers over national protocols.
-              </p>
-            </div>
-          </SectionWrapper>
 
-          <SectionWrapper delay={0.2}>
-            <div className="max-w-5xl mx-auto">
-              <TelemetryFlowSimulator />
-            </div>
-          </SectionWrapper>
-        </div>
-      </section>
 
       {/* SECTION 4 — System Components Grid */}
       <section className="py-28 bg-white relative z-20 border-b border-slate-100">
@@ -304,50 +281,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 5 — Data Points Transmitted */}
-      <section className="py-28 bg-slate-50 relative z-20 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            {/* Left Column — Title (5 cols) */}
-            <div className="lg:col-span-5 space-y-4 text-left">
-              <SectionWrapper>
-                <span className="text-xs font-bold text-primary uppercase tracking-widest">
-                  Acquisition Parameters
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading leading-tight">
-                  Data Points Transmitted
-                </h2>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Our RTUs collect and normalize physical data streams across the plant boundary, transmitting updates with sub-second timestamps to central SLDC database arrays.
-                </p>
-              </SectionWrapper>
-            </div>
 
-            {/* Right Column — Grid list of data points (7 cols) */}
-            <div className="lg:col-span-7">
-              <SectionWrapper delay={0.2}>
-                <div className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                  {[
-                    "Active Power (MW), Reactive Power (MVAR)",
-                    "Power Factor & Apparent Power export",
-                    "Bus voltage & frequency at interconnection",
-                    "Breaker status (trip, open, close)",
-                    "Tap position & transformer indicators",
-                    "Cumulative active energy output (MWh)",
-                    "Irradiance, wind speed, module temp",
-                    "UPS battery health & cabinet temp"
-                  ].map((point, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-xl transition-colors">
-                      <CheckCircle2 className="text-primary w-4.5 h-4.5 mt-0.5 shrink-0" />
-                      <span className="text-xs text-slate-700 font-bold leading-normal">{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </SectionWrapper>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* OTHER SOLUTIONS */}
       <section className="py-24 bg-white relative z-20">

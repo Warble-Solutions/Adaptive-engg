@@ -62,7 +62,7 @@ export default function Footer() {
                         <li><Link href="/renewable/unified" className="hover:text-primary hover:pl-1 transition-all">Unified Renewable Solution</Link></li>
                         <li><Link href="/renewable/panels" className="hover:text-primary hover:pl-1 transition-all">Electrical Panel</Link></li>
                         <li><Link href="/renewable/turnkey" className="hover:text-primary hover:pl-1 transition-all">Turnkey E&I</Link></li>
-                        <li><Link href="/pm-kusum/iot-scada" className="hover:text-primary hover:pl-1 transition-all">PM KUSUM & IoT SCADA</Link></li>
+                        <li><Link href="/pm-kusum" className="hover:text-primary hover:pl-1 transition-all">PM-KUSUM</Link></li>
                         <li><Link href="/infrastructure/tunnel" className="hover:text-primary hover:pl-1 transition-all">Tunnel Infrastructure</Link></li>
                         <li><Link href="/privacy-policy" className="hover:text-primary hover:pl-1 transition-all">Privacy Policy</Link></li>
                         <li><Link href="/terms" className="hover:text-primary hover:pl-1 transition-all">Terms & Conditions</Link></li>

@@ -143,26 +143,26 @@ export default function Page() {
             {[
               {
                 icon: <Layers className="w-7 h-7" />,
-                title: "Efficient Process Control of MBR & RO",
-                desc: "Precision membrane automation routines, cleaning cycle (CIP) triggers based on trans-membrane pressure (TMP) parameters, and custom flow-reversal controls for reverse osmosis grids.",
+                title: "Efficient process control of MBR and RO",
+                desc: "Precision membrane automation routines and custom flow-reversal controls for RO grids.",
                 highlight: "Membrane Filtration"
               },
               {
                 icon: <Eye className="w-7 h-7" />,
-                title: "Up-to-Date SCADA Control",
-                desc: "SCADA systems providing real-time process diagrams, visual alarms, dosing calibration tools, and historical logging. High-speed connectivity ensures up-to-date data access.",
+                title: "SCADA for up to date data access and control",
+                desc: "Up-to-date SCADA systems providing real-time process diagrams, visual alarms, and historical logging.",
                 highlight: "SCADA & Telemetry"
               },
               {
                 icon: <BarChart3 className="w-7 h-7" />,
-                title: "Advanced Reporting & Analytics",
-                desc: "Automatic reports aggregating chemical batch draw downs, daily treated volumes, and energy usage indices. Simplifies compliance submission to environmental regulators.",
+                title: "Advanced reporting and analytics tools",
+                desc: "Automatic reports aggregating chemical draw downs and daily treated volumes for regulatory compliance.",
                 highlight: "Data Intelligence"
               },
               {
                 icon: <CloudCog className="w-7 h-7" />,
                 title: "Mobile Asset Management System",
-                desc: "Direct integration with CMMS databases to monitor pump motor winding temperatures, dosing valve strokes, and blower vibration profiles, triggering maintenance alerts automatically.",
+                desc: "CMMS database integration to monitor field assets, winding temperatures, and blower vibration profiles.",
                 highlight: "Asset Optimization"
               },
             ].map((item, i) => (
@@ -204,11 +204,11 @@ export default function Page() {
             <SectionWrapper>
               <div className="space-y-6">
                 {[
-                  { title: "Optimize Energy and Chemical Usage", desc: "Automating pump speeds and chemical dosing pumps using raw turbidity and pH parameters, lowering daily consumables cost." },
-                  { title: "Increase Plant Capacity & Output", desc: "Intelligent process cycle triggers (CIP/Backwash) maximize active filter runtimes, increasing average plant capacity." },
-                  { title: "Secure Remote Monitoring", desc: "Enables managers and operators to track critical inlet/outlet compliance parameters securely over private mobile linkages." },
-                  { title: "Minimize Operation Downtime", desc: "Early warning alarms alert technicians before membrane clogging occurs, avoiding unplanned shutdowns." },
-                  { title: "Better Optimization of Assets", desc: "Corrosion monitoring and duty cycle balancing protect chemical dosing structures and expensive feed pumps." }
+                  { title: "Optimize Energy and Chemical Usage", desc: "Automating pump speeds and chemical dosing based on raw parameters, lowering consumable costs." },
+                  { title: "Increasing plant capacity", desc: "Intelligent process cycle triggers maximize active filter runtimes to increase capacity." },
+                  { title: "Remote monitoring", desc: "Allows managers to track critical compliance parameters securely over remote links." },
+                  { title: "Lower downtime of plant", desc: "Early warning alarms alert operators before issues occur, avoiding unplanned shutdowns." },
+                  { title: "Better optimization of assets", desc: "Duty cycle balancing and vibration tracking protect chemical dosing units and pumps." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start border-b border-slate-100 pb-5 last:border-0 last:pb-0">
                     <div className="w-10 h-10 bg-emerald-50 text-[#0da08a] rounded-xl flex items-center justify-center shrink-0 border border-emerald-100 font-bold text-sm">
@@ -275,19 +275,19 @@ export default function Page() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Scalable SCADA</h4>
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Scalable SCADA Architecture – Cutting edge</h4>
                     <p className="text-slate-300 text-xs leading-relaxed">Cutting edge SCADA frameworks providing reliable process tracking and easy scaling.</p>
                   </div>
                   <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Cloud Competency</h4>
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Cloud Competency – Secure and exclusive data</h4>
                     <p className="text-slate-300 text-xs leading-relaxed">Secure and exclusive data streaming networks mapping plant status to cloud dashboards.</p>
                   </div>
                   <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Data Analytics</h4>
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Data Analytics – Facilitating decision making</h4>
                     <p className="text-slate-300 text-xs leading-relaxed">Facilitating rapid municipal and compliance decision-making through automated reporting.</p>
                   </div>
                   <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Expert Project Team</h4>
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Highly Professional Project Management Team</h4>
                     <p className="text-slate-300 text-xs leading-relaxed">Highly Professional Project Management Team managing full deployment lifecycles.</p>
                   </div>
                 </div>
@@ -326,71 +326,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 7. PROCESS FLOW (Slanted Step Timeline - Light) */}
-      <section className="py-28 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-16">
-              <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block">Methodology</span>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">ETP Project Delivery Workflow</h2>
-              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                AEPL leverages rigorous design, testing, and deployment cycles to deliver top-tier ETP packages.
-              </p>
-            </div>
-          </SectionWrapper>
 
-          {/* Slanted chevron-step timeline panels */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-            {[
-              { step: "01", title: "Survey & Engineering", desc: "Detailed analysis of effluent specs, instrumentation sizing, and drawing AutoCAD panel electrical maps.", icon: <LayoutTemplate className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "02", title: "In-house Fabrication", desc: "Manufacturing MCC, VFD, and PLC panels at our 125,000+ sq. ft. facility with multi-stage QA checks.", icon: <Factory className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "03", title: "Installation & Hookup", desc: "Mounting instrumentation dosing lines on-site, routing cables, and performing field FAT checks.", icon: <Settings className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "04", title: "SCADA & Telemetry Handover", desc: "Deploying SCADA monitoring consoles, tuning PLC logic, cloud telemetry pairing, and final O&M training.", icon: <Cpu className="w-5 h-5 text-[#0da08a]" /> }
-            ].map((item, idx) => (
-              <SectionWrapper key={idx} delay={idx * 0.1}>
-                <div className="h-full bg-slate-50 border border-slate-100 rounded-3xl p-6 relative hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-full blur-xl"></div>
-                  <div>
-                    <div className="flex items-center justify-between mb-4 relative z-10">
-                      <span className="text-4xl font-black text-emerald-100 leading-none">{item.step}</span>
-                      <div className="p-2.5 bg-emerald-50 rounded-xl">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 8. INFRASTRUCTURE SHOWCASE */}
-      <section className="relative z-20 overflow-hidden">
-        <div className="relative h-[400px]">
-          <Image src="/imgs/etp-membranes.png" alt="Industrial RO Membrane vessels showcase" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
-          <div className="absolute inset-0 flex items-center">
-            <div className="max-w-7xl mx-auto px-6 w-full">
-              <SectionWrapper>
-                <div className="max-w-lg">
-                  <span className="text-[#0da08a] font-bold uppercase text-xs tracking-widest mb-3 block">High Performance Recovery</span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">{WATER_STATS.mldEffluentTreated.value}{WATER_STATS.mldEffluentTreated.suffix} MLD Effluent Treated</h2>
-                  <p className="text-slate-300 leading-relaxed mb-6 text-sm md:text-base">
-                    Partnering with industries and municipal agencies across India to treat complex waste water, turning industrial effluent into high-purity recycled water.
-                  </p>
-                  <Link href="/infrastructure/water/centralized-scada" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors text-sm shadow-[0_0_15px_rgba(13,160,138,0.3)]">
-                    Explore Centralized SCADA <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </SectionWrapper>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 9. OTHER SOLUTIONS (Light) */}
       <section className="py-24 bg-slate-50 text-slate-900 relative z-20 border-t border-slate-200">

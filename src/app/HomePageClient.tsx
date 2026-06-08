@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import MicroCTA from "@/components/ui/MicroCTA";
 import Counter from "@/components/ui/Counter";
-import { ArrowRight, ShieldCheck, Activity, HardHat, Blocks, Link2, Youtube, Monitor, Database, Layers, Rocket, Lightbulb, Play } from "lucide-react";
+import { ArrowRight, ShieldCheck, Activity, HardHat, Blocks, Link2, Youtube, Monitor, Database, Layers, Rocket, Lightbulb, Play, Cpu } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine, faBolt, faWaveSquare, faHeartbeat, faBalanceScale, faBezierCurve, faNetworkWired, faFileContract, faShieldAlt, faCogs } from "@fortawesome/free-solid-svg-icons";
 import SceneTrigger from "@/components/3d/SceneTrigger";
@@ -21,8 +21,8 @@ export default function HomePageClient() {
   const DEFAULT_VIDEOS = [
     { id: "DbhvDJYsfEA", title: "Weather Monitoring Systems by AEPL under PM-KUSUM" },
     { id: "w2avEUffxYM", title: "Udaan 2026 – Adaptive Engineering Pvt. Ltd. Annual Meet" },
-    { id: "_n0cYUCRMYc", title: "PM KUSUM - ACDB Panel" },
-    { id: "DbhvDJYsfEA", title: "WMS Telemetry Systems under Kusum" },
+    { id: "_n0cYUCRMYc", title: "PM-KUSUM - ACDB Panel" },
+    { id: "DbhvDJYsfEA", title: "WMS Telemetry Systems under PM-KUSUM" },
     { id: "w2avEUffxYM", title: "AEPL Team & Corporate Celebrations" },
     { id: "_n0cYUCRMYc", title: "ACDB Distribution Panel overview" }
   ];
@@ -189,6 +189,92 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* 3.7 ABOUT US SECTION (Light, Premium, Three-Column Layout) */}
+      <section className="py-24 bg-white relative z-20 border-t border-slate-100">
+        <div className="max-w-[1800px] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            {/* Left Column: Copy */}
+            <div className="lg:col-span-5 flex flex-col justify-center">
+              <SectionWrapper>
+                <span className="text-primary font-bold uppercase text-xs tracking-widest bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20 inline-block mb-4">
+                  About Us
+                </span>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight mb-8">
+                  Preferred Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">Partner</span>
+                </h2>
+                <div className="space-y-6 text-slate-600 text-sm md:text-base leading-relaxed font-medium">
+                  <p>
+                    Renewable energy solutions from AEPL include end-to-end services: conceptualizing, designing, supplying, installing, testing, commissioning, and maintaining complete industrial automation and electrical systems (up to 66KV). The company also offers customized software solutions for Central Plant Monitoring and Mobile Asset Management, ensuring optimal installation performance. With a focus on project management, AEPL takes full ownership of all automation and electrical project requirements.
+                  </p>
+                  <p>
+                    Driven by passionate team of 300+ engineers under the guidance of the founders carrying rich experience of more than three decades, team AEPL has successfully completed 1000+ projects across India. Completing projects before time, with the demonstration of the best quality work and use of latest technologies, enables AEPL to deliver maximum value.
+                  </p>
+                  <p>
+                    Further AEPL has achieved an exceptional track record of managing Renewable Plant Monitoring Software installed base of 68GW+ at 500+ plants across India. It also manages 50+ Water Supply Schemes and India’s widest highway Twin Tube Tunnel of 2.5Km where complete E&I packages are delivered.
+                  </p>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Center Column: Tall Image Card to fill space */}
+            <div className="lg:col-span-3 flex">
+              <SectionWrapper delay={0.1} className="w-full h-full">
+                <div className="relative group overflow-hidden rounded-[2rem] w-full h-full min-h-[350px] border border-slate-100 shadow-lg">
+                  <img 
+                    src="/imgs/factory.jpg" 
+                    alt="AEPL Manufacturing Facility" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6 z-10">
+                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest block mb-1">Our Facility</span>
+                    <h3 className="text-base font-bold text-white leading-tight">State-of-the-art automation & panel manufacturing plant</h3>
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Right Column: Key Metrics Bento Grid */}
+            <div className="lg:col-span-4 flex flex-col justify-between">
+              <SectionWrapper delay={0.2} className="h-full flex flex-col justify-between">
+                <div className="grid grid-cols-2 gap-4 h-full">
+                  <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
+                    <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">68GW+</div>
+                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Software Installed Base</div>
+                  </div>
+                  <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
+                    <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">300+</div>
+                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Engineers</div>
+                  </div>
+                  <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
+                    <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">1000+</div>
+                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Completed Projects</div>
+                  </div>
+                  <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
+                    <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">50+</div>
+                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Water Schemes</div>
+                  </div>
+                  
+                  {/* Highlight image card */}
+                  <div className="col-span-2 relative h-44 overflow-hidden rounded-3xl group border border-slate-100 shadow-sm mt-auto">
+                    <img 
+                      src="/imgs/tunnel/tunnel_hero.png" 
+                      alt="Twin Tube Tunnel" 
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
+                    <div className="absolute bottom-4 left-6 right-6 text-left">
+                      <div className="text-base font-bold text-white mb-0.5">Twin Tube Tunnel (2.5Km)</div>
+                      <p className="text-[11px] text-gray-300 font-medium leading-relaxed">India's widest highway twin-tube tunnel managed under our complete E&I packages.</p>
+                    </div>
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 4. CORE SOLUTIONS (Dark) */}
       <section className="py-32 bg-transparent rounded-b-[40px] z-10 relative shadow-2xl">
         <SceneTrigger variant="solar" color="#EAB308" speed={0.5} />
@@ -200,81 +286,76 @@ export default function HomePageClient() {
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 1. Renewable Solutions */}
             <SectionWrapper delay={0.1}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=150&q=80" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="Renewable" />
-                <h3 className="text-2xl font-bold text-white mb-4">Renewable Solutions</h3>
-                <p className="text-gray-400 leading-relaxed mb-8">End-to-end services: Conceptualizing, designing, and commissioning electrical systems up to 66KV. Solar, Wind, and Hybrid plant integration.</p>
-                <Link href="/renewable" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors z-20 relative">Learn More</Link>
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                <div>
+                  <img src="/imgs/solar_farm_aerial.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Renewable Solutions" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Renewable Solutions</h3>
+                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">End-to-end services: Conceptualizing, designing, and commissioning electrical systems up to 66KV. Solar, Wind, and Hybrid plant integration.</p>
+                </div>
+                <Link href="/renewable" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
               </div>
             </SectionWrapper>
 
+            {/* 2. Electrical Panels */}
             <SectionWrapper delay={0.2}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full relative">
-                <img src="https://adaptive-engg.com/wp-content/uploads/2024/10/Untitled-design-13-1-480x340.png" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="KUSUM" />
-                <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM Solutions</h3>
-                <p className="text-gray-400 leading-relaxed mb-8">Industrial IoT powered by SolarWiz, WaterWiz, and MachineWiz. Real-time telemetry for agricultural pumps and water supply schemes.</p>
-                <Link href="/pm-kusum" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors z-20 relative">Learn More</Link>
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                <div>
+                  <img src="/images/renewable/hero-electrical-panels.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Electrical Panels" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Electrical Panels</h3>
+                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Intelligent design and custom manufacturing of high-reliability HT Switchgears, LT Distribution Panels, PCC, MCC, and ACDB panels.</p>
+                </div>
+                <Link href="/renewable/panels" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
               </div>
             </SectionWrapper>
 
+            {/* 3. Turnkey E&I */}
             <SectionWrapper delay={0.3}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full">
-                <img src="https://adaptive-engg.com/wp-content/uploads/2023/08/tunnel-mp.png.webp" className="w-20 h-20 rounded-2xl object-cover mb-8 border-2 border-primary shadow-lg group-hover:scale-110 transition-transform duration-500" alt="Infra" />
-                <h3 className="text-2xl font-bold text-white mb-4">Infrastructure Solutions</h3>
-                <p className="text-gray-400 leading-relaxed mb-8">Specialized automation for Tunnels and Data Centers. In-house manufacturing of HT/LT Panels, MCC, and PCC for heavy industry.</p>
-                <Link href="/infrastructure/tunnel" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors">Learn More</Link>
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                <div>
+                  <img src="/images/renewable/hero-turnkey-execution.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Turnkey E&I" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Turnkey E&I</h3>
+                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Single-point engineering, procurement, and construction (EPC) solutions for solar parks, wind assets, substations, and grid synchronization.</p>
+                </div>
+                <Link href="/renewable/turnkey" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
               </div>
             </SectionWrapper>
-          </div>
-        </div>
-      </section>
 
-      {/* 5. SCADA HIGHLIGHT (Light) */}
-      <section className="py-24 bg-light z-0">
-        <SceneTrigger variant="logo" color="#0da08a" speed={1} />
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
-          <div className="lg:w-1/2">
-            <SectionWrapper>
-              <span className="text-primary font-bold uppercase text-sm tracking-widest mb-2 block">SCADA Solutions</span>
-              <h2 className="text-5xl font-extrabold text-slate-900 mb-8 font-heading">Real-Time <br /> Plant Control</h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Our enterprise-grade SCADA handles 10 Lacs+ tags with pre-built libraries for all major inverter and turbine manufacturers. With an installed base of {COMPANY_STATS.installedBase.value}GW+ across {COMPANY_STATS.satisfiedCustomers.value}+ plants, we deliver unmatched visibility and control.
-              </p>
-              <div className="mb-8">
-                <MicroCTA text="Schedule Consultation" variant="quote" href="/contact?subject=SCADA" context="light" />
-              </div>
-              <div className="grid grid-cols-3 gap-4">
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <Monitor className="text-primary w-7 h-7 shrink-0" />
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-sm">Real-Time</h4>
-                    <p className="text-xs text-slate-500">Monitoring</p>
-                  </div>
+            {/* 4. Water Solutions */}
+            <SectionWrapper delay={0.4}>
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                <div>
+                  <img src="/images/water/hero-water-main.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Water Solutions" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Water Solutions</h3>
+                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Complete E&I automation and telemetry for water supply schemes, water treatment plants (WTP), sewage treatment plants (STP), and lift irrigation schemes.</p>
                 </div>
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <Layers className="text-primary w-7 h-7 shrink-0" />
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-sm">Scalable</h4>
-                    <p className="text-xs text-slate-500">Architecture</p>
-                  </div>
-                </div>
-                <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-3 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <Database className="text-primary w-7 h-7 shrink-0" />
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-sm">10L+</h4>
-                    <p className="text-xs text-slate-500">Tags</p>
-                  </div>
-                </div>
+                <Link href="/infrastructure/water" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
               </div>
             </SectionWrapper>
-          </div>
 
-          <div className="lg:w-1/2">
-            <SectionWrapper delay={0.2}>
-              <div className="h-[400px]">
-                <ScadaHeroDashboard />
+            {/* 5. PM-KUSUM Solutions */}
+            <SectionWrapper delay={0.5}>
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                <div>
+                  <img src="/imgs/pm-kusum/kusum_main_1776742261100.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="PM-KUSUM" />
+                  <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM Solutions</h3>
+                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Industrial IoT powered by SolarWiz, WaterWiz, and MachineWiz. Real-time telemetry for agricultural pumps and water supply schemes.</p>
+                </div>
+                <Link href="/pm-kusum" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
+              </div>
+            </SectionWrapper>
+
+            {/* 6. Infrastructure Solutions */}
+            <SectionWrapper delay={0.6}>
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                <div>
+                  <img src="/imgs/tunnel/tunnel_hero.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Infrastructure Solutions" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Infrastructure Solutions</h3>
+                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Specialized safety, ventilation, lighting, and power automation packages for highway tunnels, data centers, and heavy manufacturing.</p>
+                </div>
+                <Link href="/infrastructure/tunnel" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</Link>
               </div>
             </SectionWrapper>
           </div>
@@ -293,67 +374,65 @@ export default function HomePageClient() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <SectionWrapper delay={0.1}>
-              <div className="group cursor-pointer">
-                <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/cs_water.png" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Water Supply Scheme</h3>
-                <p className="text-gray-400 text-sm">Complete E&I automation for Rewa, Kirgi, and Barhi projects.</p>
-              </div>
-            </SectionWrapper>
-
-            <SectionWrapper delay={0.2}>
-              <div className="group cursor-pointer">
-                <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/cs_tunnel.png" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Twin Tube Tunnel</h3>
-                <p className="text-gray-400 text-sm">2.5Km highway tunnel E&I package delivery.</p>
-              </div>
-            </SectionWrapper>
-
-            <SectionWrapper delay={0.3}>
-              <div className="group cursor-pointer">
-                <div className="h-80 bg-gray-800 rounded-2xl overflow-hidden mb-6 relative">
-                  <img src="/imgs/case-studies/cs_solar.png" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" alt="Project" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Solar Park Automation</h3>
-                <p className="text-gray-400 text-sm">Centralized SCADA for 500MW solar installation.</p>
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-light py-24 bg-white relative z-20">
-        <SceneTrigger variant="battery" color="#0da08a" speed={0.8} />
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <SectionWrapper>
-              <h2 className="text-4xl font-bold text-slate-900 mb-2 font-heading">Built to Grow</h2>
-              <p className="text-primary font-bold uppercase tracking-widest text-sm">Scalable Solutions for Every Project</p>
-            </SectionWrapper>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Modular Architecture", desc: "Scale effortlessly from 50MW to 5GW. Our plug-and-play architecture allows you to add capacity or new assets (like BESS) without disrupting core operations.", icon: <Blocks className="w-6 h-6" /> },
-              { title: "Universal Compatibility", desc: "True vendor independence. We seamlessly integrate with all major inverter makes (Huawei, Sungrow, SMA) and turbine protocols, unifying your entire portfolio.", icon: <Link2 className="w-6 h-6" /> },
-              { title: "Grid Future-Proofing", desc: "Stay ahead of regulations. Our systems are pre-configured for the latest IEGC grid codes, frequency response norms, and upcoming scheduling requirements.", icon: <ShieldCheck className="w-6 h-6" /> }
-            ].map((item, i) => (
-              <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="premium-card p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:shadow-xl shadow-xl -translate-y-2 transition-all duration-300 group h-full">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm text-primary group-hover:scale-110 transition-transform">
-                    {item.icon}
+              {
+                title: "Rural Water Supply Schemes",
+                category: "Water & Process",
+                img: "/imgs/case-studies/cs_water.png",
+                desc: "Instrumentation, telemetry, and remote monitoring setup for widespread clean water distribution networks.",
+                delay: 0.1
+              },
+              {
+                title: "Highway Tunnel Ventilation & Control Systems",
+                category: "Infrastructure",
+                img: "/imgs/case-studies/cs_tunnel.png",
+                desc: "Life safety automation systems including jet fan controls, toxic gas monitoring, and SCADA override for transport tunnels.",
+                delay: 0.2
+              },
+              {
+                title: "Khavda Hybrid Renewable Energy Plant",
+                category: "Renewable Energy",
+                img: "/imgs/case-studies/cs_solar.png",
+                desc: "High-capacity E&I substation layout, grid synchronization, and analytics for the Khavda hybrid solar-wind complex.",
+                delay: 0.3
+              }
+            ].map((study, i) => (
+              <SectionWrapper key={i} delay={study.delay}>
+                <Link 
+                  href="/resources/case-studies" 
+                  className="group relative bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden flex flex-col h-full hover:shadow-[0_0_50px_rgba(13,160,138,0.15)]"
+                >
+                  <div className="h-64 overflow-hidden relative">
+                    {/* Floating Category Badge */}
+                    <div className="absolute top-4 left-4 z-10 bg-primary/95 backdrop-blur-sm text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-primary/20">
+                      {study.category}
+                    </div>
+                    <img 
+                      src={study.img} 
+                      className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" 
+                      alt={study.title} 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-85"></div>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
-                  <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
-                </div>
+                  
+                  <div className="p-8 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-black text-white mb-3 group-hover:text-primary transition-colors duration-300 leading-tight">
+                        {study.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                        {study.desc}
+                      </p>
+                    </div>
+                    
+                    <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-primary font-bold">
+                      <span className="uppercase tracking-wider">Explore Project</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
+                    </div>
+                  </div>
+                </Link>
               </SectionWrapper>
             ))}
-          </div>
-          <div className="mt-16 text-center">
-            <MicroCTA text="Consult Our Engineers" variant="quote" href="/contact?subject=Consultation" context="light" />
           </div>
         </div>
       </section>
@@ -393,101 +472,168 @@ export default function HomePageClient() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* 9. PROTOCOL (Light) */}
-      <section className="py-24 bg-light z-20">
-        <SceneTrigger variant="wave" color="#06b6d4" speed={0.5} />
+      </section>      {/* 9. PROTOCOL (Light) -> Replaced with The AEPL Advantage */}
+      <section className="py-32 bg-slate-50 relative z-20 border-t border-slate-100">
+        <SceneTrigger variant="wave" color="#0da08a" speed={0.5} />
         <div className="max-w-[1800px] mx-auto px-6">
-          <SectionWrapper>
-            <div className="flex flex-col md:flex-row items-end justify-between mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Column: Advantage Points */}
+            <div className="lg:col-span-8 space-y-8">
               <div>
-                <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-2 block">Our Methodology</span>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 font-heading">The Integration Pipeline</h2>
+                <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-2 block">Why Choose Us</span>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight">
+                  The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">AEPL</span> Advantage
+                </h2>
+                <div className="w-12 h-1 bg-primary rounded-full mt-4"></div>
               </div>
-              <p className="text-slate-500 max-w-sm text-right hidden md:block">
-                A streamlined framework delivering excellence from concept to commissioning.
-              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Complete E&I Solutions",
+                    desc: "Expertise in complete Electrical and Automation Solutions.",
+                    icon: <Cpu className="w-6 h-6 text-primary" />
+                  },
+                  {
+                    title: "Customized Engineering",
+                    desc: "Customized solutions based on client's needs and challenges.",
+                    icon: <Lightbulb className="w-6 h-6 text-primary" />
+                  },
+                  {
+                    title: "Proven Track Record",
+                    desc: "Strong track record of delivering quality projects.",
+                    icon: <ShieldCheck className="w-6 h-6 text-primary" />
+                  },
+                  {
+                    title: "OEM Partnerships",
+                    desc: "OEM partnerships for best-in-class hardware.",
+                    icon: <Layers className="w-6 h-6 text-primary" />
+                  },
+                  {
+                    title: "Turnkey Project Experts",
+                    desc: "Single-point engineering, procurement, and execution capability.",
+                    icon: <Rocket className="w-6 h-6 text-primary" />
+                  },
+                  {
+                    title: "Optimized Commissioning",
+                    desc: "Time-saving and cost-effective commissioning process.",
+                    icon: <Activity className="w-6 h-6 text-primary" />
+                  }
+                ].map((item, i) => (
+                  <SectionWrapper key={i} delay={i * 0.1}>
+                    <div className="p-6 bg-white rounded-3xl border border-slate-100 hover:border-primary/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-sm flex gap-4 h-full">
+                      <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center shrink-0">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-slate-950 mb-2">{item.title}</h4>
+                        <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  </SectionWrapper>
+                ))}
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-[1200px] md:h-[800px]">
-              {[
-                { step: "01", title: "Conceptualize", desc: "Design & Feasibility", img: "/imgs/protocol/11.jpg", span: "" },
-                { step: "02", title: "Manufacture", desc: "In-house Fabrication", img: "/imgs/protocol/12.jpg", span: "" },
-                { step: "03", title: "Commission", desc: "Install & Execute", img: "/imgs/protocol/13.jpg", span: "" },
-                { step: "04", title: "Monitor", desc: "24/7 ReportWiz Analytics", img: "/imgs/protocol/14.jpg", span: "" }
-              ].map((item, i) => (
-                <div key={i} className={`group relative overflow-hidden rounded-3xl cursor-pointer ${item.span}`}>
+            {/* Right Column: Turnkey Spotlight */}
+            <div className="lg:col-span-4 h-full">
+              <SectionWrapper delay={0.3}>
+                <div className="relative group overflow-hidden rounded-[2rem] aspect-[4/5] shadow-2xl flex flex-col justify-end p-8 md:p-10 border border-slate-200">
                   <div className="absolute inset-0">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 group-hover:via-black/40 transition-all duration-500"></div>
+                    <img 
+                      src="/images/renewable/hero-turnkey-execution.png" 
+                      alt="Project Execution" 
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent group-hover:from-slate-950 group-hover:via-slate-900/50 transition-all duration-500"></div>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end">
-                    <div className="flex items-center gap-4 mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <span className="text-5xl font-black text-white/20 select-none group-hover:text-primary transition-colors duration-300">{item.step}</span>
-                      <div className="h-[1px] flex-grow bg-white/20 group-hover:bg-white/50 transition-colors duration-300"></div>
+                  
+                  <div className="relative z-10 space-y-4">
+                    <span className="bg-primary/95 text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full w-fit block">
+                      Execution Excellence
+                    </span>
+                    <h3 className="text-3xl font-black text-white leading-tight">
+                      Preferred Project Partner
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Delivering world-class E&I projects with cost leadership, faster execution, and a proven track record across India.
+                    </p>
+                    <div className="pt-2">
+                      <Link 
+                        href="/contact" 
+                        className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-white transition-colors"
+                      >
+                        Partner With Us <ArrowRight className="w-4 h-4" />
+                      </Link>
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{item.title}</h3>
-                    <p className="text-gray-300 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100 opacity-0 group-hover:opacity-100">{item.desc}</p>
                   </div>
-                  <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-white/20 rounded-tr-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-              ))}
+              </SectionWrapper>
             </div>
-          </SectionWrapper>
+
+          </div>
         </div>
       </section>
 
-      {/* 9. MEDIA GALLERY (YouTube Widget) */}
-      <section className="section-dark py-24 px-6 relative overflow-hidden bg-transparent border-t border-white/5">
+      {/* 9. MEDIA GALLERY (YouTube Widget - Light Premium Design) */}
+      <section className="py-24 px-6 relative overflow-hidden bg-white border-t border-b border-slate-100 z-20">
+        <SceneTrigger variant="wave" color="#ef4444" speed={0.4} />
         <div className="max-w-7xl mx-auto">
-          <SectionWrapper className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 mb-4 bg-red-600/10 px-4 py-1.5 rounded-full border border-red-600/20">
-              <Youtube className="text-red-500 w-4 h-4" />
-              <span className="text-red-400 text-xs font-bold tracking-widest uppercase">Latest Uploads</span>
+          <SectionWrapper className="mb-16 text-center">
+            <div className="inline-flex items-center gap-2 mb-4 bg-red-50 px-4 py-1.5 rounded-full border border-red-100">
+              <Youtube className="text-red-600 w-4 h-4" />
+              <span className="text-red-600 text-xs font-bold tracking-widest uppercase">Latest Uploads</span>
             </div>
-            <h2 className="text-4xl serif font-bold text-white mb-4">Engineering in Motion</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight mb-4">Engineering in Motion</h2>
+            <div className="w-12 h-1 bg-red-600 mx-auto rounded-full mt-4"></div>
           </SectionWrapper>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayVideos.map((video, idx) => (
               <SectionWrapper key={`${video.id}-${idx}`} className="group" delay={idx * 0.1}>
-                <div className="aspect-video w-full bg-slate-800 rounded-2xl overflow-hidden border border-white/10 relative shadow-lg cursor-pointer">
-                  {playingVideos[video.id] ? (
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
-                      title={video.title}
-                      allowFullScreen
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
-                  ) : (
-                    <div 
-                      className="w-full h-full relative group/thumb"
-                      onClick={() => setPlayingVideos(prev => ({ ...prev, [video.id]: true }))}
-                    >
-                      <img 
-                        src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-                        }}
-                        alt={video.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/45 group-hover/thumb:bg-black/30 transition-colors duration-300"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg shadow-red-600/30 group-hover/thumb:bg-white group-hover/thumb:text-red-600 group-hover/thumb:scale-110 group-hover/thumb:shadow-white/20 transition-all duration-300 text-white">
-                          <Play className="w-6 h-6 fill-current ml-0.5" />
+                <div className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 flex flex-col h-full">
+                  <div className="aspect-video w-full bg-slate-100 relative overflow-hidden cursor-pointer">
+                    {playingVideos[video.id] ? (
+                      <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                        title={video.title}
+                        allowFullScreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      ></iframe>
+                    ) : (
+                      <div 
+                        className="w-full h-full relative group/thumb"
+                        onClick={() => setPlayingVideos(prev => ({ ...prev, [video.id]: true }))}
+                      >
+                        <img 
+                          src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+                          }}
+                          alt={video.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-slate-950/25 group-hover/thumb:bg-slate-950/15 transition-colors duration-300"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg shadow-red-600/30 group-hover/thumb:bg-white group-hover/thumb:text-red-600 group-hover/thumb:scale-110 group-hover/thumb:shadow-white/20 transition-all duration-300 text-white">
+                            <Play className="w-6 h-6 fill-current ml-0.5" />
+                          </div>
                         </div>
                       </div>
+                    )}
+                  </div>
+                  <div className="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-slate-900 font-bold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2" title={video.title}>
+                        {video.title}
+                      </h4>
                     </div>
-                  )}
-                </div>
-                <div className="mt-4">
-                  <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2" title={video.title}>
-                    {video.title}
-                  </h4>
-                  <p className="text-sm text-gray-500 mt-1">Latest Upload</p>
+                    <div className="mt-4 pt-4 border-t border-slate-50 text-[10px] text-slate-400 font-mono tracking-wider uppercase">
+                      Latest Upload
+                    </div>
+                  </div>
                 </div>
               </SectionWrapper>
             ))}
@@ -497,7 +643,7 @@ export default function HomePageClient() {
             <a
               href="https://youtube.com/@adaptiveengineeringpvt.ltd.?si=C_3FYNQtQxYz9B_D"
               target="_blank"
-              className="inline-flex items-center gap-3 px-8 py-3 bg-white/5 border border-white/10 hover:border-primary/50 hover:shadow-xl bg-red-600 hover:bg-white/10 border-red-600 text-white rounded-full font-bold transition-all group"
+              className="inline-flex items-center gap-3 px-8 py-3.5 bg-red-600 hover:bg-red-700 text-white rounded-full font-bold shadow-lg shadow-red-600/20 hover:shadow-red-600/30 hover:scale-105 transition-all group"
             >
               <span>View All 50+ Videos</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -506,68 +652,37 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* 8. IMPACT */}
-      <section className="py-32 bg-transparent">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 text-white">
+      {/* 10. CTA & IMPACT (Combined Premium Dark Section) */}
+      <section className="py-32 bg-transparent text-center relative z-10">
+        <div className="max-w-5xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-4xl font-bold mb-4 font-heading">Impact & Scale</h2>
-            <p className="text-gray-400 max-w-md">Reducing carbon footprints and empowering local communities.</p>
-          </SectionWrapper>
-          <div className="flex gap-16 text-center">
-            <SectionWrapper delay={0.1}>
-              <div className="flex items-baseline justify-center gap-1 mb-2">
-                <Counter value={COMPANY_STATS.installedBase.value} className="text-5xl font-extrabold text-white font-heading" />
-                <span className="text-5xl font-extrabold text-primary font-heading">{COMPANY_STATS.installedBase.suffix}</span>
+            {/* Impact Grid inside CTA */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 p-8 md:p-12 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] text-left shadow-2xl">
+              <div>
+                <span className="text-primary font-bold uppercase text-[10px] tracking-widest block mb-2">Sustainable Engineering</span>
+                <h3 className="text-3xl font-black text-white font-heading mb-3">Impact & Scale</h3>
+                <p className="text-gray-400 text-sm leading-relaxed max-w-sm">Reducing carbon footprints and empowering local communities across India with sustainable E&I and automation technologies.</p>
               </div>
-              <div className="text-xs font-bold uppercase tracking-widest text-gray-400">{COMPANY_STATS.installedBase.label}</div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="flex items-baseline justify-center gap-1 mb-2">
-                <Counter value={COMPANY_STATS.scadaInstalled.value} className="text-5xl font-extrabold text-white font-heading" />
-                <span className="text-5xl font-extrabold text-primary font-heading">+</span>
+              <div className="flex justify-around items-center text-center">
+                <div>
+                  <div className="flex items-baseline justify-center gap-0.5 mb-1">
+                    <Counter value={COMPANY_STATS.installedBase.value} className="text-4xl font-extrabold text-white font-heading" />
+                    <span className="text-4xl font-extrabold text-primary font-heading">{COMPANY_STATS.installedBase.suffix}</span>
+                  </div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500">{COMPANY_STATS.installedBase.label}</div>
+                </div>
+                <div className="h-16 w-[1px] bg-white/10"></div>
+                <div>
+                  <div className="flex items-baseline justify-center gap-0.5 mb-1">
+                    <Counter value={COMPANY_STATS.scadaInstalled.value} className="text-4xl font-extrabold text-white font-heading" />
+                    <span className="text-4xl font-extrabold text-primary font-heading">+</span>
+                  </div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500">{COMPANY_STATS.scadaInstalled.label}</div>
+                </div>
               </div>
-              <div className="text-xs font-bold uppercase tracking-widest text-gray-400">{COMPANY_STATS.scadaInstalled.label}</div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* 9. SAFETY */}
-      <section className="py-24 bg-light border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2">
-            <SectionWrapper>
-              <h2 className="text-4xl font-extrabold text-slate-900 mb-4 font-heading">ISO 9001:2015 Certified</h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Our best-in-class manufacturing facility is certified by TUV Nord. We maintain stringent safety standards and a Zero Harm policy.
-              </p>
-              <div className="mt-8">
-                <Link href="/resources/certifications" className="text-primary font-bold border-b-2 border-primary pb-1 hover:bg-white hover:text-slate-900 transition-colors">View Certifications</Link>
-              </div>
-            </SectionWrapper>
-          </div>
-          <div className="flex gap-6">
-            <SectionWrapper delay={0.1}>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center w-48 hover:border-primary/50 hover:shadow-xl -translate-y-1 transition-transform">
-                <HardHat className="mx-auto w-10 h-10 mb-4 text-accent" />
-                <div className="text-xs font-bold uppercase text-slate-900">Safety First</div>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2}>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center w-48 hover:border-primary/50 hover:shadow-xl -translate-y-1 transition-transform">
-                <img src="/logos/tuv-nord-vector-logo.png" alt="TUV Nord" className="mx-auto h-12 w-auto mb-4 object-contain" />
-                <div className="text-xs font-bold uppercase text-slate-900">TUV Nord</div>
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
-
-      {/* 10. CTA */}
-      <section className="py-40 bg-transparent text-center relative z-10">
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionWrapper>
-            <h2 className="text-4xl md:text-6xl mb-8 font-black text-white font-heading">Ready to <span className="text-primary">Scale?</span></h2>
+            <h2 className="text-4xl md:text-6xl mb-8 font-black text-white font-heading">Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-400">Scale?</span></h2>
             <p className="text-xl text-gray-400 mb-12">Partner with the &quot;Preferred Project Partner&quot; of India's largest corporate houses.</p>
             <Link href="/contact" className="inline-block px-12 py-4 bg-gradient-to-r from-primary to-teal-700 text-white rounded-full font-bold uppercase tracking-wider text-lg shadow-xl shadow-teal-900/50 hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform">
               Start Discussion

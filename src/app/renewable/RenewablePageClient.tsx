@@ -288,7 +288,7 @@ export default function RenewablePageClient() {
                 bullets: [
                   "Flexible & Scalable Architecture",
                   "Rich set of Renewable Libraries",
-                  "Seamless Handling of 10 Lacs+ Tags",
+                  "Seamless Handling of 10 Lakh+ tags",
                   "Refined interface from decades of experience"
                 ]
               },

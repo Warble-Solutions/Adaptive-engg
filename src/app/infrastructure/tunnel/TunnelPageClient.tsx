@@ -3,7 +3,7 @@
 import { useState, Fragment } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Share2, Lightbulb, Clock, CheckCircle2, Fan, Settings, Shield, Bell, Layers, FileText } from "lucide-react";
+import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Share2, Lightbulb, Clock, CheckCircle2, Fan, Settings, Shield, Bell, Layers, FileText, Users, Server, Radio, Wind, TrendingUp } from "lucide-react";
 import { COMPANY_STATS, TUNNEL_STATS } from "@/lib/constants";
 import { TunnelSCADADashboard } from "@/components/DashboardMockups";
 
@@ -16,11 +16,11 @@ export default function TunnelPageClient() {
   const [alarmActive, setAlarmActive] = useState(false);
 
   const stats = [
-    { val: COMPANY_STATS.yearsExperience.value, suf: COMPANY_STATS.yearsExperience.suffix, label: COMPANY_STATS.yearsExperience.label },
-    { val: TUNNEL_STATS.twinTubeRoad.value, suf: TUNNEL_STATS.twinTubeRoad.suffix, label: TUNNEL_STATS.twinTubeRoad.label },
-    { val: TUNNEL_STATS.transformer.formatted, suf: TUNNEL_STATS.transformer.suffix, label: TUNNEL_STATS.transformer.label },
-    { val: TUNNEL_STATS.ledLights.formatted, suf: TUNNEL_STATS.ledLights.suffix, label: TUNNEL_STATS.ledLights.label },
-    { val: TUNNEL_STATS.remoteIoPanels.value, suf: TUNNEL_STATS.remoteIoPanels.suffix, label: TUNNEL_STATS.remoteIoPanels.label },
+    { val: "17", suf: "+", label: "Years of Experience" },
+    { val: "2.5", suf: " Km", label: "Twin Tube Road Tunnel" },
+    { val: "1,000", suf: " KVA", label: "Transformer with HT Sub Station Installation" },
+    { val: "1,500", suf: "+", label: "LED Lights Installed" },
+    { val: "15", suf: "+", label: "Remote I/O Panels Installed in Tunnel" },
   ];
 
   const specTabs = [
@@ -153,58 +153,121 @@ export default function TunnelPageClient() {
         </div>
       </section>
 
-      {/* 3. THREE CORE OPERATIONAL PILLARS (Split Section) */}
-      <section className="py-24 bg-slate-50 relative z-20 border-t border-slate-100">
+      {/* OUR EXPERTISE / PREFERRED PROJECT PARTNER SECTION */}
+      <section className="py-24 bg-white relative z-20 overflow-hidden border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Image */}
             <SectionWrapper>
-              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Domain Focus</span>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 tracking-tight">Three Pillars of <span className="gradient-heading">Tunnel Safety</span></h2>
-              <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">We coordinate all core mechanical and electrical utilities under a single automated SCADA logic framework.</p>
+              <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent z-10"></div>
+                <img 
+                  src="/imgs/tunnel/tunnel_hero.png" 
+                  alt="Tunnel Automation and Electrical Solutions" 
+                  className="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-6 left-6 z-20">
+                  <span className="px-4 py-2 bg-primary text-white text-xs font-bold uppercase tracking-wider rounded-lg backdrop-blur-md bg-opacity-90">
+                    Road, Rail & Metro Tunnels
+                  </span>
+                </div>
+              </div>
+            </SectionWrapper>
+
+            {/* Right - Text Content */}
+            <SectionWrapper delay={0.2}>
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest border border-primary/20">
+                  <Activity className="w-3.5 h-3.5" />
+                  <span>Our Expertise</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-black text-slate-900 font-heading tracking-tight leading-tight">
+                  Preferred Project Partner in <span className="gradient-heading">Turn-Key Projects</span>
+                </h2>
+                <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
+                  We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Tunnels – Road, Railway and Metro.
+                </p>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  With the rising awareness on road and rail safety, the government is modernizing road and railway tunnels. Additionally, numerous railway lines and highways pass through tunnels in mountain ranges, which creates a high demand for tunnel electrical & automation systems.
+                </p>
+                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200/60 shadow-sm flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center shrink-0 text-primary mt-1">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900 mb-1">Empowering Turn-Key Excellence</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Our 17+ years of experience, a complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills empowered us a <strong className="text-slate-950 font-bold">“Preferred Project Partner”</strong> in Turn-Key Projects for EPCs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SectionWrapper>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* BENEFITS SECTION */}
+      <section className="py-24 bg-white relative z-20 border-t border-slate-100 text-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Benefits</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 font-heading mb-4 tracking-tight">
+                Key Benefits of <span className="gradient-heading">Smart Tunnel Automation</span>
+              </h2>
+              <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+                Our advanced E&I solutions optimize power, ensure clean air, and provide intelligent automated responses to critical safety incidents.
+              </p>
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: <Cpu className="w-6 h-6" />,
-                title: "Automation & SCADA Systems",
-                desc: "Complete remote monitoring and supervisory control. Aggregates data from thousands of digital sensor nodes to optimize ventilation, illumination, and grid state.",
-                color: "from-teal-500 to-teal-500",
-                features: ["Scalable SCADA Architecture", "NIST-Compliant Cyber Guard", "Redundant PLC Hot-Standby Sets", "Remote I/O Panel Integrations"]
+                icon: <Zap className="w-5 h-5" />,
+                title: "Reduce Energy Consumption and Carbon Footprint",
+                desc: "Intelligent control algorithms adjust jet fan speed and light levels dynamically based on actual demand, slashing utility bills and carbon footprint."
               },
               {
-                icon: <Fan className="w-6 h-6" />,
-                title: "Smart Environmental Control",
-                desc: "Automated jet fan speeds and portal light adjusters. Ensures passenger visibility and air metrics remain healthy, preventing portal glare illusions.",
-                color: "from-teal-500 to-teal-500",
-                features: ["CO/NO2/VI Closed-Loop Fans", "CIE Portal Light Adapters", "Portal-to-Portal Lux Sync", "Jet Fan Energy Optimizers"]
+                icon: <Lightbulb className="w-5 h-5" />,
+                title: "Adaptive Tunnel Lighting",
+                desc: "Matches tunnel entrance illumination with external ambient sunlight to prevent visual shock (black-hole effect) and ensure safe motorist entry."
               },
               {
-                icon: <Zap className="w-6 h-6" />,
-                title: "Reliable Substation & Distribution",
-                desc: "High-voltage substation installations engineered for uninterrupted power. Features automatic backup changeover lines and dry-type fire retardant transformers.",
-                color: "from-teal-500 to-teal-500",
-                features: ["HT/LT Panel Manufacturing", "Dry-Type Transformer Stations", "Zero-transfer UPS Banks", "Emergency AMF DG Controllers"]
+                icon: <Activity className="w-5 h-5" />,
+                title: "Efficient Traffic Management",
+                desc: "Integrates loop detectors, overheight detectors, and variable message signs (VMS) to regulate vehicle flow and avoid congestion inside tubes."
+              },
+              {
+                icon: <Fan className="w-5 h-5" />,
+                title: "Healthy Tunnel Environment",
+                desc: "Closed-loop feedback from CO, NO2, and visibility sensors triggers jet fans to maintain clean, fresh air, keeping pollutants below permissible levels."
+              },
+              {
+                icon: <ShieldCheck className="w-5 h-5" />,
+                title: "Ensure Safety and Minimize Hazardous Events",
+                desc: "Linear Heat Detection (LHD) cables and CCTV cameras monitor operations to detect accidents, breakdowns, or thermal issues instantly."
+              },
+              {
+                icon: <Bell className="w-5 h-5" />,
+                title: "Manage Emergency Conditions",
+                desc: "Automated emergency SCADA modes coordinate ventilation smoke purge, PA system alerts, and escape lighting to guide quick evacuations."
               }
-            ].map((pillar, i) => (
-              <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 h-full flex flex-col justify-between">
-                  <div>
-                    <div className={`w-14 h-14 bg-gradient-to-br ${pillar.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                      {pillar.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">{pillar.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{pillar.desc}</p>
+            ].map((benefit, i) => (
+              <SectionWrapper key={i} delay={i * 0.05}>
+                <div className="p-8 bg-slate-50 border border-slate-200/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col h-full group">
+                  <div className="w-12 h-12 rounded-xl bg-teal-50 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {benefit.icon}
                   </div>
-                  <div className="space-y-2 pt-4 border-t border-slate-100">
-                    {pillar.features.map((f, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs font-bold text-slate-700">
-                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                        <span>{f}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                    {benefit.desc}
+                  </p>
                 </div>
               </SectionWrapper>
             ))}
@@ -486,7 +549,103 @@ export default function TunnelPageClient() {
         </div>
       </section>
 
-      {/* 5. VALUE CREATION FOR EPC PARTNERS */}
+      {/* 5. VALUE CREATION (10 Items Grid) */}
+      <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-950 text-white relative z-10 border-t border-white/5">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(13,160,138,0.15),rgba(255,255,255,0))]"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <SectionWrapper>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">
+                <Share2 className="w-4 h-4" />
+                <span>Value Creation</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black font-heading mb-6 tracking-tight">
+                Value Creation for <span className="gradient-heading">Tunnel Projects</span>
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto text-base leading-relaxed font-medium">
+                We design and execute robust E&I packages that maximize system availability, safety compliance, and operational efficiency for EPC partners.
+              </p>
+            </SectionWrapper>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <Users className="w-6 h-6 text-primary" />,
+                title: "Highly Professional Project Management Team",
+                desc: "Experienced PMO team delivering drawings, approval documentations, schedules, and strict compliance reports to keep projects on track."
+              },
+              {
+                icon: <Settings className="w-6 h-6 text-primary" />,
+                title: "Expertise in Industrial Electrical, Automation and Instrumentation Solutions",
+                desc: "Deep engineering capabilities in high-voltage substations, field instrumentation, PLC control systems, and complete SCADA platforms."
+              },
+              {
+                icon: <Zap className="w-6 h-6 text-primary" />,
+                title: "Power management via Monitoring and Distribution",
+                desc: "Smart load monitoring, auto-transfer switchgear logic, and protection schemes ensuring seamless power distribution to critical loads."
+              },
+              {
+                icon: <Layers className="w-6 h-6 text-primary" />,
+                title: "Turn-key E&I Solutions – Execution of scalable projects",
+                desc: "End-to-end responsibility covering feasibility, drawing designs, in-house panel fabrication, site installation, and loop commissioning."
+              },
+              {
+                icon: <Server className="w-6 h-6 text-primary" />,
+                title: "Reliable Tunnel Electrical Distribution Architecture",
+                desc: "Double-bus configurations, redundant rings, and cast-resin dry transformers to eliminate single points of failure in power supply."
+              },
+              {
+                icon: <Cpu className="w-6 h-6 text-primary" />,
+                title: "Scalable SCADA Architecture",
+                desc: "Open, modern control platform allowing future expansion of field nodes, instrumentation networks, and traffic supervision systems."
+              },
+              {
+                icon: <Radio className="w-6 h-6 text-primary" />,
+                title: "Secure and Reliable Connectivity",
+                desc: "Cyber-secured industrial ethernet rings, redundant fiber loops, and fail-safe telemetry communication networks."
+              },
+              {
+                icon: <Wind className="w-6 h-6 text-primary" />,
+                title: "Better Control of Air Quality Standards",
+                desc: "Advanced closed-loop ventilation algorithms adjusting jet fan RPMs in response to carbon monoxide, nitrogen dioxide, and visibility indices."
+              },
+              {
+                icon: <ShieldCheck className="w-6 h-6 text-primary" />,
+                title: "Increased Safety with reduce Downtime",
+                desc: "Hot-standby redundant control systems, early incident identification, and automatic failover switchboards preventing shutdowns."
+              },
+              {
+                icon: <TrendingUp className="w-6 h-6 text-primary" />,
+                title: "Optimize Asset Utilization",
+                desc: "Detailed diagnostics, runtime trackers, thermal analytics, and smart scheduling to extend the lifecycle of machinery and panels."
+              }
+            ].map((item, i) => (
+              <SectionWrapper key={i} delay={i * 0.05}>
+                <div className="relative group p-8 rounded-3xl bg-slate-950/40 border border-white/5 hover:border-primary/45 transition-all duration-300 h-full flex flex-col justify-between hover:shadow-[0_0_30px_rgba(13,160,138,0.15)] backdrop-blur-sm">
+                  <div>
+                    <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 tracking-tight group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-gray-400 leading-relaxed font-medium">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[10px] text-gray-500 font-mono">
+                    <span>VALUE CREATION</span>
+                    <span className="text-primary font-bold">0{i + 1}</span>
+                  </div>
+                </div>
+              </SectionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. VALUE CREATION FOR EPC PARTNERS */}
       <section className="py-24 bg-gradient-to-b from-[#0a1628]/30 via-slate-950 to-[#0a1628]/30 text-white relative z-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
@@ -825,38 +984,7 @@ export default function TunnelPageClient() {
         </div>
       </section>
 
-      {/* 6. TURNKEY METHODOLOGY TIMELINE */}
-      <section className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <SectionWrapper>
-              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Workflow</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading">Our Execution Methodology</h2>
-              <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">From engineering drawing approvals to dynamic final commissioning, we execute the entire scale of electrical utilities.</p>
-            </SectionWrapper>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-[40px] left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-primary/30"></div>
-            {[
-              { step: "01", title: "Site Survey & Design", desc: "Portal assessments, detailed electrical load routing, and grid drawing approval documentation." },
-              { step: "02", title: "Manufacturing", desc: "Panels, control boxes, and switchgear sets manufactured in AEPL's 40,000 sq ft QA/QC facility." },
-              { step: "03", title: "Erection & Cabling", desc: "On-site cable tray laying, cable pulls, jet fan mounting, and panel wiring by certified crews." },
-              { step: "04", title: "Commissioning", desc: "Dynamic loop testing, SCADA sensor calibration, auto-backup fire response tests, and official handover." }
-            ].map((item, i) => (
-              <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="flex flex-col items-center text-center group">
-                  <div className="w-20 h-20 bg-white border-4 border-slate-100 rounded-full flex items-center justify-center text-primary mb-6 shadow-md group-hover:bg-primary group-hover:text-white group-hover:scale-105 transition-all duration-300 font-mono text-xl font-bold">
-                    {item.step}
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight">{item.title}</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed font-medium px-4">{item.desc}</p>
-                </div>
-              </SectionWrapper>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 7. CTA (Subtle dark overlay) */}
       <section className="py-24 bg-transparent text-center relative z-10">

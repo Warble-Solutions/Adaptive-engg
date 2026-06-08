@@ -1,0 +1,173 @@
+[
+  {
+    "id": "static-br-1",
+    "title": "AEPL 3-Fold Brochure",
+    "slug": "aepl-3-fold-brochure",
+    "thumbnailUrl": "/imgs/brochures/aepl-3-fold-brochure.png",
+    "pdfUrl": "/brochures/AEPL_3-Fold-Brochure-final-design.pdf",
+    "category": "SCADA & Automation",
+    "sortOrder": 1
+  },
+  {
+    "id": "static-br-2",
+    "title": "AMC Program Brochure",
+    "slug": "amc-program-brochure",
+    "thumbnailUrl": "/imgs/brochures/amc-program-brochure.png",
+    "pdfUrl": "/brochures/AMC-Program-_5th-June-2023-1.pdf",
+    "category": "SCADA & Automation",
+    "sortOrder": 2
+  },
+  {
+    "id": "static-br-3",
+    "title": "Adaptive Corporate Flyer",
+    "slug": "adaptive-corporate-flyer",
+    "thumbnailUrl": "/imgs/brochures/adaptive-corporate-flyer.png",
+    "pdfUrl": "/brochures/Adaptive-Flyer.pdf",
+    "category": "SCADA & Automation",
+    "sortOrder": 3
+  },
+  {
+    "id": "static-br-4",
+    "title": "Advanced Analytics Brochure",
+    "slug": "advanced-analytics-brochure",
+    "thumbnailUrl": "/imgs/brochures/advanced-analytics-brochure.png",
+    "pdfUrl": "/brochures/Advanced analytics_Brochure.pdf",
+    "category": "Unified Platform",
+    "sortOrder": 4
+  },
+  {
+    "id": "static-br-5",
+    "title": "AssetWiz Asset Management",
+    "slug": "assetwiz-asset-management",
+    "thumbnailUrl": "/imgs/brochures/assetwiz-asset-management.png",
+    "pdfUrl": "/brochures/AssetWiz-1.pdf",
+    "category": "Unified Platform",
+    "sortOrder": 5
+  },
+  {
+    "id": "static-br-6",
+    "title": "Central Monitoring System (CMS)",
+    "slug": "central-monitoring-system-cms",
+    "thumbnailUrl": "/imgs/brochures/central-monitoring-system-cms.png",
+    "pdfUrl": "/brochures/CMS_Brochure.pdf",
+    "category": "Unified Platform",
+    "sortOrder": 6
+  },
+  {
+    "id": "static-br-7",
+    "title": "Solar LT Panels",
+    "slug": "solar-lt-panels",
+    "thumbnailUrl": "/imgs/brochures/solar-lt-panels.png",
+    "pdfUrl": "/brochures/LT-Panels-_-Brochure_Final_D2.pdf",
+    "category": "HT/LT Panels",
+    "sortOrder": 7
+  },
+  {
+    "id": "static-br-8",
+    "title": "Master Ppc V1",
+    "slug": "master-ppc-v1",
+    "thumbnailUrl": "/imgs/brochures/master-ppc-v1.png",
+    "pdfUrl": "/brochures/Master-PPC-V1.pdf",
+    "category": "Unified Platform",
+    "sortOrder": 8
+  },
+  {
+    "id": "static-br-9",
+    "title": "Plant SCADA Solutions",
+    "slug": "plant-scada-solutions",
+    "thumbnailUrl": "/imgs/brochures/plant-scada-solutions.png",
+    "pdfUrl": "/brochures/Plant-SCADA-.pdf",
+    "category": "SCADA & Automation",
+    "sortOrder": 9
+  },
+  {
+    "id": "static-br-10",
+    "title": "Renewable Energy Solutions",
+    "slug": "renewable-energy-solutions",
+    "thumbnailUrl": "/imgs/brochures/renewable-energy-solutions.png",
+    "pdfUrl": "/brochures/Renewable-Energy-Solutions.pdf",
+    "category": "Renewable Energy",
+    "sortOrder": 10
+  },
+  {
+    "id": "static-br-11",
+    "title": "Scada Brochure",
+    "slug": "scada-brochure",
+    "thumbnailUrl": "/imgs/brochures/scada-brochure.png",
+    "pdfUrl": "/brochures/SCADA_Brochure.pdf",
+    "category": "SCADA & Automation",
+    "sortOrder": 11
+  },
+  {
+    "id": "static-br-12",
+    "title": "SolarWiz IoT SCADA",
+    "slug": "solarwiz-iot-scada",
+    "thumbnailUrl": "/imgs/brochures/solarwiz-iot-scada.png",
+    "pdfUrl": "/brochures/Solarwiz-Brochure_19062025.pdf",
+    "category": "PM-KUSUM",
+    "sortOrder": 12
+  },
+  {
+    "id": "static-br-13",
+    "title": "Tunnel Brochure",
+    "slug": "tunnel-brochure",
+    "thumbnailUrl": "/imgs/brochures/tunnel-brochure.png",
+    "pdfUrl": "/brochures/Tunnel-Brochure.pdf",
+    "category": "Infrastructure",
+    "sortOrder": 13
+  },
+  {
+    "id": "static-br-14",
+    "title": "WaterWiz Water SCADA Platform",
+    "slug": "waterwiz-water-scada-platform",
+    "thumbnailUrl": "/imgs/brochures/waterwiz-water-scada-platform.png",
+    "pdfUrl": "/brochures/WaterWiz-Brochure_Version-1.pdf",
+    "category": "Water Solutions",
+    "sortOrder": 14
+  },
+  {
+    "id": "static-br-15",
+    "title": "Ams",
+    "slug": "ams",
+    "thumbnailUrl": "/imgs/brochures/ams.png",
+    "pdfUrl": "/brochures/ams.pdf",
+    "category": "Unified Platform",
+    "sortOrder": 15
+  },
+  {
+    "id": "static-br-16",
+    "title": "Ems",
+    "slug": "ems",
+    "thumbnailUrl": "/imgs/brochures/ems.png",
+    "pdfUrl": "/brochures/ems.pdf",
+    "category": "Renewable Energy",
+    "sortOrder": 16
+  },
+  {
+    "id": "static-br-17",
+    "title": "Ht",
+    "slug": "ht",
+    "thumbnailUrl": "/imgs/brochures/ht.png",
+    "pdfUrl": "/brochures/ht.pdf",
+    "category": "HT/LT Panels",
+    "sortOrder": 17
+  },
+  {
+    "id": "static-br-18",
+    "title": "Solar",
+    "slug": "solar",
+    "thumbnailUrl": "/imgs/brochures/solar.png",
+    "pdfUrl": "/brochures/solar.pdf",
+    "category": "Renewable Energy",
+    "sortOrder": 18
+  },
+  {
+    "id": "static-br-19",
+    "title": "Sustainable",
+    "slug": "sustainable",
+    "thumbnailUrl": "/imgs/brochures/sustainable.png",
+    "pdfUrl": "/brochures/sustainable.pdf",
+    "category": "Renewable Energy",
+    "sortOrder": 19
+  }
+]

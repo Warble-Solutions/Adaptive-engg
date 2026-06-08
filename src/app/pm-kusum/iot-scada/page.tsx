@@ -29,9 +29,17 @@ export default function Page() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-white mb-4 font-heading">Solar<span className="text-primary">Wiz</span></h1>
             <p className="text-2xl md:text-3xl font-bold text-gray-400 mb-8">Central Monitoring Portal</p>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed bg-black/30 backdrop-blur-sm rounded-2xl py-5 px-8 border border-white/10">
-              We at Adaptive Engineering Pvt. Ltd. are pleased to introduce <strong className="text-primary">"SolarWiz"</strong> — offering a great experience to monitor and analyse plants across geographies at a central location. It collects, aggregates, presents, and executes different data model algorithms to calculate individual plant KPIs.
-            </p>
+            <div className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed bg-black/30 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 space-y-4">
+              <p>
+                We at <strong className="text-primary">Adaptive Engineering Pvt. Ltd.</strong> are pleased to introduce the Central Monitoring Portal <strong className="text-primary">&ldquo;SolarWiz&rdquo;</strong>.
+              </p>
+              <p>
+                &ldquo;SolarWiz&rdquo; offers a great experience to monitor and analyse plants across geographies at a central location.
+              </p>
+              <p>
+                It collects, aggregates, presents and executes different data model algorithms to calculate individual plant KPIs.
+              </p>
+            </div>
           </SectionWrapper>
         </div>
       </section>
@@ -143,8 +151,8 @@ export default function Page() {
                       </div>
                       <div className="flex gap-4">
                         <span className="text-slate-500">Queue Buffer: <span className="text-teal-300">0 Bytes</span></span>
-                        <span className="text-slate-500">Latency: <span className="text-teal-300">184ms</span></span>
-                        <span className="text-slate-500">Uplink: <span className="text-teal-300">4G GPRS</span></span>
+                        <span className="text-slate-500">Status: <span className="text-teal-300">Active</span></span>
+                        <span className="text-slate-500">Uplink: <span className="text-teal-300">Cellular / Fiber</span></span>
                       </div>
                       <span className="bg-teal-950 text-teal-400 px-2 py-0.5 rounded text-[9px] font-bold">TLS 1.3 SECURE</span>
                     </div>
@@ -262,7 +270,7 @@ export default function Page() {
                 <div className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 w-fit">Hardware</div>
                 <h3 className="text-3xl font-black text-white mb-4">SolarEdge</h3>
                 <p className="text-gray-400 leading-relaxed mb-8">
-                  An IoT based Edge Computing Device to acquire data from Renewable Asset Equipment. It comprises Intelligent Data Pre-Processing and synchronises with SolarPro. The SolarEdge stores and forwards data during Cloud Connection Interruption and Restore.
+                  An IOT based Edge Computing Device to acquire data from Renewable Assets Equipments. It comprises Intelligent Data PreProcessing and Synchronize with SolarPro. The SolarEdge stores and forwards data during Cloud Connection Interruption and Restore.
                 </p>
                 <div className="rounded-2xl overflow-hidden border border-white/10 flex-1 min-h-[280px]">
                   <img src="/imgs/solaredge.webp" alt="SolarEdge IoT Device" className="w-full h-full object-cover" />
@@ -286,6 +294,77 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ARCHITECTURE — LIGHT */}
+      <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionWrapper>
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/20 w-fit">
+                System Integration
+              </div>
+              <h2 className="text-4xl font-black text-slate-900 font-heading mb-4">Architecture</h2>
+              <p className="text-slate-500 max-w-xl mx-auto">
+                End-to-end data pipeline from physical field instruments to centralized monitoring applications and organizational personas.
+              </p>
+            </div>
+          </SectionWrapper>
+
+          {/* Large Diagram Display */}
+          <SectionWrapper delay={0.1} className="mb-20">
+            <div className="relative p-4 bg-white border border-slate-200/60 rounded-[32px] overflow-hidden shadow-2xl group max-w-6xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <img 
+                src="/imgs/pm-kusum/iot-scada-architecture.png" 
+                alt="SolarWiz SCADA Architecture" 
+                className="w-full h-auto rounded-2xl border border-slate-100 shadow-sm group-hover:scale-[1.002] transition-transform duration-500" 
+              />
+            </div>
+          </SectionWrapper>
+
+          {/* Persona/Layer Breakdown */}
+          <SectionWrapper delay={0.2}>
+            <div className="max-w-6xl mx-auto">
+              <h3 className="text-2xl font-bold text-slate-900 text-center mb-8 border-b pb-4 border-slate-100">Role-Based Intelligence</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    role: "Management",
+                    desc: "Customized Dashboards for CXOs & Actionable Insights.",
+                    benefit: "Provides top-level executives with macro-level performance metrics, portfolio tracking, and strategic insights."
+                  },
+                  {
+                    role: "Manager",
+                    desc: "Historical Data Analysis & Anomaly Detection.",
+                    benefit: "Allows plant managers to study trends, analyze performance over time, and configure automated alert triggers."
+                  },
+                  {
+                    role: "Maintenance Engineer",
+                    desc: "Optimized Resource Utilization & Reduced Downtime Losses.",
+                    benefit: "Helps field engineers receive real-time alerts, coordinate troubleshooting, and maximize asset uptime."
+                  },
+                  {
+                    role: "Operator",
+                    desc: "Plant Performance Monitoring & Root Cause Diagnosis.",
+                    benefit: "Enables site operators to monitor active generation, track device connectivity, and diagnose faults instantly."
+                  }
+                ].map((persona, i) => (
+                  <div key={i} className="p-5 bg-slate-50 hover:bg-slate-100/70 border border-slate-100 hover:border-primary/20 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs font-bold text-primary uppercase tracking-wider">{persona.role}</span>
+                        <span className="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-medium">Persona</span>
+                      </div>
+                      <h4 className="text-base font-bold text-slate-900 mb-2 leading-snug">{persona.desc}</h4>
+                    </div>
+                    <p className="text-xs text-slate-500 leading-relaxed mt-2">{persona.benefit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SectionWrapper>
+        </div>
+      </section>
+
       {/* KEY FEATURES — LIGHT */}
       <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
@@ -297,12 +376,11 @@ export default function Page() {
           </SectionWrapper>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <Globe className="w-6 h-6" />, title: "Monitor from Anywhere", desc: "Access real-time plant data from any device — desktop, tablet, or mobile. No VPN required." },
-              { icon: <BarChart3 className="w-6 h-6" />, title: "Analyse Asset Performance", desc: "PR, CUF, specific yield, inverter efficiency — all KPIs at your fingertips with drill-down analytics." },
-              { icon: <Server className="w-6 h-6" />, title: "In-built Reports Library", desc: "MNRE compliant, DISCOM format, and custom reports. Auto-generated daily, weekly, and monthly." },
-              { icon: <Settings className="w-6 h-6" />, title: "Third-party Integration", desc: "Open API for integration with CMS, ERP, billing systems, and other enterprise platforms." },
-              { icon: <Users className="w-6 h-6" />, title: "Multi-plant Config & O&M", desc: "Manage hundreds of distributed PM-KUSUM sites with role-based access and O&M workflows." },
-              { icon: <Shield className="w-6 h-6" />, title: "Secure & Reliable", desc: "End-to-end encrypted data transmission. 99.9% uptime SLA with redundant cloud infrastructure." },
+              { icon: <Globe className="w-6 h-6" />, title: "Monitor renewable assets from anywhere", desc: "Access real-time plant performance data securely from any device, anywhere, without complex VPN setup." },
+              { icon: <BarChart3 className="w-6 h-6" />, title: "Analyse asset performance", desc: "Run advanced data models, calculate plant KPIs, check CUF/PR values, and identify energy generation anomalies." },
+              { icon: <Server className="w-6 h-6" />, title: "In-built reports library", desc: "Generate compliance-ready reports automatically in MNRE and DISCOM formats for easy subsidy processing." },
+              { icon: <Settings className="w-6 h-6" />, title: "Third-party integration", desc: "Integrate seamlessly with SLDC, ERP, utility billing systems, and external asset management platforms via open APIs." },
+              { icon: <Users className="w-6 h-6" />, title: "Multi-plant configuration and O&M", desc: "Manage and configure multiple solar assets across different geographical regions with role-based O&M workflows." },
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.08}>
                 <div className="group p-8 bg-white border border-slate-100 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 h-full hover:-translate-y-1">
@@ -316,43 +394,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* NOC / SOC — DARK */}
-      <section className="py-28 bg-transparent text-white relative z-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-            <SectionWrapper className="flex flex-col">
-              <div className="flex flex-col h-full justify-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20 w-fit">
-                  NOC / SOC
-                </div>
-                <h2 className="text-4xl font-bold text-white mb-6 font-heading">Network &amp; Security Operations Center</h2>
-                <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                  Our dedicated NOC/SOC monitors all connected sites 24/7. Automated alerts for device offline, communication failures, and performance anomalies ensure zero-downtime monitoring across your entire PM-KUSUM fleet.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "24/7 automated network health monitoring",
-                    "Device offline detection & auto-recovery",
-                    "Communication failure escalation",
-                    "Firmware OTA update management",
-                    "SIM & connectivity lifecycle management",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
-                      <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
-                      <span className="text-gray-300 font-medium text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </SectionWrapper>
-            <SectionWrapper delay={0.2} className="flex flex-col">
-              <div className="rounded-3xl overflow-hidden border border-white/10 flex-1 min-h-[420px]">
-                <img src="/imgs/solar_noc_center.png" alt="NOC Operations Center" className="w-full h-full object-cover" />
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
 
       {/* HOW IT WORKS — LIGHT */}
       <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10">
@@ -463,8 +504,6 @@ export default function Page() {
               { href: "/pm-kusum/ams", abbr: "AMS", label: "Asset Management System", desc: "End-to-end asset, maintenance, inventory, and work order management." },
               { href: "/pm-kusum/ht-panel", abbr: "HT Panel", label: "HT Panel Solutions", desc: "VCB panels up to 33kV with numerical protection and motorized racking." },
               { href: "/pm-kusum/acdb-panels", abbr: "ACDB", label: "ACDB Panel Solutions", desc: "IP65 rated AC Distribution Boards with surge protection for solar pump connections." },
-              { href: "/pm-kusum/wms", abbr: "WMS", label: "Weather Monitoring System", desc: "Real-time irradiance, wind, and temperature sensors for performance benchmarking." },
-              { href: "/pm-kusum/telemetry", abbr: "Telemetry", label: "Telemetry System", desc: "Real-time data transmission to SLDC/RLDC via RTU for grid visibility and compliance." },
             ].map((sol, i) => (
               <SectionWrapper key={i} delay={i * 0.07} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
                 <Link href={sol.href} className="group flex flex-col h-full p-6 bg-white border border-slate-100 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 hover:-translate-y-1">

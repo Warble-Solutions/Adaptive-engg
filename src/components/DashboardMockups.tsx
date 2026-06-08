@@ -338,7 +338,7 @@ export function SolarProDashboard() {
           </div>
           <div>
             <span className="text-[10px] font-bold text-slate-900 block leading-tight">SolarPro</span>
-            <span className="text-[8px] text-slate-400">KUSUM Site — 7.5kW</span>
+            <span className="text-[8px] text-slate-400">PM-KUSUM Site — 7.5kW</span>
           </div>
         </div>
         <StatusDot status="online" />

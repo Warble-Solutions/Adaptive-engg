@@ -99,7 +99,7 @@ export default function HeroCarousel() {
                                 transition={{ delay: 0.3, duration: 0.5 }}
                                 className="inline-flex items-center gap-2 mb-6"
                             >
-                                <span className="w-12 h-[2px] bg-primary"></span>
+                                <span className="w-12 h-[2px] bg-primary inline-block shrink-0"></span>
                                 <span className="text-white/90 uppercase tracking-widest text-sm font-bold">{slide.tagline}</span>
                             </motion.div>
 

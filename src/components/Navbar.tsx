@@ -137,7 +137,7 @@ export default function Navbar() {
         <>
             <nav
                 className={cn(
-                    "fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-black/5",
+                    "fixed top-0 left-0 w-full z-50 transition-all duration-500",
                     "bg-white/90 backdrop-blur-md",
                     isHidden ? "-translate-y-full" : "translate-y-0"
                 )}
@@ -217,6 +217,18 @@ export default function Navbar() {
                                         <DropdownLink href="/infrastructure/water/centralized-scada">Centralized SCADA</DropdownLink>
                                     </div>
                                 </div>
+                                <div className="relative group/iot border-t border-slate-100">
+                                    <Link href="/industrial-iot" className="flex items-center justify-between px-6 py-3 text-sm text-slate-600 hover:text-primary hover:bg-teal-50 hover:pl-7 transition-all duration-200">
+                                        <span>Industrial IoT</span>
+                                        <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/iot:opacity-100 transition-opacity" />
+                                    </Link>
+                                    <div className="absolute top-0 left-full w-72 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/iot:opacity-100 group-hover/iot:visible transition-all duration-300 transform translate-x-2 group-hover/iot:translate-x-0 ml-1 overflow-hidden z-50">
+                                        <DropdownLink href="/industrial-iot">IoT Platform Overview</DropdownLink>
+                                        <DropdownLink href="/industrial-iot/solarwiz">SolarWiz</DropdownLink>
+                                        <DropdownLink href="/industrial-iot/waterwiz">WaterWiz</DropdownLink>
+                                        <DropdownLink href="/industrial-iot/machinewiz">MachineWiz</DropdownLink>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -235,8 +247,6 @@ export default function Navbar() {
                                 <DropdownLink href="/pm-kusum/ams">Asset Management System (AMS)</DropdownLink>
                                 <DropdownLink href="/pm-kusum/ht-panel">HT Panel</DropdownLink>
                                 <DropdownLink href="/pm-kusum/acdb-panels">ACDB Panels</DropdownLink>
-                                <DropdownLink href="/pm-kusum/wms">Weather Monitoring System (WMS)</DropdownLink>
-                                <DropdownLink href="/pm-kusum/telemetry">Telemetry System</DropdownLink>
                             </div>
                         </div>
 

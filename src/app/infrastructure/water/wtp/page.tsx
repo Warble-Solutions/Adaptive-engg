@@ -126,7 +126,7 @@ export default function Page() {
  <span className="text-teal-400 font-bold uppercase text-sm tracking-widest mb-3 block">Solutions</span>
  <h2 className="text-4xl font-bold text-white mb-4 font-heading">Our Complete Solutions Portfolio</h2>
  <p className="text-slate-400 text-lg max-w-3xl mx-auto">
- Electrical and Automation solutions backed by the best project management skills, proven across {WATER_STATS.supplySchemes.value}{WATER_STATS.supplySchemes.suffix} Water Supply Schemes.
+ Our complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills proven at Water Supply Schemes to deliver solutions includes:
  </p>
  </div>
  </SectionWrapper>
@@ -136,26 +136,26 @@ export default function Page() {
  {
  icon: <Power className="w-7 h-7" />,
  title: "Pump Monitoring & Control",
- desc: "Advanced pump monitoring and control systems along with integrated Power Management solutions. Real-time tracking of pump performance, energy consumption, and operational health across all pump houses.",
- highlight: "Power Management Integration"
+ desc: "Pump monitoring and control along with Power Management.",
+ highlight: "Power Management"
  },
  {
  icon: <Settings className="w-7 h-7" />,
- title: "Filtration Process Control",
- desc: "Intelligent filtration process control and optimization systems that maximize throughput while maintaining stringent water quality standards. Automated backwash scheduling and filter performance analytics.",
- highlight: "Process Optimization"
+ title: "Process Optimization",
+ desc: "Filtration process control and optimization.",
+ highlight: "Process Control"
  },
  {
  icon: <Cpu className="w-7 h-7" />,
- title: "Remote OHT Connectivity",
- desc: "Seamless remote connectivity of Over Head Tanks (OHTs) integrated directly into the centralized SCADA system. Monitor water levels, flow rates, and distribution patterns across the entire network from a single dashboard.",
- highlight: "Centralized SCADA Integration"
+ title: "Remote Connectivity",
+ desc: "Remote connectivity of OHTs at centralized SCADA system.",
+ highlight: "SCADA & Telemetry"
  },
  {
  icon: <BarChart3 className="w-7 h-7" />,
- title: "Dashboards & Advanced Analytics",
- desc: "Programmable dashboards and advanced analytics engines that generate relevant reports, enabling informed and faster decision making at every level — from field operators to executive management.",
- highlight: "Data-Driven Decisions"
+ title: "Dashboards & Analytics",
+ desc: "Programmable Dashboards and advanced analytics for relevant report generation enabling better decision making.",
+ highlight: "Decision Support"
  },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
@@ -185,17 +185,17 @@ export default function Page() {
  <span className="text-teal-500 font-bold uppercase text-sm tracking-widest mb-3 block">Benefits</span>
  <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Why Choose AEPL for Water Supply?</h2>
  <p className="text-slate-600 text-lg max-w-3xl mx-auto">
- We are experts in providing Electrical, Instrumentation and Automation Solutions for Water Supply Schemes and Water Treatment Plants from Raw Water Intake to distribution at Overhead Tanks.
+ We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Water Supply Schemes and Water Treatment Plant from Raw Water Intake to distribution at Overhead Tanks ensuring:
  </p>
  </div>
  </SectionWrapper>
 
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
  {[
- { icon: <ShieldCheck className="w-8 h-8" />, title: "Reliability", desc: "Highly reliable architectures with redundant systems ensuring 24/7 uninterrupted water supply to communities.", color: "from-teal-500 to-teal-600" },
- { icon: <Waves className="w-8 h-8" />, title: "Sustainability", desc: "Sustainable execution practices that minimize environmental impact while maximizing system longevity and efficiency.", color: "from-teal-600 to-teal-700" },
- { icon: <Droplet className="w-8 h-8" />, title: "Water Quality", desc: "Guaranteed quality of potable drinking water through precision instrumentation and continuous monitoring systems.", color: "from-teal-500 to-emerald-600" },
- { icon: <TrendingUp className="w-8 h-8" />, title: "Scalable Architecture", desc: "Modular, scalable architecture that grows with demand while reducing per-unit operating costs over the project lifetime.", color: "from-emerald-500 to-teal-600" },
+ { icon: <ShieldCheck className="w-8 h-8" />, title: "Reliability", desc: "Providing robust, highly reliable E&I and automation architectures that ensure continuous municipal water supply.", color: "from-teal-500 to-teal-600" },
+ { icon: <Waves className="w-8 h-8" />, title: "Sustainability", desc: "Implementing sustainable execution models that minimize environmental impact and maximize system efficiency.", color: "from-teal-600 to-teal-700" },
+ { icon: <Droplet className="w-8 h-8" />, title: "Quality of Potable Drinking Water", desc: "Ensuring pure and safe potable drinking water through precision monitoring and automation solutions.", color: "from-teal-500 to-emerald-600" },
+ { icon: <TrendingUp className="w-8 h-8" />, title: "Scalable Architecture", desc: "Delivering flexible, modular frameworks that easily scale with demand while reducing operating costs.", color: "from-emerald-500 to-teal-600" },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>
  <div className="group h-full p-8 bg-slate-50 border border-slate-200 rounded-2xl hover:border-teal-500/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
@@ -222,10 +222,10 @@ export default function Page() {
 
  <div className="space-y-6">
  {[
- { icon: <Handshake className="w-6 h-6" />, title: "Highly Professional Project Management Team", desc: "Dedicated project managers with deep domain expertise in government water infrastructure projects." },
- { icon: <ShieldCheck className="w-6 h-6" />, title: "Government Approved Partner", desc: "Recognized and approved by multiple state agencies across India for critical water infrastructure." },
- { icon: <Zap className="w-6 h-6" />, title: "Turn-key E&I Solutions", desc: "End-to-end execution of scalable projects from design, engineering, procurement through commissioning." },
- { icon: <Factory className="w-6 h-6" />, title: "In-House Panel Manufacturing", desc: "Own electrical panel manufacturing facility ensuring quality control and faster delivery timelines." },
+ { icon: <Handshake className="w-6 h-6" />, title: "Highly Professional Project Management Team", desc: "Dedicated project managers with deep domain expertise ensuring seamless execution and delivery." },
+ { icon: <ShieldCheck className="w-6 h-6" />, title: "Government Approved Partner", desc: "Approved by GWSSB (Gujarat), MPJNM, MPUDC & MPUADD (Madhya Pradesh), UPJNM (Uttar Pradesh), RWS&S (Odisha), JICA Assisted (Assam)." },
+ { icon: <Zap className="w-6 h-6" />, title: "Turn-key E&I Solutions", desc: "Execution of scalable projects from design, engineering, procurement through commissioning." },
+ { icon: <Factory className="w-6 h-6" />, title: "Own Electrical Panel Manufacturing Facility", desc: "In-house panel manufacturing ensures high quality control and faster project delivery timelines." },
  ].map((item, i) => (
  <div key={i} className="flex gap-5 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-teal-500/30 transition-colors group">
  <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 shrink-0 border border-teal-500/30 group-hover:scale-110 transition-transform">
@@ -265,66 +265,6 @@ export default function Page() {
  </div>
  </div>
  </SectionWrapper>
- </div>
- </div>
- </section>
-
- {/* 7. PROCESS FLOW (Light) */}
- <section className="py-28 bg-white relative z-20 rounded-t-[40px] -mt-4">
- <div className="max-w-7xl mx-auto px-6">
- <SectionWrapper>
- <div className="text-center mb-16">
- <span className="text-teal-500 font-bold uppercase text-sm tracking-widest mb-3 block">How It Works</span>
- <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Raw Water Intake to Distribution</h2>
- <p className="text-slate-600 text-lg max-w-3xl mx-auto">
- Our proven methodology ensures seamless integration across every stage of the water supply chain.
- </p>
- </div>
- </SectionWrapper>
-
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
- {[
- { step: "01", title: "Survey & Design", desc: "Complete site survey, system architecture design, and engineering documentation for the entire water supply scheme.", icon: <LayoutTemplate className="w-6 h-6" /> },
- { step: "02", title: "Panel Manufacturing", desc: "In-house fabrication of MCC, PCC, APFC, and control panels with rigorous quality checks at our 125,000+ sq. ft. facility.", icon: <Factory className="w-6 h-6" /> },
- { step: "03", title: "Installation & Commissioning", desc: "On-site installation, wiring, loop checking, and systematic commissioning with complete FAT and SAT protocols.", icon: <Settings className="w-6 h-6" /> },
- { step: "04", title: "SCADA & Handover", desc: "Centralized SCADA integration, operator training, and comprehensive handover with O&M support documentation.", icon: <Cpu className="w-6 h-6" /> },
- ].map((item, i) => (
- <SectionWrapper key={i} delay={i * 0.1}>
- <div className="relative h-full">
- {i < 3 && <div className="hidden lg:block absolute top-12 right-0 w-full h-0.5 bg-gradient-to-r from-teal-500/50 to-transparent translate-x-1/2 z-0"></div>}
- <div className="relative z-10 bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-teal-500/30 transition-all duration-300 h-full">
- <div className="text-5xl font-black text-teal-100 mb-4">{item.step}</div>
- <div className="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-4">{item.icon}</div>
- <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
- <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
- </div>
- </div>
- </SectionWrapper>
- ))}
- </div>
- </div>
- </section>
-
- {/* 8. INFRASTRUCTURE SHOWCASE */}
- <section className="relative z-20 overflow-hidden">
- <div className="relative h-[400px]">
- <Image src="/imgs/wtp-infrastructure-scale.png" alt="Water Distribution Infrastructure with Overhead Tanks" fill className="object-cover" />
- <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
- <div className="absolute inset-0 flex items-center">
- <div className="max-w-7xl mx-auto px-6 w-full">
- <SectionWrapper>
- <div className="max-w-lg">
- <span className="text-teal-400 font-bold uppercase text-sm tracking-widest mb-3 block">Infrastructure at Scale</span>
- <h2 className="text-4xl font-bold text-white mb-4 font-heading">{WATER_STATS.overheadTanks.formatted} Overhead Tanks Connected</h2>
- <p className="text-gray-300 leading-relaxed mb-6">
- Our SCADA networks span across {WATER_STATS.statesCovered.value}{WATER_STATS.statesCovered.suffix} states, monitoring and controlling distribution from treatment plants to the last mile overhead tanks.
- </p>
- <Link href="/infrastructure/water/centralized-scada" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors text-sm">
- Explore Centralized SCADA <ArrowRight className="w-4 h-4" />
- </Link>
- </div>
- </SectionWrapper>
- </div>
  </div>
  </div>
  </section>

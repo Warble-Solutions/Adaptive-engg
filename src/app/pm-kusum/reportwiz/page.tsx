@@ -1,7 +1,7 @@
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, FileText, BarChart3, PieChart, Brain, Clock, Download, TrendingUp, CheckCircle2, Table2, LineChart, Calendar, Filter, Layers } from "lucide-react";
+import { ArrowRight, FileText, BarChart3, PieChart, Clock, Download, TrendingUp, CheckCircle2, Table2, LineChart, Calendar, Filter, Layers } from "lucide-react";
 
 export const metadata = {
  title: "ReportWiz | PM-KUSUM | Adaptive Engineering",
@@ -62,10 +62,11 @@ export default function Page() {
         {[
           { icon: <TrendingUp className="w-7 h-7" />, title: "KPI & Performance Insights", desc: "Track PR, CUF, specific yield, GHI, PLF, and more. Auto-benchmarking against contractual targets.", accent: "border-l-teal-500 bg-teal-50/30" },
           { icon: <Filter className="w-7 h-7" />, title: "Custom Reports", desc: "Design bespoke reports with drag-and-drop parameter selection. Custom date ranges, grouping, and filtering.", accent: "border-l-cyan-500 bg-teal-50/30" },
-          { icon: <BarChart3 className="w-7 h-7" />, title: "Analytics Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-teal-500 bg-teal-50/30" },
-          { icon: <Brain className="w-7 h-7" />, title: "AI/ML Analytics", desc: "Anomaly detection, degradation analysis, soiling loss estimation, and predictive performance modeling.", accent: "border-l-teal-500 bg-teal-50/30" },
+          { icon: <BarChart3 className="w-7 h-7" />, title: "Advance Analytical Charts", desc: "Interactive charts — line, bar, heatmap, scatter, box plots. Drill-down from portfolio to string level.", accent: "border-l-teal-500 bg-teal-50/30" },
+
           { icon: <Calendar className="w-7 h-7" />, title: "Scheduled Reporting", desc: "Auto-generate daily, weekly, monthly, and annual reports. Email to stakeholders on schedule.", accent: "border-l-amber-500 bg-teal-50/30" },
           { icon: <Download className="w-7 h-7" />, title: "Multi Format Export", desc: "Export in PDF, Excel, CSV. Branded templates with your company logo and custom headers.", accent: "border-l-rose-500 bg-rose-50/30" },
+          { icon: <Layers className="w-7 h-7" />, title: "Standard Report", desc: "Access library of standard reporting templates for regulatory compliance, grid billing, and status tracking.", accent: "border-l-indigo-500 bg-teal-50/30" },
         ].map((item, i) => (
           <SectionWrapper key={i} delay={i * 0.08}>
             <div className={`group p-8 ${item.accent} rounded-2xl border border-slate-100 border-l-4 shadow-xl hover:border-primary/50 hover:shadow-2xl -translate-y-1 transition-all duration-300 h-full`}>
@@ -83,49 +84,7 @@ export default function Page() {
   </section>
 
 
-  {/* BILLING & SUBSIDY SHOWCASE */}
-  <section className="py-24 bg-slate-50 relative z-20 border-y border-slate-200 text-slate-900">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <SectionWrapper delay={0.2}>
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">
-              Compliance & Auditing
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Automated JMR & Subsidy Auditing</h2>
-            <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              ReportWiz simplifies the subsidy release cycle by auto-compiling Joint Meter Readings (JMR). It verifies energy export data directly from certified utility incomer meters, eliminating manual calculation errors and speeding up commercial clearance with state DISCOMs.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
-                <span className="text-slate-700 font-medium text-sm">One-click export of verified DISCOM-format sheets</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
-                <span className="text-slate-700 font-medium text-sm">Historical generation correlation to detect meter tampering</span>
-              </div>
-            </div>
-          </div>
-        </SectionWrapper>
 
-        <SectionWrapper>
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 h-[380px] group">
-            <img 
-              src="/imgs/pm-kusum/reportwiz_dashboard.png" 
-              alt="ReportWiz Generation and Billing Audit Dashboard" 
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
-            <div className="absolute bottom-6 left-6 p-4 bg-white/95 backdrop-blur-sm rounded-2xl border border-white/20">
-              <p className="text-slate-900 font-bold text-xs">JMR Generation Dashboard</p>
-              <p className="text-slate-500 text-xs mt-0.5">Automated billing telemetry audit module</p>
-            </div>
-          </div>
-        </SectionWrapper>
-      </div>
-    </div>
-  </section>
 
   {/* REPORT TYPES */}
  <section className="py-28 bg-transparent text-white relative z-10">
@@ -155,58 +114,86 @@ export default function Page() {
  </div>
  </SectionWrapper>
 
- {/* Analytic Reports */}
- <SectionWrapper delay={0.2}>
- <div className="p-10 bg-white/5 border border-white/10 rounded-3xl h-full">
- <div className="inline-block px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Analytic Reports</div>
- <h3 className="text-2xl font-bold text-white mb-6">AI-Powered Insights</h3>
- <div className="space-y-4">
- {[
- "Loss bucket analysis (soiling, clipping, degradation)",
- "Predictive performance forecasting",
- "Equipment health scoring",
- "Weather-normalized performance index",
- "YoY degradation trend analysis",
- "Benchmarking across fleet",
- "Revenue impact quantification",
- ].map((item, i) => (
- <div key={i} className="flex items-center gap-3">
- <CheckCircle2 className="text-teal-400 w-5 h-5 shrink-0" />
- <span className="text-gray-300 text-sm">{item}</span>
- </div>
- ))}
- </div>
- </div>
- </SectionWrapper>
+  {/* Analytic Reports */}
+  <SectionWrapper delay={0.2}>
+  <div className="p-10 bg-white/5 border border-white/10 rounded-3xl h-full">
+  <div className="inline-block px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Analytic Reports</div>
+  <h3 className="text-2xl font-bold text-white mb-6">Performance & Device Analytics</h3>
+  <div className="space-y-4">
+  {[
+  "Comparison of Device Efficiency",
+  "Cross-comparison",
+  "Customized Report Generation",
+  "Identification Best and Worst Performing Devices",
+  "Equipment Performance Monitoring",
+  "Performance Analytics",
+  "Inverter Efficiency",
+  "Monitoring and Alerts",
+  ].map((item, i) => (
+  <div key={i} className="flex items-center gap-3">
+  <CheckCircle2 className="text-teal-400 w-5 h-5 shrink-0" />
+  <span className="text-gray-300 text-sm">{item}</span>
+  </div>
+  ))}
+  </div>
+  </div>
+  </SectionWrapper>
  </div>
  </div>
  </section>
 
- {/* BENEFITS */}
- <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10">
- <div className="max-w-7xl mx-auto px-6">
- <SectionWrapper>
- <h2 className="text-3xl font-bold text-slate-900 text-center mb-16 font-heading">Why ReportWiz?</h2>
- </SectionWrapper>
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
- {[
- "Streamlined Operations — Eliminate manual report preparation",
- "Improved Accuracy — Data directly from SCADA, no manual entry",
- "Faster Decision Making — Real-time insights at management level",
- "Regulatory Compliance — MNRE & DISCOM format built-in",
- "Cost Savings — Reduce O&M team reporting overhead by 80%",
- "Investor Confidence — Professional branded reports for stakeholders",
- ].map((item, i) => (
- <SectionWrapper key={i} delay={i * 0.06}>
- <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100 border-teal-500/30 hover:border-primary/50 hover:shadow-xl shadow-lg transition-all duration-300">
- <CheckCircle2 className="text-teal-500 w-5 h-5 shrink-0 mt-0.5" />
- <span className="font-medium text-slate-700 text-sm">{item}</span>
- </div>
- </SectionWrapper>
- ))}
- </div>
- </div>
- </section>
+  {/* BENEFITS — Sleek dark container */}
+  <section className="py-24 bg-slate-950 relative z-20 border-t border-white/5">
+    <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+    <div className="max-w-7xl mx-auto px-6">
+      <SectionWrapper>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/20 w-fit">
+            Value Creation
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-white font-heading">
+            Why <span className="gradient-heading">ReportWiz</span>?
+          </h2>
+          <p className="text-slate-400 mt-4 max-w-xl mx-auto text-sm">
+            Discover the business value and operational efficiency unlocked by automated, certified telemetry auditing.
+          </p>
+        </div>
+      </SectionWrapper>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        {[
+          { num: "01", title: "Streamlined Operations", desc: "Eliminate manual report preparation and spreadsheet errors." },
+          { num: "02", title: "Improved Accuracy", desc: "Data feeds directly from SCADA telemetry for absolute reliability." },
+          { num: "03", title: "Enhanced Efficiency", desc: "Generate multi-plant portfolio reports in seconds instead of hours." },
+          { num: "04", title: "Comprehensive Insights", desc: "Correlate weather data, meter registries, and inverter telemetry." },
+          { num: "05", title: "Better Collaboration", desc: "Auto-share styled reports directly with operators and team members." },
+          { num: "06", title: "Scalability", desc: "Configure and expand telemetry reporting for hundreds of active solar arrays." },
+          { num: "07", title: "Faster Problem Identification", desc: "Pinpoint string drop-offs and system anomalies in near real-time." },
+          { num: "08", title: "Centralized Management", desc: "Monitor all plant KPIs and compliance outputs from a single screen." },
+          { num: "09", title: "Increased Flexibility", desc: "Filter, group, and extract raw database values exactly how you need." },
+          { num: "10", title: "Better Decision-Making", desc: "Utilize verified data model algorithms for commercial and operations planning." }
+        ].map((item, i) => (
+          <SectionWrapper key={i} delay={i * 0.05}>
+            <div className="group relative p-6 bg-white/[0.02] border border-white/5 hover:border-primary/30 hover:bg-white/[0.04] rounded-2xl transition-all duration-500 h-full flex flex-col justify-between shadow-lg backdrop-blur-sm">
+              <div className="absolute top-4 right-4 text-xs font-mono text-slate-600 font-bold group-hover:text-primary transition-colors">
+                {item.num}
+              </div>
+              <div className="space-y-3">
+                <h3 className="font-bold text-white text-sm leading-snug group-hover:text-primary transition-colors pr-6">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                  {item.desc}
+                </p>
+              </div>
+              {/* Subtle accent bar at bottom of card */}
+              <div className="w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-500 mt-4 rounded-full"></div>
+            </div>
+          </SectionWrapper>
+        ))}
+      </div>
+    </div>
+  </section>
 
 
  {/* OTHER SOLUTIONS */}
@@ -228,8 +215,6 @@ export default function Page() {
  { href: "/pm-kusum/ams", abbr: "AMS", label: "Asset Management System", desc: "End-to-end asset, maintenance, inventory, and work order management." },
  { href: "/pm-kusum/ht-panel", abbr: "HT Panel", label: "HT Panel Solutions", desc: "VCB panels up to 33kV with numerical protection and motorized racking." },
  { href: "/pm-kusum/acdb-panels", abbr: "ACDB", label: "ACDB Panel Solutions", desc: "IP65 rated AC Distribution Boards with surge protection for solar pump connections." },
- { href: "/pm-kusum/wms", abbr: "WMS", label: "Weather Monitoring System", desc: "Real-time irradiance, wind, and temperature sensors for performance benchmarking." },
- { href: "/pm-kusum/telemetry", abbr: "Telemetry", label: "Telemetry System", desc: "Real-time data transmission to SLDC/RLDC via RTU for grid visibility and compliance." },
  ].map((sol, i) => (
  <SectionWrapper key={i} delay={i * 0.07} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
  <Link href={sol.href} className="group flex flex-col h-full p-6 bg-white border border-slate-100 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-300 hover:-translate-y-1">

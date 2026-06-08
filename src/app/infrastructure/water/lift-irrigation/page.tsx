@@ -143,26 +143,26 @@ export default function Page() {
             {[
               {
                 icon: <Settings className="w-7 h-7" />,
-                title: "Monitoring & Control of Drive Technology",
-                desc: "Complete drive packages including HT/LT motor soft starters, variable frequency drives (VFDs), and switchgear. Delivers smooth acceleration curves and eliminates mechanical torque strain on pumps.",
+                title: "Monitoring and control of Drive Technology",
+                desc: "Complete drive packages including soft starters and VFDs to eliminate motor stress.",
                 highlight: "Drive Technology"
               },
               {
                 icon: <Zap className="w-7 h-7" />,
                 title: "Energy Management System",
-                desc: "Integrated power quality analysis, automated active power factor correction (APFC), load balancing algorithms, and peak-demand management grids designed to minimize municipal power overhead.",
+                desc: "Active power factor correction and load balancing to optimize power draw.",
                 highlight: "Power Management"
               },
               {
                 icon: <Activity className="w-7 h-7" />,
-                title: "Efficient Pump Operations on Run-Hour",
-                desc: "Smart duty-standby rotation controls that track actual running hours of each motor. Prevents excessive heating and distributes wear evenly, extending pump lifecycle.",
+                title: "Efficient Pump operations on run-hour",
+                desc: "Smart rotation controls based on actual running hours to extend motor lifespans.",
                 highlight: "Duty Cycle balancing"
               },
               {
                 icon: <Database className="w-7 h-7" />,
-                title: "Embedded Data Mining",
-                desc: "Edge telemetry processors archiving high-speed hydraulic data (suction pressure, discharge flow rate, level) directly at the station with cloud database synchronizations.",
+                title: "Embedded data mining",
+                desc: "High-speed data archiving at edge telemetry units with cloud database synchronization.",
                 highlight: "Process Archiving"
               },
             ].map((item, i) => (
@@ -204,10 +204,10 @@ export default function Page() {
             <SectionWrapper>
               <div className="space-y-6">
                 {[
-                  { title: "Machine Learning Algorithms & Advanced Analytics", desc: "Using historical drive trends and motor temperature profiles to predict pump bearing degradation and impeller blockages before failures happen." },
-                  { title: "Customized Reports & Dashboards", desc: "Generating standard flow summaries, discharge parameters, and power consumption charts automatically for municipal audits." },
-                  { title: "Standardized Operations (O&M)", desc: "Standardizing operation procedures within the SCADA HMI interface, minimizing human error and ensuring correct valve sequencing." },
-                  { title: "Increased Pump Lifespan", desc: "Intelligent ramping algorithms and run-hour load rotations prevent thermal overload and physical pump fatigue, driving longer life." }
+                  { title: "Machine learning algorithm with advanced analytics solutions", desc: "Predicting mechanical faults and impeller wear based on real-time vibration and thermal trends." },
+                  { title: "Reports and dashboards", desc: "Generating automated discharge logs and energy efficiency summaries for municipal audits." },
+                  { title: "O&M Standardization", desc: "Standardizing plant operations within the SCADA interface to eliminate operator errors." },
+                  { title: "Increased Pump Life", desc: "Reducing thermal overload and startup torque spikes to maximize pump lifetime." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start border-b border-slate-100 pb-5 last:border-0 last:pb-0">
                     <div className="w-10 h-10 bg-emerald-50 text-[#0da08a] rounded-xl flex items-center justify-center shrink-0 border border-emerald-100 font-bold text-sm">
@@ -278,20 +278,20 @@ export default function Page() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Turn-key E&I Solutions</h4>
-                    <p className="text-slate-300 text-xs leading-relaxed">Execution of vast scalable projects from initial engineering down to commissioning.</p>
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Government Approved</h4>
+                    <p className="text-slate-300 text-xs leading-relaxed">GWSSB – Gujarat, MPJNM, MPUDC & MPUADD – Madhya Pradesh, UPJNM – Uttar Pradesh, RWS&S – Odisha, JICA Assisted – Assam</p>
                   </div>
                   <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Scalable SCADA</h4>
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Turn-key E&I Solutions – Execution of scalable projects</h4>
+                    <p className="text-slate-300 text-xs leading-relaxed">Execution of scalable projects from initial engineering down to commissioning.</p>
+                  </div>
+                  <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Scalable SCADA Architecture – Cutting edge</h4>
                     <p className="text-slate-300 text-xs leading-relaxed">Cutting edge SCADA frameworks providing reliable process tracking and easy scaling.</p>
                   </div>
                   <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Mobile Asset Mgmt</h4>
+                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Mobile Asset Management – Optimum Utilization of Assets</h4>
                     <p className="text-slate-300 text-xs leading-relaxed">Mobile analytics sync enabling optimum utilization of assets and field technicians.</p>
-                  </div>
-                  <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
-                    <h4 className="text-[#0da08a] font-bold text-sm uppercase tracking-wider mb-2">Approved Partner</h4>
-                    <p className="text-slate-300 text-xs leading-relaxed">Trusted and approved by multiple state water boards and agencies across India.</p>
                   </div>
                 </div>
               </div>
@@ -329,71 +329,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 7. PROCESS FLOW (Slanted Step Timeline - Light) */}
-      <section className="py-28 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-16">
-              <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block">Methodology</span>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Pump House Delivery Workflow</h2>
-              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                AEPL leverages rigorous design, testing, and deployment cycles to deliver top-tier E&I packages.
-              </p>
-            </div>
-          </SectionWrapper>
 
-          {/* Slanted chevron-step timeline panels */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-            {[
-              { step: "01", title: "Feasibility & SLDs", desc: "Detailed analysis of pump head loads, HT power inputs, sizing drives, and drafting AutoCAD SLD layouts.", icon: <LayoutTemplate className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "02", title: "In-house panel Fab", desc: "Manufacturing MCC, PCC, APFC, and RTU control kiosks at our facility with multi-stage quality testing.", icon: <Factory className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "03", title: "Site Hookup & FAT", desc: "Laying cable networks on-site, mounting telemetry antennas, and executing loop test procedures.", icon: <Settings className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "04", title: "SCADA Handover", desc: "Deploying SCADA screens, configuring remote HMI loops, telemetry calibration, and operator handover.", icon: <Cpu className="w-5 h-5 text-[#0da08a]" /> }
-            ].map((item, idx) => (
-              <SectionWrapper key={idx} delay={idx * 0.1}>
-                <div className="h-full bg-slate-50 border border-slate-100 rounded-3xl p-6 relative hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-full blur-xl"></div>
-                  <div>
-                    <div className="flex items-center justify-between mb-4 relative z-10">
-                      <span className="text-4xl font-black text-emerald-100 leading-none">{item.step}</span>
-                      <div className="p-2.5 bg-emerald-50 rounded-xl">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 8. INFRASTRUCTURE SHOWCASE */}
-      <section className="relative z-20 overflow-hidden">
-        <div className="relative h-[400px]">
-          <Image src="/imgs/lift-irrigation-showcase.png" alt="Large Scale Lift Irrigation Canal System" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
-          <div className="absolute inset-0 flex items-center">
-            <div className="max-w-7xl mx-auto px-6 w-full">
-              <SectionWrapper>
-                <div className="max-w-lg">
-                  <span className="text-[#0da08a] font-bold uppercase text-xs tracking-widest mb-3 block">High Performance Infrastructure</span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">{WATER_STATS.irrigationPumpingStations.value}{WATER_STATS.irrigationPumpingStations.suffix} Pumping Stations Online</h2>
-                  <p className="text-slate-300 leading-relaxed mb-6 text-sm md:text-base">
-                    Partnering with EPC firms and government irrigation departments to run high-capacity pumping lines with embedded analytics and active power tracking.
-                  </p>
-                  <Link href="/infrastructure/water/centralized-scada" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors text-sm shadow-[0_0_15px_rgba(13,160,138,0.3)]">
-                    Explore Centralized SCADA <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </SectionWrapper>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 9. OTHER SOLUTIONS (Light) */}
       <section className="py-24 bg-slate-50 text-slate-900 relative z-20 border-t border-slate-200">

@@ -127,7 +127,7 @@ export default function Page() {
   <ul className="text-slate-600 leading-relaxed space-y-2 list-disc pl-5 marker:text-primary">
     <li>Renewable Installed Base — 40GW+</li>
     <li>Participation in International Expos</li>
-    <li>Launched Monitoring Solutions for PM KUSUM</li>
+    <li>Launched Monitoring Solutions for PM-KUSUM</li>
     <li>Hardware In Loop (HIL) Testing for PPC</li>
     <li>Introduced EMS — BESS</li>
   </ul>

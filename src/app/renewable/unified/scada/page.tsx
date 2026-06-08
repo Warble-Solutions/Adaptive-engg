@@ -6,7 +6,7 @@ import { ScadaHeroDashboard, PlantOverviewDashboard, AlarmConsoleDashboard, Scad
 
 export const metadata = {
  title: "SCADA Solutions | Adaptive Engineering",
- description: "Flexible & scalable SCADA architecture with rich renewable libraries and seamless handling of 10 Lacs+ tags.",
+ description: "Flexible & scalable SCADA architecture with rich renewable libraries and seamless handling of 10 Lakh+ tags.",
 };
 
 export default function Page() {
@@ -74,7 +74,7 @@ export default function Page() {
  {[
  { icon: <Layers className="w-7 h-7" />, title: "Flexible & Scalable Architecture", desc: "From 50MW single-site to multi-GW portfolios. Our modular SCADA scales horizontally without performance degradation.", color: "bg-teal-50 text-teal-600" },
  { icon: <Database className="w-7 h-7" />, title: "Rich Renewable Libraries", desc: "Pre-built driver libraries for all major inverter, turbine, and BESS manufacturers. Reduces commissioning time by 60%.", color: "bg-teal-50 text-teal-600" },
- { icon: <BarChart3 className="w-7 h-7" />, title: "Seamless Handling of 10 Lacs+ Tags", desc: "Optimized data engine capable of processing over 10,00,000+ real-time tags in a single project without latency.", color: "bg-teal-50 text-teal-600" },
+ { icon: <BarChart3 className="w-7 h-7" />, title: "Seamless Handling of 10 Lakh+ tags", desc: "Optimized data engine capable of processing over 10 Lakh+ real-time tags in a single project without latency.", color: "bg-teal-50 text-teal-600" },
  { icon: <Settings className="w-7 h-7" />, title: "Refined Interface from Decades of Experience", desc: "Intuitive HMI screens developed through decades of operator feedback. Contextual alarms, trend analysis, and one-click diagnostics.", color: "bg-teal-50 text-[#0da08a]" },
  ].map((item, i) => (
  <SectionWrapper key={i} delay={i * 0.1}>

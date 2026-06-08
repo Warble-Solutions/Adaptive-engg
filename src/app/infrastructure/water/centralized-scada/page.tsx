@@ -76,7 +76,7 @@ export default function Page() {
               { icon: <BatteryCharging className="w-6 h-6" />, title: "Energy Management", desc: "Active voltage tracking, VFD draw, and power optimization loops." },
               { icon: <Lock className="w-6 h-6" />, title: "Data Integrity", desc: "Local buffer storage, encrypted links, and database integrity checks." },
               { icon: <Monitor className="w-6 h-6" />, title: "Asset Monitoring", desc: "Pump motor temperature index, vibration alarms, and run hours." },
-              { icon: <Search className="w-6 h-6" />, title: "Source Optimization", desc: "Groundwater aquifers replenishment and canal intake balancing." },
+              { icon: <Search className="w-6 h-6" />, title: "Water Source Optimization", desc: "Groundwater aquifers replenishment and canal intake balancing." },
               { icon: <RefreshCw className="w-6 h-6" />, title: "O&M Standardization", desc: "Valve sequence verification and digital shift logs integration." },
               { icon: <Layers className="w-6 h-6" />, title: "Consumable Estimation", desc: "Chlorine usage calculators and chemical stock inventory alerts." }
             ].map((feature, i) => (
@@ -112,12 +112,13 @@ export default function Page() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     "Overall monitoring of Quantitative and Qualitative parameters",
-                    "Advanced energy consumption tracking and optimization",
-                    "Extremely efficient plant/scheme operations",
+                    "Energy Consumption",
+                    "Efficient plant/scheme operations",
                     "Highly reliable, scalable and flexible software architecture",
-                    "Advanced data mining and extensive reporting tools",
-                    "Uncompromised Data integrity and security frameworks",
-                    "Supports the latest analytics with bird's eye view dashboards"
+                    "Advanced data mining",
+                    "Reporting tools",
+                    "Data integrity and security",
+                    "Supports the latest analytics with bird eye view of dashboards"
                   ].map((sol, i) => (
                     <div key={i} className="flex gap-3 p-4 bg-white/5 border border-white/10 rounded-2xl">
                       <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mt-2 shrink-0"></div>
@@ -206,10 +207,14 @@ export default function Page() {
             <SectionWrapper delay={0.2}>
               <div className="space-y-6">
                 {[
-                  { title: "Advanced Data Mining", desc: "Long-term data logging, SQL archiving, and trend analysis routines designed to identify process bottleneck locations." },
-                  { title: "Scalable Software Framework", desc: "A flexible software architecture designed to easily hook up new water supply schemes, STPs, or overhead tanks." },
-                  { title: "Uncompromised Data Integrity", desc: "Role-based authentication access, encrypted telemetry channels, and localized hardware memory buffers." },
-                  { title: "Bird&apos;s Eye Analytics", desc: "Dashboards displaying state-wide or project-wide KPI averages, flow velocities, and critical pump status values." }
+                  { title: "Overall monitoring of Quantitative and Qualitative parameters", desc: "Tracking flow rates, levels, pH, and turbidity in a single centralized console." },
+                  { title: "Energy Consumption", desc: "Active monitoring of grid voltage, VFD power draw, and capacitor performance." },
+                  { title: "Efficient plant/scheme operations", desc: "Automating motor duty cycles and valve sequences to optimize overall throughput." },
+                  { title: "Highly reliable, scalable and flexible software architecture", desc: "Ensuring easy expansions for future treatment plants and OHT nodes." },
+                  { title: "Advanced data mining", desc: "Extracting actionable insights from historical sensor telemetry and runtime logs." },
+                  { title: "Reporting tools", desc: "Generating automated daily summaries, energy reports, and compliance logs." },
+                  { title: "Data integrity and security", desc: "Protecting utility data with localized buffer storage and encrypted cellular channels." },
+                  { title: "Supports the latest analytics with bird eye view of dashboards", desc: "Web-based dashboards providing real-time operations status at a glance." }
                 ].map((item, i) => (
                   <div key={i} className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:border-emerald-500/30 hover:shadow-md transition-all">
                     <h4 className="font-bold text-slate-900 text-base mb-1">{item.title}</h4>
@@ -223,51 +228,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 5. PROCESS FLOW (Horizontal Software timeline - Light) */}
-      <section className="py-28 bg-slate-50 text-slate-900 relative z-20 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-16">
-              <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block">Methodology</span>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">SCADA Integration Workflow</h2>
-              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                AEPL coordinates software engineering and field networking to deliver robust central SCADA hosts.
-              </p>
-            </div>
-          </SectionWrapper>
 
-          {/* Horizontal pipeline timeline */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 relative">
-            <div className="hidden md:block absolute top-12 left-[12%] right-[12%] h-1 bg-gradient-to-r from-emerald-500 to-teal-500/20 z-0"></div>
-
-            {[
-              { step: "01", title: "Requirements Mapping", desc: "Documenting client telemetry endpoints, communication range variables, and DB schema needs.", icon: <LayoutTemplate className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "02", title: "HMI Development", desc: "Designing central display screens, configuring telemetry database paths, and alarm limits.", icon: <Factory className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "03", title: "RTU Field Linkup", desc: "Setting up RTUs/PLCs at intake wells, matching cellular/radio signal levels, and doing FAT testing.", icon: <Settings className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "04", title: "SCADA Deployment", desc: "Running system loops, checking alarms, completing SAT checks, and deploying operators manuals.", icon: <Cpu className="w-5 h-5 text-[#0da08a]" /> }
-            ].map((item, idx) => (
-              <SectionWrapper key={idx} delay={idx * 0.1}>
-                <div className="h-full bg-white border border-slate-100 rounded-3xl p-6 relative hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between relative z-10">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-full blur-xl"></div>
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="w-10 h-10 rounded-full bg-slate-900 border-2 border-emerald-500 flex items-center justify-center font-bold text-xs text-white shadow-lg">
-                        {item.step}
-                      </span>
-                      <div className="p-2.5 bg-emerald-50 rounded-xl">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       {/* 6. OTHER SOLUTIONS (Light) */}
       <section className="py-24 bg-white text-slate-900 relative z-20 border-t border-slate-200">

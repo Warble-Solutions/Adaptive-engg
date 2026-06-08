@@ -1,0 +1,92 @@
+[
+  {
+    "id": "static-cs-1",
+    "title": "1 Liquid Milk Processing LMP",
+    "slug": "1-liquid-milk-processing-lmp",
+    "thumbnailUrl": "/imgs/case-studies/1-liquid-milk-processing-lmp.png",
+    "pdfUrl": "/case-studies/Case-Study-1-Liquid-Milk-Processing-LMP.pdf",
+    "description": "Detailed engineering case study on 1 Liquid Milk Processing LMP.",
+    "category": "Water & Process",
+    "sortOrder": 1
+  },
+  {
+    "id": "static-cs-2",
+    "title": "2 Hydropneumatic",
+    "slug": "2-hydropneumatic",
+    "thumbnailUrl": "/imgs/case-studies/2-hydropneumatic.png",
+    "pdfUrl": "/case-studies/Case-Study-2-Hydropneumatic.pdf",
+    "description": "Detailed engineering case study on 2 Hydropneumatic.",
+    "category": "Water & Process",
+    "sortOrder": 2
+  },
+  {
+    "id": "static-cs-3",
+    "title": "3 Water Treatment Plant",
+    "slug": "3-water-treatment-plant",
+    "thumbnailUrl": "/imgs/case-studies/3-water-treatment-plant.png",
+    "pdfUrl": "/case-studies/Case-Study-3-Water-Treatment-Plant.pdf",
+    "description": "Detailed engineering case study on 3 Water Treatment Plant.",
+    "category": "Water & Process",
+    "sortOrder": 3
+  },
+  {
+    "id": "static-cs-4",
+    "title": "4 Energy Mangement System EMS",
+    "slug": "4-energy-mangement-system-ems",
+    "thumbnailUrl": "/imgs/case-studies/4-energy-mangement-system-ems.png",
+    "pdfUrl": "/case-studies/Case-Study-4-Energy-Mangement-System-EMS.pdf",
+    "description": "Detailed engineering case study on 4 Energy Mangement System EMS.",
+    "category": "Industrial Automation",
+    "sortOrder": 4
+  },
+  {
+    "id": "static-cs-5",
+    "title": "5 FLOATING SOLAR",
+    "slug": "5-floating-solar",
+    "thumbnailUrl": "/imgs/case-studies/5-floating-solar.png",
+    "pdfUrl": "/case-studies/Case-Study-5-FLOATING-SOLAR_Final.pdf",
+    "description": "Detailed engineering case study on 5 FLOATING SOLAR.",
+    "category": "Renewable Energy",
+    "sortOrder": 5
+  },
+  {
+    "id": "static-cs-6",
+    "title": "7 Water Supply Schemes",
+    "slug": "7-water-supply-schemes",
+    "thumbnailUrl": "/imgs/case-studies/7-water-supply-schemes.png",
+    "pdfUrl": "/case-studies/Case-Study-7-Water-Supply-Schemes_Final.pdf",
+    "description": "Detailed engineering case study on 7 Water Supply Schemes.",
+    "category": "Water & Process",
+    "sortOrder": 6
+  },
+  {
+    "id": "static-cs-7",
+    "title": "IoT SCADA System for PM-KUSUM",
+    "slug": "iot-scada-system-for-pm-kusum",
+    "thumbnailUrl": "/imgs/case-studies/iot-scada-system-for-pm-kusum.png",
+    "pdfUrl": "/case-studies/Case-Study_IoT-SCADA-system-for-PM-Kusum.pdf",
+    "description": "Detailed engineering case study on IoT SCADA system for PM-KUSUM.",
+    "category": "PM-KUSUM",
+    "sortOrder": 7
+  },
+  {
+    "id": "static-cs-8",
+    "title": "Khavda Hybrid Plant",
+    "slug": "khavda-hybrid-plant",
+    "thumbnailUrl": "/imgs/case-studies/khavda-hybrid-plant.png",
+    "pdfUrl": "/case-studies/Case-Study_Khavda-Hybrid-Plant.pdf",
+    "description": "Detailed engineering case study on Khavda Hybrid Plant.",
+    "category": "Renewable Energy",
+    "sortOrder": 8
+  },
+  {
+    "id": "static-cs-9",
+    "title": "Tunnel 1st March 2025",
+    "slug": "tunnel-1st-march-2025",
+    "thumbnailUrl": "/imgs/case-studies/tunnel-1st-march-2025.png",
+    "pdfUrl": "/case-studies/Tunnel-Case-study-1st-March-2025.pdf",
+    "description": "Detailed engineering case study on Tunnel 1st March 2025.",
+    "category": "Infrastructure",
+    "sortOrder": 9
+  }
+]

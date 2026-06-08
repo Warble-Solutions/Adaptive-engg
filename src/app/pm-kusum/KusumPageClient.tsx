@@ -1,17 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Sun, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowRight, Sun } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSatelliteDish, faFileInvoice, faNetworkWired, faTasks, faBolt, faShieldAlt, faCloudSun, faBroadcastTower, faMap, faCheckCircle, faSolarPanel, faWifi, faFileContract, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faSatelliteDish, faFileInvoice, faNetworkWired, faTasks, faBolt, faShieldAlt, faSolarPanel, faSun, faMap, faCheckCircle, faWifi } from "@fortawesome/free-solid-svg-icons";
 import MicroCTA from "@/components/ui/MicroCTA";
 import ActionBadge from "@/components/ui/ActionBadge";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export default function KusumPageClient() {
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
-
   return (
     <div className="flex flex-col w-full bg-slate-950">
       {/* 1. HERO SECTION (Dark) */}
@@ -43,31 +40,27 @@ export default function KusumPageClient() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SectionWrapper>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6">
                 <div>
-                  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">The Digital Farmer</h2>
-                  <p className="text-lg text-slate-600 leading-relaxed font-medium mb-6">
-                    PM-KUSUM aims to de-diesel the farm sector. Our solutions ensure 100% visibility of solar pump performance, enabling farmers to earn from surplus power.
-                  </p>
-                  <div className="flex items-center gap-4 text-primary font-bold mb-6">
-                    <Sun className="w-6 h-6" />
-                    <span>Sustainable Agriculture</span>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-50/80 text-teal-600 rounded-lg text-xs font-black uppercase tracking-wider mb-4 border border-teal-100">
+                    Scheme Overview
                   </div>
-                  
-                  <div className="premium-card p-8 bg-gradient-to-br from-teal-50 to-teal-50/30 rounded-2xl border border-teal-100 shadow-md">
-                    <div className="grid grid-cols-2 gap-6">
-                      <div>
-                        <div className="text-3xl font-black text-slate-900 mb-1">34k<span className="text-sm text-slate-500"> Cr</span></div>
-                        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Allocation</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-black text-slate-900 mb-1">30.8<span className="text-sm text-slate-500"> GW</span></div>
-                        <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Target</div>
-                      </div>
-                      <div className="col-span-2 pt-3 border-t border-teal-200">
-                        <div className="text-lg font-bold text-slate-900">Farmers Empowered</div>
-                        <p className="text-slate-500 text-xs">Through Solar Irrigation</p>
-                      </div>
+                  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">PM-KUSUM Scheme</h2>
+                  <p className="text-slate-600 leading-relaxed mb-6 text-sm md:text-base">
+                    PM-KUSUM (Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan) Scheme, launched in 2019, is aimed at ensuring energy security for farmers in India, along with honouring India’s commitment to increase the share of installed capacity of electric power from non-fossil-fuel sources to 40% by 2030 as part of Intended Nationally Determined Contributions (INDCs).
+                  </p>
+                  <p className="text-slate-600 leading-relaxed mb-6 font-medium text-sm md:text-base">
+                    The scheme was extended until March 2026, with a total central financial allocation of Rs. 34,422 crore.
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-4 mt-6">
+                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl">
+                      <span className="block text-[10px] font-mono uppercase tracking-wider text-slate-400">Total Allocation</span>
+                      <strong className="text-xl md:text-2xl font-black text-slate-900">₹34,422 Cr</strong>
+                    </div>
+                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl">
+                      <span className="block text-[10px] font-mono uppercase tracking-wider text-slate-400">Extended Target</span>
+                      <strong className="text-xl md:text-2xl font-black text-slate-900">March 2026</strong>
                     </div>
                   </div>
                 </div>
@@ -75,12 +68,36 @@ export default function KusumPageClient() {
             </SectionWrapper>
 
             <SectionWrapper delay={0.2}>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 h-[380px] group">
-                <img src="/imgs/farm.jpg" alt="Solar Powered Farm Irrigation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/85 backdrop-blur-md rounded-2xl border border-white/20">
-                  <p className="text-slate-900 font-bold text-sm">Solarizing India&apos;s Agricultural Fields</p>
-                  <p className="text-slate-500 text-xs mt-0.5">Eco-friendly standalone irrigation pumps</p>
+              <div className="flex flex-col gap-6">
+                <div className="p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group">
+                  <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '20px 20px' }}></div>
+                  <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <Sun className="text-teal-400 w-6 h-6 shrink-0" /> Who can Apply?
+                  </h3>
+                  <p className="text-[10px] font-mono text-teal-400 uppercase tracking-widest mb-4">Indian Farmer Profile</p>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                    Farmers can apply for the scheme by visiting the official PM-KUSUM website, logging in with their reference number, and filling out the online application form.
+                  </p>
+                  <p className="text-slate-400 text-xs leading-relaxed mb-6">
+                    To support the PM-KUSUM scheme, we at Adaptive Engineering Pvt. Ltd. have our range of solutions which helps each project immensely, to support the PM-KUSUM scheme.
+                  </p>
+                  <a 
+                    href="https://pmkusum.mnre.gov.in/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2 text-xs font-bold text-teal-400 hover:text-white hover:gap-3 transition-all font-mono"
+                  >
+                    Visit Official PM-KUSUM Website <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+
+                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-[180px] group">
+                  <img src="/imgs/pm-kusum/ams_field_om.png" alt="Solar Powered Farm Irrigation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-white/20">
+                    <p className="text-slate-900 font-bold text-xs">Empowering Sustainable Agriculture</p>
+                    <p className="text-slate-500 text-[10px] mt-0.5">Standalone off-grid & grid-tied pump solarization</p>
+                  </div>
                 </div>
               </div>
             </SectionWrapper>
@@ -88,72 +105,90 @@ export default function KusumPageClient() {
         </div>
       </section>
 
-      {/* 3. END-TO-END KUSUM STACK (Combined) */}
+      {/* AEPL CAPABILITIES STATS (Dark) */}
+      <section className="py-20 bg-slate-950 border-y border-white/5 text-white relative z-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+            {[
+              { value: "17+", label: "Years of Experience" },
+              { value: "68 GW+", label: "Installed Base" },
+              { value: "10,000+", label: "Electric Panels Supplied" },
+              { value: "125,000+", label: "Sq.ft. Manufacturing Facility" },
+              { value: "100+", label: "Satisfied Customers" },
+            ].map((stat, i) => (
+              <div key={i} className="flex flex-col items-center p-6 bg-white/[0.01] border border-white/5 rounded-2xl hover:border-teal-500/30 hover:bg-white/[0.03] transition-all duration-300">
+                <span className="text-3xl md:text-4xl font-black text-teal-400 mb-2 font-mono tracking-tight">{stat.value}</span>
+                <span className="text-xs text-slate-400 font-bold uppercase tracking-wider leading-snug">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. END-TO-END PM-KUSUM STACK (Combined) */}
       <section className="section-dark py-32 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">End-to-End KUSUM Stack</h2>
+              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-4">End-to-End PM-KUSUM Stack</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">Unified solution from IoT Sensors to State-Level Dashboards.</p>
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "IoT SCADA (RMS)",
                 desc: "Edge computing device with Store & Forward capability.",
-                icon: faSatelliteDish
+                icon: faSatelliteDish,
+                href: "/pm-kusum/iot-scada"
               },
               {
                 title: "ReportWiz",
                 desc: "Automated JMR generation and subsidy compliance reports.",
-                icon: faFileInvoice
+                icon: faFileInvoice,
+                href: "/pm-kusum/reportwiz"
               },
               {
                 title: "Central Monitoring System (CMS)",
                 desc: "Unified portfolio view for State Agencies & Developers.",
-                icon: faNetworkWired
+                icon: faNetworkWired,
+                href: "/pm-kusum/cms"
               },
               {
                 title: "Asset Management System (AMS)",
                 desc: "Workorder ticketing and inventory tracking.",
-                icon: faTasks
+                icon: faTasks,
+                href: "/pm-kusum/ams"
               },
               {
                 title: "HT Panel",
                 desc: "11kV/33kV Vacuum Circuit Breakers (VCB) for substations.",
-                icon: faBolt
+                icon: faBolt,
+                href: "/pm-kusum/ht-panel"
               },
               {
                 title: "ACDB Panels",
                 desc: "IP65 protection for 800V & 415V pump connections.",
-                icon: faShieldAlt
-              },
-              {
-                title: "Weather Monitoring System (WMS)",
-                desc: "Industrial grade sensors for Irradiation, Module Temp, and Wind Speed to calculate accurate PR.",
-                icon: faCloudSun
-              },
-              {
-                title: "Telemetry System",
-                desc: "Real-time data transmission to SLDC/RLDC via RTU, ensuring grid visibility and compliance.",
-                icon: faBroadcastTower
+                icon: faShieldAlt,
+                href: "/pm-kusum/acdb-panels"
               }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-2xl transition-all duration-300 group cursor-default h-full flex flex-col items-start hover:-translate-y-2">
-                  <div className="mb-6 w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-white group-hover:text-[#0da08a] transition-all duration-300">
-                    <FontAwesomeIcon icon={item.icon} className="w-6 h-6" />
+                <Link href={item.href} className="block h-full">
+                  <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-primary/50 hover:shadow-xl shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col items-start hover:-translate-y-2">
+                    <div className="mb-6 w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-white group-hover:text-[#0da08a] transition-all duration-300">
+                      <FontAwesomeIcon icon={item.icon} className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white transition-colors leading-tight">{item.title}</h3>
+                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-teal-50 transition-colors mb-6 flex-grow">
+                      {item.desc}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto group-hover:text-white group-hover:gap-3 transition-all">
+                      Learn More <ArrowRight className="w-4 h-4" />
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white transition-colors leading-tight">{item.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed group-hover:text-teal-50 transition-colors mb-6 flex-grow">
-                    {item.desc}
-                  </p>
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto group-hover:text-white group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
+                </Link>
               </SectionWrapper>
             ))}
           </div>
@@ -244,7 +279,7 @@ export default function KusumPageClient() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4 font-heading">Which KUSUM Component are you?</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4 font-heading">Which PM-KUSUM Component are you?</h2>
               <p className="text-slate-500 max-w-2xl mx-auto text-lg">Select your profile to see tailored solutions for your needs.</p>
             </SectionWrapper>
           </div>
@@ -335,33 +370,59 @@ export default function KusumPageClient() {
         </div>
       </section>
 
-      {/* 4. THE ARCHITECTURE (Light) */}
-      <section className="py-24 bg-white text-slate-900 relative z-20">
+
+
+      {/* FEATURES & BENEFITS (Dark) */}
+      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <h2 className="text-3xl font-bold mb-4 font-heading">The Integrated Ecosystem</h2>
-              <p className="text-slate-500 max-w-2xl mx-auto">From solar generation to subsidy release—a seamless flow of power and data.</p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/30">
+                <Sun className="w-4 h-4" />
+                <span>Core Advantages</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-4">Features & Benefits</h2>
+              <p className="text-gray-400 max-w-xl mx-auto text-sm">
+                Empowering farmers and solar developers with next-generation remote monitoring and compliance.
+              </p>
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            {/* Connector Line (Desktop) */}
-            <div className="hidden md:block absolute top-[60px] left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-primary/30 -z-0"></div>
-
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {[
-              { title: "Generation", desc: "Solar Modules & Structure generate DC power.", icon: faSolarPanel },
-              { title: "Conversion", desc: "HT/LT Panels and VFDs manage power flow.", icon: faBolt },
-              { title: "Intelligence", desc: "SolarWiz IoT Gateway captures real-time data.", icon: faWifi },
-              { title: "Compliance", desc: "Data is pushed to State Portals for subsidy release.", icon: faFileContract }
-            ].map((step, i) => (
+              {
+                icon: <FontAwesomeIcon icon={faWifi} className="w-6 h-6 text-teal-400" />,
+                title: "Monitor from Anywhere",
+                desc: "100% remote visibility of solar pump metrics, flow rates, and generation stats on mobile or desktop."
+              },
+              {
+                icon: <FontAwesomeIcon icon={faTasks} className="w-6 h-6 text-teal-400" />,
+                title: "Analyse Performance",
+                desc: "Calculate accurate Performance Ratio (PR) and isolate performance anomalies in real time."
+              },
+              {
+                icon: <FontAwesomeIcon icon={faFileInvoice} className="w-6 h-6 text-teal-400" />,
+                title: "In-built Reports Library",
+                desc: "Generate compliance reports and Joint Meter Readings (JMR) with a single click."
+              },
+              {
+                icon: <FontAwesomeIcon icon={faNetworkWired} className="w-6 h-6 text-teal-400" />,
+                title: "Third-party Integration",
+                desc: "Connect seamlessly with localized SCADA systems, DISCOM portals, and SLDC RTUs."
+              },
+              {
+                icon: <FontAwesomeIcon icon={faSolarPanel} className="w-6 h-6 text-teal-400" />,
+                title: "Multi-plant O&M",
+                desc: "Manage multiple pump installations and geographic clusters under a unified O&M schedule."
+              }
+            ].map((feat, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-primary mb-6 shadow-lg hover:border-primary/50 hover:shadow-xl scale-110 transition-transform duration-300">
-                    <FontAwesomeIcon icon={step.icon} className="w-8 h-8" />
+                <div className="p-6 bg-white/[0.01] border border-white/5 rounded-2xl hover:border-teal-500/30 hover:bg-white/[0.03] transition-all duration-300 h-full flex flex-col group">
+                  <div className="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 group-hover:scale-115 transition-transform duration-300">
+                    {feat.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed px-4">{step.desc}</p>
+                  <h3 className="text-lg font-bold text-white mb-3 leading-tight">{feat.title}</h3>
+                  <p className="text-xs text-slate-400 leading-relaxed flex-grow">{feat.desc}</p>
                 </div>
               </SectionWrapper>
             ))}
@@ -420,47 +481,7 @@ export default function KusumPageClient() {
         </div>
       </section>
 
-      {/* 6. FAQS (Light) */}
-      <section className="py-24 bg-white text-slate-900 relative z-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <SectionWrapper>
-            <h2 className="text-3xl font-bold text-center mb-16 font-heading">KUSUM Implementation FAQs</h2>
-          </SectionWrapper>
-          <div className="space-y-4">
-            {[
-              {
-                q: "Is the SolarWiz device compatible with all pump controllers?",
-                a: "Yes, we support Modbus integration with all major VFD makes including INVT, Fuji, Delta, ABB, and many others, ensuring universal compatibility."
-              },
-              {
-                q: "Do you provide the server infrastructure?",
-                a: "Yes, our cloud servers are hosted in India (MeitY compliant) with 99.9% uptime guarantees, ensuring your data remains secure and compliant with local regulations."
-              },
-              {
-                q: "Can this system work without internet?",
-                a: "Our 'Store & Forward' technology saves data locally during network outages and automatically uploads it to the server once connectivity is restored, ensuring zero data loss."
-              }
-            ].map((faq, i) => (
-              <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="border border-gray-200 rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-xl border-primary/50 transition-colors">
-                  <button
-                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full flex items-center justify-between p-6 bg-white hover:border-primary/50 hover:shadow-xl bg-gray-50 transition-colors text-left"
-                  >
-                    <span className="font-bold text-lg text-slate-800">{faq.q}</span>
-                    {openFaq === i ? <ChevronUp className="text-primary w-5 h-5" /> : <ChevronDown className="text-gray-400 w-5 h-5" />}
-                  </button>
-                  <div className={`overflow-hidden transition-all duration-300 ${openFaq === i ? "max-h-48" : "max-h-0"}`}>
-                    <div className="p-6 pt-0 text-slate-600 leading-relaxed border-t border-gray-100 bg-gray-50/50">
-                      {faq.a}
-                    </div>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* 6. CTA (Light) */}
       <section className="py-20 bg-transparent text-center relative z-10">

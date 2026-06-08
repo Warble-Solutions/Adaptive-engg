@@ -148,10 +148,11 @@ export default function Page() {
             <div className="lg:col-span-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
                 {[
-                  { icon: <Settings className="text-emerald-400 w-6 h-6" />, title: "Tailor-made Pumping Solutions", desc: "Automating motor controls and variable-speed drives to match pressure requirements dynamically across piping lines." },
-                  { icon: <Combine className="text-emerald-400 w-6 h-6" />, title: "Outlet Management System (OMS)", desc: "Solenoid valve interfaces, solar charge telemetry, and automated crop cycle schedules directly at remote fields." },
-                  { icon: <CpuIcon className="text-emerald-400 w-6 h-6" />, title: "Reliable & Scalable SCADA", desc: "Centralized database processing logging flow rates and valve status, keeping operators up-to-date in real-time." },
-                  { icon: <Activity className="text-emerald-400 w-6 h-6" />, title: "Hydraulic Parameter Controls", desc: "Closed-loop feedback control tracking pressure limits, energy metrics, and total volumetric flow rate at every chak level." }
+                  { icon: <Settings className="text-emerald-400 w-6 h-6" />, title: "Tailor-made Solutions for Pumping", desc: "Customized pumping configurations designed for variable field pressure demands." },
+                  { icon: <Combine className="text-emerald-400 w-6 h-6" />, title: "Outlet Management System (OMS) in Micro Irrigation", desc: "End-to-end solar valve telemetry and field controller automation loops." },
+                  { icon: <CpuIcon className="text-emerald-400 w-6 h-6" />, title: "Reliable and scalable SCADA architecture", desc: "Centralized host mapping and historical logging for thousands of field points." },
+                  { icon: <Activity className="text-emerald-400 w-6 h-6" />, title: "Control and monitor hydraulic parameters", desc: "Continuous monitoring of water distribution to prevent losses and ensure equity." },
+                  { icon: <Droplets className="text-emerald-400 w-6 h-6" />, title: "Energy, pressure and flow at defined chak level", desc: "Fine-grained monitoring and optimization of parameters directly at individual chaks." }
                 ].map((item, i) => (
                   <SectionWrapper key={i} delay={i * 0.08}>
                     <div className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-500/40 hover:bg-white/10 transition-all duration-300 h-full">
@@ -190,10 +191,11 @@ export default function Page() {
               <SectionWrapper>
                 <div className="space-y-6">
                   {[
-                    { title: "Energy and Flow Optimization", desc: "Volumetric scheduling and VFD speed tuning prevent excess pressure build-up, reducing energy wastage during crop watering." },
-                    { title: "User Programmable Dashboards", desc: "Enables irrigation departments to adjust valve scheduling limits and generate custom water consumption logs easily." },
-                    { title: "Sabotage & Leakage Logging", desc: "Automated alarm reporting if pressure drops suddenly, highlighting potential pipe bursts, leakages, or structural damage." },
-                    { title: "Water Scheduling for Crops", desc: "Advanced water availability scheduling linked directly with Crop Management Systems, delivering moisture matching growth cycles." }
+                    { title: "Energy and Flow Optimization", desc: "Volumetric scheduling and VFD tuning to eliminate pressure losses and excess energy draw." },
+                    { title: "User programmable dashboards for system optimization", desc: "Allows operators to define schedules, adjust valve parameters, and configure triggers." },
+                    { title: "Logging of report and alarms for sabotage / leakage", desc: "Real-time alerts and logs mapping pressure drops to identify line leakages or tampering." },
+                    { title: "Advanced asset management system", desc: "CMMS-integrated diagnostics checking valve wear, solar battery health, and RTU status." },
+                    { title: "Water availability scheduling for Crop Management System", desc: "Tailoring water delivery cycles to specific crop growth phases and local soil moisture trends." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 items-start border-b border-slate-100 pb-5 last:border-0 last:pb-0">
                       <div className="w-10 h-10 bg-emerald-50 text-[#0da08a] rounded-xl flex items-center justify-center shrink-0 border border-emerald-100 font-bold text-sm">
@@ -333,76 +335,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 6. PROCESS TIMELINE (Custom Horizontal Pipeline timeline - Light) */}
-      <section className="py-28 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-20">
-              <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block">Methodology</span>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Our OMS Project Delivery Pipeline</h2>
-              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                AEPL leverages structured design and testing timelines to deliver optimal micro-irrigation grids.
-              </p>
-            </div>
-          </SectionWrapper>
 
-          {/* Horizontal pipeline connected flow */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 relative">
-            {/* Visual connecting pipe line for desktop screens */}
-            <div className="hidden md:block absolute top-12 left-[12%] right-[12%] h-1 bg-gradient-to-r from-emerald-500 to-teal-500/20 z-0"></div>
-
-            {[
-              { step: "01", title: "Feasibility Survey", desc: "Detailing chak-level nodes, mapping line elevations, and analyzing hydraulic head calculations.", icon: <LayoutTemplate className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "02", title: "RTU Kiosk Assembly", desc: "Fabricating in-house solar-powered RTU panels, valve controllers, and central SCADA servers.", icon: <Factory className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "03", title: "Field Telemetry Hookup", desc: "Deploying solenoid valves on-site, connecting telemetry antennas, and performing field loop checks.", icon: <Settings className="w-5 h-5 text-[#0da08a]" /> },
-              { step: "04", title: "SCADA & O&M Handover", desc: "Calibrating pipeline SCADA screens, establishing central database syncs, and training operators.", icon: <Cpu className="w-5 h-5 text-[#0da08a]" /> }
-            ].map((item, idx) => (
-              <SectionWrapper key={idx} delay={idx * 0.1}>
-                <div className="h-full bg-slate-50 border border-slate-100 rounded-3xl p-6 relative hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between relative z-10">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-full blur-xl"></div>
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="w-10 h-10 rounded-full bg-slate-900 border-2 border-emerald-500 flex items-center justify-center font-bold text-xs text-white shadow-lg">
-                        {item.step}
-                      </span>
-                      <div className="p-2.5 bg-emerald-50 rounded-xl">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              </SectionWrapper>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 7. INFRASTRUCTURE SHOWCASE */}
-      <section className="relative z-20 overflow-hidden">
-        <div className="relative h-[400px]">
-          <Image src="/imgs/micro-irrigation-showcase-v2.png" alt="Crop fields Micro Irrigation sprinkler systems" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
-          <div className="absolute inset-0 flex items-center">
-            <div className="max-w-7xl mx-auto px-6 w-full">
-              <SectionWrapper>
-                <div className="max-w-lg">
-                  <span className="text-emerald-400 font-bold uppercase text-xs tracking-widest mb-3 block">Outlet Management Systems (OMS)</span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">Chak-Level Flow & Pressure Control</h2>
-                  <p className="text-slate-300 leading-relaxed mb-6 text-sm md:text-base">
-                    Delivering tailor-made telemetry panels monitoring energy, pressure, and flow rates, optimizing crop irrigation patterns for regional state boards.
-                  </p>
-                  <Link href="/infrastructure/water/centralized-scada" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors text-sm shadow-[0_0_15px_rgba(13,160,138,0.3)]">
-                    Explore Centralized SCADA <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </SectionWrapper>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 8. OTHER SOLUTIONS (Light) */}
       <section className="py-24 bg-slate-50 text-slate-900 relative z-20 border-t border-slate-200">

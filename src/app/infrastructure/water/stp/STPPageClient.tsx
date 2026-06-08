@@ -18,35 +18,35 @@ export default function STPPageClient() {
   const solutions = [
     {
       titleShort: "Process Optimization",
-      highlight: "Biological Treatment Control",
-      title: "Biological Process & Aeration Optimization",
+      highlight: "Treatment Process",
+      title: "Treatment Process Optimization",
       icon: <Settings className="w-6 h-6" />,
-      description: "Deploying intelligent closed-loop control systems for aeration basins (SBR, MBR, ASP). Utilizing continuous dissolved oxygen (DO) feedback sensors, variable-speed blower algorithms, and return activated sludge (RAS) telemetry to guarantee regulatory compliance while slashing energy overhead by up to 30%.",
-      keySpecs: ["Automated DO Loops", "SBR Cycle Analytics", "Sludge Age Algorithms"]
+      description: "Deploying intelligent process control systems to optimize biological treatment stages, aeration cycles, and chemical dosing.",
+      keySpecs: ["Aeration Optimization", "Dosing Controls", "Compliance Tracking"]
     },
     {
       titleShort: "Pump Optimization",
-      highlight: "Hydraulic Management",
-      title: "VFD & Smart Level Telemetry Pump Control",
+      highlight: "Pump Operations",
+      title: "Optimize Pump Operations",
       icon: <Activity className="w-6 h-6" />,
-      description: "Adjusting influent and effluent pump performance dynamically based on continuous ultrasonic level inputs. Balances running hours across multi-pump configurations, preventing dry-runs, reducing start-stop fatigue, and mitigating pipeline surge pressures.",
-      keySpecs: ["Anti-Clog Diagnostics", "Dry-Run Protection", "Dynamic Speed Controls"]
+      description: "Smart pump control sequences balancing operating hours, preventing dry-runs, and optimizing energy usage dynamically.",
+      keySpecs: ["VFD Level Control", "Dry-Run Protection", "Cycle Balancing"]
     },
     {
-      titleShort: "Geographic Networks",
-      highlight: "Distributed Infrastructure",
-      title: "Wide-Area Telemetry & Centralized Monitoring",
+      titleShort: "Geographic Network",
+      highlight: "Large Networks",
+      title: "Manage Geographically Large Network",
       icon: <Radio className="w-6 h-6" />,
-      description: "Integrating remote sewage pumping stations (SPS) and lift stations into a unified centralized SCADA dashboard. Utilizing encrypted telemetry protocols (LoRa, 4G/5G, fiber optic) with robust local buffers to prevent data gaps during signal outages.",
-      keySpecs: ["Edge RTU Integration", "Dual-SIM Fallbacks", "Distributed Alarming"]
+      description: "Seamlessly connecting geographically distributed lift stations and pumping houses to a centralized SCADA portal.",
+      keySpecs: ["Wide-Area Telemetry", "Centralized SCADA", "Data Buffering"]
     },
     {
-      titleShort: "Mobile Asset Management",
-      highlight: "Operations intelligence",
-      title: "CMMS Sync & Field Diagnostics",
+      titleShort: "Asset Management",
+      highlight: "Mobile Assets",
+      title: "Mobile Asset Management System",
       icon: <Smartphone className="w-6 h-6" />,
-      description: "Connecting edge field devices directly with mobile Computerized Maintenance Management Systems (CMMS). Field operations crews receive predictive warnings (bearing temperature, motor vibration shifts) as push alerts, speeding up dispatch.",
-      keySpecs: ["Vibration Analytics", "Push Maintenance Alerts", "Digital Run Log Sync"]
+      description: "Integrating field operations with mobile asset logging to ensure maximum utilization, predictive diagnostics, and lower downtime.",
+      keySpecs: ["Mobile CMMS Sync", "Predictive Diagnostics", "Operator Alerts"]
     }
   ];
 
@@ -306,27 +306,33 @@ export default function STPPageClient() {
                 {[
                   {
                     num: "01",
-                    title: "Reliable Remote Pumping Station Control",
-                    desc: "Reliable monitoring and control of pump stations, minimizing risk of sewer system overflows and enabling automated emergency bypass schemes.",
+                    title: "Reliable monitoring and control of pump stations",
+                    desc: "Ensure automated emergency routines, safety check loops, and stable remote monitoring across all stations.",
                     color: "border-l-4 border-emerald-500"
                   },
                   {
                     num: "02",
-                    title: "Minimize Overall Energy Draw",
-                    desc: "Minimize energy usage by integrating automated VFD cycles, soft starters, and intelligent power quality panels (APFC).",
+                    title: "Minimize energy usage (using latest digital technologies and SCADA)",
+                    desc: "Integrating smart power monitoring, VFD optimization, and active demand tracking to slash utility bills.",
                     color: "border-l-4 border-cyan-500"
                   },
                   {
                     num: "03",
-                    title: "Flexible & Expandable Architecture",
-                    desc: "Ensure a scalable, reliable, and flexible architecture based on open database standards to incorporate new pump wells easily.",
+                    title: "Ensure scalable, reliable and flexible architecture",
+                    desc: "Builds a modular system that grows alongside municipal demand without requiring costly re-engineering.",
                     color: "border-l-4 border-emerald-500"
                   },
                   {
                     num: "04",
-                    title: "Batch Diagnostics & Custom Reporting",
-                    desc: "Batch processing to generate user defined reports, custom compliance logging sheets, and predictive maintenance alerts.",
+                    title: "Batch processing to generate user defined reports",
+                    desc: "Easily generate custom compliance summaries, flow logs, and daily discharge charts.",
                     color: "border-l-4 border-cyan-500"
+                  },
+                  {
+                    num: "05",
+                    title: "Dashboards and advanced analytics for better plant performance",
+                    desc: "Bird's eye view dashboards with predictive diagnostics and maintenance tools to maximize plant uptime.",
+                    color: "border-l-4 border-emerald-500"
                   }
                 ].map((item, i) => (
                   <div key={i} className={`pl-6 p-4 bg-slate-50 rounded-r-2xl ${item.color} transition-all duration-300 hover:shadow-md`}>
@@ -357,10 +363,10 @@ export default function STPPageClient() {
 
                 <div className="space-y-5">
                   {[
-                    { icon: <Zap className="w-6 h-6 text-emerald-400" />, title: "Turn-key E&I Solutions", desc: "Covers all project stages—from initial instrumentation sizing to manufacturing panels, loop checking, and final testing." },
-                    { icon: <ShieldCheck className="w-6 h-6 text-emerald-400" />, title: "Secure & Encrypted Connectivity", desc: "Secure telemetry layers protecting public wastewater grids from intrusion while enabling anytime-anywhere monitoring." },
-                    { icon: <BarChart3 className="w-6 h-6 text-emerald-400" />, title: "Analytical Processing & Logging", desc: "Batch processes designed to aggregate historical levels, pump logs, and chemical usage into compliant regulatory reports." },
-                    { icon: <Smartphone className="w-6 h-6 text-emerald-400" />, title: "Mobile Maintenance Integration", desc: "Direct notification loops notifying engineers and supervisors when parameters shift past limits, maximizing pump lifetimes." }
+                    { icon: <Zap className="w-6 h-6 text-emerald-400" />, title: "Turn-key E&I Solutions – Execution of scalable projects", desc: "Complete engineering and execution from design, fabrication to on-site testing." },
+                    { icon: <ShieldCheck className="w-6 h-6 text-emerald-400" />, title: "Secure & Reliable Remote Connectivity – Monitor from anywhere, anytime!", desc: "Ensuring stable encrypted telemetry loops protecting the utility assets 24/7." },
+                    { icon: <BarChart3 className="w-6 h-6 text-emerald-400" />, title: "Data Analytics – Facilitating decision making", desc: "Advanced dashboards turning raw plant logs into actionable operational insights." },
+                    { icon: <Smartphone className="w-6 h-6 text-emerald-400" />, title: "Mobile Asset Management – Optimum Utilization of Assets", desc: "Integrating smart mobile reporting to maximize field crew efficiency and asset lifespans." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-emerald-500/30 transition-colors group">
                       <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center shrink-0 border border-emerald-500/30 group-hover:scale-110 transition-transform">
@@ -408,113 +414,7 @@ export default function STPPageClient() {
         </div>
       </section>
 
-      {/* 7. PROCESS FLOW (Custom Blueprint Timeline layout - Light) */}
-      <section className="py-28 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-20">
-              <span className="text-emerald-600 font-bold uppercase text-sm tracking-widest mb-3 block">Workflow Process</span>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Our STP Project Execution Timeline</h2>
-              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                A highly structured blueprint process matching strict engineering standards.
-              </p>
-            </div>
-          </SectionWrapper>
 
-          {/* Vertical blueprint timeline */}
-          <div className="relative max-w-4xl mx-auto">
-            {/* Center Line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-cyan-500 to-emerald-500/10 md:-translate-x-1/2 z-0"></div>
-
-            <div className="space-y-12">
-              {[
-                {
-                  step: "01",
-                  title: "Engineering Survey & Drafting",
-                  desc: "Conducting hydraulic diagnostics, detailing plant instrumentation maps, sizing power panels, and drafting customized single-line diagrams (SLDs).",
-                  icon: <LayoutTemplate className="w-5 h-5 text-emerald-600" />
-                },
-                {
-                  step: "02",
-                  title: "In-House Panel Fabrication",
-                  desc: "Assembling power distribution panels (PCC), motor control centers (MCC), and programmable automation kiosks (PLC/RTU) in our facility.",
-                  icon: <Factory className="w-5 h-5 text-emerald-600" />
-                },
-                {
-                  step: "03",
-                  title: "Field Deployment & Testing",
-                  desc: "Routing cables on-site, mounting field instruments (DO sensors, ultrasonic transceivers), and completing rigid FAT and loop-check testing.",
-                  icon: <Settings className="w-5 h-5 text-emerald-600" />
-                },
-                {
-                  step: "04",
-                  title: "Central SCADA Handover",
-                  desc: "Integrating communication channels, deploying centralized SCADA maps, setting alarm configurations, and completing operator training.",
-                  icon: <Cpu className="w-5 h-5 text-emerald-600" />
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="relative flex flex-col md:flex-row items-stretch z-10">
-                  {/* Step marker pin */}
-                  <div className="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-slate-900 border-2 border-emerald-500 -translate-x-1/2 flex items-center justify-center z-20 text-white font-bold text-xs shadow-lg shadow-emerald-500/20">
-                    {item.step}
-                  </div>
-
-                  {/* Left Side spacer/block */}
-                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 md:pr-12 text-left md:text-right ${idx % 2 === 0 ? "md:block" : "md:invisible h-0 md:h-auto overflow-hidden md:overflow-visible"}`}>
-                    {idx % 2 === 0 && (
-                      <SectionWrapper delay={0.1} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300">
-                        <div className="inline-flex items-center justify-center p-3 bg-emerald-50 rounded-xl mb-4">
-                          {item.icon}
-                        </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                        <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
-                      </SectionWrapper>
-                    )}
-                  </div>
-
-                  {/* Right Side spacer/block */}
-                  <div className={`w-full md:w-1/2 pl-12 md:pl-12 text-left ${idx % 2 !== 0 ? "md:block" : "md:invisible h-0 md:h-auto overflow-hidden md:overflow-visible"}`}>
-                    {idx % 2 !== 0 && (
-                      <SectionWrapper delay={0.1} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300">
-                        <div className="inline-flex items-center justify-center p-3 bg-emerald-50 rounded-xl mb-4">
-                          {item.icon}
-                        </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                        <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
-                      </SectionWrapper>
-                    )}
-                  </div>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. INFRASTRUCTURE SHOWCASE */}
-      <section className="relative z-20 overflow-hidden">
-        <div className="relative h-[400px]">
-          <Image src="/imgs/stp-infrastructure-scale.png" alt="Sewage Pump house station assets scale" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
-          <div className="absolute inset-0 flex items-center">
-            <div className="max-w-7xl mx-auto px-6 w-full">
-              <SectionWrapper>
-                <div className="max-w-lg">
-                  <span className="text-emerald-400 font-bold uppercase text-xs tracking-widest mb-3 block">Infrastructure at Scale</span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">{WATER_STATS.pumpingStationsConnected.value}+ Pumping Stations Online</h2>
-                  <p className="text-slate-300 leading-relaxed mb-6 text-sm md:text-base">
-                    Deploying remote terminal units (RTUs) across multiple pumping grids, delivering integrated telemetry maps to a single SCADA control hub.
-                  </p>
-                  <Link href="/infrastructure/water/centralized-scada" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-                    Explore Centralized SCADA <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </SectionWrapper>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 9. OTHER SOLUTIONS (Light) */}
       <section className="py-24 bg-slate-50 text-slate-900 relative z-20 border-t border-slate-200">
