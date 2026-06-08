@@ -6,7 +6,8 @@ import Link from "next/link";
 import { 
   ArrowRight, Zap, Activity, ShieldCheck, Cpu, LayoutTemplate, 
   Network, Factory, CheckCircle2, ChevronRight, Ruler, Lock, 
-  Monitor, Compass, BarChart3, Clock, FileText, Settings, Shield
+  Monitor, Compass, BarChart3, Clock, FileText, Settings, Shield,
+  Award, Layers, Sliders, Gauge
 } from "lucide-react";
 
 export default function TurnkeyPageClient() {
@@ -74,7 +75,7 @@ export default function TurnkeyPageClient() {
                   <span className="gradient-heading">Execution</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
-                  End-to-end electrical &amp; instrumentation mastery for solar plants, substations, and heavy industrial assets.
+                  Empowered as a "Preferred Project Partner" in Turn-Key Projects for EPCs, delivering complete Electrical, Instrumentation & Automation solutions.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-teal-500/20">
@@ -90,25 +91,97 @@ export default function TurnkeyPageClient() {
             {/* Stats strip cards grid */}
             <SectionWrapper delay={0.3}>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
-                  <div className="text-4xl md:text-5xl font-black text-white mb-1 font-mono tracking-tight">200M<span className="text-primary">W+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-2">Largest Single Project Site</span>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">17<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Years Experience</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
-                  <div className="text-4xl md:text-5xl font-black text-white mb-1 font-mono tracking-tight">15<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-2">States covered nationally</span>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">68<span className="text-primary">GW+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Solar-Wind-Hybrid</span>
                 </div>
-                <div className="col-span-2 bg-gradient-to-br from-primary/10 to-teal-500/5 border border-primary/30 rounded-3xl p-8 hover:border-primary/50 transition-all duration-300 flex items-center justify-between">
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">700<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">MLD Water Treated</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">2.5<span className="text-primary">Km</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Road Tunnel E&I</span>
+                </div>
+                <div className="col-span-2 bg-gradient-to-br from-primary/10 to-teal-500/5 border border-primary/30 rounded-3xl p-6 hover:border-primary/50 transition-all duration-300 flex items-center justify-between">
                   <div>
-                    <div className="text-2xl font-bold text-white mb-1">99.5%</div>
-                    <span className="text-xs text-gray-300 font-semibold">Track record of on-time grid synchronization</span>
+                    <div className="text-xl font-bold text-white mb-1">3,500+ Panels</div>
+                    <span className="text-[11px] text-gray-300 block">Delivered & commissioned per year</span>
                   </div>
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
-                    <ShieldCheck className="w-6 h-6" />
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary shrink-0">
+                    <ShieldCheck className="w-5 h-5" />
                   </div>
                 </div>
               </div>
             </SectionWrapper>
+          </div>
+        </div>
+      </section>
+
+      {/* 1.5 OUR EXPERTISE (Electrical, Instrumentation & Automation Solutions) */}
+      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-white/5">
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            {/* Left Block: Description */}
+            <div className="lg:col-span-7">
+              <SectionWrapper>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">
+                  <Award className="w-4 h-4" />
+                  <span>Our Expertise</span>
+                </div>
+                
+                <h2 className="text-3xl md:text-5xl font-bold font-heading mb-8 leading-tight text-white">
+                  Experts in Electrical, <br />
+                  Instrumentation & Automation
+                </h2>
+
+                <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
+                  <p>
+                    We at Adaptive Engineering Pvt Ltd are experts in providing comprehensive Electrical, Instrumentation, and Automation Solutions for Renewable, Water, and Infrastructure verticals. Our best-in-class SCADA and Monitoring Solutions, coupled with Mobile Asset Management Software, minimize breakdown losses and maximize productivity.
+                  </p>
+                  <p>
+                    Our 17+ years of experience, combined with a complete solutions portfolio of electrical and automation systems and excellent project management skills, has empowered us as a "Preferred Project Partner" in Turn-Key Projects for leading EPCs.
+                  </p>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Right Block: Vertical Domains Bento Card */}
+            <div className="lg:col-span-5">
+              <SectionWrapper delay={0.2}>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[40px] pointer-events-none"></div>
+                  
+                  <h3 className="text-xl font-bold font-heading text-white mb-6">Core Industry Verticals</h3>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      { title: "Renewable", desc: "Solar, Wind & Hybrid power E&I.", icon: <Zap className="w-5 h-5 text-primary" /> },
+                      { title: "Water Solutions", desc: "WTP, STP, ETP & automated pumping houses.", icon: <Activity className="w-5 h-5 text-primary" /> },
+                      { title: "Infrastructure", desc: "Twin-tube road tunnels & smart traffic E&I.", icon: <Compass className="w-5 h-5 text-primary" /> },
+                      { title: "CGD Networks", desc: "City Gas Distribution SCADA & telemetry.", icon: <Network className="w-5 h-5 text-primary" /> }
+                    ].map((vertical, idx) => (
+                      <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-2xl hover:border-primary/20 hover:bg-white/10 transition-all duration-300">
+                        <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center text-primary mb-3">
+                          {vertical.icon}
+                        </div>
+                        <h4 className="text-xs font-bold text-white">{vertical.title}</h4>
+                        <p className="text-[10px] text-gray-400 mt-1 leading-normal font-semibold">{vertical.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+
           </div>
         </div>
       </section>
@@ -243,74 +316,74 @@ export default function TurnkeyPageClient() {
           {/* Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            {/* Box 1 - Wide Card */}
+            {/* Box 1 - Wide Card (Cabling Installation) */}
             <SectionWrapper delay={0.1} className="md:col-span-2">
-              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[380px] flex flex-col justify-between group relative overflow-hidden shadow-2xl">
+              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[360px] flex flex-col justify-between group relative overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
                 <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-all"></div>
                 
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                    <Factory className="w-6 h-6" />
+                    <Network className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 font-heading">Switchyard Works</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-                    Complete HT transformer installation, CT/PT structure mounting, isolator erection, busbar clamping, breaker interface wiring, and final HT control cabinet commissioning up to 33kV/66kV standards.
+                  <h3 className="text-2xl font-bold text-white mb-3 font-heading">Cabling Installation Works</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed max-w-lg">
+                    We offer comprehensive cabling installation services across high voltage (HV), medium voltage (MV), and low voltage (LV) systems, executed in absolute compliance with tender technical specifications, local utility authority standards, and clients/consultants' requirements.
                   </p>
                 </div>
 
                 <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>TRANSFORMERS & SWITCHYARDS</span>
-                  <span className="text-primary font-bold">UP TO 66KV</span>
+                  <span>HV / MV / LV SYSTEM INSTALLATION</span>
+                  <span className="text-primary font-bold">COMPLIANT SYSTEMS</span>
                 </div>
               </div>
             </SectionWrapper>
 
-            {/* Box 2 - Standard Card */}
+            {/* Box 2 - Standard Card (Maps & Routing) */}
             <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[380px] flex flex-col justify-between group relative overflow-hidden">
+              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[360px] flex flex-col justify-between group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
                 
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                    <ShieldCheck className="w-6 h-6" />
+                    <Compass className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-heading">Protection & Metering</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 font-heading">Map Collection & Routing</h3>
                   <p className="text-gray-400 text-xs leading-relaxed">
-                    Calibration of numerical protective relays, secondary current injection loop verification, CT ratio check records, and ABT metering integration complying with state grid authorities.
+                    We handle scale-accurate map collection from clients/authorities with contractor support, providing exact cable route layout blueprints and detailed cable ampacity thermal calculations.
                   </p>
                 </div>
 
                 <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>COMPLIANCE & TESTING</span>
-                  <span className="text-primary font-bold">GRID ACCREDITED</span>
+                  <span>BLUEPRINTING & CAPACITY PLANS</span>
+                  <span className="text-primary font-bold">DESIGN ENGINE</span>
                 </div>
               </div>
             </SectionWrapper>
 
-            {/* Box 3 - Standard Card */}
+            {/* Box 3 - Standard Card (Pre-Jointing & HV Tests) */}
             <SectionWrapper delay={0.3}>
               <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
                 
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                    <Network className="w-6 h-6" />
+                    <Activity className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-heading">Cable Engineering</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 font-heading">Testing & Validation</h3>
                   <p className="text-gray-400 text-xs leading-relaxed">
-                    Routing and pulling of DC & AC cables, layout of ladder-type cable trays, deep burial trench execution, and HT/LT jointing works monitored for safety limits.
+                    Rigorous electrical field testing including Pre-Jointing and Jointing verification, High Voltage (HV) testing, Insulation Resistance (IR), Magnetic Balance, and Vector Group testing.
                   </p>
                 </div>
 
                 <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>CABLING & TERMINATION</span>
-                  <span className="text-primary font-bold">STRUCTURAL TRENCH</span>
+                  <span>DIAGNOSTIC & COMMISSIONING TESTS</span>
+                  <span className="text-primary font-bold">ZERO ERRORS</span>
                 </div>
               </div>
             </SectionWrapper>
 
-            {/* Box 4 - Wide Card */}
+            {/* Box 4 - Wide Card (SITC & Relay Parameterization) */}
             <SectionWrapper delay={0.4} className="md:col-span-2">
               <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
@@ -318,22 +391,64 @@ export default function TurnkeyPageClient() {
                 
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                    <Shield className="w-6 h-6" />
+                    <Cpu className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 font-heading">Earthing & Lightning Grids</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-                    Calculations and structural assembly of low-impedance earthing systems. Installation of chemical earth pits, copper earth tape routing, and strategic lightning terminal masts to secure field sensors.
+                  <h3 className="text-2xl font-bold text-white mb-3 font-heading">Relay parameterization & Complete SITC</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed max-w-lg">
+                    Full protective relay parameterization coordination, and Supply Installation Testing & Commissioning (SITC) of HT/LT Panels, PLC/DCS automation, telemetry SCADA, and all field instrumentation.
                   </p>
                 </div>
 
                 <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>EARTH GRID CALCULATIONS</span>
-                  <span className="text-primary font-bold">IEEE 80 COMPLIANT</span>
+                  <span>PANELS, INSTRUMENTS & SCADA SITC</span>
+                  <span className="text-primary font-bold">IEEE COMPLIANT</span>
                 </div>
               </div>
             </SectionWrapper>
 
           </div>
+        </div>
+      </section>
+
+      {/* 3.5 BENEFITS SECTION (Clean Light Theme) */}
+      <section className="py-24 bg-white text-slate-900 relative z-20 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-6">
+          
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Operational Benefits</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">E&I Project Advantages</h2>
+              <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+                Streamlined turnkey project delivery ensures minimized risk, operational efficiency, and rapid hot commissioning.
+              </p>
+            </SectionWrapper>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Increased Productivity", desc: "Consolidated E&I contracts minimize operational friction, boosting E&I coordination speed and system output.", icon: <BarChart3 className="w-6 h-6 text-primary" /> },
+              { title: "In-sync Design for Commissioning", desc: "Integrated drawing submittals and engineering studies guarantee zero discrepancy during final grid injection.", icon: <Sliders className="w-6 h-6 text-primary" /> },
+              { title: "Reduced Change Challenges", desc: "Single-point design and manufacturing minimize unexpected change requests or cost variations during execution.", icon: <Settings className="w-6 h-6 text-primary" /> },
+              { title: "Reduced Operating Cost", desc: "Optimized sizing, thermal ampacity plans, and high-efficiency panels reduce long-term operational expenditures.", icon: <Zap className="w-6 h-6 text-primary" /> },
+              { title: "Adaptive Project Timeline", desc: "Our agile project management coordinates teams flexibly, adapting to site conditions to secure grid deadlines.", icon: <Clock className="w-6 h-6 text-primary" /> },
+              { title: "Reduced Management Efforts", desc: "Eliminate multi-contract overhead, allowing client managers to coordinate with one single accountable E&I partner.", icon: <Shield className="w-6 h-6 text-primary" /> }
+            ].map((benefit, idx) => (
+              <SectionWrapper key={idx} delay={idx * 0.05}>
+                <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 md:p-8 hover:bg-slate-100/50 hover:border-slate-300 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center mb-6 shadow-sm">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-lg font-bold mb-3 font-heading leading-tight text-slate-950">{benefit.title}</h3>
+                    <p className="text-slate-500 text-xs leading-relaxed font-medium">
+                      {benefit.desc}
+                    </p>
+                  </div>
+                </div>
+              </SectionWrapper>
+            ))}
+          </div>
+
         </div>
       </section>
 
@@ -426,44 +541,44 @@ export default function TurnkeyPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "68GW+ Experience",
-                desc: "Massive execution and monitoring pedigree across utility-scale power assets.",
-                icon: Zap
-              },
-              {
-                title: "Turn-key E&I Solutions",
-                desc: "End-to-end execution scope comprising system drawing designs, switchyards, and grid synchronization.",
-                icon: ShieldCheck
-              },
-              {
-                title: "Inhouse Panel Manufacturing",
-                desc: "Quality-tested HT switchgear, LT distribution panels, PCC, MCC, and ACDB panels fabricated in our facility.",
-                icon: Factory
-              },
-              {
-                title: "Industrial electrical, automation solutions",
-                desc: "Sleek electrical engineering, custom panel designs, and advanced PLC/SCADA integrations.",
-                icon: Cpu
-              },
-              {
-                title: "Project management team",
-                desc: "Dedicated lifecycle managers tracking milestones, engineering compliance, and safety standards.",
+                title: "Professional Project Management",
+                desc: "Highly Professional Project Management Team tracking E&I compliance, milestone timelines, and safety standards.",
                 icon: Compass
               },
               {
-                title: "Experience Team",
-                desc: "Highly skilled field engineering crew executing complex grid synchronization, cabling, and substation erection.",
-                icon: Network
+                title: "Industrial E&I Solutions",
+                desc: "Complete expertise in Industrial Electrical, Automation, and Instrumentation engineering.",
+                icon: Cpu
               },
               {
-                title: "Water Segments Pumping",
-                desc: "Pioneering pumping scheme E&I layouts, automated pump house controls, and telemetry grids.",
+                title: "Turn-key E&I execution",
+                desc: "Execution of highly scalable turn-key E&I projects from layout drawing to final grid synchronization.",
+                icon: ShieldCheck
+              },
+              {
+                title: "Renewable solar/wind pedigree",
+                desc: "Deep expertise in Solar & Wind verticals with massive 68GW+ execution and monitoring experience.",
+                icon: Zap
+              },
+              {
+                title: "Government Approved licensed",
+                desc: "A-grade licensing with GWSSB (Gujarat), MPJNM, MPUDC & MPUADD (MP), UPJNM (UP), RWS&S (Odisha), and JICA Assisted (Assam).",
+                icon: Lock
+              },
+              {
+                title: "Comprehensive Water segment",
+                desc: "Complete E&I expertise in all water segments, including WTP, STP, ETP, and automated pumping telemetry.",
                 icon: Activity
               },
               {
-                title: "Government Approved",
-                desc: "Licensed A-grade electrical contracting, CEIG safety clearances, and DISCOM approvals.",
-                icon: Lock
+                title: "In-House manufacturing control",
+                desc: "Quality-tested HT switchgear, LT distribution panels, PCC, MCC, and ACDB panels fabricated in our Ahmedabad facility.",
+                icon: Factory
+              },
+              {
+                title: "Tunnel Turn-key execution team",
+                desc: "Experienced engineering team executing turnkey E&I solutions for large twin-tube road tunnels.",
+                icon: Network
               }
             ].map((item, idx) => {
               const Icon = item.icon;
