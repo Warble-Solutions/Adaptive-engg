@@ -612,9 +612,9 @@ export default function PanelsPageClient() {
             </div>
 
             {/* Right ETAP Simulation Console Screen */}
-            <div className="w-full lg:w-8/12 flex">
-              <SectionWrapper delay={0.2} className="w-full">
-                <div className="w-full h-full bg-slate-950 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden lg:h-[540px] min-h-[540px] font-mono">
+            <div className="w-full lg:w-8/12 flex flex-col">
+              <SectionWrapper delay={0.2} className="w-full h-full flex flex-col">
+                <div className="w-full h-full bg-slate-950 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden font-mono flex-grow">
                   {/* Neon screen grid mesh overlay */}
                   <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '15px 15px' }}></div>
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
