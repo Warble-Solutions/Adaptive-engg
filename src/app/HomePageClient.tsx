@@ -450,7 +450,10 @@ export default function HomePageClient() {
             {[
               { quote: "I appreciate the exceptional work of Adaptive Engineering Pvt. Ltd. Their commitment to excellence, attention to details and proactive mindset have significantly contributed to the success of our projects.", author: "Advisor - Solar O&M", company: "Tata Power", initial: "T" },
               { quote: "I have no hesitation in recommending AEPL to anyone seeking reliable and efficient solar monitoring solutions. The combination of cutting-edge technology, expert knowledge, and outstanding customer service makes AEPL the ideal partner.", author: "Director", company: "WAAREE Renewable Technologies Ltd.", initial: "W" },
-              { quote: "Our Machine Automation Solutions are powered by AEPL and we highly recommend the same.", author: "Managing Director", company: "Clartech Engineers Pvt. Ltd.", initial: "C" }
+              { quote: "Our Machine Automation Solutions are powered by AEPL and we highly recommend the same.", author: "Managing Director", company: "Clartech Engineers Pvt. Ltd.", initial: "C" },
+              { quote: "AEPL is our reliable partner w.r.t. SCADA, PPC, and Tracker SCADA at 61 sites, comprising Solar, wind, and Hybrid. AEPL's quality, trust, commitment, delivery, and service make them stand out.", author: "Associate Vice President – Engineering", company: "Adani Green Energy Limited", initial: "A" },
+              { quote: "AEPL is our trusted partner when it comes to automation of our Water Supply Scheme projects. Our projects at Rewa, Kirgi, Barhi and Dhamedi are powered by AEPL.", author: "Head E&A", company: "CMR Infrastructure Pvt. Ltd.", initial: "C" },
+              { quote: "We trust AEPL for all our Industrial Automation Solutions as the team @AEPL ensures the best fit products and services. Their zeal to keep customer first makes them our most trusted Automation Solutions partner", author: "Managing Director", company: "Fornnax Technology Pvt. Ltd.", initial: "F" }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="dark-card p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 transition-all duration-300 flex flex-col justify-between h-full">
