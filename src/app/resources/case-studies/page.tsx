@@ -8,9 +8,14 @@ export const metadata = {
 };
 
 export default async function CaseStudiesPage() {
-  const caseStudies = await prisma.caseStudy.findMany({
-    orderBy: { sortOrder: "asc" },
-  });
+  let caseStudies: any[] = [];
+  try {
+    caseStudies = await prisma.caseStudy.findMany({
+      orderBy: { sortOrder: "asc" },
+    });
+  } catch (error) {
+    console.error("Failed to fetch case studies from database:", error);
+  }
 
   return (
     <main className="min-h-screen pt-32 pb-24 px-6 relative bg-slate-950">

@@ -2,20 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Download, FileText, Search, X } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import { AnimatePresence, motion } from "framer-motion";
-
-interface CaseStudy {
-  id: string;
-  title: string;
-  slug: string;
-  thumbnailUrl: string;
-  pdfUrl: string;
-  description: string | null;
-  category: string | null;
-  sortOrder: number;
-}
+import { staticCaseStudies, CaseStudy } from "@/lib/staticCaseStudies";
 
 export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: CaseStudy[] }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,112 +23,24 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Define the 10 static case studies to place on the page
-  const staticCaseStudies: CaseStudy[] = [
-    {
-      id: "static-cs-1",
-      title: "Liquid Milk Processing (LMP) Case Study",
-      slug: "liquid-milk-processing-lmp",
-      thumbnailUrl: "/imgs/case-studies/1-liquid-milk-processing-lmp.png",
-      pdfUrl: "/case-studies/Case-Study-1-Liquid-Milk-Processing-LMP.pdf",
-      description: "Comprehensive Turnkey electrical, automation, and process engineering for a state-of-the-art liquid milk processing facility.",
-      category: "Water & Process",
-      sortOrder: 1
-    },
-    {
-      id: "static-cs-2",
-      title: "Hydropneumatic Systems Integration",
-      slug: "hydropneumatic-systems-integration",
-      thumbnailUrl: "/imgs/case-studies/2-hydropneumatic.png",
-      pdfUrl: "/case-studies/Case-Study-2-Hydropneumatic.pdf",
-      description: "Advanced PLC-based control and monitoring for high-efficiency hydropneumatic pumping systems in industrial installations.",
-      category: "Water & Process",
-      sortOrder: 2
-    },
-    {
-      id: "static-cs-3",
-      title: "Water Treatment Plant (WTP) Automation",
-      slug: "water-treatment-plant-wtp-automation",
-      thumbnailUrl: "/imgs/case-studies/3-water-treatment-plant.png",
-      pdfUrl: "/case-studies/Case-Study-3-Water-Treatment-Plant.pdf",
-      description: "Design and deployment of centralized SCADA and field instruments for a massive municipal water treatment facility.",
-      category: "Water & Process",
-      sortOrder: 3
-    },
-    {
-      id: "static-cs-4",
-      title: "Energy Management System (EMS)",
-      slug: "energy-management-system-ems",
-      thumbnailUrl: "/imgs/case-studies/4-energy-mangement-system-ems.png",
-      pdfUrl: "/case-studies/Case-Study-4-Energy-Mangement-System-EMS.pdf",
-      description: "Real-time energy monitoring, load balancing, and power analytics for multi-site heavy manufacturing facilities.",
-      category: "Industrial Automation",
-      sortOrder: 4
-    },
-    {
-      id: "static-cs-5",
-      title: "Master Power Plant Controller (PPC) Case Study",
-      slug: "master-ppc-case-study",
-      thumbnailUrl: "/imgs/case-studies/master-ppc-v1.png",
-      pdfUrl: "/case-studies/Master-PPC-V1.pdf",
-      description: "Grid-compliant high-speed active/reactive power regulation, ramp-rate control, and frequency correction systems for large-scale utility solar/hybrid plants.",
-      category: "Renewable Energy",
-      sortOrder: 5
-    },
-    {
-      id: "static-cs-6",
-      title: "Floating Solar PV Installation",
-      slug: "floating-solar-pv-installation",
-      thumbnailUrl: "/imgs/case-studies/5-floating-solar.png",
-      pdfUrl: "/case-studies/Case-Study-5-FLOATING-SOLAR_Final.pdf",
-      description: "Engineering design, power evacuation, and SCADA monitoring for megawatt-scale floating reservoir solar systems.",
-      category: "Renewable Energy",
-      sortOrder: 6
-    },
-    {
-      id: "static-cs-7",
-      title: "Rural Water Supply Schemes",
-      slug: "rural-water-supply-schemes",
-      thumbnailUrl: "/imgs/case-studies/7-water-supply-schemes.png",
-      pdfUrl: "/case-studies/Case-Study-7-Water-Supply-Schemes_Final.pdf",
-      description: "Instrumentation, telemetry, and remote monitoring setup for widespread clean water distribution networks.",
-      category: "Water & Process",
-      sortOrder: 7
-    },
-    {
-      id: "static-cs-8",
-      title: "Highway Tunnel Ventilation & Control Systems",
-      slug: "highway-tunnel-ventilation-control-systems",
-      thumbnailUrl: "/imgs/case-studies/tunnel-1st-march-2025.png",
-      pdfUrl: "/case-studies/Tunnel-Case-study-1st-March-2025.pdf",
-      description: "Life safety automation systems including jet fan controls, toxic gas monitoring, and SCADA override for transport tunnels.",
-      category: "Infrastructure",
-      sortOrder: 8
-    },
-    {
-      id: "static-cs-9",
-      title: "IoT SCADA System for PM-KUSUM",
-      slug: "iot-scada-system-for-pm-kusum",
-      thumbnailUrl: "/imgs/case-studies/iot-scada-system-for-pm-kusum.png",
-      pdfUrl: "/case-studies/Case-Study_IoT-SCADA-system-for-PM-Kusum.pdf",
-      description: "Compliant cloud-based controller monitoring for solar agricultural pumps matching PM-KUSUM regulatory directives.",
-      category: "PM-KUSUM",
-      sortOrder: 9
-    },
-    {
-      id: "static-cs-10",
-      title: "Khavda Hybrid Renewable Energy Plant",
-      slug: "khavda-hybrid-renewable-energy-plant",
-      thumbnailUrl: "/imgs/case-studies/khavda-hybrid-plant.png",
-      pdfUrl: "/case-studies/Case-Study_Khavda-Hybrid-Plant.pdf",
-      description: "High-capacity E&I substation layout, grid synchronization, and analytics for the Khavda hybrid solar-wind complex.",
-      category: "Renewable Energy",
-      sortOrder: 10
-    }
-  ];
-
-  // Display only the clean static case studies (all of which have thumbnails)
+  // Display only the clean static case studies combined with database ones
   const allCaseStudies = [...staticCaseStudies];
+  if (caseStudies && Array.isArray(caseStudies)) {
+    caseStudies.forEach((dbCs) => {
+      if (!allCaseStudies.some((scs) => scs.slug === dbCs.slug)) {
+        allCaseStudies.push({
+          id: dbCs.id,
+          title: dbCs.title,
+          slug: dbCs.slug,
+          thumbnailUrl: dbCs.thumbnailUrl,
+          pdfUrl: dbCs.pdfUrl,
+          description: dbCs.description,
+          category: dbCs.category,
+          sortOrder: dbCs.sortOrder
+        });
+      }
+    });
+  }
 
   // Dynamically extract categories from all records
   const dynamicCategories = Array.from(new Set(allCaseStudies.map(cs => cs.category).filter(Boolean))) as string[];
@@ -229,9 +132,8 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredStudies.map((study, idx) => (
             <SectionWrapper key={study.id} delay={idx * 0.05}>
-              <button
-                onClick={(e) => handleCardClick(e, study)}
-                className="w-full text-left group flex flex-col bg-slate-900/40 border border-white/10 rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-2xl transition-all duration-300 h-full justify-between cursor-pointer"
+              <div
+                className="w-full group flex flex-col bg-slate-900/40 border border-white/10 rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-2xl transition-all duration-300 h-full justify-between"
               >
                 {/* Visual Header Grid Card / Thumbnail */}
                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-950">
@@ -253,12 +155,22 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
                     </div>
                   )}
 
-                  {/* High-End Download Overlay */}
-                  <div className="absolute inset-0 bg-primary/95 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center backdrop-blur-sm p-6">
-                    <div className="bg-white text-primary p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 mb-3">
-                      <Download className="w-5 h-5 animate-bounce" />
-                    </div>
-                    <span className="text-white font-bold text-xs uppercase tracking-widest">Download Case Study</span>
+                  {/* High-End Download/Read Overlay */}
+                  <div className="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center backdrop-blur-sm p-6 gap-3 z-20">
+                    <Link
+                      href={`/resources/case-studies/${study.slug}`}
+                      className="w-44 bg-white hover:bg-teal-50 text-slate-950 py-2.5 rounded-full font-bold text-xs text-center flex items-center justify-center gap-2 uppercase tracking-widest transition-all shadow-lg"
+                    >
+                      <FileText className="w-4 h-4" />
+                      Read Online
+                    </Link>
+                    <button
+                      onClick={(e) => handleCardClick(e, study)}
+                      className="w-44 bg-primary hover:bg-teal-500 text-white py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/25 cursor-pointer"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download PDF
+                    </button>
                   </div>
 
                   {/* Left Bottom Category Badge */}
@@ -272,9 +184,11 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
                 {/* Case Study Details */}
                 <div className="p-8 pb-10 flex-grow flex flex-col justify-between">
                   <div>
-                    <h2 className="text-2xl font-black text-white font-heading mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
-                      {study.title}
-                    </h2>
+                    <Link href={`/resources/case-studies/${study.slug}`}>
+                      <h2 className="text-2xl font-black text-white font-heading mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight cursor-pointer">
+                        {study.title}
+                      </h2>
+                    </Link>
                     {study.description && (
                       <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
                         {study.description}
@@ -284,10 +198,15 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
 
                   <div className="mt-6 pt-6 border-t border-white/5 flex items-center justify-between text-xs text-gray-500 font-mono">
                     <span>Engineering Case Study</span>
-                    <span className="text-primary font-bold group-hover:underline">VIEW PROJECT →</span>
+                    <Link 
+                      href={`/resources/case-studies/${study.slug}`}
+                      className="text-primary font-bold hover:underline"
+                    >
+                      READ ONLINE →
+                    </Link>
                   </div>
                 </div>
-              </button>
+              </div>
             </SectionWrapper>
           ))}
         </div>

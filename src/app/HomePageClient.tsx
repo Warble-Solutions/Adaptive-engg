@@ -374,9 +374,10 @@ export default function HomePageClient() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
+             {[
               {
                 title: "Rural Water Supply Schemes",
+                slug: "rural-water-supply-schemes",
                 category: "Water & Process",
                 img: "/imgs/case-studies/cs_water.png",
                 desc: "Instrumentation, telemetry, and remote monitoring setup for widespread clean water distribution networks.",
@@ -384,6 +385,7 @@ export default function HomePageClient() {
               },
               {
                 title: "Highway Tunnel Ventilation & Control Systems",
+                slug: "highway-tunnel-ventilation-control-systems",
                 category: "Infrastructure",
                 img: "/imgs/case-studies/cs_tunnel.png",
                 desc: "Life safety automation systems including jet fan controls, toxic gas monitoring, and SCADA override for transport tunnels.",
@@ -391,6 +393,7 @@ export default function HomePageClient() {
               },
               {
                 title: "Khavda Hybrid Renewable Energy Plant",
+                slug: "khavda-hybrid-renewable-energy-plant",
                 category: "Renewable Energy",
                 img: "/imgs/case-studies/cs_solar.png",
                 desc: "High-capacity E&I substation layout, grid synchronization, and analytics for the Khavda hybrid solar-wind complex.",
@@ -399,7 +402,7 @@ export default function HomePageClient() {
             ].map((study, i) => (
               <SectionWrapper key={i} delay={study.delay}>
                 <Link 
-                  href="/resources/case-studies" 
+                  href={`/resources/case-studies/${study.slug}`} 
                   className="group relative bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden flex flex-col h-full hover:shadow-[0_0_50px_rgba(13,160,138,0.15)]"
                 >
                   <div className="h-64 overflow-hidden relative">

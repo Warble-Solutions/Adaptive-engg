@@ -1,14 +1,55 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Sun } from "lucide-react";
+import { ArrowRight, Sun, Download, X } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSatelliteDish, faFileInvoice, faNetworkWired, faTasks, faBolt, faShieldAlt, faSolarPanel, faSun, faMap, faCheckCircle, faWifi } from "@fortawesome/free-solid-svg-icons";
 import MicroCTA from "@/components/ui/MicroCTA";
 import ActionBadge from "@/components/ui/ActionBadge";
 import SectionWrapper from "@/components/SectionWrapper";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function KusumPageClient() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    designation: ""
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Simulate API submission
+    console.log("Saving user details for PM-KUSUM brochure download:", formData);
+
+    // Trigger PDF download
+    const link = document.createElement("a");
+    link.href = "/brochures/Solarwiz-Brochure_19062025.pdf";
+    link.download = "Solarwiz-Brochure_19062025.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Show success message briefly before closing
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsPopupOpen(false);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        designation: ""
+      });
+      setIsSubmitted(false);
+    }, 1000);
+  };
+
   return (
     <div className="flex flex-col w-full bg-slate-950">
       {/* 1. HERO SECTION (Dark) */}
@@ -195,7 +236,15 @@ export default function KusumPageClient() {
           <div className="mt-12 flex justify-center gap-6">
             <SectionWrapper delay={0.4}>
               <div className="flex gap-6">
-                <MicroCTA text="Download Brochure" variant="download" href="#" />
+                <MicroCTA 
+                  text="Download Brochure" 
+                  variant="download" 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsPopupOpen(true);
+                  }}
+                />
                 <MicroCTA text="Get Quote" variant="quote" href="/contact" />
               </div>
             </SectionWrapper>
@@ -495,6 +544,132 @@ export default function KusumPageClient() {
           </SectionWrapper>
         </div>
       </section>
+
+      {/* Glassmorphic Download Popup Form Modal */}
+      <AnimatePresence>
+        {isPopupOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-md"
+              onClick={() => setIsPopupOpen(false)}
+            ></motion.div>
+
+            {/* Modal Body */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: "spring", duration: 0.5 }}
+              className="relative bg-slate-900/90 border border-white/10 rounded-[2rem] p-8 max-w-md w-full shadow-2xl z-10 overflow-hidden text-slate-200"
+            >
+              {/* Decorative radial light */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+
+              {/* Close Button */}
+              <button 
+                onClick={() => setIsPopupOpen(false)}
+                className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              {isSubmitted ? (
+                <div className="py-12 text-center flex flex-col items-center justify-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 shadow-lg shadow-teal-500/10">
+                    <Download className="w-8 h-8 animate-bounce" />
+                  </div>
+                  <h3 className="text-2xl font-bold font-heading text-white mb-2">Thank You!</h3>
+                  <p className="text-slate-400 text-sm">Your download should start automatically.</p>
+                </div>
+              ) : (
+                <>
+                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest block mb-2">Brochure Download Portal</span>
+                  <h3 className="text-xl font-bold font-heading text-white mb-2 leading-snug pr-8">
+                    PM-KUSUM Solutions Brochure
+                  </h3>
+                  <p className="text-slate-400 text-xs mb-6 leading-relaxed">
+                    Please provide your contact information to access the document.
+                  </p>
+
+                  <form onSubmit={handleFormSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">Full Name *</label>
+                      <input 
+                        type="text" 
+                        required
+                        placeholder="John Doe"
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">Business Email *</label>
+                      <input 
+                        type="email" 
+                        required
+                        placeholder="john@company.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">Phone Number *</label>
+                      <input 
+                        type="tel" 
+                        required
+                        placeholder="+91 98765 43210"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">Company *</label>
+                        <input 
+                          type="text" 
+                          required
+                          placeholder="e.g. AEPL"
+                          value={formData.company}
+                          onChange={(e) => setFormData({...formData, company: e.target.value})}
+                          className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">Role / Title</label>
+                        <input 
+                          type="text" 
+                          placeholder="e.g. Engineer"
+                          value={formData.designation}
+                          onChange={(e) => setFormData({...formData, designation: e.target.value})}
+                          className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <button 
+                      type="submit"
+                      className="w-full py-3 bg-primary hover:bg-teal-500 text-white rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg shadow-teal-500/20 transition-all flex items-center justify-center gap-2 mt-6 cursor-pointer"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>Submit & Download</span>
+                    </button>
+                  </form>
+                </>
+              )}
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
