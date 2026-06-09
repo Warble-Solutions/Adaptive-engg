@@ -42,7 +42,7 @@ export default function Page() {
  <div>
  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Who We Are</h2>
  <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
- Adaptive Engineering Pvt. Ltd. (AEPL) is a technology-driven engineering company headquartered in Ahmedabad, Gujarat. Since its inception in 2014, AEPL has emerged as India&apos;s most trusted partner for Renewable Energy, PM-KUSUM, Water Infrastructure, and Industrial Automation solutions. With a 60,000+ sq. ft. manufacturing facility, 300+ skilled professionals, and 1000+ sites monitored across India, we deliver mission-critical Turnkey E&amp;I systems that power the nation&apos;s growth.
+ Adaptive Engineering Pvt. Ltd. (AEPL) is a technology-driven engineering company headquartered in Ahmedabad, Gujarat. Since its inception in 2014, AEPL has emerged as India&apos;s most trusted partner for Renewable Energy, PM-KUSUM, Water Infrastructure, and Industrial Automation solutions. With a 125,000+ sq. ft. manufacturing facility, 300+ skilled professionals, and 1000+ sites monitored across India, we deliver mission-critical Turnkey E&amp;I systems that power the nation&apos;s growth.
  </p>
  </div>
  </SectionWrapper>
@@ -90,7 +90,7 @@ export default function Page() {
  {skill.icon}
  </div>
  <h3 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-[#0da08a] transition-colors duration-300 leading-tight">{skill.title}</h3>
- <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-800 transition-colors duration-300 flex-grow">
+ <p className="text-sm md:text-base text-slate-600 leading-relaxed group-hover:text-slate-800 transition-colors duration-300 flex-grow">
  {skill.desc}
  </p>
  </div>
