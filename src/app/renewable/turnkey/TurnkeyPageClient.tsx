@@ -145,7 +145,7 @@ export default function TurnkeyPageClient() {
 
                 <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
                   <p>
-                    We at Adaptive Engineering Pvt Ltd are experts in providing comprehensive Electrical, Instrumentation, and Automation Solutions for Renewable, Water, and Infrastructure verticals. Our best-in-class SCADA and Monitoring Solutions, coupled with Mobile Asset Management Software, minimize breakdown losses and maximize productivity.
+                    We at Adaptive Engineering Pvt Ltd are experts in providing comprehensive Electrical, Instrumentation, and Automation Solutions for Renewable, Water, and Infrastructure verticals. Our best-in-class SCADA and Monitoring Solutions, integrated with AssetWiz (our proprietary Mobile Asset Management Software), minimize breakdown losses and maximize productivity.
                   </p>
                   <p>
                     Our 17+ years of experience, combined with a complete solutions portfolio of electrical and automation systems and excellent project management skills, has empowered us as a "Preferred Project Partner" in Turn-Key Projects for leading EPCs.

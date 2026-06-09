@@ -19,6 +19,8 @@ export const PPC_STATS = {
   installedBase: { value: 68, suffix: "GW+", label: "Installed Base" },
   responseTime: { value: "<200", suffix: " ms", label: "Real-time Response to Grid Events" },
   renewableCapacity: { value: 40, suffix: "GW+", label: "Renewable Capacity Under Active Control" },
+  hybridProjects: { value: 8, suffix: "GW+", label: "Hybrid Projects" },
+  hybridInstalled: { value: 10, suffix: "+", label: "Hybrid PPC Installed" },
 } as const;
 
 export const KUSUM_STATS = {

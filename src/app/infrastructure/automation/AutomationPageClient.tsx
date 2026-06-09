@@ -319,11 +319,12 @@ export default function AutomationPageClient() {
             </div>
           </SectionWrapper>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               { icon: <Sun className="w-8 h-8 text-primary" />, title: "Renewable Energy", desc: "Solar plant RTU controllers, telemetry, and central monitoring systems (CMS)." },
               { icon: <Droplet className="w-8 h-8 text-primary" />, title: "Water Treatment", desc: "Lift irrigation systems, pumping stations, ETP, STP, and WTP closed-loop PLCs." },
-              { icon: <Factory className="w-8 h-8 text-primary" />, title: "Infrastructure", desc: "Tunnel safety ventilation, portal glare lighting control, and redundant UPS substations." },
+              { icon: <LayoutTemplate className="w-8 h-8 text-primary" />, title: "Infrastructure", desc: "Tunnel safety ventilation, portal glare lighting control, and redundant UPS substations." },
+              { icon: <Factory className="w-8 h-8 text-primary" />, title: "Manufacturing", desc: "Automated production line controls, shop-floor machine intelligence, and OEE telemetry." },
               { icon: <Wind className="w-8 h-8 text-primary" />, title: "City Gas Distribution", desc: "Telemetry systems, custody transfer flow meters, and control desks." }
             ].map((vertical, vIdx) => (
               <SectionWrapper key={vIdx} delay={vIdx * 0.05}>

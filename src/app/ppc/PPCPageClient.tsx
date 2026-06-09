@@ -88,8 +88,16 @@ export default function PPCPageClient() {
                     <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">PPC Projects</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-black text-primary mb-2">{PPC_STATS.installedBase.value}{PPC_STATS.installedBase.suffix}</div>
+                    <div className="text-4xl font-black text-primary mb-2">{PPC_STATS.installedBase.value}</div>
                     <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">{PPC_STATS.installedBase.label}</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-teal-400 mb-2">{PPC_STATS.hybridProjects.value}</div>
+                    <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">{PPC_STATS.hybridProjects.label}</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-teal-400 mb-2">{PPC_STATS.hybridInstalled.value}{PPC_STATS.hybridInstalled.suffix}</div>
+                    <div className="text-sm text-gray-400 uppercase tracking-widest font-bold">{PPC_STATS.hybridInstalled.label}</div>
                   </div>
                   <div className="col-span-2 pt-8 border-t border-white/10">
                     <p className="text-gray-300 italic">&quot;Seamlessly orchestrating Solar, Wind, and BESS assets.&quot;</p>
@@ -291,8 +299,53 @@ export default function PPCPageClient() {
                     </p>
                   </div>
                 </div>
-                <div className="flex justify-center">
-                  <MicroCTA text="Download Technical Specs" variant="download" href="#" />
+              </div>
+            </SectionWrapper>
+
+            {/* Feature Block 4: Value Creation & Validation */}
+            <SectionWrapper>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="order-2 lg:order-1 bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-sm">
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400 shrink-0 mt-1">
+                        <Activity className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold">Millisecond Timestamp Logging</h4>
+                        <p className="text-gray-400 text-sm leading-relaxed">PPC servers log telemetry and control actions at millisecond resolution for exact event sequence analysis.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400 shrink-0 mt-1">
+                        <Database className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold">Backfilling Supported Event Logger</h4>
+                        <p className="text-gray-400 text-sm leading-relaxed">Super-quick data recovery and automated historical backfilling during telemetry network disconnects.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400 shrink-0 mt-1">
+                        <ShieldCheck className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold">Agency Validation & Testing</h4>
+                        <p className="text-gray-400 text-sm leading-relaxed">Tested, validated, and approved by leading Indian and International agencies for grid-compliance integrity.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-6">
+                    Designed for Maximum Value & Compliance
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    AEPL is the premier choice for utility-scale hybrid Power Plant Controllers. Our server architectures work independently to resolve all compliance challenges, seamlessly interfacing with any inverter or wind turbine generator OEM.
+                  </p>
+                  <p className="text-gray-400 leading-relaxed">
+                    With over 8GW+ plants successfully running our control logic, we assure smooth and interruption-free plant operations.
+                  </p>
                 </div>
               </div>
             </SectionWrapper>
@@ -320,12 +373,12 @@ export default function PPCPageClient() {
                 <div className="space-y-6">
                   <FeatureRow
                     title="Active Power Control"
-                    desc="Maximize profitability with precision dispatch, intelligent curtailment, and high-speed response to utility commands."
+                    desc="Maximize profitability with precision dispatch, intelligent curtailment, and high-speed response to utility commands in hybrid setups."
                     imageSrc="/imgs/tam/Active Power Management.png"
                   />
                   <FeatureRow
-                    title="Reactive Power Control"
-                    desc="Dynamic control for ultra-fast voltage support and precision power factor management to ensure maximum uptime."
+                    title="Reactive Power Operating Modes"
+                    desc="Highly customizable reactive modes including Q-Control, Q(V) control, power-factor modes for complex hybrid layouts."
                     imageSrc="/imgs/tam/Optimized Reactive Power Control.png"
                   />
                   <FeatureRow
@@ -353,8 +406,8 @@ export default function PPCPageClient() {
                     imageSrc="/imgs/tam/Voltage Control.png"
                   />
                   <FeatureRow
-                    title="Frequency Control"
-                    desc="Empower the grid with ultra-responsive sub-second stability and seamless droop support for total utility compliance."
+                    title="Frequency Droop Response"
+                    desc="Empower the grid with ultra-responsive sub-second stability and frequency droop response for total utility compliance."
                     imageSrc="/imgs/tam/Dynamic Frequency Response.png"
                   />
                   <FeatureRow

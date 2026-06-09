@@ -91,6 +91,104 @@ export default function Page() {
  </div>
  </section>
 
+ {/* SPECIALIZED DOMAIN OFFERINGS */}
+ <section className="py-24 bg-slate-50 relative z-20 -mt-10">
+    <div className="max-w-7xl mx-auto px-6">
+      <SectionWrapper>
+        <div className="text-center mb-16">
+          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-2 block">Proven Expertise</span>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Specialized Domain Offerings</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto text-lg">Custom SCADA applications developed for specific utility-scale renewable setups.</p>
+        </div>
+      </SectionWrapper>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Tracker SCADA & Solutions",
+            desc: "Highly robust closed-loop solar tracking control algorithms and diagnostic monitoring. Deployed and operational at over 61 utility-scale sites across India.",
+            badge: "Tracker SCADA"
+          },
+          {
+            title: "Substation Automation System (SAS)",
+            desc: "Dedicated IEC 61850-compliant Substation Automation Systems providing reliable bay control, monitoring, and switchgear protection interface.",
+            badge: "SAS Integration"
+          },
+          {
+            title: "Floating Solar SCADA",
+            desc: "AEPL has successfully engineered and commissioned one of India's largest Floating Solution SCADA Systems, handling complex weather telemetry and marine electrical configurations.",
+            badge: "Floating Solar"
+          }
+        ].map((item, i) => (
+          <SectionWrapper key={i} delay={i * 0.1}>
+            <div className="p-8 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+              <div>
+                <span className="inline-block px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-xs font-bold mb-4">{item.badge}</span>
+                <h3 className="text-xl font-bold text-slate-950 mb-3">{item.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          </SectionWrapper>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* WIND SCADA SOLUTIONS */}
+  <section className="py-24 bg-white relative z-20">
+    <div className="max-w-7xl mx-auto px-6">
+      <SectionWrapper>
+        <div className="text-center mb-16">
+          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-2 block">Wind Energy</span>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Wind SCADA Solutions</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto text-lg">OEM-independent supervisory control and data acquisition for utility-scale wind parks.</p>
+        </div>
+      </SectionWrapper>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Left column: Image */}
+        <div className="lg:col-span-5">
+          <SectionWrapper>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 h-[380px]">
+              <img src="/imgs/case-studies/khavda-hybrid-plant.png" alt="Wind Turbine SCADA" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-slate-900/40"></div>
+              <div className="absolute bottom-6 left-6 text-white z-10">
+                <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">Wind Assets</p>
+                <h4 className="text-lg font-bold">Multi-OEM WTG Performance Analysis</h4>
+              </div>
+            </div>
+          </SectionWrapper>
+        </div>
+        
+        {/* Right column: Details */}
+        <div className="lg:col-span-7 space-y-6">
+          <SectionWrapper delay={0.2}>
+            <h3 className="text-2xl font-bold text-slate-950 font-heading">Trusted Solutions: Highly secure, scalable, real-time supervisory control</h3>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              AEPL Wind SCADA delivers operational excellence by aggregating telemetry data from geographically scattered wind turbines. We provide seamless integration with wind Substation Automation Systems (SAS) as per IEC standards, wind speed sensors, and third-party generation forecast data feeds.
+            </p>
+          </SectionWrapper>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              "Monitor KPIs of WTGs irrespective of OEM",
+              "Compare multiple wind asset performance",
+              "Identify best performing WTG across geographies",
+              "Integrate wind speed sensors & weather telemetry",
+              "Third-party generation forecast data integration",
+              "Increase turbine availability & reduce downtime"
+            ].map((feature, idx) => (
+              <div key={idx} className="flex items-center gap-3 text-sm font-bold text-slate-800">
+                <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
+                <span>{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
  {/* INTEGRATION PROTOCOLS */}
  <section className="py-24 bg-transparent text-white relative z-10">
  <div className="max-w-7xl mx-auto px-6">

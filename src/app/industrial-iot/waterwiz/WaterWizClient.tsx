@@ -40,7 +40,7 @@ export default function WaterWizClient() {
         },
         {
           title: "Equipment & Sensor Telemetry",
-          desc: "Real-time logging of flowmeters, pressure transmitters, turbidity sensors, chlorine analysers, and level controllers."
+          desc: "Real-time logging of MFMs (Multifunction Meters), Chlorine/Turbidity Analysers, Level Sensors, and flowmeters."
         },
         {
           title: "Parameter Trend Visualizations",
@@ -204,7 +204,7 @@ export default function WaterWizClient() {
                   WaterWiz enables water utilities and plant operators to establish secure, low-latency telemetry pipelines. Real-time dashboards provide central monitoring of scattered pump houses, overhead tanks, and raw water inlets.
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  Using high-precision flow sensors and chemical analysers, our telemetry edge controllers parse, validate, and synchronize vital parameter values directly with the WaterPro cloud portal.
+                  Using high-precision MFMs, Chlorine/Turbidity Analysers, Level Sensors, and chemical instrumentation, our telemetry edge controllers parse, validate, and synchronize vital parameter values directly with the WaterPro cloud portal.
                 </p>
               </SectionWrapper>
             </div>
@@ -244,7 +244,7 @@ export default function WaterWizClient() {
                   <h3 className="text-2xl font-bold text-white font-heading mb-3">WaterEdge</h3>
                   <p className="text-xs text-[#0da08a] uppercase font-black tracking-widest mb-4">IoT Telemetry RTU</p>
                   <p className="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                    An intelligent local Edge Computing Device & Telemetry RTU that polls sensors (turbidity, flow, pressure, chlorine, pH) and synchronizes with WaterPro. WaterEdge stores data locally during communication failures and uploads it automatically upon reconnection, safeguarding critical compliance records.
+                    An intelligent local Edge Computing Device & Telemetry RTU that polls sensors and instruments (MFMs, Chlorine/Turbidity Analysers, Level Sensors, pH and pressure transmitters) and synchronizes with WaterPro. WaterEdge stores data locally during communication failures and uploads it automatically upon reconnection, safeguarding critical compliance records.
                   </p>
                 </div>
                 <div className="space-y-3 pt-6 border-t border-white/5">
