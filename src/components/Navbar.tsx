@@ -223,10 +223,10 @@ export default function Navbar() {
                                         <ChevronDown className="w-4 h-4 opacity-50 -rotate-90 group-hover/iot:opacity-100 transition-opacity" />
                                     </Link>
                                     <div className="absolute top-0 left-full w-72 bg-white shadow-xl rounded-xl border-t-2 border-primary opacity-0 invisible group-hover/iot:opacity-100 group-hover/iot:visible transition-all duration-300 transform translate-x-2 group-hover/iot:translate-x-0 ml-1 overflow-hidden z-50">
-                                        <DropdownLink href="/industrial-iot">IoT Platform Overview</DropdownLink>
                                         <DropdownLink href="/industrial-iot/solarwiz">SolarWiz</DropdownLink>
                                         <DropdownLink href="/industrial-iot/waterwiz">WaterWiz</DropdownLink>
                                         <DropdownLink href="/industrial-iot/machinewiz">MachineWiz</DropdownLink>
+                                        <DropdownLink href="/industrial-iot/asset-management">Mobile Asset Management</DropdownLink>
                                     </div>
                                 </div>
                             </div>
