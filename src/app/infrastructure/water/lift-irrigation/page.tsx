@@ -84,11 +84,8 @@ export default function Page() {
               <SectionWrapper>
                 <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block">Engineering Excellence</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-heading leading-tight">Trusted Partner for Large-Scale Canals & Pump Houses</h2>
-                <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                  We at Adaptive Engineering Pvt Ltd. are experts in providing comprehensive Electrical, Instrumentation and Automation Solutions for massive canal networks and lift irrigation pumping grids. Our experience makes us the preferred project partner for major EPC firms and state municipal departments alike.
-                </p>
-                <p className="text-slate-600 leading-relaxed mb-8">
-                  From sizing high-tension (HT) motor starters to setting up remote radio telemetry units (RTUs), we deliver robust, turnkey packages capable of running under the harshest rural grid conditions.
+                <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                  Our {WATER_STATS.yearsExperience.value}{WATER_STATS.yearsExperience.suffix} years of experience, a complete solutions portfolio of Electrical, Instrumentation and Automation solutions and the best of the project management skills makes us a “Preferred Project Partner” for EPC and Government agencies.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full text-emerald-700 text-sm font-bold border border-emerald-100">

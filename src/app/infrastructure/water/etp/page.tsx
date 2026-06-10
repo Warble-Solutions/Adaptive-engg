@@ -84,11 +84,8 @@ export default function Page() {
               <SectionWrapper>
                 <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block">Industrial Automation</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-heading leading-tight">Advanced E&I for Industrial Effluents</h2>
-                <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                  We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Effluent Treatment and MBR Technology. Industrial effluent processing demands precise chemical balance, membrane clean-in-place (CIP) automation, and continuous sensor calibration.
-                </p>
-                <p className="text-slate-600 leading-relaxed mb-8">
-                  Our custom-engineered panels and SCADA networks manage complex chemical dosing grids and high-pressure Reverse Osmosis filtration systems safely, ensuring 100% adherence to pollution control norms.
+                <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                  We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Effluent Treatment and MBR Technology.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full text-emerald-700 text-sm font-bold border border-emerald-100">

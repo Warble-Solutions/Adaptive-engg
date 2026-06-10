@@ -83,10 +83,7 @@ export default function Page() {
  <span className="text-teal-500 font-bold uppercase text-sm tracking-widest mb-3 block">Our Expertise</span>
  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">End-to-End E&I & SCADA Solutions</h2>
  <p className="text-slate-600 text-lg leading-relaxed mb-8">
- We at Adaptive Engineering Pvt. Ltd. bring {WATER_STATS.yearsExperience.value}{WATER_STATS.yearsExperience.suffix} years of proven expertise delivering comprehensive Electrical, Instrumentation, and SCADA solutions for Water Supply Schemes and Water Treatment Plants — from raw water intake all the way to distribution at Overhead Tanks.
- </p>
- <p className="text-slate-600 leading-relaxed mb-8">
- Our complete solutions portfolio combined with the best-in-class project management skills ensures every scheme is delivered on time, within budget, and to the highest quality standards demanded by government agencies and international funding bodies.
+ Drinking water supply in urban and rural areas is essential for a country as big and as diverse as India. We at Adaptive Engineering Pvt Ltd. with {WATER_STATS.yearsExperience.value}{WATER_STATS.yearsExperience.suffix} years of experience to provide end to end E&I & SCADA solution.
  </p>
  <div className="flex flex-wrap gap-3">
  <div className="flex items-center gap-2 px-4 py-2 bg-teal-50 rounded-full text-teal-700 text-sm font-bold border border-teal-100">

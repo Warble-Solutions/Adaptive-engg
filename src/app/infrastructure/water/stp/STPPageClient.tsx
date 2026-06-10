@@ -120,11 +120,8 @@ export default function STPPageClient() {
               <SectionWrapper>
                 <span className="text-emerald-600 font-bold uppercase text-sm tracking-widest mb-3 block">Wastewater Infrastructure Leadership</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-heading leading-tight">Experts in Electrical & Automation for Waste Water</h2>
-                <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                  We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for the Waste Water industry. Over the past {WATER_STATS.yearsExperience.value}{WATER_STATS.yearsExperience.suffix} years, we have designed systems to manage the unique corrosive environments, high variable flows, and strict biological parameters that define sewage treatment plants.
-                </p>
-                <p className="text-slate-600 leading-relaxed mb-8">
-                  Our services deliver the robust structural layouts, safety systems, and instrumentation required to monitor and control complex waste water cycles efficiently, preventing ecological incidents while maximizing pump life.
+                <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                  We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Waste Water industry.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
