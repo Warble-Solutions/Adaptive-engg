@@ -75,7 +75,7 @@ export default function TurnkeyPageClient() {
                   <span className="gradient-heading">Execution</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
-                  Empowered as a "Preferred Project Partner" in Turn-Key Projects for EPCs, delivering complete Electrical, Instrumentation & Automation solutions.
+                  Empowered as a "Preferred Project Partner" in Turnkey Projects for EPCs, delivering complete Electrical, Instrumentation & Automation solutions.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-teal-500/20">
@@ -148,7 +148,7 @@ export default function TurnkeyPageClient() {
                     We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Renewable, Water and Infrastructure verticals. Our best in class, SCADA and Monitoring Solutions with Mobile Asset Management Software minimize breakdown losses leading to increased productivity.
                   </p>
                   <p>
-                    Our 17+ years of experience, a complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills empowered us a “Preferred Project Partner” in Turn-Key Projects for EPCs.
+                    Our 17+ years of experience, a complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills empowered us a “Preferred Project Partner” in Turnkey Projects for EPCs.
                   </p>
                 </div>
               </SectionWrapper>
@@ -539,12 +539,12 @@ export default function TurnkeyPageClient() {
             {[
               { title: "Project Management Team", desc: "Highly Professional Project Management Team.", icon: <Compass className="w-5 h-5 text-primary" /> },
               { title: "Industrial E&I Expertise", desc: "Expertise in Industrial Electrical, Automation and instrumentation Solutions.", icon: <Cpu className="w-5 h-5 text-primary" /> },
-              { title: "Turn-key E&I Solutions", desc: "Turn-key E&I Solutions – Execution of scalable projects.", icon: <ShieldCheck className="w-5 h-5 text-primary" /> },
+              { title: "Turnkey E&I Solutions", desc: "Turnkey E&I Solutions – Execution of scalable projects.", icon: <ShieldCheck className="w-5 h-5 text-primary" /> },
               { title: "Solar Verticals Pedigree", desc: "Expertise in Solar Verticals with 40GW+ experience.", icon: <Zap className="w-5 h-5 text-primary" /> },
               { title: "Government Approved Contractor", desc: "Government Approved – GWSSB – Gujarat, MPJNM, MPUDC & MPUADD – Madhya Pradesh, UPJNM – Uttar Pradesh, RWS&S – Odisha, JICA Assisted – Assam.", icon: <Lock className="w-5 h-5 text-primary" /> },
               { title: "Water Segment Expertise", desc: "Expertise in all Water Segments viz. WTP, STP, ETP, Pumping.", icon: <Activity className="w-5 h-5 text-primary" /> },
               { title: "Panel Manufacturing", desc: "In House Panel Manufacturing Facilities.", icon: <Factory className="w-5 h-5 text-primary" /> },
-              { title: "Tunnel Turn-key E&I", desc: "Experience Team of Tunnel Turn-key E&I Solutions.", icon: <Network className="w-5 h-5 text-primary" /> },
+              { title: "Tunnel Turnkey E&I", desc: "Experience Team of Tunnel Turnkey E&I Solutions.", icon: <Network className="w-5 h-5 text-primary" /> },
               { title: "Automation & Instrumentation", desc: "Automation and instrumentation Solutions.", icon: <Settings className="w-5 h-5 text-primary" /> }
             ].map((item, idx) => (
               <SectionWrapper key={idx} delay={idx * 0.05}>
