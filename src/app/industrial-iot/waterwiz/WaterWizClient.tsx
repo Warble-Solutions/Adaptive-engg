@@ -23,73 +23,59 @@ import { useState } from "react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 
 export default function WaterWizClient() {
-  const [activeTab, setActiveTab] = useState<"monitor" | "analyze" | "compliance">("monitor");
+  const [activeTab, setActiveTab] = useState<"monitor" | "analyze" | "reporting" | "om" | "integrations">("monitor");
 
   const tabContents = {
     monitor: {
-      title: "Monitor Water Infrastructure from Anywhere",
-      subtitle: "Comprehensive Dashboards for Treatment and Distribution Portfolio",
+      title: "Monitor Water Schemes from Anywhere",
+      subtitle: "Rich Set of Dashboards to Enhance Plant Performance",
       bullets: [
-        {
-          title: "Central Utility Dashboards",
-          desc: "Monitor all scattered water distribution nodes, treatment plants, and reservoirs on a single unified screen."
-        },
-        {
-          title: "Treatment Plant KPIs",
-          desc: "Track critical operational parameters for Sewage Treatment Plants (STP), Effluent Treatment Plants (ETP), and Water Treatment Plants (WTP)."
-        },
-        {
-          title: "Equipment & Sensor Telemetry",
-          desc: "Real-time logging of MFMs (Multifunction Meters), Chlorine/Turbidity Analysers, Level Sensors, and flowmeters."
-        },
-        {
-          title: "Parameter Trend Visualizations",
-          desc: "Plot pH value changes, TSS concentrations, flow rates, and tank levels to spot trends and identify asset malfunctions."
-        }
+        { title: "Central dashboards to monitor entire Water Schemes / Treatment Plants", desc: "" },
+        { title: "Scheme dashboards for Plant KPIs", desc: "" },
+        { title: "Equipment dashboards for Performance Enhancement (MFM, Flow Meters, Chlorine / Turbidity Analysers, Level Sensors)", desc: "" },
+        { title: "Display of parameter values and trends to get more insights on Quality and Quantity parameters", desc: "" },
+        { title: "Choose your own Color Themes", desc: "" }
       ]
     },
     analyze: {
-      title: "Analyze Water Performance & Losses",
-      subtitle: "Advanced Analytics to Reduce Waste and Optimize Operations",
+      title: "Analyze Asset Performances",
+      subtitle: "Advanced Analytic Toolset to convert data into action",
       bullets: [
-        {
-          title: "Non-Revenue Water (NRW) Analytics",
-          desc: "Identify leakages and structural losses by balancing distribution inputs against end-point metering logs."
-        },
-        {
-          title: "Chemical Consumption Models",
-          desc: "Analyze dosing ratios (chlorine, alum, coagulants) against water turbidity to optimize chemical consumption."
-        },
-        {
-          title: "Pump Efficiency Tracking",
-          desc: "Evaluate energy consumed per cubic meter of water pumped to isolate underperforming motor assets."
-        },
-        {
-          title: "Predictive Blockage Detection",
-          desc: "Recognize early pressure changes indicating filter clogging or pipeline blockages before they lead to pipe bursts."
-        }
+        { title: "Advanced Analytics Tools Library", desc: "" },
+        { title: "Compare the ‘Best’ and ‘Worst’ performing Schemes", desc: "" },
+        { title: "Diagnose the root cause of performance", desc: "" },
+        { title: "Cross-Scheme comparison of performance parameters", desc: "" },
+        { title: "Export Analysis results to Third Party Software (e.g. Microsoft Power BI)", desc: "" }
       ]
     },
-    compliance: {
-      title: "Automated State Board Integrations",
-      subtitle: "Ensuring 100% Regulatory Compliance and Reporting",
+    reporting: {
+      title: "Reporting",
+      subtitle: "Customized reports to figure out root cause of any event",
       bullets: [
-        {
-          title: "State Water Board Uplink",
-          desc: "Automated daily, weekly, or real-time data submission to State Pollution Control Boards and National Water Quality Portals."
-        },
-        {
-          title: "Standardized Compliance Reports",
-          desc: "Built-in templates formatted exactly to regulatory standards for effluent discharge quality and water volume logging."
-        },
-        {
-          title: "Tamper-Proof Data Logging",
-          desc: "Immutable system logs with 128-bit encryption to ensure the validity and auditability of quality metrics."
-        },
-        {
-          title: "Instant Anomaly Escalations",
-          desc: "Automated alerts triggered if chemical discharge variables exceed legally permissible limits."
-        }
+        { title: "In-Built Reports Library", desc: "" },
+        { title: "Customizable Report Views", desc: "" },
+        { title: "Set Higher and Lower Value Range for parameters of all devices", desc: "" },
+        { title: "Visualize and Categorize Parameter Values Effecting Performance", desc: "" },
+        { title: "Variety of Supported Report Formats", desc: "" },
+        { title: "Export Reports to Third Party Software (e.g. Microsoft Power BI)", desc: "" }
+      ]
+    },
+    om: {
+      title: "Multi-Scheme Configuration And O&M",
+      subtitle: "Fast and Intuitive Plant Configuration",
+      bullets: [
+        { title: "Support multiple and geographical Water Supply Schemes through a common control center", desc: "" },
+        { title: "Minimize downtime and maximize generations and profitability", desc: "" },
+        { title: "Transform Raw data into valuable insights.", desc: "" }
+      ]
+    },
+    integrations: {
+      title: "Third-Party Integrations",
+      subtitle: "Integrate with Third-Party Systems",
+      bullets: [
+        { title: "Asset Management Software", desc: "" },
+        { title: "Integration with District/ State/National level Water Management Agencies", desc: "" },
+        { title: "Third party Application Server Integration", desc: "" }
       ]
     }
   };
@@ -244,7 +230,7 @@ export default function WaterWizClient() {
                   <h3 className="text-2xl font-bold text-white font-heading mb-3">WaterEdge</h3>
                   <p className="text-xs text-[#0da08a] uppercase font-black tracking-widest mb-4">IoT Telemetry RTU</p>
                   <p className="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                    An intelligent local Edge Computing Device & Telemetry RTU that polls sensors and instruments (MFMs, Chlorine/Turbidity Analysers, Level Sensors, pH and pressure transmitters) and synchronizes with WaterPro. WaterEdge stores data locally during communication failures and uploads it automatically upon reconnection, safeguarding critical compliance records.
+                    An IOT based Edge Computing Device to acquire data from Water Supply Schemes Equipments. It comprises Intelligent Data Pre-Processing and Synchronize with WaterPro. The WaterEdge stores and forwards data during Cloud Connection Interruption and Restore.
                   </p>
                 </div>
                 <div className="space-y-3 pt-6 border-t border-white/5">
@@ -259,7 +245,7 @@ export default function WaterWizClient() {
                 </div>
               </div>
             </SectionWrapper>
-
+ 
             {/* WaterPro */}
             <SectionWrapper delay={0.2}>
               <div className="group relative h-full flex flex-col justify-between p-8 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-[#0da08a]/35 transition-all duration-300">
@@ -270,7 +256,7 @@ export default function WaterWizClient() {
                   <h3 className="text-2xl font-bold text-white font-heading mb-3">WaterPro</h3>
                   <p className="text-xs text-[#0da08a] uppercase font-black tracking-widest mb-4">Cloud Monitoring & Compliance Software</p>
                   <p className="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                    A secure, cloud-based platform for water network analytics, flow logging, O&M management, and automatic compliance reporting. Integrates directly with State Pollution Control Boards and National Water Quality databases.
+                    A cloud-based comprehensive, highly secure, available, reliable and scalable software package for data monitoring, analysis, reporting, O&M and multi-plant configuration.
                   </p>
                 </div>
                 <div className="space-y-3 pt-6 border-t border-white/5">
@@ -346,7 +332,11 @@ export default function WaterWizClient() {
                     : "bg-slate-900/60 border-white/10 text-gray-400 hover:text-white"
                 }`}
               >
-                {tab === "monitor" ? "Monitor" : tab === "analyze" ? "Analyze" : "State Board Uplink"}
+                {tab === "monitor" ? "Monitor" 
+                  : tab === "analyze" ? "Analyze" 
+                  : tab === "reporting" ? "Reporting" 
+                  : tab === "om" ? "Configuration & O&M" 
+                  : "Third-Party Integrations"}
               </button>
             ))}
           </div>
@@ -365,7 +355,7 @@ export default function WaterWizClient() {
                     </div>
                     <div>
                       <h4 className="text-base font-bold text-white mb-1.5">{item.title}</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                      {item.desc ? <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p> : null}
                     </div>
                   </div>
                 ))}
