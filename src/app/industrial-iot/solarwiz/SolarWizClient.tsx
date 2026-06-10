@@ -24,77 +24,61 @@ import { SolarProDashboard } from "@/components/DashboardMockups";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 
 export default function SolarWizClient() {
-  const [activeTab, setActiveTab] = useState<"monitor" | "analyze" | "om">("monitor");
+  const [activeTab, setActiveTab] = useState<"monitor" | "analyze" | "reporting" | "om" | "integrations">("monitor");
 
   const tabContents = {
     monitor: {
       title: "Monitor Renewable Assets from Anywhere",
       subtitle: "Rich Set of Dashboards to Enhance Plant Performance",
       bullets: [
-        {
-          title: "Central Portfolio Dashboards",
-          desc: "Monitor your entire distributed renewable portfolio from a single, centralized pane of glass."
-        },
-        {
-          title: "Site Dashboards for Plant KPIs",
-          desc: "Gain deep visibility into overall site performance ratio (PR), capacity utilization factor (CUF), and active power output."
-        },
-        {
-          title: "Equipment Performance Dashboards",
-          desc: "Granular monitoring for weather monitoring stations (WMS), solar inverters, strings, transformers, multi-function energy meters, and switchgear panels."
-        },
-        {
-          title: "Real-time Trends & Analytics",
-          desc: "Continuous parameter polling and visualization of electrical trends to check asset health and identify operational anomalies."
-        },
-        {
-          title: "Customizable Themes",
-          desc: "Switch between modern dark and high-contrast light color themes tailored for control room monitors and office dashboards."
-        }
+        { title: "Central dashboards to monitor entire renewable portfolio", desc: "" },
+        { title: "Site dashboards for Plant KPIs", desc: "" },
+        { title: "Equipment dashboards for Performance Enhancement (WMS, Inverters, Strings, Transformers, MFM & Switchgears)", desc: "" },
+        { title: "Display of parameter values and trends to get more insights on current condition/s", desc: "" },
+        { title: "Choose your own Color Themes", desc: "" }
       ]
     },
     analyze: {
-      title: "Analyze Asset Performance",
-      subtitle: "Advanced Analytic Toolset to Convert Telemetry into Actionable Insights",
+      title: "Analyze Asset Performances",
+      subtitle: "Advanced Analytic Toolset to convert data into action",
       bullets: [
-        {
-          title: "Advanced Analytics Library",
-          desc: "Run pre-commissioned machine learning models to compare yield profiles, detect panel degradation, and identify string clipping."
-        },
-        {
-          title: "Performance Benchmarking",
-          desc: "Compare the 'Best' and 'Worst' performing assets across different geographic locations to isolate underperforming configurations."
-        },
-        {
-          title: "Loss Bucket & Soiling Analysis",
-          desc: "Calculate environmental soiling losses and inverter efficiency losses to optimize maintenance schedules."
-        },
-        {
-          title: "Root Cause Diagnostics",
-          desc: "Automated fault diagnostics trace inverter trips and string failures back to their root cause, avoiding prolonged downtime."
-        }
+        { title: "Advanced Analytics Tools Library", desc: "" },
+        { title: "Compare the ‘Best’ and ‘Worst’ performing devices", desc: "" },
+        { title: "Diagnose the root cause of performance", desc: "" },
+        { title: "Cross-Plant comparison of performance parameters", desc: "" },
+        { title: "Export Analysis results to Third Party Software (e.g. Microsoft Power BI)", desc: "" }
+      ]
+    },
+    reporting: {
+      title: "Reporting",
+      subtitle: "Customized reports to figure out root cause of any event",
+      bullets: [
+        { title: "In-Built Reports Library", desc: "" },
+        { title: "Customizable Report Views", desc: "" },
+        { title: "Set Higher and Lower Value Range for parameters of all devices", desc: "" },
+        { title: "Visualize and Categorize Parameter Values Effecting Performance", desc: "" },
+        { title: "Variety of Supported Report Formats", desc: "" },
+        { title: "Export Reports to Third Party Software (e.g. Microsoft Power BI)", desc: "" }
       ]
     },
     om: {
-      title: "Optimize Operations & Maintenance",
-      subtitle: "Streamline Workflows and Maintenance Schedulers",
+      title: "Multi-Plant Configuration And O&M",
+      subtitle: "Fast and Intuitive Plant Configuration",
       bullets: [
-        {
-          title: "Smart Tickets Generation",
-          desc: "Automated ticket dispatch upon anomaly detection, directing field technicians to the exact device requiring attention."
-        },
-        {
-          title: "Maintenance Scheduler",
-          desc: "Set and track preventive maintenance tasks, panel cleaning schedules, and safety inspections."
-        },
-        {
-          title: "WhatsApp & Email Alerts",
-          desc: "Receive immediate, high-priority notifications regarding critical grid trips or communication failure events."
-        },
-        {
-          title: "Mobile Asset Management",
-          desc: "Equip your field engineering team with a mobile-friendly view of active alarms, asset logs, and maintenance checksheets."
-        }
+        { title: "Support multiple and geographical assets through a common control center", desc: "" },
+        { title: "Minimize downtime and maximize generations and profitability", desc: "" },
+        { title: "Transform Raw data into valuable insights", desc: "" }
+      ]
+    },
+    integrations: {
+      title: "Third-Party Integrations",
+      subtitle: "Integrate with Third-Party Systems",
+      bullets: [
+        { title: "Asset Management Software", desc: "" },
+        { title: "Weather Forecasting Software", desc: "" },
+        { title: "BI Reporting Tool", desc: "" },
+        { title: "Cleaning Robot Integration", desc: "" },
+        { title: "Tracker System Integration", desc: "" }
       ]
     }
   };
@@ -240,7 +224,7 @@ export default function SolarWizClient() {
                   <div className="inline-block px-3 py-1 bg-[#0da08a]/20 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-widest mb-4 w-fit">Hardware</div>
                   <h3 className="text-3xl font-black text-white font-heading mb-4">SolarEdge</h3>
                   <p className="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                    An IoT-based Edge Computing Device to acquire data from renewable asset equipment. It comprises intelligent data pre-processing and synchronization with SolarPro. The SolarEdge device stores and forwards data during cloud connection interruptions and restores it automatically.
+                    An IOT based Edge Computing Device to acquire data from Renewable Assets Equipments. It comprises Intelligent Data Pre-Processing and Synchronize with SolarPro. The SolarEdge stores and forwards data during Cloud Connection Interruption and Restore.
                   </p>
                 </div>
                 
@@ -273,7 +257,7 @@ export default function SolarWizClient() {
                   <div className="inline-block px-3 py-1 bg-[#0da08a]/20 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-widest mb-4 w-fit">Software</div>
                   <h3 className="text-3xl font-black text-white font-heading mb-4">SolarPro</h3>
                   <p className="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                    A cloud-based comprehensive, highly secure, available, reliable, and scalable software package for data monitoring, analysis, reporting, operations and maintenance (O&M), and multi-plant configuration management.
+                    A cloud-based comprehensive, highly secure, available, reliable and scalable software package for data monitoring, analysis, reporting, O&M and multi-plant configuration.
                   </p>
                 </div>
 
@@ -345,7 +329,11 @@ export default function SolarWizClient() {
                     : "bg-slate-900/60 border-white/10 text-gray-400 hover:text-white"
                 }`}
               >
-                {tab === "monitor" ? "Monitor" : tab === "analyze" ? "Analyze" : "O&M Operations"}
+                {tab === "monitor" ? "Monitor" 
+                  : tab === "analyze" ? "Analyze" 
+                  : tab === "reporting" ? "Reporting" 
+                  : tab === "om" ? "Configuration & O&M" 
+                  : "Third-Party Integrations"}
               </button>
             ))}
           </div>
@@ -364,7 +352,7 @@ export default function SolarWizClient() {
                     </div>
                     <div>
                       <h4 className="text-base font-bold text-white mb-1.5">{item.title}</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                      {item.desc ? <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p> : null}
                     </div>
                   </div>
                 ))}
