@@ -181,7 +181,7 @@ export default function Page() {
       {/* 4. PLATFORM ADVANTAGE (Light) */}
       <section className="py-28 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-4">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
             {/* Left Column: Advantage Points */}
             <SectionWrapper>
@@ -191,16 +191,20 @@ export default function Page() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
-                    { icon: <Monitor className="w-5 h-5" />, title: "Overall Monitoring", desc: "Tracking flow rates, water levels, pH, and turbidity in a single centralized screen." },
-                    { icon: <BatteryCharging className="w-5 h-5" />, title: "Energy Management", desc: "Active monitoring of grid voltage, VFD power draw, and pump motor temperature." },
-                    { icon: <Lock className="w-5 h-5" />, title: "Data Integrity", desc: "Protecting utility data with localized buffer storage and encrypted cellular channels." },
-                    { icon: <Activity className="w-5 h-5" />, title: "Reporting & Analytics", desc: "Generating automated daily summaries, energy reports, and compliance logs." }
+                    { icon: <Monitor className="w-5 h-5" />, title: "Overall monitoring of Quantitative and Qualitative parameters", desc: "Tracking flow rates, levels, pH, and turbidity in a single centralized console." },
+                    { icon: <BatteryCharging className="w-5 h-5" />, title: "Energy Consumption", desc: "Active monitoring of grid voltage, VFD power draw, and capacitor performance." },
+                    { icon: <Cpu className="w-5 h-5" />, title: "Efficient plant/scheme operations", desc: "Automating motor duty cycles and valve sequences to optimize overall throughput." },
+                    { icon: <Layers className="w-5 h-5" />, title: "Highly reliable, scalable and flexible software architecture", desc: "Ensuring easy expansions for future treatment plants and OHT nodes." },
+                    { icon: <Database className="w-5 h-5" />, title: "Advanced data mining", desc: "Extracting actionable insights from historical sensor telemetry and runtime logs." },
+                    { icon: <LayoutTemplate className="w-5 h-5" />, title: "Reporting tools", desc: "Generating automated daily summaries, energy reports, and compliance logs." },
+                    { icon: <Lock className="w-5 h-5" />, title: "Data integrity and security", desc: "Protecting utility data with localized buffer storage and encrypted cellular channels." },
+                    { icon: <Activity className="w-5 h-5" />, title: "Supports the latest analytics with bird eye view of dashboards", desc: "Web-based dashboards providing real-time operations status at a glance." }
                   ].map((item, i) => (
                     <div key={i} className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:border-emerald-500/30 hover:shadow-md transition-all group">
                       <div className="w-10 h-10 bg-emerald-50 border border-emerald-100 rounded-xl flex items-center justify-center text-[#0da08a] mb-4 group-hover:scale-110 transition-transform">
                         {item.icon}
                       </div>
-                      <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">{item.title}</h4>
+                      <h4 className="font-bold text-slate-900 text-sm mb-2">{item.title}</h4>
                       <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
                     </div>
                   ))}
@@ -210,7 +214,7 @@ export default function Page() {
 
             {/* Right Column: Visual Image & Government Approvals */}
             <SectionWrapper delay={0.2}>
-              <div className="space-y-8">
+              <div className="space-y-8 lg:sticky lg:top-24">
                 
                 <div className="relative rounded-[32px] overflow-hidden border border-slate-150 shadow-2xl">
                   <Image src="/imgs/central-scada-network.png" alt="Centralized SCADA telemetry network overview dashboard" width={800} height={500} className="w-full h-[320px] object-cover" />
