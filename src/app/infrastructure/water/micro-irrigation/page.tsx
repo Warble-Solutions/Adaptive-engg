@@ -2,8 +2,8 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Factory, Zap, ShieldCheck, Settings, BarChart3, Handshake, Cpu, Sprout, Combine, CalendarClock, ShieldAlert, Cpu as CpuIcon, Droplets, Activity, LayoutTemplate } from "lucide-react";
-import { WATER_STATS, WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER, COMPANY_STATS } from "@/lib/constants";
+import { ArrowRight, Settings, Handshake, Cpu, Sprout, Combine, CalendarClock, Droplets, Activity } from "lucide-react";
+import { WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
 
 export const metadata = {
   title: "Micro Irrigation | Adaptive Engineering",
@@ -48,65 +48,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 2. OUR EXPERTISE & VERTICAL STATS Row (Light) */}
-      <section className="py-28 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
-            
-            {/* Left Column: Offset Vertical Stats Card (1/3 Width) */}
-            <div className="lg:col-span-4 flex flex-col justify-between">
-              <SectionWrapper className="h-full flex">
-                <div className="p-8 bg-slate-950 text-white rounded-3xl border border-slate-900 flex flex-col justify-between w-full shadow-xl">
-                  <div className="mb-8">
-                    <span className="text-emerald-400 font-bold uppercase text-[10px] tracking-widest block mb-2">AEPL Core Numbers</span>
-                    <h3 className="text-xl font-bold font-heading">Micro Irrigation Scale</h3>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div className="pb-4 border-b border-white/10">
-                      <div className="text-3xl font-black text-white">{WATER_STATS.yearsExperience.value}<span className="text-emerald-400">{WATER_STATS.yearsExperience.suffix}</span></div>
-                      <span className="text-xs text-slate-400 block mt-1">Years of Smart Telemetry Experience</span>
-                    </div>
-                    <div className="pb-4 border-b border-white/10">
-                      <div className="text-3xl font-black text-white">{WATER_STATS.statesCovered.value}<span className="text-emerald-400">{WATER_STATS.statesCovered.suffix}</span></div>
-                      <span className="text-xs text-slate-400 block mt-1">States Benefiting Across India</span>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-black text-white">{COMPANY_STATS.satisfiedCustomers.value}<span className="text-emerald-400">{COMPANY_STATS.satisfiedCustomers.suffix}</span></div>
-                      <span className="text-xs text-slate-400 block mt-1">Satisfied Municipal & Private Clients</span>
-                    </div>
-                  </div>
-                </div>
-              </SectionWrapper>
-            </div>
-
-            {/* Right Column: Expertise Text & Image (2/3 Width) */}
-            <div className="lg:col-span-8 flex flex-col justify-between">
-              <SectionWrapper delay={0.2} className="flex flex-col justify-between h-full">
-                <div>
-                  <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block">OMS Engineering Leadership</span>
-                  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading leading-tight">Chak-Level Flow Controls & Connectivity</h2>
-                  <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                    We at Adaptive Engineering Pvt Ltd. leverage our expertise in Remote Connectivity and custom SCADA architectures to offer comprehensive Outlet Management Systems (OMS) for Micro Irrigation networks. Smart agriculture requires distributing water equitably, and our instrumentation delivers exactly that.
-                  </p>
-                  <p className="text-slate-600 leading-relaxed mb-8">
-                    By monitoring hydraulic parameters directly at the field level, we eliminate volumetric water loss, optimize valve operation times, and report pipeline status to state irrigation departments.
-                  </p>
-                </div>
-                
-                <div className="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl max-h-[300px]">
-                  <Image src="/imgs/micro-irrigation-control.png" alt="OMS valve field automation SCADA console" width={800} height={400} className="w-full h-auto object-cover" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                    <p className="text-white font-bold text-base">Chak distribution SCADA overview</p>
-                    <p className="text-gray-300 text-xs">Precise telemetry from remote solenoid valves and solar field units</p>
-                  </div>
-                </div>
-              </SectionWrapper>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* 3. SOLUTIONS SECTION (Split Asymmetrical 3-Column Grid - Dark) */}
       <section className="py-28 bg-transparent text-white relative z-10">
@@ -150,7 +91,7 @@ export default function Page() {
                 {[
                   { icon: <Settings className="text-emerald-400 w-6 h-6" />, title: "Tailor-made Solutions for Pumping", desc: "Customized pumping configurations designed for variable field pressure demands." },
                   { icon: <Combine className="text-emerald-400 w-6 h-6" />, title: "Outlet Management System (OMS) in Micro Irrigation", desc: "End-to-end solar valve telemetry and field controller automation loops." },
-                  { icon: <CpuIcon className="text-emerald-400 w-6 h-6" />, title: "Reliable and scalable SCADA architecture", desc: "Centralized host mapping and historical logging for thousands of field points." },
+                  { icon: <Cpu className="text-emerald-400 w-6 h-6" />, title: "Reliable and scalable SCADA architecture", desc: "Centralized host mapping and historical logging for thousands of field points." },
                   { icon: <Activity className="text-emerald-400 w-6 h-6" />, title: "Control and monitor hydraulic parameters", desc: "Continuous monitoring of water distribution to prevent losses and ensure equity." },
                   { icon: <Droplets className="text-emerald-400 w-6 h-6" />, title: "Energy, pressure and flow at defined chak level", desc: "Fine-grained monitoring and optimization of parameters directly at individual chaks." }
                 ].map((item, i) => (
