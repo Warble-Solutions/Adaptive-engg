@@ -384,10 +384,10 @@ export default function STPPageClient() {
               <div className="space-y-8">
                 
                 <div className="relative rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
-                  <Image src="/imgs/stp-advantage.png" alt="In-house panel manufacturing plant" width={800} height={500} className="w-full h-[320px] object-cover" />
+                  <Image src="/imgs/stp-telemetry-analytics.png" alt="Sewage plant telemetry and mobile asset performance dashboards" width={800} height={500} className="w-full h-[320px] object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
-                    <p className="text-white font-bold">125,000+ Sq. Ft. Manufacturing Infrastructure</p>
-                    <p className="text-gray-300 text-xs">Quality panel fabrication and pre-FAT test beds in-house</p>
+                    <p className="text-white font-bold">Sewage Plant Telemetry & Analytics</p>
+                    <p className="text-gray-300 text-xs">Cloud-based performance tracking, remote lift station monitoring, and mobile maintenance dispatch</p>
                   </div>
                 </div>
 
