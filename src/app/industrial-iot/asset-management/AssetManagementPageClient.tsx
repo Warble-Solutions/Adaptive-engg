@@ -78,21 +78,23 @@ export default function AssetManagementPageClient() {
       {/* EXPERTISE SECTION */}
       <section className="py-24 px-6 bg-slate-50 text-slate-900 relative z-10">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-6">
-              <SectionWrapper>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0da08a]/10 border border-[#0da08a]/20 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-                  Expertise
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <div className="lg:col-span-6 flex flex-col justify-between">
+              <SectionWrapper className="h-full flex flex-col justify-between">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0da08a]/10 border border-[#0da08a]/20 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                    Expertise
+                  </div>
+                  <h2 className="text-3xl md:text-5xl font-black text-slate-900 font-heading leading-tight mb-6">
+                    Our Expertise
+                  </h2>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+                    Organizations can maximize asset performance through data-driven decision-making and strategic planning by leveraging technology. This ensures reduced risks and long-term reliability and resilience of their infrastructure systems.
+                  </p>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-black text-slate-900 font-heading leading-tight mb-6">
-                  Our Expertise
-                </h2>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
-                  Organizations can maximize asset performance through data-driven decision-making and strategic planning by leveraging technology. This ensures reduced risks and long-term reliability and resilience of their infrastructure systems.
-                </p>
 
                 {/* Grid of Key Pillars to resolve blank space */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 flex-grow">
                   <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
                     <div>
                       <div className="w-8 h-8 rounded-lg bg-[#0da08a]/10 flex items-center justify-center text-[#0da08a] mb-3">
@@ -132,13 +134,13 @@ export default function AssetManagementPageClient() {
                 </div>
               </SectionWrapper>
             </div>
-            <div className="lg:col-span-6">
-              <SectionWrapper delay={0.1}>
-                <div className="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl h-[360px] md:h-[450px]">
+            <div className="lg:col-span-6 flex flex-col">
+              <SectionWrapper delay={0.1} className="h-full flex flex-col">
+                <div className="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl flex-grow h-full min-h-[360px] lg:min-h-full">
                   <img 
                     src="/imgs/industrial-iot/ams_abstract_flow.png" 
                     alt="Mobile Asset Management Dashboard" 
-                    className="w-full h-full object-cover" 
+                    className="absolute inset-0 w-full h-full object-cover" 
                   />
                 </div>
               </SectionWrapper>
