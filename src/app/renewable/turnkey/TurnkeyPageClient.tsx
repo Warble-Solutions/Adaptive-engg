@@ -297,111 +297,122 @@ export default function TurnkeyPageClient() {
         </div>
       </section>
 
-      {/* 3. SCOPE OF WORK (Dark Bento Grid) */}
+      {/* 3. SCOPE OF WORK (Asymmetrical Grid) */}
       <section className="py-24 bg-transparent text-white relative z-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
-            <div className="text-center mb-20">
+            <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
                 <LayoutTemplate className="w-4 h-4" />
                 <span>Capabilities Scope</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 tracking-tight">Scope of <span className="gradient-heading">Work</span></h2>
-              <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-                Full-scope E&I capabilities designed for safety, grid stability, and long-term asset security.
+              <p className="text-gray-300 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                We can offer the following services on high voltage / medium voltage / low voltage cabling installation work all in accordance to tender technical specifications / local authority standards and clients / consultants’ requirements:
               </p>
             </div>
           </SectionWrapper>
 
-          {/* Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* Box 1 - Wide Card (Cabling Installation) */}
-            <SectionWrapper delay={0.1} className="md:col-span-2">
-              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[360px] flex flex-col justify-between group relative overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
-                <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-all"></div>
-                
-                <div className="relative z-10">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                    <Network className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 font-heading">Cabling Installation Works</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed max-w-lg">
-                    We can offer the following services on high voltage / medium voltage / low voltage cabling installation work all in accordance to tender technical specifications / local authority standards and clients / consultants’ requirements.
-                  </p>
-                </div>
-
-                <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>HV / MV / LV SYSTEM INSTALLATION</span>
-                  <span className="text-primary font-bold">COMPLIANT SYSTEMS</span>
-                </div>
-              </div>
-            </SectionWrapper>
-
-            {/* Box 2 - Standard Card (Maps & Routing) */}
-            <SectionWrapper delay={0.2}>
-              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[360px] flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
-                
+            {/* Card 1 - Map Collection */}
+            <SectionWrapper delay={0.1}>
+              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-2xl h-full min-h-[280px]">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent z-0"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                     <Compass className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-heading">Map Collection & Routing</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed">
-                    We handle scale-accurate map collection from clients/authorities with contractor support, providing exact cable route layout blueprints and detailed cable ampacity thermal calculations.
+                  <h3 className="text-lg font-bold text-white mb-3 font-heading">Map Collection</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed font-semibold">
+                    Collection of maps in required scale from client / authority with the help and support of main contractor.
                   </p>
                 </div>
-
-                <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>BLUEPRINTING & CAPACITY PLANS</span>
-                  <span className="text-primary font-bold">DESIGN ENGINE</span>
+                <div className="relative z-10 border-t border-white/5 pt-4 mt-6 flex justify-between text-[10px] text-gray-500 font-mono">
+                  <span>SITE SURVEY MAPS</span>
+                  <span className="text-primary font-bold">PRE-PLANNING</span>
                 </div>
               </div>
             </SectionWrapper>
 
-            {/* Box 3 - Standard Card (Pre-Jointing & HV Tests) */}
-            <SectionWrapper delay={0.3}>
-              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
-                
+            {/* Card 2 - Cable Routes & Calculations */}
+            <SectionWrapper delay={0.15}>
+              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-2xl h-full min-h-[280px]">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent z-0"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                    <Sliders className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3 font-heading">Routes & Calculations</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed font-semibold">
+                    Providing cable routes and cable ampacity calculations.
+                  </p>
+                </div>
+                <div className="relative z-10 border-t border-white/5 pt-4 mt-6 flex justify-between text-[10px] text-gray-500 font-mono">
+                  <span>ROUTE OPTIMIZATION</span>
+                  <span className="text-primary font-bold">AMPACITY LABS</span>
+                </div>
+              </div>
+            </SectionWrapper>
+
+            {/* Card 3 - Testing & Validation */}
+            <SectionWrapper delay={0.2}>
+              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-2xl h-full min-h-[280px]">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent z-0"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                     <Activity className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-heading">Testing & Validation</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed">
-                    Rigorous electrical field testing including Pre-Jointing and Jointing verification, High Voltage (HV) testing, Insulation Resistance (IR), Magnetic Balance, and Vector Group testing.
+                  <h3 className="text-lg font-bold text-white mb-3 font-heading">Testing & Validation</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed font-semibold">
+                    Providing Pre-Jointing and Jointing Tests, High Voltage tests, IR, Magnetic balance & Vector tests.
                   </p>
                 </div>
-
-                <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>DIAGNOSTIC & COMMISSIONING TESTS</span>
-                  <span className="text-primary font-bold">ZERO ERRORS</span>
+                <div className="relative z-10 border-t border-white/5 pt-4 mt-6 flex justify-between text-[10px] text-gray-500 font-mono">
+                  <span>DIAGNOSTIC TESTING</span>
+                  <span className="text-primary font-bold">ZERO FAULTS</span>
                 </div>
               </div>
             </SectionWrapper>
 
-            {/* Box 4 - Wide Card (SITC & Relay Parameterization) */}
-            <SectionWrapper delay={0.4} className="md:col-span-2">
-              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 h-[350px] flex flex-col justify-between group relative overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent z-0"></div>
-                <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-all"></div>
-                
+            {/* Card 4 - Relay Parameterization */}
+            <SectionWrapper delay={0.25}>
+              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-2xl h-full min-h-[280px]">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent z-0"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                     <Cpu className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 font-heading">Relay parameterization & Complete SITC</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed max-w-lg">
-                    Full protective relay parameterization coordination, and Supply Installation Testing & Commissioning (SITC) of HT/LT Panels, PLC/DCS automation, telemetry SCADA, and all field instrumentation.
+                  <h3 className="text-lg font-bold text-white mb-3 font-heading">Relay Parameterization</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed font-semibold">
+                    Relay parameterization.
                   </p>
                 </div>
+                <div className="relative z-10 border-t border-white/5 pt-4 mt-6 flex justify-between text-[10px] text-gray-500 font-mono">
+                  <span>PROTECTION SCHEMES</span>
+                  <span className="text-primary font-bold">IEEE STANDARD</span>
+                </div>
+              </div>
+            </SectionWrapper>
 
-                <div className="relative z-10 border-t border-white/5 pt-4 flex justify-between text-[10px] text-gray-500 font-mono">
-                  <span>PANELS, INSTRUMENTS & SCADA SITC</span>
-                  <span className="text-primary font-bold">IEEE COMPLIANT</span>
+            {/* Card 5 - Complete SITC */}
+            <SectionWrapper delay={0.3} className="md:col-span-2">
+              <div className="p-8 bg-slate-900 border border-white/10 hover:border-primary/50 hover:shadow-xl rounded-3xl transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-2xl h-full min-h-[280px]">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent z-0"></div>
+                <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-all"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                    <Network className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3 font-heading">Complete SITC Services</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed font-semibold">
+                    Supply Installation Testing and Commissioning (SITC) of All types of HT / LT Panels, Automation, SCADA and Field Instruments.
+                  </p>
+                </div>
+                <div className="relative z-10 border-t border-white/5 pt-4 mt-6 flex justify-between text-[10px] text-gray-500 font-mono">
+                  <span>SYSTEM SITC ROLES</span>
+                  <span className="text-primary font-bold">COMMISSIONING</span>
                 </div>
               </div>
             </SectionWrapper>
