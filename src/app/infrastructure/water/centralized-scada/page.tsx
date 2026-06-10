@@ -1,6 +1,7 @@
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Monitor, Droplets, BatteryCharging, Shield, Activity, Search, RefreshCw, Layers, Database, Lock, Cpu, LayoutTemplate, Factory, Settings } from "lucide-react";
 import { ScadaHeroDashboard } from "@/components/DashboardMockups";
 import { WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
@@ -180,59 +181,61 @@ export default function Page() {
       {/* 4. PLATFORM ADVANTAGE (Light) */}
       <section className="py-28 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-4">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Header Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
-            <div className="lg:col-span-5">
-              <SectionWrapper>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Column: Advantage Points */}
+            <SectionWrapper>
+              <div>
                 <span className="text-[#0da08a] font-bold uppercase text-sm tracking-widest mb-3 block font-bold">Data & Intelligence</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 font-heading leading-tight">
-                  Data is your greatest asset.
-                </h2>
-              </SectionWrapper>
-            </div>
-            <div className="lg:col-span-7 space-y-6">
-              <SectionWrapper delay={0.1}>
-                <p className="text-slate-600 text-lg leading-relaxed">
-                  Decentralized water schemes produce massive amounts of raw data. Our SCADA architecture transforms this raw data into intelligent, actionable reports, standardizing operations and cutting consumable overheads significantly.
-                </p>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  We secure local telemetry buffers to prevent data gaps during signal outages, aligning client systems with international standards for critical infrastructure safety.
-                </p>
-                <div className="flex flex-wrap gap-2.5">
-                  {GOVERNMENT_APPROVALS_WATER.map((agency, i) => (
-                    <span key={i} className="px-3.5 py-1.5 bg-emerald-50 border border-emerald-100 text-[#0da08a] text-xs font-bold rounded-full">
-                      {agency}
-                    </span>
+                <h2 className="text-4xl font-bold text-slate-900 mb-8 font-heading">The Centralized SCADA Advantage</h2>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {[
+                    { icon: <Monitor className="w-5 h-5" />, title: "Overall Monitoring", desc: "Tracking flow rates, water levels, pH, and turbidity in a single centralized screen." },
+                    { icon: <BatteryCharging className="w-5 h-5" />, title: "Energy Management", desc: "Active monitoring of grid voltage, VFD power draw, and pump motor temperature." },
+                    { icon: <Lock className="w-5 h-5" />, title: "Data Integrity", desc: "Protecting utility data with localized buffer storage and encrypted cellular channels." },
+                    { icon: <Activity className="w-5 h-5" />, title: "Reporting & Analytics", desc: "Generating automated daily summaries, energy reports, and compliance logs." }
+                  ].map((item, i) => (
+                    <div key={i} className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:border-emerald-500/30 hover:shadow-md transition-all group">
+                      <div className="w-10 h-10 bg-emerald-50 border border-emerald-100 rounded-xl flex items-center justify-center text-[#0da08a] mb-4 group-hover:scale-110 transition-transform">
+                        {item.icon}
+                      </div>
+                      <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">{item.title}</h4>
+                      <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+                    </div>
                   ))}
                 </div>
-              </SectionWrapper>
-            </div>
-          </div>
+              </div>
+            </SectionWrapper>
 
-          {/* Grid of 8 Intelligence Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: <Monitor className="w-5 h-5" />, title: "Overall Monitoring", desc: "Tracking flow rates, levels, pH, and turbidity in a single centralized console." },
-              { icon: <BatteryCharging className="w-5 h-5" />, title: "Energy Management", desc: "Active monitoring of grid voltage, VFD power draw, and capacitor performance." },
-              { icon: <Cpu className="w-5 h-5" />, title: "Operational Efficiency", desc: "Automating motor duty cycles and valve sequences to optimize overall throughput." },
-              { icon: <Layers className="w-5 h-5" />, title: "Scalable Architecture", desc: "Ensuring easy expansions for future treatment plants and OHT nodes." },
-              { icon: <Database className="w-5 h-5" />, title: "Advanced Data Mining", desc: "Extracting actionable insights from historical sensor telemetry and runtime logs." },
-              { icon: <LayoutTemplate className="w-5 h-5" />, title: "Reporting Tools", desc: "Generating automated daily summaries, energy reports, and compliance logs." },
-              { icon: <Lock className="w-5 h-5" />, title: "Data Security", desc: "Protecting utility data with localized buffer storage and encrypted cellular channels." },
-              { icon: <Activity className="w-5 h-5" />, title: "Real-time Analytics", desc: "Web-based dashboards providing real-time operations status at a glance." }
-            ].map((item, i) => (
-              <SectionWrapper key={i} delay={i * 0.05}>
-                <div className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:border-emerald-500/30 hover:shadow-xl transition-all h-full flex flex-col justify-between group">
-                  <div>
-                    <div className="w-10 h-10 bg-emerald-50 border border-emerald-100 rounded-xl flex items-center justify-center text-[#0da08a] mb-4 group-hover:scale-110 transition-transform">
-                      {item.icon}
-                    </div>
-                    <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">{item.title}</h4>
-                    <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+            {/* Right Column: Visual Image & Government Approvals */}
+            <SectionWrapper delay={0.2}>
+              <div className="space-y-8">
+                
+                <div className="relative rounded-[32px] overflow-hidden border border-slate-150 shadow-2xl">
+                  <Image src="/imgs/central-scada-network.png" alt="Centralized SCADA telemetry network overview dashboard" width={800} height={500} className="w-full h-[320px] object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                    <p className="text-white font-bold">Smart Centralized SCADA & Analytics</p>
+                    <p className="text-gray-300 text-xs">Decentralized water asset monitoring and automated reporting logs</p>
                   </div>
                 </div>
-              </SectionWrapper>
-            ))}
+
+                <div className="bg-slate-50 border border-slate-100 rounded-2xl p-8">
+                  <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <Factory className="text-[#0da08a] w-5 h-5" /> Government & Municipal Partner
+                  </h3>
+                  <div className="flex flex-wrap gap-2.5">
+                    {GOVERNMENT_APPROVALS_WATER.map((agency, i) => (
+                      <span key={i} className="px-3.5 py-1.5 bg-emerald-50 border border-emerald-100 text-[#0da08a] text-xs font-bold rounded-full">
+                        {agency}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </SectionWrapper>
+
           </div>
         </div>
       </section>
