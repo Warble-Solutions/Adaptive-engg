@@ -82,16 +82,13 @@ export default function AssetManagementPageClient() {
             <div className="lg:col-span-5">
               <SectionWrapper>
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0da08a]/10 border border-[#0da08a]/20 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-                  Our Expertise
+                  Expertise
                 </div>
                 <h2 className="text-3xl md:text-5xl font-black text-slate-900 font-heading leading-tight mb-6">
-                  Connected Field Operations
+                  Our Expertise
                 </h2>
-                <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  AssetWiz (Mobile Asset Management) offers a unified, secure platform for monitoring and maintaining distributed assets. It connects siloed field data to empower operations teams, drive efficient troubleshooting, and ensure full compliance.
-                </p>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Maximize your return on capital by minimizing asset downtime, automating task checklists, and maintaining full transparency across plant, control room, and corporate tiers.
+                  Organizations can maximize asset performance through data-driven decision-making and strategic planning by leveraging technology. This ensures reduced risks and long-term reliability and resilience of their infrastructure systems.
                 </p>
               </SectionWrapper>
             </div>
