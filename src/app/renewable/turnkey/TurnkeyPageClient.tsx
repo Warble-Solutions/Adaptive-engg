@@ -93,24 +93,24 @@ export default function TurnkeyPageClient() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">17<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Years Experience</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Years of Experience</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">68<span className="text-primary">GW+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Solar-Wind-Hybrid</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Solar-Wind-Hybrid Projects</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">700<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">MLD Water Treated</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">MLD of Treated Drinking / Sewage Water</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">2.5<span className="text-primary">Km</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Road Tunnel E&I</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Twin Tube Road Tunnel</span>
                 </div>
                 <div className="col-span-2 bg-gradient-to-br from-primary/10 to-teal-500/5 border border-primary/30 rounded-3xl p-6 hover:border-primary/50 transition-all duration-300 flex items-center justify-between">
                   <div>
                     <div className="text-xl font-bold text-white mb-1">3,500+ Panels</div>
-                    <span className="text-[11px] text-gray-300 block">Delivered & commissioned per year</span>
+                    <span className="text-[11px] text-gray-300 block">Delivered/Year</span>
                   </div>
                   <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary shrink-0">
                     <ShieldCheck className="w-5 h-5" />
@@ -123,7 +123,7 @@ export default function TurnkeyPageClient() {
       </section>
 
       {/* 1.5 OUR EXPERTISE (Electrical, Instrumentation & Automation Solutions) */}
-      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-white/5">
+      <section className="py-24 bg-transparent text-white relative z-20 border-t border-white/5">
         <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-[140px] pointer-events-none"></div>
 
@@ -145,10 +145,10 @@ export default function TurnkeyPageClient() {
 
                 <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
                   <p>
-                    We at Adaptive Engineering Pvt Ltd are experts in providing comprehensive Electrical, Instrumentation, and Automation Solutions for Renewable, Water, and Infrastructure verticals. Our best-in-class SCADA and Monitoring Solutions, integrated with AssetWiz (our proprietary Mobile Asset Management Software), minimize breakdown losses and maximize productivity.
+                    We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Renewable, Water and Infrastructure verticals. Our best in class, SCADA and Monitoring Solutions with Mobile Asset Management Software minimize breakdown losses leading to increased productivity.
                   </p>
                   <p>
-                    Our 17+ years of experience, combined with a complete solutions portfolio of electrical and automation systems and excellent project management skills, has empowered us as a "Preferred Project Partner" in Turn-Key Projects for leading EPCs.
+                    Our 17+ years of experience, a complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills empowered us a “Preferred Project Partner” in Turn-Key Projects for EPCs.
                   </p>
                 </div>
               </SectionWrapper>
@@ -328,7 +328,7 @@ export default function TurnkeyPageClient() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 font-heading">Cabling Installation Works</h3>
                   <p className="text-gray-400 text-xs leading-relaxed max-w-lg">
-                    We offer comprehensive cabling installation services across high voltage (HV), medium voltage (MV), and low voltage (LV) systems, executed in absolute compliance with tender technical specifications, local utility authority standards, and clients/consultants' requirements.
+                    We can offer the following services on high voltage / medium voltage / low voltage cabling installation work all in accordance to tender technical specifications / local authority standards and clients / consultants’ requirements.
                   </p>
                 </div>
 
@@ -411,7 +411,7 @@ export default function TurnkeyPageClient() {
       </section>
 
       {/* 3.5 BENEFITS SECTION (Clean Light Theme) */}
-      <section className="py-24 bg-white text-slate-900 relative z-20 border-t border-slate-200">
+      <section className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="text-center mb-16">
@@ -427,8 +427,8 @@ export default function TurnkeyPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Increased Productivity", desc: "Consolidated E&I contracts minimize operational friction, boosting E&I coordination speed and system output.", icon: <BarChart3 className="w-6 h-6 text-primary" /> },
-              { title: "In-sync Design for Commissioning", desc: "Integrated drawing submittals and engineering studies guarantee zero discrepancy during final grid injection.", icon: <Sliders className="w-6 h-6 text-primary" /> },
-              { title: "Reduced Change Challenges", desc: "Single-point design and manufacturing minimize unexpected change requests or cost variations during execution.", icon: <Settings className="w-6 h-6 text-primary" /> },
+              { title: "In-sync design for commissioning", desc: "Integrated drawing submittals and engineering studies guarantee zero discrepancy during final grid injection.", icon: <Sliders className="w-6 h-6 text-primary" /> },
+              { title: "Reduced Change Management Challenges", desc: "Single-point design and manufacturing minimize unexpected change requests or cost variations during execution.", icon: <Settings className="w-6 h-6 text-primary" /> },
               { title: "Reduced Operating Cost", desc: "Optimized sizing, thermal ampacity plans, and high-efficiency panels reduce long-term operational expenditures.", icon: <Zap className="w-6 h-6 text-primary" /> },
               { title: "Adaptive Project Timeline", desc: "Our agile project management coordinates teams flexibly, adapting to site conditions to secure grid deadlines.", icon: <Clock className="w-6 h-6 text-primary" /> },
               { title: "Reduced Management Efforts", desc: "Eliminate multi-contract overhead, allowing client managers to coordinate with one single accountable E&I partner.", icon: <Shield className="w-6 h-6 text-primary" /> }
@@ -453,21 +453,21 @@ export default function TurnkeyPageClient() {
       </section>
 
       {/* 4. WHY CHOOSE AEPL (Traditional vs AEPL Unified E&I comparison) */}
-      <section className="py-24 bg-slate-50 text-slate-900 relative z-20 border-t border-slate-200">
+      <section className="py-24 bg-transparent text-white relative z-20 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SectionWrapper>
               <div>
-                <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Value Proposition</span>
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">
+                <span className="text-xs font-bold text-teal-400 uppercase tracking-widest block mb-4">Value Proposition</span>
+                <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-6 leading-tight">
                   Why Choose AEPL for <br /><span className="text-primary">Turnkey E&I?</span>
                 </h2>
-                <p className="text-slate-600 text-base leading-relaxed font-medium mb-10">
+                <p className="text-gray-300 text-base leading-relaxed font-medium mb-10">
                   Coordinating multiple vendors for panel building, cabling, SCADA logic, and substation works is the #1 cause of project delays. AEPL consolidates the entire scope under a single point of responsibility.
                 </p>
 
                 {/* Flow items */}
-                <div className="space-y-4 text-xs font-bold text-slate-700">
+                <div className="space-y-4 text-xs font-bold text-gray-300">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                     <span>Single-point project management reducing overhead by 60%</span>
@@ -489,20 +489,20 @@ export default function TurnkeyPageClient() {
               <div className="space-y-6">
                 
                 {/* Traditional Card */}
-                <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-md flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 flex items-center justify-center shrink-0">
+                <div className="p-6 bg-white/5 border border-white/5 rounded-2xl shadow-md flex items-start gap-4 text-white">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 text-gray-400 flex items-center justify-center shrink-0">
                     <Lock className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-slate-800 font-bold text-sm mb-1.5">Traditional Multi-Vendor Route</h4>
-                    <p className="text-slate-500 text-xs leading-relaxed font-medium">
+                    <h4 className="text-white font-bold text-sm mb-1.5">Traditional Multi-Vendor Route</h4>
+                    <p className="text-gray-400 text-xs leading-relaxed font-medium">
                       Requires managing separate contracts for panel supply, on-site cable layers, and programming. Leads to finger-pointing when parameters clash during hot testing.
                     </p>
                   </div>
                 </div>
 
                 {/* AEPL Card */}
-                <div className="p-6 bg-slate-900 border border-slate-800 rounded-2xl shadow-xl flex items-start gap-4 text-white relative overflow-hidden">
+                <div className="p-6 bg-primary/10 border border-primary/30 rounded-2xl shadow-xl flex items-start gap-4 text-white relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
                   
                   <div className="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 relative z-10">
@@ -510,7 +510,7 @@ export default function TurnkeyPageClient() {
                   </div>
                   <div className="relative z-10">
                     <h4 className="text-primary font-bold text-sm mb-1.5">AEPL Consolidated Contract</h4>
-                    <p className="text-slate-400 text-xs leading-relaxed font-medium">
+                    <p className="text-gray-300 text-xs leading-relaxed font-medium">
                       One contract covers drawing submittals, panel construction, cable lays, safety earth tests, and grid sync. One project manager is 100% accountable.
                     </p>
                   </div>
@@ -523,90 +523,55 @@ export default function TurnkeyPageClient() {
       </section>
 
       {/* Value Creation Section */}
-      <section className="py-24 bg-slate-950 text-white relative z-10 border-t border-white/5">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
-
+      <section className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionWrapper>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-teal-400 font-bold uppercase text-xs tracking-widest mb-3 block">Corporate Competencies</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">Value Creation</h2>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <span className="text-primary font-bold uppercase text-xs tracking-widest mb-3 block">Corporate Competencies</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-heading">Value Creation</h2>
+              <p className="text-slate-500 text-sm leading-relaxed">
                 Empowering industrial utility and power infrastructure with engineering precision, integrated manufacturing, and comprehensive project execution.
               </p>
             </div>
           </SectionWrapper>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
-            {/* Column 1: Core E&I Capabilities */}
-            <SectionWrapper>
-              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm h-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-[40px] pointer-events-none"></div>
-                <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
-                  <ShieldCheck className="w-5 h-5 text-primary" /> E&I Engineering Capabilities
-                </h3>
-                
-                <div className="space-y-5">
-                  {[
-                    { title: "Scalable Turn-key E&I Solutions", desc: "End-to-end execution scope spanning drawing designs, switchyard setups, and final grid synchronization.", icon: <ShieldCheck className="w-5 h-5 text-primary" /> },
-                    { title: "Professional Project Management", desc: "Highly professional project management team tracking E&I compliance, milestones, and safety standards.", icon: <Compass className="w-5 h-5 text-primary" /> },
-                    { title: "Industrial Electrical & Automation", desc: "Sleek electrical engineering, custom control panel designs, and advanced PLC/SCADA configurations.", icon: <Cpu className="w-5 h-5 text-primary" /> },
-                    { title: "Renewable Energy Pedigree", desc: "Proven track record in Solar and Wind utility verticals with over 68GW+ of execution and monitoring experience.", icon: <Zap className="w-5 h-5 text-primary" /> }
-                  ].map((item, idx) => (
-                    <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl hover:border-primary/20 transition-all duration-300 flex items-start gap-4">
-                      <div className="mt-1 text-primary shrink-0">{item.icon}</div>
-                      <div>
-                        <h4 className="text-sm font-bold text-white mb-1">{item.title}</h4>
-                        <p className="text-xs text-gray-300 leading-relaxed font-medium">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Project Management Team", desc: "Highly Professional Project Management Team.", icon: <Compass className="w-5 h-5 text-primary" /> },
+              { title: "Industrial E&I Expertise", desc: "Expertise in Industrial Electrical, Automation and instrumentation Solutions.", icon: <Cpu className="w-5 h-5 text-primary" /> },
+              { title: "Turn-key E&I Solutions", desc: "Turn-key E&I Solutions – Execution of scalable projects.", icon: <ShieldCheck className="w-5 h-5 text-primary" /> },
+              { title: "Solar Verticals Pedigree", desc: "Expertise in Solar Verticals with 40GW+ experience.", icon: <Zap className="w-5 h-5 text-primary" /> },
+              { title: "Government Approved Contractor", desc: "Government Approved – GWSSB – Gujarat, MPJNM, MPUDC & MPUADD – Madhya Pradesh, UPJNM – Uttar Pradesh, RWS&S – Odisha, JICA Assisted – Assam.", icon: <Lock className="w-5 h-5 text-primary" /> },
+              { title: "Water Segment Expertise", desc: "Expertise in all Water Segments viz. WTP, STP, ETP, Pumping.", icon: <Activity className="w-5 h-5 text-primary" /> },
+              { title: "Panel Manufacturing", desc: "In House Panel Manufacturing Facilities.", icon: <Factory className="w-5 h-5 text-primary" /> },
+              { title: "Tunnel Turn-key E&I", desc: "Experience Team of Tunnel Turn-key E&I Solutions.", icon: <Network className="w-5 h-5 text-primary" /> },
+              { title: "Automation & Instrumentation", desc: "Automation and instrumentation Solutions.", icon: <Settings className="w-5 h-5 text-primary" /> }
+            ].map((item, idx) => (
+              <SectionWrapper key={idx} delay={idx * 0.05}>
+                <div className="bg-slate-50 border border-slate-200/60 p-6 rounded-2xl hover:border-primary/20 hover:bg-slate-100/30 transition-all duration-300 flex items-start gap-4 shadow-sm h-full">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900 mb-1">{item.title}</h4>
+                    <p className="text-xs text-slate-500 leading-relaxed font-semibold">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
-            </SectionWrapper>
-
-            {/* Column 2: Sectors & Government Approvals */}
-            <SectionWrapper delay={0.2}>
-              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden backdrop-blur-sm h-full">
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-500/5 rounded-full blur-[40px] pointer-events-none"></div>
-                <h3 className="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2.5">
-                  <Award className="w-5 h-5 text-teal-400" /> Verticals & Credentials
-                </h3>
-
-                <div className="space-y-5">
-                  {[
-                    { title: "Government Approved Contractor", desc: "Licensed A-grade contracting credentials with GWSSB (Gujarat), MPJNM, MPUDC & MPUADD (MP), UPJNM (UP), RWS&S (Odisha), and JICA Assisted (Assam).", icon: <Lock className="w-5 h-5 text-teal-400" /> },
-                    { title: "In-house Panel Manufacturing", desc: "Quality-tested HT switchgear, LT distribution panels, PCC, MCC, and ACDB panels fabricated in our Ahmedabad facility.", icon: <Factory className="w-5 h-5 text-teal-400" /> },
-                    { title: "Comprehensive Water Segment Expertise", desc: "Pioneering E&I solutions across all water segment plants, including WTP, STP, ETP, and pumping telemetry.", icon: <Activity className="w-5 h-5 text-teal-400" /> },
-                    { title: "Tunnel Turn-key E&I execution", desc: "Dedicated, highly experienced field engineering crew executing complex E&I layouts for road and traffic twin-tube tunnels.", icon: <Network className="w-5 h-5 text-teal-400" /> }
-                  ].map((item, idx) => (
-                    <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl hover:border-teal-500/20 transition-all duration-300 flex items-start gap-4">
-                      <div className="mt-1 text-teal-400 shrink-0">{item.icon}</div>
-                      <div>
-                        <h4 className="text-sm font-bold text-white mb-1">{item.title}</h4>
-                        <p className="text-xs text-gray-300 leading-relaxed font-medium">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </SectionWrapper>
-
+              </SectionWrapper>
+            ))}
           </div>
         </div>
       </section>
 
       {/* 5. CTA */}
-      <section className="py-24 bg-white text-slate-900 text-center relative z-20 rounded-t-[40px] -mt-10">
+      <section className="py-24 bg-transparent text-white text-center relative z-20 border-t border-white/5">
         <div className="max-w-3xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Secure Your Turnkey E&I Project</h2>
-            <p className="text-slate-500 mb-8 text-base leading-relaxed">
+            <h2 className="text-4xl font-bold text-white mb-6 font-heading">Secure Your Turnkey E&I Project</h2>
+            <p className="text-gray-300 mb-8 text-base leading-relaxed">
               Partner with Adaptive Engineering for safe, compliant, and accelerated electrical utility execution.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors shadow-lg shadow-teal-500/20">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-teal-500/20">
               Consult E&I Engineering Team <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>

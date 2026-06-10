@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
@@ -10,7 +10,7 @@ import { ArrowRight, ShieldCheck, Activity, HardHat, Blocks, Link2, Youtube, Mon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine, faBolt, faWaveSquare, faHeartbeat, faBalanceScale, faBezierCurve, faNetworkWired, faFileContract, faShieldAlt, faCogs } from "@fortawesome/free-solid-svg-icons";
 import SceneTrigger from "@/components/3d/SceneTrigger";
-import { COMPANY_STATS } from "@/lib/constants";
+import { COMPANY_STATS, PPC_STATS, KUSUM_STATS, TUNNEL_STATS, WATER_STATS, AUTOMATION_STATS } from "@/lib/constants";
 import { ScadaHeroDashboard } from "@/components/DashboardMockups";
 
 export default function HomePageClient() {
@@ -21,10 +21,7 @@ export default function HomePageClient() {
   const DEFAULT_VIDEOS = [
     { id: "DbhvDJYsfEA", title: "Weather Monitoring Systems by AEPL under PM-KUSUM" },
     { id: "w2avEUffxYM", title: "Udaan 2026 – Adaptive Engineering Pvt. Ltd. Annual Meet" },
-    { id: "_n0cYUCRMYc", title: "PM-KUSUM - ACDB Panel" },
-    { id: "DbhvDJYsfEA", title: "WMS Telemetry Systems under PM-KUSUM" },
-    { id: "w2avEUffxYM", title: "AEPL Team & Corporate Celebrations" },
-    { id: "_n0cYUCRMYc", title: "ACDB Distribution Panel overview" }
+    { id: "_n0cYUCRMYc", title: "PM-KUSUM - ACDB Panel" }
   ];
 
   useEffect(() => {
@@ -33,7 +30,11 @@ export default function HomePageClient() {
         const res = await fetch("/api/youtube/latest");
         const data = await res.json();
         if (data.success && data.videos && data.videos.length > 0) {
-          setVideos(data.videos.slice(0, 6));
+          const uniqueVideos = data.videos.filter(
+            (v: any, index: number, self: any[]) =>
+              self.findIndex((t) => t.id === v.id) === index
+          );
+          setVideos(uniqueVideos.slice(0, 6));
         } else {
           setVideos(DEFAULT_VIDEOS);
         }
@@ -49,6 +50,51 @@ export default function HomePageClient() {
 
   const displayVideos = videos.length > 0 ? videos : DEFAULT_VIDEOS;
 
+  const formatStatVal = (stat: any) => {
+    let valStr = stat.formatted || (typeof stat.value === "number" ? stat.value.toLocaleString("en-IN") : stat.value);
+    if (stat.suffix && !valStr.toString().endsWith(stat.suffix)) {
+      valStr += stat.suffix;
+    }
+    return valStr;
+  };
+
+  // ─── THE AEPL JOURNEY ────────────────────────────────────
+  // Stats are ordered as a narrative: Foundation → Scale → Reach → Innovation
+  const statsList = [
+    // ▸ CH.1  FOUNDATION — Who we are
+    COMPANY_STATS.yearsExperience,
+    COMPANY_STATS.manpower,
+    COMPANY_STATS.manufacturingFacility,
+    COMPANY_STATS.satisfiedCustomers,
+
+    // ▸ CH.2  SCALE — What we've built
+    COMPANY_STATS.installedBase,
+    COMPANY_STATS.electricalPanels,
+    COMPANY_STATS.scadaInstalled,
+    AUTOMATION_STATS.systemsPerYear,
+    PPC_STATS.ppcProjects,
+    PPC_STATS.hybridInstalled,
+
+    // ▸ CH.3  REACH — Where we operate
+    KUSUM_STATS.statesOfIndia,
+    WATER_STATS.statesCovered,
+    WATER_STATS.supplySchemes,
+    WATER_STATS.overheadTanks,
+    WATER_STATS.mldTreatedWater,
+    WATER_STATS.mldTreatedSewage,
+    WATER_STATS.irrigationPumpingStations,
+
+    // ▸ CH.4  INNOVATION — Cutting-edge capabilities
+    PPC_STATS.renewableCapacity,
+    PPC_STATS.hybridProjects,
+    PPC_STATS.responseTime,
+    AUTOMATION_STATS.scadaTags,
+    AUTOMATION_STATS.redundantSystems,
+    TUNNEL_STATS.twinTubeRoad,
+    TUNNEL_STATS.transformer,
+    TUNNEL_STATS.ledLights,
+  ];
+
   return (
     <div className="flex flex-col">
       {/* 1. HERO CAROUSEL */}
@@ -62,68 +108,42 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <p className="text-center text-gray-400 text-lg font-bold uppercase tracking-[0.2em]">Industry Leaders Trust Us</p>
         </div>
-        <div className="flex flex-nowrap overflow-hidden relative w-full">
-          {/* Sibling Container 1 */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-32 shrink-0 min-w-full items-center pr-32">
-            {Array.from({ length: 40 }).map((_, i) => (
-              <div key={i} className="flex-shrink-0 flex items-center justify-center w-56 h-20">
-                <img
-                  src={`/imgs/logos/${i + 1}.webp`}
-                  alt={`Partner ${i + 1}`}
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            ))}
-          </div>
-          {/* Sibling Container 2 (Clone) */}
-          <div className="flex flex-nowrap animate-marquee-seamless gap-32 shrink-0 min-w-full items-center pr-32" aria-hidden="true">
-            {Array.from({ length: 40 }).map((_, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 flex items-center justify-center w-56 h-20">
-                <img
-                  src={`/imgs/logos/${i + 1}.webp`}
-                  alt={`Partner ${i + 1}`}
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <InfiniteMarquee speed={0.8} hoverSpeed={0.2} className="gap-32 items-center pr-32">
+          {Array.from({ length: 40 }).map((_, i) => (
+            <div key={i} className="flex-shrink-0 flex items-center justify-center w-56 h-20">
+              <img
+                src={`/imgs/logos/${i + 1}.webp`}
+                alt={`Partner ${i + 1}`}
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
+          ))}
+        </InfiniteMarquee>
       </section>
 
-      {/* 3. STATS GRID (Light) */}
-      <section className="pt-10 pb-24 bg-white z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 text-center">
-            {[
-              { value: COMPANY_STATS.yearsExperience.value, suffix: COMPANY_STATS.yearsExperience.suffix, label: COMPANY_STATS.yearsExperience.label },
-              { value: COMPANY_STATS.manpower.value, suffix: COMPANY_STATS.manpower.suffix, label: COMPANY_STATS.manpower.label },
-              { value: COMPANY_STATS.scadaInstalled.value, suffix: COMPANY_STATS.scadaInstalled.suffix, label: COMPANY_STATS.scadaInstalled.label },
-              { value: COMPANY_STATS.manufacturingFacility.value, suffix: COMPANY_STATS.manufacturingFacility.suffix, label: COMPANY_STATS.manufacturingFacility.label },
-              { value: COMPANY_STATS.electricalPanels.value, suffix: COMPANY_STATS.electricalPanels.suffix, label: COMPANY_STATS.electricalPanels.label },
-              { value: COMPANY_STATS.satisfiedCustomers.value, suffix: COMPANY_STATS.satisfiedCustomers.suffix, label: COMPANY_STATS.satisfiedCustomers.label }
-            ].map((stat, i) => (
-              <SectionWrapper key={i} delay={i * 0.1}>
-                <Counter
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  className="text-5xl font-extrabold text-slate-900 font-heading mb-2 block"
-                />
-                <div className="text-sm md:text-base uppercase tracking-widest text-primary font-bold">{stat.label}</div>
-              </SectionWrapper>
-            ))}
-          </div>
-        </div>
+      {/* 3. SCROLLING STATS LOOP (Light Marquee) */}
+      <section className="py-12 bg-white z-20 border-y border-slate-100 overflow-hidden">
+        <InfiniteMarquee speed={1.2} hoverSpeed={0.3} className="gap-8 items-center pr-8 py-6 cursor-pointer">
+          {statsList.map((stat, i) => (
+            <div key={i} className="flex-shrink-0 w-80 h-44 bg-slate-50/70 border-2 border-slate-200 rounded-[2rem] p-8 flex flex-col justify-center items-center text-center hover:border-primary/80 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="text-4xl font-extrabold text-slate-900 font-heading mb-2">
+                {formatStatVal(stat)}
+              </div>
+              <div className="text-xs uppercase tracking-widest text-slate-500 font-bold leading-normal">{stat.label}</div>
+            </div>
+          ))}
+        </InfiniteMarquee>
       </section>
 
-      {/* 3.5 MISSION & VISION (Overhauled Premium Light Design) */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative z-20 overflow-hidden">
+      {/* 3.5 MISSION & VISION (Overhauled Premium Dark Design) */}
+      <section className="py-24 bg-transparent relative z-10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">
               <span className="text-primary font-bold uppercase text-xs tracking-widest bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20 inline-block mb-4">
                 What Drives AEPL
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-white font-heading tracking-tight">
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">Vision & Mission</span>
               </h2>
             </div>
@@ -132,26 +152,26 @@ export default function HomePageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto relative">
             {/* Vision Card */}
             <SectionWrapper delay={0.1}>
-              <div className="group relative h-full bg-white border border-slate-100 rounded-3xl p-10 md:p-12 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-lg shadow-slate-100/40">
+              <div className="group relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 md:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/50 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-xl">
                 {/* Large Background Watermark Letter */}
-                <div className="absolute right-6 bottom-6 text-slate-100/80 font-black text-[12rem] leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-primary/5 font-heading">
+                <div className="absolute right-6 bottom-6 text-white/5 font-black text-[12rem] leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-primary/5 font-heading">
                   V
                 </div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-md">
                       <Rocket className="w-6 h-6" />
                     </div>
-                    <h3 className="text-2xl font-black text-slate-900 font-heading">Vision</h3>
+                    <h3 className="text-2xl font-black text-white font-heading">Vision</h3>
                   </div>
-                  
-                  <p className="text-xl text-slate-700 leading-relaxed font-semibold font-heading tracking-wide">
+
+                  <p className="text-xl text-slate-300 leading-relaxed font-semibold font-heading tracking-wide">
                     Embrace Technology To Maximize Value
                   </p>
                 </div>
-                
-                <div className="mt-8 pt-8 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
+
+                <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
                   <span>GUIDING STAR</span>
                   <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
                 </div>
@@ -160,26 +180,26 @@ export default function HomePageClient() {
 
             {/* Mission Card */}
             <SectionWrapper delay={0.2}>
-              <div className="group relative h-full bg-white border border-slate-100 rounded-3xl p-10 md:p-12 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-lg shadow-slate-100/40">
+              <div className="group relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 md:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/50 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-xl">
                 {/* Large Background Watermark Letter */}
-                <div className="absolute right-6 bottom-6 text-slate-100/80 font-black text-[12rem] leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-primary/5 font-heading">
+                <div className="absolute right-6 bottom-6 text-white/5 font-black text-[12rem] leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-primary/5 font-heading">
                   M
                 </div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-teal-600/10 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-500 shadow-md">
                       <Lightbulb className="w-6 h-6" />
                     </div>
-                    <h3 className="text-2xl font-black text-slate-900 font-heading">Mission</h3>
+                    <h3 className="text-2xl font-black text-white font-heading">Mission</h3>
                   </div>
-                  
-                  <p className="text-lg text-slate-600 leading-relaxed font-medium">
+
+                  <p className="text-lg text-slate-300 leading-relaxed font-medium">
                     Continuously evolve to maximize value of each installation towards providing the <span className="text-primary font-bold">Best Customer Experience</span>.
                   </p>
                 </div>
-                
-                <div className="mt-8 pt-8 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
+
+                <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
                   <span>DAILY COMPASS</span>
                   <div className="h-2 w-2 rounded-full bg-teal-600 animate-pulse"></div>
                 </div>
@@ -220,15 +240,14 @@ export default function HomePageClient() {
             <div className="lg:col-span-3 flex">
               <SectionWrapper delay={0.1} className="w-full h-full">
                 <div className="relative group overflow-hidden rounded-[2rem] w-full h-full min-h-[350px] border border-slate-100 shadow-lg">
-                  <img 
-                    src="/imgs/factory.jpg" 
-                    alt="AEPL Manufacturing Facility" 
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                  <img
+                    src="/imgs/factory.jpg"
+                    alt="AEPL Manufacturing Facility"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 z-10">
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest block mb-1">Our Facility</span>
-                    <h3 className="text-base font-bold text-white leading-tight">State-of-the-art automation & panel manufacturing plant</h3>
+                    <h3 className="text-base font-bold text-white leading-tight">State-of-the-art manufacturing plant</h3>
                   </div>
                 </div>
               </SectionWrapper>
@@ -240,7 +259,7 @@ export default function HomePageClient() {
                 <div className="grid grid-cols-2 gap-4 h-full">
                   <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
                     <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">68GW+</div>
-                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Software Installed Base</div>
+                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Installed Base</div>
                   </div>
                   <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
                     <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">300+</div>
@@ -252,15 +271,15 @@ export default function HomePageClient() {
                   </div>
                   <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
                     <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">50+</div>
-                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Water Schemes</div>
+                    <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Water Supply Schemes</div>
                   </div>
-                  
+
                   {/* Highlight image card */}
                   <div className="col-span-2 relative h-44 overflow-hidden rounded-3xl group border border-slate-100 shadow-sm mt-auto">
-                    <img 
-                      src="/imgs/tunnel/tunnel_hero.png" 
-                      alt="Twin Tube Tunnel" 
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    <img
+                      src="/imgs/tunnel/tunnel_hero.png"
+                      alt="Twin Tube Tunnel"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
                     <div className="absolute bottom-4 left-6 right-6 text-left">
@@ -271,6 +290,31 @@ export default function HomePageClient() {
                 </div>
               </SectionWrapper>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3.8 OUR VALUES — S.C.A.L.E. */}
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative z-20 border-t border-slate-100">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <span className="text-primary font-bold uppercase text-xs tracking-widest bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20 inline-block mb-4">
+                Guiding Principles
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">Values</span>
+              </h2>
+            </SectionWrapper>
+          </div>
+          <div className="flex justify-center">
+            <SectionWrapper>
+              <img
+                src="/imgs/Values-Design.webp"
+                alt="Our Values Design: S.C.A.L.E — Speed, Courage & Commitment, Adapt, Liveliness, Evolve to Excel"
+                className="w-full object-contain drop-shadow-2xl hover:scale-[1.01] transition-transform duration-700 rounded-3xl"
+              />
+            </SectionWrapper>
           </div>
         </div>
       </section>
@@ -291,8 +335,8 @@ export default function HomePageClient() {
             <SectionWrapper delay={0.1}>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
                 <div>
-                  <img src="/imgs/solar_farm_aerial.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Renewable Solutions" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Renewable Solutions</h3>
+                  <img src="/imgs/solutions/renewable_hybrid.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Renewable Solutions" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Renewable</h3>
                   <p className="text-gray-400 leading-relaxed mb-8 text-sm">End-to-end services: Conceptualizing, designing, and commissioning electrical systems up to 66KV. Solar, Wind, and Hybrid plant integration.</p>
                 </div>
                 <Link href="/renewable" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
@@ -303,7 +347,7 @@ export default function HomePageClient() {
             <SectionWrapper delay={0.2}>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
                 <div>
-                  <img src="/images/renewable/hero-electrical-panels.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Electrical Panels" />
+                  <img src="/imgs/solutions/electrical_panels.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Electrical Panels" />
                   <h3 className="text-2xl font-bold text-white mb-4">Electrical Panels</h3>
                   <p className="text-gray-400 leading-relaxed mb-8 text-sm">Intelligent design and custom manufacturing of high-reliability HT Switchgears, LT Distribution Panels, PCC, MCC, and ACDB panels.</p>
                 </div>
@@ -315,7 +359,7 @@ export default function HomePageClient() {
             <SectionWrapper delay={0.3}>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
                 <div>
-                  <img src="/images/renewable/hero-turnkey-execution.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Turnkey E&I" />
+                  <img src="/imgs/solutions/turnkey_ei.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Turnkey E&I" />
                   <h3 className="text-2xl font-bold text-white mb-4">Turnkey E&I</h3>
                   <p className="text-gray-400 leading-relaxed mb-8 text-sm">Single-point engineering, procurement, and construction (EPC) solutions for solar parks, wind assets, substations, and grid synchronization.</p>
                 </div>
@@ -327,8 +371,8 @@ export default function HomePageClient() {
             <SectionWrapper delay={0.4}>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
                 <div>
-                  <img src="/images/water/hero-water-main.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Water Solutions" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Water Solutions</h3>
+                  <img src="/imgs/solutions/water_solutions.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Water Solutions" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Water</h3>
                   <p className="text-gray-400 leading-relaxed mb-8 text-sm">Complete E&I automation and telemetry for water supply schemes, water treatment plants (WTP), sewage treatment plants (STP), and lift irrigation schemes.</p>
                 </div>
                 <Link href="/infrastructure/water" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
@@ -339,8 +383,8 @@ export default function HomePageClient() {
             <SectionWrapper delay={0.5}>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
                 <div>
-                  <img src="/imgs/pm-kusum/kusum_main_1776742261100.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="PM-KUSUM" />
-                  <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM Solutions</h3>
+                  <img src="/imgs/solutions/pm_kusum.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="PM-KUSUM" />
+                  <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM</h3>
                   <p className="text-gray-400 leading-relaxed mb-8 text-sm">Industrial IoT powered by SolarWiz, WaterWiz, and MachineWiz. Real-time telemetry for agricultural pumps and water supply schemes.</p>
                 </div>
                 <Link href="/pm-kusum" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
@@ -351,8 +395,8 @@ export default function HomePageClient() {
             <SectionWrapper delay={0.6}>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
                 <div>
-                  <img src="/imgs/tunnel/tunnel_hero.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Infrastructure Solutions" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Infrastructure Solutions</h3>
+                  <img src="/imgs/solutions/infrastructure_tunnel_entrance.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Infrastructure Solutions" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Infrastructure</h3>
                   <p className="text-gray-400 leading-relaxed mb-8 text-sm">Specialized safety, ventilation, lighting, and power automation packages for highway tunnels, data centers, and heavy manufacturing.</p>
                 </div>
                 <Link href="/infrastructure/tunnel" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</Link>
@@ -362,38 +406,38 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* 6. PROJECTS (Dark) */}
-      <section className="py-32 bg-transparent rounded-t-[40px] z-10 relative">
+      {/* 6. PROJECTS (Light) */}
+      <section className="py-32 bg-white relative z-20 border-y border-slate-100">
         <SceneTrigger variant="wind" color="#f97316" speed={0.6} />
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-end mb-16 border-b border-white/10 pb-6">
+          <div className="flex justify-between items-end mb-16 border-b border-slate-100 pb-6">
             <SectionWrapper>
-              <h2 className="text-5xl font-bold text-white font-heading">Case Studies</h2>
+              <h2 className="text-5xl font-bold text-slate-900 font-heading">Case Studies</h2>
             </SectionWrapper>
-            <Link href="/resources/case-studies" className="text-primary font-bold hover:border-primary/50 hover:shadow-xl transition hidden md:block">View All Projects</Link>
+            <Link href="/resources/case-studies" className="text-primary font-bold hover:text-[#0da08a] transition hidden md:block">View All Projects</Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-             {[
+            {[
               {
-                title: "Rural Water Supply Schemes",
-                slug: "rural-water-supply-schemes",
+                title: "Water Supply Schemes",
+                slug: "water-supply-schemes",
                 category: "Water & Process",
                 img: "/imgs/case-studies/cs_water.png",
                 desc: "Instrumentation, telemetry, and remote monitoring setup for widespread clean water distribution networks.",
                 delay: 0.1
               },
               {
-                title: "Highway Tunnel Ventilation & Control Systems",
-                slug: "highway-tunnel-ventilation-control-systems",
+                title: "Tunnel",
+                slug: "tunnel",
                 category: "Infrastructure",
                 img: "/imgs/case-studies/cs_tunnel.png",
                 desc: "Life safety automation systems including jet fan controls, toxic gas monitoring, and SCADA override for transport tunnels.",
                 delay: 0.2
               },
               {
-                title: "Khavda Hybrid Renewable Energy Plant",
-                slug: "khavda-hybrid-renewable-energy-plant",
+                title: "Khavda Hybrid Plant",
+                slug: "khavda-hybrid-plant",
                 category: "Renewable Energy",
                 img: "/imgs/case-studies/cs_solar.png",
                 desc: "High-capacity E&I substation layout, grid synchronization, and analytics for the Khavda hybrid solar-wind complex.",
@@ -401,34 +445,34 @@ export default function HomePageClient() {
               }
             ].map((study, i) => (
               <SectionWrapper key={i} delay={study.delay}>
-                <Link 
-                  href={`/resources/case-studies/${study.slug}`} 
-                  className="group relative bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden flex flex-col h-full hover:shadow-[0_0_50px_rgba(13,160,138,0.15)]"
+                <Link
+                  href={`/resources/case-studies/${study.slug}`}
+                  className="group relative bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/50 transition-all duration-500 overflow-hidden flex flex-col h-full hover:shadow-[0_20px_50px_rgba(13,160,138,0.08)]"
                 >
                   <div className="h-64 overflow-hidden relative">
                     {/* Floating Category Badge */}
                     <div className="absolute top-4 left-4 z-10 bg-primary/95 backdrop-blur-sm text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-primary/20">
                       {study.category}
                     </div>
-                    <img 
-                      src={study.img} 
-                      className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105" 
-                      alt={study.title} 
+                    <img
+                      src={study.img}
+                      className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-105"
+                      alt={study.title}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-85"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-85"></div>
                   </div>
-                  
+
                   <div className="p-8 flex-grow flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-black text-white mb-3 group-hover:text-primary transition-colors duration-300 leading-tight">
+                      <h3 className="text-2xl font-black text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300 leading-tight">
                         {study.title}
                       </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                      <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
                         {study.desc}
                       </p>
                     </div>
-                    
-                    <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-primary font-bold">
+
+                    <div className="pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs text-primary font-bold">
                       <span className="uppercase tracking-wider">Explore Project</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
                     </div>
@@ -483,7 +527,7 @@ export default function HomePageClient() {
         <SceneTrigger variant="wave" color="#0da08a" speed={0.5} />
         <div className="max-w-[1800px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Column: Advantage Points */}
             <div className="lg:col-span-8 space-y-8">
               <div>
@@ -547,14 +591,14 @@ export default function HomePageClient() {
               <SectionWrapper delay={0.3}>
                 <div className="relative group overflow-hidden rounded-[2rem] aspect-[4/5] shadow-2xl flex flex-col justify-end p-8 md:p-10 border border-slate-200">
                   <div className="absolute inset-0">
-                    <img 
-                      src="/images/renewable/hero-turnkey-execution.png" 
-                      alt="Project Execution" 
-                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                    <img
+                      src="/images/renewable/hero-turnkey-execution.png"
+                      alt="Project Execution"
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent group-hover:from-slate-950 group-hover:via-slate-900/50 transition-all duration-500"></div>
                   </div>
-                  
+
                   <div className="relative z-10 space-y-4">
                     <span className="bg-primary/95 text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full w-fit block">
                       Execution Excellence
@@ -566,8 +610,8 @@ export default function HomePageClient() {
                       Delivering world-class E&I projects with cost leadership, faster execution, and a proven track record across India.
                     </p>
                     <div className="pt-2">
-                      <Link 
-                        href="/contact" 
+                      <Link
+                        href="/contact"
                         className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-white transition-colors"
                       >
                         Partner With Us <ArrowRight className="w-4 h-4" />
@@ -582,24 +626,24 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* 9. MEDIA GALLERY (YouTube Widget - Light Premium Design) */}
-      <section className="py-24 px-6 relative overflow-hidden bg-white border-t border-b border-slate-100 z-20">
+      {/* 9. MEDIA GALLERY (YouTube Widget - Dark Premium Design) */}
+      <section className="py-24 px-6 relative overflow-hidden bg-transparent z-10">
         <SceneTrigger variant="wave" color="#ef4444" speed={0.4} />
         <div className="max-w-7xl mx-auto">
           <SectionWrapper className="mb-16 text-center">
-            <div className="inline-flex items-center gap-2 mb-4 bg-red-50 px-4 py-1.5 rounded-full border border-red-100">
-              <Youtube className="text-red-600 w-4 h-4" />
-              <span className="text-red-600 text-xs font-bold tracking-widest uppercase">Latest Uploads</span>
+            <div className="inline-flex items-center gap-2 mb-4 bg-red-500/10 px-4 py-1.5 rounded-full border border-red-500/20">
+              <Youtube className="text-red-500 w-4 h-4" />
+              <span className="text-red-500 text-xs font-bold tracking-widest uppercase">Latest Uploads</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight mb-4">Engineering in Motion</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white font-heading tracking-tight mb-4">Engineering in Motion</h2>
             <div className="w-12 h-1 bg-red-600 mx-auto rounded-full mt-4"></div>
           </SectionWrapper>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayVideos.map((video, idx) => (
               <SectionWrapper key={`${video.id}-${idx}`} className="group" delay={idx * 0.1}>
-                <div className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 flex flex-col h-full">
-                  <div className="aspect-video w-full bg-slate-100 relative overflow-hidden cursor-pointer">
+                <div className="bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden border border-white/10 shadow-md hover:shadow-2xl hover:border-primary/30 transition-all duration-300 flex flex-col h-full">
+                  <div className="aspect-video w-full bg-black/40 relative overflow-hidden cursor-pointer">
                     {playingVideos[video.id] ? (
                       <iframe
                         className="w-full h-full"
@@ -609,12 +653,12 @@ export default function HomePageClient() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       ></iframe>
                     ) : (
-                      <div 
+                      <div
                         className="w-full h-full relative group/thumb"
                         onClick={() => setPlayingVideos(prev => ({ ...prev, [video.id]: true }))}
                       >
-                        <img 
-                          src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
+                        <img
+                          src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                           onError={(e) => {
                             (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
                           }}
@@ -632,11 +676,11 @@ export default function HomePageClient() {
                   </div>
                   <div className="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                      <h4 className="text-slate-900 font-bold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2" title={video.title}>
+                      <h4 className="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2" title={video.title}>
                         {video.title}
                       </h4>
                     </div>
-                    <div className="mt-4 pt-4 border-t border-slate-50 text-[10px] text-slate-400 font-mono tracking-wider uppercase">
+                    <div className="mt-4 pt-4 border-t border-white/10 text-[10px] text-slate-400 font-mono tracking-wider uppercase">
                       Latest Upload
                     </div>
                   </div>
@@ -651,7 +695,7 @@ export default function HomePageClient() {
               target="_blank"
               className="inline-flex items-center gap-3 px-8 py-3.5 bg-red-600 hover:bg-red-700 text-white rounded-full font-bold shadow-lg shadow-red-600/20 hover:shadow-red-600/30 hover:scale-105 transition-all group"
             >
-              <span>View All 50+ Videos</span>
+              <span>View All Videos</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </SectionWrapper>
@@ -696,6 +740,76 @@ export default function HomePageClient() {
           </SectionWrapper>
         </div>
       </section>
+    </div>
+  );
+}
+
+interface InfiniteMarqueeProps {
+  children: React.ReactNode;
+  speed?: number;
+  hoverSpeed?: number;
+  className?: string;
+}
+
+function InfiniteMarquee({ children, speed = 1, hoverSpeed = 0.3, className = "" }: InfiniteMarqueeProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const positionRef = useRef(0);
+  const resetWidthRef = useRef(0);
+
+  useEffect(() => {
+    const measureWidth = () => {
+      if (containerRef.current && containerRef.current.firstElementChild) {
+        resetWidthRef.current = (containerRef.current.firstElementChild as HTMLElement).offsetWidth;
+      }
+    };
+
+    measureWidth();
+    const timer = setTimeout(measureWidth, 100);
+
+    window.addEventListener("resize", measureWidth);
+
+    let frameId: number;
+    const animate = () => {
+      const currentSpeed = isHovered ? hoverSpeed : speed;
+      positionRef.current -= currentSpeed;
+
+      if (resetWidthRef.current > 0 && Math.abs(positionRef.current) >= resetWidthRef.current) {
+        positionRef.current = positionRef.current + resetWidthRef.current;
+      }
+
+      if (containerRef.current) {
+        containerRef.current.style.transform = `translate3d(${positionRef.current}px, 0, 0)`;
+      }
+      frameId = requestAnimationFrame(animate);
+    };
+
+    frameId = requestAnimationFrame(animate);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", measureWidth);
+      cancelAnimationFrame(frameId);
+    };
+  }, [isHovered, speed, hoverSpeed]);
+
+  return (
+    <div
+      className="overflow-hidden w-full relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div
+        ref={containerRef}
+        className="flex flex-nowrap"
+        style={{ transform: "translate3d(0, 0, 0)", willChange: "transform" }}
+      >
+        <div className={`flex flex-nowrap shrink-0 min-w-full ${className}`}>
+          {children}
+        </div>
+        <div className={`flex flex-nowrap shrink-0 min-w-full ${className}`} aria-hidden="true">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }

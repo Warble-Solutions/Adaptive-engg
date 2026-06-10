@@ -5,15 +5,15 @@ console.log("DB URL inside seed:", process.env.DATABASE_URL ? "Loaded" : "NOT LO
 async function main() {
   const { prisma } = await import('./lib/prisma');
   const caseStudies = [
-    { title: "Liquid Milk Processing", slug: "liquid-milk-processing-lmp", pdfUrl: "https://adaptive-engg.com/liquid-milk-processing-lmp/" },
-    { title: "Hydropneumatic Booster Pump", slug: "hydropneumatic", pdfUrl: "https://adaptive-engg.com/hydropneumatic/" },
-    { title: "Water Treatment Plant", slug: "water-treatment-plant-wtp", pdfUrl: "https://adaptive-engg.com/water-treatment-plant-wtp/" },
-    { title: "Energy Management System", slug: "energy-mangement-system-ems", pdfUrl: "https://adaptive-engg.com/energy-mangement-system-ems/" },
+    { title: "Liquid Milk Processing (LMP)", slug: "liquid-milk-processing-lmp", pdfUrl: "https://adaptive-engg.com/liquid-milk-processing-lmp/" },
+    { title: "Hydropneumatic", slug: "hydropneumatic", pdfUrl: "https://adaptive-engg.com/hydropneumatic/" },
+    { title: "Water Treatment Plant", slug: "water-treatment-plant", pdfUrl: "https://adaptive-engg.com/water-treatment-plant-wtp/" },
+    { title: "Energy Management System (EMS)", slug: "energy-management-system-ems", pdfUrl: "https://adaptive-engg.com/energy-mangement-system-ems/" },
     { title: "Master PPC", slug: "master-ppc", pdfUrl: "https://adaptive-engg.com/master-ppc/" },
     { title: "Floating Solar", slug: "floating-solar", pdfUrl: "https://adaptive-engg.com/floating-solar/" },
     { title: "Water Supply Schemes", slug: "water-supply-schemes", pdfUrl: "https://adaptive-engg.com/water-supply-schemes/" },
-    { title: "Chuhrat Bypass Tunnel", slug: "chuhrat-bypass-tunnel-rewa-sidhi", pdfUrl: "https://adaptive-engg.com/chuhrat-bypass-tunnel-rewa-sidhi/" },
-    { title: "IoT SCADA System for PM KUSUM", slug: "iot-scada-system-for-pm-kusum", pdfUrl: "https://adaptive-engg.com/iot-scada-system-for-pm-kusum/" },
+    { title: "Tunnel", slug: "tunnel", pdfUrl: "https://adaptive-engg.com/chuhrat-bypass-tunnel-rewa-sidhi/" },
+    { title: "IoT SCADA System for PM-KUSUM", slug: "iot-scada-system-for-pm-kusum", pdfUrl: "https://adaptive-engg.com/iot-scada-system-for-pm-kusum/" },
     { title: "Khavda Hybrid Plant", slug: "khavda-hybrid-plant", pdfUrl: "https://adaptive-engg.com/khavda-hybrid-plant/" }
   ];
 

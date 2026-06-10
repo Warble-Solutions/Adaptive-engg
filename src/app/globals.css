@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@source "../**/*.{js,jsx,ts,tsx}";
+@source not "../../scratch";
+@source not "../../generated";
+@source not "../../node_modules";
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -56,6 +60,10 @@
 /* Custom Marquee Animation */
 .animate-marquee-seamless {
   animation: marquee-seamless 60s linear infinite;
+}
+
+.hover-group:hover .animate-marquee-seamless {
+  animation-duration: 180s;
 }
 
 @keyframes marquee-seamless {
@@ -116,4 +124,25 @@ h6 {
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(135deg, #0da08a 0%, #33a693 100%);
+}
+
+/* ===================================================
+   GLOBE BACKGROUND ANIMATIONS
+   =================================================== */
+@keyframes globe-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes globe-spin-reverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+.animate-globe-spin {
+  animation: globe-spin 120s linear infinite;
+}
+
+.animate-globe-spin-reverse {
+  animation: globe-spin-reverse 150s linear infinite;
 }

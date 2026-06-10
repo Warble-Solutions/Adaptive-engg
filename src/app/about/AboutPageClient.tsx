@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, CheckCircle2, Factory, Trophy, MapPin, Activity, Wrench, Users, Award, Zap } from "lucide-react";
+import { ChevronLeft, ChevronRight, CheckCircle2, Activity, Wrench, Users, Award, Zap, Cpu, ShieldCheck } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { WATER_STATS, TUNNEL_STATS } from "@/lib/constants";
@@ -13,12 +13,12 @@ export default function AboutPageClient() {
   const [leaderIndex, setLeaderIndex] = useState(0);
 
   return (
-    <div className="flex flex-col w-full bg-slate-950">
+    <div className="flex flex-col w-full">
       {/* 1. HERO SECTION (Dark) */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/imgs/about.jpg"
+            src="/imgs/about-hero.png"
             alt="About Background"
             className="w-full h-full object-cover"
           />
@@ -27,54 +27,134 @@ export default function AboutPageClient() {
 
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
+            <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 shadow-lg">
+              About Us
+            </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Engineering <span className="text-primary drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">Legacy</span>
+              Engineering <span className="gradient-heading">Legacy</span>
             </h1>
             <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
-              Three Decades of Excellence in Renewable Energy & Automation
+              India&apos;s leading Renewable Energy company delivering end-to-end solutions since 2014.
             </p>
           </SectionWrapper>
         </div>
       </section>
 
-      {/* 2. THE BLUEPRINT (Light) */}
+      {/* 2. MISSION & STATS (Light) */}
       <section className="section-light py-24 bg-white rounded-t-[40px] relative z-20 -mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="md:w-1/2">
               <SectionWrapper>
-                <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">Our Mission</h2>
+                <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">We Are</h2>
                 <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                  Continuously evolve to maximize value of each installation towards providing the Best Customer Experience
+                  Adaptive Engineering Pvt. Ltd. a technology-driven engineering company headquartered in Ahmedabad, Gujarat. Since 2014, we have grown into India&apos;s most trusted partner for Renewable Energy, PM-KUSUM, Water Infrastructure, and Industrial Automation, delivering mission-critical Turnkey E&amp;I systems from our 125,000+ sq. ft. manufacturing facility with {COMPANY_STATS.manpower.value}+ skilled professionals across {COMPANY_STATS.scadaInstalled.value}+ sites nationwide.
                 </p>
               </SectionWrapper>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 w-full">
               <SectionWrapper delay={0.2}>
-                <div className="grid grid-cols-3 gap-8 text-center">
-                  <div>
-                    <Counter
-                      value={COMPANY_STATS.yearsExperience.value}
-                      suffix={COMPANY_STATS.yearsExperience.suffix}
-                      className="text-4xl font-extrabold text-primary mb-1 block"
-                    />
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Years</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {/* Card 1: Years Experience */}
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                    <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
+                      <Award className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <Counter
+                        value={COMPANY_STATS.yearsExperience.value}
+                        suffix={COMPANY_STATS.yearsExperience.suffix}
+                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                      />
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
+                        Years Experience
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <Counter
-                      value={COMPANY_STATS.manpower.value}
-                      suffix={COMPANY_STATS.manpower.suffix}
-                      className="text-4xl font-extrabold text-primary mb-1 block"
-                    />
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Manpower</div>
+
+                  {/* Card 2: Manpower */}
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                    <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
+                      <Users className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <Counter
+                        value={COMPANY_STATS.manpower.value}
+                        suffix={COMPANY_STATS.manpower.suffix}
+                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                      />
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
+                        Skilled Engineers
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <Counter
-                      value={COMPANY_STATS.scadaInstalled.value}
-                      suffix={COMPANY_STATS.scadaInstalled.suffix}
-                      className="text-4xl font-extrabold text-primary mb-1 block"
-                    />
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">{COMPANY_STATS.scadaInstalled.label}</div>
+
+                  {/* Card 3: SCADA Installed */}
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                    <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
+                      <Cpu className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <Counter
+                        value={COMPANY_STATS.scadaInstalled.value}
+                        suffix={COMPANY_STATS.scadaInstalled.suffix}
+                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                      />
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
+                        SCADA Systems
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 4: Manufacturing Facility */}
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                    <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
+                      <Wrench className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <Counter
+                        value={COMPANY_STATS.manufacturingFacility.value}
+                        suffix={COMPANY_STATS.manufacturingFacility.suffix}
+                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                      />
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
+                        Sq. Ft. Facility
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 5: Installed Base */}
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                    <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
+                      <Zap className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <Counter
+                        value={COMPANY_STATS.installedBase.value}
+                        suffix={` ${COMPANY_STATS.installedBase.suffix}`}
+                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                      />
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
+                        Installed Base
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 6: Satisfied Customers */}
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                    <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
+                      <ShieldCheck className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <Counter
+                        value={COMPANY_STATS.satisfiedCustomers.value}
+                        suffix={COMPANY_STATS.satisfiedCustomers.suffix}
+                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                      />
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
+                        Satisfied Customers
+                      </div>
+                    </div>
                   </div>
                 </div>
               </SectionWrapper>
@@ -83,84 +163,112 @@ export default function AboutPageClient() {
         </div>
       </section>
 
-      {/* 3. WHO WE ARE (Dark) */}
+      {/* 3. WHAT WE DO — DETAILS (Dark) */}
       <section className="section-dark py-32 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-20">
-              <span className="text-primary font-bold uppercase text-sm tracking-widest mb-4 block">Who We Are</span>
+              <span className="text-primary font-bold uppercase text-sm tracking-widest mb-4 block">What We Do</span>
               <h2 className="text-4xl md:text-5xl font-bold font-heading">Engineering Excellence,<br className="hidden md:block" /> End to End</h2>
             </div>
           </SectionWrapper>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-            <div className="space-y-10">
-              <SectionWrapper delay={0.1}>
-                <div className="flex items-start gap-5">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 mt-1">
-                    <Wrench className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3">Complete Turnkey Solutions</h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      AEPL offers end-to-end solutions starting from conceptualizing, designing, supplying, installing, testing, commissioning and maintaining of complete industrial automation and electrical (upto 66KV) systems. It also provides customized software solutions for Central Plant Monitoring and Mobile Asset Management packages to make the most of any installation.
-                    </p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <SectionWrapper delay={0.1}>
+              <div className="flex flex-col gap-5 h-full">
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 w-fit">
+                  <Wrench className="w-6 h-6 text-primary" />
                 </div>
-              </SectionWrapper>
+                <h3 className="text-xl font-bold">Complete Turnkey Solutions</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  End-to-end solutions from conceptualizing, designing, supplying, installing, testing, commissioning and maintaining complete industrial automation and electrical (upto 66KV) systems — plus customized software for Central Plant Monitoring and Mobile Asset Management.
+                </p>
+              </div>
+            </SectionWrapper>
 
-              <SectionWrapper delay={0.2}>
-                <div className="flex items-start gap-5">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 mt-1">
-                    <Users className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3">Passionate Team, Proven Results</h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      Driven by a passionate team of {COMPANY_STATS.manpower.value}+ engineers under the guidance of the founders carrying rich experience of more than {COMPANY_STATS.yearsExperience.value}+ years, team AEPL has successfully completed {COMPANY_STATS.scadaInstalled.value}+ projects across India. Completing projects before time with the demonstration of the best quality work and use of latest technologies enables AEPL to deliver maximum value.
-                    </p>
-                  </div>
+            <SectionWrapper delay={0.2}>
+              <div className="flex flex-col gap-5 h-full">
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 w-fit">
+                  <Users className="w-6 h-6 text-primary" />
                 </div>
-              </SectionWrapper>
+                <h3 className="text-xl font-bold">Passionate Team, Proven Results</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {COMPANY_STATS.manpower.value}+ engineers guided by founders with {COMPANY_STATS.yearsExperience.value}+ years of experience, delivering {COMPANY_STATS.scadaInstalled.value}+ projects across India — on time, with the best quality and latest technologies.
+                </p>
+              </div>
+            </SectionWrapper>
 
-              <SectionWrapper delay={0.3}>
-                <div className="flex items-start gap-5">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 mt-1">
-                    <Award className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3">Preferred Project Partner</h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      AEPL has achieved an exceptional track record of managing Renewable Plant Monitoring Software with an installed base of {COMPANY_STATS.installedBase.value}GW+ at {COMPANY_STATS.satisfiedCustomers.value}+ plants across India. It also manages {WATER_STATS.supplySchemes.value}+ Water Supply Schemes and India&apos;s widest highway twin-tunnel of {TUNNEL_STATS.twinTubeRoad.value}KM where complete E&I packages are delivered. With such a vast experience, cost leadership, faster execution and quality of work, the company is considered a &ldquo;Preferred Project Partner&rdquo; by large corporate houses of India.
-                    </p>
-                  </div>
+            <SectionWrapper delay={0.3}>
+              <div className="flex flex-col gap-5 h-full">
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10 shrink-0 w-fit">
+                  <Award className="w-6 h-6 text-primary" />
                 </div>
-              </SectionWrapper>
-            </div>
-
-            <SectionWrapper delay={0.2} className="h-full">
-              <div className="grid grid-cols-2 gap-6 h-full">
-                {[
-                  { icon: Zap, value: `${COMPANY_STATS.installedBase.value}GW+`, label: "Installed Base" },
-                  { icon: Users, value: `${COMPANY_STATS.manpower.value}+`, label: "Engineers" },
-                  { icon: Factory, value: COMPANY_STATS.electricalPanels.formatted, label: "Panels Supplied" },
-                  { icon: Activity, value: `${COMPANY_STATS.satisfiedCustomers.value}+`, label: "Plants Monitored" },
-                  { icon: MapPin, value: `${WATER_STATS.supplySchemes.value}+`, label: "Water Schemes" },
-                  { icon: Trophy, value: `${COMPANY_STATS.yearsExperience.value}+`, label: "Years Experience" },
-                ].map((item, i) => (
-                  <div key={i} className="p-6 flex flex-col justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 group hover:-translate-y-1 h-full">
-                    <item.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                    <div className="text-3xl font-black text-white font-heading mb-1">{item.value}</div>
-                    <div className="text-xs font-bold text-gray-400 uppercase tracking-wider">{item.label}</div>
-                  </div>
-                ))}
+                <h3 className="text-xl font-bold">Preferred Project Partner</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  An installed base of {COMPANY_STATS.installedBase.value}GW+ across {COMPANY_STATS.satisfiedCustomers.value}+ plants, {WATER_STATS.supplySchemes.value}+ Water Supply Schemes, and India&apos;s widest {TUNNEL_STATS.twinTubeRoad.value}KM highway twin-tunnel — making us the &ldquo;Preferred Project Partner&rdquo; for India&apos;s largest corporations.
+                </p>
               </div>
             </SectionWrapper>
           </div>
         </div>
       </section>
 
-      {/* 4. LEADERSHIP TEAM (Light) */}
+      {/* 4. CORE COMPETENCIES (Light) */}
+      <section className="py-24 bg-white rounded-t-[40px] relative z-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-4 tracking-tight">Core Competencies</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">Delivering mission-critical engineering solutions across multiple domains.</p>
+            </SectionWrapper>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: "Turnkey E&I", icon: <Zap className="w-6 h-6" />, desc: "Complete Electrical & Instrumentation execution from design to commissioning for Solar, Water, and Industrial projects." },
+              { title: "IoT & SCADA", icon: <Activity className="w-6 h-6" />, desc: "In-house developed SolarWiz, WaterWiz, and MachineWiz IoT platforms with edge computing and cloud analytics." },
+              { title: "Panel Manufacturing", icon: <ShieldCheck className="w-6 h-6" />, desc: "IS/IEC certified LT/HT panels, MCC, PCC, ACDB, DCDB panels manufactured in our state-of-the-art facility." },
+              { title: "Software & Analytics", icon: <Cpu className="w-6 h-6" />, desc: "ReportWiz, CMS, AMS — proprietary software suite for automated reporting, asset tracking, and performance monitoring." },
+            ].map((skill, i) => (
+              <SectionWrapper key={i} delay={i * 0.1}>
+                <div className="p-8 bg-white border border-slate-200 rounded-2xl hover:border-[#0da08a]/30 hover:-translate-y-2 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-default h-full flex flex-col items-start">
+                  <div className="mb-6 w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-[#0da08a] group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-md transition-all duration-300">
+                    {skill.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-[#0da08a] transition-colors duration-300 leading-tight">{skill.title}</h3>
+                  <p className="text-sm md:text-base text-slate-600 leading-relaxed group-hover:text-slate-800 transition-colors duration-300 flex-grow">
+                    {skill.desc}
+                  </p>
+                </div>
+              </SectionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. OUR VALUES — S.C.A.L.E (Dark) */}
+      <section className="py-32 bg-transparent w-full relative z-10">
+        <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <SectionWrapper>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-white/10">
+                Guiding Principles
+              </div>
+              <h2 className="text-5xl font-black text-white mb-6 font-heading">Our Values</h2>
+            </SectionWrapper>
+          </div>
+          <div className="flex justify-center">
+            <SectionWrapper>
+              <img
+                src="/imgs/Values-Design.webp"
+                alt="Our Values Design: S.C.A.L.E"
+                className="w-full object-contain drop-shadow-2xl hover:scale-[1.01] transition-transform duration-700 rounded-3xl"
+              />
+            </SectionWrapper>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. LEADERSHIP TEAM (Light) */}
       <section className="section-light py-32 bg-white rounded-t-[40px] relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
@@ -243,7 +351,7 @@ export default function AboutPageClient() {
         </div>
       </section>
 
-      {/* 5. ACCREDITATIONS (Alt Light) */}
+      {/* 7. ACCREDITATIONS (Alt Light) */}
       <section className="py-24 bg-slate-50 border-t border-slate-200 relative z-20">
         <div className="max-w-6xl mx-auto px-6">
           <SectionWrapper>
@@ -292,7 +400,7 @@ export default function AboutPageClient() {
         </div>
       </section>
 
-      {/* 6. CTA (Dark) */}
+      {/* 8. CTA (Dark) */}
       <section className="section-dark text-center py-32 bg-transparent text-white relative z-10">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>

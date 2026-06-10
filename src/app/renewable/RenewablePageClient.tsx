@@ -15,9 +15,7 @@ import {
   PieChart, 
   Wrench, 
   Sun, 
-  Activity, 
-  LineChart, 
-  DollarSign 
+  Activity 
 } from "lucide-react";
 import Image from "next/image";
 import MicroCTA from "@/components/ui/MicroCTA";
@@ -36,10 +34,6 @@ export default function RenewablePageClient() {
     "SCADA telemetry feed: 100% tags responsive"
   ]);
 
-  // --- Yield Calculator State ---
-  const [solarCap, setSolarCap] = useState(100); // MW
-  const [windCap, setWindCap] = useState(50); // MW
-  const [bessCap, setBessCap] = useState(20); // MWh
 
   // Dynamic NOC Telemetry simulation
   useEffect(() => {
@@ -88,29 +82,6 @@ export default function RenewablePageClient() {
 
     return () => clearInterval(timer);
   }, [gridFreq, bessSoC, bessStatus]);
-
-  // Yield & Cost Calculations
-  const solarGen = solarCap * 1.62; // GWh/year
-  const windGen = windCap * 2.85; // GWh/year
-  const totalGen = solarGen + windGen;
-  
-  const carbonOffset = totalGen * 820; // Tons of CO2/year
-  
-  // Simulated project cost in Crores INR
-  const estCost = (solarCap * 4.5) + (windCap * 6.5) + (bessCap * 2.2); 
-  
-  // Simulated stability index
-  let stabilityIndex = 70;
-  if (solarCap > 0 && windCap > 0) stabilityIndex += 12; // Hybrid balance
-  if (bessCap > 0) {
-    const ratio = bessCap / (solarCap + windCap + 1);
-    stabilityIndex += Math.min(16, Math.round(ratio * 80));
-  }
-  stabilityIndex = Math.min(99.8, stabilityIndex);
-
-  // Payback years
-  const annualRev = (solarGen * 2.6) + (windGen * 3.1) + (bessCap * 0.08 * 300 * 1.5 / 10); // Simulated revenue Crore
-  const payback = annualRev > 0 ? parseFloat(Math.min(10, Math.max(3.5, estCost / annualRev)).toFixed(1)) : 0;
 
   return (
     <div className="flex flex-col w-full bg-slate-950 text-white font-sans">
@@ -379,159 +350,6 @@ export default function RenewablePageClient() {
         </div>
       </section>
 
-      {/* --- INTERACTIVE CALCULATOR SECTION --- */}
-      <section className="py-24 bg-slate-900 border-y border-white/5 relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <SectionWrapper>
-              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Engineering Evaluation Tool</span>
-              <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 text-white">Interactive Clean Energy & Yield Calculator</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Configure your proposed solar, wind, and storage capacity parameters to check estimated clean power metrics and stability indices.
-              </p>
-            </SectionWrapper>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Sliders Container */}
-            <div className="lg:col-span-6 space-y-8 p-8 bg-slate-800/40 border border-white/5 rounded-3xl">
-              <h3 className="text-xl font-bold text-white border-l-4 border-primary pl-3 mb-6">Asset Capacity Configuration</h3>
-
-              {/* Slider 1: Solar */}
-              <div className="space-y-3">
-                <div className="flex justify-between items-center text-sm font-bold text-gray-200">
-                  <div className="flex items-center gap-2">
-                    <Sun className="w-4 h-4 text-amber-400" />
-                    <span>Solar Capacity</span>
-                  </div>
-                  <span className="text-primary font-mono">{solarCap} MW</span>
-                </div>
-                <input
-                  type="range"
-                  min="0"
-                  max="500"
-                  value={solarCap}
-                  onChange={(e) => setSolarCap(parseInt(e.target.value))}
-                  className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-primary"
-                />
-              </div>
-
-              {/* Slider 2: Wind */}
-              <div className="space-y-3">
-                <div className="flex justify-between items-center text-sm font-bold text-gray-200">
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-sky-400" />
-                    <span>Wind Capacity</span>
-                  </div>
-                  <span className="text-primary font-mono">{windCap} MW</span>
-                </div>
-                <input
-                  type="range"
-                  min="0"
-                  max="500"
-                  value={windCap}
-                  onChange={(e) => setWindCap(parseInt(e.target.value))}
-                  className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-primary"
-                />
-              </div>
-
-              {/* Slider 3: BESS */}
-              <div className="space-y-3">
-                <div className="flex justify-between items-center text-sm font-bold text-gray-200">
-                  <div className="flex items-center gap-2">
-                    <Battery className="w-4 h-4 text-emerald-400" />
-                    <span>BESS Storage</span>
-                  </div>
-                  <span className="text-primary font-mono">{bessCap} MWh</span>
-                </div>
-                <input
-                  type="range"
-                  min="0"
-                  max="200"
-                  value={bessCap}
-                  onChange={(e) => setBessCap(parseInt(e.target.value))}
-                  className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-primary"
-                />
-              </div>
-            </div>
-
-            {/* Calculations Dashboard View */}
-            <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Cost card */}
-              <div className="p-6 bg-slate-950 border border-white/10 rounded-2xl flex flex-col justify-between">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Est. Capex</span>
-                  <DollarSign className="w-5 h-5 text-emerald-400" />
-                </div>
-                <div>
-                  <div className="text-3xl font-black font-heading text-white font-mono">
-                    ₹{estCost > 0 ? estCost.toFixed(1) : "0"} Cr
-                  </div>
-                  <p className="text-[11px] text-gray-500 mt-2">Simulation based on average EPC installation variables.</p>
-                </div>
-              </div>
-
-              {/* Annual Generation card */}
-              <div className="p-6 bg-slate-950 border border-white/10 rounded-2xl flex flex-col justify-between">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Annual Yield</span>
-                  <LineChart className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <div className="text-3xl font-black font-heading text-white font-mono">
-                    {totalGen.toFixed(1)} GWh
-                  </div>
-                  <p className="text-[11px] text-gray-500 mt-2">Estimated generation using typical CUF values (Solar: 18.5%, Wind: 32.5%).</p>
-                </div>
-              </div>
-
-              {/* Carbon Offset card */}
-              <div className="p-6 bg-slate-950 border border-white/10 rounded-2xl flex flex-col justify-between">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">CO2 Offsets</span>
-                  <Shield className="w-5 h-5 text-teal-400" />
-                </div>
-                <div>
-                  <div className="text-3xl font-black font-heading text-white font-mono">
-                    {carbonOffset.toLocaleString(undefined, { maximumFractionDigits: 0 })} Tons/Yr
-                  </div>
-                  <p className="text-[11px] text-gray-500 mt-2">Greenhouse gas emission reduction equivalent.</p>
-                </div>
-              </div>
-
-              {/* Grid stability rating */}
-              <div className="p-6 bg-slate-950 border border-white/10 rounded-2xl flex flex-col justify-between">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Stability Index</span>
-                  <Activity className="w-5 h-5 text-amber-400" />
-                </div>
-                <div>
-                  <div className="text-3xl font-black font-heading text-white font-mono">
-                    {stabilityIndex}%
-                  </div>
-                  <div className="w-full bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden">
-                    <div 
-                      className="bg-primary h-full rounded-full transition-all duration-500" 
-                      style={{ width: `${stabilityIndex}%` }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Payback period card */}
-              <div className="md:col-span-2 p-6 bg-gradient-to-r from-teal-950/30 to-slate-950 border border-teal-500/20 rounded-2xl flex items-center justify-between">
-                <div>
-                  <h4 className="text-sm font-bold text-gray-300">Estimated Project Payback Period</h4>
-                  <p className="text-[11px] text-gray-500 mt-1">Simple payback mapping simulated tariffs and arbitrage loops.</p>
-                </div>
-                <div className="text-right">
-                  <div className="text-4xl font-black font-heading text-primary font-mono">{payback} Years</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 3. SOLUTION 2: ELECTRICAL PANELS */}
       <section id="panels" className="py-24 bg-white text-slate-900 rounded-t-[40px] relative z-20 scroll-mt-24">

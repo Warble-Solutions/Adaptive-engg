@@ -168,7 +168,6 @@ export default function Navbar() {
                                 About Us <ChevronDown className="w-3 h-3 opacity-50" />
                             </Link>
                             <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                <DropdownLink href="/about/profile">Company Profile</DropdownLink>
                                 <DropdownLink href="/about/team">Our Team</DropdownLink>
                                 <DropdownLink href="/history">Our Journey</DropdownLink>
                                 <DropdownLink href="/careers">Careers</DropdownLink>

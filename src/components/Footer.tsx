@@ -25,11 +25,10 @@ export default function Footer() {
                     <Image
                         src="/imgs/logo.png"
                         alt="AEPL"
-                        width={150}
-                        height={40}
-                        className="h-10 w-auto brightness-0 invert opacity-80 mb-8"
+                        width={200}
+                        height={55}
+                        className="h-14 w-auto brightness-0 invert opacity-90 mb-6"
                     />
-                    <h5 className="text-white font-bold mb-4 tracking-widest text-lg">AEPL</h5>
                     <p className="text-gray-400 text-sm leading-relaxed mb-6">
                         India&apos;s most trusted company for Renewable Energy, PM-KUSUM, and Industrial Automation solutions.
                     </p>
@@ -47,7 +46,7 @@ export default function Footer() {
                     <h5 className="text-white font-bold mb-6 text-lg tracking-wide">Quick Links</h5>
                     <ul className="space-y-4 text-sm text-gray-400 font-medium">
                         <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-                        <li><Link href="/about/profile" className="hover:text-primary transition-colors">Company Profile</Link></li>
+                        <li><Link href="/about" className="hover:text-primary transition-colors">Company Profile</Link></li>
                         <li><Link href="/resources/certifications" className="hover:text-primary transition-colors">Certifications</Link></li>
                         <li><Link href="/resources/blogs" className="hover:text-primary transition-colors">Blogs & Insights</Link></li>
                         <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>

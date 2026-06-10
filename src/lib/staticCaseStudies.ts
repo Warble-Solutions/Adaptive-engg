@@ -12,7 +12,7 @@ export interface CaseStudy {
 export const staticCaseStudies: CaseStudy[] = [
   {
     id: "static-cs-1",
-    title: "Liquid Milk Processing (LMP) Case Study",
+    title: "Liquid Milk Processing (LMP)",
     slug: "liquid-milk-processing-lmp",
     thumbnailUrl: "/imgs/case-studies/1-liquid-milk-processing-lmp.png",
     pdfUrl: "/case-studies/Case-Study-1-Liquid-Milk-Processing-LMP.pdf",
@@ -22,8 +22,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-2",
-    title: "Hydropneumatic Systems Integration",
-    slug: "hydropneumatic-systems-integration",
+    title: "Hydropneumatic",
+    slug: "hydropneumatic",
     thumbnailUrl: "/imgs/case-studies/2-hydropneumatic.png",
     pdfUrl: "/case-studies/Case-Study-2-Hydropneumatic.pdf",
     description: "Advanced PLC-based control and monitoring for high-efficiency hydropneumatic pumping systems in industrial installations.",
@@ -32,8 +32,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-3",
-    title: "Water Treatment Plant (WTP) Automation",
-    slug: "water-treatment-plant-wtp-automation",
+    title: "Water Treatment Plant",
+    slug: "water-treatment-plant",
     thumbnailUrl: "/imgs/case-studies/3-water-treatment-plant.png",
     pdfUrl: "/case-studies/Case-Study-3-Water-Treatment-Plant.pdf",
     description: "Design and deployment of centralized SCADA and field instruments for a massive municipal water treatment facility.",
@@ -52,8 +52,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-5",
-    title: "Master Power Plant Controller (PPC) Case Study",
-    slug: "master-ppc-case-study",
+    title: "Master PPC",
+    slug: "master-ppc",
     thumbnailUrl: "/imgs/case-studies/master-ppc-v1.png",
     pdfUrl: "/case-studies/Master-PPC-V1.pdf",
     description: "Grid-compliant high-speed active/reactive power regulation, ramp-rate control, and frequency correction systems for large-scale utility solar/hybrid plants.",
@@ -62,8 +62,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-6",
-    title: "Floating Solar PV Installation",
-    slug: "floating-solar-pv-installation",
+    title: "Floating Solar",
+    slug: "floating-solar",
     thumbnailUrl: "/imgs/case-studies/5-floating-solar.png",
     pdfUrl: "/case-studies/Case-Study-5-FLOATING-SOLAR_Final.pdf",
     description: "Engineering design, power evacuation, and SCADA monitoring for megawatt-scale floating reservoir solar systems.",
@@ -72,8 +72,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-7",
-    title: "Rural Water Supply Schemes",
-    slug: "rural-water-supply-schemes",
+    title: "Water Supply Schemes",
+    slug: "water-supply-schemes",
     thumbnailUrl: "/imgs/case-studies/7-water-supply-schemes.png",
     pdfUrl: "/case-studies/Case-Study-7-Water-Supply-Schemes_Final.pdf",
     description: "Instrumentation, telemetry, and remote monitoring setup for widespread clean water distribution networks.",
@@ -82,8 +82,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-8",
-    title: "Highway Tunnel Ventilation & Control Systems",
-    slug: "highway-tunnel-ventilation-control-systems",
+    title: "Tunnel",
+    slug: "tunnel",
     thumbnailUrl: "/imgs/case-studies/tunnel-1st-march-2025.png",
     pdfUrl: "/case-studies/Tunnel-Case-study-1st-March-2025.pdf",
     description: "Life safety automation systems including jet fan controls, toxic gas monitoring, and SCADA override for transport tunnels.",
@@ -102,8 +102,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-10",
-    title: "Khavda Hybrid Renewable Energy Plant",
-    slug: "khavda-hybrid-renewable-energy-plant",
+    title: "Khavda Hybrid Plant",
+    slug: "khavda-hybrid-plant",
     thumbnailUrl: "/imgs/case-studies/khavda-hybrid-plant.png",
     pdfUrl: "/case-studies/Case-Study_Khavda-Hybrid-Plant.pdf",
     description: "High-capacity E&I substation layout, grid synchronization, and analytics for the Khavda hybrid solar-wind complex.",
