@@ -136,7 +136,7 @@ export default function AssetManagementPageClient() {
               <SectionWrapper delay={0.1}>
                 <div className="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl h-[360px] md:h-[450px]">
                   <img 
-                    src="/imgs/industrial-iot/ams_field_om_clean.png" 
+                    src="/imgs/industrial-iot/ams_abstract_flow.png" 
                     alt="Mobile Asset Management Dashboard" 
                     className="w-full h-full object-cover" 
                   />
