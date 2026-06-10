@@ -17,8 +17,7 @@ import {
   Sparkles,
   Zap,
   Droplet,
-  Layers,
-  Play
+  Layers
 } from "lucide-react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 
@@ -103,13 +102,6 @@ export default function MachineWizClient() {
     }
   ];
 
-  const controllers = [
-    { brand: "Fanuc CNCs", protocols: "FOCAS Ethernet, HSSB", parameters: "Spindle speed, axis load, alarm codes, override" },
-    { brand: "Siemens Sinumerik", protocols: "OPC UA, S7 Protocol", parameters: "Active program, feed rate, part counter, tool offset" },
-    { brand: "Allen-Bradley ControlLogix", protocols: "EtherNet/IP (CIP)", parameters: "Tag database metrics, cycle duration, sensor faults" },
-    { brand: "Haas CNC", protocols: "MNET, MTConnect", parameters: "Spindle load, power-on hours, macro variables" },
-    { brand: "Modbus TCP/RTU Devices", protocols: "Modbus polling", parameters: "Energy registers, temperature, pressure, flow" }
-  ];
 
   const statsList = [
     { value: "2,500+", label: "Connected Machines" },
@@ -258,67 +250,6 @@ export default function MachineWizClient() {
         </div>
       </section>
 
-      {/* 5. Dashboard Preview (Light) */}
-      <section className="py-24 px-6 bg-slate-50 text-slate-900 relative z-10 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 order-last lg:order-first">
-              <SectionWrapper delay={0.1}>
-                <div className="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl h-[360px] md:h-[420px]">
-                  <img 
-                    src="/imgs/industrial-iot/machinewiz_oee_dashboard.png" 
-                    alt="MachineWiz OEE software dashboard" 
-                    className="w-full h-full object-cover" 
-                  />
-                </div>
-              </SectionWrapper>
-            </div>
-            <div className="lg:col-span-5">
-              <SectionWrapper>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0da08a]/10 border border-[#0da08a]/20 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-                  Interactive Dashboards
-                </div>
-                <h2 className="text-3xl md:text-5xl font-black text-slate-900 font-heading leading-tight mb-6">
-                  Overall Equipment Effectiveness (OEE) &amp; Yields
-                </h2>
-                <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  MachineWiz dashboard applications offer immediate shop-floor context. Easily view shift target logs, micro-stoppages, actual part yields, and availability indicators.
-                </p>
-                <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  Identify cycle-time deviations on CNC machines and mechanical faults on hydraulic pumps, enabling operators to solve bottlenecks before they manifest as massive production deficits.
-                </p>
-              </SectionWrapper>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Controller Compatibility (Dark) */}
-      <section className="py-20 px-6 bg-slate-950/80 backdrop-blur-sm text-white relative z-10 border-b border-white/5">
-        <div className="max-w-4xl mx-auto w-full">
-          <SectionWrapper className="text-center mb-12">
-            <h2 className="text-2xl md:text-4xl font-bold font-heading text-white">Supported Machine Controllers &amp; Protocols</h2>
-            <p className="text-gray-400 text-sm mt-3">MachineWiz integrates out-of-the-box drivers for all major CNC and PLC automation manufacturers.</p>
-          </SectionWrapper>
-
-          <SectionWrapper>
-            <div className="border border-white/5 rounded-2xl overflow-hidden bg-slate-900/40">
-              <div className="grid grid-cols-3 bg-slate-900/80 p-4 text-xs font-bold uppercase tracking-wider text-gray-400 border-b border-white/5">
-                <div>Controller Brand</div>
-                <div>Connection Type</div>
-                <div>Telemetry Parameters Extracted</div>
-              </div>
-              {controllers.map((controller, i) => (
-                <div key={i} className="grid grid-cols-3 p-4 text-sm border-b border-white/5 last:border-0 hover:bg-white/2 transition-colors">
-                  <div className="font-bold text-gray-200">{controller.brand}</div>
-                  <div className="text-[#0da08a] font-mono">{controller.protocols}</div>
-                  <div className="text-gray-400">{controller.parameters}</div>
-                </div>
-              ))}
-            </div>
-          </SectionWrapper>
-        </div>
-      </section>
 
       {/* 7. Industries We Support (Light) */}
       <section className="py-24 px-6 bg-slate-50 text-slate-900 relative z-10 border-b border-slate-200">
