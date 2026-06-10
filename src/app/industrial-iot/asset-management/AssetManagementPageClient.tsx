@@ -25,7 +25,7 @@ export default function AssetManagementPageClient() {
     { value: "17+", label: "Years of Experience" },
     { value: "1000+", label: "Projects Completed" },
     { value: "300+", label: "Engineers" },
-    { value: "125K+", label: "Sq. Ft. Facility Size" },
+    { value: "125,000+", label: "Sq. Ft. Facility Size" },
     { value: "100+", label: "Satisfied Clients" }
   ];
 
@@ -78,7 +78,7 @@ export default function AssetManagementPageClient() {
       {/* EXPERTISE SECTION */}
       <section className="py-24 px-6 bg-slate-50 text-slate-900 relative z-10">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-6">
               <SectionWrapper>
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0da08a]/10 border border-[#0da08a]/20 text-[#0da08a] rounded-full text-xs font-bold uppercase tracking-wider mb-6">
