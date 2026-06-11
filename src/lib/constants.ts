@@ -25,8 +25,8 @@ export const PPC_STATS = {
 
 export const KUSUM_STATS = {
   yearsExperience: { value: 17, suffix: "+", label: "Years of Experience" },
-  installedBase: { value: 68, suffix: " GW+", label: "Installed Base" },
-  ppcSolar: { value: 8, suffix: " GW+", label: "PPC Solar" },
+  installedBase: { value: 68, suffix: "GW+", label: "Installed Base" },
+  ppcSolar: { value: 8, suffix: "GW+", label: "PPC Solar" },
   statesOfIndia: { value: 19, suffix: "+", label: "States of India Benefiting" },
   satisfiedCustomers: { value: 100, suffix: "+", label: "Satisfied Customers" },
 } as const;
