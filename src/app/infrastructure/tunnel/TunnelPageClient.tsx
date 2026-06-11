@@ -17,59 +17,6 @@ export default function TunnelPageClient() {
   const [trafficSignMode, setTrafficSignMode] = useState<"nominal" | "warning" | "emergency">("nominal");
 
   const [selectedStage, setSelectedStage] = useState<number>(0);
-  const [loadTestVal, setLoadTestVal] = useState<number>(251.4);
-  const [fatProgress, setFatProgress] = useState<number>(0);
-  const [fatStatus, setFatStatus] = useState<"idle" | "testing" | "passed">("idle");
-  const [activePings, setActivePings] = useState([
-    { node: "PLC-01-A (Master Control)", ip: "192.168.1.10", ping: 2, status: "online" as const },
-    { node: "VMS-03 (Variable Message)", ip: "192.168.1.23", ping: 5, status: "online" as const },
-    { node: "LHD-LOOP-B (Fire Sensing)", ip: "192.168.2.5", ping: 1, status: "online" as const },
-    { node: "FAN-CTRL-08 (Ventilation)", ip: "192.168.3.12", ping: 4, status: "online" as const },
-    { node: "LT-SWG-02 (Power Feeder)", ip: "192.168.4.15", ping: 3, status: "online" as const },
-  ]);
-  const [activeRoute, setActiveRoute] = useState<"routeA" | "routeB">("routeA");
-  const [bomQuantities, setBomQuantities] = useState<number[]>([1, 1, 2, 15, 6]);
-
-  // Live simulation loops
-  useEffect(() => {
-    const timer = setInterval(() => {
-      // Fluctuate load test metric
-      setLoadTestVal(prev => {
-        const delta = (Math.random() - 0.5) * 1.2;
-        return parseFloat((prev + delta).toFixed(1));
-      });
-      // Fluctuate response times
-      setActivePings(prev =>
-        prev.map(p => {
-          const delta = Math.floor((Math.random() - 0.5) * 3);
-          const newPing = Math.max(1, p.ping + delta);
-          return { ...p, ping: newPing };
-        })
-      );
-    }, 1500);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  // FAT test progress trigger
-  useEffect(() => {
-    if (fatStatus !== "testing") return;
-    const fatTimer = setInterval(() => {
-      setFatProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(fatTimer);
-          setFatStatus("passed");
-          return 100;
-        }
-        return prev + 10;
-      });
-    }, 200);
-
-    return () => clearInterval(fatTimer);
-  }, [fatStatus]);
-
-  const totalKVA = bomQuantities[0] * 1000 + bomQuantities[4] * 45;
-  const totalControlNodes = bomQuantities[2] + bomQuantities[3];
 
   const stages = [
     { title: "Site Survey", icon: <Compass className="w-4 h-4" />, desc: "Soil Testing, Area Layout, Load Pattern, Grid Availability" },
@@ -77,6 +24,14 @@ export default function TunnelPageClient() {
     { title: "Proposal Engineering", icon: <ClipboardList className="w-4 h-4" />, desc: "Detailed BOM, Manufacturer Selection, Make List" },
     { title: "Procurement & FAT", icon: <Boxes className="w-4 h-4" />, desc: "Purchase, Panel Fabrication, Vendor Management, FAT, Dispatch" },
     { title: "Handover & Commissioning", icon: <Play className="w-4 h-4" />, desc: "System Installation, Testing, Commissioning, Training" }
+  ];
+
+  const stageImages = [
+    "/imgs/tunnel/tunnel_site_survey.png",
+    "/imgs/tunnel/tunnel_solution_design.png",
+    "/imgs/tunnel/tunnel_proposal_engineering.png",
+    "/imgs/tunnel/tunnel_procurement_fat.png",
+    "/imgs/tunnel/tunnel_commissioning.png"
   ];
 
   const stats = [
@@ -222,312 +177,46 @@ export default function TunnelPageClient() {
       <section className="py-24 bg-slate-950 text-white relative z-20 overflow-hidden border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left - Dynamic Simulator Console Card */}
+            {/* Left - Dynamic Stage Image Display */}
             <div className="lg:col-span-7 w-full">
               <SectionWrapper>
-                <div className="w-full bg-slate-900/60 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-white/10 shadow-2xl relative min-h-[480px] flex flex-col justify-between select-none">
-                  {/* Subtle ambient light behind console */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+                <div className="w-full bg-slate-900/60 backdrop-blur-xl rounded-3xl p-6 border border-white/10 shadow-2xl relative select-none">
+                  {/* Subtle ambient light behind image frame */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent rounded-3xl pointer-events-none"></div>
 
-                  <div className="relative z-10 flex flex-col h-full justify-between flex-grow">
-                    {/* Console Header */}
-                    <div className="border-b border-white/5 pb-3.5 mb-5 flex justify-between items-center text-[10px] font-mono text-slate-500">
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    {/* Header */}
+                    <div className="border-b border-white/5 pb-3.5 mb-4 flex justify-between items-center text-[10px] font-mono text-slate-500">
                       <span className="flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
-                        AEPL OPERATIONAL SIMULATION
+                        AEPL PROJECT LIFECYCLE
                       </span>
                       <span>STAGE 0{selectedStage + 1} // {stages[selectedStage].title.toUpperCase()}</span>
                     </div>
 
-                    {/* Stage 0: Site Survey */}
-                    {selectedStage === 0 && (
-                      <div className="flex-grow flex flex-col justify-between py-2">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-xs text-slate-400">Soil Profiles & Load Metrics</span>
-                          <span className="text-[10px] bg-teal-500/10 border border-teal-500/20 text-teal-400 font-bold px-2 py-0.5 rounded uppercase tracking-wider font-mono">SITE ACTIVE</span>
-                        </div>
-                        
-                        {/* Layer Chart */}
-                        <div className="space-y-1.5 my-3">
-                          {[
-                            { label: "Topsoil Layer (0.5m)", type: "Sandy Clay", color: "bg-amber-900/20 border-amber-800/30 text-amber-300" },
-                            { label: "Subsoil Stratum (2.0m)", type: "Silt & Fractured Rock", color: "bg-yellow-900/20 border-yellow-800/30 text-yellow-300" },
-                            { label: "Bedrock Basal (8.0m+)", type: "Hard Granite / Shale", color: "bg-slate-700/20 border-slate-600/30 text-slate-300" },
-                          ].map((l, i) => (
-                            <div key={i} className={`p-2.5 rounded-xl border flex justify-between items-center ${l.color}`}>
-                              <span className="text-[10px] font-medium">{l.label}</span>
-                              <span className="text-[9px] font-mono opacity-80">{l.type}</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Real-time telemetry */}
-                        <div className="grid grid-cols-2 gap-3 text-[10px] font-mono bg-slate-950/60 p-4 rounded-2xl border border-white/5">
-                          <div>
-                            <span className="text-slate-500 block">Load Bearing Cap.</span>
-                            <span className="font-bold text-teal-400">{loadTestVal} kN/m²</span>
-                          </div>
-                          <div>
-                            <span className="text-slate-500 block">Moisture Ratio</span>
-                            <span className="font-bold text-teal-400">14.8% (Stable)</span>
-                          </div>
-                          <div>
-                            <span className="text-slate-500 block">GPS Coordinates</span>
-                            <span className="font-bold text-teal-400">31.10° N, 77.17° E</span>
-                          </div>
-                          <div>
-                            <span className="text-slate-500 block">Grid Connection</span>
-                            <span className="font-bold text-teal-400">420m (11kV Substation)</span>
-                          </div>
-                        </div>
-
-                        <div className="mt-3 flex items-center justify-between text-[8px] text-slate-500 font-mono">
-                          <span>TEST INSTRUMENT: GEOPROBE V3</span>
-                          <span>STATUS: COMPLIANT</span>
-                        </div>
+                    {/* Image display */}
+                    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-inner group aspect-video lg:h-[380px] w-full bg-slate-950">
+                      <img 
+                        src={stageImages[selectedStage]} 
+                        alt={stages[selectedStage].title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+                      
+                      {/* Interactive overlay tag */}
+                      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2 px-3.5 py-2 bg-slate-950/80 border border-white/10 rounded-xl backdrop-blur-md">
+                        <span className="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+                        <span className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">
+                          {stages[selectedStage].title}
+                        </span>
                       </div>
-                    )}
+                    </div>
 
-                    {/* Stage 1: Solution Design */}
-                    {selectedStage === 1 && (
-                      <div className="flex-grow flex flex-col justify-between py-2">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-xs text-slate-400">Redundant E&I Loop Topology</span>
-                          <button 
-                            onClick={() => setActiveRoute(prev => prev === "routeA" ? "routeB" : "routeA")}
-                            className="text-[9px] bg-white/5 border border-white/10 text-teal-400 hover:bg-white/10 px-2 py-1 rounded-lg font-bold uppercase transition-colors cursor-pointer"
-                          >
-                            Switch Feed Path
-                          </button>
-                        </div>
-
-                        {/* Topology SVG */}
-                        <div className="relative my-4 flex items-center justify-center bg-slate-950/40 p-4 rounded-2xl border border-white/5 min-h-[140px]">
-                          <svg className="w-full h-32" viewBox="0 0 300 120">
-                            {/* Grid Source Nodes */}
-                            <rect x="10" y="30" width="45" height="22" rx="4" fill="#030712" stroke="#1f2937" strokeWidth="1" />
-                            <text x="32.5" y="43" fill="#94a3b8" fontSize="7" fontWeight="bold" textAnchor="middle">GRID 1</text>
-                            <text x="32.5" y="49" fill="#0da08a" fontSize="5" fontWeight="bold" textAnchor="middle">ONLINE</text>
-
-                            <rect x="10" y="70" width="45" height="22" rx="4" fill="#030712" stroke="#1f2937" strokeWidth="1" />
-                            <text x="32.5" y="83" fill="#94a3b8" fontSize="7" fontWeight="bold" textAnchor="middle">GRID 2</text>
-                            <text x="32.5" y="89" fill="#f59e0b" fontSize="5" fontWeight="bold" textAnchor="middle">STANDBY</text>
-
-                            {/* Main Bus/RMUs */}
-                            <circle cx="110" cy="61" r="14" fill="#030712" stroke={activeRoute === "routeA" ? "#0da08a" : "#1f2937"} strokeWidth="2.5" className="transition-all duration-300" />
-                            <text x="110" y="64" fill="#ffffff" fontSize="7" fontWeight="bold" textAnchor="middle">RMU-A</text>
-
-                            <circle cx="190" cy="61" r="14" fill="#030712" stroke={activeRoute === "routeB" ? "#0da08a" : "#1f2937"} strokeWidth="2.5" className="transition-all duration-300" />
-                            <text x="190" y="64" fill="#ffffff" fontSize="7" fontWeight="bold" textAnchor="middle">RMU-B</text>
-
-                            {/* Load Node */}
-                            <rect x="240" y="50" width="50" height="22" rx="4" fill="#030712" stroke="#0da08a" strokeWidth="1.5" />
-                            <text x="265" y="62" fill="#2dd4bf" fontSize="7" fontWeight="bold" textAnchor="middle">TUNNEL LOAD</text>
-                            <text x="265" y="68" fill="#a1a1aa" fontSize="5" textAnchor="middle">100% SECURE</text>
-
-                            {/* Connecting paths */}
-                            {/* Grid 1 to RMU-A */}
-                            <path d="M 55 41 L 96 61" fill="none" stroke={activeRoute === "routeA" ? "#0da08a" : "#374151"} strokeWidth="2" strokeDasharray={activeRoute === "routeA" ? "4,4" : "0"} className="transition-all duration-300" />
-                            {/* Grid 2 to RMU-B */}
-                            <path d="M 55 81 L 176 61" fill="none" stroke={activeRoute === "routeB" ? "#0da08a" : "#374151"} strokeWidth="2" strokeDasharray={activeRoute === "routeB" ? "4,4" : "0"} className="transition-all duration-300" />
-                            
-                            {/* RMU-A to RMU-B (redundant link) */}
-                            <path d="M 124 61 L 176 61" fill="none" stroke="#0da08a" strokeWidth="1" className="transition-all duration-300" />
-
-                            {/* RMU-A to Load */}
-                            <path d="M 124 61 L 240 61" fill="none" stroke={activeRoute === "routeA" ? "#0da08a" : "#374151"} strokeWidth="2" className="transition-all duration-300" />
-                            {/* RMU-B to Load */}
-                            <path d="M 204 61 L 240 61" fill="none" stroke={activeRoute === "routeB" ? "#0da08a" : "#374151"} strokeWidth="2" className="transition-all duration-300" />
-                          </svg>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-3 text-[10px] font-mono bg-slate-950/60 p-4 rounded-2xl border border-white/5">
-                          <div>
-                            <span className="text-slate-500 block">Active Feed Route</span>
-                            <span className="font-bold text-teal-400">{activeRoute === "routeA" ? "Primary Grid (Line 1)" : "Backup Substation (Line 2)"}</span>
-                          </div>
-                          <div>
-                            <span className="text-slate-500 block">SCADA Breaker State</span>
-                            <span className="font-bold text-teal-400">{activeRoute === "routeA" ? "RMU-A CLOSED (ACTIVE)" : "RMU-B CLOSED (ACTIVE)"}</span>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Stage 2: Proposal Engineering */}
-                    {selectedStage === 2 && (
-                      <div className="flex-grow flex flex-col justify-between py-2">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-xs text-slate-400">Interactive BOM Checklist</span>
-                          <span className="text-[10px] text-teal-400 font-mono">BOM Load: {totalKVA} kVA / kW</span>
-                        </div>
-
-                        {/* BOM Checklist table */}
-                        <div className="space-y-1.5 my-3 max-h-[170px] overflow-y-auto pr-1">
-                          {[
-                            { name: "33kV Power Transformer", make: "AEPL Custom", spec: "1000kVA Step-down", maxQty: 3 },
-                            { name: "VCB Grid Switchgear Panel", make: "ABB/Schneider", spec: "33kV numerical protection", maxQty: 2 },
-                            { name: "Redundant PLC Logic Controller", make: "Siemens", spec: "S7-1500 Hot-standby CPU", maxQty: 4 },
-                            { name: "IP65 Remote I/O Panels", make: "AEPL Custom", spec: "Distributed junction nodes", maxQty: 30 },
-                            { name: "Jet Fan VFD Panels", make: "Danfoss/ABB", spec: "45kW variable speed drive", maxQty: 12 },
-                          ].map((item, idx) => (
-                            <div key={idx} className="p-2.5 bg-slate-950/80 border border-white/5 rounded-xl flex items-center justify-between gap-3 text-[10px]">
-                              <div className="flex-grow min-w-0">
-                                <div className="font-bold text-white truncate">{item.name}</div>
-                                <div className="text-[8px] text-slate-400 font-mono">{item.make} • {item.spec}</div>
-                              </div>
-                              <div className="flex items-center gap-2 shrink-0">
-                                <button 
-                                  onClick={() => {
-                                    setBomQuantities(prev => {
-                                      const next = [...prev];
-                                      next[idx] = Math.max(1, next[idx] - 1);
-                                      return next;
-                                    });
-                                  }}
-                                  className="w-5 h-5 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/10 cursor-pointer"
-                                >
-                                  -
-                                </button>
-                                <span className="font-bold text-teal-400 font-mono w-4 text-center">{bomQuantities[idx]}</span>
-                                <button 
-                                  onClick={() => {
-                                    setBomQuantities(prev => {
-                                      const next = [...prev];
-                                      next[idx] = Math.min(item.maxQty, next[idx] + 1);
-                                      return next;
-                                    });
-                                  }}
-                                  className="w-5 h-5 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/10 cursor-pointer"
-                                >
-                                  +
-                                </button>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-3 text-[10px] font-mono bg-slate-950/60 p-4 rounded-2xl border border-white/5">
-                          <div>
-                            <span className="text-slate-500 block">Total Control Nodes</span>
-                            <span className="font-bold text-teal-400">{totalControlNodes} panels configured</span>
-                          </div>
-                          <div>
-                            <span className="text-slate-500 block">Engineering Status</span>
-                            <span className="font-bold text-teal-400">100% CIE Compliant</span>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Stage 3: Procurement & FAT */}
-                    {selectedStage === 3 && (
-                      <div className="flex-grow flex flex-col justify-between py-2">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-xs text-slate-400">NABL Quality Test Suite</span>
-                          <span className="text-[9px] text-teal-400 font-mono uppercase font-bold tracking-wider">
-                            {fatStatus === "idle" && "FAT Sequence Idle"}
-                            {fatStatus === "testing" && "Running Diagnostics..."}
-                            {fatStatus === "passed" && "Passed & Certified"}
-                          </span>
-                        </div>
-
-                        {/* Tests Status List */}
-                        <div className="space-y-1.5 my-3">
-                          {[
-                            { name: "Insulation Resistance Check (Megger)", desc: "1000V DC threshold verification", minProgress: 25 },
-                            { name: "High-Voltage Injection Test", desc: "Verifying breaker dielectric tolerance", minProgress: 50 },
-                            { name: "IP65 Enclosure Protection Test", desc: "Environmental spray validation", minProgress: 75 },
-                            { name: "SCADA Modbus Network Loop Check", desc: "Redundant node logic sync", minProgress: 95 },
-                          ].map((test, idx) => {
-                            const isComplete = fatStatus === "passed" || (fatStatus === "testing" && fatProgress >= test.minProgress);
-                            return (
-                              <div key={idx} className="p-2.5 bg-slate-950/60 border border-white/5 rounded-xl flex items-center justify-between text-[10px]">
-                                <div>
-                                  <div className="font-bold text-white">{test.name}</div>
-                                  <div className="text-[8px] text-slate-400">{test.desc}</div>
-                                </div>
-                                <span className={`font-mono text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-lg border ${
-                                  isComplete 
-                                    ? "bg-teal-500/15 border-teal-500/20 text-teal-400" 
-                                    : fatStatus === "testing" 
-                                      ? "bg-amber-500/15 border-amber-500/20 text-amber-400 animate-pulse" 
-                                      : "bg-slate-800 text-slate-500 border-transparent"
-                                }`}>
-                                  {isComplete ? "PASSED" : fatStatus === "testing" ? "RUNNING" : "PENDING"}
-                                </span>
-                              </div>
-                            );
-                          })}
-                        </div>
-
-                        {/* Progress bar and button */}
-                        <div className="mt-3">
-                          {fatStatus === "testing" && (
-                            <div className="w-full bg-slate-950 h-2 rounded-full overflow-hidden mb-3 border border-white/5">
-                              <div className="bg-teal-500 h-full transition-all duration-200" style={{ width: `${fatProgress}%` }} />
-                            </div>
-                          )}
-                          
-                          <button 
-                            onClick={() => {
-                              setFatStatus("testing");
-                              setFatProgress(0);
-                            }}
-                            disabled={fatStatus === "testing"}
-                            className="w-full py-2.5 bg-teal-500 hover:bg-teal-600 disabled:bg-slate-800 text-slate-950 font-bold rounded-xl text-xs uppercase tracking-wider transition-colors cursor-pointer"
-                          >
-                            {fatStatus === "testing" ? `Running sequence (${fatProgress}%)` : fatStatus === "passed" ? "Retest FAT Loop" : "Execute FAT Sequence"}
-                          </button>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Stage 4: Handover & Commissioning */}
-                    {selectedStage === 4 && (
-                      <div className="flex-grow flex flex-col justify-between py-2">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-xs text-slate-400">Live Commissioning & SCADA Sync</span>
-                          <span className="flex h-2.5 w-2.5 relative">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                          </span>
-                        </div>
-
-                        {/* SCADA Ping logs console */}
-                        <div className="bg-slate-950/90 border border-white/5 rounded-2xl p-4 font-mono text-[9px] text-teal-400 space-y-1 my-3 max-h-[140px] overflow-y-auto">
-                          <div className="text-slate-500 border-b border-white/5 pb-1 mb-2 flex justify-between uppercase font-bold">
-                            <span>MONITORED NODE ADDRESS</span>
-                            <span>RTT PING</span>
-                          </div>
-                          {activePings.map((p, idx) => (
-                            <div key={idx} className="flex justify-between items-center">
-                              <span className="truncate">{p.node}</span>
-                              <span className="font-bold">{p.ping}ms ({p.status})</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Final Handover metrics */}
-                        <div className="grid grid-cols-2 gap-3 text-[10px] font-mono bg-slate-950/60 p-4 rounded-2xl border border-white/5">
-                          <div>
-                            <span className="text-slate-500 block">Loop Testing Checked</span>
-                            <span className="font-bold text-teal-400">186 / 186 Loops (100%)</span>
-                          </div>
-                          <div>
-                            <span className="text-slate-500 block">Safety Systems Armed</span>
-                            <span className="font-bold text-teal-400">LHD, PA, VMS Synced</span>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Console Footer */}
+                    {/* Footer */}
                     <div className="border-t border-white/5 pt-3.5 mt-4 flex justify-between items-center text-[8px] font-mono text-slate-500">
-                      <span>PROJECT LIFECYCLE MONITOR</span>
-                      <span className="flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
-                        <span>SIMULATOR READY</span>
+                      <span>LIFECYCLE VISUALIZATION</span>
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                        <span>AEPL SPECIFICATION</span>
                       </span>
                     </div>
                   </div>
@@ -536,7 +225,7 @@ export default function TunnelPageClient() {
             </div>
 
             {/* Right - Text Content & Vertical Clickable Selector Steps */}
-            <div className="lg:col-span-10 xl:col-span-5 w-full">
+            <div className="lg:col-span-5 w-full">
               <SectionWrapper delay={0.2}>
                 <div className="space-y-6">
                   <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest border border-primary/20">
