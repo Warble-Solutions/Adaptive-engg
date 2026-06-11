@@ -195,10 +195,10 @@ export default function TunnelPageClient() {
 
                 {/* 5-Stage Project lifecycle from PDF Page 2 */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h4 className="text-xs font-black uppercase tracking-wider text-[#0da08a] mb-4 font-mono">
+                  <h4 className="text-sm font-black uppercase tracking-wider text-[#0da08a] mb-4 font-mono">
                     Project Lifecycle &amp; Delivery
                   </h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
                     {[
                       { title: "Site Survey", desc: "Soil Testing, Area Layout, Load Pattern, Grid Availability" },
                       { title: "Solution Design", desc: "System Layout, Equipment Sizing, Electrical & Automation Design" },
@@ -206,10 +206,12 @@ export default function TunnelPageClient() {
                       { title: "Procurement / FAT", desc: "Purchase, Manufacturing, Vendor Management, FAT, Dispatch" },
                       { title: "Handover / Commissioning", desc: "System Installation, Testing, Commissioning, Training" }
                     ].map((stage, sIdx) => (
-                      <div key={sIdx} className="p-3 bg-slate-50 border border-slate-100 rounded-xl flex flex-col justify-between hover:border-primary/30 hover:bg-white transition-all duration-300 group">
-                        <span className="text-[9px] font-mono text-[#0da08a] font-bold">0{sIdx + 1}</span>
-                        <h5 className="text-[10px] font-bold text-slate-900 mt-1 leading-snug">{stage.title}</h5>
-                        <p className="text-[8px] text-slate-400 leading-tight mt-1 group-hover:text-slate-500 transition-colors">{stage.desc}</p>
+                      <div key={sIdx} className="p-4 bg-slate-50 border border-slate-100 rounded-xl flex flex-col justify-between hover:border-primary/30 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                        <div>
+                          <span className="text-xs font-mono text-[#0da08a] font-black">0{sIdx + 1}</span>
+                          <h5 className="text-xs font-bold text-slate-900 mt-1 leading-snug">{stage.title}</h5>
+                        </div>
+                        <p className="text-[10px] text-slate-500 leading-normal mt-2 group-hover:text-slate-600 transition-colors">{stage.desc}</p>
                       </div>
                     ))}
                   </div>
