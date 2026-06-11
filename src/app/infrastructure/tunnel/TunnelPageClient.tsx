@@ -176,17 +176,17 @@ export default function TunnelPageClient() {
       {/* OUR EXPERTISE / PREFERRED PROJECT PARTNER SECTION */}
       <section className="py-24 bg-slate-950 text-white relative z-20 overflow-hidden border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             {/* Left - Dynamic Stage Image Display */}
-            <div className="lg:col-span-7 w-full">
-              <SectionWrapper>
-                <div className="w-full bg-slate-900/60 backdrop-blur-xl rounded-3xl p-6 border border-white/10 shadow-2xl relative select-none">
+            <div className="lg:col-span-7 w-full flex">
+              <SectionWrapper className="h-full w-full flex flex-col">
+                <div className="w-full h-full bg-slate-900/60 backdrop-blur-xl rounded-3xl p-6 border border-white/10 shadow-2xl relative select-none flex flex-col justify-between">
                   {/* Subtle ambient light behind image frame */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent rounded-3xl pointer-events-none"></div>
 
-                  <div className="relative z-10 flex flex-col h-full justify-between">
+                  <div className="relative z-10 flex flex-col h-full justify-between flex-grow">
                     {/* Header */}
-                    <div className="border-b border-white/5 pb-3.5 mb-4 flex justify-between items-center text-[10px] font-mono text-slate-500">
+                    <div className="border-b border-white/5 pb-3.5 mb-4 flex justify-between items-center text-[10px] font-mono text-slate-500 shrink-0">
                       <span className="flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
                         AEPL PROJECT LIFECYCLE
@@ -195,11 +195,11 @@ export default function TunnelPageClient() {
                     </div>
 
                     {/* Image display */}
-                    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-inner group aspect-video lg:h-[380px] w-full bg-slate-950">
+                    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-inner group bg-slate-950 flex-grow min-h-[300px]">
                       <img 
                         src={stageImages[selectedStage]} 
                         alt={stages[selectedStage].title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
                       
                       {/* Interactive overlay tag */}
@@ -212,7 +212,7 @@ export default function TunnelPageClient() {
                     </div>
 
                     {/* Footer */}
-                    <div className="border-t border-white/5 pt-3.5 mt-4 flex justify-between items-center text-[8px] font-mono text-slate-500">
+                    <div className="border-t border-white/5 pt-3.5 mt-4 flex justify-between items-center text-[8px] font-mono text-slate-500 shrink-0">
                       <span>LIFECYCLE VISUALIZATION</span>
                       <span className="flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
@@ -225,8 +225,8 @@ export default function TunnelPageClient() {
             </div>
 
             {/* Right - Text Content & Vertical Clickable Selector Steps */}
-            <div className="lg:col-span-5 w-full">
-              <SectionWrapper delay={0.2}>
+            <div className="lg:col-span-5 w-full flex">
+              <SectionWrapper delay={0.2} className="h-full w-full flex flex-col justify-between">
                 <div className="space-y-6">
                   <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest border border-primary/20">
                     <Activity className="w-3.5 h-3.5" />
