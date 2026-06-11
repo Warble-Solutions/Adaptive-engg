@@ -88,12 +88,56 @@ export default function KusumPageClient() {
                       Scheme Overview
                     </div>
                     <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">PM-KUSUM Scheme</h2>
-                    <p className="text-slate-600 leading-relaxed mb-6 text-sm md:text-base">
+                    <p className="text-slate-600 leading-relaxed mb-4 text-sm md:text-base">
                       PM-KUSUM (Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan) Scheme, launched in 2019, is aimed at ensuring energy security for farmers in India, along with honouring India’s commitment to increase the share of installed capacity of electric power from non-fossil-fuel sources to 40% by 2030 as part of Intended Nationally Determined Contributions (INDCs).
                     </p>
                     <p className="text-slate-600 leading-relaxed mb-6 font-medium text-sm md:text-base">
                       The scheme was extended until March 2026, with a total central financial allocation of Rs. 34,422 crore.
                     </p>
+
+                    {/* Key Objectives to fill space */}
+                    <div className="border-t border-slate-100 pt-6 mb-6">
+                      <h4 className="text-xs font-black uppercase tracking-wider text-teal-600 mb-4 font-mono">
+                        Key Pillars
+                      </h4>
+                      <div className="space-y-4">
+                        <div className="flex items-start gap-4 group">
+                          <div className="w-8 h-8 rounded-xl bg-teal-50 text-[#0da08a] flex items-center justify-center shrink-0 border border-teal-100 group-hover:bg-[#0da08a] group-hover:text-white transition-all duration-300">
+                            <span className="text-xs font-mono font-bold">01</span>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-slate-900">De-dieselization of Farm Sector</h5>
+                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                              Replacing expensive, polluting diesel pump sets with clean, reliable solar energy solutions.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-4 group">
+                          <div className="w-8 h-8 rounded-xl bg-teal-50 text-[#0da08a] flex items-center justify-center shrink-0 border border-teal-100 group-hover:bg-[#0da08a] group-hover:text-white transition-all duration-300">
+                            <span className="text-xs font-mono font-bold">02</span>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-slate-900">Water & Energy Security</h5>
+                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                              Ensuring uninterrupted daytime power supply for irrigation, reducing reliance on the unstable grid.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-4 group">
+                          <div className="w-8 h-8 rounded-xl bg-teal-50 text-[#0da08a] flex items-center justify-center shrink-0 border border-teal-100 group-hover:bg-[#0da08a] group-hover:text-white transition-all duration-300">
+                            <span className="text-xs font-mono font-bold">03</span>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-slate-900">Farmers' Income Generation</h5>
+                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                              Enabling farmers to generate additional income by selling surplus solar power back to state utilities.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mt-auto">
