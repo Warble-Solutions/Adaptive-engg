@@ -2,7 +2,7 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import TunnelPageClient from "./TunnelPageClient";
 
 export const metadata = {
- title: "Tunnel Infrastructure | Electrical & Automation | Adaptive Engineering",
+ title: "Tunnel Solutions | Electrical & Automation | Adaptive Engineering",
  description: "Expert Turn-Key Electrical, Instrumentation and Automation Solutions for Road, Railway and Metro Tunnels.",
 };
 

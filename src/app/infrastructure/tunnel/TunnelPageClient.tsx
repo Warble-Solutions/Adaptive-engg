@@ -101,7 +101,7 @@ export default function TunnelPageClient() {
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
                   Tunnel<br />
-                  <span className="gradient-heading">Infrastructure</span>
+                  <span className="gradient-heading">Solutions</span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-medium max-w-lg leading-relaxed mb-8">
                   Complete turn-key Electrical, Instrumentation, and SCADA automation solutions for Road, Railway, and Metro Tunnels.
