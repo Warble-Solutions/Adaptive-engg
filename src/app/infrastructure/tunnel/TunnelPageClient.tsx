@@ -8,12 +8,13 @@ import { COMPANY_STATS, TUNNEL_STATS } from "@/lib/constants";
 import { TunnelSCADADashboard } from "@/components/DashboardMockups";
 
 export default function TunnelPageClient() {
-  const [activeTab, setActiveTab] = useState<"ventilation" | "lighting" | "power" | "safety">("ventilation");
+  const [activeTab, setActiveTab] = useState<"control" | "electrical" | "safety" | "user_info">("control");
   const [activePillar, setActivePillar] = useState<number>(0);
   const [fanSpeed, setFanSpeed] = useState(65);
   const [lightMode, setLightMode] = useState<"day" | "dusk" | "night">("day");
   const [activePowerSource, setActivePowerSource] = useState<"grid1" | "grid2" | "ups">("grid1");
   const [alarmActive, setAlarmActive] = useState(false);
+  const [trafficSignMode, setTrafficSignMode] = useState<"nominal" | "warning" | "emergency">("nominal");
 
   const stats = [
     { val: "17", suf: "+", label: "Years of Experience" },
@@ -25,55 +26,56 @@ export default function TunnelPageClient() {
 
   const specTabs = [
     {
-      id: "ventilation" as const,
-      label: "Ventilation",
-      icon: <Fan className="w-5 h-5" />,
-      title: "Intelligent Tunnel Ventilation Systems",
-      desc: "Closed-loop jet fan automation designed to optimize air quality and smoke extraction.",
+      id: "control" as const,
+      label: "Control Management",
+      icon: <Settings className="w-5 h-5" />,
+      title: "Control Management Subsystem",
+      desc: "Closed-loop SCADA and PLC control systems automating critical tunnel equipment.",
       items: [
-        { label: "CO & NO2 Sensors", desc: "Electrochemical sensors measure toxic emission concentrations continuously." },
-        { label: "Visibility Index (VI)", desc: "Optical sensors determine dust and smoke haze density to adjust jet fans." },
-        { label: "PI Adaptive Control", desc: "Algorithm adjusts Jet Fan RPMs dynamically, reducing energy usage by up to 45%." },
-        { label: "Emergency Smoke Purge", desc: "Automated routines reverse/activate fans to force smoke out of the nearest portal." }
+        { label: "Lighting", desc: "CIE zone-adaptive dimming control matching internal light levels with external portal photometers." },
+        { label: "Signaling", desc: "Lane control indicators, traffic signal integration, and acoustic feedback loops." },
+        { label: "Ventilation", desc: "Closed-loop jet fan speed regulation based on CO, NO2, and visibility index inputs." },
+        { label: "Smoke Control", desc: "Emergency ventilation routines automatically reversing fan flow to exhaust smoke safely." },
+        { label: "Water Pumping", desc: "Automated drainage pump stations managing general drainage and stormwater run-off." },
+        { label: "Emergency Pumping", desc: "High-capacity pumping operations for active fire suppression deluge lines." }
       ]
     },
     {
-      id: "lighting" as const,
-      label: "Adaptive Lighting",
-      icon: <Lightbulb className="w-5 h-5" />,
-      title: "CIE-Compliant Adaptive Lighting Control",
-      desc: "Portal luminance matches internal visibility grids to prevent 'black hole' entry illusions.",
-      items: [
-        { label: "L20 Portal Photometers", desc: "Measures exterior glare to scale entry-zone illumination dynamically." },
-        { label: "CIE Zone Adjustment", desc: "Threshold, Transition, Interior, and Exit zones dim or boost separately." },
-        { label: "High-Efficiency LEDs", desc: "Industrial-grade LED light fixtures designed to withstand tunnel hum and moisture." },
-        { label: "Night Dimming Profiles", desc: "Fades lighting output down to 10% during quiet off-peak hours to slash utility bills." }
-      ]
-    },
-    {
-      id: "power" as const,
-      label: "Substation & UPS",
+      id: "electrical" as const,
+      label: "Electrical Distribution",
       icon: <Zap className="w-5 h-5" />,
-      title: "Redundant Power Substation Architecture",
-      desc: "Dual-grid failover switchgear engineered to keep critical safety grids running 24/7.",
+      title: "HT & LT Electrical Distribution",
+      desc: "Medium and low voltage power distribution switchboards engineered for high system availability.",
       items: [
-        { label: "HT/LT Switchgear panels", desc: "Vacuum Circuit Breakers (VCB) up to 33kV with motor-operated racking." },
-        { label: "Dry-Type Transformers", desc: "Cast-resin transformers designed to mitigate fire risks inside structural substations." },
-        { label: "0ms UPS Backup Banks", desc: "Industrial online double-conversion UPS systems for SCADA and emergency lighting." },
-        { label: "Auto-Start DG Sets", desc: "High-power diesel generators with Auto Mains Failure (AMF) control panels." }
+        { label: "Protection", desc: "Numerical relays, vacuum circuit breakers (VCB), and safety interlock schemes." },
+        { label: "HT & LT Power Distribution", desc: "Substations, distribution transformers, RMUs, and high-conductivity cabling rings." },
+        { label: "Power Control", desc: "Auto Mains Failure (AMF) switchgear and customized main power control panels." },
+        { label: "Emergency Power", desc: "Dual grid line switchover systems and online double-conversion UPS backups." }
       ]
     },
     {
       id: "safety" as const,
-      label: "Fire & Safety",
-      icon: <ShieldCheck className="w-5 h-5" />,
-      title: "Multi-Hazard Life Safety Systems",
-      desc: "Early heat detection, quick suppression routing, and clear evacuation broadcasts.",
+      label: "Safety System Integration",
+      icon: <Shield className="w-5 h-5" />,
+      title: "Safety System Integration",
+      desc: "Evacuation guidance, access monitoring, and automatic hazard mitigation networks.",
       items: [
-        { label: "Fiber-Optic LHD", desc: "Linear Heat Detection cables identify temperature spikes to within 1 meter." },
-        { label: "Evacuation VMS & SOS", desc: "Digital message panels and SOS boxes direct motorists safely out during emergencies." },
-        { label: "Public Address Broadcast", desc: "Intelligible horn speaker grids mapping acoustic zones for emergency alerts." },
-        { label: "Substation Deluge Setup", desc: "Automatic water deluge/sprinkler valves connected directly to early fire indicators." }
+        { label: "Fire System", desc: "Linear Heat Detection (LHD) fiber loop integration and automated deluge valve controls." },
+        { label: "CCTV", desc: "Continuous video surveillance integrated with Automatic Incident Detection (AID) systems." },
+        { label: "Access Control", desc: "Real-time emergency door monitoring and escape shaft lock releases." },
+        { label: "Emergency Call/SOS", desc: "SOS roadside phone booths and intercom lines directly tied to control room consoles." },
+        { label: "Evacuations", desc: "Dynamic evacuation pathway lighting and automated green escape guidance flashes." }
+      ]
+    },
+    {
+      id: "user_info" as const,
+      label: "User Information",
+      icon: <Radio className="w-5 h-5" />,
+      title: "User Information Subsystem Integration",
+      desc: "Real-time traffic management displays and public address communications.",
+      items: [
+        { label: "Voice Radio Announcement (PA System)", desc: "Zone-based emergency PA speakers and radio transmission overrides." },
+        { label: "Traffic Management", desc: "Variable Message Signs (VMS), lane control signals, and speed indicators." }
       ]
     }
   ];
@@ -188,17 +190,28 @@ export default function TunnelPageClient() {
                   We at Adaptive Engineering Pvt Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Tunnels – Road, Railway and Metro.
                 </p>
                 <p className="text-slate-500 text-sm leading-relaxed">
-                  With the rising awareness on road and rail safety, the government is modernizing road and railway tunnels. Additionally, numerous railway lines and highways pass through tunnels in mountain ranges, which creates a high demand for tunnel electrical & automation systems.
+                  Our 17+ years of experience, a complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills empowered us a <strong className="text-slate-950 font-bold">“Preferred Project Partner”</strong> in Turn-Key Projects for EPCs.
                 </p>
-                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200/60 shadow-sm flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center shrink-0 text-primary mt-1">
-                    <ShieldCheck className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 mb-1">Empowering Turn-Key Excellence</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      Our 17+ years of experience, a complete solutions portfolio of Electrical and Automation solutions and the best of the project management skills empowered us a <strong className="text-slate-950 font-bold">“Preferred Project Partner”</strong> in Turn-Key Projects for EPCs.
-                    </p>
+
+                {/* 5-Stage Project lifecycle from PDF Page 2 */}
+                <div className="border-t border-slate-100 pt-6">
+                  <h4 className="text-xs font-black uppercase tracking-wider text-[#0da08a] mb-4 font-mono">
+                    Project Lifecycle &amp; Delivery
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-3">
+                    {[
+                      { title: "Site Survey", desc: "Soil Testing, Area Layout, Load Pattern, Grid Availability" },
+                      { title: "Solution Design", desc: "System Layout, Equipment Sizing, Electrical & Automation Design" },
+                      { title: "Proposal Eng.", desc: "Detailed BOM, Make List" },
+                      { title: "Procurement / FAT", desc: "Purchase, Manufacturing, Vendor Management, FAT, Dispatch" },
+                      { title: "Handover / Commissioning", desc: "System Installation, Testing, Commissioning, Training" }
+                    ].map((stage, sIdx) => (
+                      <div key={sIdx} className="p-3 bg-slate-50 border border-slate-100 rounded-xl flex flex-col justify-between hover:border-primary/30 hover:bg-white transition-all duration-300 group">
+                        <span className="text-[9px] font-mono text-[#0da08a] font-bold">0{sIdx + 1}</span>
+                        <h5 className="text-[10px] font-bold text-slate-900 mt-1 leading-snug">{stage.title}</h5>
+                        <p className="text-[8px] text-slate-400 leading-tight mt-1 group-hover:text-slate-500 transition-colors">{stage.desc}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -322,8 +335,8 @@ export default function TunnelPageClient() {
                           <span>{tab.label.toUpperCase()}</span>
                         </div>
 
-                        {/* Ventilation Simulator */}
-                        {tab.id === "ventilation" && (
+                        {/* Control Subsystem Simulator */}
+                        {tab.id === "control" && (
                           <div className="flex-grow flex flex-col justify-between py-2">
                             <div className="flex items-center justify-between">
                               <span className="text-xs text-slate-400">Jet Fan Speed Regulator</span>
@@ -367,57 +380,8 @@ export default function TunnelPageClient() {
                           </div>
                         )}
 
-                        {/* Lighting Simulator */}
-                        {tab.id === "lighting" && (
-                          <div className="flex-grow flex flex-col justify-between py-2">
-                            <span className="text-xs text-slate-400 mb-2">Exterior-to-Interior CIE Lux Curve</span>
-
-                            {/* Lux bars */}
-                            <div className="space-y-3 my-4">
-                              {[
-                                { zone: "Threshold (Portal)", max: 12000, day: 100, dusk: 50, night: 10 },
-                                { zone: "Transition Zone", max: 4000, day: 45, dusk: 25, night: 10 },
-                                { zone: "Tunnel Interior", max: 800, day: 10, dusk: 10, night: 10 },
-                              ].map((bar, bIdx) => {
-                                const level = lightMode === "day" ? bar.day : lightMode === "dusk" ? bar.dusk : bar.night;
-                                return (
-                                  <div key={bIdx} className="space-y-1">
-                                    <div className="flex justify-between text-[9px] font-mono">
-                                      <span className="text-slate-400">{bar.zone}</span>
-                                      <span className="text-teal-400 font-bold">{Math.round(bar.max * (level / 100))} Lux</span>
-                                    </div>
-                                    <div className="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-white/5">
-                                      <div 
-                                        className="h-full bg-gradient-to-r from-amber-400 to-yellow-300 rounded-full transition-all duration-500"
-                                        style={{ width: `${level}%` }}
-                                      ></div>
-                                    </div>
-                                  </div>
-                                );
-                              })}
-                            </div>
-
-                            {/* Mode Selectors */}
-                            <div className="grid grid-cols-3 gap-2 mt-2">
-                              {(["day", "dusk", "night"] as const).map((mode) => (
-                                <button
-                                  key={mode}
-                                  onClick={() => setLightMode(mode)}
-                                  className={`px-3 py-1.5 rounded-lg text-[9px] font-bold uppercase transition-all ${
-                                    lightMode === mode
-                                      ? "bg-teal-500 text-slate-950 font-extrabold shadow-md shadow-teal-500/20"
-                                      : "bg-white/5 border border-white/5 text-slate-400 hover:bg-white/10"
-                                  }`}
-                                >
-                                  {mode} Profile
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Power Simulator */}
-                        {tab.id === "power" && (
+                        {/* Electrical Subsystem Simulator */}
+                        {tab.id === "electrical" && (
                           <div className="flex-grow flex flex-col justify-between py-2">
                             <span className="text-xs text-slate-400">Main Substation Feeder Line</span>
 
@@ -468,7 +432,7 @@ export default function TunnelPageClient() {
                           </div>
                         )}
 
-                        {/* Safety Simulator */}
+                        {/* Safety Subsystem Simulator */}
                         {tab.id === "safety" && (
                           <div className="flex-grow flex flex-col justify-between py-2">
                             <span className="text-xs text-slate-400">Alarm Annunciation Panel</span>
@@ -500,6 +464,60 @@ export default function TunnelPageClient() {
                             >
                               {alarmActive ? "Reset Annunciator" : "Trigger Thermal Alert (Test)"}
                             </button>
+                          </div>
+                        )}
+
+                        {/* User Info Subsystem Simulator */}
+                        {tab.id === "user_info" && (
+                          <div className="flex-grow flex flex-col justify-between py-2">
+                            <span className="text-xs text-slate-400 mb-2">Variable Message Sign (VMS) Console</span>
+
+                            {/* LED Sign display */}
+                            <div className="bg-slate-900 border border-white/5 rounded-xl p-4 font-bold text-center select-none shadow-inner my-4">
+                              <div className="font-mono text-xs text-slate-500 mb-2 text-left uppercase tracking-wider flex justify-between">
+                                <span>VMS FEED // LIVE</span>
+                                <span className="flex h-2 w-2 relative">
+                                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                </span>
+                              </div>
+                              
+                              <div className="bg-black py-4 px-2 rounded border border-white/5 font-mono min-h-[64px] flex flex-col items-center justify-center">
+                                {trafficSignMode === "nominal" && (
+                                  <span className="text-green-500 text-sm tracking-widest uppercase animate-pulse">WELCOME - DRIVE SAFELY</span>
+                                )}
+                                {trafficSignMode === "warning" && (
+                                  <span className="text-amber-500 text-sm tracking-wider uppercase animate-pulse">SLOW DOWN - WORK AHEAD</span>
+                                )}
+                                {trafficSignMode === "emergency" && (
+                                  <div className="text-red-500 text-xs tracking-wide uppercase font-extrabold space-y-1">
+                                    <div className="animate-bounce">⚠️ ACCIDENT AHEAD ⚠️</div>
+                                    <div className="text-[10px]">USE ESCAPE SHAFT</div>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* VMS Mode Selectors */}
+                            <div className="grid grid-cols-3 gap-2 mt-2">
+                              {([
+                                { id: "nominal", label: "Normal" },
+                                { id: "warning", label: "Warning" },
+                                { id: "emergency", label: "Emergency" }
+                              ] as const).map((mode) => (
+                                <button
+                                  key={mode.id}
+                                  onClick={() => setTrafficSignMode(mode.id)}
+                                  className={`px-3 py-1.5 rounded-lg text-[9px] font-bold uppercase transition-all ${
+                                    trafficSignMode === mode.id
+                                      ? "bg-teal-500 text-slate-950 font-extrabold shadow-md shadow-teal-500/20"
+                                      : "bg-white/5 border border-white/5 text-slate-400 hover:bg-white/10"
+                                  }`}
+                                >
+                                  {mode.label}
+                                </button>
+                              ))}
+                            </div>
                           </div>
                         )}
 
@@ -545,6 +563,81 @@ export default function TunnelPageClient() {
                 );
               })}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SYSTEM COMPONENTS BREAKDOWN */}
+      <section className="py-24 bg-white relative z-20 border-t border-slate-100 text-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">System Architecture</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 font-heading mb-4 tracking-tight">
+                Electrical &amp; Automation Components
+              </h2>
+              <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+                A comprehensive overview of key electrical infrastructure and automation systems supplied by AEPL.
+              </p>
+            </SectionWrapper>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Electrical System Components */}
+            <SectionWrapper delay={0.1}>
+              <div className="bg-slate-50 border border-slate-200/60 rounded-3xl p-8 h-full shadow-md">
+                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3 pb-4 border-b border-slate-200">
+                  <Zap className="text-[#0da08a] w-6 h-6" /> Electrical Distribution
+                </h3>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Two Pole Structure",
+                    "VCB Panels",
+                    "Transformer",
+                    "HT Cables",
+                    "RMU",
+                    "Power Distribution Panels",
+                    "Ventilation Fan Panels",
+                    "Lighting Distribution Panels",
+                    "LT Cables",
+                    "Earthing",
+                    "Cable Tray"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-xs text-slate-700">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#0da08a] shrink-0"></div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </SectionWrapper>
+
+            {/* Automation System Components */}
+            <SectionWrapper delay={0.2}>
+              <div className="bg-slate-50 border border-slate-200/60 rounded-3xl p-8 h-full shadow-md">
+                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3 pb-4 border-b border-slate-200">
+                  <Cpu className="text-[#0da08a] w-6 h-6" /> Automation &amp; Control System
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    "Redundant PLC Panels",
+                    "Remote I/O Panels",
+                    "SCADA Software with required clients",
+                    "Work Station Grade PC & Large Video Screen",
+                    "Control Cables",
+                    "Fire Fighting and Detection System with Emergency Door Monitoring",
+                    "Central Fire Control System with Dynamic Messaging and Guidance",
+                    "CCTV System with NVR and Incident Detection system",
+                    "Traffic and Lan Control System with Dynamic Messaging and Acoustic Signals"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-slate-700">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#0da08a] shrink-0 mt-1.5"></div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </SectionWrapper>
           </div>
         </div>
       </section>
