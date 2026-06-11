@@ -79,69 +79,75 @@ export default function KusumPageClient() {
       {/* 2. SCHEME OVERVIEW (Light) */}
       <section className="section-light py-24 bg-white rounded-t-[40px] relative z-20 -mt-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <SectionWrapper>
-              <div className="flex flex-col gap-6">
-                <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-50/80 text-teal-600 rounded-lg text-xs font-black uppercase tracking-wider mb-4 border border-teal-100">
-                    Scheme Overview
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+            <div className="flex flex-col">
+              <SectionWrapper className="h-full flex flex-col justify-between">
+                <div className="flex flex-col h-full justify-between">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-50/80 text-teal-600 rounded-lg text-xs font-black uppercase tracking-wider mb-4 border border-teal-100">
+                      Scheme Overview
+                    </div>
+                    <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">PM-KUSUM Scheme</h2>
+                    <p className="text-slate-600 leading-relaxed mb-6 text-sm md:text-base">
+                      PM-KUSUM (Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan) Scheme, launched in 2019, is aimed at ensuring energy security for farmers in India, along with honouring India’s commitment to increase the share of installed capacity of electric power from non-fossil-fuel sources to 40% by 2030 as part of Intended Nationally Determined Contributions (INDCs).
+                    </p>
+                    <p className="text-slate-600 leading-relaxed mb-6 font-medium text-sm md:text-base">
+                      The scheme was extended until March 2026, with a total central financial allocation of Rs. 34,422 crore.
+                    </p>
                   </div>
-                  <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">PM-KUSUM Scheme</h2>
-                  <p className="text-slate-600 leading-relaxed mb-6 text-sm md:text-base">
-                    PM-KUSUM (Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan) Scheme, launched in 2019, is aimed at ensuring energy security for farmers in India, along with honouring India’s commitment to increase the share of installed capacity of electric power from non-fossil-fuel sources to 40% by 2030 as part of Intended Nationally Determined Contributions (INDCs).
-                  </p>
-                  <p className="text-slate-600 leading-relaxed mb-6 font-medium text-sm md:text-base">
-                    The scheme was extended until March 2026, with a total central financial allocation of Rs. 34,422 crore.
-                  </p>
 
-                  <div className="grid grid-cols-2 gap-4 mt-6">
-                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl">
+                  <div className="grid grid-cols-2 gap-4 mt-auto">
+                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl flex flex-col justify-between">
                       <span className="block text-[10px] font-mono uppercase tracking-wider text-slate-400">Total Allocation</span>
-                      <strong className="text-xl md:text-2xl font-black text-slate-900">₹34,422 Cr</strong>
+                      <strong className="text-xl md:text-2xl font-black text-slate-900 mt-1">₹34,422 Cr</strong>
                     </div>
-                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl">
+                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl flex flex-col justify-between">
                       <span className="block text-[10px] font-mono uppercase tracking-wider text-slate-400">Extended Target</span>
-                      <strong className="text-xl md:text-2xl font-black text-slate-900">March 2026</strong>
+                      <strong className="text-xl md:text-2xl font-black text-slate-900 mt-1">March 2026</strong>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SectionWrapper>
+              </SectionWrapper>
+            </div>
 
-            <SectionWrapper delay={0.2}>
-              <div className="flex flex-col gap-6">
-                <div className="p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group">
-                  <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '20px 20px' }}></div>
-                  <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <Sun className="text-teal-400 w-6 h-6 shrink-0" /> Who can Apply?
-                  </h3>
-                  <p className="text-xs font-mono text-teal-400 uppercase tracking-widest mb-4">Indian Farmer Profile</p>
-                  <p className="text-slate-300 text-base leading-relaxed mb-6">
-                    Farmers can apply for the scheme by visiting the official PM-KUSUM website, logging in with their reference number, and filling out the online application form.
-                  </p>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                    To support the PM-KUSUM scheme, we at Adaptive Engineering Pvt. Ltd. have our range of solutions which helps each project immensely, to support the PM-KUSUM scheme.
-                  </p>
-                  <a 
-                    href="https://pmkusum.mnre.gov.in/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center gap-2 text-sm font-bold text-teal-400 hover:text-white hover:gap-3 transition-all font-mono"
-                  >
-                    Visit Official PM-KUSUM Website <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
+            <div className="flex flex-col">
+              <SectionWrapper delay={0.2} className="h-full flex flex-col justify-between">
+                <div className="flex flex-col gap-6 h-full justify-between">
+                  <div className="p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group flex-grow flex flex-col justify-between">
+                    <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '20px 20px' }}></div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <Sun className="text-teal-400 w-6 h-6 shrink-0" /> Who can Apply?
+                      </h3>
+                      <p className="text-xs font-mono text-teal-400 uppercase tracking-widest mb-4">Indian Farmer Profile</p>
+                      <p className="text-slate-300 text-base leading-relaxed mb-6">
+                        Farmers can apply for the scheme by visiting the official PM-KUSUM website, logging in with their reference number, and filling out the online application form.
+                      </p>
+                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                        To support the PM-KUSUM scheme, we at Adaptive Engineering Pvt. Ltd. have our range of solutions which helps each project immensely, to support the PM-KUSUM scheme.
+                      </p>
+                    </div>
+                    <a 
+                      href="https://pmkusum.mnre.gov.in/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center gap-2 text-sm font-bold text-teal-400 hover:text-white hover:gap-3 transition-all font-mono mt-auto"
+                    >
+                      Visit Official PM-KUSUM Website <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
 
-                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-[200px] group">
-                  <img src="/imgs/pm-kusum/solar_pump_irrigation.png" alt="Solar Powered Farm Irrigation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-white/20">
-                    <p className="text-slate-900 font-bold text-xs">Empowering Sustainable Agriculture</p>
-                    <p className="text-slate-500 text-[10px] mt-0.5">Standalone off-grid & grid-tied pump solarization</p>
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-[200px] shrink-0 group">
+                    <img src="/imgs/pm-kusum/solar_pump_irrigation.png" alt="Solar Powered Farm Irrigation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-white/20">
+                      <p className="text-slate-900 font-bold text-xs">Empowering Sustainable Agriculture</p>
+                      <p className="text-slate-500 text-[10px] mt-0.5">Standalone off-grid & grid-tied pump solarization</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SectionWrapper>
+              </SectionWrapper>
+            </div>
           </div>
         </div>
       </section>
