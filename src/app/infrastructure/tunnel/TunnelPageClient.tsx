@@ -18,9 +18,9 @@ export default function TunnelPageClient() {
   const stats = [
     { val: "17", suf: "+", label: "Years of Experience" },
     { val: "2.5", suf: " Km", label: "Twin Tube Road Tunnel" },
-    { val: "1,000", suf: " KVA", label: "Transformer with HT Sub Station Installation" },
+    { val: "1,000", suf: " KVA", label: "Transformer & HT Substation" },
     { val: "1,500", suf: "+", label: "LED Lights Installed" },
-    { val: "15", suf: "+", label: "Remote I/O Panels Installed in Tunnel" },
+    { val: "15", suf: "+", label: "Remote I/O Panels" },
   ];
 
   const specTabs = [
@@ -145,7 +145,7 @@ export default function TunnelPageClient() {
                   <div className="text-4xl font-black text-slate-900 mb-1 tracking-tight">
                     {stat.val}<span className="text-primary">{stat.suf}</span>
                   </div>
-                  <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest leading-snug">{stat.label}</div>
+                  <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest leading-snug line-clamp-2 h-8 md:h-10 flex items-center justify-center">{stat.label}</div>
                 </div>
               </SectionWrapper>
             ))}
