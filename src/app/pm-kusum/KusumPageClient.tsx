@@ -115,25 +115,25 @@ export default function KusumPageClient() {
                   <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                     <Sun className="text-teal-400 w-6 h-6 shrink-0" /> Who can Apply?
                   </h3>
-                  <p className="text-[10px] font-mono text-teal-400 uppercase tracking-widest mb-4">Indian Farmer Profile</p>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                  <p className="text-xs font-mono text-teal-400 uppercase tracking-widest mb-4">Indian Farmer Profile</p>
+                  <p className="text-slate-300 text-base leading-relaxed mb-6">
                     Farmers can apply for the scheme by visiting the official PM-KUSUM website, logging in with their reference number, and filling out the online application form.
                   </p>
-                  <p className="text-slate-400 text-xs leading-relaxed mb-6">
+                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
                     To support the PM-KUSUM scheme, we at Adaptive Engineering Pvt. Ltd. have our range of solutions which helps each project immensely, to support the PM-KUSUM scheme.
                   </p>
                   <a 
                     href="https://pmkusum.mnre.gov.in/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-flex items-center gap-2 text-xs font-bold text-teal-400 hover:text-white hover:gap-3 transition-all font-mono"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-teal-400 hover:text-white hover:gap-3 transition-all font-mono"
                   >
                     Visit Official PM-KUSUM Website <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
 
-                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-[180px] group">
-                  <img src="/imgs/pm-kusum/ams_field_om.png" alt="Solar Powered Farm Irrigation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-[200px] group">
+                  <img src="/imgs/pm-kusum/solar_pump_irrigation.png" alt="Solar Powered Farm Irrigation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-white/20">
                     <p className="text-slate-900 font-bold text-xs">Empowering Sustainable Agriculture</p>
