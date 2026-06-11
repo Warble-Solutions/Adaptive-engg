@@ -4,13 +4,58 @@ import { useState } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { 
-  ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, 
-  Server, Gauge, Wind, Database, Sliders, Clock, FileText, LayoutTemplate, 
-  Lock, Compass, ChevronRight, HelpCircle
+  ArrowRight, Zap, Activity, ShieldCheck, Cpu, CheckCircle2, 
+  Server, Wind, Sliders, Lock, ChevronRight
 } from "lucide-react";
 
 export default function DataCenterPageClient() {
   const [activeSolution, setActiveSolution] = useState<number>(0);
+  const [activePillar, setActivePillar] = useState<number>(0);
+
+  const pillars = [
+    {
+      title: "Automation",
+      icon: <Cpu className="w-5 h-5" />,
+      desc: "Automation plays a crucial role in Data Centers, enabling increased efficiency, scalability, and reliability. Automating various tasks and processes allows Data Center operators to streamline operations, reduce human error, and improve overall productivity.",
+      tagline: "Operational Efficiency & Control",
+      items: [
+        { label: "HVAC Management", val: "Heat ventilation & Air conditioning management system optimizing real-time thermal profiles." },
+        { label: "Energy Efficiency", val: "Energy Efficiency and Optimization algorithms adjusting chiller valves and fan speeds." },
+        { label: "Incident Response", val: "Incident Response and Troubleshooting procedures automatically triggered on fault detections." },
+        { label: "Reporting & Analysis", val: "Continuous Reporting and Analysis of power, temperature, and performance metrics." },
+        { label: "Performance & Capacity", val: "Performance and Capacity Management logs tracking CPU workloads and power path limits." },
+        { label: "Alarms & Notifications", val: "Intelligent Alarms and Notifications sent via email, SMS, and SCADA console alerts." }
+      ]
+    },
+    {
+      title: "Power System",
+      icon: <Zap className="w-5 h-5" />,
+      desc: "We at Adaptive Engineering Pvt. Ltd. provide turn-key projects with Supply, Installation, Testing and Commissioning of HT Sub Station with Pole Structure, VCB Panel, Transformer and RMU, LT Electrical Room having Power Distribution Panels, LT Panels, APFC Panels with HT and LT Cables and Grid Earthing.",
+      tagline: "Turn-Key HV/LV Power Infrastructure",
+      items: [
+        { label: "Power Quality", val: "Improve Power Quality and Active Harmonic Filtering compensation." },
+        { label: "Intelligent Energy", val: "Intelligent usage of energy using Modbus metering loops and smart EMS controllers." },
+        { label: "Operating Costs", val: "Reduced Operating Cost through optimized load sharing and demand-side management." },
+        { label: "Zero Shutdowns", val: "Zero Energy Shutdown design utilizing concurrently maintainable 2N+1 topologies." },
+        { label: "Power Factor Control", val: "Efficient Power Factor Control via automatic APFC capacitor bank switching." },
+        { label: "SCADA Control", val: "Complete Monitoring and Control of transformers and breakers through SCADA screens." }
+      ]
+    },
+    {
+      title: "Fire Fighting & CCTV",
+      icon: <ShieldCheck className="w-5 h-5" />,
+      desc: "Fire detection systems should be integrated with the SCADA system, allowing increased visibility and support to the system remotely. This allows for all assets to be controlled in a coordinated manner to help minimize risk. Our vast experience in the Automation Industry helps to tightly integrate Fire Detection, Video Monitoring, Traffic Signaling and PA Control with the SCADA system to increase safety and Traffic Control.",
+      tagline: "Safety, Security & Remote Vigilance",
+      items: [
+        { label: "NFPA Compliance", val: "Safety compliance with NFPA standards ensuring strict fire-suppression regulations." },
+        { label: "Precise Detection", val: "Fast, precise and reliable detection through high-sensitivity smoke and heat sensors." },
+        { label: "Annunciator Alerts", val: "Trigger alarms on fire niche door opening, emergency telephones or SOS buttons." },
+        { label: "AID CCTV Integration", val: "Automatic Incident Detection System with CCTV image analysis." },
+        { label: "CCTV Alerts", val: "CCTV System alerts on unauthorized entry, wrong direction, stopped vehicles or debris." },
+        { label: "Evacuation Guidance", val: "Escape Route signaling and Dynamic Messaging VMS system coordination." }
+      ]
+    }
+  ];
 
 
   const solutions = [
@@ -365,6 +410,118 @@ export default function DataCenterPageClient() {
               </div>
             </div>
           </SectionWrapper>
+        </div>
+      </section>
+
+      {/* CORE TURN-KEY INFRASTRUCTURE SYSTEMS */}
+      <section className="py-24 bg-slate-50 text-slate-900 relative z-20 overflow-hidden border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            
+            {/* Left side: Selector tabs & description */}
+            <div className="lg:col-span-5 w-full flex">
+              <SectionWrapper className="h-full w-full flex flex-col justify-between">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest border border-primary/20">
+                    <Sliders className="w-3.5 h-3.5" />
+                    <span>Turn-Key Offerings</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-black text-slate-900 font-heading tracking-tight leading-tight">
+                    Core Turn-Key <br />
+                    <span className="gradient-heading">Infrastructure Systems</span>
+                  </h2>
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
+                    Our extensive execution experience in Automation, High-Voltage Power distribution, and Fire safety enables concurrently maintainable operations.
+                  </p>
+
+                  {/* Vertical Tabs */}
+                  <div className="space-y-3 pt-4 border-t border-slate-200">
+                    <h4 className="text-xs font-black uppercase tracking-wider text-[#0da08a] mb-2.5 font-mono">
+                      Turn-Key Pillars
+                    </h4>
+                    <div className="flex flex-col gap-2.5">
+                      {pillars.map((pillar, idx) => {
+                        const isActive = activePillar === idx;
+                        return (
+                          <button
+                            key={idx}
+                            onClick={() => setActivePillar(idx)}
+                            className={`w-full text-left p-4 rounded-xl border transition-all duration-300 relative group flex items-start gap-4 cursor-pointer select-none ${
+                              isActive
+                                ? "bg-white border-primary/30 shadow-md shadow-primary/5"
+                                : "bg-transparent border-slate-200/60 hover:bg-white/50 hover:border-slate-300"
+                            }`}
+                          >
+                            {isActive && (
+                              <div className="absolute left-0 top-3.5 bottom-3.5 w-1 bg-primary rounded-r-md"></div>
+                            )}
+                            <div className={`p-2 rounded-lg shrink-0 transition-transform duration-300 group-hover:scale-105 ${
+                              isActive ? "bg-primary/20 text-primary" : "bg-slate-200 text-slate-600"
+                            }`}>
+                              {pillar.icon}
+                            </div>
+                            <div>
+                              <h5 className={`text-xs font-extrabold transition-colors ${isActive ? "text-slate-950 text-sm" : "text-slate-700 text-xs"}`}>{pillar.title}</h5>
+                              <p className={`text-[10px] leading-relaxed mt-1 transition-colors ${isActive ? "text-slate-600 font-medium" : "text-slate-500 font-medium"}`}>{pillar.tagline}</p>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Right side: Detailed Scope Card */}
+            <div className="lg:col-span-7 w-full flex">
+              <SectionWrapper delay={0.2} className="h-full w-full flex flex-col justify-between">
+                <div className="w-full h-full bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-xl flex flex-col justify-between select-none">
+                  <div>
+                    {/* Header */}
+                    <div className="border-b border-slate-100 pb-4 mb-5 flex justify-between items-center text-[10px] font-mono text-slate-400">
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                        AEPL IMPLEMENTATION BLUEPRINT
+                      </span>
+                      <span className="font-bold text-primary">PILLAR_0{activePillar + 1}</span>
+                    </div>
+
+                    {/* Content Detail */}
+                    <h3 className="text-xl font-bold text-slate-950 mb-3">{pillars[activePillar].title} Scope</h3>
+                    <p className="text-slate-600 text-xs leading-relaxed mb-6 font-medium">
+                      {pillars[activePillar].desc}
+                    </p>
+
+                    {/* Features list */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {pillars[activePillar].items.map((item, idx) => (
+                        <div key={idx} className="bg-slate-50 p-4 rounded-xl border border-slate-200/50 flex items-start gap-3 hover:border-primary/25 transition-colors duration-300">
+                          <div className="w-6 h-6 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-primary">
+                            <CheckCircle2 className="w-4.5 h-4.5" />
+                          </div>
+                          <div>
+                            <h4 className="text-xs font-extrabold text-slate-900 mb-1 leading-snug">{item.label}</h4>
+                            <p className="text-[10px] text-slate-500 leading-normal font-medium">{item.val}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="border-t border-slate-100 pt-4 mt-6 flex justify-between items-center text-[8px] font-mono text-slate-400">
+                    <span>AEPL DC CORE CAPABILITY MODULE</span>
+                    <span className="flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      <span>ACTIVE DRAWINGS</span>
+                    </span>
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+            
+          </div>
         </div>
       </section>
 
