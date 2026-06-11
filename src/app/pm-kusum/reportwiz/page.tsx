@@ -94,16 +94,19 @@ export default function Page() {
  <SectionWrapper delay={0.1}>
  <div className="p-10 bg-white/5 border border-white/10 rounded-3xl h-full">
  <div className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6">Standard Reports</div>
- <h3 className="text-2xl font-bold text-white mb-6">Pre-built Report Templates</h3>
+ <h3 className="text-2xl font-bold text-white mb-6">Standard Report Benefits</h3>
  <div className="space-y-4">
  {[
- "Daily generation report with weather correlation",
- "Monthly PR & CUF performance report",
- "Inverter-wise comparison report",
- "Downtime & availability report",
- "Grid curtailment & export report",
- "MNRE/DISCOM compliance report",
- "Annual performance summary",
+ "Streamlined Operations",
+ "Improved Accuracy",
+ "Enhanced Efficiency",
+ "Comprehensive Insights",
+ "Better Collaboration",
+ "Scalability",
+ "Faster Problem Identification",
+ "Centralized Management",
+ "Increased Flexibility",
+ "Better Decision – Making",
  ].map((item, i) => (
  <div key={i} className="flex items-center gap-3">
  <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
