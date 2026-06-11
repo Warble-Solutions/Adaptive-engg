@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Sun, Download, X } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSatelliteDish, faFileInvoice, faNetworkWired, faTasks, faBolt, faShieldAlt, faSolarPanel, faSun, faMap, faCheckCircle, faWifi } from "@fortawesome/free-solid-svg-icons";
+import { faSatelliteDish, faFileInvoice, faNetworkWired, faTasks, faBolt, faShieldAlt, faSolarPanel, faSun, faCheckCircle, faWifi } from "@fortawesome/free-solid-svg-icons";
 import MicroCTA from "@/components/ui/MicroCTA";
 import ActionBadge from "@/components/ui/ActionBadge";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -302,76 +302,6 @@ export default function KusumPageClient() {
         </div>
       </section>
 
-      {/* 4. COMMAND CENTER (Dark - CMS Focus) */}
-      <section className="py-32 bg-transparent border-t border-white/5 relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <SectionWrapper>
-              <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/30">
-                  <FontAwesomeIcon icon={faNetworkWired} className="w-4 h-4" />
-                  <span>Desktop Intelligence</span>
-                </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-heading leading-tight">
-                  Mission Control for <br />
-                  <span className="gradient-heading">State Agencies</span>
-                </h2>
-                <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                  Managing 10,000+ pumps requires more than a spreadsheet. Our Central Monitoring System (CMS) gives you a bird&apos;s-eye view of your entire district&apos;s performance in real-time.
-                </p>
-
-                <ul className="space-y-4 mb-10">
-                  {[
-                    { text: "Live Geotagging: Visualize every pump on an interactive map.", icon: faMap },
-                    { text: "Instant JMR: Auto-generate Joint Meter Readings for subsidy claims.", icon: faFileInvoice },
-                    { text: "Fault Forensics: Remote diagnosis of pump vs. grid issues.", icon: faTasks }
-                  ].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-4 text-gray-300">
-                      <div className="mt-1 w-6 h-6 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 shrink-0">
-                        <FontAwesomeIcon icon={feature.icon} className="w-3 h-3" />
-                      </div>
-                      <span className="leading-relaxed"><strong className="text-white">{feature.text.split(":")[0]}:</strong> {feature.text.split(":")[1]}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <ActionBadge type="connect" label="Request CMS Demo Login" href="/contact" />
-              </div>
-            </SectionWrapper>
-
-            <SectionWrapper delay={0.2}>
-              <div className="relative">
-                {/* High-Fidelity SCADA Control Room Visual */}
-                <div className="relative aspect-video border border-white/10 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm group">
-                  <img src="/imgs/pm-kusum/scada_control_room.png" alt="SCADA Control Room Command Center" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                  
-                  {/* Overlay status tags */}
-                  <div className="absolute top-4 left-4 flex gap-2 font-mono text-[9px] z-10">
-                    <span className="bg-slate-900/90 text-teal-400 px-2 py-1 rounded border border-teal-500/20 flex items-center gap-1.5 font-bold">
-                      <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
-                      CMS FEEDER_04
-                    </span>
-                    <span className="bg-slate-900/90 text-white/70 px-2 py-1 rounded border border-white/10">
-                      LATENCY: 42ms
-                    </span>
-                  </div>
-
-                  <div className="absolute bottom-4 left-4 right-4 z-10 font-mono text-[10px] text-white/80 bg-slate-950/80 backdrop-blur-md p-3 rounded-lg border border-white/5 flex items-center justify-between">
-                    <span>STATE PORTAL FEED: CONNECTED</span>
-                    <span className="text-teal-400 font-bold">99.98% SUCCESS</span>
-                  </div>
-                </div>
-                {/* Floating Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-slate-800 border border-slate-700 p-4 rounded-xl shadow-xl flex items-center gap-4 animate-bounce delay-[2000ms]">
-                  <div className="w-3 h-3 rounded-full bg-[#0da08a] animate-pulse"></div>
-                  <div className="text-sm font-bold text-white">99.9% Uptime</div>
-                </div>
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
 
       {/* 5. SCHEME SELECTOR (Light - Guide) */}
       <section className="py-24 bg-white border-b border-gray-100 relative z-20">
