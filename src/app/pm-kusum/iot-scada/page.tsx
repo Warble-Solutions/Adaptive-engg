@@ -321,47 +321,6 @@ export default function Page() {
             </div>
           </SectionWrapper>
 
-          {/* Persona/Layer Breakdown */}
-          <SectionWrapper delay={0.2}>
-            <div className="max-w-6xl mx-auto">
-              <h3 className="text-2xl font-bold text-slate-900 text-center mb-8 border-b pb-4 border-slate-100">Role-Based Intelligence</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  {
-                    role: "Management",
-                    desc: "Customized Dashboards for CXOs & Actionable Insights.",
-                    benefit: "Provides top-level executives with macro-level performance metrics, portfolio tracking, and strategic insights."
-                  },
-                  {
-                    role: "Manager",
-                    desc: "Historical Data Analysis & Anomaly Detection.",
-                    benefit: "Allows plant managers to study trends, analyze performance over time, and configure automated alert triggers."
-                  },
-                  {
-                    role: "Maintenance Engineer",
-                    desc: "Optimized Resource Utilization & Reduced Downtime Losses.",
-                    benefit: "Helps field engineers receive real-time alerts, coordinate troubleshooting, and maximize asset uptime."
-                  },
-                  {
-                    role: "Operator",
-                    desc: "Plant Performance Monitoring & Root Cause Diagnosis.",
-                    benefit: "Enables site operators to monitor active generation, track device connectivity, and diagnose faults instantly."
-                  }
-                ].map((persona, i) => (
-                  <div key={i} className="p-5 bg-slate-50 hover:bg-slate-100/70 border border-slate-100 hover:border-primary/20 rounded-2xl transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-xs font-bold text-primary uppercase tracking-wider">{persona.role}</span>
-                        <span className="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-medium">Persona</span>
-                      </div>
-                      <h4 className="text-base font-bold text-slate-900 mb-2 leading-snug">{persona.desc}</h4>
-                    </div>
-                    <p className="text-xs text-slate-500 leading-relaxed mt-2">{persona.benefit}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </SectionWrapper>
         </div>
       </section>
 
