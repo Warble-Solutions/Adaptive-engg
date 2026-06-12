@@ -285,47 +285,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 5. MAINTENANCE FIELD OPERATIONS (Light) */}
-      <section className="py-20 bg-white relative z-20 rounded-t-[40px] -mt-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <SectionWrapper>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 select-none pointer-events-none">
-                <img 
-                  src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80" 
-                  alt="Technician maintaining solar installation" 
-                  className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-white text-left">
-                  <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">Field Services</p>
-                  <h4 className="text-lg font-bold">Technician Performing Preventive Maintenance</h4>
-                </div>
-              </div>
-            </SectionWrapper>
-            
-            <SectionWrapper delay={0.2}>
-              <div className="text-left">
-                <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Operations & Maintenance</span>
-                <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-heading">Empowering field technicians with standardized checklists</h3>
-                <p className="text-slate-600 leading-relaxed mb-6 font-medium">
-                  Close the loop on system alerts immediately. Technicians receive detailed work order sheets directly on their mobile devices, outlining standard procedures, target metrics, and mandatory photo verification requirements to ensure consistent compliance across your fleet.
-                </p>
-                <div className="flex items-center gap-3 text-sm font-bold text-slate-800">
-                  <CheckCircle2 className="text-primary w-5 h-5" />
-                  <span>Offline-first mobile capabilities</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm font-bold text-slate-800 mt-2">
-                  <CheckCircle2 className="text-primary w-5 h-5" />
-                  <span>Standardized verification flow with photos</span>
-                </div>
-              </div>
-            </SectionWrapper>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. EXPLORE OTHER SOLUTIONS (Light-Gray) */}
+      {/* 5. EXPLORE OTHER SOLUTIONS (Light-Gray) */}
       <section className="py-24 bg-slate-50 relative z-20 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
@@ -377,16 +337,43 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 7. CTA (Dark) */}
-      <section className="py-20 bg-slate-950 text-center relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">
-        <div className="max-w-2xl mx-auto px-6">
-          <SectionWrapper>
-            <h2 className="text-3xl font-bold text-white mb-6 font-heading">Ready to Optimize Your Maintenance?</h2>
-            <p className="text-gray-400 mb-8 text-base">Get complete control of your O&M activities with AEPL CMMS.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-teal-500/20">
-              Request Demo <ArrowRight className="w-4 h-4" />
-            </Link>
-          </SectionWrapper>
+      {/* 6. CTA (Dark Split Layout) */}
+      <section className="py-24 bg-slate-950 text-left relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            {/* Left — Image */}
+            <div className="lg:col-span-5">
+              <SectionWrapper>
+                <div className="relative rounded-[32px] overflow-hidden border border-slate-800 shadow-2xl select-none pointer-events-none aspect-[4/3] max-w-md mx-auto lg:mx-0">
+                  <img 
+                    src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80" 
+                    alt="Technician maintaining solar installation" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white text-left">
+                    <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-teal-400 mb-1">Field Services</p>
+                    <h4 className="text-base font-extrabold">Technician Performing Preventive Maintenance</h4>
+                  </div>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Right — Text */}
+            <div className="lg:col-span-7">
+              <SectionWrapper delay={0.2}>
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 font-heading leading-tight">
+                  Ready to Optimize Your Maintenance?
+                </h2>
+                <p className="text-gray-400 mb-8 text-base md:text-lg leading-relaxed max-w-xl">
+                  Get complete control of your O&M activities with AEPL CMMS. Standardize processes, prevent system failures, and empower your crews with real-time operational data.
+                </p>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-teal-500/20">
+                  Request Demo <ArrowRight className="w-4 h-4" />
+                </Link>
+              </SectionWrapper>
+            </div>
+          </div>
         </div>
       </section>
 
