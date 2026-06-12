@@ -49,7 +49,7 @@ export default async function TeamPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                         {team.map((member) => (
                             <SectionWrapper key={member.id}>
-                                <div className="group bg-slate-900/95 backdrop-blur-md border border-slate-800/40 rounded-3xl p-6 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 shadow-lg shadow-slate-950/20 transition-all duration-300">
+                                <div className="group bg-slate-900/70 backdrop-blur-md border border-slate-800/40 rounded-3xl p-6 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 shadow-lg shadow-slate-950/20 transition-all duration-300">
                                     <div className="relative aspect-square w-full rounded-2xl bg-slate-950/40 overflow-hidden mb-6">
                                         {member.photoUrl ? (
                                             <Image
@@ -102,7 +102,7 @@ export default async function TeamPage() {
 
                     {team.length === 0 && (
                         <SectionWrapper>
-                            <div className="text-center py-24 bg-slate-900/95 border border-slate-800/40 rounded-3xl">
+                            <div className="text-center py-24 bg-slate-900/70 border border-slate-800/40 rounded-3xl">
                                 <h3 className="text-2xl font-bold text-white font-heading mb-2">Our 300+ strong engineering team</h3>
                                 <p className="text-slate-300 font-medium">Profiles will be updated soon.</p>
                             </div>
