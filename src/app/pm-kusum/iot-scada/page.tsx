@@ -29,15 +29,9 @@ export default function Page() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-white mb-4 font-heading">Solar<span className="text-primary">Wiz</span></h1>
             <p className="text-2xl md:text-3xl font-bold text-gray-400 mb-8">Central Monitoring Portal</p>
-            <div className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed bg-black/30 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 space-y-4">
+            <div className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed bg-black/30 backdrop-blur-sm rounded-xl py-4 px-6 border border-white/10">
               <p>
                 We at <strong className="text-primary">Adaptive Engineering Pvt. Ltd.</strong> are pleased to introduce the Central Monitoring Portal <strong className="text-primary">&ldquo;SolarWiz&rdquo;</strong>.
-              </p>
-              <p>
-                &ldquo;SolarWiz&rdquo; offers a great experience to monitor and analyse plants across geographies at a central location.
-              </p>
-              <p>
-                It collects, aggregates, presents and executes different data model algorithms to calculate individual plant KPIs.
               </p>
             </div>
           </SectionWrapper>
@@ -80,9 +74,12 @@ export default function Page() {
                   Where Edge Hardware Meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Cloud Intelligence</span>
                 </h2>
               </div>
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5 space-y-4">
                 <p className="text-slate-600 leading-relaxed text-lg">
                   Adaptive Engineering Pvt. Ltd. integrates robust field instrumentation with advanced analytics. We capture raw electrical telemetry at the solar field and process it into actionable executive intelligence.
+                </p>
+                <p className="text-slate-500 leading-relaxed text-sm md:text-base">
+                  &ldquo;SolarWiz&rdquo; offers a great experience to monitor and analyse plants across geographies at a central location. It collects, aggregates, presents and executes different data model algorithms to calculate individual plant KPIs.
                 </p>
               </div>
             </div>
