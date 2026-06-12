@@ -41,7 +41,7 @@ export const TUNNEL_STATS = {
 export const WATER_STATS = {
   yearsExperience: { value: 17, suffix: "+", label: "Years Experience" },
   mldTreatedWater: { value: 400, suffix: "+", label: "MLD Treated Water" },
-  supplySchemes: { value: 50, suffix: "+", label: "Supply Schemes" },
+  supplySchemes: { value: 50, suffix: "+", label: "Water Supply Schemes" },
   overheadTanks: { value: 1500, suffix: "+", label: "Over Head Tanks (OHT)", formatted: "1,500+" },
   mldTreatedSewage: { value: 300, suffix: "+", label: "MLD Treated Sewage" },
   pumpingStationsConnected: { value: 10, suffix: "+", label: "Pumping Stations Connected" },
