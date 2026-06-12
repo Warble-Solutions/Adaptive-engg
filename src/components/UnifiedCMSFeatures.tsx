@@ -15,7 +15,7 @@ const FEATURES = [
   {
     id: "realtime",
     icon: <Activity className="w-6 h-6" />,
-    title: "Real-Time Performance",
+    title: "Real-Time Performance Dashboards",
     desc: "Live dashboards featuring complex bullet graphs, dynamic scatter plots, and ultra-configurable views that render real-time KPIs instantly without lag.",
     image: "/imgs/pm-kusum/kusum_ams_1776742293340.png"
   },
@@ -29,7 +29,7 @@ const FEATURES = [
   {
     id: "loss",
     icon: <TrendingDown className="w-6 h-6" />,
-    title: "Loss Bucket Analysis",
+    title: "Loss Analysis & Downtime Tracking",
     desc: "Granular loss mapping enabling operators to precisely identify root causes—whether grid unavailability, inverter clipping, or soiling—to decrease downtime.",
     image: "/imgs/ppc.jpg"
   },
@@ -43,7 +43,7 @@ const FEATURES = [
   {
     id: "reporting",
     icon: <Server className="w-6 h-6" />,
-    title: "Automated Enterprise Reporting",
+    title: "Automated Reporting",
     desc: "Comprehensive automated reporting suites allowing rapid custom parameter selection, scheduling, and multi-format export for C-Suite audits.",
     image: "/imgs/pm-kusum/kusum_reportwiz_1776742405186.png"
   }
@@ -60,7 +60,7 @@ export default function UnifiedCMSFeatures() {
         <SectionWrapper>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400 font-heading mb-6">Deep Intelligence Stack</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">Explore the interactive capabilities natively integrated into AEPL's CMS.</p>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">Explore the interactive capabilities natively integrated into AEPL&apos;s CMS.</p>
           </div>
         </SectionWrapper>
 
