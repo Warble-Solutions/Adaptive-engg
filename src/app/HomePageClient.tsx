@@ -330,74 +330,86 @@ export default function HomePageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* 1. Renewable Solutions */}
             <SectionWrapper delay={0.1}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
-                <div>
-                  <img src="/imgs/solutions/renewable_hybrid.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Renewable Solutions" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Renewable</h3>
-                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">End-to-end services: Conceptualizing, designing, and commissioning electrical systems up to 66KV. Solar, Wind, and Hybrid plant integration.</p>
+              <Link href="/renewable" className="block h-full">
+                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                  <div>
+                    <img src="/imgs/solutions/renewable_hybrid.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Renewable Solutions" />
+                    <h3 className="text-2xl font-bold text-white mb-4">Renewable</h3>
+                    <p className="text-gray-400 leading-relaxed mb-8 text-sm">End-to-end services: Conceptualizing, designing, and commissioning electrical systems up to 66KV. Solar, Wind, and Hybrid plant integration.</p>
+                  </div>
+                  <span className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</span>
                 </div>
-                <Link href="/renewable" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
-              </div>
+              </Link>
             </SectionWrapper>
 
             {/* 2. Electrical Panels */}
             <SectionWrapper delay={0.2}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
-                <div>
-                  <img src="/imgs/solutions/electrical_panels.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Electrical Panels" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Electrical Panels</h3>
-                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Intelligent design and custom manufacturing of high-reliability HT Switchgears, LT Distribution Panels, PCC, MCC, and ACDB panels.</p>
+              <Link href="/renewable/panels" className="block h-full">
+                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                  <div>
+                    <img src="/imgs/solutions/electrical_panels.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Electrical Panels" />
+                    <h3 className="text-2xl font-bold text-white mb-4">Electrical Panels</h3>
+                    <p className="text-gray-400 leading-relaxed mb-8 text-sm">Intelligent design and custom manufacturing of high-reliability HT Switchgears, LT Distribution Panels, PCC, MCC, and ACDB panels.</p>
+                  </div>
+                  <span className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</span>
                 </div>
-                <Link href="/renewable/panels" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
-              </div>
+              </Link>
             </SectionWrapper>
 
             {/* 3. Turnkey E&I */}
             <SectionWrapper delay={0.3}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
-                <div>
-                  <img src="/imgs/solutions/turnkey_ei.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Turnkey E&I" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Turnkey E&I</h3>
-                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Single-point engineering, procurement, and construction (EPC) solutions for solar parks, wind assets, substations, and grid synchronization.</p>
+              <Link href="/renewable/turnkey" className="block h-full">
+                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                  <div>
+                    <img src="/imgs/solutions/turnkey_ei.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Turnkey E&I" />
+                    <h3 className="text-2xl font-bold text-white mb-4">Turnkey E&I</h3>
+                    <p className="text-gray-400 leading-relaxed mb-8 text-sm">Single-point engineering, procurement, and construction (EPC) solutions for solar parks, wind assets, substations, and grid synchronization.</p>
+                  </div>
+                  <span className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</span>
                 </div>
-                <Link href="/renewable/turnkey" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
-              </div>
+              </Link>
             </SectionWrapper>
 
             {/* 4. Water Solutions */}
             <SectionWrapper delay={0.4}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
-                <div>
-                  <img src="/imgs/solutions/water_solutions.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Water Solutions" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Water</h3>
-                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Complete E&I automation and telemetry for water supply schemes, water treatment plants (WTP), sewage treatment plants (STP), and lift irrigation schemes.</p>
+              <Link href="/infrastructure/water" className="block h-full">
+                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                  <div>
+                    <img src="/imgs/solutions/water_solutions.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Water Solutions" />
+                    <h3 className="text-2xl font-bold text-white mb-4">Water</h3>
+                    <p className="text-gray-400 leading-relaxed mb-8 text-sm">Complete E&I automation and telemetry for water supply schemes, water treatment plants (WTP), sewage treatment plants (STP), and lift irrigation schemes.</p>
+                  </div>
+                  <span className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</span>
                 </div>
-                <Link href="/infrastructure/water" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
-              </div>
+              </Link>
             </SectionWrapper>
 
             {/* 5. PM-KUSUM Solutions */}
             <SectionWrapper delay={0.5}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
-                <div>
-                  <img src="/imgs/solutions/pm_kusum.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="PM-KUSUM" />
-                  <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM</h3>
-                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Industrial IoT powered by SolarWiz, WaterWiz, and MachineWiz. Real-time telemetry for agricultural pumps and water supply schemes.</p>
+              <Link href="/pm-kusum" className="block h-full">
+                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                  <div>
+                    <img src="/imgs/solutions/pm_kusum.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="PM-KUSUM" />
+                    <h3 className="text-2xl font-bold text-white mb-4">PM-KUSUM</h3>
+                    <p className="text-gray-400 leading-relaxed mb-8 text-sm">Industrial IoT powered by SolarWiz, WaterWiz, and MachineWiz. Real-time telemetry for agricultural pumps and water supply schemes.</p>
+                  </div>
+                  <span className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</span>
                 </div>
-                <Link href="/pm-kusum" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit z-20 relative">Learn More</Link>
-              </div>
+              </Link>
             </SectionWrapper>
 
             {/* 6. Infrastructure Solutions */}
             <SectionWrapper delay={0.6}>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
-                <div>
-                  <img src="/imgs/solutions/infrastructure_tunnel_entrance.png" className="w-full h-48 rounded-xl object-cover object-[center_75%] mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Infrastructure Solutions" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Infrastructure</h3>
-                  <p className="text-gray-400 leading-relaxed mb-8 text-sm">Specialized safety, ventilation, lighting, and power automation packages for highway tunnels, data centers, and heavy manufacturing.</p>
+              <Link href="/infrastructure/tunnel" className="block h-full">
+                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
+                  <div>
+                    <img src="/imgs/solutions/infrastructure_tunnel_entrance.png" className="w-full h-48 rounded-xl object-cover object-[center_75%] mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Infrastructure Solutions" />
+                    <h3 className="text-2xl font-bold text-white mb-4">Infrastructure</h3>
+                    <p className="text-gray-400 leading-relaxed mb-8 text-sm">Specialized safety, ventilation, lighting, and power automation packages for highway tunnels, data centers, and heavy manufacturing.</p>
+                  </div>
+                  <span className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</span>
                 </div>
-                <Link href="/infrastructure/tunnel" className="text-white text-sm font-bold border-b border-primary pb-1 group-hover:text-primary transition-colors w-fit">Learn More</Link>
-              </div>
+              </Link>
             </SectionWrapper>
           </div>
         </div>
