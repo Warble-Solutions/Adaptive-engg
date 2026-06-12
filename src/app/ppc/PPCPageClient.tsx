@@ -118,7 +118,7 @@ export default function PPCPageClient() {
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-8">
             {[
               {
                 title: "Handles Renewable Complexity",
@@ -145,34 +145,39 @@ export default function PPCPageClient() {
                 desc: "Seamlessly integrates battery storage (BESS) and additional capacity, supporting India's 500GW+ renewable roadmap.",
                 icon: faChartLine
               }
-            ].map((item, i) => (
-              <SectionWrapper key={i} delay={i * 0.1} className="h-full">
-                <div className="group relative bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-500 h-full flex flex-col overflow-hidden hover:-translate-y-2">
-                  {/* Gradient Top Border */}
-                  <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:h-1.5 transition-all duration-300"></div>
+            ].map((item, i) => {
+              const gridClass = i < 2 
+                ? "md:col-span-3 lg:col-span-6" 
+                : "md:col-span-2 lg:col-span-4";
+              return (
+                <SectionWrapper key={i} delay={i * 0.1} className={`${gridClass} h-full`}>
+                  <div className="group relative bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-500 h-full flex flex-col overflow-hidden hover:-translate-y-2">
+                    {/* Gradient Top Border */}
+                    <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:h-1.5 transition-all duration-300"></div>
 
-                  <div className="p-8 flex flex-col flex-grow">
-                    {/* Number Badge & Icon */}
-                    <div className="flex items-start justify-between mb-6">
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-white font-black text-xl">0{i + 1}</span>
+                    <div className="p-8 flex flex-col flex-grow">
+                      {/* Number Badge & Icon */}
+                      <div className="flex items-start justify-between mb-6">
+                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          <span className="text-white font-black text-xl">0{i + 1}</span>
+                        </div>
+
+                        {/* Icon */}
+                        <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:border-primary/50 group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                          <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
+                        </div>
                       </div>
 
-                      {/* Icon */}
-                      <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary group-hover:border-primary/50 group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                        <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
-                      </div>
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
+
+                      {/* Description */}
+                      <p className="text-slate-600 text-sm leading-relaxed flex-grow">{item.desc}</p>
                     </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
-
-                    {/* Description */}
-                    <p className="text-slate-600 text-sm leading-relaxed flex-grow">{item.desc}</p>
                   </div>
-                </div>
-              </SectionWrapper>
-            ))}
+                </SectionWrapper>
+              );
+            })}
           </div>
         </div>
       </section>
