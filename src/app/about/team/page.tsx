@@ -19,7 +19,7 @@ export default async function TeamPage() {
             <SceneTrigger variant="wave" color="#0da08a" speed={1} />
 
             {/* HERO BANNER */}
-            <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden mb-16">
+            <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img 
                         src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80" 
@@ -44,7 +44,8 @@ export default async function TeamPage() {
             </section>
 
             {/* Team Grid Section */}
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <section className="py-24 bg-slate-50 rounded-t-[40px] relative z-20 -mt-20">
+                <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {team.map((member) => (
                         <SectionWrapper key={member.id}>
@@ -108,6 +109,7 @@ export default async function TeamPage() {
                     </SectionWrapper>
                 )}
             </div>
+            </section>
         </main>
     );
 }
