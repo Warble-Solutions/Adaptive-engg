@@ -444,7 +444,7 @@ export default function HomePageClient() {
                 title: "Khavda Hybrid Plant",
                 slug: "khavda-hybrid-plant",
                 category: "Renewable Energy",
-                img: "/imgs/case-studies/cs_solar.png",
+                img: "/imgs/case-studies/khavda-hybrid-plant.png",
                 desc: "High-capacity E&I substation layout, grid synchronization, and analytics for the Khavda hybrid solar-wind complex.",
                 delay: 0.3
               }
