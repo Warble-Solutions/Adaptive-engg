@@ -224,10 +224,10 @@ export default function PanelsPageClient() {
 
                 <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
                   <p>
-                    Our State of Art comprehensive manufacturing facility at Ahmedabad spread across 60,000 sq.ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
+                    Our State of Art comprehensive manufacturing facility at Ahmedabad spread across 125,000 sq. ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
                   </p>
                   <p>
-                    The core strength of our best-in-class Electrical Panels is our intelligent design concepts and the way they are implemented. With over 15+ years of experience, we meet the complex and varying needs of customers with a wide range of tailor-made products.
+                    The core strength of our best-in-class Electrical Panels is our intelligent design concepts and the way they are implemented. With over 17+ years of experience, we meet the complex and varying needs of customers with a wide range of tailor-made products.
                   </p>
                   <p>
                     Our Solid Engineering Strength allows us to provide a full range of electric and automation solutions from conceptualizing, designing, manufacturing, installing, and supporting in-house systems.
