@@ -176,93 +176,76 @@ export default function Page() {
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
               {
                 title: "Automated Workorder Management",
-                desc: "Creates workorders automatically from SCADA alarm triggers, assigning them immediately.",
-                icon: <Wrench className="w-5 h-5 text-primary group-hover:text-white" />,
-                tag: "Automation"
+                desc: "Creates workorders automatically from SCADA alarm triggers, assigning them immediately to the nearest qualified technician to guarantee SLA enforcement.",
+                icon: <Wrench className="w-6 h-6 text-teal-600" />,
+                tag: "Workflows"
               },
               {
                 title: "Standardize SOPs Across Enterprise",
-                desc: "Enforces standardized checklists, image captures, and sequences across every site.",
-                icon: <ClipboardList className="w-5 h-5 text-teal-500 group-hover:text-white" />,
-                tag: "Standardization"
+                desc: "Enforces standardized checklists, mandatory photo captures, and step-by-step verification flows across every single site to guarantee audit readiness.",
+                icon: <ClipboardList className="w-6 h-6 text-emerald-600" />,
+                tag: "SOP Compliance"
               },
               {
                 title: "Reduced Mean Time to Repair",
-                desc: "Minimizes asset downtime through intelligent ticket routing, proximity allocation, and alerts.",
-                icon: <Clock className="w-5 h-5 text-cyan-500 group-hover:text-white" />,
-                tag: "MTTR reduction"
+                desc: "Minimizes downtime through proximity-based auto-routing, skill-level matching, and real-time operational notifications.",
+                icon: <Clock className="w-6 h-6 text-cyan-600" />,
+                tag: "MTTR Optimization"
               },
               {
                 title: "Effective Cost Control & Inventory",
-                desc: "Monitors consumable costs, keeps tabs on vendor invoices, and tracks cost metrics per block.",
-                icon: <Package className="w-5 h-5 text-sky-500 group-hover:text-white" />,
-                tag: "Cost management"
+                desc: "Monitors consumable costs, keeps tabs on vendor invoices, and tracks cost metrics per block to optimize maintenance budgets.",
+                icon: <Package className="w-6 h-6 text-sky-600" />,
+                tag: "Financials"
               },
               {
                 title: "Asset Information Management",
-                desc: "Acts as a centralized library mapping specifications, physical locations, and repair histories.",
-                icon: <Database className="w-5 h-5 text-teal-500 group-hover:text-white" />,
+                desc: "Acts as a centralized library mapping asset details, vendor sheets, physical coordinates, and repair histories.",
+                icon: <Database className="w-6 h-6 text-indigo-600" />,
                 tag: "Repository"
               },
               {
                 title: "Asset Team Management",
-                desc: "Coordinates technician profiles, tracking shift availability, qualifications, and performance metrics.",
-                icon: <Users className="w-5 h-5 text-emerald-500 group-hover:text-white" />,
-                tag: "Teams"
+                desc: "Coordinates technician profiles, shift schedules, safety accreditations, and historical task completion rates.",
+                icon: <Users className="w-6 h-6 text-teal-600" />,
+                tag: "Workforce"
               },
               {
                 title: "Maintenance Management",
-                desc: "Manages preventive and corrective maintenance workflows, verifying SOP completion.",
-                icon: <Cog className="w-5 h-5 text-cyan-500 group-hover:text-white" />,
-                tag: "Maintenance"
+                desc: "Manages preventive and corrective maintenance workflows, verifying checklist status before closure.",
+                icon: <Cog className="w-6 h-6 text-emerald-600" />,
+                tag: "Operations"
               },
               {
                 title: "Inventory Management",
-                desc: "Maintains real-time logs of spare parts, warehouses, transfer orders, and tool allocations.",
-                icon: <Layers className="w-5 h-5 text-primary group-hover:text-white" />,
+                desc: "Maintains real-time inventory records of spare parts, warehouses, transfer orders, and tool allocations.",
+                icon: <Layers className="w-6 h-6 text-cyan-600" />,
                 tag: "Warehouse"
               }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.05} className="h-full">
-                <div className="group relative bg-gradient-to-br from-white to-slate-50/50 rounded-[24px] border border-slate-200/80 hover:border-primary/40 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 ease-out h-full flex flex-col justify-between overflow-hidden hover:-translate-y-2 hover:scale-[1.01] p-6 text-left">
+                <div className="group bg-white rounded-3xl border border-slate-200/70 hover:border-teal-500/30 p-8 shadow-sm hover:shadow-xl hover:shadow-teal-500/[0.02] transition-all duration-300 flex items-start gap-6 h-full text-left">
+                  {/* Left Icon */}
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100/80 group-hover:scale-105 group-hover:bg-teal-50 group-hover:text-teal-600 transition-all duration-300 shadow-sm">
+                    {item.icon}
+                  </div>
                   
-                  {/* Glowing hover bubble */}
-                  <div className="absolute -right-8 -bottom-8 w-28 h-28 bg-primary/[0.03] group-hover:bg-primary/[0.08] rounded-full blur-2xl transition-colors duration-500 pointer-events-none"></div>
-                  
+                  {/* Right Content */}
                   <div>
-                    {/* Header Row */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-slate-100 group-hover:bg-primary transition-all duration-500 shadow-sm group-hover:scale-110">
-                        {item.icon}
-                      </div>
-                      <span className="px-2.5 py-0.5 bg-slate-100 text-slate-400 group-hover:bg-primary/10 group-hover:text-primary text-[9px] font-mono font-bold rounded-full tracking-wider transition-all duration-300">
-                        PILLAR 0{i + 1}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-sm font-extrabold text-slate-900 mb-2 group-hover:text-primary transition-colors duration-300 leading-snug">
+                    <span className="text-[10px] font-mono font-bold text-teal-600 uppercase tracking-wider block mb-1">
+                      {item.tag} • PILLAR 0{i + 1}
+                    </span>
+                    <h3 className="text-xl font-extrabold text-slate-900 mb-2 leading-snug group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
-                    
-                    {/* Description */}
-                    <p className="text-slate-500 text-[11px] leading-relaxed font-medium">
+                    <p className="text-slate-500 text-sm leading-relaxed font-medium">
                       {item.desc}
                     </p>
                   </div>
-
-                  {/* Footer Row */}
-                  <div className="flex items-center justify-between mt-6 pt-3 border-t border-slate-100/85 relative z-10">
-                    <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider group-hover:text-primary transition-colors">
-                      {item.tag}
-                    </span>
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-primary group-hover:translate-x-1.5 transition-all duration-300" />
-                  </div>
-
                 </div>
               </SectionWrapper>
             ))}
