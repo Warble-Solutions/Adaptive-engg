@@ -21,7 +21,7 @@ const slides = [
         id: 2,
         title: "PM-KUSUM Solutions",
         tagline: "India's Most Trusted Company",
-        image: "/imgs/farm.jpg",
+        image: "/imgs/banner/pm_kusum_hero.png",
         subtext: "Revolutionizing Agriculture through Smart Solar Pumping & Next-Gen IoT Solutions",
         cta: "View Solutions",
         link: "/pm-kusum",
