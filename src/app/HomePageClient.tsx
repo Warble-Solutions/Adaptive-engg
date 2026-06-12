@@ -247,7 +247,7 @@ export default function HomePageClient() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 z-10">
-                    <h3 className="text-base font-bold text-white leading-tight">State-of-the-art manufacturing plant</h3>
+                    <h3 className="text-base font-bold text-white leading-tight">State-of-the-Art Manufacturing Facility</h3>
                   </div>
                 </div>
               </SectionWrapper>
