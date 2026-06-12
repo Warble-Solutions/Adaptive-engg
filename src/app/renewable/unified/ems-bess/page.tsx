@@ -14,15 +14,15 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="flex flex-col w-full text-slate-900 bg-slate-955">
+    <div className="flex flex-col w-full text-slate-900 bg-slate-950">
 
       {/* 1. HERO — Split Layout (Dark) */}
       <section className="section-hero relative min-h-screen flex items-center px-6 pt-32 pb-20 overflow-hidden">
         {/* Background Image with Tint */}
         <div className="absolute inset-0 z-0">
           <img src="/images/renewable/ems-bess-hero-bg.png" alt="EMS-BESS Solutions" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-slate-955/85"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-955/80 via-transparent to-slate-955/95"></div>
+          <div className="absolute inset-0 bg-slate-950/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-transparent to-slate-950/95"></div>
         </div>
 
         <div className="absolute inset-0 z-0">
@@ -308,7 +308,7 @@ export default function Page() {
                 {/* Dark teal tint overlay */}
                 <div className="absolute inset-0 bg-teal-950/20 mix-blend-multiply"></div>
                 {/* Deep bottom gradient for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-955/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white text-left">
                   <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">Battery Storage</p>
                   <h4 className="text-lg font-bold">Utility-Scale BESS Enclosures</h4>
