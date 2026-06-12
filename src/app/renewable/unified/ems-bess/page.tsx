@@ -22,7 +22,7 @@ export default function Page() {
         <div className="absolute inset-0 z-0">
           <img src="/images/renewable/ems-bess-hero-bg.png" alt="EMS-BESS Solutions" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-slate-950/85"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-transparent to-slate-950/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-transparent to-slate-950/95"></div>
         </div>
 
         <div className="absolute inset-0 z-0">
@@ -127,18 +127,18 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 3. FEATURES & BENEFITS (Light-Gray) */}
-      <section className="py-24 bg-slate-50 relative z-10 border-b border-slate-200">
+      {/* 3. FEATURES & BENEFITS (Dark Redesign) */}
+      <section className="py-24 bg-[#0b0f17] text-white relative z-10 border-b border-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <span className="text-xs font-mono font-bold text-primary uppercase tracking-[0.2em] mb-3 block">
+              <span className="text-xs font-mono font-bold text-teal-400 uppercase tracking-[0.2em] mb-3 block">
                 AEPL Technologies
               </span>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">
+              <h2 className="text-4xl font-bold text-white mb-4 font-heading">
                 Features & Benefits
               </h2>
-              <p className="text-slate-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+              <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
                 Advanced battery management capabilities and smart grid synchronization tools built in-house.
               </p>
             </SectionWrapper>
@@ -149,60 +149,60 @@ export default function Page() {
               {
                 title: "Multiple operating modes",
                 desc: "Supports Peak Shaving, Frequency Regulation, Volt-Var control, and Load Following options.",
-                icon: <Sliders className="w-5 h-5 text-primary group-hover:text-white" />,
+                icon: <Sliders className="w-5 h-5 text-teal-400 group-hover:text-white" />,
                 tag: "Control Modes"
               },
               {
                 title: "Automated SoC balancing",
                 desc: "Actively balances cell blocks during idle times to keep capacity metrics uniform across banks.",
-                icon: <Battery className="w-5 h-5 text-teal-500 group-hover:text-white" />,
+                icon: <Battery className="w-5 h-5 text-emerald-400 group-hover:text-white" />,
                 tag: "SOC Management"
               },
               {
                 title: "Avoid thermal run away",
                 desc: "Supervises cell temperatures to shut down failing circuits before fire risks occur.",
-                icon: <AlertTriangle className="w-5 h-5 text-rose-500 group-hover:text-white" />,
+                icon: <AlertTriangle className="w-5 h-5 text-rose-400 group-hover:text-white" />,
                 tag: "Safety Systems"
               },
               {
                 title: "Advanced analytics",
                 desc: "Calculates State of Health (SOH) and round-trip efficiency (RTE) through predictive regression models.",
-                icon: <BarChart3 className="w-5 h-5 text-cyan-500 group-hover:text-white" />,
+                icon: <BarChart3 className="w-5 h-5 text-cyan-400 group-hover:text-white" />,
                 tag: "Data Modeling"
               },
               {
                 title: "Energy arbitrage",
                 desc: "Uses dynamic rate tracking to charge at low tariff windows and discharge during load peaks.",
-                icon: <TrendingUp className="w-5 h-5 text-indigo-500 group-hover:text-white" />,
+                icon: <TrendingUp className="w-5 h-5 text-indigo-400 group-hover:text-white" />,
                 tag: "Arbitrage"
               },
               {
                 title: "Fault diagnosis",
                 desc: "Detects failing contactors, communications dropouts, and high resistance connections instantly.",
-                icon: <Wrench className="w-5 h-5 text-teal-500 group-hover:text-white" />,
+                icon: <Wrench className="w-5 h-5 text-teal-400 group-hover:text-white" />,
                 tag: "Diagnostics"
               },
               {
                 title: "Cell-Level monitoring",
                 desc: "Tracks volt and temp parameters at individual cell groups to identify weak containers.",
-                icon: <Layers className="w-5 h-5 text-emerald-500 group-hover:text-white" />,
+                icon: <Layers className="w-5 h-5 text-emerald-400 group-hover:text-white" />,
                 tag: "Granularity"
               },
               {
                 title: "SCADA & third-party integration",
                 desc: "Connects with plant controllers and utility centers via Modbus TCP, DNP3, and IEC 104 drivers.",
-                icon: <Monitor className="w-5 h-5 text-sky-500 group-hover:text-white" />,
+                icon: <Monitor className="w-5 h-5 text-sky-400 group-hover:text-white" />,
                 tag: "Connectivity"
               },
               {
                 title: "Grid support (CEA regulations)",
                 desc: "Guarantees full compliance with Central Electricity Authority rules for active/reactive power dispatch.",
-                icon: <Globe className="w-5 h-5 text-primary group-hover:text-white" />,
+                icon: <Globe className="w-5 h-5 text-teal-400 group-hover:text-white" />,
                 tag: "Compliance"
               }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.05} className="h-full">
-                <div className="group relative bg-gradient-to-br from-white to-slate-50/50 rounded-[28px] border border-slate-200/80 hover:border-primary/40 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 ease-out h-full flex flex-col justify-between overflow-hidden hover:-translate-y-2 hover:scale-[1.01] p-8 text-left">
+                <div className="group relative bg-white/[0.03] backdrop-blur-sm rounded-[28px] border border-white/10 hover:border-teal-500/50 hover:bg-white/[0.05] hover:shadow-2xl hover:shadow-teal-500/5 transition-all duration-500 ease-out h-full flex flex-col justify-between overflow-hidden hover:-translate-y-2 hover:scale-[1.01] p-8 text-left">
                   
                   {/* Subtle top-right ambient hover highlight */}
                   <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/[0.03] group-hover:bg-primary/[0.08] rounded-full blur-2xl transition-colors duration-500 pointer-events-none"></div>
@@ -210,31 +210,31 @@ export default function Page() {
                   <div>
                     {/* Header Row */}
                     <div className="flex items-center justify-between mb-8">
-                      <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center border border-slate-100 group-hover:bg-primary transition-all duration-500 shadow-sm group-hover:scale-110">
+                      <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-primary transition-all duration-500 shadow-sm group-hover:scale-110">
                         {item.icon}
                       </div>
-                      <span className="px-3 py-1 bg-slate-100 text-slate-400 group-hover:bg-primary/10 group-hover:text-primary text-[10px] font-mono font-bold rounded-full tracking-wider transition-all duration-300">
+                      <span className="px-3 py-1 bg-white/5 text-slate-500 group-hover:bg-primary/10 group-hover:text-primary text-[10px] font-mono font-bold rounded-full tracking-wider transition-all duration-300">
                         0{i + 1}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300 leading-snug">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-teal-400 transition-colors duration-300 leading-snug">
                       {item.title}
                     </h3>
                     
                     {/* Description */}
-                    <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                    <p className="text-slate-400 text-sm leading-relaxed font-medium">
                       {item.desc}
                     </p>
                   </div>
 
                   {/* Footer Row */}
-                  <div className="flex items-center justify-between mt-8 pt-4 border-t border-slate-100/85 relative z-10">
-                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider group-hover:text-primary transition-colors">
+                  <div className="flex items-center justify-between mt-8 pt-4 border-t border-white/5 relative z-10">
+                    <span className="text-[10px] text-slate-500 group-hover:text-teal-400 font-bold uppercase tracking-wider transition-colors">
                       {item.tag}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-primary group-hover:translate-x-1.5 transition-all duration-300" />
+                    <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-primary group-hover:translate-x-1.5 transition-all duration-300" />
                   </div>
 
                 </div>
@@ -244,14 +244,14 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 4. HYBRID PLANT INTEGRATION (Dark background) */}
-      <section className="py-24 bg-[#0b0f17] text-white border-t border-slate-900 relative z-20">
+      {/* 4. HYBRID PLANT INTEGRATION (Light Redesign) */}
+      <section className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SectionWrapper>
               <div className="text-left">
-                <h2 className="text-4xl font-bold mb-6 font-heading">Hybrid Plant Intelligence</h2>
-                <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                <h2 className="text-4xl font-bold mb-6 font-heading text-slate-900">Hybrid Plant Intelligence</h2>
+                <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
                   Our EMS seamlessly integrates with Solar, Wind, and Grid assets for intelligent energy dispatch. The AI engine optimizes across all sources in real-time.
                 </p>
                 <div className="grid grid-cols-3 gap-6">
@@ -260,9 +260,9 @@ export default function Page() {
                     { icon: <Wind className="w-8 h-8" />, label: "Wind" },
                     { icon: <Battery className="w-8 h-8" />, label: "BESS" },
                   ].map((item, i) => (
-                    <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center hover:border-primary/50 hover:shadow-xl hover:bg-white/10 transition-all duration-300">
+                    <div key={i} className="p-6 bg-slate-50 border border-slate-200/80 rounded-2xl text-center hover:border-primary/50 hover:shadow-xl hover:bg-white transition-all duration-300">
                       <div className="text-primary mb-3 flex justify-center">{item.icon}</div>
-                      <span className="text-sm font-bold text-white">{item.label}</span>
+                      <span className="text-sm font-bold text-slate-900">{item.label}</span>
                     </div>
                   ))}
                 </div>
@@ -277,29 +277,29 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 5. ENERGY STORAGE SOLUTIONS IMAGE SECTION (Light) */}
-      <section className="py-20 bg-white relative z-20 rounded-t-[40px] -mt-10">
+      {/* 5. ENERGY STORAGE SOLUTIONS IMAGE SECTION (Dark Redesign) */}
+      <section className="py-20 bg-[#0b0f17] relative z-10 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SectionWrapper>
               <div className="text-left">
-                <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Grid Stabilization</span>
-                <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-heading">Indigenous EMS for utility-scale BESS integration</h3>
-                <p className="text-slate-600 leading-relaxed mb-6 font-medium">
+                <span className="text-xs font-bold text-teal-400 uppercase tracking-widest block mb-4">Grid Stabilization</span>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 font-heading">Indigenous EMS for utility-scale BESS integration</h3>
+                <p className="text-slate-400 leading-relaxed mb-6 font-medium">
                   Optimize battery performance and prolong cell lifecycles. AEPL&apos;s Energy Management System coordinates state-of-charge balancing, schedules charge cycles for peak solar and wind generation, and dispatches stored energy during peak grid pricing hours to maximize commercial arbitrage.
                 </p>
-                <div className="flex items-center gap-3 text-sm font-bold text-slate-800">
-                  <CheckCircle2 className="text-primary w-5 h-5" />
+                <div className="flex items-center gap-3 text-sm font-bold text-slate-200">
+                  <CheckCircle2 className="text-teal-400 w-5 h-5" />
                   <span>State of charge optimization algorithms</span>
                 </div>
-                <div className="flex items-center gap-3 text-sm font-bold text-slate-800 mt-2">
-                  <CheckCircle2 className="text-primary w-5 h-5" />
+                <div className="flex items-center gap-3 text-sm font-bold text-slate-200 mt-2">
+                  <CheckCircle2 className="text-teal-400 w-5 h-5" />
                   <span>Real-time grid support & peak shaving</span>
                 </div>
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 select-none pointer-events-none group">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800 select-none pointer-events-none group">
                 <img 
                   src="/images/renewable/hybrid_renewable_site.png" 
                   alt="Battery Energy Storage Container" 
@@ -319,12 +319,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 6. VALUE CREATION (Light-Gray) */}
-      <section className="py-24 bg-slate-50 relative z-20 border-t border-slate-200">
+      {/* 6. VALUE CREATION (Light Redesign) */}
+      <section className="py-24 bg-white relative z-20 rounded-t-[40px] -mt-10 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-teal-500/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-650 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-teal-500/20">
                 <TrendingUp className="w-4 h-4" />
                 <span>Financial & Operational Benefits</span>
               </div>
@@ -377,9 +377,9 @@ export default function Page() {
               }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.05} className="h-full">
-                <div className="group bg-white rounded-3xl border border-slate-200/70 hover:border-teal-500/30 p-8 shadow-sm hover:shadow-xl hover:shadow-teal-500/[0.02] transition-all duration-300 flex items-start gap-6 h-full text-left">
+                <div className="group bg-slate-50/50 hover:bg-white rounded-3xl border border-slate-200/70 hover:border-teal-500/30 p-8 shadow-sm hover:shadow-xl hover:shadow-teal-500/[0.02] transition-all duration-300 flex items-start gap-6 h-full text-left">
                   {/* Left Icon */}
-                  <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 group-hover:scale-105 group-hover:bg-teal-50 group-hover:text-teal-600 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200/40 group-hover:scale-105 group-hover:bg-teal-50 group-hover:text-teal-600 transition-all duration-300">
                     {item.icon}
                   </div>
                   
@@ -402,8 +402,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 7. OTHER SOLUTIONS (Light) */}
-      <section className="py-24 bg-white relative z-20">
+      {/* 7. OTHER SOLUTIONS (Light-Gray transition) */}
+      <section className="py-24 bg-slate-50 relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-12">
