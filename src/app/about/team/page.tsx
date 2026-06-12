@@ -19,7 +19,7 @@ export default async function TeamPage() {
             <SceneTrigger variant="wave" color="#0da08a" speed={1} />
 
             {/* HERO BANNER */}
-            <section className="section-hero relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden mb-16">
+            <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden mb-16">
                 <div className="absolute inset-0 z-0">
                     <img 
                         src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80" 

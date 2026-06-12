@@ -20,7 +20,7 @@ export default async function CareersPage() {
       <SceneTrigger variant="solar" color="#0da08a" speed={0.8} />
 
       {/* HERO BANNER */}
-      <section className="section-hero relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden">
+      <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="/imgs/careers_banner.png" 
