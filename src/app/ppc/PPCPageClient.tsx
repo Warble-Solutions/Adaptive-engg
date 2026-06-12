@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, Activity, Network, Zap, Lock, Server, CheckCircle2, Database, Cpu, Globe, Monitor, Eye, Wrench, Battery, BarChart3 } from "lucide-react";
+import { ArrowRight, ShieldCheck, Activity, Network, Zap, Lock, Server, CheckCircle2, Database, Cpu, Globe, Monitor, Eye, Wrench, Battery, BarChart3, RefreshCw } from "lucide-react";
 import MicroCTA from "@/components/ui/MicroCTA";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -260,7 +260,7 @@ export default function PPCPageClient() {
                 <div>
                   <div className="mb-12">
                     <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                      <Activity className="text-red-400 w-6 h-6" /> Fast Loop Control
+                      <RefreshCw className="text-red-400 w-6 h-6 animate-spin-slow" /> Fast Loop Control
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       Sub-second response times (&lt;200ms) to counteract sudden grid changes. Automated ramp-rate control and active power limiting prevent plant trips and equipment stress.
