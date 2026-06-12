@@ -27,7 +27,7 @@ export default function Page() {
  <span>PM-KUSUM</span>
  </div>
  <h1 className="text-4xl md:text-7xl font-black text-white mb-4 font-heading leading-tight">
- HT Panel <span className="gradient-heading">Solutions</span>
+ HT <span className="gradient-heading">Panel</span>
  </h1>
  <p className="text-2xl md:text-3xl font-bold text-teal-400/80 mb-6">VCB Panel up to 33kV / 11kV</p>
  <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">

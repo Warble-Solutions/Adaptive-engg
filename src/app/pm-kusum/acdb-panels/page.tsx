@@ -29,7 +29,7 @@ export default function Page() {
  <span>PM-KUSUM</span>
  </div>
  <h1 className="text-5xl md:text-7xl font-black text-white mb-4 font-heading">
- ACDB Panel <span className="gradient-heading">Solutions</span>
+ ACDB <span className="gradient-heading">Panel</span>
  </h1>
  <p className="text-gray-300 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed mt-6">
  IP65 rated AC Distribution Boards for PM-KUSUM solar pump connections with surge protection and isolation. Built for India&apos;s harshest field conditions — deserts, coastal humidity, and monsoon rains.
