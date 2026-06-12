@@ -176,10 +176,6 @@ export default function HomePageClient() {
                   </p>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
-                  <span>GUIDING STAR</span>
-                  <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
-                </div>
               </div>
             </SectionWrapper>
 
@@ -204,10 +200,6 @@ export default function HomePageClient() {
                   </p>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono relative z-10">
-                  <span>DAILY COMPASS</span>
-                  <div className="h-2 w-2 rounded-full bg-teal-600 animate-pulse"></div>
-                </div>
               </div>
             </SectionWrapper>
           </div>
