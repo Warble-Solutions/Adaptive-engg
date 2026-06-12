@@ -38,8 +38,9 @@ export default function PPCPageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <SectionWrapper>
               <div className="text-left">
-                <div className="inline-flex items-center px-4 py-2 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
-                  India&apos;s Preferred Renewable Energy Technology Partner
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-500/10 backdrop-blur-sm text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
+                  <Zap className="w-4 h-4" />
+                  <span>Unified Control Solution</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading">
                   Power <span className="gradient-heading">Plant Control</span>
