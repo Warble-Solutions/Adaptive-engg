@@ -20,27 +20,32 @@ export default function ScadaPageClient() {
     {
       title: "Optimized Performance",
       desc: "Maximizes energy yield through efficient monitoring, control, and system optimization.",
-      icon: <Zap className="w-6 h-6 text-teal-400" />
+      icon: <Zap className="w-6 h-6 text-teal-600" />,
+      bg: "bg-teal-50"
     },
     {
       title: "Improved Asset Availability",
       desc: "Enhances plant uptime by reducing unexpected failures and minimizing downtime.",
-      icon: <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+      icon: <CheckCircle2 className="w-6 h-6 text-emerald-600" />,
+      bg: "bg-emerald-50"
     },
     {
       title: "Reduced O&M Costs",
       desc: "Lowers operational expenses through automation, predictive maintenance, and efficient resource utilization.",
-      icon: <Wrench className="w-6 h-6 text-cyan-400" />
+      icon: <Wrench className="w-6 h-6 text-cyan-600" />,
+      bg: "bg-cyan-50"
     },
     {
       title: "Better Decision-Making",
       desc: "Enables informed and timely decisions with actionable insights derived from real-time and historical data.",
-      icon: <BarChart3 className="w-6 h-6 text-sky-400" />
+      icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
+      bg: "bg-sky-50"
     },
     {
       title: "Grid Code Compliance (First-Time Right)",
       desc: "Ensures smooth commissioning and adherence to regulatory standards without rework or delays.",
-      icon: <ShieldCheck className="w-6 h-6 text-teal-400" />
+      icon: <ShieldCheck className="w-6 h-6 text-teal-600" />,
+      bg: "bg-teal-50"
     }
   ];
 
@@ -206,7 +211,7 @@ export default function ScadaPageClient() {
                   <Monitor className="w-4 h-4" />
                   <span>Unified Control Solutions</span>
                 </div>
-                <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight animate-fade-in">
+                <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
                   <span className="gradient-heading">SCADA</span>
                 </h1>
                 <p className="text-gray-300 text-base md:text-lg font-medium max-w-lg leading-relaxed mb-8">
@@ -233,19 +238,19 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 2. POWERING THE FUTURE OF RENEWABLE OPERATIONS (Convert to Immersive Dark) */}
-      <section className="py-24 bg-slate-950 text-white relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">
+      {/* 2. POWERING THE FUTURE OF RENEWABLE OPERATIONS (Section 2: Light for visual break) */}
+      <section className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
               <span className="text-xs font-mono font-bold text-primary uppercase tracking-[0.2em] mb-3 block">
                 AEPL Operational Impact
               </span>
-              <h2 className="text-3xl md:text-5xl font-black text-white font-heading mb-4 leading-tight tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-black text-slate-950 font-heading mb-4 leading-tight tracking-tight">
                 Powering the Future <br className="hidden sm:block" />
                 <span className="gradient-heading">of Renewable Operations</span>
               </h2>
-              <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+              <p className="text-slate-500 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
                 Supervisory systems built to maximize energy yield, enhance asset lifespan, and lower operational complexity across multi-GW portfolios.
               </p>
             </SectionWrapper>
@@ -254,16 +259,16 @@ export default function ScadaPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {futureOperations.map((item, idx) => (
               <SectionWrapper key={idx} delay={idx * 0.05}>
-                <div className="p-6 bg-white/5 border border-white/10 rounded-2xl shadow-lg hover:border-primary/40 hover:bg-white/10 transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="p-6 bg-slate-50 border border-slate-200/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col justify-between h-full group">
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                    <div className={`w-12 h-12 rounded-xl ${item.bg} flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
                       {item.icon}
                     </div>
-                    <h3 className="text-sm font-extrabold text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+                    <h3 className="text-sm font-extrabold text-slate-950 mb-3 group-hover:text-primary transition-colors leading-snug">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-[11px] text-gray-400 leading-relaxed font-medium">
+                  <p className="text-[11px] text-slate-500 leading-relaxed font-medium">
                     {item.desc}
                   </p>
                 </div>
@@ -273,7 +278,7 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 3. CORE DOMAIN-SPECIFIC SCADA OFFERINGS (Redesigned as Dark Control Console) */}
+      {/* 3. CORE DOMAIN-SPECIFIC SCADA OFFERINGS (Section 3: Dark Control Console) */}
       <section id="scada-showcase" className="py-24 bg-slate-900 text-white border-t border-slate-800 relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           
@@ -291,7 +296,7 @@ export default function ScadaPageClient() {
             </SectionWrapper>
           </div>
 
-          {/* Redesigned Selector Cards - Top Horizontal Bar */}
+          {/* Selector Cards - Top Horizontal Bar */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {scadaPillars.map((pillar, idx) => {
               const isActive = activeTab === idx;
@@ -465,8 +470,8 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 4. GAIN SUPERIOR CONTROL WITH AEPL PLANT SCADA (Convert to Immersive Dark) */}
-      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-slate-900">
+      {/* 4. GAIN SUPERIOR CONTROL WITH AEPL PLANT SCADA (Section 4: Light for visual break) */}
+      <section className="py-24 bg-white text-slate-900 relative z-20 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Left side description */}
@@ -476,11 +481,11 @@ export default function ScadaPageClient() {
                   <Sliders className="w-3.5 h-3.5" />
                   <span>Superior Control</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-black text-white font-heading leading-tight">
+                <h2 className="text-3xl md:text-4xl font-black text-slate-950 font-heading leading-tight">
                   Gain Superior Control <br />
                   <span className="gradient-heading">with AEPL Plant SCADA</span>
                 </h2>
-                <p className="text-gray-400 text-sm leading-relaxed font-medium">
+                <p className="text-slate-600 text-sm leading-relaxed font-medium">
                   Designed for real-time grid responsiveness, rapid fault isolation, and highly granular performance analytics at local operator stations.
                 </p>
               </SectionWrapper>
@@ -488,13 +493,13 @@ export default function ScadaPageClient() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {superiorControl.map((item, idx) => (
                   <SectionWrapper key={idx} delay={idx * 0.05}>
-                    <div className="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-start gap-4 hover:border-primary/25 transition-colors duration-300 h-full">
-                      <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center shrink-0 text-primary">
+                    <div className="p-5 bg-slate-50 border border-slate-200/50 rounded-2xl flex items-start gap-4 hover:border-primary/25 transition-colors duration-300 h-full">
+                      <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-primary">
                         <CheckCircle2 className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-black text-white mb-1 leading-snug">{item.label}</h4>
-                        <p className="text-[10px] text-gray-400 leading-relaxed font-medium">{item.val}</p>
+                        <h4 className="text-xs font-black text-slate-950 mb-1 leading-snug">{item.label}</h4>
+                        <p className="text-[10px] text-slate-500 leading-relaxed font-medium">{item.val}</p>
                       </div>
                     </div>
                   </SectionWrapper>
@@ -554,8 +559,8 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 5. PROTOCOLS & DEVICES */}
-      <section className="py-24 bg-transparent text-white relative z-10 border-t border-white/5">
+      {/* 5. PROTOCOLS & DEVICES (Section 5: Dark for visual break) */}
+      <section className="py-24 bg-slate-955 bg-[#0b0f17] text-white relative z-20 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">
@@ -622,8 +627,8 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 7. EXPLORE OTHER SOLUTIONS (Light) */}
-      <section className="py-24 bg-white text-slate-900 border-t border-slate-100 relative z-20">
+      {/* 7. EXPLORE OTHER SOLUTIONS (Light-Gray transition) */}
+      <section className="py-24 bg-slate-50 text-slate-900 border-t border-slate-200 relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
@@ -676,7 +681,7 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 8. CTA (Convert to Immersive Dark) */}
+      {/* 8. CTA (Immersive Dark) */}
       <section className="py-24 bg-slate-950 text-white text-center relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>
