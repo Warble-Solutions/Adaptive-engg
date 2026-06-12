@@ -281,12 +281,12 @@ export default function Page() {
               {
                 title: "Advanced analytics & loss bucket analysis",
                 desc: "Identify generation leaks at inverter levels and map losses to grid, environment, or equipment issues.",
-                icon: <BarChart3 className="w-5 h-5 text-cyan-400" />
+                icon: <BarChart3 className="w-5 h-5 text-teal-400" />
               },
               {
                 title: "Predictive maintenance & anomaly detection",
                 desc: "AI/ML algorithms trace failure indicators in strings and components to prevent shutdowns.",
-                icon: <Zap className="w-5 h-5 text-sky-400" />
+                icon: <Zap className="w-5 h-5 text-emerald-400" />
               },
               {
                 title: "Automated reporting & data intelligence",
@@ -301,12 +301,12 @@ export default function Page() {
               {
                 title: "Enterprise dashboards for management",
                 desc: "Tailored C-suite dashboards summarizing key financial, compliance, and operation statistics.",
-                icon: <Monitor className="w-5 h-5 text-cyan-400" />
+                icon: <Monitor className="w-5 h-5 text-teal-400" />
               },
               {
                 title: "Secure data infrastructure",
                 desc: "High-integrity telemetry paths using encrypted pipelines to preserve data availability.",
-                icon: <Server className="w-5 h-5 text-sky-400" />
+                icon: <Server className="w-5 h-5 text-emerald-400" />
               },
               {
                 title: "Cyber security",

@@ -29,15 +29,9 @@ export default function Page() {
     Central Monitoring<br />
     <span className="gradient-heading">System (CMS)</span>
   </h1>
-  <div className="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed bg-black/30 backdrop-blur-md rounded-2xl py-6 px-8 border border-white/10 space-y-4 mt-6">
+  <div className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed bg-black/30 backdrop-blur-md rounded-xl py-4 px-6 border border-white/10 mt-6">
     <p>
       We at <strong className="text-teal-400">Adaptive Engineering Pvt. Ltd.</strong> are pleased to introduce the Central Monitoring Portal <strong className="text-teal-400">&ldquo;SolarWiz&rdquo;</strong>.
-    </p>
-    <p>
-      &ldquo;SolarWiz&rdquo; offers a great experience to monitor and analyse plants across geographies at a central location.
-    </p>
-    <p>
-      It collects, aggregates, presents and executes different data model algorithms to calculate individual plant KPIs.
     </p>
   </div>
  </SectionWrapper>
@@ -56,7 +50,12 @@ export default function Page() {
  <span>Operational Excellence</span>
  </div>
  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500">Highlights</span></h2>
- <p className="text-slate-500 text-lg leading-relaxed mb-8">Achieve total transparency and granular control over your PM-KUSUM decentralized portfolio with AEPL&apos;s intelligent insights.</p>
+ <div className="space-y-4 mb-8">
+   <p className="text-slate-500 text-lg leading-relaxed">Achieve total transparency and granular control over your PM-KUSUM decentralized portfolio with AEPL&apos;s intelligent insights.</p>
+   <p className="text-slate-400 text-sm leading-relaxed">
+     &ldquo;SolarWiz&rdquo; offers a great experience to monitor and analyse plants across geographies at a central location. It collects, aggregates, presents and executes different data model algorithms to calculate individual plant KPIs.
+   </p>
+ </div>
  </SectionWrapper>
  </div>
  </div>
