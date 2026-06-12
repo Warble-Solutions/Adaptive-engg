@@ -196,8 +196,13 @@ export default function ScadaPageClient() {
       {/* 1. HERO (Dark Immersive with Split Layout) */}
       <section className="section-hero relative min-h-screen flex items-center px-6 pt-24 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#071926] to-slate-950">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity z-0"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950 z-10"></div>
+          <img 
+            src="/images/renewable/scada_hero_bg.png" 
+            alt="Renewable SCADA Control Operations Center" 
+            className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-slate-950/85 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/45 to-slate-950 z-10"></div>
           <div className="absolute inset-0 opacity-5 z-10" style={{ backgroundImage: 'linear-gradient(rgba(4,154,137,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(4,154,137,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[140px] z-10"></div>
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-[120px] z-10"></div>
