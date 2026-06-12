@@ -67,78 +67,80 @@ export default function Page() {
       {/* 2. KEY BENEFITS (Light) */}
       <section className="py-24 bg-white rounded-t-[40px] relative z-20 -mt-10 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-16">
-            <div className="lg:w-1/3">
-              <div className="lg:sticky lg:top-32">
-                <SectionWrapper>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/20">
-                    <TrendingDown className="w-4 h-4" />
-                    <span>Portfolio Optimization</span>
-                  </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-6 leading-tight">
-                    Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Benefits</span>
-                  </h2>
-                  <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-8">
-                    Deploying AEPL&apos;s Central Monitoring System unlocks an unparalleled suite of analytics and performance enhancements across your entire grid.
-                  </p>
-                </SectionWrapper>
+          
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-teal-500/20">
+                <TrendingDown className="w-4 h-4" />
+                <span>Portfolio Optimization</span>
               </div>
-            </div>
-            
-            <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                { 
-                  title: "Complete Portfolio Visibility", 
-                  desc: "Centralized oversight across multiple states and assets from a single unified management dashboard.",
-                  icon: <Eye className="w-6 h-6 text-teal-600" />,
-                  bg: "bg-teal-50"
-                },
-                { 
-                  title: "Improved Plant Performance", 
-                  desc: "Optimize yield, PR, and generation metrics natively through deep cross-plant analytics.",
-                  icon: <BarChart3 className="w-6 h-6 text-emerald-600" />,
-                  bg: "bg-emerald-50"
-                },
-                { 
-                  title: "Reduced Downtime", 
-                  desc: "Identify underperforming strings or equipment faults seconds after they occur for immediate dispatch.",
-                  icon: <TrendingDown className="w-6 h-6 text-cyan-600" />,
-                  bg: "bg-cyan-50"
-                },
-                { 
-                  title: "Accurate Energy Insights", 
-                  desc: "Extract actionable meaning from raw SCADA telemetry with automated loss bucket analysis.",
-                  icon: <Zap className="w-6 h-6 text-sky-600" />,
-                  bg: "bg-sky-50"
-                },
-                { 
-                  title: "Scalable & Secure Platform", 
-                  desc: "Cloud-native elastic architecture built atop encrypted data systems to guarantee uptime and security.",
-                  icon: <Shield className="w-6 h-6 text-teal-600" />,
-                  bg: "bg-teal-50"
-                },
-                { 
-                  title: "Faster Fault Detection", 
-                  desc: "Instant anomaly detection warns operators of discrepancies before failures manifest.",
-                  icon: <Activity className="w-6 h-6 text-emerald-600" />,
-                  bg: "bg-emerald-50"
-                }
-              ].map((item, i) => (
-                <SectionWrapper key={i} delay={i * 0.1}>
-                  <div className="p-6 rounded-3xl border border-slate-200/60 bg-white shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col justify-between group hover:-translate-y-1">
-                    <div>
-                      <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border border-slate-100 ${item.bg} group-hover:scale-105 transition-transform duration-300`}>
-                        {item.icon}
-                      </div>
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-primary transition-colors">
-                        {item.title}
-                      </h3>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-4 leading-tight">
+                Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Benefits</span>
+              </h2>
+              <p className="text-slate-500 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                Deploying AEPL&apos;s Central Monitoring System unlocks an unparalleled suite of analytics and performance enhancements across your entire grid.
+              </p>
+            </SectionWrapper>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { 
+                title: "Complete Portfolio Visibility", 
+                desc: "Centralized oversight across multiple states and assets from a single unified management dashboard.",
+                icon: <Eye className="w-6 h-6 text-teal-600" />,
+                bg: "bg-teal-50"
+              },
+              { 
+                title: "Improved Plant Performance", 
+                desc: "Optimize yield, PR, and generation metrics natively through deep cross-plant analytics.",
+                icon: <BarChart3 className="w-6 h-6 text-emerald-600" />,
+                bg: "bg-emerald-50"
+              },
+              { 
+                title: "Reduced Downtime", 
+                desc: "Identify underperforming strings or equipment faults seconds after they occur for immediate dispatch.",
+                icon: <TrendingDown className="w-6 h-6 text-cyan-600" />,
+                bg: "bg-cyan-50"
+              },
+              { 
+                title: "Accurate Energy Insights", 
+                desc: "Extract actionable meaning from raw SCADA telemetry with automated loss bucket analysis.",
+                icon: <Zap className="w-6 h-6 text-sky-600" />,
+                bg: "bg-sky-50"
+              },
+              { 
+                title: "Scalable & Secure Platform", 
+                desc: "Cloud-native elastic architecture built atop encrypted data systems to guarantee uptime and security.",
+                icon: <Shield className="w-6 h-6 text-indigo-600" />,
+                bg: "bg-indigo-50"
+              },
+              { 
+                title: "Faster Fault Detection", 
+                desc: "Instant anomaly detection warns operators of discrepancies before failures manifest.",
+                icon: <Activity className="w-6 h-6 text-teal-600" />,
+                bg: "bg-teal-50"
+              }
+            ].map((item, i) => (
+              <SectionWrapper key={i} delay={i * 0.1} className="h-full">
+                <div className="relative p-8 rounded-3xl border border-slate-200/60 bg-slate-50/50 hover:bg-white shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-between group hover:-translate-y-1">
+                  {/* Subtle top-right index overlay */}
+                  <span className="absolute top-6 right-8 text-slate-200/80 font-mono font-bold text-4xl group-hover:text-primary/10 transition-colors select-none">
+                    0{i + 1}
+                  </span>
+                  
+                  <div>
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border border-slate-100 ${item.bg} group-hover:scale-105 transition-transform duration-300`}>
+                      {item.icon}
                     </div>
-                    <p className="text-xs text-slate-500 font-medium leading-relaxed mt-2">{item.desc}</p>
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
                   </div>
-                </SectionWrapper>
-              ))}
-            </div>
+                  <p className="text-sm text-slate-500 font-medium leading-relaxed mt-2">{item.desc}</p>
+                </div>
+              </SectionWrapper>
+            ))}
           </div>
         </div>
       </section>
