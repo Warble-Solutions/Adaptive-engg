@@ -82,7 +82,7 @@ export default function KusumPageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
             <div className="flex flex-col">
               <SectionWrapper className="h-full flex flex-col justify-between">
-                <div className="flex flex-col h-full justify-between">
+                <div className="flex flex-col h-full justify-start">
                   <div>
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-50/80 text-teal-600 rounded-lg text-xs font-black uppercase tracking-wider mb-4 border border-teal-100">
                       Scheme Overview
@@ -137,17 +137,6 @@ export default function KusumPageClient() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4 mt-auto">
-                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl flex flex-col justify-between">
-                      <span className="block text-[10px] font-mono uppercase tracking-wider text-slate-400">Total Allocation</span>
-                      <strong className="text-xl md:text-2xl font-black text-slate-900 mt-1">₹34,422 Cr</strong>
-                    </div>
-                    <div className="p-5 bg-teal-50/50 border border-teal-100 rounded-2xl flex flex-col justify-between">
-                      <span className="block text-[10px] font-mono uppercase tracking-wider text-slate-400">Extended Target</span>
-                      <strong className="text-xl md:text-2xl font-black text-slate-900 mt-1">March 2026</strong>
                     </div>
                   </div>
                 </div>
