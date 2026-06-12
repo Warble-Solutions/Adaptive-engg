@@ -11,96 +11,91 @@ import {
 import { COMPANY_STATS } from "@/lib/constants";
 
 export default function PanelsPageClient() {
-  const [activePanelType, setActivePanelType] = useState<number>(0);
   const [activeMfgStep, setActiveMfgStep] = useState<number>(0);
 
-  const panelTypes = [
+  const ourSolutions = [
     {
-      title: "LT Panels",
-      icon: <Zap className="w-6 h-6" />,
-      desc: "Power Control Centre (PCC), Motor Control Centre (MCC), Intelligent MCC, APFC, and PDB/LDB panels rated up to 6300A.",
-      specs: [
-        { label: "Rated Current", value: "Up to 6300A" },
-        { label: "Short Circuit Rating", value: "50kA / 65kA Type Tested" },
-        { label: "IP Protection Class", value: "IP55 Certified" },
-        { label: "Busbar Temp Rise", value: "4000A Rating" },
-        { label: "Quality Certification", value: "ISO 9001:2015" }
-      ],
-      typesList: [
-        "Power Control Centre (PCC)", 
-        "Motor Control Centre (MCC)", 
-        "Intelligent Motor Control Centre (IMCC)", 
-        "Automatic Power Factor Correction (APFC)", 
-        "PDB/LDB Panels"
-      ]
+      title: "HT Panel",
+      icon: <Zap className="w-6 h-6 text-primary" />,
+      desc: "IS/IEC type-tested High Tension Vacuum Circuit Breaker (VCB) panels up to 33kV.",
+      href: "/renewable/panels/ht-panel"
     },
     {
-      title: "HT & Power Panels",
-      icon: <ShieldCheck className="w-6 h-6" />,
-      desc: "11kV/33kV HT Panels and high-voltage substation switchgear.",
-      specs: [
-        { label: "Rated System Voltage", value: "11kV / 33kV" },
-        { label: "Breaker Medium", value: "Vacuum Circuit Breaker (VCB)" },
-        { label: "Contacts Coating", value: "Silver Plated Contacts" },
-        { label: "Inhouse Testing", value: "HT, IR & Megger Tested" },
-        { label: "Quality Standards", value: "TUV Nord QMS Certified" }
-      ],
-      typesList: [
-        "HT Panel (11kV / 33kV)", 
-        "Substation Incomer VCBs", 
-        "HT Metering Kiosks"
-      ]
+      title: "Power Control Centre (PCC)",
+      icon: <Sliders className="w-6 h-6 text-primary" />,
+      desc: "Main power distribution boards designed for high-capacity industrial power systems.",
+      href: "/renewable/panels/pcc"
     },
     {
-      title: "Solar & Battery Panels",
-      icon: <Activity className="w-6 h-6" />,
-      desc: "AC/DB Panels and combiner boxes designed for high-efficiency renewable energy systems.",
-      specs: [
-        { label: "DC Input Voltage", value: "Up to 1500V DC" },
-        { label: "AC Output Voltage", value: "Up to 800V AC" },
-        { label: "Weatherproof Class", value: "IP65 Weatherproof" },
-        { label: "Surge Protection", value: "Type 1 + Type 2 SPDs" }
-      ],
-      typesList: [
-        "AC/DB Panels", 
-        "String Combiner & Monitoring Boxes", 
-        "Inverter Duty LT Panels"
-      ]
+      title: "Motor Control Centre (MCC)",
+      icon: <Settings className="w-6 h-6 text-primary" />,
+      desc: "Robust motor control panels offering optimal thermal protection and safety.",
+      href: "/renewable/panels/mcc"
     },
     {
-      title: "Automation Panels",
-      icon: <Cpu className="w-6 h-6" />,
-      desc: "PLC panels, Soft Starter & VFD panels, and custom SCADA telemetry automation solutions.",
-      specs: [
-        { label: "PLC Redundancy", value: "Hot-Standby Dual Processor" },
-        { label: "VFD Filtering", value: "Harmonic Filters & Line Reactors" },
-        { label: "SCADA Ready", value: "I/O Marshalling Compartment" },
-        { label: "Controller Support", value: "Siemens / Rockwell / Schneider" },
-        { label: "Network Integration", value: "Modbus TCP / RTU / Fiber" }
-      ],
-      typesList: [
-        "PLC Panels", 
-        "Soft Starter and VFD Panels", 
-        "Automation Panels", 
-        "SCADA Remote I/O Panels"
-      ]
+      title: "Intelligent Motor Control Centre",
+      icon: <Cpu className="w-6 h-6 text-primary" />,
+      desc: "Smart MCCs integrated with communication protocols for real-time diagnostic reporting.",
+      href: "/renewable/panels/intelligent-mcc"
     },
     {
-      title: "Other Solutions",
-      icon: <Layers className="w-6 h-6" />,
-      desc: "Specialized engineered solutions including Busducts, CRPs, UPS panels, and Change Over panels.",
-      specs: [
-        { label: "Busduct Rating", value: "Up to 6300A" },
-        { label: "CRP Applications", value: "Line, Transformer & Generator" },
-        { label: "Changeover Types", value: "Manual / Automatic Source Selection" },
-        { label: "Compliance", value: "IS/IEC 61439 Certified" }
-      ],
-      typesList: [
-        "Busduct",
-        "UPS and Battery Isolation Panel",
-        "Control and Relay Panel (CRP)",
-        "Change Over Panel"
-      ]
+      title: "Automatic Power Factor Correction",
+      icon: <Activity className="w-6 h-6 text-primary" />,
+      desc: "Automatic power factor correction systems for optimized efficiency and reduced penalties.",
+      href: "/renewable/panels/apfc"
+    },
+    {
+      title: "PDB/LDB Panel",
+      icon: <Layers className="w-6 h-6 text-primary" />,
+      desc: "Power & Lighting Distribution Boards for reliable indoor and outdoor circuit control.",
+      href: "/renewable/panels/pdb-ldb"
+    },
+    {
+      title: "Soft Starter and VFD Panel",
+      icon: <Gauge className="w-6 h-6 text-primary" />,
+      desc: "Variable Frequency Drive and Soft Starter panels for smooth motor acceleration.",
+      href: "/renewable/panels/soft-starter-vfd"
+    },
+    {
+      title: "PLC Panel",
+      icon: <Cpu className="w-6 h-6 text-primary" />,
+      desc: "Programmable Logic Controller panels customized for complex system automation.",
+      href: "/renewable/panels/plc"
+    },
+    {
+      title: "AC/DB Panels",
+      icon: <ShieldCheck className="w-6 h-6 text-primary" />,
+      desc: "IP65 weather-proof AC Distribution Boards designed for solar pump installations.",
+      href: "/renewable/panels/acdb"
+    },
+    {
+      title: "Automation Panel",
+      icon: <Activity className="w-6 h-6 text-primary" />,
+      desc: "Custom control cabinets integrated with SCADA, telemetry, and smart gateways.",
+      href: "/renewable/panels/automation"
+    }
+  ];
+
+  const otherSolutions = [
+    {
+      title: "Busduct",
+      icon: <Layers className="w-5 h-5 text-slate-500" />,
+      desc: "High-current busbar trunking systems rated up to 6300A for efficient bulk power transmission."
+    },
+    {
+      title: "UPS and Battery Isolation Panel",
+      icon: <Shield className="w-5 h-5 text-slate-500" />,
+      desc: "Safe DC isolation switchgear protecting backup power storage systems and battery banks."
+    },
+    {
+      title: "Control and Relay Panel (CRP)",
+      icon: <Sliders className="w-5 h-5 text-slate-500" />,
+      desc: "Generator, transformer, and line protection relay panels with numerical protection logic."
+    },
+    {
+      title: "Change Over Panel",
+      icon: <Activity className="w-5 h-5 text-slate-500" />,
+      desc: "Manual or automatic source transfer switch panels ensuring continuous power availability."
     }
   ];
 
@@ -229,7 +224,10 @@ export default function PanelsPageClient() {
 
                 <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
                   <p>
-                    Our State of Art comprehensive manufacturing facility at Ahmedabad spread across 125,000+ sq.ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
+                    Our State of Art comprehensive manufacturing facility at Ahmedabad spread across 60,000 sq.ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
+                  </p>
+                  <p>
+                    The core strength of our best-in-class Electrical Panels is our intelligent design concepts and the way they are implemented. With over 15+ years of experience, we meet the complex and varying needs of customers with a wide range of tailor-made products.
                   </p>
                   <p>
                     Our Solid Engineering Strength allows us to provide a full range of electric and automation solutions from conceptualizing, designing, manufacturing, installing, and supporting in-house systems.
@@ -272,104 +270,73 @@ export default function PanelsPageClient() {
         </div>
       </section>
 
-      {/* 2. PANEL RANGE (State-Based Switchboard Drawer) */}
+      {/* 2. OUR SOLUTIONS */}
       <section id="panel-range" className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Product Catalog</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">Engineered Panel Range</h2>
+              <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Our Solutions</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">Engineered Panel & Automation Solutions</h2>
               <p className="text-slate-500 max-w-2xl mx-auto text-sm leading-relaxed">
-                Explore our comprehensive catalog of low-voltage, high-voltage, solar, and automation panels engineered to deliver high performance, safety compliance, and robust reliability in demanding environments.
+                Explore our comprehensive portfolio of low-voltage, high-voltage, and automation panels. Click on any solution below to explore more.
               </p>
             </SectionWrapper>
           </div>
 
-          {/* Cards selector grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-6 mb-10">
-            {panelTypes.map((item, idx) => {
-              const isActive = activePanelType === idx;
-              return (
-                <SectionWrapper key={idx} delay={idx * 0.05}>
-                  <button
-                    onClick={() => setActivePanelType(idx)}
-                    className={`w-full text-left p-8 rounded-2xl border transition-all duration-300 cursor-pointer select-none group h-full flex flex-col justify-between ${
-                      isActive
-                        ? "bg-slate-900 border-slate-900 text-white shadow-xl shadow-slate-900/10 translate-y-[-4px]"
-                        : "bg-slate-50 border-slate-200/50 hover:bg-slate-100/70 hover:border-slate-300"
-                    }`}
-                  >
-                    <div>
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 ${
-                        isActive ? "bg-primary/20 text-primary" : "bg-teal-50 text-primary"
-                      }`}>
-                        {item.icon}
-                      </div>
-                      <h3 className="text-lg font-bold mb-3 font-heading leading-tight">{item.title}</h3>
-                      <p className={`text-xs leading-relaxed font-medium mb-4 ${isActive ? "text-slate-400" : "text-slate-500"}`}>
-                        {item.desc}
-                      </p>
+          {/* Our Solutions grid (Clickable cards) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+            {ourSolutions.map((item, idx) => (
+              <SectionWrapper key={idx} delay={idx * 0.05}>
+                <Link
+                  href={item.href}
+                  className="group flex flex-col justify-between p-6 bg-slate-50 border border-slate-200/60 rounded-2xl transition-all duration-300 hover:bg-slate-900 hover:border-slate-900 hover:text-white hover:shadow-xl hover:shadow-slate-900/10 hover:-translate-y-1 h-full cursor-pointer"
+                >
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 text-primary flex items-center justify-center mb-6 transition-all group-hover:scale-110 group-hover:bg-primary/20">
+                      {item.icon}
                     </div>
-                    
-                    <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-primary mt-2">
-                      <span>View Specifications</span>
-                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                    </div>
-                  </button>
-                </SectionWrapper>
-              );
-            })}
+                    <h3 className="text-base font-bold mb-3 font-heading leading-tight group-hover:text-white transition-colors">{item.title}</h3>
+                    <p className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors leading-relaxed font-medium">
+                      {item.desc}
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-primary mt-6 group-hover:text-primary transition-colors">
+                    <span>View Specifications</span>
+                    <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              </SectionWrapper>
+            ))}
           </div>
 
-          {/* Detailed specs sheet layout */}
-          <SectionWrapper delay={0.2}>
-            <div className="bg-slate-950 text-white border border-slate-800 rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[80px] -mr-40 -mt-40"></div>
-              
-              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
-                {/* Tech Specs Table */}
-                <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest block mb-1">Standard Technical Sheet</span>
-                  <h4 className="text-xl font-bold font-heading text-white mb-6">
-                    {panelTypes[activePanelType].title} Specifications
-                  </h4>
-                  
-                  <div className="divide-y divide-white/10 text-xs">
-                    {panelTypes[activePanelType].specs.map((spec, sIdx) => (
-                      <div key={sIdx} className="py-3.5 flex justify-between gap-4">
-                        <span className="text-gray-400 font-bold">{spec.label}</span>
-                        <span className="text-white font-bold font-mono">{spec.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+          {/* Other Solutions sub-section (Non-clickable cards) */}
+          <div className="mt-20 pt-16 border-t border-slate-100">
+            <div className="text-center mb-12">
+              <SectionWrapper>
+                <h3 className="text-2xl font-bold text-slate-900 font-heading mb-3">Other Solutions</h3>
+                <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+                  Specialized industrial distribution and custom-engineered power system accessories.
+                </p>
+              </SectionWrapper>
+            </div>
 
-                {/* Sub-assemblies */}
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col justify-between">
-                  <div>
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest block mb-1">Module Configurations</span>
-                    <h4 className="text-lg font-bold font-heading text-white mb-4">Scope & Applications</h4>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {panelTypes[activePanelType].typesList.map((type, tIdx) => (
-                        <div key={tIdx} className="flex items-start gap-2 text-xs">
-                          <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                          <span className="text-gray-300 font-medium leading-tight">{type}</span>
-                        </div>
-                      ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {otherSolutions.map((item, idx) => (
+                <SectionWrapper key={idx} delay={idx * 0.05}>
+                  <div className="p-6 bg-slate-50 border border-slate-200/50 rounded-2xl h-full flex flex-col justify-between hover:border-slate-300 transition-all duration-300">
+                    <div>
+                      <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center mb-5">
+                        {item.icon}
+                      </div>
+                      <h4 className="text-sm font-bold text-slate-900 mb-2 font-heading">{item.title}</h4>
+                      <p className="text-xs text-slate-500 leading-relaxed font-medium">{item.desc}</p>
                     </div>
                   </div>
-
-                  <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-4 items-center justify-between">
-                    <span className="text-[10px] text-gray-500 font-mono">AEPL MFG SCHED v1.4</span>
-                    <Link href="/contact" className="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-primary transition-colors">
-                      Request Panel Drawing <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
+                </SectionWrapper>
+              ))}
             </div>
-          </SectionWrapper>
+          </div>
         </div>
       </section>
 
