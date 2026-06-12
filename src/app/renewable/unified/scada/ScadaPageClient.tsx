@@ -204,11 +204,10 @@ export default function ScadaPageClient() {
               <div>
                 <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20">
                   <Monitor className="w-4 h-4" />
-                  <span>Unified Control Suite</span>
+                  <span>Unified Control Solutions</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
-                  AEPL Plant<br />
-                  <span className="gradient-heading">SCADA Systems</span>
+                  <span className="gradient-heading">SCADA</span>
                 </h1>
                 <p className="text-gray-300 text-base md:text-lg font-medium max-w-lg leading-relaxed mb-8">
                   Supervisory control and data acquisition engineered for utility-scale Solar, Wind, and Hybrid plants. Aggregate data and maximize operational performance.
