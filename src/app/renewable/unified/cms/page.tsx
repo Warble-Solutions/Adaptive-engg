@@ -162,81 +162,84 @@ export default function Page() {
             </SectionWrapper>
           </div>
 
-          <div className="border border-slate-200/60 rounded-[32px] overflow-hidden bg-white shadow-xl shadow-slate-100/50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Handles Renewable Complexity",
                 desc: "Manages distributed generation, intermittency, and dynamic conditions across Solar, Wind, and BESS portfolios.",
-                icon: <Sliders className="w-5 h-5 text-primary" />
+                icon: <Sliders className="w-5 h-5 text-primary group-hover:text-white" />,
+                tag: "Optimization"
               },
               {
                 title: "Ensures Operational Transparency",
                 desc: "Delivers audit-ready logs, clear event sequences, and enterprise-wide operational tracking.",
-                icon: <CheckCircle2 className="w-5 h-5 text-teal-500" />
+                icon: <CheckCircle2 className="w-5 h-5 text-teal-500 group-hover:text-white" />,
+                tag: "Governance"
               },
               {
                 title: "Advanced Analytics",
                 desc: "Employs data pipelines, loss bucket calculations, and custom report builders for optimization.",
-                icon: <BarChart3 className="w-5 h-5 text-cyan-500" />
+                icon: <BarChart3 className="w-5 h-5 text-cyan-500 group-hover:text-white" />,
+                tag: "Intelligence"
               },
               {
                 title: "Secure Data Architecture",
                 desc: "Employs hardened perimeter firewalls, segmented VPN tunneling, TLS encryption, and RBAC to protect core assets.",
-                icon: <Lock className="w-5 h-5 text-sky-500" />
+                icon: <Lock className="w-5 h-5 text-sky-500 group-hover:text-white" />,
+                tag: "Security"
               },
               {
                 title: "Flexible Deployment",
                 desc: "Supports cloud-hosted, on-premises, or hybrid containerized configurations matching your architecture.",
-                icon: <Server className="w-5 h-5 text-teal-500" />
+                icon: <Server className="w-5 h-5 text-teal-500 group-hover:text-white" />,
+                tag: "Infrastructure"
               },
               {
                 title: "Future-Ready Platform",
                 desc: "Seamlessly integrates battery storage (BESS) and scaling capacities as your renewable generation expands.",
-                icon: <Zap className="w-5 h-5 text-primary" />
+                icon: <Zap className="w-5 h-5 text-primary group-hover:text-white" />,
+                tag: "Scalability"
               }
-            ].map((item, i) => {
-              // Dynamically configure borders to create a single-grid panel look:
-              const borderClasses = `
-                border-slate-100/80
-                ${i < 3 ? 'lg:border-b' : ''}
-                ${i % 3 !== 2 ? 'lg:border-r' : ''}
-                ${i < 4 ? 'md:border-b' : ''}
-                ${i % 2 === 0 ? 'md:border-r' : ''}
-                border-b last:border-b-0 md:border-b-0 /* fallback for mobile */
-              `.replace(/\s+/g, ' ').trim();
-
-              return (
-                <SectionWrapper key={i} delay={i * 0.05} className="h-full">
-                  <div className={`p-10 hover:bg-slate-50/40 transition-all duration-500 h-full flex flex-col justify-between group relative overflow-hidden text-left ${borderClasses}`}>
-                    {/* Subtle top-right ambient hover highlight */}
-                    <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-primary/[0.04] to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    
-                    <div>
-                      {/* Badge / Number */}
-                      <div className="flex items-center justify-between mb-8">
-                        <div className="w-10 h-10 rounded-xl bg-teal-50/80 flex items-center justify-center text-primary group-hover:scale-105 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm border border-teal-100/50">
-                          {item.icon}
-                        </div>
-                        <span className="text-slate-300 font-mono font-bold text-xs select-none">
-                          PILLAR 0{i + 1}
-                        </span>
+            ].map((item, i) => (
+              <SectionWrapper key={i} delay={i * 0.05} className="h-full">
+                <div className="group relative bg-gradient-to-br from-white to-slate-50/50 rounded-[28px] border border-slate-200/80 hover:border-primary/40 shadow-md hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 ease-out h-full flex flex-col justify-between overflow-hidden hover:-translate-y-2 hover:scale-[1.01] p-8">
+                  
+                  {/* Subtle top-right ambient hover highlight */}
+                  <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/[0.03] group-hover:bg-primary/[0.08] rounded-full blur-2xl transition-colors duration-500 pointer-events-none"></div>
+                  
+                  <div>
+                    {/* Header Row: Icon and Index Badge */}
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center border border-slate-100 group-hover:bg-primary transition-all duration-500 shadow-sm group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110">
+                        {item.icon}
                       </div>
-
-                      {/* Title & Description */}
-                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300 leading-snug">
-                        {item.title}
-                      </h3>
-                      <p className="text-slate-500 text-sm leading-relaxed font-medium">
-                        {item.desc}
-                      </p>
+                      <span className="px-3 py-1 bg-slate-100 text-slate-400 group-hover:bg-primary/10 group-hover:text-primary text-[10px] font-mono font-bold rounded-full tracking-wider transition-all duration-300">
+                        PILLAR 0{i + 1}
+                      </span>
                     </div>
 
-                    {/* Subtle hover accent line at the bottom */}
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300 leading-snug">
+                      {item.title}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                      {item.desc}
+                    </p>
                   </div>
-                </SectionWrapper>
-              );
-            })}
+
+                  {/* Footer Action Row */}
+                  <div className="flex items-center justify-between mt-8 pt-4 border-t border-slate-100/80 relative z-10">
+                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider group-hover:text-primary transition-colors">
+                      {item.tag}
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-primary group-hover:translate-x-1.5 transition-all duration-300" />
+                  </div>
+
+                </div>
+              </SectionWrapper>
+            ))}
           </div>
         </div>
       </section>
