@@ -24,7 +24,7 @@ export default async function TeamPage() {
                     <img 
                         src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80" 
                         alt="Team Hero Banner" 
-                        className="w-full h-full object-cover" 
+                        className="w-full h-full object-cover object-top" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/85 z-10"></div>
                 </div>
