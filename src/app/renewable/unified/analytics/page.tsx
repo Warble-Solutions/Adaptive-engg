@@ -1,7 +1,7 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import { ArrowRight, BarChart3, PieChart, FileText, Brain, Clock, Download, TrendingUp, CheckCircle2, Layers, Activity, Target, LineChart, Monitor, Eye, Zap, Wrench, Battery, Mail, Bell, Database } from "lucide-react";
-import { AnalyticsDashboard, AnalyticsHeroDashboards, AnalyticsVisibilityDashboard, Scale500GWDashboard } from "@/components/DashboardMockups";
+import { ArrowRight, BarChart3, PieChart, FileText, Brain, CheckCircle2, Layers, Activity, Target, LineChart, Monitor, Eye, Zap, Wrench, Battery, Mail, Bell, Database } from "lucide-react";
+import { AnalyticsDashboard, AnalyticsHeroDashboards, Scale500GWDashboard } from "@/components/DashboardMockups";
 
 export const metadata = {
  title: "Advanced Analytics | Unified Renewable Solutions | Adaptive Engineering",
@@ -369,44 +369,7 @@ export default function Page() {
  </div>
  </section>
 
-  {/* ADVANCED LOSS ANALYSIS IMAGE SECTION */}
-  <section className="py-20 bg-slate-50 relative z-20">
-  <div className="max-w-7xl mx-auto px-6">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-  <SectionWrapper>
-  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-  <img 
-  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
-  alt="Data Analytics and Modeling" 
-  className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-  <div className="absolute bottom-6 left-6 text-white">
-  <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">AI Modeling</p>
-  <h4 className="text-lg font-bold">Predictive Loss Bucket Identification</h4>
-  </div>
-  </div>
-  </SectionWrapper>
-  <SectionWrapper delay={0.2}>
-  <div>
-  <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Deep Data Insights</span>
-  <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-heading">Pinpoint inefficiencies with granular accuracy</h3>
-  <p className="text-slate-600 leading-relaxed mb-6">
-  Don't guess where your losses are. Our advanced analytics engine breaks down performance deficits into distinct loss buckets like inverter clipping, grid limits, dirt/soiling, and heat degradation. Real-time data visualization helps O&M crews act immediately, maximizing generation efficiency.
-  </p>
-  <div className="flex items-center gap-3 text-sm font-bold text-slate-800">
-  <CheckCircle2 className="text-primary w-5 h-5" />
-  <span>Automated degradation alerts</span>
-  </div>
-  <div className="flex items-center gap-3 text-sm font-bold text-slate-800 mt-2">
-  <CheckCircle2 className="text-primary w-5 h-5" />
-  <span>Custom CSV and Excel report exports</span>
-  </div>
-  </div>
-  </SectionWrapper>
-  </div>
-  </div>
-  </section>
+
 
   {/* THE ROAD TO 500GW+ */}
   <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-slate-900 relative z-20">
@@ -425,7 +388,7 @@ export default function Page() {
               As global energy goals expand to hundreds of gigawatts, operators must transition from static local reporting to unified, real-time, portfolio-scale telemetry pipelines.
             </p>
             <p className="text-gray-400 text-base leading-relaxed">
-              Standardizing multi-OEM tech stacks, handling petabytes of data, and running consistent KPI logic across heterogeneous assets represents a major operational hurdle. Here are the 12 core challenges solved by Adaptive's data layers:
+              Standardizing multi-OEM tech stacks, handling petabytes of data, and running consistent KPI logic across heterogeneous assets represents a major operational hurdle. Here are the 12 core challenges solved by Adaptive&apos;s data layers:
             </p>
           </SectionWrapper>
         </div>
