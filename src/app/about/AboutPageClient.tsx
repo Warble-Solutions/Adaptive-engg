@@ -56,7 +56,7 @@ export default function AboutPageClient() {
               <SectionWrapper delay={0.2}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Card 1: Years Experience */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center text-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Award className="w-6 h-6" />
                     </div>
@@ -73,7 +73,7 @@ export default function AboutPageClient() {
                   </div>
 
                   {/* Card 2: Manpower */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center text-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Users className="w-6 h-6" />
                     </div>
@@ -90,7 +90,7 @@ export default function AboutPageClient() {
                   </div>
 
                   {/* Card 3: SCADA Installed */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center text-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Cpu className="w-6 h-6" />
                     </div>
@@ -107,7 +107,7 @@ export default function AboutPageClient() {
                   </div>
 
                   {/* Card 4: Manufacturing Facility */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center text-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Wrench className="w-6 h-6" />
                     </div>
@@ -124,7 +124,7 @@ export default function AboutPageClient() {
                   </div>
 
                   {/* Card 5: Installed Base */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center text-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Zap className="w-6 h-6" />
                     </div>
@@ -141,7 +141,7 @@ export default function AboutPageClient() {
                   </div>
 
                   {/* Card 6: Satisfied Customers */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center text-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <ShieldCheck className="w-6 h-6" />
                     </div>
