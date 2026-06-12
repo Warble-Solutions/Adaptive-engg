@@ -27,7 +27,7 @@ export default function AboutPageClient() {
 
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-md text-teal-300 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/40 shadow-lg">
+            <div className="inline-block px-4 py-2 bg-slate-950/80 backdrop-blur-xl text-teal-300 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/40 shadow-lg">
               About Us
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">

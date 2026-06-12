@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Our Journey | Adaptive Engineering",
-  description: "From a small engineering firm to India's most trusted — here is how we got here.",
+  description: "India's most preferred partner — here is how we got here.",
 };
 
 export default function Page() {
@@ -21,14 +21,14 @@ export default function Page() {
         </div>
         <div className="z-10 max-w-7xl relative">
           <SectionWrapper>
-            <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 shadow-lg">
+            <div className="inline-block px-4 py-2 bg-slate-950/80 backdrop-blur-xl text-teal-300 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/40 shadow-lg">
               History
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
               Our <span className="gradient-heading">Journey</span>
             </h1>
             <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
-              From a small engineering firm to India&apos;s most trusted.
+              India&apos;s most preferred partner.
             </p>
           </SectionWrapper>
         </div>
