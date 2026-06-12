@@ -395,7 +395,7 @@ export default function HomePageClient() {
             <SectionWrapper delay={0.6}>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-primary hover:bg-white/10 hover:border-primary/50 hover:shadow-xl -translate-y-2 shadow-2xl transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between">
                 <div>
-                  <img src="/imgs/solutions/infrastructure_tunnel_entrance.png" className="w-full h-48 rounded-xl object-cover mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Infrastructure Solutions" />
+                  <img src="/imgs/solutions/infrastructure_tunnel_entrance.png" className="w-full h-48 rounded-xl object-cover object-[center_75%] mb-8 border border-white/10 shadow-lg group-hover:scale-[1.02] transition-transform duration-500" alt="Infrastructure Solutions" />
                   <h3 className="text-2xl font-bold text-white mb-4">Infrastructure</h3>
                   <p className="text-gray-400 leading-relaxed mb-8 text-sm">Specialized safety, ventilation, lighting, and power automation packages for highway tunnels, data centers, and heavy manufacturing.</p>
                 </div>
