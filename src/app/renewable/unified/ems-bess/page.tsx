@@ -299,13 +299,16 @@ export default function Page() {
               </div>
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 select-none pointer-events-none">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 select-none pointer-events-none group">
                 <img 
                   src="/images/renewable/hybrid_renewable_site.png" 
                   alt="Battery Energy Storage Container" 
                   className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                {/* Dark teal tint overlay */}
+                <div className="absolute inset-0 bg-teal-950/20 mix-blend-multiply"></div>
+                {/* Deep bottom gradient for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-955/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white text-left">
                   <p className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">Battery Storage</p>
                   <h4 className="text-lg font-bold">Utility-Scale BESS Enclosures</h4>
