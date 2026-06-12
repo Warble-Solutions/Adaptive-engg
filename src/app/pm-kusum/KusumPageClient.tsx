@@ -202,7 +202,7 @@ export default function KusumPageClient() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {[
               { value: "17+", label: "Years of Experience" },
-              { value: "68 GW+", label: "Installed Base" },
+              { value: "68GW+", label: "PM-Kusum Installed Base" },
               { value: "10,000+", label: "Electric Panels Supplied" },
               { value: "125,000+", label: "Sq.ft. Manufacturing Facility" },
               { value: "100+", label: "Satisfied Customers" },
