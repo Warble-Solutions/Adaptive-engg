@@ -25,9 +25,9 @@ export default function Footer() {
                     <Image
                         src="/imgs/logo.png"
                         alt="AEPL"
-                        width={200}
-                        height={55}
-                        className="h-14 w-auto brightness-0 invert opacity-90 mb-6"
+                        width={260}
+                        height={70}
+                        className="h-20 w-auto brightness-0 invert opacity-90 mb-6"
                     />
                     <p className="text-gray-400 text-sm leading-relaxed mb-6">
                         India&apos;s most trusted company for Renewable Energy, PM-KUSUM, and Industrial Automation solutions.

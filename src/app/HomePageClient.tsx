@@ -13,16 +13,21 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import { COMPANY_STATS, PPC_STATS, KUSUM_STATS, TUNNEL_STATS, WATER_STATS, AUTOMATION_STATS } from "@/lib/constants";
 import { ScadaHeroDashboard } from "@/components/DashboardMockups";
 
+interface YouTubeVideo {
+  id: string;
+  title: string;
+}
+
+const DEFAULT_VIDEOS: YouTubeVideo[] = [
+  { id: "DbhvDJYsfEA", title: "Weather Monitoring Systems by AEPL under PM-KUSUM" },
+  { id: "w2avEUffxYM", title: "Udaan 2026 – Adaptive Engineering Pvt. Ltd. Annual Meet" },
+  { id: "_n0cYUCRMYc", title: "PM-KUSUM - ACDB Panel" }
+];
+
 export default function HomePageClient() {
-  const [videos, setVideos] = useState<any[]>([]);
+  const [videos, setVideos] = useState<YouTubeVideo[]>([]);
   const [loading, setLoading] = useState(true);
   const [playingVideos, setPlayingVideos] = useState<{ [id: string]: boolean }>({});
-
-  const DEFAULT_VIDEOS = [
-    { id: "DbhvDJYsfEA", title: "Weather Monitoring Systems by AEPL under PM-KUSUM" },
-    { id: "w2avEUffxYM", title: "Udaan 2026 – Adaptive Engineering Pvt. Ltd. Annual Meet" },
-    { id: "_n0cYUCRMYc", title: "PM-KUSUM - ACDB Panel" }
-  ];
 
   useEffect(() => {
     async function fetchLatestVideos() {
@@ -31,7 +36,7 @@ export default function HomePageClient() {
         const data = await res.json();
         if (data.success && data.videos && data.videos.length > 0) {
           const uniqueVideos = data.videos.filter(
-            (v: any, index: number, self: any[]) =>
+            (v: YouTubeVideo, index: number, self: YouTubeVideo[]) =>
               self.findIndex((t) => t.id === v.id) === index
           );
           setVideos(uniqueVideos.slice(0, 6));
@@ -50,7 +55,7 @@ export default function HomePageClient() {
 
   const displayVideos = videos.length > 0 ? videos : DEFAULT_VIDEOS;
 
-  const formatStatVal = (stat: any) => {
+  const formatStatVal = (stat: { formatted?: string; value: number | string; suffix?: string }) => {
     let valStr = stat.formatted || (typeof stat.value === "number" ? stat.value.toLocaleString("en-IN") : stat.value);
     if (stat.suffix && !valStr.toString().endsWith(stat.suffix)) {
       valStr += stat.suffix;
@@ -284,7 +289,7 @@ export default function HomePageClient() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
                     <div className="absolute bottom-4 left-6 right-6 text-left">
                       <div className="text-base font-bold text-white mb-0.5">Twin Tube Tunnel (2.5Km)</div>
-                      <p className="text-[11px] text-gray-300 font-medium leading-relaxed">India's widest highway twin-tube tunnel managed under our complete E&I packages.</p>
+                      <p className="text-[11px] text-gray-300 font-medium leading-relaxed">India&apos;s widest highway twin-tube tunnel managed under our complete E&I packages.</p>
                     </div>
                   </div>
                 </div>
@@ -490,7 +495,7 @@ export default function HomePageClient() {
           <div className="text-center mb-16">
             <SectionWrapper>
               <h2 className="text-4xl font-bold text-white mb-2 font-heading">Trusted Voices</h2>
-              <p className="text-gray-400 font-bold uppercase tracking-widest text-sm">Powering India's energy leaders</p>
+              <p className="text-gray-400 font-bold uppercase tracking-widest text-sm">Powering India&apos;s energy leaders</p>
             </SectionWrapper>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -626,6 +631,31 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* 3.9 OUR JOURNEY */}
+      <section className="py-24 bg-white relative z-20 border-t border-slate-100">
+        <div className="max-w-[1700px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <SectionWrapper>
+              <span className="text-primary font-bold uppercase text-xs tracking-widest bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20 inline-block mb-4">
+                Milestones
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading tracking-tight">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">Journey</span>
+              </h2>
+            </SectionWrapper>
+          </div>
+          <div className="flex justify-center">
+            <SectionWrapper>
+              <img
+                src="/journey/Final Version Our Journey.png"
+                alt="Our Journey Timeline"
+                className="w-full object-contain drop-shadow-2xl hover:scale-[1.01] transition-transform duration-700 rounded-3xl"
+              />
+            </SectionWrapper>
+          </div>
+        </div>
+      </section>
+
       {/* 9. MEDIA GALLERY (YouTube Widget - Dark Premium Design) */}
       <section className="py-24 px-6 relative overflow-hidden bg-transparent z-10">
         <SceneTrigger variant="wave" color="#ef4444" speed={0.4} />
@@ -733,7 +763,7 @@ export default function HomePageClient() {
             </div>
 
             <h2 className="text-4xl md:text-6xl mb-8 font-black text-white font-heading">Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-400">Scale?</span></h2>
-            <p className="text-xl text-gray-400 mb-12">Partner with the &quot;Preferred Project Partner&quot; of India's largest corporate houses.</p>
+            <p className="text-xl text-gray-400 mb-12">Partner with the &quot;Preferred Project Partner&quot; of India&apos;s largest corporate houses.</p>
             <Link href="/contact" className="inline-block px-12 py-4 bg-gradient-to-r from-primary to-teal-700 text-white rounded-full font-bold uppercase tracking-wider text-lg shadow-xl shadow-teal-900/50 hover:bg-slate-900 hover:text-white hover:scale-105 transition-transform">
               Start Discussion
             </Link>
