@@ -20,27 +20,27 @@ export default function ScadaPageClient() {
     {
       title: "Optimized Performance",
       desc: "Maximizes energy yield through efficient monitoring, control, and system optimization.",
-      icon: <Zap className="w-6 h-6 text-teal-500" />
+      icon: <Zap className="w-6 h-6 text-teal-400" />
     },
     {
       title: "Improved Asset Availability",
       desc: "Enhances plant uptime by reducing unexpected failures and minimizing downtime.",
-      icon: <CheckCircle2 className="w-6 h-6 text-emerald-500" />
+      icon: <CheckCircle2 className="w-6 h-6 text-emerald-400" />
     },
     {
       title: "Reduced O&M Costs",
       desc: "Lowers operational expenses through automation, predictive maintenance, and efficient resource utilization.",
-      icon: <Wrench className="w-6 h-6 text-cyan-500" />
+      icon: <Wrench className="w-6 h-6 text-cyan-400" />
     },
     {
       title: "Better Decision-Making",
       desc: "Enables informed and timely decisions with actionable insights derived from real-time and historical data.",
-      icon: <BarChart3 className="w-6 h-6 text-sky-500" />
+      icon: <BarChart3 className="w-6 h-6 text-sky-400" />
     },
     {
       title: "Grid Code Compliance (First-Time Right)",
       desc: "Ensures smooth commissioning and adherence to regulatory standards without rework or delays.",
-      icon: <ShieldCheck className="w-6 h-6 text-teal-500" />
+      icon: <ShieldCheck className="w-6 h-6 text-teal-400" />
     }
   ];
 
@@ -69,7 +69,7 @@ export default function ScadaPageClient() {
     {
       id: "solar",
       title: "Solar SCADA",
-      subtitle: "Utility-Scale Solar PV Supervisory Control",
+      subtitle: "Utility-Scale Solar PV Control",
       desc: "Industry-leading solar monitoring solutions built to manage complex solar PV layouts, tracker arrays, and environmental telemetry.",
       icon: <Zap className="w-5 h-5" />,
       sections: [
@@ -91,7 +91,7 @@ export default function ScadaPageClient() {
             "Globally recognized channel partner of Schneider Electric",
             `Highly skilled professional team with ${COMPANY_STATS.yearsExperience.value}+ years of experience`,
             "Dedicated team to meet project deliverables",
-            `Most Installed project in India with more than ${COMPANY_STATS.installedBase.value} capacity`,
+            "Most Installed project in India with more than 51GW+ capacity",
             "Ranked No.1, most recognized and most awarded company by reputed agencies for consecutive four years from 2019",
             "ISO 9001:2015 certification with quality approach"
           ]
@@ -101,7 +101,7 @@ export default function ScadaPageClient() {
     {
       id: "wind",
       title: "Wind SCADA",
-      subtitle: "Multi-OEM Wind Asset Telemetry & Management",
+      subtitle: "WTG Telemetry & Management",
       desc: "OEM-independent supervisory control designed to aggregate and compare wind asset performances across scattered locations.",
       icon: <Cpu className="w-5 h-5" />,
       sections: [
@@ -138,7 +138,7 @@ export default function ScadaPageClient() {
     {
       id: "hybrid",
       title: "Hybrid SCADA",
-      subtitle: "Combined Solar-Wind Farms & Power Plant Control",
+      subtitle: "Combined Solar-Wind Control & PPC",
       desc: "Supervisory control and PPC engineered specifically for combined solar and wind generation developed by a single entity.",
       icon: <Sliders className="w-5 h-5" />,
       sections: [
@@ -206,7 +206,7 @@ export default function ScadaPageClient() {
                   <Monitor className="w-4 h-4" />
                   <span>Unified Control Solutions</span>
                 </div>
-                <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
+                <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight animate-fade-in">
                   <span className="gradient-heading">SCADA</span>
                 </h1>
                 <p className="text-gray-300 text-base md:text-lg font-medium max-w-lg leading-relaxed mb-8">
@@ -233,19 +233,19 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 2. POWERING THE FUTURE OF RENEWABLE OPERATIONS (Brochure Section) */}
-      <section className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10">
+      {/* 2. POWERING THE FUTURE OF RENEWABLE OPERATIONS (Convert to Immersive Dark) */}
+      <section className="py-24 bg-slate-950 text-white relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
               <span className="text-xs font-mono font-bold text-primary uppercase tracking-[0.2em] mb-3 block">
                 AEPL Operational Impact
               </span>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-950 font-heading mb-4 leading-tight tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-black text-white font-heading mb-4 leading-tight tracking-tight">
                 Powering the Future <br className="hidden sm:block" />
                 <span className="gradient-heading">of Renewable Operations</span>
               </h2>
-              <p className="text-slate-500 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+              <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
                 Supervisory systems built to maximize energy yield, enhance asset lifespan, and lower operational complexity across multi-GW portfolios.
               </p>
             </SectionWrapper>
@@ -254,16 +254,16 @@ export default function ScadaPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {futureOperations.map((item, idx) => (
               <SectionWrapper key={idx} delay={idx * 0.05}>
-                <div className="p-6 bg-slate-50 border border-slate-200/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="p-6 bg-white/5 border border-white/10 rounded-2xl shadow-lg hover:border-primary/40 hover:bg-white/10 transition-all duration-300 flex flex-col justify-between h-full group">
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                       {item.icon}
                     </div>
-                    <h3 className="text-sm font-extrabold text-slate-950 mb-3 group-hover:text-primary transition-colors leading-snug">
+                    <h3 className="text-sm font-extrabold text-white mb-3 group-hover:text-primary transition-colors leading-snug">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-[11px] text-slate-500 leading-relaxed font-medium">
+                  <p className="text-[11px] text-gray-400 leading-relaxed font-medium">
                     {item.desc}
                   </p>
                 </div>
@@ -273,108 +273,172 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 3. CORE DOMAIN-SPECIFIC SCADA OFFERINGS (Solar, Wind & Hybrid Switcher) */}
-      <section id="scada-showcase" className="py-24 bg-slate-50 text-slate-900 border-t border-slate-200 relative z-20">
+      {/* 3. CORE DOMAIN-SPECIFIC SCADA OFFERINGS (Redesigned as Dark Control Console) */}
+      <section id="scada-showcase" className="py-24 bg-slate-900 text-white border-t border-slate-800 relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <SectionWrapper>
               <span className="text-xs font-mono font-bold text-primary uppercase tracking-[0.2em] mb-3 block">
                 Targeted Implementations
               </span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-950 font-heading mb-4">
+              <h2 className="text-3xl md:text-4xl font-black text-white font-heading mb-4">
                 Domain-Specific <span className="gradient-heading">SCADA Offerings</span>
               </h2>
-              <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
-                Diversified solutions configured specifically for solar tracking networks, utility wind parks, and hybrid power management.
+              <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
+                Configure AEPL SCADA across solar tracking networks, utility wind parks, and hybrid power management.
               </p>
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-            
-            {/* Left side: Selector tabs */}
-            <div className="lg:col-span-4 w-full flex flex-col justify-between">
-              <SectionWrapper className="h-full w-full flex flex-col justify-between">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest border border-primary/20">
-                    <Sliders className="w-3.5 h-3.5" />
-                    <span>Domain Selector</span>
-                  </div>
-                  
-                  <div className="space-y-3 pt-2">
-                    <div className="flex flex-col gap-3">
-                      {scadaPillars.map((pillar, idx) => {
-                        const isActive = activeTab === idx;
-                        return (
-                          <button
-                            key={idx}
-                            onClick={() => setActiveTab(idx)}
-                            className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 relative group flex items-start gap-4 cursor-pointer select-none ${
-                              isActive
-                                ? "bg-white border-primary/30 shadow-md shadow-primary/5"
-                                : "bg-transparent border-slate-200 hover:bg-white/50 hover:border-slate-300"
-                            }`}
-                          >
-                            {isActive && (
-                              <div className="absolute left-0 top-4 bottom-4 w-1 bg-primary rounded-r-md"></div>
-                            )}
-                            <div className={`p-3 rounded-xl shrink-0 transition-transform duration-300 group-hover:scale-105 ${
-                              isActive ? "bg-primary/20 text-primary" : "bg-slate-200 text-slate-600"
-                            }`}>
-                              {pillar.icon}
-                            </div>
-                            <div>
-                              <h5 className={`font-extrabold transition-colors ${isActive ? "text-slate-950 text-sm" : "text-slate-700 text-xs"}`}>
-                                {pillar.title}
-                              </h5>
-                              <p className={`text-[10px] leading-relaxed mt-1 transition-colors ${isActive ? "text-slate-600 font-semibold" : "text-slate-500 font-medium"}`}>
-                                {pillar.subtitle}
-                              </p>
-                            </div>
-                          </button>
-                        );
-                      })}
+          {/* Redesigned Selector Cards - Top Horizontal Bar */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {scadaPillars.map((pillar, idx) => {
+              const isActive = activeTab === idx;
+              return (
+                <SectionWrapper key={idx} delay={idx * 0.05}>
+                  <button
+                    onClick={() => setActiveTab(idx)}
+                    className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 relative group flex items-start gap-4 cursor-pointer select-none h-full ${
+                      isActive
+                        ? "bg-slate-950 border-primary/40 shadow-2xl shadow-primary/5"
+                        : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10"
+                    }`}
+                  >
+                    {isActive && (
+                      <div className="absolute left-6 right-6 bottom-0 h-1 bg-primary rounded-t-md"></div>
+                    )}
+                    <div className={`p-3 rounded-xl shrink-0 transition-transform duration-300 group-hover:scale-105 ${
+                      isActive ? "bg-primary/20 text-primary" : "bg-white/5 text-gray-400"
+                    }`}>
+                      {pillar.icon}
                     </div>
+                    <div>
+                      <h5 className={`font-extrabold transition-colors ${isActive ? "text-white text-sm" : "text-gray-300 text-xs"}`}>
+                        {pillar.title}
+                      </h5>
+                      <p className={`text-[10px] leading-relaxed mt-1 transition-colors ${isActive ? "text-gray-400 font-semibold" : "text-gray-500 font-medium"}`}>
+                        {pillar.subtitle}
+                      </p>
+                    </div>
+                  </button>
+                </SectionWrapper>
+              );
+            })}
+          </div>
+
+          {/* Selector Bottom Console Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            {/* Left Column (lg:col-span-4): Telemetry Status Monitor Terminal */}
+            <div className="lg:col-span-4 w-full flex">
+              <SectionWrapper className="w-full flex">
+                <div className="w-full bg-slate-950 border border-white/5 rounded-3xl p-6 flex flex-col justify-between font-mono relative overflow-hidden select-none">
+                  <div className="absolute inset-0 bg-primary/5 opacity-30 pointer-events-none rounded-3xl"></div>
+                  
+                  <div className="relative z-10">
+                    {/* Telemetry Header */}
+                    <div className="border-b border-white/10 pb-3 mb-4 flex justify-between items-center text-[9px] text-gray-500">
+                      <span>AEPL SCADA METADATA</span>
+                      <span className="flex items-center gap-1 text-emerald-400 font-bold">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        MONITOR_ON
+                      </span>
+                    </div>
+
+                    <h4 className="text-xs font-bold text-white mb-4 uppercase tracking-wider">
+                      {scadaPillars[activeTab].title} Status
+                    </h4>
+
+                    {/* Telemetry Metrics specific to active tab */}
+                    {activeTab === 0 && ( // Solar SCADA
+                      <div className="space-y-3 text-[10px] text-gray-400">
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">Capacity Base</div>
+                          <div className="text-[11px] font-bold text-white">51GW+ Installed</div>
+                        </div>
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">Tracker Algorithm</div>
+                          <div className="text-[11px] font-bold text-white">Closed-Loop Active (61+ Sites)</div>
+                        </div>
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">MET Monitoring</div>
+                          <div className="text-[11px] font-bold text-white">Pyranometer Array Connected</div>
+                        </div>
+                      </div>
+                    )}
+                    {activeTab === 1 && ( // Wind SCADA
+                      <div className="space-y-3 text-[10px] text-gray-400">
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">Multi-OEM Aggregation</div>
+                          <div className="text-[11px] font-bold text-white">Active (All Major OEMs)</div>
+                        </div>
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">SAS Interface</div>
+                          <div className="text-[11px] font-bold text-white">IEC 61850 Link connected</div>
+                        </div>
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">Wind Anemometry</div>
+                          <div className="text-[11px] font-bold text-white">Sensor Node Polling (1Hz)</div>
+                        </div>
+                      </div>
+                    )}
+                    {activeTab === 2 && ( // Hybrid SCADA
+                      <div className="space-y-3 text-[10px] text-gray-400">
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">Hybrid Capacity</div>
+                          <div className="text-[11px] font-bold text-white">8GW+ Projects</div>
+                        </div>
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">Power Plant Controller</div>
+                          <div className="text-[11px] font-bold text-white">10+ Hybrid PPC Installed</div>
+                        </div>
+                        <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                          <div className="text-gray-500 font-bold mb-1 uppercase tracking-wider">Event Log Rate</div>
+                          <div className="text-[11px] font-bold text-white">1ms Timestamped Logs</div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="border-t border-white/10 pt-3 mt-6 text-[8px] text-gray-500">
+                    <span>AEPL CONSOLE v2.04</span>
                   </div>
                 </div>
               </SectionWrapper>
             </div>
 
-            {/* Right side: Detailed Scope Card */}
+            {/* Right Column (lg:col-span-8): Blueprint Card Details */}
             <div className="lg:col-span-8 w-full flex">
-              <SectionWrapper delay={0.2} className="h-full w-full flex flex-col justify-between">
-                <div className="w-full h-full bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-xl flex flex-col justify-between select-none">
+              <SectionWrapper delay={0.2} className="w-full flex">
+                <div className="w-full h-full bg-slate-950/40 border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between select-none">
                   <div>
                     {/* Header */}
-                    <div className="border-b border-slate-100 pb-4 mb-6 flex justify-between items-center text-[10px] font-mono text-slate-400">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-                        AEPL renewable implementation blueprint
-                      </span>
+                    <div className="border-b border-white/5 pb-4 mb-6 flex justify-between items-center text-[10px] font-mono text-gray-500">
+                      <span>AEPL RENEWABLE BLUEPRINT</span>
                       <span className="font-bold text-primary">MODULE_0{activeTab + 1}</span>
                     </div>
 
                     {/* Content Detail */}
-                    <h3 className="text-xl font-black text-slate-950 mb-3">{scadaPillars[activeTab].title} Scope</h3>
-                    <p className="text-slate-600 text-xs leading-relaxed mb-6 font-medium">
+                    <h3 className="text-xl font-extrabold text-white mb-3">{scadaPillars[activeTab].title} Scope</h3>
+                    <p className="text-gray-300 text-xs leading-relaxed mb-6 font-medium">
                       {scadaPillars[activeTab].desc}
                     </p>
 
-                    {/* Dynamic Sections (Expertise, Features, Benefits, PPC) */}
+                    {/* Dynamic Sections (Expertise, Features, Benefits) */}
                     <div className="space-y-6">
                       {scadaPillars[activeTab].sections.map((sect, sIdx) => (
                         <div key={sIdx} className="space-y-3">
-                          <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-[0.1em] border-b border-slate-100 pb-1.5">
+                          <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-[0.1em] border-b border-white/5 pb-1.5">
                             {sect.title}
                           </h4>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                             {sect.items.map((item, iIdx) => (
-                              <div key={iIdx} className="bg-slate-50 p-4 rounded-xl border border-slate-200/50 flex items-start gap-3 hover:border-primary/25 transition-colors duration-300">
-                                <div className="w-5 h-5 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-primary mt-0.5">
+                              <div key={iIdx} className="bg-white/5 p-4 rounded-xl border border-white/5 flex items-start gap-3 hover:border-primary/25 transition-colors duration-300">
+                                <div className="w-5 h-5 rounded-lg bg-primary/20 flex items-center justify-center shrink-0 text-primary mt-0.5">
                                   <CheckCircle2 className="w-4 h-4" />
                                 </div>
-                                <p className="text-[10px] text-slate-700 leading-relaxed font-semibold">
+                                <p className="text-[10px] text-gray-200 leading-relaxed font-semibold">
                                   {item}
                                 </p>
                               </div>
@@ -386,11 +450,11 @@ export default function ScadaPageClient() {
                   </div>
 
                   {/* Footer */}
-                  <div className="border-t border-slate-100 pt-4 mt-8 flex justify-between items-center text-[8px] font-mono text-slate-400">
-                    <span>AEPL UNIFIED RENEWABLE SYSTEM CONFIG</span>
+                  <div className="border-t border-white/5 pt-4 mt-8 flex justify-between items-center text-[8px] font-mono text-gray-500">
+                    <span>AEPL SCADA CONFIGURATION MATRIX</span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                      <span>ACTIVE SCHEMATICS</span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                      <span>SYS_ACTIVE</span>
                     </span>
                   </div>
                 </div>
@@ -401,8 +465,8 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 4. GAIN SUPERIOR CONTROL WITH AEPL PLANT SCADA (Brochure Section) */}
-      <section className="py-24 bg-white text-slate-900 relative z-20 border-t border-slate-100">
+      {/* 4. GAIN SUPERIOR CONTROL WITH AEPL PLANT SCADA (Convert to Immersive Dark) */}
+      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Left side description */}
@@ -412,11 +476,11 @@ export default function ScadaPageClient() {
                   <Sliders className="w-3.5 h-3.5" />
                   <span>Superior Control</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-black text-slate-950 font-heading leading-tight">
+                <h2 className="text-3xl md:text-4xl font-black text-white font-heading leading-tight">
                   Gain Superior Control <br />
                   <span className="gradient-heading">with AEPL Plant SCADA</span>
                 </h2>
-                <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                <p className="text-gray-400 text-sm leading-relaxed font-medium">
                   Designed for real-time grid responsiveness, rapid fault isolation, and highly granular performance analytics at local operator stations.
                 </p>
               </SectionWrapper>
@@ -424,13 +488,13 @@ export default function ScadaPageClient() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {superiorControl.map((item, idx) => (
                   <SectionWrapper key={idx} delay={idx * 0.05}>
-                    <div className="p-5 bg-slate-50 border border-slate-200/50 rounded-2xl flex items-start gap-4 hover:border-primary/25 transition-colors duration-300 h-full">
-                      <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-primary">
+                    <div className="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-start gap-4 hover:border-primary/25 transition-colors duration-300 h-full">
+                      <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center shrink-0 text-primary">
                         <CheckCircle2 className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-black text-slate-950 mb-1 leading-snug">{item.label}</h4>
-                        <p className="text-[10px] text-slate-500 leading-relaxed font-medium">{item.val}</p>
+                        <h4 className="text-xs font-black text-white mb-1 leading-snug">{item.label}</h4>
+                        <p className="text-[10px] text-gray-400 leading-relaxed font-medium">{item.val}</p>
                       </div>
                     </div>
                   </SectionWrapper>
@@ -518,7 +582,7 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 6. SCADA IN ACTION (Tabbed Interactive Dashboard Previews) */}
+      {/* 6. SCADA IN ACTION (Tabbed Interactive Dashboard Previews - Light) */}
       <section className="py-24 bg-white text-slate-900 relative z-20 rounded-t-[40px] -mt-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -558,7 +622,7 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 7. EXPLORE OTHER SOLUTIONS */}
+      {/* 7. EXPLORE OTHER SOLUTIONS (Light) */}
       <section className="py-24 bg-white text-slate-900 border-t border-slate-100 relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -612,15 +676,15 @@ export default function ScadaPageClient() {
         </div>
       </section>
 
-      {/* 8. CTA */}
-      <section className="py-24 bg-white text-slate-900 text-center relative z-20 rounded-t-[40px] -mt-10">
+      {/* 8. CTA (Convert to Immersive Dark) */}
+      <section className="py-24 bg-slate-950 text-white text-center relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-950 mb-6 font-heading">Ready to Modernize Your SCADA?</h2>
-            <p className="text-slate-500 mb-8 text-sm md:text-base leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-6 font-heading">Ready to Modernize Your SCADA?</h2>
+            <p className="text-gray-400 mb-8 text-sm md:text-base leading-relaxed">
               Talk to our SCADA engineers to design a system tailored to your solar, wind, or hybrid utility plant requirements.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-slate-900 hover:text-white transition-colors shadow-lg shadow-teal-500/20">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-[#0da08a] text-white rounded-full font-bold hover:bg-white hover:text-slate-900 transition-colors shadow-lg shadow-teal-500/20">
               Request SCADA Consultation <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionWrapper>
