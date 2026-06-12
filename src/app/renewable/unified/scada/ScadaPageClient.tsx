@@ -209,7 +209,7 @@ export default function ScadaPageClient() {
               <div>
                 <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20">
                   <Monitor className="w-4 h-4" />
-                  <span>Unified Control Solutions</span>
+                  <span>Unified Control Solution</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
                   <span className="gradient-heading">SCADA</span>
