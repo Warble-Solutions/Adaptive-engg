@@ -126,7 +126,7 @@ export default function HomePageClient() {
         <InfiniteMarquee speed={1.2} hoverSpeed={0.3} className="gap-8 items-center pr-8 py-6 cursor-pointer">
           {statsList.map((stat, i) => (
             <div key={i} className="flex-shrink-0 w-80 h-44 bg-slate-50/70 border-2 border-slate-200 rounded-[2rem] p-8 flex flex-col justify-center items-center text-center hover:border-primary/80 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="text-4xl font-extrabold text-slate-900 font-heading mb-2">
+              <div className="text-5xl font-extrabold text-primary font-heading mb-2">
                 {formatStatVal(stat)}
               </div>
               <div className="text-xs uppercase tracking-widest text-slate-500 font-bold leading-normal">{stat.label}</div>
