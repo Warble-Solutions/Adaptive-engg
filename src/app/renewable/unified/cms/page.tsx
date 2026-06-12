@@ -162,7 +162,7 @@ export default function Page() {
             </SectionWrapper>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="border border-slate-200/60 rounded-[32px] overflow-hidden bg-white shadow-xl shadow-slate-100/50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Handles Renewable Complexity",
@@ -194,31 +194,49 @@ export default function Page() {
                 desc: "Seamlessly integrates battery storage (BESS) and scaling capacities as your renewable generation expands.",
                 icon: <Zap className="w-5 h-5 text-primary" />
               }
-            ].map((item, i) => (
-              <SectionWrapper key={i} delay={i * 0.1} className="h-full">
-                <div className="group relative bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl shadow-md transition-all duration-500 h-full flex flex-col overflow-hidden hover:-translate-y-2">
-                  <div className="h-1 bg-gradient-to-r from-primary via-teal-400 to-teal-500 group-hover:h-1.5 transition-all duration-300"></div>
+            ].map((item, i) => {
+              // Dynamically configure borders to create a single-grid panel look:
+              const borderClasses = `
+                border-slate-100/80
+                ${i < 3 ? 'lg:border-b' : ''}
+                ${i % 3 !== 2 ? 'lg:border-r' : ''}
+                ${i < 4 ? 'md:border-b' : ''}
+                ${i % 2 === 0 ? 'md:border-r' : ''}
+                border-b last:border-b-0 md:border-b-0 /* fallback for mobile */
+              `.replace(/\s+/g, ' ').trim();
 
-                  <div className="p-8 flex flex-col flex-grow">
-                    <div className="flex items-start justify-between mb-6">
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-white font-black text-xl">0{i + 1}</span>
+              return (
+                <SectionWrapper key={i} delay={i * 0.05} className="h-full">
+                  <div className={`p-10 hover:bg-slate-50/40 transition-all duration-500 h-full flex flex-col justify-between group relative overflow-hidden text-left ${borderClasses}`}>
+                    {/* Subtle top-right ambient hover highlight */}
+                    <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-primary/[0.04] to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                    
+                    <div>
+                      {/* Badge / Number */}
+                      <div className="flex items-center justify-between mb-8">
+                        <div className="w-10 h-10 rounded-xl bg-teal-50/80 flex items-center justify-center text-primary group-hover:scale-105 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm border border-teal-100/50">
+                          {item.icon}
+                        </div>
+                        <span className="text-slate-300 font-mono font-bold text-xs select-none">
+                          PILLAR 0{i + 1}
+                        </span>
                       </div>
-                      <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center border border-slate-100 group-hover:scale-110 transition-all duration-300">
-                        {item.icon}
-                      </div>
+
+                      {/* Title & Description */}
+                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300 leading-snug">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                        {item.desc}
+                      </p>
                     </div>
 
-                    <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-slate-500 text-xs leading-relaxed flex-grow font-medium">
-                      {item.desc}
-                    </p>
+                    {/* Subtle hover accent line at the bottom */}
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                   </div>
-                </div>
-              </SectionWrapper>
-            ))}
+                </SectionWrapper>
+              );
+            })}
           </div>
         </div>
       </section>
