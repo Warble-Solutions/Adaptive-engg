@@ -41,8 +41,7 @@ export default function Page() {
                   <span>Unified Renewable Solution</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
-                  Computerized Maintenance<br />
-                  <span className="gradient-heading">Management System</span>
+                  <span className="gradient-heading">CMMS</span>
                 </h1>
                 <p className="text-gray-300 text-base md:text-lg font-medium max-w-lg leading-relaxed mb-8">
                   Automated workorder management, standardized SOPs across the enterprise, reduced mean time to repair, and effective cost control with inventory management.
