@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartLine,
   faWaveSquare,
-  faNetworkWired,
   faFileContract,
   faShieldAlt,
   faCogs
@@ -109,47 +108,42 @@ export default function PPCPageClient() {
         </div>
       </section>
 
-      {/* 3. THE RISING COMPLEXITY (Gray) */}
+      {/* 3. DESIGNED FOR THE FUTURE GRID (Gray) */}
       <section className="py-24 bg-slate-50 relative z-10 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">The Rising Complexity</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">Navigating the challenges of the road to 500GW+.</p>
+              <h2 className="text-4xl font-bold text-slate-900 mb-4 font-heading">Designed for the Future Grid</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto">Orchestrating utility assets to meet dynamic grid environments.</p>
             </SectionWrapper>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "The Road to 500GW+",
-                desc: "By 2030, renewable generation will exceed 500GW+. This rapid scaling demands a transformative shift toward sustainable energy infrastructure",
-                icon: faChartLine
-              },
-              {
-                title: "The Distributed Grid",
-                desc: "Integration of thousands of decentralized Solar, Wind, and BESS assets requires effective orchestration to work in harmony",
-                icon: faNetworkWired
-              },
-              {
-                title: "Intermittency & Instability",
-                desc: "Fluctuations in wind and solar can risk grid stability. Assets must be managed with high-precision control to prevent frequency deviations",
+                title: "Handles Renewable Complexity",
+                desc: "Manages distributed generation, intermittency, and dynamic grid conditions across Solar, Wind, and BESS installations.",
                 icon: faWaveSquare
               },
               {
-                title: "Stringent Regulatory Standards",
-                desc: "Grid operators are tightening requirements. Compliance is a critical mandate for plants to remain connected and profitable",
+                title: "Ensures Compliance",
+                desc: "Meets tightening regulatory and grid-code requirements (IEGC and utility mandates) with high reliability.",
                 icon: faFileContract
               },
               {
-                title: "Securing Critical Infrastructure",
-                desc: "Renewable assets are prime cyber targets. Robust encryption and adherence to IEC 62443 are vital to prevent outages",
+                title: "Secure by Design",
+                desc: "Built-in cyber security aligned with IEC 62443 standard protects critical plant and grid operations.",
                 icon: faShieldAlt
               },
               {
-                title: "Expert Execution",
-                desc: "Complex automation requires deep domain expertise. Connecting high-speed control systems with legacy grids involves intricate engineering",
+                title: "Flexible & Scalable",
+                desc: "Modular, vendor-agnostic architecture enables easy system expansion and seamless legacy integrations.",
                 icon: faCogs
+              },
+              {
+                title: "Future-Ready",
+                desc: "Seamlessly integrates battery storage (BESS) and additional capacity, supporting India's 500GW+ renewable roadmap.",
+                icon: faChartLine
               }
             ].map((item, i) => (
               <SectionWrapper key={i} delay={i * 0.1} className="h-full">
@@ -372,18 +366,18 @@ export default function PPCPageClient() {
                 </div>
                 <div className="space-y-6">
                   <FeatureRow
-                    title="Active Power Control"
-                    desc="Maximize profitability with precision dispatch, intelligent curtailment, and high-speed response to utility commands in hybrid setups."
+                    title="Active Power Management"
+                    desc="Precise control of active power at the POI for stable dispatch and curtailment."
                     imageSrc="/imgs/tam/Active Power Management.png"
                   />
                   <FeatureRow
-                    title="Reactive Power Operating Modes"
-                    desc="Highly customizable reactive modes including Q-Control, Q(V) control, power-factor modes for complex hybrid layouts."
+                    title="Optimized Reactive Power Control"
+                    desc="Accurate reactive power and power factor regulation to maintain POI compliance."
                     imageSrc="/imgs/tam/Optimized Reactive Power Control.png"
                   />
                   <FeatureRow
-                    title="Ramp-Rate Control"
-                    desc="Protect grid integrity with precision ramp rate control, delivering smooth power transitions that eliminate fluctuations."
+                    title="Smooth Ramp-Rate Control"
+                    desc="Controlled power transitions to prevent fluctuations and meet requirements."
                     imageSrc="/imgs/tam/Smooth Ramp-Rate Control.png"
                   />
                 </div>
@@ -402,17 +396,17 @@ export default function PPCPageClient() {
                 <div className="space-y-6">
                   <FeatureRow
                     title="Voltage Control"
-                    desc="Maintain perfect grid harmony with instantaneous reactive support and automated regulation for equipment protection."
+                    desc="Real-time voltage regulation to maintain grid stability and protect equipment."
                     imageSrc="/imgs/tam/Voltage Control.png"
                   />
                   <FeatureRow
-                    title="Frequency Droop Response"
-                    desc="Empower the grid with ultra-responsive sub-second stability and frequency droop response for total utility compliance."
+                    title="Dynamic Frequency Response"
+                    desc="Sub-second control loops (<200 ms) to stabilize grid frequency during disturbances."
                     imageSrc="/imgs/tam/Dynamic Frequency Response.png"
                   />
                   <FeatureRow
-                    title="PF Control"
-                    desc="Optimize plant efficiency with automated phase-angle correction and seamless reactive power management."
+                    title="Enhanced Power Factor Correction"
+                    desc="Advanced waveform control to maximize usable power and reduce grid stress."
                     imageSrc="/imgs/tam/Enhanced Power Factor Correction.png"
                   />
                 </div>
@@ -527,23 +521,48 @@ export default function PPCPageClient() {
       <section className="py-24 bg-white border-t border-slate-100 relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
-            <h2 className="text-3xl font-bold text-slate-900 text-center mb-16 font-heading">Benefits of AEPL-PPC</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-16 font-heading">Key Benefits</h2>
           </SectionWrapper>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              "Regulatory Compliance (IEGC)",
-              "Enhanced Grid Stability",
-              "Optimized Energy Production",
-              "Improved System Reliability",
-              "Cyber Security Measures",
-              "Future-Ready Scalability",
-              "Advanced Analytics & Reporting",
-              "Faster Commissioning"
+              {
+                title: "Regulatory Grid Compliance",
+                desc: "Compliant with the Indian Electricity Grid Code (IEGC) and utility-specific mandates."
+              },
+              {
+                title: "High Reliability & Resilience",
+                desc: "Master–Slave / hot-redundant architecture ensures 100% control availability."
+              },
+              {
+                title: "Enhanced Grid Stability",
+                desc: "Fast active and reactive control transforms intermittent generation into a stable grid asset."
+              },
+              {
+                title: "Seamless Integration",
+                desc: "Native support for IEC 61850, Modbus TCP, and OPC UA across inverters, turbines, & BESS."
+              },
+              {
+                title: "Optimized Energy Production",
+                desc: "Dynamic Power Control maximizes energy yield within grid-imposed limits."
+              },
+              {
+                title: "Secure-by-Design",
+                desc: "IEC 62443 aligned cyber security with encrypted communication and audit-ready logs."
+              }
             ].map((benefit, i) => (
               <SectionWrapper key={i} delay={i * 0.1} className="h-full">
-                <div className="flex items-center gap-4 p-6 bg-slate-50 border border-slate-100 hover:border-primary/50 hover:shadow-xl transition-all duration-300 rounded-xl h-full hover:-translate-y-1">
-                  <CheckCircle2 className="text-primary w-6 h-6 shrink-0" />
-                  <span className="font-bold text-slate-700">{benefit}</span>
+                <div className="p-6 bg-slate-50 border border-slate-200/60 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl h-full flex flex-col justify-between group">
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-6 text-primary group-hover:scale-105 transition-transform duration-300">
+                      <CheckCircle2 className="w-6 h-6 animate-pulse" />
+                    </div>
+                    <h3 className="text-base font-extrabold text-slate-950 mb-2 leading-snug group-hover:text-primary transition-colors">
+                      {benefit.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-slate-500 leading-relaxed font-medium mt-1">
+                    {benefit.desc}
+                  </p>
                 </div>
               </SectionWrapper>
             ))}
