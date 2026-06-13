@@ -249,11 +249,13 @@ export default function Navbar() {
                             </div>
                         </div>
 
-                        {/* Infrastructure */}
                         <div className="relative group flex items-center h-full">
-                            <button className="text-sm font-bold uppercase tracking-wider text-slate-700 hover:text-primary flex items-center gap-1 py-6">
+                            <Link href="/infrastructure" className={cn(
+                                "flex items-center gap-1 py-6 text-sm font-bold uppercase tracking-wider transition-colors duration-300",
+                                "text-slate-700 hover:text-primary"
+                            )}>
                                 Infrastructure <ChevronDown className="w-3 h-3 opacity-50" />
-                            </button>
+                            </Link>
                             <div className="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-xl border-t-2 border-primary overflow-visible opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                 <DropdownLink href="/infrastructure/tunnel">Tunnel Solutions</DropdownLink>
                                 <DropdownLink href="/infrastructure/data-center">Data Center</DropdownLink>
