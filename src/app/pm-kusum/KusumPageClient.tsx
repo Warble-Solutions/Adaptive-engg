@@ -330,17 +330,17 @@ export default function KusumPageClient() {
       </section>
 
 
-      {/* FEATURES & BENEFITS (Dark) */}
-      <section className="py-24 bg-slate-950 text-white relative z-20 border-t border-white/5">
+      {/* FEATURES & BENEFITS (Light) */}
+      <section className="py-24 bg-white text-slate-900 relative z-20 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <SectionWrapper>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-500/30">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-50/80 text-teal-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-teal-100 shadow-sm">
                 <Sun className="w-4 h-4" />
                 <span>Core Advantages</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-white font-heading mb-4">Features & Benefits</h2>
-              <p className="text-gray-400 max-w-xl mx-auto text-sm">
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-4">Features & Benefits</h2>
+              <p className="text-slate-500 max-w-xl mx-auto text-sm">
                 Empowering farmers and solar developers with next-generation remote monitoring and compliance.
               </p>
             </SectionWrapper>
@@ -349,38 +349,38 @@ export default function KusumPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {[
               {
-                icon: <FontAwesomeIcon icon={faWifi} className="w-6 h-6 text-teal-400" />,
+                icon: <FontAwesomeIcon icon={faWifi} className="w-6 h-6 text-teal-600" />,
                 title: "Monitor from Anywhere",
                 desc: "100% remote visibility of solar pump metrics, flow rates, and generation stats on mobile or desktop."
               },
               {
-                icon: <FontAwesomeIcon icon={faTasks} className="w-6 h-6 text-teal-400" />,
+                icon: <FontAwesomeIcon icon={faTasks} className="w-6 h-6 text-teal-600" />,
                 title: "Analyse Performance",
                 desc: "Calculate accurate Performance Ratio (PR) and isolate performance anomalies in real time."
               },
               {
-                icon: <FontAwesomeIcon icon={faFileInvoice} className="w-6 h-6 text-teal-400" />,
+                icon: <FontAwesomeIcon icon={faFileInvoice} className="w-6 h-6 text-teal-600" />,
                 title: "In-built Reports Library",
                 desc: "Generate compliance reports and Joint Meter Readings (JMR) with a single click."
               },
               {
-                icon: <FontAwesomeIcon icon={faNetworkWired} className="w-6 h-6 text-teal-400" />,
+                icon: <FontAwesomeIcon icon={faNetworkWired} className="w-6 h-6 text-teal-600" />,
                 title: "Third-party Integration",
                 desc: "Connect seamlessly with localized SCADA systems, DISCOM portals, and SLDC RTUs."
               },
               {
-                icon: <FontAwesomeIcon icon={faSolarPanel} className="w-6 h-6 text-teal-400" />,
+                icon: <FontAwesomeIcon icon={faSolarPanel} className="w-6 h-6 text-teal-600" />,
                 title: "Multi-plant O&M",
                 desc: "Manage multiple pump installations and geographic clusters under a unified O&M schedule."
               }
             ].map((feat, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
-                <div className="p-6 bg-white/[0.01] border border-white/5 rounded-2xl hover:border-teal-500/30 hover:bg-white/[0.03] transition-all duration-300 h-full flex flex-col group">
-                  <div className="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 group-hover:scale-115 transition-transform duration-300">
+                <div className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:border-teal-500/40 hover:bg-white hover:shadow-lg transition-all duration-300 h-full flex flex-col group shadow-sm">
+                  <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-6 group-hover:scale-115 transition-transform duration-300 border border-teal-100/50">
                     {feat.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 leading-tight">{feat.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed flex-grow">{feat.desc}</p>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3 leading-tight">{feat.title}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed flex-grow">{feat.desc}</p>
                 </div>
               </SectionWrapper>
             ))}
