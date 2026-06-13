@@ -153,6 +153,18 @@ export default async function PanelDetailPage({ params }: PageProps) {
           {/* Right Column: Technical Specifications & CTA */}
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
             
+            {/* Product Image Card */}
+            <SectionWrapper delay={0.1}>
+              <div className="bg-slate-900/40 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl relative group aspect-[4/3] flex items-center justify-center">
+                <img 
+                  src={product.imageUrl} 
+                  alt={product.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-60 pointer-events-none" />
+              </div>
+            </SectionWrapper>
+
             {/* Specifications Card */}
             <SectionWrapper delay={0.2}>
               <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-8 backdrop-blur-md shadow-2xl">

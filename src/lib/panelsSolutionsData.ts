@@ -11,6 +11,7 @@ export interface PanelSolution {
   features: string[];
   specifications: SpecificationItem[];
   details: string[];
+  imageUrl: string;
 }
 
 export const panelsSolutionsData: Record<string, PanelSolution> = {
@@ -18,6 +19,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "ht-panel",
     title: "High Tension (HT) Panel",
     subtitle: "VCB Panel up to 33KV/11KV",
+    imageUrl: "/panels/HT-Panel.webp",
     description: "High Tension (HT) panels are designed for both indoor and outdoor applications, mostly used in electrical substations for controlling and distributing high-voltage electricity flow safely. We follow strict industry parameters to deliver superior quality and reliability.",
     features: [
       "Designed for indoor and outdoor applications",
@@ -39,6 +41,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "pcc",
     title: "Power Control Centre (PCC) Panel",
     subtitle: "415/440V - 65KA - 6300A",
+    imageUrl: "/panels/PCC-Panel.webp",
     description: "Our Power Control Centre (PCC) Panels are designed to cater to diverse and complex system requirements across heavy industries, commercial townships, and large plants. The design assures highest reliability in operation, ease of maintenance, and complete flexibility, allowing you to control and distribute the whole power supply of a plant from a single place.",
     features: [
       "Centralized control of the entire power supply from one place",
@@ -60,6 +63,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "mcc",
     title: "Motor Control Centre (MCC) Panel",
     subtitle: "415/440V - 65KA - 4000A",
+    imageUrl: "/panels/MCC-Panel.webp",
     description: "We are leading manufacturers and suppliers of customized Motor Control Centre (MCC) Panels. Designed as per the latest applicable engineering standards, our MCC panels offer a modular construction with a wide choice of compartment sizes. They provide comprehensive safety and protection for electric motors.",
     features: [
       "Modular construction with highly customizable compartment sizes",
@@ -81,6 +85,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "intelligent-mcc",
     title: "Intelligent Motor Control Centre (IMCC) Panel",
     subtitle: "Smart Diagnostic & Networked Motor Control",
+    imageUrl: "/panels/IMCC.webp",
     description: "Our state-of-the-art, intelligent MCC design integrates directly with the control system (PLC/SCADA), allowing direct access to strong diagnostic data during commissioning and operations. This simplifies troubleshooting down the line, improves runtime, and reduces operating costs.",
     features: [
       "Seamless integration with central PLC/SCADA control systems",
@@ -102,6 +107,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "apfc",
     title: "Automatic Power Factor Correction (APFC) Panel",
     subtitle: "Optimize Efficiency & Power Factor Correction",
+    imageUrl: "/panels/APFC-Panel.webp",
     description: "Our APFC Panels symbolize premium quality and grid compliance. They automatically monitor and correct reactive power to maintain a near-unity power factor. This reduces power losses, minimizes electricity billing penalties, and lowers line harmonics.",
     features: [
       "Automatically maintains a near-unity power factor",
@@ -123,6 +129,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "pdb-ldb",
     title: "PDB / LDB Panel",
     subtitle: "Power & Lighting Distribution Boards",
+    imageUrl: "/panels/PDBLDB-Panels.webp",
     description: "We offer a wide range of customized Power Distribution Boards (PDB) and Lighting Distribution Boards (LDB). These are designed to allocate electrical power safely to different sections of an industry, large commercial buildings, or infrastructure sites, providing reliable fault protection and control.",
     features: [
       "Safe power allocation to various sections of industries and high-rises",
@@ -144,6 +151,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "soft-starter-vfd",
     title: "Soft Starter and VFD Panel",
     subtitle: "Variable Frequency Drive & Soft Starter Panels",
+    imageUrl: "/panels/Soft-Starter-and-VFD-Panel.webp",
     description: "Our customized VFD panels for constant torque and variable torque applications reduce operating costs and improve overall productivity. With over 500+ successful installations across multiple sectors, these panels deliver smooth motor acceleration, speed control, and protection.",
     features: [
       "Fully adjustable speed control and dynamic torque regulation",
@@ -165,6 +173,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "plc",
     title: "PLC Panel",
     subtitle: "Programmable Logic Controller Panels",
+    imageUrl: "/panels/PLC-Panels.webp",
     description: "We are one of India’s leading PLC Panel manufacturers with decades of experience in designing custom PLC control cabinets and programming automation logic. We offer a complete range of PLC systems including hot-standby redundancy, SIL-rated safety systems, and flameproof options.",
     features: [
       "Hot-Standby and Redundancy options for high-availability systems",
@@ -186,6 +195,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "acdb",
     title: "AC/DB Panel",
     subtitle: "AC Distribution Boards for Solar & Pumping",
+    imageUrl: "/panels/ACDB-Panels.webp",
     description: "Our AC Distribution Boards (ACDB) are designed to distribute alternating current safely. Consistently delivered by our team of experts, these boards are customized for client specifications including indoor (IP52) and outdoor floor standing, wall mounting, or stand mounting options. They protect solar and pump appliances from electrical damage.",
     features: [
       "Custom mounting configurations: wall, stand, floor standing (IP52/IP65)",
@@ -207,6 +217,7 @@ export const panelsSolutionsData: Record<string, PanelSolution> = {
     slug: "automation",
     title: "Automation Panel",
     subtitle: "Designing, Engineering, and Commissioning Solutions",
+    imageUrl: "/panels/Automation-Panels.webp",
     description: "We offer complete Panel Solutions for Automation and Control Systems that include Designing, Engineering, Manufacturing, and Commissioning Assistance. Our premises feature a state-of-the-art testing facility where we conduct Factory Acceptance Tests (FAT) using simulation equipment, ensuring complete reliability before dispatch.",
     features: [
       "Fully compliant with international engineering and layout standards",
