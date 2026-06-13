@@ -170,6 +170,22 @@ export default function PanelsPageClient() {
             {/* Hero Stats Bento */}
             <SectionWrapper delay={0.3}>
               <div className="grid grid-cols-2 gap-4">
+                {/* Prominently Highlighted Manufacturing Facility Card */}
+                <div className="col-span-2 bg-gradient-to-br from-[#0da08a]/20 via-primary/15 to-transparent border-2 border-primary/45 rounded-3xl p-8 hover:border-primary/60 transition-all duration-300 flex items-center justify-between shadow-2xl shadow-primary/10">
+                  <div>
+                    <div className="text-4xl md:text-5xl font-black text-white mb-2 font-mono tracking-tight">
+                      125,000<span className="text-primary">+</span> <span className="text-xl md:text-2xl font-bold font-sans">sq. ft.</span>
+                    </div>
+                    <span className="text-xs md:text-sm font-bold text-gray-200 uppercase tracking-wider block">
+                      Manufacturing Facility in Ahmedabad
+                    </span>
+                  </div>
+                  <div className="w-14 h-14 bg-primary/30 rounded-2xl flex items-center justify-center text-primary shrink-0 shadow-lg border border-primary/20 animate-pulse">
+                    <ShieldCheck className="w-7 h-7" />
+                  </div>
+                </div>
+
+                {/* Other stats below */}
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">17<span className="text-primary">+</span></div>
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Years Experience</span>
@@ -185,15 +201,6 @@ export default function PanelsPageClient() {
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">1,000<span className="text-primary">+</span></div>
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Projects</span>
-                </div>
-                <div className="col-span-2 bg-gradient-to-br from-primary/10 to-teal-500/5 border border-primary/30 rounded-3xl p-6 hover:border-primary/50 transition-all duration-300 flex items-center justify-between">
-                  <div>
-                    <div className="text-xl font-bold text-white mb-1">125,000+ sq. ft.</div>
-                    <span className="text-[11px] text-gray-300 block">Manufacturing facility in Ahmedabad</span>
-                  </div>
-                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary shrink-0">
-                    <ShieldCheck className="w-5 h-5" />
-                  </div>
                 </div>
               </div>
             </SectionWrapper>
