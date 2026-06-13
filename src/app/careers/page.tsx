@@ -3,7 +3,7 @@ import Link from "next/link";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Briefcase, MapPin, Building, ArrowRight } from "lucide-react";
-import ApplicationForm from "@/components/forms/ApplicationForm";
+import GeneralCandidatureModal from "@/components/forms/GeneralCandidatureModal";
 
 export const metadata = {
   title: "Careers | Adaptive Engineering",
@@ -109,36 +109,29 @@ export default async function CareersPage() {
       </section>
 
       {/* General Candidature Section */}
-      <section className="py-24 bg-slate-950 text-white relative z-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left side: content */}
-            <div className="lg:col-span-5 space-y-6">
-              <SectionWrapper>
-                <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/30">
-                  Join Our Talent Pool
-                </div>
-                <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-white leading-tight">
-                  Don&apos;t see a matching role?
-                </h2>
-                <p className="text-slate-400 text-lg leading-relaxed font-medium">
-                  We are always on the lookout for talented engineers, automation experts, and passion-driven professionals. Send us your resume for general consideration, and we will contact you when a matching opportunity arises.
-                </p>
-                <div className="pt-4 border-t border-slate-800">
-                  <p className="text-sm text-slate-500 font-semibold">
-                    Your details will be stored securely in our talent database.
-                  </p>
-                </div>
-              </SectionWrapper>
-            </div>
+      <section className="py-24 bg-slate-950 text-white relative z-20 overflow-hidden border-t border-slate-900">
+        {/* Subtle glowing background */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
 
-            {/* Right side: Application Form */}
-            <div className="lg:col-span-7">
-              <SectionWrapper>
-                <ApplicationForm jobId="general-application" title="Submit Your Candidature" />
-              </SectionWrapper>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <SectionWrapper>
+            <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30">
+              Join Our Talent Pool
             </div>
-          </div>
+            <h2 className="text-4xl md:text-5xl font-black font-heading text-white leading-tight mb-6">
+              Don&apos;t see a matching role?
+            </h2>
+            <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
+              We are always on the lookout for talented engineers, automation experts, and passion-driven professionals. Send us your resume for general consideration, and we will contact you when a matching opportunity arises.
+            </p>
+            
+            <div className="flex flex-col items-center justify-center gap-4">
+              <GeneralCandidatureModal />
+              <p className="text-sm text-slate-500 font-semibold mt-2">
+                Your details will be stored securely in our talent database.
+              </p>
+            </div>
+          </SectionWrapper>
         </div>
       </section>
     </div>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Upload, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 
-export default function ApplicationForm({ jobId, title = "Apply for this role" }: { jobId: string; title?: string }) {
+export default function ApplicationForm({ jobId, title = "Apply for this role", flat = false }: { jobId: string; title?: string; flat?: boolean }) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -79,7 +79,7 @@ export default function ApplicationForm({ jobId, title = "Apply for this role" }
   }
 
   return (
-    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl shadow-slate-200">
+    <div className={flat ? "" : "bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl shadow-slate-200"}>
       <h3 className="text-2xl font-black text-white font-heading mb-6">{title}</h3>
       
       {error && (
