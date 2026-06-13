@@ -183,31 +183,36 @@ export default async function PanelDetailPage({ params }: PageProps) {
                 </div>
               </div>
             </SectionWrapper>
-
-            {/* Quick Contact CTA Card */}
-            <SectionWrapper delay={0.3}>
-              <div className="bg-gradient-to-b from-[#0da08a]/20 to-transparent border border-[#0da08a]/25 rounded-3xl p-8 backdrop-blur-md shadow-2xl text-center space-y-6">
-                <div className="w-12 h-12 bg-[#0da08a]/20 rounded-full flex items-center justify-center text-primary mx-auto">
-                  <HelpCircle className="w-6 h-6 text-[#0da08a]" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-white font-heading mb-2">
-                    Need Custom Configurations?
-                  </h4>
-                  <p className="text-slate-300 text-sm leading-relaxed font-medium">
-                    Our panel engineers can custom-tailor dimensions, compartment sizes, and protection devices matching your specific project requirements.
-                  </p>
-                </div>
-                <Link 
-                  href="/contact"
-                  className="inline-flex items-center justify-center w-full bg-[#0da08a] hover:bg-[#0da08a]/80 text-white font-bold py-3.5 px-6 rounded-xl transition-colors shadow-lg shadow-teal-500/20 uppercase tracking-wider text-xs font-heading"
-                >
-                  Consult Panel Engineers
-                </Link>
-              </div>
-            </SectionWrapper>
           </div>
         </div>
+
+        {/* Full-width Quick Contact CTA Card at the bottom */}
+        <SectionWrapper delay={0.3}>
+          <div className="bg-gradient-to-r from-[#0da08a]/15 via-[#0da08a]/5 to-transparent border border-[#0da08a]/25 rounded-3xl p-8 md:p-10 backdrop-blur-md shadow-2xl mt-16 flex flex-col md:flex-row items-center justify-between gap-8 text-left relative overflow-hidden">
+            {/* Decorative background glow */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
+            
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+              <div className="w-14 h-14 bg-[#0da08a]/20 rounded-2xl flex items-center justify-center text-primary shrink-0 shadow-lg border border-[#0da08a]/20">
+                <HelpCircle className="w-7 h-7 text-[#0da08a]" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-xl md:text-2xl font-bold text-white font-heading">
+                  Need Custom Configurations?
+                </h4>
+                <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl font-medium">
+                  Our panel engineers can custom-tailor dimensions, compartment sizes, and protection devices matching your specific project requirements.
+                </p>
+              </div>
+            </div>
+            <Link 
+              href="/contact"
+              className="inline-flex items-center justify-center w-full md:w-auto bg-[#0da08a] hover:bg-[#0da08a]/80 text-white font-bold py-4 px-8 rounded-xl transition-colors shadow-lg shadow-teal-500/20 uppercase tracking-wider text-xs font-heading shrink-0 whitespace-nowrap cursor-pointer hover:scale-105 duration-200"
+            >
+              Consult Panel Engineers
+            </Link>
+          </div>
+        </SectionWrapper>
       </div>
     </main>
   );
