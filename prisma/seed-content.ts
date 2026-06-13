@@ -18,7 +18,7 @@ function stripWpShortcodes(content: string) {
 async function fetchRealBlogs() {
   console.log("Fetching real blogs from old WordPress API...");
   try {
-    const res = await fetch("https://adaptive-engg.com/wp-json/wp/v2/posts?per_page=5&_embed");
+    const res = await fetch("https://adaptive-engg.com/wp-json/wp/v2/posts?per_page=100&_embed");
     const posts = await res.json();
 
     if (!Array.isArray(posts)) return;
@@ -42,7 +42,14 @@ async function fetchRealBlogs() {
       // Upsert into DB
       await prisma.blogPost.upsert({
         where: { slug: slug },
-        update: {},
+        update: {
+          title,
+          content: `<p>${cleanedContent.replace(/\n/g, "<br/>")}</p>`,
+          excerpt: excerpt.substring(0, 150) + "...",
+          thumbnailUrl,
+          isPublished: true,
+          updatedAt: new Date(post.modified),
+        },
         create: {
           title,
           slug,
