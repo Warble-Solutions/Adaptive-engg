@@ -24,7 +24,7 @@ export default function InfrastructurePageClient() {
       
       {/* 1. HERO SECTION */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[url('/imgs/banner/hero_industrial_automation.png')] bg-cover bg-center">
+        <div className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 mix-blend-multiply z-10"></div>
         </div>
 
