@@ -184,10 +184,10 @@ export default function KusumPageClient() {
                       {/* Stat 3 */}
                       <div className="p-4 bg-white/[0.02] border border-slate-800/40 rounded-2xl">
                         <span className="text-2xl md:text-3xl font-black text-teal-400 font-mono block mb-1">
-                          4.7GW+
+                          5GW+
                         </span>
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                          Total PM-KUSUM Capacity
+                          Total PM-KUSUM Installed Base
                         </span>
                       </div>
 
