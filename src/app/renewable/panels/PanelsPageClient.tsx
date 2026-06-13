@@ -259,16 +259,16 @@ export default function PanelsPageClient() {
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[40px] pointer-events-none"></div>
                   
-                  <h3 className="text-xl font-bold font-heading text-white mb-4">State of the Art Facility</h3>
+                  <h3 className="text-xl font-bold font-heading text-white mb-4">Manufacturing Excellence</h3>
                   <p className="text-gray-400 text-xs leading-relaxed mb-6 font-medium">
-                    Equipped with advanced sheet metal fabrication tools, CNC machinery, and high-precision assembly lines managed under highly skilled supervision.
+                    We maintain complete control over the panel production cycle to ensure high standards of quality, performance, and durability.
                   </p>
 
                   <div className="space-y-4">
                     {[
-                      { title: "Advanced Sheet Metal Fab", desc: "Equipped with CNC laser cutting and heavy punching tools." },
-                      { title: "Precision Assembly Line", desc: "Managed under the supervision of highly skilled professionals." },
-                      { title: "In-house Testing Lab", desc: "Equipped with calibrated HT, IR, and Megger test systems." }
+                      { title: "Conceptualizing & Design", desc: "Tailor-made solutions engineered to meet complex and varying electrical specifications." },
+                      { title: "In-house Manufacturing", desc: "Equipped with basic and advanced machinery for reliable panel assembly." },
+                      { title: "Lifecycle & Support", desc: "End-to-end services including installation support and system integration." }
                     ].map((item, idx) => (
                       <div key={idx} className="flex gap-3">
                         <CheckCircle2 className="w-4.5 h-4.5 text-primary shrink-0 mt-0.5" />
