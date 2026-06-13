@@ -651,7 +651,7 @@ export default function HomePageClient() {
           <div className="flex justify-center">
             <SectionWrapper>
               <img
-                src="/journey/Final Version Our Journey.png"
+                src="/journey/our-journey-timeline.png"
                 alt="Our Journey Timeline"
                 className="w-full object-contain drop-shadow-2xl hover:scale-[1.01] transition-transform duration-700 rounded-3xl"
               />
