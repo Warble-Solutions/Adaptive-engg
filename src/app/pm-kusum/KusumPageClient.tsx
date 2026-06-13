@@ -143,55 +143,93 @@ export default function KusumPageClient() {
               </SectionWrapper>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col h-full justify-between">
               <SectionWrapper delay={0.2} className="h-full flex flex-col justify-between">
-                <div className="flex flex-col gap-6 h-full justify-between">
-                  <div className="p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group flex-grow flex flex-col justify-between">
-                    <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '20px 20px' }}></div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                        <Sun className="text-teal-400 w-6 h-6 shrink-0" /> Who can Apply?
-                      </h3>
-                      <p className="text-xs font-mono text-teal-400 uppercase tracking-widest mb-4">Indian Farmer Profile</p>
-                      <p className="text-slate-300 text-base leading-relaxed mb-6">
-                        Farmers can apply for the scheme by visiting the official PM-KUSUM website, logging in with their reference number, and filling out the online application form.
-                      </p>
-                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                        To support the PM-KUSUM scheme, we at Adaptive Engineering Pvt. Ltd. have our range of solutions which helps each project immensely, to support the PM-KUSUM scheme.
-                      </p>
+                <div className="p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden h-full flex flex-col justify-between">
+                  {/* Grid background */}
+                  <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '20px 20px' }}></div>
+                  
+                  {/* Subtle top glow */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[40px] pointer-events-none"></div>
+
+                  <div className="relative z-10">
+                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest block mb-2">Scheme Impact</span>
+                    <h3 className="text-2xl font-bold text-white mb-6 font-heading">
+                      PM-KUSUM Footprint
+                    </h3>
+
+                    {/* Stats Grid */}
+                    <div className="grid grid-cols-2 gap-4">
+                      
+                      {/* Stat 1 */}
+                      <div className="p-4 bg-white/[0.02] border border-slate-800/40 rounded-2xl">
+                        <span className="text-2xl md:text-3xl font-black text-primary font-mono block mb-1">
+                          20+
+                        </span>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                          States Benefitting
+                        </span>
+                      </div>
+
+                      {/* Stat 2 */}
+                      <div className="p-4 bg-white/[0.02] border border-slate-800/40 rounded-2xl">
+                        <span className="text-2xl md:text-3xl font-black text-primary font-mono block mb-1">
+                          3.5L+
+                        </span>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                          Farmers Assisted
+                        </span>
+                      </div>
+
+                      {/* Stat 3 */}
+                      <div className="p-4 bg-white/[0.02] border border-slate-800/40 rounded-2xl">
+                        <span className="text-2xl md:text-3xl font-black text-teal-400 font-mono block mb-1">
+                          4.7GW+
+                        </span>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                          Total Scheme Capacity
+                        </span>
+                      </div>
+
+                      {/* Stat 4 */}
+                      <div className="p-4 bg-white/[0.02] border border-slate-800/40 rounded-2xl">
+                        <span className="text-2xl md:text-3xl font-black text-teal-400 font-mono block mb-1">
+                          1.8GW+
+                        </span>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                          AEPL Installed Capacity
+                        </span>
+                      </div>
+
                     </div>
-                    <a 
-                      href="https://pmkusum.mnre.gov.in/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="inline-flex items-center gap-2 text-sm font-bold text-teal-400 hover:text-white hover:gap-3 transition-all font-mono mt-auto"
-                    >
-                      Visit Official PM-KUSUM Website <ArrowRight className="w-4 h-4" />
-                    </a>
+
+                    <p className="text-slate-400 text-xs md:text-sm leading-relaxed mt-6 font-medium">
+                      Adaptive Engineering Pvt. Ltd. is a key contributor to MNRE's agricultural solarization objectives, supplying compliant edge RTUs, remote monitoring software, and distribution panelboards across all components.
+                    </p>
                   </div>
 
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-[200px] shrink-0 group">
-                    <img src="/imgs/pm-kusum/solar_pump_irrigation.png" alt="Solar Powered Farm Irrigation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-white/20">
-                      <p className="text-slate-900 font-bold text-xs">Empowering Sustainable Agriculture</p>
-                      <p className="text-slate-500 text-[10px] mt-0.5">Standalone off-grid & grid-tied pump solarization</p>
-                    </div>
-                  </div>
+                  <a 
+                    href="https://pmkusum.mnre.gov.in/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2 text-xs font-bold text-primary hover:text-white hover:gap-3 transition-all font-mono mt-8 border-t border-slate-850 pt-6 z-10"
+                  >
+                    MNRE Official PM-KUSUM Portal <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </SectionWrapper>
             </div>
           </div>
         </div>
       </section>
-
+ 
       {/* AEPL CAPABILITIES STATS (Dark) */}
       <section className="py-20 bg-slate-950 border-y border-white/5 text-white relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {[
               { value: "17+", label: "Years of Experience" },
-              { value: "68GW+", label: <>PM-Kusum<br />Installed Base</> },
+              { value: "68GW+", label: <>Total Monitored<br />Capacity</> },
               { value: "10,000+", label: "Electric Panels Supplied" },
               { value: "125,000+", label: "Sq.ft. Manufacturing Facility" },
               { value: "100+", label: "Satisfied Customers" },
