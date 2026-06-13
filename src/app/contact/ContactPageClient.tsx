@@ -235,7 +235,7 @@ export default function ContactPageClient() {
                   {/* Content Overlay */}
                   <div className="absolute top-0 left-0 w-full p-6 z-20 flex flex-col items-end text-right">
                     <div className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-lg text-xs font-bold uppercase tracking-widest mb-2 border border-primary/20">
-                      Global Impact
+                      Installation Footprint
                     </div>
                     <h3 className="text-3xl font-black text-white mb-1">
                       68GW<span className="text-primary">+</span>
