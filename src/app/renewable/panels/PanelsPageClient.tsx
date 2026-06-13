@@ -17,60 +17,70 @@ export default function PanelsPageClient() {
     {
       title: "HT Panel",
       icon: <Zap className="w-6 h-6 text-primary" />,
+      image: "/panels/HT-Panel.webp",
       desc: "IS/IEC type-tested High Tension Vacuum Circuit Breaker (VCB) panels up to 33kV.",
       href: "/renewable/panels/ht-panel"
     },
     {
       title: "Power Control Centre (PCC)",
       icon: <Sliders className="w-6 h-6 text-primary" />,
+      image: "/panels/PCC-Panel.webp",
       desc: "Main power distribution boards designed for high-capacity industrial power systems.",
       href: "/renewable/panels/pcc"
     },
     {
       title: "Motor Control Centre (MCC)",
       icon: <Settings className="w-6 h-6 text-primary" />,
+      image: "/panels/MCC-Panel.webp",
       desc: "Robust motor control panels offering optimal thermal protection and safety.",
       href: "/renewable/panels/mcc"
     },
     {
       title: "Intelligent Motor Control Centre",
       icon: <Cpu className="w-6 h-6 text-primary" />,
+      image: "/panels/IMCC.webp",
       desc: "Smart MCCs integrated with communication protocols for real-time diagnostic reporting.",
       href: "/renewable/panels/intelligent-mcc"
     },
     {
       title: "Automatic Power Factor Correction",
       icon: <Activity className="w-6 h-6 text-primary" />,
+      image: "/panels/APFC-Panel.webp",
       desc: "Automatic power factor correction systems for optimized efficiency and reduced penalties.",
       href: "/renewable/panels/apfc"
     },
     {
       title: "PDB/LDB Panel",
       icon: <Layers className="w-6 h-6 text-primary" />,
+      image: "/panels/PDBLDB-Panels.webp",
       desc: "Power & Lighting Distribution Boards for reliable indoor and outdoor circuit control.",
       href: "/renewable/panels/pdb-ldb"
     },
     {
       title: "Soft Starter and VFD Panel",
       icon: <Gauge className="w-6 h-6 text-primary" />,
+      image: "/panels/Soft-Starter-and-VFD-Panel.webp",
       desc: "Variable Frequency Drive and Soft Starter panels for smooth motor acceleration.",
       href: "/renewable/panels/soft-starter-vfd"
     },
     {
       title: "PLC Panel",
       icon: <Cpu className="w-6 h-6 text-primary" />,
+      image: "/panels/PLC-Panels.webp",
       desc: "Programmable Logic Controller panels customized for complex system automation.",
       href: "/renewable/panels/plc"
     },
     {
       title: "AC/DB Panels",
       icon: <ShieldCheck className="w-6 h-6 text-primary" />,
+      image: "/panels/ACDB-Panels.webp",
       desc: "IP65 weather-proof AC Distribution Boards designed for solar pump installations.",
       href: "/renewable/panels/acdb"
     },
     {
       title: "Automation Panel",
       icon: <Activity className="w-6 h-6 text-primary" />,
+      image: "/panels/Automation-Panels.webp",
       desc: "Custom control cabinets integrated with SCADA, telemetry, and smart gateways.",
       href: "/renewable/panels/automation"
     }
@@ -296,14 +306,24 @@ export default function PanelsPageClient() {
               <SectionWrapper key={idx} delay={idx * 0.05}>
                 <Link
                   href={item.href}
-                  className="group flex flex-col justify-between p-6 bg-slate-50 border border-slate-200/60 rounded-2xl transition-all duration-300 hover:bg-slate-900 hover:border-slate-900 hover:text-white hover:shadow-xl hover:shadow-slate-900/10 hover:-translate-y-1 h-full cursor-pointer"
+                  className="group flex flex-col justify-between p-5 bg-slate-50 border border-slate-200/60 rounded-2xl transition-all duration-300 hover:bg-slate-900 hover:border-slate-900 hover:text-white hover:shadow-xl hover:shadow-slate-900/10 hover:-translate-y-1.5 h-full cursor-pointer"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-teal-50 text-primary flex items-center justify-center mb-6 transition-all group-hover:scale-110 group-hover:bg-primary/20">
-                      {item.icon}
+                    {/* Premium Card Image Header */}
+                    <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden mb-5 bg-slate-100 border border-slate-200/40 shadow-sm">
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {/* Floating Action Icon */}
+                      <div className="absolute top-3 right-3 w-9 h-9 rounded-lg bg-white/95 backdrop-blur-sm text-primary flex items-center justify-center shadow-md border border-slate-100 transition-transform duration-300 group-hover:scale-110">
+                        {item.icon}
+                      </div>
                     </div>
-                    <h3 className="text-base font-bold mb-3 font-heading leading-tight group-hover:text-white transition-colors">{item.title}</h3>
-                    <p className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors leading-relaxed font-medium">
+
+                    <h3 className="text-base font-extrabold mb-2.5 font-heading leading-tight group-hover:text-white transition-colors">{item.title}</h3>
+                    <p className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors leading-relaxed font-semibold">
                       {item.desc}
                     </p>
                   </div>
