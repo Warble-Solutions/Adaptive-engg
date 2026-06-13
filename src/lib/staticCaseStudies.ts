@@ -33,7 +33,7 @@ export const staticCaseStudies: CaseStudy[] = [
   {
     id: "static-cs-3",
     title: "Water Treatment Plant",
-    slug: "water-treatment-plant",
+    slug: "water-treatment-plant-wtp",
     thumbnailUrl: "/imgs/case-studies/3-water-treatment-plant.png",
     pdfUrl: "/case-studies/Case-Study-3-Water-Treatment-Plant.pdf",
     description: "Design and deployment of centralized SCADA and field instruments for a massive municipal water treatment facility.",
@@ -42,8 +42,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-4",
-    title: "Energy Management System (EMS)",
-    slug: "energy-management-system-ems",
+    title: "Energy Management System",
+    slug: "energy-mangement-system-ems",
     thumbnailUrl: "/imgs/case-studies/4-energy-mangement-system-ems.png",
     pdfUrl: "/case-studies/Case-Study-4-Energy-Mangement-System-EMS.pdf",
     description: "Real-time energy monitoring, load balancing, and power analytics for multi-site heavy manufacturing facilities.",
@@ -82,8 +82,8 @@ export const staticCaseStudies: CaseStudy[] = [
   },
   {
     id: "static-cs-8",
-    title: "Tunnel",
-    slug: "tunnel",
+    title: "Chuhrat Bypass Tunnel",
+    slug: "chuhrat-bypass-tunnel-rewa-sidhi",
     thumbnailUrl: "/imgs/case-studies/tunnel-1st-march-2025.png",
     pdfUrl: "/case-studies/Tunnel-Case-study-1st-March-2025.pdf",
     description: "Life safety automation systems including jet fan controls, toxic gas monitoring, and SCADA override for transport tunnels.",

@@ -437,8 +437,8 @@ export default function HomePageClient() {
                 delay: 0.1
               },
               {
-                title: "Tunnel",
-                slug: "tunnel",
+                title: "Chuhrat Bypass Tunnel",
+                slug: "chuhrat-bypass-tunnel-rewa-sidhi",
                 category: "Infrastructure",
                 img: "/imgs/case-studies/cs_tunnel.png",
                 desc: "Life safety automation systems including jet fan controls, toxic gas monitoring, and SCADA override for transport tunnels.",
