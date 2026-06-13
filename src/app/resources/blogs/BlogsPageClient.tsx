@@ -25,26 +25,33 @@ export default function BlogsPageClient({ posts }: { posts: Post[] }) {
 
   const categories = ["All", "Renewables", "Water", "Automation", "Infrastructure", "Corporate"];
 
+  // Category keyword sets — matched against title, excerpt, tags, and content
+  const categoryKeywords: Record<string, string[]> = {
+    Renewables: ["renewable", "solar", "wind", "bess", "ppc", "kusum", "photovoltaic", "hybrid power", "clean energy", "hydrogen", "biofuel", "energy transition", "green energy", "power plant"],
+    Water: ["water", "wtp", "stp", "etp", "irrigation", "sewage", "effluent", "desalination", "hydro"],
+    Automation: ["automation", "scada", "plc", "rtu", "iot", "iiot", "iec 61499", "edge ai", "digitalization", "digital twin", "industry 4", "sda", "software-defined", "machine", "predictive maintenance", "change management", "plant scada", "remote monitoring", "cms"],
+    Infrastructure: ["infra", "tunnel", "highway", "data center", "datacenter", "electrical panel"],
+    Corporate: ["corporate", "company", "news", "marketing department", "sales department", "procurement department", "project department", "collaboration"],
+  };
+
+  function matchesCategory(post: Post, category: string): boolean {
+    const keywords = categoryKeywords[category];
+    if (!keywords) return false;
+    const searchText = `${post.title} ${post.excerpt || ""} ${post.tags.join(" ")}`.toLowerCase();
+    return keywords.some(kw => searchText.includes(kw));
+  }
+
   // Filter logic
   const filteredPosts = posts.filter(post => {
-    const matchesSearch = 
+    const matchesSearch = !searchQuery ||
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (post.excerpt && post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())) ||
       post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    if (activeTab === "All") return matchesSearch;
+    if (!matchesSearch) return false;
+    if (activeTab === "All") return true;
 
-    const matchesCategory = post.tags.some(tag => {
-      const t = tag.toLowerCase();
-      if (activeTab === "Renewables") return t.includes("renew") || t.includes("solar") || t.includes("wind") || t.includes("bess") || t.includes("ppc");
-      if (activeTab === "Water") return t.includes("water") || t.includes("wtp") || t.includes("stp") || t.includes("etp") || t.includes("irrigation");
-      if (activeTab === "Automation") return t.includes("automation") || t.includes("scada") || t.includes("plc") || t.includes("rtu");
-      if (activeTab === "Infrastructure") return t.includes("infra") || t.includes("tunnel") || t.includes("highway") || t.includes("data center");
-      if (activeTab === "Corporate") return t.includes("corporate") || t.includes("company") || t.includes("news");
-      return false;
-    });
-
-    return matchesSearch && matchesCategory;
+    return matchesCategory(post, activeTab);
   });
 
   // Featured post is the most recent matching the filter, or first overall if nothing matches
