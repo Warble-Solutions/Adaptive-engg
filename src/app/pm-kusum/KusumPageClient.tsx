@@ -177,7 +177,7 @@ export default function KusumPageClient() {
                           3.5L+
                         </span>
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                          Farmers Assisted
+                          Farmers Benefitting
                         </span>
                       </div>
 
@@ -187,7 +187,7 @@ export default function KusumPageClient() {
                           4.7GW+
                         </span>
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                          Total Scheme Capacity
+                          Total PM-KUSUM Capacity
                         </span>
                       </div>
 
@@ -197,7 +197,7 @@ export default function KusumPageClient() {
                           1.8GW+
                         </span>
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                          AEPL Installed Capacity
+                          AEPL PM-KUSUM Capacity
                         </span>
                       </div>
 
