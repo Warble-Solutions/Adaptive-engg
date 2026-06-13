@@ -66,7 +66,6 @@ function LoginForm() {
             autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="admin@adaptiveengg.in"
             className="w-full bg-white/5 border border-white/10 text-white placeholder-gray-600 rounded-lg pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-emerald-500/60 focus:bg-white/8 transition-all"
           />
         </div>

@@ -116,14 +116,13 @@ export default function ContactPageClient() {
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Name *</label>
+                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Full Name *</label>
                         <input 
                           type="text" 
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
-                          placeholder="Enter your name" 
                         />
                       </div>
                       <div className="space-y-2">
@@ -133,7 +132,6 @@ export default function ContactPageClient() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
-                          placeholder="+91..." 
                         />
                       </div>
                     </div>
@@ -147,7 +145,6 @@ export default function ContactPageClient() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
-                          placeholder="name@company.com" 
                         />
                       </div>
                       <div className="space-y-2">
@@ -157,7 +154,6 @@ export default function ContactPageClient() {
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                           className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all text-slate-900" 
-                          placeholder="Enter company name" 
                         />
                       </div>
                     </div>
@@ -184,7 +180,6 @@ export default function ContactPageClient() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-all resize-none text-slate-900" 
-                        placeholder="Tell us about your requirements..."
                       ></textarea>
                     </div>
 

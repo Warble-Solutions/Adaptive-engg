@@ -277,7 +277,6 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="e.g. John Doe"
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-primary/60 transition-colors"
                       />
                     </div>
@@ -289,7 +288,6 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@company.com"
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-primary/60 transition-colors"
                       />
                     </div>
@@ -301,7 +299,6 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 98765 43210"
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-primary/60 transition-colors"
                       />
                     </div>
@@ -313,7 +310,6 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
                         required
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        placeholder="e.g. Acme Corp"
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-primary/60 transition-colors"
                       />
                     </div>
@@ -325,7 +321,6 @@ export default function CaseStudiesPageClient({ caseStudies }: { caseStudies: Ca
                         required
                         value={formData.designation}
                         onChange={(e) => setFormData({ ...formData, designation: e.target.value })}
-                        placeholder="e.g. Technical Director"
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-primary/60 transition-colors"
                       />
                     </div>

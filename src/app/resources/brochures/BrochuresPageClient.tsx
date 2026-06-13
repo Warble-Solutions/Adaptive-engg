@@ -416,7 +416,6 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
                       <input 
                         type="text" 
                         required
-                        placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
@@ -428,7 +427,6 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
                       <input 
                         type="email" 
                         required
-                        placeholder="john@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
@@ -440,7 +438,6 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
                       <input 
                         type="tel" 
                         required
-                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                         className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
@@ -453,7 +450,6 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
                         <input 
                           type="text" 
                           required
-                          placeholder="e.g. AEPL"
                           value={formData.company}
                           onChange={(e) => setFormData({...formData, company: e.target.value})}
                           className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"
@@ -463,7 +459,6 @@ export default function BrochuresPageClient({ brochures }: { brochures: Brochure
                         <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">Role / Title</label>
                         <input 
                           type="text" 
-                          placeholder="e.g. Engineer"
                           value={formData.designation}
                           onChange={(e) => setFormData({...formData, designation: e.target.value})}
                           className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary/80 focus:bg-white/10 focus:shadow-[0_0_15px_rgba(13,160,138,0.15)] transition-all"

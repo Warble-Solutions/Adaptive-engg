@@ -96,7 +96,6 @@ export default function ApplicationForm({ jobId, title = "Apply for this role", 
             <input 
               required type="text" id="name" name="name"
               className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
-              placeholder="John Doe"
             />
           </div>
           <div className="space-y-2">
@@ -104,7 +103,6 @@ export default function ApplicationForm({ jobId, title = "Apply for this role", 
             <input 
               required type="email" id="email" name="email"
               className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
-              placeholder="john@example.com"
             />
           </div>
         </div>
@@ -114,7 +112,6 @@ export default function ApplicationForm({ jobId, title = "Apply for this role", 
           <input 
             required type="tel" id="phone" name="phone"
             className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
-            placeholder="+91 98765 43210"
           />
         </div>
 
