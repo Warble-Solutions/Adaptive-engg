@@ -3,6 +3,7 @@ import Link from "next/link";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Briefcase, MapPin, Building, ArrowRight } from "lucide-react";
+import ApplicationForm from "@/components/forms/ApplicationForm";
 
 export const metadata = {
   title: "Careers | Adaptive Engineering",
@@ -11,7 +12,12 @@ export const metadata = {
 
 export default async function CareersPage() {
   const jobs = await prisma.job.findMany({
-    where: { isActive: true },
+    where: { 
+      isActive: true,
+      NOT: {
+        slug: "general-application"
+      }
+    },
     orderBy: { createdAt: "desc" },
   });
 
@@ -99,6 +105,40 @@ export default async function CareersPage() {
               </div>
             </SectionWrapper>
           )}
+        </div>
+      </section>
+
+      {/* General Candidature Section */}
+      <section className="py-24 bg-slate-950 text-white relative z-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left side: content */}
+            <div className="lg:col-span-5 space-y-6">
+              <SectionWrapper>
+                <div className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-primary/30">
+                  Join Our Talent Pool
+                </div>
+                <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-white leading-tight">
+                  Don&apos;t see a matching role?
+                </h2>
+                <p className="text-slate-400 text-lg leading-relaxed font-medium">
+                  We are always on the lookout for talented engineers, automation experts, and passion-driven professionals. Send us your resume for general consideration, and we will contact you when a matching opportunity arises.
+                </p>
+                <div className="pt-4 border-t border-slate-800">
+                  <p className="text-sm text-slate-500 font-semibold">
+                    Your details will be stored securely in our talent database.
+                  </p>
+                </div>
+              </SectionWrapper>
+            </div>
+
+            {/* Right side: Application Form */}
+            <div className="lg:col-span-7">
+              <SectionWrapper>
+                <ApplicationForm jobId="general-application" title="Submit Your Candidature" />
+              </SectionWrapper>
+            </div>
+          </div>
         </div>
       </section>
     </div>

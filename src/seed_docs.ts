@@ -248,6 +248,32 @@ async function main() {
     });
   }
 
+  console.log("Upserting General Application Job...");
+  await prisma.job.upsert({
+    where: { id: "general-application" },
+    update: {
+      title: "General Application",
+      slug: "general-application",
+      location: "Ahmedabad, India",
+      department: "General",
+      type: "Full-time",
+      description: "General candidature database for future openings.",
+      requirements: "Any relevant degree or experience in engineering, automation, software, or support roles.",
+      isActive: true
+    },
+    create: {
+      id: "general-application",
+      title: "General Application",
+      slug: "general-application",
+      location: "Ahmedabad, India",
+      department: "General",
+      type: "Full-time",
+      description: "General candidature database for future openings.",
+      requirements: "Any relevant degree or experience in engineering, automation, software, or support roles.",
+      isActive: true
+    }
+  });
+
   console.log("Done!");
 }
 

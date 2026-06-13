@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Upload, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 
-export default function ApplicationForm({ jobId }: { jobId: string }) {
+export default function ApplicationForm({ jobId, title = "Apply for this role" }: { jobId: string; title?: string }) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -68,8 +68,8 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
 
   if (success) {
     return (
-      <div className="bg-teal-50 border border-teal-500 rounded-2xl p-8 text-center flex flex-col items-center">
-        <CheckCircle2 className="w-16 h-16 text-primary mb-4" />
+      <div className="bg-teal-950/20 border border-teal-500/30 rounded-2xl p-8 text-center flex flex-col items-center backdrop-blur-xl">
+        <CheckCircle2 className="w-16 h-16 text-primary mb-4 animate-bounce" />
         <h3 className="text-2xl font-bold text-white font-heading mb-2">Application Submitted!</h3>
         <p className="text-slate-300">
           Thank you for applying. Our HR team will review your profile and reach out if your qualifications match our needs.
@@ -80,7 +80,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
 
   return (
     <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl shadow-slate-200">
-      <h3 className="text-2xl font-black text-white font-heading mb-6">Apply for this role</h3>
+      <h3 className="text-2xl font-black text-white font-heading mb-6">{title}</h3>
       
       {error && (
         <div className="mb-6 p-4 bg-red-50 text-red-600 rounded-xl flex items-start gap-3 border border-red-200">
@@ -95,7 +95,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
             <label htmlFor="name" className="text-sm font-bold tracking-wide text-white">Full Name *</label>
             <input 
               required type="text" id="name" name="name"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
+              className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
               placeholder="John Doe"
             />
           </div>
@@ -103,7 +103,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
             <label htmlFor="email" className="text-sm font-bold tracking-wide text-white">Email Address *</label>
             <input 
               required type="email" id="email" name="email"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
+              className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
               placeholder="john@example.com"
             />
           </div>
@@ -113,7 +113,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
           <label htmlFor="phone" className="text-sm font-bold tracking-wide text-white">Phone Number *</label>
           <input 
             required type="tel" id="phone" name="phone"
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
+            className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow"
             placeholder="+91 98765 43210"
           />
         </div>
@@ -123,7 +123,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
           <div className="relative">
             <input 
               required type="file" id="resume" name="resume" accept="application/pdf"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-teal-50 file:text-teal-700 file:bg-primary/20"
+              className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-teal-50 file:text-teal-700 file:bg-primary/20"
             />
             <Upload className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
           </div>
@@ -134,7 +134,7 @@ export default function ApplicationForm({ jobId }: { jobId: string }) {
           <label htmlFor="coverLetter" className="text-sm font-bold tracking-wide text-white">Cover Letter (Optional)</label>
           <textarea 
             id="coverLetter" name="coverLetter" rows={4}
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow resize-y"
+            className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow resize-y"
             placeholder="Tell us why you are a great fit for this role..."
           />
         </div>
