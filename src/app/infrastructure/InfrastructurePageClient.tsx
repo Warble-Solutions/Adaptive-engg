@@ -24,13 +24,8 @@ export default function InfrastructurePageClient() {
       
       {/* 1. HERO SECTION */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/imgs/solutions/infrastructure_solutions.png"
-            alt="Infrastructure Solutions Background"
-            className="w-full h-full object-cover opacity-50"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-slate-950/40 to-slate-950 z-10"></div>
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/solutions/infrastructure_solutions.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 mix-blend-multiply z-10"></div>
         </div>
 
         <div className="z-10 max-w-7xl relative">
@@ -82,14 +77,14 @@ export default function InfrastructurePageClient() {
               </a>
             </SectionWrapper>
 
-            {/* Card 3: Industrial Automation */}
+            {/* Card 3: Turnkey E&I */}
             <SectionWrapper delay={0.3}>
               <a href="#automation" className="block h-full group p-8 bg-slate-800/50 border border-teal-500/30 rounded-3xl hover:border-primary/80 hover:shadow-[0_0_30px_rgba(13,160,138,0.2)] hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm">
                 <div className="flex flex-col items-center text-center gap-6 mb-4">
                   <div className="p-5 bg-teal-500/10 rounded-2xl text-teal-400 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Workflow className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white transition-colors">Industrial Automation</h3>
+                  <h3 className="text-2xl font-bold text-white transition-colors">Turnkey E&amp;I</h3>
                 </div>
                 <p className="text-gray-400 text-base text-center leading-relaxed">Turnkey plant telemetry, custom control panels, SCADA systems, and industrial process automation.</p>
               </a>
@@ -109,7 +104,7 @@ export default function InfrastructurePageClient() {
                   Tunnel E&amp;I and SCADA
                 </div>
                 <h2 className="text-4xl md:text-5xl font-black font-heading mb-6">
-                  Road, Rail &amp; Metro <span className="gradient-heading">Tunnel Solutions</span>
+                  Road, Railway &amp; Metro <span className="gradient-heading">Tunnel Solutions</span>
                 </h2>
                 <p className="text-gray-300 leading-relaxed text-base md:text-lg">
                   We at Adaptive Engineering Pvt. Ltd. are experts in providing Electrical, Instrumentation and Automation Solutions for Tunnels – Road, Railway and Metro. With the rising awareness on road and rail safety, government is modernizing road and railway tunnels. Additionally, numerous railway lines and highways, passes through tunnels in mountain ranges, which creates a high demand for tunnel electrical & automation systems.
@@ -150,7 +145,7 @@ export default function InfrastructurePageClient() {
                   <img 
                     src="/imgs/solutions/infrastructure_tunnel_entrance.png" 
                     alt="Tunnel Infrastructure Entrance" 
-                    className="w-full h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
@@ -175,7 +170,7 @@ export default function InfrastructurePageClient() {
                   <img 
                     src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" 
                     alt="Data Center Server Racks" 
-                    className="w-full h-[380px] object-cover group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity opacity-80"
+                    className="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity opacity-80"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
@@ -241,7 +236,7 @@ export default function InfrastructurePageClient() {
                   Process Control
                 </div>
                 <h2 className="text-4xl md:text-5xl font-black font-heading mb-6">
-                  Turnkey <span className="gradient-heading">Industrial Automation</span>
+                  Turnkey <span className="gradient-heading">E&amp;I</span>
                 </h2>
                 <p className="text-gray-300 leading-relaxed text-base md:text-lg">
                   Elevating operational intelligence with our state-of-the-art process loops, custom PLC/RTU panel engineering, and portfolio-wide SCADA telemetry networks. We deliver robust control architectures tailored to water treatment, SCADA NOC, and factory digitalization.
@@ -281,8 +276,8 @@ export default function InfrastructurePageClient() {
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
                   <img 
                     src="/imgs/solutions/turnkey_ei.png" 
-                    alt="Turnkey Industrial Automation Panels" 
-                    className="w-full h-[380px] object-cover group-hover:scale-105 transition-transform duration-700"
+                    alt="Turnkey E&amp;I Control Panels" 
+                    className="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
