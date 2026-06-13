@@ -150,7 +150,7 @@ export default function Navbar() {
                             alt="Adaptive Engineering"
                             width={240}
                             height={70}
-                            className="h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                            className="h-20 w-auto object-contain opacity-95 hover:opacity-100 transition-all duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
                             priority
                         />
                     </Link>
