@@ -68,21 +68,18 @@ export default function Page() {
             </SectionWrapper>
             <SectionWrapper delay={0.2}>
               <div className="premium-card p-10 bg-white/5 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-sm relative overflow-hidden">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-                  <div className="space-y-2">
+                <div className="grid grid-cols-3 gap-8 relative z-10">
+                  <div>
                     <div className="text-4xl font-black text-white mb-1">68GW+</div>
                     <div className="text-xs font-bold text-primary uppercase tracking-wider">Installed Base</div>
-                    <p className="text-gray-400 text-[11px] leading-relaxed">Software-monitored solar and wind plants across India.</p>
                   </div>
-                  <div className="space-y-2">
+                  <div>
                     <div className="text-4xl font-black text-white mb-1">500+</div>
                     <div className="text-xs font-bold text-primary uppercase tracking-wider">Plants Monitored</div>
-                    <p className="text-gray-400 text-[11px] leading-relaxed">Renewable generation sites managed in real-time.</p>
                   </div>
-                  <div className="space-y-2">
+                  <div>
                     <div className="text-4xl font-black text-white mb-1">1000+</div>
                     <div className="text-xs font-bold text-primary uppercase tracking-wider">Completed Projects</div>
-                    <p className="text-gray-400 text-[11px] leading-relaxed">Turnkey electrical, control, and automation panels delivered.</p>
                   </div>
                 </div>
               </div>
