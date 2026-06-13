@@ -143,7 +143,7 @@ export default function InfrastructurePageClient() {
               <SectionWrapper delay={0.2}>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
                   <img 
-                    src="/imgs/solutions/infrastructure_tunnel_entrance.png" 
+                    src="/imgs/solutions/tunnel_infrastructure_modern.png" 
                     alt="Tunnel Infrastructure Entrance" 
                     className="w-full h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
