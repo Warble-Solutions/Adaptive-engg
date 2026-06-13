@@ -24,7 +24,7 @@ export default function InfrastructurePageClient() {
       
       {/* 1. HERO SECTION */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[url('/imgs/solutions/tunnel_infrastructure_modern.png')] bg-cover bg-center">
+        <div className="absolute inset-0 z-0 bg-[url('/imgs/solutions/infrastructure_tunnel_entrance.png')] bg-cover bg-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 mix-blend-multiply z-10"></div>
         </div>
 
@@ -143,7 +143,7 @@ export default function InfrastructurePageClient() {
               <SectionWrapper delay={0.2}>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
                   <img 
-                    src="/imgs/solutions/infrastructure_tunnel_entrance.png" 
+                    src="/imgs/solutions/tunnel_infrastructure_modern.png" 
                     alt="Tunnel Infrastructure Entrance" 
                     className="w-full h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
