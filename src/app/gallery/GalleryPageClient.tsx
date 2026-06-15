@@ -11,53 +11,26 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Generate all 138 image objects with categories
+// Generate all 138 image objects
 const TOTAL_IMAGES = 138;
 const imagesData = Array.from({ length: TOTAL_IMAGES }, (_, i) => {
   const id = i + 1;
-  // Categorize based on ranges to keep the content structured
-  let category = "Projects";
-  if (id > 45 && id <= 90) {
-    category = "Factory";
-  } else if (id > 90) {
-    category = "Exhibitions";
-  }
-  
   return {
     id,
     src: `/gallary/${id}.jpg`,
-    alt: `Adaptive Engineering - Infrastructure, Solar & Automation Show #${id}`,
-    category
+    alt: `Adaptive Engineering - Infrastructure, Solar & Automation Show #${id}`
   };
 });
-
-const CATEGORIES = [
-  { id: "All", label: "All Photos" },
-  { id: "Projects", label: "Projects & Sites" },
-  { id: "Factory", label: "Factory & Manufacturing" },
-  { id: "Exhibitions", label: "Exhibitions & Events" }
-];
 
 const IMAGES_PER_PAGE = 24;
 
 export default function GalleryPageClient() {
-  const [activeCategory, setActiveCategory] = useState("All");
   const [visibleCount, setVisibleCount] = useState(IMAGES_PER_PAGE);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  // Filtered images list
-  const filteredImages = imagesData.filter(img => 
-    activeCategory === "All" || img.category === activeCategory
-  );
-
   // Slice visible images
-  const visibleImages = filteredImages.slice(0, visibleCount);
-  const hasMore = visibleCount < filteredImages.length;
-
-  // Reset pagination on category change
-  useEffect(() => {
-    setVisibleCount(IMAGES_PER_PAGE);
-  }, [activeCategory]);
+  const visibleImages = imagesData.slice(0, visibleCount);
+  const hasMore = visibleCount < imagesData.length;
 
   // Handle keyboard navigation for Lightbox
   useEffect(() => {
@@ -75,24 +48,24 @@ export default function GalleryPageClient() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxIndex, filteredImages]);
+  }, [lightboxIndex]);
 
   const handleNext = () => {
     setLightboxIndex(prev => {
       if (prev === null) return null;
-      return (prev + 1) % filteredImages.length;
+      return (prev + 1) % imagesData.length;
     });
   };
 
   const handlePrev = () => {
     setLightboxIndex(prev => {
       if (prev === null) return null;
-      return (prev - 1 + filteredImages.length) % filteredImages.length;
+      return (prev - 1 + imagesData.length) % imagesData.length;
     });
   };
 
   const handleLoadMore = () => {
-    setVisibleCount(prev => Math.min(prev + IMAGES_PER_PAGE, filteredImages.length));
+    setVisibleCount(prev => Math.min(prev + IMAGES_PER_PAGE, imagesData.length));
   };
 
   return (
@@ -114,23 +87,6 @@ export default function GalleryPageClient() {
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             A visual showcase of our 125,000+ sq. ft. manufacturing facility, utility-scale renewable energy installations, water infrastructure SCADA sites, and key industry exhibitions.
           </p>
-        </div>
-
-        {/* Category Filters */}
-        <div className="flex justify-center gap-2 md:gap-4 flex-wrap mb-12">
-          {CATEGORIES.map(cat => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wider uppercase transition-all duration-300 ${
-                activeCategory === cat.id
-                  ? "bg-primary text-white shadow-lg shadow-primary/30"
-                  : "bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
         </div>
 
         {/* Image Grid */}
@@ -164,9 +120,6 @@ export default function GalleryPageClient() {
                   </div>
                   
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest bg-primary/20 border border-primary/30 text-primary px-2.5 py-1 rounded-full inline-block mb-2">
-                      {img.category === "Factory" ? "Manufacturing" : img.category === "Projects" ? "Project Site" : "Exhibitions"}
-                    </span>
                     <h4 className="text-sm font-bold text-white line-clamp-2">
                       Showcase Image #{img.id}
                     </h4>
@@ -206,11 +159,8 @@ export default function GalleryPageClient() {
             {/* Controls Header */}
             <div className="absolute top-0 inset-x-0 p-6 flex justify-between items-center text-white z-10 bg-gradient-to-b from-black/80 to-transparent">
               <div>
-                <span className="text-xs uppercase font-bold tracking-widest text-primary block mb-1">
-                  {filteredImages[lightboxIndex].category}
-                </span>
                 <span className="text-sm font-medium">
-                  Photo {lightboxIndex + 1} of {filteredImages.length}
+                  Photo {lightboxIndex + 1} of {imagesData.length}
                 </span>
               </div>
               <button
@@ -232,13 +182,13 @@ export default function GalleryPageClient() {
             {/* Image Container */}
             <div className="max-w-5xl max-h-[80vh] w-full px-6 flex items-center justify-center pointer-events-none">
               <motion.img
-                key={filteredImages[lightboxIndex].id}
+                key={imagesData[lightboxIndex].id}
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                src={filteredImages[lightboxIndex].src}
-                alt={filteredImages[lightboxIndex].alt}
+                src={imagesData[lightboxIndex].src}
+                alt={imagesData[lightboxIndex].alt}
                 className="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-white/5"
               />
             </div>
