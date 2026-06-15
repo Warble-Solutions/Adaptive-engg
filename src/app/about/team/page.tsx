@@ -1,8 +1,7 @@
 import { prisma } from "@/lib/prisma";
-import Image from "next/image";
 import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
-import { Linkedin, User } from "lucide-react";
+import TeamPageClient from "./TeamPageClient";
 
 export const metadata = {
     title: "Our Team | Adaptive Engineering",
@@ -46,69 +45,17 @@ export default async function TeamPage() {
             {/* Team Grid Section */}
             <section className="py-24 bg-slate-50 rounded-t-[40px] relative z-20 -mt-20">
                 <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {team.map((member) => (
-                        <SectionWrapper key={member.id}>
-                            <div className="group bg-white border border-slate-100 rounded-3xl p-6 hover:border-primary/50 hover:shadow-2xl shadow-xl transition-all duration-300">
-                                <div className="relative aspect-square w-full rounded-2xl bg-slate-100 overflow-hidden mb-6">
-                                    {member.photoUrl ? (
-                                        <Image
-                                            src={member.photoUrl}
-                                            alt={member.name}
-                                            fill
-                                            sizes="(max-width: 768px) 50vw, 25vw"
-                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center text-slate-400 bg-slate-50">
-                                            <User className="w-20 h-20" />
-                                        </div>
-                                    )}
+                    <TeamPageClient team={team} />
 
-                                    {member.linkedinUrl && (
-                                        <a
-                                            href={member.linkedinUrl}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm p-2.5 rounded-full text-primary hover:bg-[#0da08a] hover:text-white scale-110 transition-all shadow-lg"
-                                        >
-                                            <Linkedin className="w-5 h-5 fill-current" />
-                                        </a>
-                                    )}
-                                </div>
-
-                                <div>
-                                    <h3 className="text-xl font-black text-slate-900 group-hover:text-primary transition-colors font-heading">
-                                        {member.name}
-                                    </h3>
-                                    <p className="text-primary font-bold text-sm tracking-wide uppercase mt-1 mb-3">
-                                        {member.designation}
-                                    </p>
-                                    {member.department && (
-                                        <span className="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold mb-4 border border-slate-200/50">
-                                            {member.department}
-                                        </span>
-                                    )}
-                                    {member.bio && (
-                                        <p className="text-slate-600 text-sm line-clamp-4 leading-relaxed font-medium">
-                                            {member.bio}
-                                        </p>
-                                    )}
-                                </div>
+                    {team.length === 0 && (
+                        <SectionWrapper>
+                            <div className="text-center py-24 bg-white border border-slate-100 rounded-3xl shadow-xl">
+                                <h3 className="text-2xl font-bold text-slate-900 font-heading mb-2">Our 300+ strong engineering team</h3>
+                                <p className="text-slate-500 font-medium">Profiles will be updated soon.</p>
                             </div>
                         </SectionWrapper>
-                    ))}
+                    )}
                 </div>
-
-                {team.length === 0 && (
-                    <SectionWrapper>
-                        <div className="text-center py-24 bg-white border border-slate-100 rounded-3xl shadow-xl">
-                            <h3 className="text-2xl font-bold text-slate-900 font-heading mb-2">Our 300+ strong engineering team</h3>
-                            <p className="text-slate-500 font-medium">Profiles will be updated soon.</p>
-                        </div>
-                    </SectionWrapper>
-                )}
-            </div>
             </section>
         </main>
     );
