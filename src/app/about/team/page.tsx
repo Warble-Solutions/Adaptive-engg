@@ -21,7 +21,7 @@ export default async function TeamPage() {
             <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img 
-                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80" 
+                        src="/images/team/team.png" 
                         alt="Team Hero Banner" 
                         className="w-full h-full object-cover object-top" 
                     />
