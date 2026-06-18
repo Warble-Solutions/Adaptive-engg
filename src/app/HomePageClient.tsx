@@ -112,12 +112,15 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <p className="text-center text-gray-400 text-lg font-bold uppercase tracking-[0.2em]">Industry Leaders Trust Us</p>
         </div>
-        <InfiniteMarquee speed={0.8} hoverSpeed={0.2} className="gap-32 items-center pr-32 py-4">
+        <InfiniteMarquee speed={0.8} hoverSpeed={0.2} className="gap-32 items-center pr-32 py-6">
           {PARTNER_LOGOS.map((src, i) => {
             const isAdityaBirla = src.endsWith("/6.webp");
             const isCMR = src.endsWith("/20.webp");
             const isFornnax = src.endsWith("/12.webp");
-            const isTarget = isAdityaBirla || isCMR || isFornnax;
+            const isLogo10 = src.endsWith("/10.webp");
+            const isLogo14 = src.endsWith("/14.webp");
+            const isLogo23 = src.endsWith("/23.webp");
+            const isMeil = src.endsWith("/meil.png");
 
             return (
               <div key={i} className="flex-shrink-0 flex items-center justify-center w-56 h-20">
@@ -127,7 +130,11 @@ export default function HomePageClient() {
                   className={`max-h-full max-w-full object-contain transition-all duration-300 ${
                     isAdityaBirla ? "scale-[1.35]" :
                     isCMR ? "scale-[1.35]" :
-                    isFornnax ? "scale-[1.4]" : ""
+                    isFornnax ? "scale-[1.4]" :
+                    isLogo10 ? "scale-[1.35]" :
+                    isLogo23 ? "scale-[1.35]" :
+                    isMeil ? "scale-[1.35]" :
+                    isLogo14 ? "scale-[1.3]" : ""
                   }`}
                 />
               </div>
