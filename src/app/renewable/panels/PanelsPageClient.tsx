@@ -201,16 +201,16 @@ export default function PanelsPageClient() {
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Years Experience</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
-                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">2,500<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Panels Delivered/year</span>
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">500<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">panels per year</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
-                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">500<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Satisfied Customers</span>
+                  <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">10,000<span className="text-primary">+</span></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">total cumulative panels delivered</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">1,000<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Projects</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">Projects Delivered</span>
                 </div>
               </div>
             </SectionWrapper>
@@ -266,9 +266,9 @@ export default function PanelsPageClient() {
 
                   <div className="space-y-4">
                     {[
-                      { title: "Conceptualizing & Design", desc: "Tailor-made solutions engineered to meet complex and varying electrical specifications." },
-                      { title: "In-house Manufacturing", desc: "Equipped with basic and advanced machinery for reliable panel assembly." },
-                      { title: "Lifecycle & Support", desc: "End-to-end services including installation support and system integration." }
+                      { title: "Conceptualizing & Design", desc: "Tailor-made solutions." },
+                      { title: "In-house Manufacturing", desc: "Equipped with basic and advanced machinery." },
+                      { title: "Lifecycle & Support", desc: "Commissioning, installation, maintenance." }
                     ].map((item, idx) => (
                       <div key={idx} className="flex gap-3">
                         <CheckCircle2 className="w-4.5 h-4.5 text-primary shrink-0 mt-0.5" />
