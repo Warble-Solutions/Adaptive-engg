@@ -144,9 +144,9 @@ export default function PanelsPageClient() {
       <section className="section-hero relative min-h-screen flex items-center px-6 py-24 overflow-hidden">
         {/* Background Image with Tint */}
         <div className="absolute inset-0 z-0">
-          <img src="/images/renewable/panels-hero-bg.png" alt="Electrical Panels" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-slate-950/85"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-transparent to-slate-950/90"></div>
+          <img src="/panels/PCC-Panel.webp" alt="Electrical Panels" className="w-full h-full object-cover blur-[3px] scale-105" />
+          <div className="absolute inset-0 bg-slate-950/65"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-transparent to-slate-950/80"></div>
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[140px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-[120px]"></div>
         </div>
