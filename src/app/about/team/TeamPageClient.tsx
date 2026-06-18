@@ -99,7 +99,7 @@ export default function TeamPageClient({ team }: TeamPageClientProps) {
                   </p>
                 )}
                 <div className="flex justify-between items-center mt-4 pt-2 border-t border-slate-100/50">
-                  <span className="text-xs font-bold text-slate-400 group-hover:text-primary transition-colors">Biography</span>
+                  <span className="text-xs font-bold text-slate-400 group-hover:text-primary transition-colors">Profile</span>
                   <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
                 </div>
               </div>
