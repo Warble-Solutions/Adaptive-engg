@@ -236,7 +236,7 @@ export default function RenewablePageClient() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl">
                     <div className="text-3xl font-black text-primary font-mono">{COMPANY_STATS.manufacturingFacility.formatted}</div>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mt-1">Sq. Ft. Facility</span>
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mt-1">Facility</span>
                   </div>
                   <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl">
                     <div className="text-3xl font-black text-primary font-mono">2,500+</div>

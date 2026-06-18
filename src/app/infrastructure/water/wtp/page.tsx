@@ -243,7 +243,7 @@ export default function Page() {
  <div className="relative rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
  <Image src="/imgs/wtp-panel-manufacturing.png" alt="Electrical Panel Manufacturing Facility" width={800} height={500} className="w-full h-[320px] object-cover" />
  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
- <p className="text-white font-bold">125,000+ Sq. Ft. Manufacturing Facility</p>
+ <p className="text-white font-bold">1,25,000+sq.ft. Manufacturing Facility</p>
  <p className="text-gray-300 text-sm">In-house panel manufacturing for quality & speed</p>
  </div>
  </div>

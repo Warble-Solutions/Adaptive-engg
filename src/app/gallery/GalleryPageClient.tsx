@@ -85,7 +85,7 @@ export default function GalleryPageClient() {
           </h1>
           
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            A visual showcase of our 125,000+ sq. ft. manufacturing facility, utility-scale renewable energy installations, water infrastructure SCADA sites, and key industry exhibitions and events.
+            A visual showcase of our 1,25,000+sq.ft. manufacturing facility, utility-scale renewable energy installations, water infrastructure SCADA sites, and key industry exhibitions and events.
           </p>
         </div>
 

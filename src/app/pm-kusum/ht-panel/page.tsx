@@ -31,7 +31,7 @@ export default function Page() {
  </h1>
  <p className="text-2xl md:text-3xl font-bold text-teal-400/80 mb-6">VCB Panel up to 33kV / 11kV</p>
  <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
- IS/IEC type-tested High Tension Vacuum Circuit Breaker panels manufactured in our {COMPANY_STATS.manufacturingFacility.formatted} Sq. Ft. facility for PM-KUSUM solar, substations, and industrial applications.
+ IS/IEC type-tested High Tension Vacuum Circuit Breaker panels manufactured in our {COMPANY_STATS.manufacturingFacility.formatted} facility for PM-KUSUM solar, substations, and industrial applications.
  </p>
  </SectionWrapper>
  </div>

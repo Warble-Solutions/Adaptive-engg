@@ -200,7 +200,7 @@ export default function Page() {
  <div className="hidden md:block absolute top-[60px] left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-primary/30 -z-0"></div>
  {[
  { step: "1", title: "Survey & Design", desc: "Site survey, soil testing, and complete electrical design with simulation-backed cable sizing." },
- { step: "2", title: "Manufacturing", desc: `Panels and assemblies manufactured in our ${COMPANY_STATS.manufacturingFacility.formatted} sq ft facility with strict QA/QC protocols.` },
+ { step: "2", title: "Manufacturing", desc: `Panels and assemblies manufactured in our ${COMPANY_STATS.manufacturingFacility.formatted} facility with strict QA/QC protocols.` },
  { step: "3", title: "Installation", desc: "On-site cable laying, termination, earthing, and equipment erection by trained field teams." },
  { step: "4", title: "Go-Live", desc: "Testing, commissioning, grid synchronization, and handover with 24/7 monitoring activation." },
  ].map((item, i) => (

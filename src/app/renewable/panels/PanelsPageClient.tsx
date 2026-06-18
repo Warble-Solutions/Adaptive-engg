@@ -184,7 +184,7 @@ export default function PanelsPageClient() {
                 <div className="col-span-2 bg-gradient-to-br from-[#0da08a]/20 via-primary/15 to-transparent border-2 border-primary/45 rounded-3xl p-8 hover:border-primary/60 transition-all duration-300 flex items-center justify-between shadow-2xl shadow-primary/10">
                   <div>
                     <div className="text-4xl md:text-5xl font-black text-white mb-2 font-mono tracking-tight">
-                      125,000<span className="text-primary">+</span> <span className="text-xl md:text-2xl font-bold font-sans">sq. ft.</span>
+                      1,25,000<span className="text-primary">+</span><span className="text-xl md:text-2xl font-bold font-sans">sq.ft.</span>
                     </div>
                     <span className="text-xs md:text-sm font-bold text-gray-200 uppercase tracking-wider block">
                       Manufacturing Facility in Ahmedabad
@@ -241,7 +241,7 @@ export default function PanelsPageClient() {
 
                 <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
                   <p>
-                    Our State of Art comprehensive manufacturing facility at Ahmedabad spread across 125,000 sq. ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
+                    Our State of Art comprehensive manufacturing facility at Ahmedabad spread across 1,25,000+sq.ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
                   </p>
                   <p>
                     The core strength of our best-in-class Electrical Panels is our intelligent design concepts and the way they are implemented. With over 17+ years of experience, we meet the complex and varying needs of customers with a wide range of tailor-made products.

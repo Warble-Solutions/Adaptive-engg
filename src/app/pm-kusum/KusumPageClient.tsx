@@ -231,7 +231,7 @@ export default function KusumPageClient() {
               { value: "17+", label: "Years of Experience" },
               { value: "68GW+", label: <>Total Monitored<br />Capacity</> },
               { value: "10,000+", label: "Electric Panels Supplied" },
-              { value: "125,000+", label: "Sq.ft. Manufacturing Facility" },
+              { value: "1,25,000+sq.ft.", label: "Manufacturing Facility" },
               { value: "100+", label: "Satisfied Customers" },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center p-6 bg-white/[0.01] border border-white/5 rounded-2xl hover:border-teal-500/30 hover:bg-white/[0.03] transition-all duration-300">

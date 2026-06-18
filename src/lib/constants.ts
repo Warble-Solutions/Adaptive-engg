@@ -7,7 +7,7 @@ export const COMPANY_STATS = {
   yearsExperience: { value: 17, suffix: "+", label: "Years Experience" },
   manpower: { value: 300, suffix: "+", label: "Manpower" },
   scadaInstalled: { value: 1000, suffix: "+", label: "SCADA Installed", formatted: "1,000+" },
-  manufacturingFacility: { value: 125000, suffix: "+", label: "Sq. Ft. Manufacturing Facility", formatted: "125,000+" },
+  manufacturingFacility: { value: 125000, suffix: "+sq.ft.", label: "Manufacturing Facility", formatted: "1,25,000+sq.ft." },
   electricalPanels: { value: 10000, suffix: "+", label: "Electrical Panel Supplied", formatted: "10,000+" },
   satisfiedCustomers: { value: 500, suffix: "+", label: "Satisfied Customers" },
   installedBase: { value: 68, suffix: "GW+", label: "Installed Base" },

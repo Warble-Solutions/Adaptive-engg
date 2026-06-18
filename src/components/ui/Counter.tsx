@@ -41,9 +41,12 @@ export default function Counter({
             if (ref.current) {
                 let text = latest.toFixed(decimals);
                 if (formatted) {
-                    // Add commas
+                    // Add commas using Indian locale
                     const parts = text.split(".");
-                    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    const num = parseInt(parts[0], 10);
+                    if (!isNaN(num)) {
+                      parts[0] = num.toLocaleString("en-IN");
+                    }
                     text = parts.join(".");
                 }
                 ref.current.textContent = `${prefix}${text}${suffix}`;
@@ -58,7 +61,10 @@ export default function Counter({
         let text = value.toFixed(decimals);
         if (formatted) {
             const parts = text.split(".");
-            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            const num = parseInt(parts[0], 10);
+            if (!isNaN(num)) {
+              parts[0] = num.toLocaleString("en-IN");
+            }
             text = parts.join(".");
         }
         return `${prefix}${text}${suffix}`;

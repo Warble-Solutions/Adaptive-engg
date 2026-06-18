@@ -25,7 +25,7 @@ export default function AssetManagementPageClient() {
     { value: "17+", label: "Years of Experience" },
     { value: "1000+", label: "Projects Completed" },
     { value: "300+", label: "Engineers" },
-    { value: "125,000+", label: "Sq. Ft. Facility Size" },
+    { value: "1,25,000+sq.ft.", label: "Facility Size" },
     { value: "100+", label: "Satisfied Clients" }
   ];
 
