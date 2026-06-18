@@ -82,16 +82,10 @@ export default function HomePageClient() {
     COMPANY_STATS.electricalPanels,
     COMPANY_STATS.scadaInstalled,
     AUTOMATION_STATS.systemsPerYear,
-    PPC_STATS.ppcProjects,
-    PPC_STATS.hybridInstalled,
 
     // ▸ CH.3  REACH — Where we operate
     KUSUM_STATS.statesOfIndia,
-    WATER_STATS.statesCovered,
     WATER_STATS.supplySchemes,
-    WATER_STATS.overheadTanks,
-    WATER_STATS.mldTreatedWater,
-    WATER_STATS.mldTreatedSewage,
 
     // ▸ CH.4  INNOVATION — Cutting-edge capabilities
     AUTOMATION_STATS.scadaTags,
@@ -145,7 +139,7 @@ export default function HomePageClient() {
 
       {/* 3. SCROLLING STATS LOOP (Light Marquee) */}
       <section className="py-12 bg-white z-20 border-y border-slate-100 overflow-hidden">
-        <InfiniteMarquee speed={1.2} hoverSpeed={0.3} className="gap-8 items-center pr-8 py-6 cursor-pointer">
+        <InfiniteMarquee speed={0.6} hoverSpeed={0.2} className="gap-8 items-center pr-8 py-6 cursor-pointer">
           {statsList.map((stat, i) => (
             <div key={i} className="flex-shrink-0 w-96 h-44 bg-slate-50/70 border-2 border-slate-200 rounded-[2rem] px-6 py-8 flex flex-col justify-center items-center text-center hover:border-primary/80 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               {(() => {
@@ -248,7 +242,7 @@ export default function HomePageClient() {
                     Renewable energy solutions from AEPL include end-to-end services: conceptualizing, designing, supplying, installing, testing, commissioning, and maintaining complete industrial automation and electrical systems (up to 66KV). The company also offers customized software solutions for Central Plant Monitoring and Mobile Asset Management, ensuring optimal installation performance. With a focus on project management, AEPL takes full ownership of all automation and electrical project requirements.
                   </p>
                   <p>
-                    Driven by passionate team of 300+ engineers under the guidance of the founders carrying rich experience of more than three decades, team AEPL has successfully completed 1000+ projects across India. Completing projects before time, with the demonstration of the best quality work and use of latest technologies, enables AEPL to deliver maximum value.
+                    Driven by passionate team of 300+ engineers under the guidance of the founders carrying rich experience of more than three decades, team AEPL has successfully completed 1,000+ projects across India. Completing projects before time, with the demonstration of the best quality work and use of latest technologies, enables AEPL to deliver maximum value.
                   </p>
                   <p>
                     Further AEPL has achieved an exceptional track record of managing Renewable Plant Monitoring Software installed base of 68GW+ at 500+ plants across India. It also manages 50+ Water Supply Schemes and India’s widest highway Twin Tube Tunnel of 2.5Km where complete E&I packages are delivered.
@@ -287,7 +281,7 @@ export default function HomePageClient() {
                     <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Engineers</div>
                   </div>
                   <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
-                    <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">1000+</div>
+                    <div className="text-3xl font-extrabold text-slate-900 font-heading mb-1">1,000+</div>
                     <div className="text-[10px] font-bold text-primary uppercase tracking-wider leading-tight">Completed Projects</div>
                   </div>
                   <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-center">
@@ -455,7 +449,7 @@ export default function HomePageClient() {
               {
                 title: "Water Supply Schemes",
                 slug: "water-supply-schemes",
-                category: "Water & Process",
+                category: "Water",
                 img: "/imgs/case-studies/cs_water.png",
                 desc: "Instrumentation, telemetry, and remote monitoring setup for widespread clean water distribution networks.",
                 delay: 0.1

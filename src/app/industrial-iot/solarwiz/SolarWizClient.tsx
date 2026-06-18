@@ -87,7 +87,7 @@ export default function SolarWizClient() {
     { value: "17+", label: "Years of Experience" },
     { value: "68GW+", label: "Installed Base" },
     { value: "8GW+", label: "PPC Solar" },
-    { value: "19+", label: "States of India Benefiting" },
+    { value: "19", label: "States of India" },
     { value: "100+", label: "Satisfied Customers" }
   ];
 

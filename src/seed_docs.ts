@@ -12,7 +12,7 @@ async function main() {
       thumbnailUrl: "/imgs/case-studies/1-liquid-milk-processing-lmp.png",
       pdfUrl: "/case-studies/Case-Study-1-Liquid-Milk-Processing-LMP.pdf",
       description: "Comprehensive Turnkey electrical, automation, and process engineering for a state-of-the-art liquid milk processing facility.",
-      category: "Water & Process"
+      category: "Water"
     },
     {
       title: "Hydropneumatic Booster Pump",
@@ -20,7 +20,7 @@ async function main() {
       thumbnailUrl: "/imgs/case-studies/2-hydropneumatic.png",
       pdfUrl: "/case-studies/Case-Study-2-Hydropneumatic.pdf",
       description: "Advanced PLC-based control and monitoring for high-efficiency hydropneumatic pumping systems in industrial installations.",
-      category: "Water & Process"
+      category: "Water"
     },
     {
       title: "Water Treatment Plant",
@@ -28,7 +28,7 @@ async function main() {
       thumbnailUrl: "/imgs/case-studies/3-water-treatment-plant.png",
       pdfUrl: "/case-studies/Case-Study-3-Water-Treatment-Plant.pdf",
       description: "Design and deployment of centralized SCADA and field instruments for a massive municipal water treatment facility.",
-      category: "Water & Process"
+      category: "Water"
     },
     {
       title: "Energy Management System",
@@ -60,7 +60,7 @@ async function main() {
       thumbnailUrl: "/imgs/case-studies/7-water-supply-schemes.png",
       pdfUrl: "/case-studies/Case-Study-7-Water-Supply-Schemes_Final.pdf",
       description: "Instrumentation, telemetry, and remote monitoring setup for widespread clean water distribution networks.",
-      category: "Water & Process"
+      category: "Water"
     },
     {
       title: "Chuhrat Bypass Tunnel",

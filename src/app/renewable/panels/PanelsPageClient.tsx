@@ -145,8 +145,8 @@ export default function PanelsPageClient() {
         {/* Background Image with Tint */}
         <div className="absolute inset-0 z-0">
           <img src="/panels/PCC-Panel.webp" alt="Electrical Panels" className="w-full h-full object-cover blur-[3px] scale-105" />
-          <div className="absolute inset-0 bg-slate-950/65"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-transparent to-slate-950/80"></div>
+          <div className="absolute inset-0 bg-slate-950/45"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/50 via-transparent to-slate-950/60"></div>
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[140px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-[120px]"></div>
         </div>
@@ -241,7 +241,7 @@ export default function PanelsPageClient() {
 
                 <div className="space-y-6 text-gray-300 text-sm leading-relaxed font-medium">
                   <p>
-                    Our State of Art comprehensive manufacturing facility at Ahmedabad spread across 1,25,000+sq.ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
+                    Our State of Art comprehensive manufacturing facility spread across 1,25,000+sq.ft. is equipped with basic and advance machineries. Optimum quality components and ultra-modern technology deployed under the supervision of highly skilled professionals which are widely acclaimed.
                   </p>
                   <p>
                     The core strength of our best-in-class Electrical Panels is our intelligent design concepts and the way they are implemented. With over 17+ years of experience, we meet the complex and varying needs of customers with a wide range of tailor-made products.
@@ -268,7 +268,7 @@ export default function PanelsPageClient() {
                     {[
                       { title: "Conceptualizing & Design", desc: "Tailor-made solutions." },
                       { title: "In-house Manufacturing", desc: "Equipped with basic and advanced machinery." },
-                      { title: "Lifecycle & Support", desc: "Commissioning, installation, maintenance." }
+                      { title: "Lifecycle & Support", desc: "Conceptualizing, designing, supplying, installing, testing, commissioning, and maintaining." }
                     ].map((item, idx) => (
                       <div key={idx} className="flex gap-3">
                         <CheckCircle2 className="w-4.5 h-4.5 text-primary shrink-0 mt-0.5" />

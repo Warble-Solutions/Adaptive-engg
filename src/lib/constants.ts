@@ -27,7 +27,7 @@ export const KUSUM_STATS = {
   yearsExperience: { value: 17, suffix: "+", label: "Years of Experience" },
   installedBase: { value: 68, suffix: "GW+", label: "Installed Base" },
   ppcSolar: { value: 8, suffix: "GW+", label: "PPC Solar" },
-  statesOfIndia: { value: 19, suffix: "+", label: "States of India Benefiting" },
+  statesOfIndia: { value: 19, suffix: "", label: "States of India" },
   satisfiedCustomers: { value: 100, suffix: "+", label: "Satisfied Customers" },
 } as const;
 
@@ -53,7 +53,7 @@ export const WATER_STATS = {
 export const AUTOMATION_STATS = {
   yearsExperience: { value: 17, suffix: "+", label: "Years of Experience" },
   scadaInstalled: { value: 1000, suffix: "+", label: "SCADA System Installed" },
-  systemsPerYear: { value: 3500, suffix: "+", label: "Systems Per Year" },
+  systemsPerYear: { value: 3500, suffix: "+", label: "Panels Per Year" },
   scadaTags: { value: 1000000, suffix: "", label: "SCADA tags in a single project", formatted: "10 Lakh" },
   redundantSystems: { value: 50, suffix: "+", label: "Hot Redundant Systems Commissioned per Year" },
 } as const;

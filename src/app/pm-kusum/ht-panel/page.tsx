@@ -44,7 +44,7 @@ export default function Page() {
  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
  {[
  { value: "33kV", label: "Max Rated Voltage", icon: <Zap className="w-5 h-5" /> },
- { value: "2500A", label: "Max Rated Current", icon: <Gauge className="w-5 h-5" /> },
+ { value: "2,500A", label: "Max Rated Current", icon: <Gauge className="w-5 h-5" /> },
  { value: "31.5kA", label: "Short Circuit Rating", icon: <Shield className="w-5 h-5" /> },
  { value: "IS/IEC", label: "Type Tested", icon: <Award className="w-5 h-5" /> },
  ].map((item, i) => (
@@ -73,18 +73,18 @@ export default function Page() {
  <thead>
  <tr className="bg-slate-900 text-white">
  <th className="text-left p-5 font-bold text-xs uppercase tracking-wider">Parameter</th>
- <th className="text-center p-5 font-bold text-xs uppercase tracking-wider">3.3 kV</th>
- <th className="text-center p-5 font-bold text-xs uppercase tracking-wider">6.6 kV</th>
- <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-teal-600/20 border-x border-teal-500/30">11 kV</th>
- <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-primary/20 border-x border-primary/30">33 kV</th>
+ <th className="text-center p-5 font-bold text-xs uppercase tracking-wider">3.3kV</th>
+ <th className="text-center p-5 font-bold text-xs uppercase tracking-wider">6.6kV</th>
+ <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-teal-600/20 border-x border-teal-500/30">11kV</th>
+ <th className="text-center p-5 font-bold text-xs uppercase tracking-wider bg-primary/20 border-x border-primary/30">33kV</th>
  </tr>
  </thead>
  <tbody>
  {[
- { param: "Rated Voltage", values: ["3.6 kV", "7.2 kV", "12 kV", "36 kV"] },
- { param: "Rated Current", values: ["630–2500A", "630–2500A", "630–2500A", "630–2500A"] },
- { param: "Short Circuit Current", values: ["25 kA", "25 kA", "25–31.5 kA", "25–31.5 kA"] },
- { param: "Rated Insulation Level (BIL)", values: ["40 kV", "60 kV", "75 kV", "170 kV"] },
+ { param: "Rated Voltage", values: ["3.6kV", "7.2kV", "12kV", "36kV"] },
+ { param: "Rated Current", values: ["630–2,500A", "630–2,500A", "630–2,500A", "630–2,500A"] },
+ { param: "Short Circuit Current", values: ["25kA", "25kA", "25–31.5kA", "25–31.5kA"] },
+ { param: "Rated Insulation Level (BIL)", values: ["40kV", "60kV", "75kV", "170kV"] },
  { param: "Arc Quenching Medium", values: ["Vacuum", "Vacuum", "Vacuum", "Vacuum / SF6"] },
  { param: "Protection Relay", values: ["Numerical", "Numerical", "Numerical", "Numerical"] },
  { param: "Enclosure", values: ["IP42/IP54", "IP42/IP54", "IP42/IP54", "IP42/IP54/IP65"] },

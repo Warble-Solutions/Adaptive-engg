@@ -47,7 +47,7 @@ export default function Page() {
                 { value: `${KUSUM_STATS.yearsExperience.value}+`, label: "Years of Experience" },
                 { value: `${KUSUM_STATS.installedBase.value}${KUSUM_STATS.installedBase.suffix}`, label: "Installed Base" },
                 { value: `${KUSUM_STATS.ppcSolar.value}${KUSUM_STATS.ppcSolar.suffix}`, label: "PPC Solar" },
-                { value: `${KUSUM_STATS.statesOfIndia.value}+`, label: "States of India Benefiting" },
+                { value: `${KUSUM_STATS.statesOfIndia.value}`, label: "States of India" },
                 { value: `${KUSUM_STATS.satisfiedCustomers.value}+`, label: "Satisfied Customers" },
               ].map((stat, i) => (
                 <div key={i}>

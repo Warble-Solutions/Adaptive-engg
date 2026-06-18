@@ -16,7 +16,7 @@ export default function Page() {
       {/* HERO */}
       <section className="section-hero relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1920&q=80" alt="Our Journey Background" className="w-full h-full object-cover" />
+          <img src="/journey/lombard-street-banner.png" alt="Our Journey Background" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
         </div>
         <div className="z-10 max-w-7xl relative">
@@ -78,7 +78,7 @@ export default function Page() {
                     <div className="text-xs font-bold text-primary uppercase tracking-wider">Plants Monitored</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-black text-white mb-1">1000+</div>
+                    <div className="text-4xl font-black text-white mb-1">1,000+</div>
                     <div className="text-xs font-bold text-primary uppercase tracking-wider">Completed Projects</div>
                   </div>
                 </div>

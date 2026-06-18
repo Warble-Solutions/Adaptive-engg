@@ -23,7 +23,7 @@ export default function AssetManagementPageClient() {
 
   const stats = [
     { value: "17+", label: "Years of Experience" },
-    { value: "1000+", label: "Projects Completed" },
+    { value: "1,000+", label: "Projects Completed" },
     { value: "300+", label: "Engineers" },
     { value: "1,25,000+sq.ft.", label: "Facility Size" },
     { value: "100+", label: "Satisfied Clients" }
