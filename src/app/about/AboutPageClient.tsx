@@ -9,7 +9,22 @@ import { WATER_STATS, TUNNEL_STATS } from "@/lib/constants";
 import Counter from "@/components/ui/Counter";
 import { COMPANY_STATS } from "@/lib/constants";
 
-export default function AboutPageClient() {
+interface TeamMember {
+  id: string;
+  name: string;
+  designation: string;
+  photoUrl: string | null;
+  department: string | null;
+  bio: string | null;
+  linkedinUrl: string | null;
+  sortOrder: number;
+}
+
+interface AboutPageClientProps {
+  team?: TeamMember[];
+}
+
+export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
   const [leaderIndex, setLeaderIndex] = useState(0);
 
   return (
@@ -279,8 +294,8 @@ export default function AboutPageClient() {
               <div className="overflow-hidden p-4">
                 <AnimatePresence mode="popLayout">
                   <motion.div className="flex gap-8" initial={false}>
-                    {[0, 1, 2, 3].map((offset) => {
-                      const leader = [
+                    {(() => {
+                      const fallbackLeaders = [
                         {
                           name: "Chirag Soni",
                           role: "Managing Director",
@@ -306,47 +321,68 @@ export default function AboutPageClient() {
                           role: "Head Sales",
                           img: "https://adaptive-engg.com/wp-content/uploads/2023/09/Chintan-1.png.webp"
                         }
-                      ][(leaderIndex + offset) % 5];
+                      ];
 
-                      return (
-                        <motion.div
-                          key={leader.name}
-                          layout="position"
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.9 }}
-                          transition={{ duration: 0.4 }}
-                          className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(25%-24px)] premium-card p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-xl hover:border-primary/50 hover:shadow-xl -translate-y-2 group"
-                        >
-                          <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-md mx-auto overflow-hidden group-hover:scale-105 transition-transform border-4 border-white">
-                            <img
-                              src={leader.img}
-                              alt={leader.name}
-                              className="w-full h-full object-cover object-top"
-                            />
-                          </div>
-                          <h3 className="text-xl font-bold text-slate-900 text-center mb-1">{leader.name}</h3>
-                          <p className="text-primary font-bold text-xs uppercase tracking-widest text-center">{leader.role}</p>
-                        </motion.div>
-                      );
-                    })}
+                      const leaders = team.length > 0
+                        ? team.map((m) => ({
+                            name: m.name,
+                            role: m.designation,
+                            img: m.photoUrl || "https://test.adaptive-engg.com/wp-content/uploads/2023/09/chirag-1.png.webp"
+                          }))
+                        : fallbackLeaders;
+
+                      return [0, 1, 2, 3].map((offset) => {
+                        const leader = leaders[(leaderIndex + offset) % leaders.length];
+
+                        return (
+                          <motion.div
+                            key={leader.name}
+                            layout="position"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.4 }}
+                            className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(25%-24px)] premium-card p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-xl hover:border-primary/50 hover:shadow-xl -translate-y-2 group"
+                          >
+                            <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-md mx-auto overflow-hidden group-hover:scale-105 transition-transform border-4 border-white">
+                              <img
+                                src={leader.img}
+                                alt={leader.name}
+                                className="w-full h-full object-cover object-top"
+                              />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-900 text-center mb-1">{leader.name}</h3>
+                            <p className="text-primary font-bold text-xs uppercase tracking-widest text-center">{leader.role}</p>
+                          </motion.div>
+                        );
+                      });
+                    })()}
                   </motion.div>
                 </AnimatePresence>
               </div>
             </SectionWrapper>
 
-            <button
-              onClick={() => setLeaderIndex((prev) => (prev - 1 + 5) % 5)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary/50 hover:shadow-xl scale-110 transition-all z-10"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={() => setLeaderIndex((prev) => (prev + 1) % 5)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary/50 hover:shadow-xl scale-110 transition-all z-10"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
+            {(() => {
+              const fallbackLeadersCount = 5;
+              const leadersCount = team.length > 0 ? team.length : fallbackLeadersCount;
+
+              return (
+                <>
+                  <button
+                    onClick={() => setLeaderIndex((prev) => (prev - 1 + leadersCount) % leadersCount)}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary/50 hover:shadow-xl scale-110 transition-all z-10"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button
+                    onClick={() => setLeaderIndex((prev) => (prev + 1) % leadersCount)}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary/50 hover:shadow-xl scale-110 transition-all z-10"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </>
+              );
+            })()}
           </div>
         </div>
       </section>
