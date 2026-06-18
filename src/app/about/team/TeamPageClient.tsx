@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Linkedin, User, X, ArrowLeft, ArrowRight } from "lucide-react";
+import { Linkedin, User, X, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 
@@ -24,36 +24,25 @@ interface TeamPageClientProps {
 export default function TeamPageClient({ team }: TeamPageClientProps) {
   const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
 
-  const currentIndex = activeMember ? team.findIndex(m => m.id === activeMember.id) : -1;
-
-  const handlePrev = () => {
-    if (currentIndex !== -1) {
-      const prevIndex = currentIndex > 0 ? currentIndex - 1 : team.length - 1;
-      setActiveMember(team[prevIndex]);
-    }
-  };
-
-  const handleNext = () => {
-    if (currentIndex !== -1) {
-      const nextIndex = currentIndex < team.length - 1 ? currentIndex + 1 : 0;
-      setActiveMember(team[nextIndex]);
-    }
-  };
-
-  // Keyboard navigation
+  // Keyboard navigation and closing handlers
   useEffect(() => {
+    if (!activeMember) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setActiveMember(null);
-      } else if (e.key === "ArrowLeft" && activeMember) {
-        handlePrev();
-      } else if (e.key === "ArrowRight" && activeMember) {
-        handleNext();
+      } else if (e.key === "ArrowLeft") {
+        const idx = team.findIndex(m => m.id === activeMember.id);
+        const newIdx = idx === 0 ? team.length - 1 : idx - 1;
+        setActiveMember(team[newIdx]);
+      } else if (e.key === "ArrowRight") {
+        const idx = team.findIndex(m => m.id === activeMember.id);
+        const newIdx = idx === team.length - 1 ? 0 : idx + 1;
+        setActiveMember(team[newIdx]);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeMember, currentIndex]);
+  }, [activeMember, team]);
 
   return (
     <>
@@ -109,9 +98,10 @@ export default function TeamPageClient({ team }: TeamPageClientProps) {
                     {member.bio}
                   </p>
                 )}
-                <span className="text-xs font-bold text-primary group-hover:underline inline-flex items-center gap-1 mt-2">
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </span>
+                <div className="flex justify-between items-center mt-4 pt-2 border-t border-slate-100/50">
+                  <span className="text-xs font-bold text-slate-400 group-hover:text-primary transition-colors">Biography</span>
+                  <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
+                </div>
               </div>
             </div>
           </SectionWrapper>
@@ -130,45 +120,55 @@ export default function TeamPageClient({ team }: TeamPageClientProps) {
             {/* Click-away backdrop */}
             <div className="absolute inset-0" onClick={() => setActiveMember(null)} />
 
+            {/* Left navigation arrow button */}
+            <div className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-[110]">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const idx = team.findIndex(m => m.id === activeMember.id);
+                  const newIdx = idx === 0 ? team.length - 1 : idx - 1;
+                  setActiveMember(team[newIdx]);
+                }}
+                className="p-3 md:p-4 rounded-full bg-slate-900/80 border border-slate-800 text-slate-400 hover:text-white hover:bg-[#0da08a]/80 hover:border-primary/50 transition-all shadow-2xl backdrop-blur-sm cursor-pointer"
+                aria-label="Previous Profile"
+              >
+                <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
+              </button>
+            </div>
+
+            {/* Right navigation arrow button */}
+            <div className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-[110]">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const idx = team.findIndex(m => m.id === activeMember.id);
+                  const newIdx = idx === team.length - 1 ? 0 : idx + 1;
+                  setActiveMember(team[newIdx]);
+                }}
+                className="p-3 md:p-4 rounded-full bg-slate-900/80 border border-slate-800 text-slate-400 hover:text-white hover:bg-[#0da08a]/80 hover:border-primary/50 transition-all shadow-2xl backdrop-blur-sm cursor-pointer"
+                aria-label="Next Profile"
+              >
+                <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
+              </button>
+            </div>
+
             {/* Modal Card */}
             <motion.div
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 max-w-3xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto z-10 text-white"
+              className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 max-w-3xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto relative z-10 text-white"
             >
-              {/* Navigation and Close Buttons Row */}
-              <div className="absolute top-6 right-6 flex items-center gap-3 z-20">
-                <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full p-1">
-                  <button
-                    onClick={handlePrev}
-                    className="p-1.5 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-all cursor-pointer"
-                    title="Previous profile"
-                  >
-                    <ArrowLeft className="w-4 h-4" />
-                  </button>
-                  <span className="text-[10px] text-gray-500 font-bold px-1 font-mono">
-                    {currentIndex + 1}/{team.length}
-                  </span>
-                  <button
-                    onClick={handleNext}
-                    className="p-1.5 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-all cursor-pointer"
-                    title="Next profile"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-                <button
-                  onClick={() => setActiveMember(null)}
-                  className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-gray-400 hover:text-white transition-all cursor-pointer"
-                  title="Close modal"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
+              {/* Close Button */}
+              <button
+                onClick={() => setActiveMember(null)}
+                className="absolute top-6 right-6 p-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-gray-400 hover:text-white transition-all"
+              >
+                <X className="w-5 h-5" />
+              </button>
 
-              <div className="flex flex-col md:flex-row gap-8 mt-8">
+              <div className="flex flex-col md:flex-row gap-8 mt-4">
                 {/* Photo Column */}
                 <div className="w-full md:w-1/3 shrink-0">
                   <div className="relative aspect-square w-full rounded-2xl bg-slate-850 border border-slate-800 overflow-hidden shadow-inner">
