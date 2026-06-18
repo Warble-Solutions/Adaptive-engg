@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Linkedin, User, X } from "lucide-react";
+import { Linkedin, User, X, ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 
@@ -24,16 +24,36 @@ interface TeamPageClientProps {
 export default function TeamPageClient({ team }: TeamPageClientProps) {
   const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
 
-  // Close modal on Escape key press
+  const currentIndex = activeMember ? team.findIndex(m => m.id === activeMember.id) : -1;
+
+  const handlePrev = () => {
+    if (currentIndex !== -1) {
+      const prevIndex = currentIndex > 0 ? currentIndex - 1 : team.length - 1;
+      setActiveMember(team[prevIndex]);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex !== -1) {
+      const nextIndex = currentIndex < team.length - 1 ? currentIndex + 1 : 0;
+      setActiveMember(team[nextIndex]);
+    }
+  };
+
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setActiveMember(null);
+      } else if (e.key === "ArrowLeft" && activeMember) {
+        handlePrev();
+      } else if (e.key === "ArrowRight" && activeMember) {
+        handleNext();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [activeMember, currentIndex]);
 
   return (
     <>
@@ -90,7 +110,7 @@ export default function TeamPageClient({ team }: TeamPageClientProps) {
                   </p>
                 )}
                 <span className="text-xs font-bold text-primary group-hover:underline inline-flex items-center gap-1 mt-2">
-                  Read Bio & Profile →
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </span>
               </div>
             </div>
@@ -116,17 +136,39 @@ export default function TeamPageClient({ team }: TeamPageClientProps) {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 max-w-3xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto relative z-10 text-white"
+              className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 max-w-3xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto z-10 text-white"
             >
-              {/* Close Button */}
-              <button
-                onClick={() => setActiveMember(null)}
-                className="absolute top-6 right-6 p-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-gray-400 hover:text-white transition-all"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              {/* Navigation and Close Buttons Row */}
+              <div className="absolute top-6 right-6 flex items-center gap-3 z-20">
+                <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full p-1">
+                  <button
+                    onClick={handlePrev}
+                    className="p-1.5 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-all cursor-pointer"
+                    title="Previous profile"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                  </button>
+                  <span className="text-[10px] text-gray-500 font-bold px-1 font-mono">
+                    {currentIndex + 1}/{team.length}
+                  </span>
+                  <button
+                    onClick={handleNext}
+                    className="p-1.5 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-all cursor-pointer"
+                    title="Next profile"
+                  >
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+                <button
+                  onClick={() => setActiveMember(null)}
+                  className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-gray-400 hover:text-white transition-all cursor-pointer"
+                  title="Close modal"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
 
-              <div className="flex flex-col md:flex-row gap-8 mt-4">
+              <div className="flex flex-col md:flex-row gap-8 mt-8">
                 {/* Photo Column */}
                 <div className="w-full md:w-1/3 shrink-0">
                   <div className="relative aspect-square w-full rounded-2xl bg-slate-850 border border-slate-800 overflow-hidden shadow-inner">

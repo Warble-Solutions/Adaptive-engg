@@ -31,11 +31,8 @@ export default function AboutPageClient() {
               About Us
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              Engineering <span className="gradient-heading">Legacy</span>
+              Industry Leaders <span className="gradient-heading">Trust Us</span>
             </h1>
-            <p className="text-gray-100 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/40 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 shadow-2xl">
-              India&apos;s leading Renewable Energy company delivering end-to-end solutions since 2014.
-            </p>
           </SectionWrapper>
         </div>
       </section>
@@ -219,15 +216,15 @@ export default function AboutPageClient() {
           <div className="text-center mb-16">
             <SectionWrapper>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 font-heading mb-4 tracking-tight">Core Competencies</h2>
-              <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">Delivering mission-critical engineering solutions across multiple domains.</p>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">To Be Decided (TBD)</p>
             </SectionWrapper>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Turnkey E&I", icon: <Zap className="w-6 h-6" />, desc: "Complete Electrical & Instrumentation execution from design to commissioning for Solar, Water, and Industrial projects." },
-              { title: "IoT & SCADA", icon: <Activity className="w-6 h-6" />, desc: "In-house developed SolarWiz, WaterWiz, and MachineWiz IoT platforms with edge computing and cloud analytics." },
-              { title: "Panel Manufacturing", icon: <ShieldCheck className="w-6 h-6" />, desc: "IS/IEC certified LT/HT panels, MCC, PCC, ACDB, DCDB panels manufactured in our state-of-the-art facility." },
-              { title: "Software & Analytics", icon: <Cpu className="w-6 h-6" />, desc: "ReportWiz, CMS, AMS — proprietary software suite for automated reporting, asset tracking, and performance monitoring." },
+              { title: "TBD", icon: <Zap className="w-6 h-6" />, desc: "To Be Decided (TBD)" },
+              { title: "TBD", icon: <Activity className="w-6 h-6" />, desc: "To Be Decided (TBD)" },
+              { title: "TBD", icon: <ShieldCheck className="w-6 h-6" />, desc: "To Be Decided (TBD)" },
+              { title: "TBD", icon: <Cpu className="w-6 h-6" />, desc: "To Be Decided (TBD)" },
             ].map((skill, i) => (
               <SectionWrapper key={i} delay={i * 0.1}>
                 <div className="p-8 bg-white border border-slate-200 rounded-2xl hover:border-[#0da08a]/30 hover:-translate-y-2 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-default h-full flex flex-col items-start">
