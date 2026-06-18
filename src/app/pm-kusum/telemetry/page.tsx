@@ -24,7 +24,7 @@ function HeroRtuDashboard() {
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div className="p-3 bg-white/5 border border-white/5 rounded-xl">
           <span className="text-[8px] text-slate-400 uppercase tracking-widest block font-extrabold">Active Power</span>
-          <span className="text-xl font-bold font-mono text-white block mt-1">4.82 MW</span>
+          <span className="text-xl font-bold font-mono text-white block mt-1">4.82MW</span>
           <span className="text-[7px] text-teal-400 font-bold uppercase mt-1 block">EXPORTING</span>
         </div>
         <div className="p-3 bg-white/5 border border-white/5 rounded-xl">

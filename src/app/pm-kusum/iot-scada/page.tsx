@@ -113,8 +113,8 @@ export default function Page() {
                         <span>MODBUS POLLING [Active]</span>
                       </div>
                       <div className="flex gap-4">
-                        <span className="text-slate-500">P_AC: <span className="text-emerald-300">42.8 kW</span></span>
-                        <span className="text-slate-500">V_DC: <span className="text-emerald-300">680 V</span></span>
+                        <span className="text-slate-500">P_AC: <span className="text-emerald-300">42.8kW</span></span>
+                        <span className="text-slate-500">V_DC: <span className="text-emerald-300">680V</span></span>
                         <span className="text-slate-500">PR: <span className="text-emerald-300">84.2%</span></span>
                       </div>
                       <span className="bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded text-[9px] font-bold">Growatt / Solis / Delta</span>

@@ -26,7 +26,7 @@ export default function TurnkeyPageClient() {
       num: "02",
       title: "In-House Manufacturing",
       subtitle: "Custom Panel Fabrication",
-      desc: "Designing and assembling all required LT panels, ACDB/DCDB combiner boxes, and HT switchgears inside AEPL's 40,000 sq ft workshop under strict ISO testing.",
+      desc: "Designing and assembling all required LT panels, ACDB/DCDB combiner boxes, and HT switchgears inside AEPL's 40,000sq.ft. workshop under strict ISO testing.",
       features: ["HT/LT switchgear panels", "Combiner box testing", "Factory loop simulations", "NABL accredited FAT logs"],
       visualType: "factory"
     },

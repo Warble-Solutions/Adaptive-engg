@@ -22,7 +22,7 @@ export default function WaterPageClient() {
   const [turbidity, setTurbidity] = useState(1.22);
   const [activePumps, setActivePumps] = useState(14);
   const [logs, setLogs] = useState<LogMessage[]>([
-    { id: 1, time: "11:42:15", source: "WTP INTAKE", msg: "Raw water pumps operating at nominal 92.4 Hz speed.", type: "success" },
+    { id: 1, time: "11:42:15", source: "WTP INTAKE", msg: "Raw water pumps operating at nominal 92.4Hz speed.", type: "success" },
     { id: 2, time: "11:43:02", source: "SPS-04 SYSTEM", msg: "Wet well level at 2.45m; float switches check complete.", type: "info" },
     { id: 3, time: "11:44:19", source: "COMPLIANCE", msg: "PH transmitter calibrated; reading stable at 7.15 pH.", type: "success" },
     { id: 4, time: "11:45:00", source: "TELEMETRY", msg: "LoRa edge gateway handshakes verified; signal RSSI: -68dBm.", type: "info" }
@@ -175,7 +175,7 @@ export default function WaterPageClient() {
                     <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-2xl flex flex-col justify-between group">
                       <div>
                         <div className="text-slate-500 font-mono text-[10px] uppercase tracking-wider mb-2">Live Flow Rate</div>
-                        <div className="text-3xl font-black text-white font-mono flex items-baseline gap-1">
+                        <div className="text-3xl font-black text-white font-mono flex items-baseline gap-0">
                           <AnimatePresence mode="wait">
                             <motion.span
                               key={mldFlow}
@@ -200,7 +200,7 @@ export default function WaterPageClient() {
                     <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-2xl flex flex-col justify-between">
                       <div>
                         <div className="text-slate-500 font-mono text-[10px] uppercase tracking-wider mb-2">Water Turbidity</div>
-                        <div className="text-3xl font-black text-white font-mono flex items-baseline gap-1">
+                        <div className="text-3xl font-black text-white font-mono flex items-baseline gap-0">
                           <AnimatePresence mode="wait">
                             <motion.span
                               key={turbidity}
@@ -241,7 +241,7 @@ export default function WaterPageClient() {
                   <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-2xl flex-grow flex flex-col justify-between">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-xs font-bold font-mono text-slate-400">POI LOOP HARMONY CHART</span>
-                      <span className="text-[10px] font-mono text-slate-500">FREQUENCY: 50.02 Hz</span>
+                      <span className="text-[10px] font-mono text-slate-500">FREQUENCY: 50.02Hz</span>
                     </div>
                     <div className="h-40 w-full flex items-end gap-1.5 overflow-hidden">
                       {Array.from({ length: 24 }).map((_, i) => {

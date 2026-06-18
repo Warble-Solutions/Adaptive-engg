@@ -268,11 +268,11 @@ export default function STPPageClient() {
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800">
                     <span className="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Inlet Dissolved Oxygen</span>
-                    <span className="text-xl font-bold text-emerald-400">2.14 mg/L</span>
+                    <span className="text-xl font-bold text-emerald-400">2.14mg/L</span>
                   </div>
                   <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800">
                     <span className="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Total Daily Output</span>
-                    <span className="text-xl font-bold text-cyan-400">300 MLD+</span>
+                    <span className="text-xl font-bold text-cyan-400">300MLD+</span>
                   </div>
                   <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800">
                     <span className="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Remote Lift Stations</span>

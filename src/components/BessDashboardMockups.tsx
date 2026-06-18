@@ -39,10 +39,10 @@ export function BessMonitoringDashboard() {
       {/* KPI Row */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
         {[
-          { label: "Active Power", val: `${power.toFixed(2)} MW`, sub: "Discharging", icon: <Zap className="w-3 h-3 text-teal-400" /> },
-          { label: "State of Charge", val: `${soc.toFixed(1)} %`, sub: "Balanced", icon: <Battery className="w-3 h-3 text-teal-400" /> },
-          { label: "Pack Current", val: `${current.toFixed(1)} A`, sub: "Nominal", icon: <Activity className="w-3 h-3 text-teal-400" /> },
-          { label: "Coolant Temp", val: `${temp.toFixed(1)} °C`, sub: "Optimal", icon: <Cpu className="w-3 h-3 text-teal-400" /> },
+          { label: "Active Power", val: `${power.toFixed(2)}MW`, sub: "Discharging", icon: <Zap className="w-3 h-3 text-teal-400" /> },
+          { label: "State of Charge", val: `${soc.toFixed(1)}%`, sub: "Balanced", icon: <Battery className="w-3 h-3 text-teal-400" /> },
+          { label: "Pack Current", val: `${current.toFixed(1)}A`, sub: "Nominal", icon: <Activity className="w-3 h-3 text-teal-400" /> },
+          { label: "Coolant Temp", val: `${temp.toFixed(1)}°C`, sub: "Optimal", icon: <Cpu className="w-3 h-3 text-teal-400" /> },
         ].map((kpi, idx) => (
           <div key={idx} className="bg-white/[0.02] border border-white/5 rounded-lg p-2 flex flex-col justify-between">
             <div className="flex items-center gap-1.5 opacity-60">

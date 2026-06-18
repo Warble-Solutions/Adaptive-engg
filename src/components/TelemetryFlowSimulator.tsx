@@ -17,7 +17,7 @@ export default function TelemetryFlowSimulator() {
   const [flowX, setFlowX] = useState(15);
 
   const labels = ["Active Power", "Reactive Power", "Interconnection Voltage", "Grid Frequency", "Breaker Status", "Solar Irradiance", "Energy Yield"];
-  const values = ["7.45 kW", "1.24 MVAR", "415.6 V", "49.98 Hz", "CLOSED", "842 W/m²", "148.4 MWh"];
+  const values = ["7.45kW", "1.24MVAR", "415.6V", "49.98Hz", "CLOSED", "842W/m²", "148.4MWh"];
   const units = ["M_ME_TF_1 (ASDU 36)", "M_ME_TF_1 (ASDU 36)", "M_ME_TE_1 (ASDU 35)", "M_ME_TE_1 (ASDU 35)", "M_SP_NA_1 (ASDU 30)", "M_ME_TF_1 (ASDU 36)", "M_IT_NA_1 (ASDU 15)"];
   const labelIdx = useRef(0);
 
@@ -189,7 +189,7 @@ export default function TelemetryFlowSimulator() {
             <div className="p-3 bg-slate-950/60 rounded-xl border border-white/5">
               <span className="text-[8px] text-slate-500 uppercase tracking-widest block font-bold">Ping Latency</span>
               <span className="text-base font-bold font-mono text-teal-400 block mt-1">
-                {latency.toFixed(1)} <span className="text-[9px] text-slate-500">ms</span>
+                {latency.toFixed(1)}<span className="text-[9px] text-slate-500">ms</span>
               </span>
             </div>
             <div className="p-3 bg-slate-950/60 rounded-xl border border-white/5">
@@ -198,7 +198,7 @@ export default function TelemetryFlowSimulator() {
             </div>
             <div className="p-3 bg-slate-950/60 rounded-xl border border-white/5">
               <span className="text-[8px] text-slate-500 uppercase tracking-widest block font-bold">Jitter Variance</span>
-              <span className="text-base font-bold font-mono text-teal-400 block mt-1">1.2 ms</span>
+              <span className="text-base font-bold font-mono text-teal-400 block mt-1">1.2ms</span>
             </div>
           </div>
 

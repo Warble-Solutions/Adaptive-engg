@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { useState } from 'react';
 
 export default function DowntimeCalculator() {
@@ -24,7 +24,7 @@ export default function DowntimeCalculator() {
                     <div className="mb-8 md:mb-12">
                         <div className="flex justify-between text-sm mb-2 font-bold">
                             <span className="text-gray-300">Plant Capacity</span>
-                            <span className="text-primary">{capacity} MW</span>
+                            <span className="text-primary">{capacity}MW</span>
                         </div>
                         <input
                             type="range" min="1" max="500" step="1"

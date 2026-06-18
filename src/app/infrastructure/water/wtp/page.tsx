@@ -7,7 +7,7 @@ import { WATER_STATS, WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/
 
 export const metadata = {
  title: "Water Supply & WTP | Adaptive Engineering",
- description: "End to end E&I and SCADA solutions for Water Supply Schemes and Water Treatment Plants. 400+ MLD treated drinking water across 50+ schemes.",
+ description: "End to end E&I and SCADA solutions for Water Supply Schemes and Water Treatment Plants. 400+MLD treated drinking water across 50+ schemes.",
 };
 
 export default function Page() {

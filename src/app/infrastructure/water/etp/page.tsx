@@ -7,7 +7,7 @@ import { WATER_STATS, WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/
 
 export const metadata = {
   title: "Effluent Treatment Plant (ETP) | Adaptive Engineering",
-  description: "Electrical, Instrumentation and Automation Solutions for Effluent Treatment and MBR Technology. 20+ MLD effluent treated water.",
+  description: "Electrical, Instrumentation and Automation Solutions for Effluent Treatment and MBR Technology. 20+MLD effluent treated water.",
 };
 
 export default function Page() {

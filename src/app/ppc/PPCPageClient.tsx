@@ -407,7 +407,7 @@ export default function PPCPageClient() {
                   />
                   <FeatureRow
                     title="Dynamic Frequency Response"
-                    desc="Sub-second control loops (<200 ms) to stabilize grid frequency during disturbances."
+                    desc="Sub-second control loops (<200ms) to stabilize grid frequency during disturbances."
                     imageSrc="/imgs/tam/Dynamic Frequency Response.png"
                   />
                   <FeatureRow

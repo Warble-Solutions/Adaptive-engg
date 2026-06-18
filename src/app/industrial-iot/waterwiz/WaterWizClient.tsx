@@ -119,11 +119,11 @@ export default function WaterWizClient() {
   ];
 
   const complianceParameters = [
-    { param: "pH Value", range: "6.5 - 8.5", method: "Electrometric", boardLimit: "5.5 - 9.0" },
-    { param: "Total Suspended Solids (TSS)", range: "< 10 mg/L", method: "Gravimetric", boardLimit: "< 50 mg/L" },
-    { param: "Chemical Oxygen Demand (COD)", range: "< 30 mg/L", method: "Dichromate Reflux", boardLimit: "< 250 mg/L" },
-    { param: "Biochemical Oxygen Demand (BOD)", range: "< 5 mg/L", method: "3-Day Incubation", boardLimit: "< 30 mg/L" },
-    { param: "Free Residual Chlorine", range: "0.2 - 0.5 mg/L", method: "DPD Colorimetric", boardLimit: "0.2 - 2.0 mg/L" }
+    { param: "pH Value", range: "6.5-8.5", method: "Electrometric", boardLimit: "5.5-9.0" },
+    { param: "Total Suspended Solids (TSS)", range: "<10mg/L", method: "Gravimetric", boardLimit: "<50mg/L" },
+    { param: "Chemical Oxygen Demand (COD)", range: "<30mg/L", method: "Dichromate Reflux", boardLimit: "<250mg/L" },
+    { param: "Biochemical Oxygen Demand (BOD)", range: "<5mg/L", method: "3-Day Incubation", boardLimit: "<30mg/L" },
+    { param: "Free Residual Chlorine", range: "0.2-0.5mg/L", method: "DPD Colorimetric", boardLimit: "0.2-2.0mg/L" }
   ];
 
   return (

@@ -71,7 +71,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
               <SectionWrapper delay={0.2}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Card 1: Years Experience */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Award className="w-6 h-6" />
                     </div>
@@ -79,7 +79,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                       <Counter
                         value={COMPANY_STATS.yearsExperience.value}
                         suffix={COMPANY_STATS.yearsExperience.suffix}
-                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                        className="text-xl sm:text-[1.35rem] md:text-xl lg:text-2xl font-extrabold text-slate-900 block tracking-tight"
                       />
                       <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
                         Years Experience
@@ -88,7 +88,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                   </div>
 
                   {/* Card 2: Manpower */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Users className="w-6 h-6" />
                     </div>
@@ -96,7 +96,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                       <Counter
                         value={COMPANY_STATS.manpower.value}
                         suffix={COMPANY_STATS.manpower.suffix}
-                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                        className="text-xl sm:text-[1.35rem] md:text-xl lg:text-2xl font-extrabold text-slate-900 block tracking-tight"
                       />
                       <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
                         Skilled Engineers
@@ -105,7 +105,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                   </div>
 
                   {/* Card 3: SCADA Installed */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Cpu className="w-6 h-6" />
                     </div>
@@ -113,7 +113,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                       <Counter
                         value={COMPANY_STATS.scadaInstalled.value}
                         suffix={COMPANY_STATS.scadaInstalled.suffix}
-                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                        className="text-xl sm:text-[1.35rem] md:text-xl lg:text-2xl font-extrabold text-slate-900 block tracking-tight"
                       />
                       <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
                         SCADA Systems
@@ -122,7 +122,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                   </div>
 
                   {/* Card 4: Manufacturing Facility */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Wrench className="w-6 h-6" />
                     </div>
@@ -130,7 +130,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                       <Counter
                         value={COMPANY_STATS.manufacturingFacility.value}
                         suffix={COMPANY_STATS.manufacturingFacility.suffix}
-                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                        className="text-xl sm:text-[1.35rem] md:text-xl lg:text-2xl font-extrabold text-slate-900 block tracking-tight"
                       />
                       <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
                         Facility
@@ -139,15 +139,15 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                   </div>
 
                   {/* Card 5: Installed Base */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <Zap className="w-6 h-6" />
                     </div>
                     <div>
                       <Counter
                         value={COMPANY_STATS.installedBase.value}
-                        suffix={` ${COMPANY_STATS.installedBase.suffix}`}
-                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                        suffix={COMPANY_STATS.installedBase.suffix}
+                        className="text-xl sm:text-[1.35rem] md:text-xl lg:text-2xl font-extrabold text-slate-900 block tracking-tight"
                       />
                       <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
                         Installed Base
@@ -156,7 +156,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                   </div>
 
                   {/* Card 6: Satisfied Customers */}
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 text-left">
                     <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
                       <ShieldCheck className="w-6 h-6" />
                     </div>
@@ -164,7 +164,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                       <Counter
                         value={COMPANY_STATS.satisfiedCustomers.value}
                         suffix={COMPANY_STATS.satisfiedCustomers.suffix}
-                        className="text-2xl md:text-3xl font-extrabold text-slate-900 block"
+                        className="text-xl sm:text-[1.35rem] md:text-xl lg:text-2xl font-extrabold text-slate-900 block tracking-tight"
                       />
                       <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
                         Satisfied Customers

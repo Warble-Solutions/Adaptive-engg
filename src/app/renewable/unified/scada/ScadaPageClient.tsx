@@ -530,11 +530,11 @@ export default function ScadaPageClient() {
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="bg-slate-900/50 p-4 rounded-xl border border-white/5">
                         <span className="text-[9px] text-gray-500 font-bold block mb-1">Active Power Output</span>
-                        <div className="text-xl font-bold text-white font-mono">42.84 MW</div>
+                        <div className="text-xl font-bold text-white font-mono">42.84MW</div>
                       </div>
                       <div className="bg-slate-900/50 p-4 rounded-xl border border-white/5">
                         <span className="text-[9px] text-gray-500 font-bold block mb-1">Grid Frequency</span>
-                        <div className="text-xl font-bold text-white font-mono">50.02 Hz</div>
+                        <div className="text-xl font-bold text-white font-mono">50.02Hz</div>
                       </div>
                     </div>
 
@@ -545,11 +545,11 @@ export default function ScadaPageClient() {
                       </div>
                       <div className="flex justify-between">
                         <span>Meteorological Solar Feed:</span>
-                        <span className="text-emerald-400 font-bold">1040 W/m²</span>
+                        <span className="text-emerald-400 font-bold">1040W/m²</span>
                       </div>
                       <div className="flex justify-between">
                         <span>Anemometer Wind Speed:</span>
-                        <span className="text-emerald-400 font-bold">12.4 m/s</span>
+                        <span className="text-emerald-400 font-bold">12.4m/s</span>
                       </div>
                     </div>
                   </div>

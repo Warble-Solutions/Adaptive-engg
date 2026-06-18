@@ -17,7 +17,7 @@ export const PPC_STATS = {
   yearsExperience: { value: 17, suffix: "+", label: "Years Experience" },
   ppcProjects: { value: 200, suffix: "+", label: "PPC Projects Executed Across India" },
   installedBase: { value: 68, suffix: "GW+", label: "Installed Base" },
-  responseTime: { value: "<200", suffix: " ms", label: "Real-time Response to Grid Events" },
+  responseTime: { value: "<200", suffix: "ms", label: "Real-time Response to Grid Events" },
   renewableCapacity: { value: 40, suffix: "GW+", label: "Renewable Capacity Under Active Control" },
   hybridProjects: { value: 8, suffix: "GW+", label: "Hybrid Projects" },
   hybridInstalled: { value: 10, suffix: "+", label: "Hybrid PPC Installed" },
@@ -32,8 +32,8 @@ export const KUSUM_STATS = {
 } as const;
 
 export const TUNNEL_STATS = {
-  twinTubeRoad: { value: 2.5, suffix: " Km", label: "Twin Tube Road Tunnel" },
-  transformer: { value: 1000, suffix: " KVA", label: "Transformer with HT Sub Station", formatted: "1,000" },
+  twinTubeRoad: { value: 2.5, suffix: "Km", label: "Twin Tube Road Tunnel" },
+  transformer: { value: 1000, suffix: "KVA", label: "Transformer with HT Sub Station", formatted: "1,000" },
   ledLights: { value: 1500, suffix: "+", label: "LED Lights Installed", formatted: "1,500+" },
   remoteIoPanels: { value: 15, suffix: "+", label: "Remote I/O Panels Installed" },
 } as const;

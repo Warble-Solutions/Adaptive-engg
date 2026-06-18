@@ -36,8 +36,8 @@ export default function TunnelPageClient() {
 
   const stats = [
     { val: "17", suf: "+", label: "Years of Experience" },
-    { val: "2.5", suf: " Km", label: "Twin Tube Road Tunnel" },
-    { val: "1,000", suf: " KVA", label: "Transformer & HT Substation" },
+    { val: "2.5", suf: "Km", label: "Twin Tube Road Tunnel" },
+    { val: "1,000", suf: "KVA", label: "Transformer & HT Substation" },
     { val: "1,500", suf: "+", label: "LED Lights Installed" },
     { val: "15", suf: "+", label: "Remote I/O Panels" },
   ];
@@ -834,7 +834,7 @@ export default function TunnelPageClient() {
                 },
                 {
                   num: "02",
-                  stat: "40,000 sq ft",
+                  stat: "40,000sq.ft.",
                   label: "Manufacturing",
                   title: "In-House Panels",
                   desc: "All HT/LT, AMF, VFD, and SCADA remote I/O panels are designed and assembled inside AEPL's state-of-the-art facility, certified for safety and quality.",
@@ -994,7 +994,7 @@ export default function TunnelPageClient() {
                             <div className="bg-slate-900/50 p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
                               <div>
                                 <span className="text-[10px] font-bold text-primary uppercase tracking-wider block mb-1">State-of-the-Art Factory</span>
-                                <h5 className="font-bold text-white mb-2 text-sm">40,000 Sq. Ft. Facility</h5>
+                                <h5 className="font-bold text-white mb-2 text-sm">40,000sq.ft. Facility</h5>
                                 <p className="text-[10px] text-gray-400 leading-relaxed">
                                   Equipped with computerized sheet metal shears, CNC punching, silver-plated copper busbar bending (up to 6300A), and modular wiring bays.
                                 </p>

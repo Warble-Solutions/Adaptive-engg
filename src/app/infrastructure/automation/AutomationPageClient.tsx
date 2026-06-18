@@ -22,7 +22,7 @@ export default function AutomationPageClient() {
         { label: "Redundant Config", value: "Hot-Standby Dual CPUs" },
         { label: "PLC Brands", value: "Siemens S7-1500 / Modicon M580 / Allen-Bradley" },
         { label: "Program Standard", value: "IEC 61131-3 (LD, FBD, ST, SFC)" },
-        { label: "Scan Time Delay", value: "< 12 ms loop execution" },
+        { label: "Scan Time Delay", value: "<12ms loop execution" },
         { label: "Digital/Analog Max", value: "Up to 10,000+ local & remote I/O points" }
       ],
       simMetric: "CPU Status Logs",

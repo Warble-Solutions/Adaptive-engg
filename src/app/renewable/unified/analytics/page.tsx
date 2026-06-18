@@ -182,7 +182,7 @@ export default function Page() {
               <div className="flex items-start gap-2">
                 <div className="w-4 h-4 rounded-full bg-teal-500/20 text-teal-400 flex-shrink-0 flex items-center justify-center text-[8px] font-bold border border-teal-500/30">AI</div>
                 <div className="bg-teal-500/10 border border-teal-500/20 text-[9px] rounded-lg p-2 text-teal-300 leading-snug">
-                  Block B was affected by severe dirt buildup on panels. Estimated loss: <span className="font-mono text-white font-bold">1.8 MWh</span>. 
+                  Block B was affected by severe dirt buildup on panels. Estimated loss: <span className="font-mono text-white font-bold">1.8MWh</span>. 
                   <span className="block mt-1 font-bold text-white underline cursor-pointer">Schedule Cleaning Job?</span>
                 </div>
               </div>
@@ -265,11 +265,11 @@ export default function Page() {
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-3 space-y-1.5 select-none font-mono text-[9px]">
               <div className="flex justify-between items-center text-red-500 bg-red-50 border border-red-100 px-2 py-1 rounded">
                 <span>[INV-07] DC Ground Fault</span>
-                <span className="font-bold">-4.5 MWh</span>
+                <span className="font-bold">-4.5MWh</span>
               </div>
               <div className="flex justify-between items-center text-amber-600 bg-amber-50 border border-amber-100 px-2 py-1 rounded">
                 <span>[SUB-03] Grid Curtailment</span>
-                <span className="font-bold">-2.1 MWh</span>
+                <span className="font-bold">-2.1MWh</span>
               </div>
             </div>
           </div>

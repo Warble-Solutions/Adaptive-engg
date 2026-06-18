@@ -98,7 +98,7 @@ export function ScadaMonitoringDashboard() {
         <div className="col-span-2 bg-white/5 rounded-lg p-3 border border-white/5">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Power Output (MW)</span>
-            <span className="text-[9px] text-teal-400 font-mono">{power.toFixed(1)} MW</span>
+            <span className="text-[9px] text-teal-400 font-mono">{power.toFixed(1)}MW</span>
           </div>
           <div className="flex items-end gap-[3px] h-16">
             {bars.map((h, i) => (
@@ -158,7 +158,7 @@ export function PlantOverviewDashboard() {
         ].map((g, i) => (
           <div key={i} className="bg-white/5 rounded-lg p-3 border border-white/5">
             <span className="text-[9px] text-slate-500 font-bold uppercase tracking-wider">{g.label}</span>
-            <div className="flex items-baseline gap-1 my-1">
+            <div className="flex items-baseline gap-0 my-1">
               <span className="text-xl font-black font-mono text-white">{g.value}</span>
               <span className="text-[9px] text-slate-500">{g.unit}</span>
             </div>
@@ -174,10 +174,10 @@ export function PlantOverviewDashboard() {
         <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider block mb-2">Block Status</span>
         <div className="space-y-1.5">
           {[
-            { name: "Block A — 12.5MW", status: "online" as const, power: "12.3 MW" },
-            { name: "Block B — 12.5MW", status: "online" as const, power: "11.8 MW" },
-            { name: "Block C — 12.5MW", status: "warning" as const, power: "10.2 MW" },
-            { name: "Block D — 12.5MW", status: "online" as const, power: "12.1 MW" },
+            { name: "Block A — 12.5MW", status: "online" as const, power: "12.3MW" },
+            { name: "Block B — 12.5MW", status: "online" as const, power: "11.8MW" },
+            { name: "Block C — 12.5MW", status: "warning" as const, power: "10.2MW" },
+            { name: "Block D — 12.5MW", status: "online" as const, power: "12.1MW" },
           ].map((block, i) => (
             <div key={i} className="flex items-center justify-between px-2 py-1.5 bg-white/[0.02] rounded hover:bg-white/5 transition-colors cursor-default">
               <div className="flex items-center gap-2">
@@ -303,7 +303,7 @@ export function AnalyticsDashboard() {
       <div className="grid grid-cols-4 gap-2 mt-2">
         {[
           { label: "Avg PR", value: "77.8%", trend: "+2.1%", up: true },
-          { label: "Total Gen", value: "1,061 MWh", trend: "+5.3%", up: true },
+          { label: "Total Gen", value: "1,061MWh", trend: "+5.3%", up: true },
           { label: "Soiling Loss", value: "2.4%", trend: "-0.8%", up: false },
           { label: "Availability", value: "99.2%", trend: "+0.1%", up: true },
         ].map((s, i) => (
@@ -434,7 +434,7 @@ export function NocDashboard() {
               <span className="text-[10px] font-medium text-slate-300 group-hover:text-white transition-colors">{site.name}</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-[9px] text-slate-500 font-mono">{site.kw} kW</span>
+              <span className="text-[9px] text-slate-500 font-mono">{site.kw}kW</span>
               <span className="text-[9px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
             </div>
           </div>
@@ -723,8 +723,8 @@ export function ScadaHeroDashboard() {
           {[
             { label: "PR", value: pr.toFixed(1) + "%", color: "text-teal-400" },
             { label: "CUF", value: "22.1%", color: "text-cyan-400" },
-            { label: "Today", value: "112 MWh", color: "text-amber-400" },
-            { label: "Loss", value: plantLoss.toFixed(1) + " MW", color: "text-red-400" },
+            { label: "Today", value: "112MWh", color: "text-amber-400" },
+            { label: "Loss", value: plantLoss.toFixed(1) + "MW", color: "text-red-400" },
             { label: "Uptime", value: "99.4%", color: "text-purple-400" },
           ].map((kpi, i) => (
             <div key={i} className="bg-white/[0.02] rounded-lg p-2 text-center border border-white/[0.04]">
@@ -1123,11 +1123,11 @@ export function EMSHeroDashboards() {
               <div className="flex flex-col gap-3">
                 <div className="bg-amber-500/10 border border-amber-500/20 p-2 rounded-lg text-center w-14">
                   <Sun className="w-4 h-4 text-amber-400 mx-auto mb-1" />
-                  <div className="text-[8px] text-amber-400 font-bold font-mono">14 MW</div>
+                  <div className="text-[8px] text-amber-400 font-bold font-mono">14MW</div>
                 </div>
                 <div className="bg-cyan-500/10 border border-cyan-500/20 p-2 rounded-lg text-center w-14">
                   <Wind className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
-                  <div className="text-[8px] text-cyan-400 font-bold font-mono">22 MW</div>
+                  <div className="text-[8px] text-cyan-400 font-bold font-mono">22MW</div>
                 </div>
               </div>
               
@@ -1147,8 +1147,8 @@ export function EMSHeroDashboards() {
             </div>
             
             <div className="flex items-center justify-between text-[8px] font-bold text-slate-400 uppercase tracking-widest px-2">
-              <span>Gen: 36 MW</span>
-              <span className="text-blue-400">Storing: 30 MW</span>
+              <span>Gen: 36MW</span>
+              <span className="text-blue-400">Storing: 30MW</span>
             </div>
           </div>
         </div>
@@ -1303,7 +1303,7 @@ export function HybridPlantDashboard() {
              <div className="absolute left-0 top-0 bottom-0 w-1 bg-purple-500"></div>
              <div>
                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Target Grid Dispatch / Load</div>
-               <div className="text-2xl font-black text-white font-mono mt-1">{load.toFixed(1)} MW</div>
+               <div className="text-2xl font-black text-white font-mono mt-1">{load.toFixed(1)}MW</div>
              </div>
              <div className="text-right">
                 <span className="px-2 py-1 bg-teal-500/20 text-teal-400 rounded text-[9px] font-bold">MATCHED</span>
