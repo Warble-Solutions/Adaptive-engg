@@ -13,6 +13,11 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import { COMPANY_STATS, PPC_STATS, KUSUM_STATS, TUNNEL_STATS, WATER_STATS, AUTOMATION_STATS } from "@/lib/constants";
 import { ScadaHeroDashboard } from "@/components/DashboardMockups";
 
+const PARTNER_LOGOS = [
+  ...Array.from({ length: 40 }, (_, i) => `/imgs/logos/${i + 1}.webp`),
+  "/imgs/logos/meil.png",
+];
+
 interface YouTubeVideo {
   id: string;
   title: string;
@@ -87,17 +92,11 @@ export default function HomePageClient() {
     WATER_STATS.overheadTanks,
     WATER_STATS.mldTreatedWater,
     WATER_STATS.mldTreatedSewage,
-    WATER_STATS.irrigationPumpingStations,
 
     // ▸ CH.4  INNOVATION — Cutting-edge capabilities
-    PPC_STATS.renewableCapacity,
-    PPC_STATS.hybridProjects,
-    PPC_STATS.responseTime,
     AUTOMATION_STATS.scadaTags,
-    AUTOMATION_STATS.redundantSystems,
     TUNNEL_STATS.twinTubeRoad,
     TUNNEL_STATS.transformer,
-    TUNNEL_STATS.ledLights,
   ];
 
   return (
@@ -114,10 +113,10 @@ export default function HomePageClient() {
           <p className="text-center text-gray-400 text-lg font-bold uppercase tracking-[0.2em]">Industry Leaders Trust Us</p>
         </div>
         <InfiniteMarquee speed={0.8} hoverSpeed={0.2} className="gap-32 items-center pr-32">
-          {Array.from({ length: 40 }).map((_, i) => (
+          {PARTNER_LOGOS.map((src, i) => (
             <div key={i} className="flex-shrink-0 flex items-center justify-center w-56 h-20">
               <img
-                src={`/imgs/logos/${i + 1}.webp`}
+                src={src}
                 alt={`Partner ${i + 1}`}
                 className="max-h-full max-w-full object-contain"
               />
