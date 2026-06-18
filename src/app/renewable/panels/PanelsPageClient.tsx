@@ -187,7 +187,7 @@ export default function PanelsPageClient() {
                       1,25,000<span className="text-primary">+</span><span className="text-xl md:text-2xl font-bold font-sans">sq.ft.</span>
                     </div>
                     <span className="text-xs md:text-sm font-bold text-gray-200 uppercase tracking-wider block">
-                      Manufacturing Facility in Ahmedabad
+                      Manufacturing Facility
                     </span>
                   </div>
                   <div className="w-14 h-14 bg-primary/30 rounded-2xl flex items-center justify-center text-primary shrink-0 shadow-lg border border-primary/20 animate-pulse">
