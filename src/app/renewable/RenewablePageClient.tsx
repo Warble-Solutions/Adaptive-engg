@@ -231,7 +231,7 @@ export default function RenewablePageClient() {
                 <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Engineering & Manufacturing</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-heading leading-tight">2. Electrical Panels</h2>
                 <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
-                  We design and manufacture high-performance control panels ensuring safety and reliability for critical infrastructure. Operating out of Ahmedabad in a state-of-the-art facility, our panels are engineered to meet the most stringent specifications.
+                  We design and manufacture high-performance control panels ensuring safety and reliability for critical infrastructure. Operating out of a state-of-the-art facility, our panels are engineered to meet the most stringent specifications.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl">
@@ -309,8 +309,7 @@ export default function RenewablePageClient() {
                   </div>
 
                   <div className="absolute bottom-4 left-4 z-20 bg-black/50 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
-                    <div className="text-primary font-bold tracking-widest uppercase text-xs mb-1">State-of-the-Art</div>
-                    <div className="text-white text-base font-bold"> Ahmedabad Facility</div>
+                    <div className="text-white text-base font-bold">State-of-the-Art Facility</div>
                   </div>
                 </div>
               </SectionWrapper>
