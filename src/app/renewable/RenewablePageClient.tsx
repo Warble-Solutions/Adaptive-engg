@@ -239,8 +239,8 @@ export default function RenewablePageClient() {
                     <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mt-1">Facility</span>
                   </div>
                   <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl">
-                    <div className="text-3xl font-black text-primary font-mono">500+</div>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mt-1">panels per year</span>
+                    <div className="text-3xl font-black text-primary font-mono">{COMPANY_STATS.electricalPanels.formatted}</div>
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mt-1">Electrical Panel Supplied</span>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
