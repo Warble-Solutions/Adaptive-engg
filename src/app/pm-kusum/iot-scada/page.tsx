@@ -31,7 +31,7 @@ export default function Page() {
             <p className="text-2xl md:text-3xl font-bold text-gray-400 mb-8">Central Monitoring Portal</p>
             <div className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed bg-black/30 backdrop-blur-sm rounded-xl py-4 px-6 border border-white/10">
               <p>
-                We at <strong className="text-primary">Adaptive Engineering Pvt. Ltd.</strong> are pleased to introduce the Central Monitoring Portal <strong className="text-primary">&ldquo;SolarWiz&rdquo;</strong>.
+                We at <strong className="text-primary">Adaptive Engineering Pvt. Ltd.</strong> are pleased to introduce the Central Monitoring Portal <strong className="text-primary">SolarWiz</strong>.
               </p>
             </div>
           </SectionWrapper>
@@ -79,7 +79,7 @@ export default function Page() {
                   Adaptive Engineering Pvt. Ltd. integrates robust field instrumentation with advanced analytics. We capture raw electrical telemetry at the solar field and process it into actionable executive intelligence.
                 </p>
                 <p className="text-slate-500 leading-relaxed text-sm md:text-base">
-                  &ldquo;SolarWiz&rdquo; offers a great experience to monitor and analyse plants across geographies at a central location. It collects, aggregates, presents and executes different data model algorithms to calculate individual plant KPIs.
+                  SolarWiz offers a great experience to monitor and analyse plants across geographies at a central location. It collects, aggregates, presents and executes different data model algorithms to calculate individual plant KPIs.
                 </p>
               </div>
             </div>
