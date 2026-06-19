@@ -206,7 +206,7 @@ export default function PanelsPageClient() {
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">10,000<span className="text-primary">+</span></div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">total cumulative panels delivered</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-1">panels supplied</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-black text-white mb-1 font-mono tracking-tight">1,000<span className="text-primary">+</span></div>
