@@ -184,7 +184,7 @@ export default function SolarWizClient() {
                   Centralized Solar NOC Operations
                 </h2>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  We at Adaptive Engineering Pvt. Ltd. are pleased to introduce the Central Monitoring Portal “SolarWiz”. SolarWiz offers a great experience to monitor and analyze plants across geographies at a central location.
+                  We at Adaptive Engineering Pvt. Ltd. are pleased to introduce the Central Monitoring Portal SolarWiz. SolarWiz offers a great experience to monitor and analyze plants across geographies at a central location.
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">
                   It collects, aggregates, presents, and executes different data model algorithms to calculate individual plant KPIs. Benefit from complete installation of Solar Plant Monitoring Solutions in-line with tailored specifications and fast, reliable project execution.
