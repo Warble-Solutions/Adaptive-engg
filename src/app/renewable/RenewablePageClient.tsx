@@ -263,8 +263,8 @@ export default function RenewablePageClient() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 h-[460px] rounded-3xl overflow-hidden shadow-2xl relative">
                   <div className="col-span-2 row-span-2 relative group overflow-hidden">
                     <Image 
-                      src="/imgs/renewable/solar_combiner_panel.png" 
-                      alt="HT/LT Panel Electrical Wiring" 
+                      src="/panels/PCC-Panel.webp" 
+                      alt="Power Control Centre (PCC) Panel" 
                       fill 
                       sizes="(max-width: 768px) 100vw, 50vw" 
                       className="object-cover group-hover:scale-105 transition-transform duration-700" 
@@ -273,8 +273,8 @@ export default function RenewablePageClient() {
                   </div>
                   <div className="col-span-1 row-span-1 relative group overflow-hidden">
                     <Image 
-                      src="/imgs/renewable/solar_inverter_cabinet.png" 
-                      alt="Control Panel Cabinets" 
+                      src="/panels/HT-Panel.webp" 
+                      alt="HT Panel" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw" 
                       className="object-cover group-hover:scale-110 transition-transform duration-700" 
@@ -282,8 +282,8 @@ export default function RenewablePageClient() {
                   </div>
                   <div className="col-span-1 row-span-1 relative group overflow-hidden">
                     <Image 
-                      src="/imgs/renewable/solar_switchgear_panel.png" 
-                      alt="PLC Controller Modules" 
+                      src="/panels/MCC-Panel.webp" 
+                      alt="Motor Control Centre (MCC) Panel" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw" 
                       className="object-cover group-hover:scale-110 transition-transform duration-700" 
@@ -291,8 +291,8 @@ export default function RenewablePageClient() {
                   </div>
                   <div className="col-span-1 row-span-1 relative group overflow-hidden">
                     <Image 
-                      src="/imgs/renewable/solar_combiner_wiring.png" 
-                      alt="Panel Assembly Line" 
+                      src="/panels/APFC-Panel.webp" 
+                      alt="Automatic Power Factor Correction (APFC) Panel" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw" 
                       className="object-cover group-hover:scale-110 transition-transform duration-700" 
@@ -300,8 +300,8 @@ export default function RenewablePageClient() {
                   </div>
                   <div className="col-span-1 row-span-1 relative group overflow-hidden">
                     <Image 
-                      src="/imgs/renewable/solar_telemetry_cabinet.png" 
-                      alt="Testing & Quality Control" 
+                      src="/panels/Automation-Panels.webp" 
+                      alt="Automation Panel" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw" 
                       className="object-cover group-hover:scale-110 transition-transform duration-700" 
