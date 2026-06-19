@@ -63,7 +63,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
               <SectionWrapper>
                 <h2 className="text-4xl font-bold text-slate-900 mb-6 font-heading">We Are</h2>
                 <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                  Adaptive Engineering Pvt. Ltd. a technology-driven engineering company headquartered in Ahmedabad, Gujarat. Since 2014, we have grown into India&apos;s most trusted partner for Renewable Energy, PM-KUSUM, Water Infrastructure, and Industrial Automation, delivering mission-critical Turnkey E&amp;I systems from our 1,25,000+sq.ft. manufacturing facility with {COMPANY_STATS.manpower.value}+ skilled professionals across {COMPANY_STATS.scadaInstalled.value}+ sites nationwide.
+                  Adaptive Engineering Pvt. Ltd. a technology-driven engineering company headquartered in Ahmedabad, Gujarat. Since 2014, we have grown into India&apos;s most trusted partner for Renewable Energy, PM-KUSUM, Water Infrastructure, and Industrial Automation, delivering mission-critical Turnkey E&amp;I systems from our 1,25,000+sq.ft. manufacturing facility with {COMPANY_STATS.manpower.value}+ skilled professionals across {COMPANY_STATS.scadaInstalled.value.toLocaleString("en-IN")}+ sites nationwide.
                 </p>
               </SectionWrapper>
             </div>
@@ -208,7 +208,7 @@ export default function AboutPageClient({ team = [] }: AboutPageClientProps) {
                 </div>
                 <h3 className="text-xl font-bold">Passionate Team, Proven Results</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  {COMPANY_STATS.manpower.value}+ engineers guided by founders with {COMPANY_STATS.yearsExperience.value}+ years of experience, delivering {COMPANY_STATS.scadaInstalled.value}+ projects across India — on time, with the best quality and latest technologies.
+                  {COMPANY_STATS.manpower.value}+ engineers guided by founders with {COMPANY_STATS.yearsExperience.value}+ years of experience, delivering {COMPANY_STATS.scadaInstalled.value.toLocaleString("en-IN")}+ projects across India — on time, with the best quality and latest technologies.
                 </p>
               </div>
             </SectionWrapper>

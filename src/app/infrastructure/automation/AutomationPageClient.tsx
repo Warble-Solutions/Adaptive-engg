@@ -152,7 +152,7 @@ export default function AutomationPageClient() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
                   <div className="text-4xl md:text-5xl font-black text-white mb-1 font-mono tracking-tight">
-                    {AUTOMATION_STATS.scadaInstalled.value}
+                    {AUTOMATION_STATS.scadaInstalled.value.toLocaleString("en-IN")}
                     <span className="text-primary">{AUTOMATION_STATS.scadaInstalled.suffix}</span>
                   </div>
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mt-2">SCADA Systems Installed</span>
