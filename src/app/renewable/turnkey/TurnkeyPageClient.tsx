@@ -9,6 +9,7 @@ import {
   Monitor, Compass, BarChart3, Clock, FileText, Settings, Shield,
   Award, Layers, Sliders, Gauge
 } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
 
 export default function TurnkeyPageClient() {
   const [activeStage, setActiveStage] = useState<number>(0);
@@ -573,6 +574,33 @@ export default function TurnkeyPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What does AEPL's Turnkey E&I execution include?",
+            answer: "We offer end-to-end services from detailed design and engineering, custom panel fabrication, cable tray layout routing, switchyard and substation construction, field cabling and terminations, instrumentation hookups, to final testing and grid synchronization."
+          },
+          {
+            question: "What are the key stages in your E&I project lifecycle?",
+            answer: "Our project lifecycle is structured into four main stages: 1) Detailed Engineering (load calculations, cable sizing, earthing grids), 2) In-House Panel Manufacturing (PCC/MCC assembly, testing, FAT logs), 3) Precision Site Erection (cabling, transformer erection, structural work), and 4) Hot Commissioning (relay testing, SCADA telemetry checks, grid synchronization)."
+          },
+          {
+            question: "How does AEPL manage material quality and project timelines?",
+            answer: "By manufacturing all electrical panels (type-tested to IS/IEC standards) in our own 1,25,000+sq.ft. facility, we retain direct control over assembly quality and delivery schedules, minimizing reliance on third-party suppliers."
+          },
+          {
+            question: "Do you build high-voltage substations and switchyards?",
+            answer: "Yes. We execute complete high-tension (HT) substations and switchyards up to 33kV, including transformer installations, outdoor breaker bays, numerical protection relay panels, CT/PT structures, and CEIG approvals."
+          },
+          {
+            question: "Which sectors and states does your turnkey E&I service cover?",
+            answer: "We execute large projects in the Renewables, Water Supply, Infrastructure, and Tunneling segments. We are a government-approved contractor with projects deployed across more than 19 states of India."
+          }
+        ]}
+      />
 
       {/* 5. CTA */}
       <section className="py-24 bg-transparent text-white text-center relative z-20 border-t border-white/5">

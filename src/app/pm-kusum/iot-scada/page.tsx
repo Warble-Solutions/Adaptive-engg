@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ArrowRight, Wifi, Monitor, Smartphone, BarChart3, Globe, Shield, Settings, CheckCircle2, Server, Radio, Cloud, Lock, Cpu, Activity, Users, Zap, Database, TrendingUp, Eye } from "lucide-react";
 import { KUSUM_STATS } from "@/lib/constants";
 import { SolarProDashboard, NocDashboard } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "IoT SCADA — SolarWiz | PM-KUSUM | Adaptive Engineering",
@@ -474,7 +476,35 @@ export default function Page() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is SolarWiz and how does it support PM-KUSUM projects?",
+            answer: "SolarWiz is AEPL's Central Monitoring Portal that integrates remote monitoring unit (RMU) hardware with a secure cloud application. It ensures real-time telemetry streaming from PM-KUSUM agricultural pumps and grid-connected solar plants, ensuring compliance with government requirements."
+          },
+          {
+            question: "How does the RMU handle telemetry data when cellular coverage is down?",
+            answer: "SolarWiz includes a secure Store & Forward mechanism. If the cellular or GPRS network goes offline, the edge gateway caches data locally in solid-state memory. Once the network is restored, it automatically synchronizes the queued data back to the cloud portal without any loss."
+          },
+          {
+            question: "Which solar pump inverter OEMs are compatible with the SolarWiz portal?",
+            answer: "SolarWiz features an OEM-independent architecture with built-in drivers for leading inverter brands including Growatt, Solis, Delta, and others. It queries inverter registers via RS485 Modbus RTU/TCP protocols automatically."
+          },
+          {
+            question: "Does SolarWiz support MNRE-compliant JSON data formats and state portal forwarding?",
+            answer: "Yes, the platform generates and uploads telemetry logs in the precise JSON formats required by State DISCOMs and the Ministry of New and Renewable Energy (MNRE), facilitating seamless subsidy clearances."
+          },
+          {
+            question: "What analytics are available on the SolarWiz dashboard?",
+            answer: "The system tracks key performance indicators including Performance Ratio (PR), Capacity Utilization Factor (CUF), energy yield (kWh), grid parameters, and carbon offset tracking, along with ML-based alerts for string degradation or pump faults."
+          }
+        ]}
+      />
+
       {/* CTA */}
+
       <section className="py-20 bg-transparent text-center relative z-10">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>

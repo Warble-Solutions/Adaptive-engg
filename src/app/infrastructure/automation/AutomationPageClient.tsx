@@ -9,6 +9,8 @@ import {
   TrendingUp, Sun, ChevronRight, Play, Database, Sliders, LayoutTemplate
 } from "lucide-react";
 import { AUTOMATION_STATS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function AutomationPageClient() {
   const [activeSolution, setActiveSolution] = useState<number>(0);
@@ -409,6 +411,33 @@ export default function AutomationPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What industrial automation hardware and PLC platforms does AEPL integrate?",
+            answer: "We integrate leading industry-standard programmable logic controllers (PLCs) and remote terminal units (RTUs), including Siemens S7-1500, Modicon M580, Allen-Bradley, and ABB. All code is written in compliance with the IEC 61131-3 standard using Ladder Diagram (LD), Function Block Diagram (FBD), Structured Text (ST), and Sequential Function Chart (SFC) programming methodologies."
+          },
+          {
+            question: "Do you configure hot-standby redundancy for critical process control systems?",
+            answer: "Yes. For mission-critical infrastructure such as municipal water distribution, lift-irrigation, and data centers, we implement hot-standby dual CPU configurations. If the primary processor fails, the secondary takes control in less than 12 milliseconds without causing process disruption or loss of historical data logs."
+          },
+          {
+            question: "What SCADA and visualization software engines do you support?",
+            answer: "We deploy robust SCADA architectures using Schneider System Platform, Siemens WinCC, and Inductive Automation System (Ignition). Our HMI designs follow high-performance vector graphics (SVG-based) and are fully compliant with ISA 18.2 standards for optimal alarm prioritization and operator situational awareness."
+          },
+          {
+            question: "How do your VFD and soft starter panels improve energy efficiency?",
+            answer: "Our VFD and soft starter panels are engineered with built-in active harmonic filters and temperature-regulated cooling fans. They control motor starting current spikes, reduce mechanical wear on pumps and fans, and optimize electricity usage by matching motor speed exactly to real-time process demand."
+          },
+          {
+            question: "What testing and quality protocols does AEPL conduct prior to shipping?",
+            answer: "Every automation panel undergoes rigorous Factory Acceptance Testing (FAT). This includes full physical inspection, power-up testing, point-to-point I/O loop simulation using specialized testing jigs, and functional logic simulation. All test logs and parameters are officially recorded in an FAT report provided to the client."
+          }
+        ]}
+      />
 
       {/* 5. CTA */}
       <section className="py-24 bg-white text-slate-900 text-center relative z-20">

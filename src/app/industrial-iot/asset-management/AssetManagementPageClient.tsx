@@ -8,6 +8,8 @@ import {
   ArrowRight, Wrench, Users, Package, ClipboardList, Workflow, Database, 
   CheckCircle2, Cpu, Settings, Activity, ShieldCheck, Sparkles, TrendingUp
 } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function AssetManagementPageClient() {
   const [activeTab, setActiveTab] = useState("info");
@@ -528,7 +530,35 @@ export default function AssetManagementPageClient() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is AssetWiz APM and what are its core modules?",
+            answer: "AssetWiz APM is a mobile-first Asset Performance Management platform. It includes modules for Asset Information (metadata logging), Asset Team (resource assignment), Maintenance scheduling, Inventory tracking, Work Order management, and Integration pipelines."
+          },
+          {
+            question: "How does the mobile asset management system integrate with existing ERP platforms?",
+            answer: "The platform features standard connector pipelines designed to synchronize data (including latency times down to 14ms) with enterprise ERP systems such as SAP, Oracle, and Microsoft Dynamics, maintaining unified resource records."
+          },
+          {
+            question: "Can the system operate offline in locations without network connectivity?",
+            answer: "Yes, field technicians can view asset metadata, update inventory, and log completed work orders offline on their mobile devices. Once a network connection is detected, the mobile app automatically syncs the offline logs back to the central server."
+          },
+          {
+            question: "Does the system support predictive maintenance scheduling?",
+            answer: "Yes, by integrating real-time telemetry from SCADA systems and running condition-based performance monitoring algorithms, AssetWiz APM forecasts equipment wear and schedules preventive maintenance before failure events occur."
+          },
+          {
+            question: "What industrial communication protocols are supported for sensor integration?",
+            answer: "The platform supports standard industrial protocols including OPC UA, Modbus TCP/IP, RS485 serial interfaces, SQL database triggers, FTP file transfers, and REST HTTP APIs for direct field sensor data ingestion."
+          }
+        ]}
+      />
+
       {/* CTA */}
+
       <section className="py-24 text-center relative z-10 bg-slate-950/80 backdrop-blur-sm border-t border-white/5">
         <div className="max-w-3xl mx-auto px-6">
           <SectionWrapper>

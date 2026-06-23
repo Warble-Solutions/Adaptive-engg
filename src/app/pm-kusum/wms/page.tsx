@@ -2,6 +2,8 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "Weather Monitoring System | Adaptive Engineering",
@@ -112,6 +114,33 @@ export default function Page() {
  </div>
  </div>
  </section>
+
+  {/* FAQ SECTION */}
+  <FAQSection
+    theme="light"
+    faqs={[
+      {
+        question: "Why is a Weather Monitoring System (WMS) necessary for solar plants?",
+        answer: "Accurate calculation of a solar plant's Performance Ratio (PR) requires real-time weather metrics. WMS sensors measure GHI, module temperature, and other variables to verify whether changes in power output are caused by weather conditions or equipment faults."
+      },
+      {
+        question: "What environmental parameters are monitored by AEPL's WMS?",
+        answer: "Our WMS integrates high-precision sensors to monitor Global Horizontal Irradiance (GHI), Global Tilted Irradiance (GTI), module temperature, ambient air temperature, wind speed, wind direction, and relative humidity."
+      },
+      {
+        question: "Can the WMS data be integrated into the central SCADA/CMS portal?",
+        answer: "Yes, all sensor readings are converted to RS485 Modbus RTU signals and connected directly to local RTUs or data loggers, enabling seamless telemetry data streaming to our SolarWiz Central Monitoring Portal."
+      },
+      {
+        question: "How does the system calculate Performance Ratio (PR) and Capacity Utilization Factor (CUF)?",
+        answer: "By correlating the measured solar irradiance (GTI) and ambient/module temperatures from the WMS with real-time active power output from the inverters, our CMS algorithms automatically compute hourly, daily, and monthly PR and CUF values."
+      },
+      {
+        question: "Are the WMS sensors designed to withstand harsh outdoor conditions?",
+        answer: "Yes, all meteorological sensors are industrial-grade, IP65/IP66 weatherproof rated, and designed for long-term outdoor operation under extreme Indian tropical climates."
+      }
+    ]}
+  />
 
  {/* CTA */}
  <section className="py-20 bg-transparent text-center relative z-10">

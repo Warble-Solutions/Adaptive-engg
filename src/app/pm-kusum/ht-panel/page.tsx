@@ -3,6 +3,8 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Shield, Activity, CheckCircle2, Settings, Gauge, ThermometerSun, Wind, Award, Cpu, Lock } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "HT Panel Solutions — VCB Panel up to 33kV | PM-KUSUM | Adaptive Engineering",
@@ -172,6 +174,33 @@ export default function Page() {
  </div>
  </div>
  </section>
+
+  {/* FAQ SECTION */}
+  <FAQSection
+    theme="light"
+    faqs={[
+      {
+        question: "What voltage ratings do AEPL's HT panels support?",
+        answer: "Our HT panels are designed for High Tension distribution, supporting standard ratings of 3.3kV, 6.6kV, 11kV, and up to 33kV networks."
+      },
+      {
+        question: "Are these panels type-tested by accredited laboratories?",
+        answer: "Yes, our VCB (Vacuum Circuit Breaker) panels are IS/IEC 62271 type-tested and certified by premier test houses like ERDA and CPRI, ensuring safety, short-circuit containment, and electrical endurance."
+      },
+      {
+        question: "What are the key features of the Vacuum Circuit Breaker (VCB) used?",
+        answer: "We utilize high-reliability VCBs rated for up to 10,000+ mechanical operations. They require minimal maintenance and offer exceptional arc-quenching capability in a vacuum chamber."
+      },
+      {
+        question: "Do the HT panels support SCADA and remote monitoring?",
+        answer: "Yes, SCADA integration is standard for 11kV and 33kV configurations (and optional for lower voltages). They include current/potential transformers (CT/PT) and numeric protection relays with RS485/Modbus or Ethernet communication interfaces."
+      },
+      {
+        question: "What safety interlocks are built into the panels?",
+        answer: "The panels include standard safety interlocks such as door-breaker interlocks, earthing switch protection, motorized/manual racking interlocks, arc flash venting, and infrared (IR) windows for safe thermography during live operation."
+      }
+    ]}
+  />
 
  {/* CTA */}
  <section className="py-20 bg-white text-center relative z-20 rounded-t-[40px] -mt-10">

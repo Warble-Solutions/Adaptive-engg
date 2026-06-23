@@ -2,6 +2,8 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, BarChart3, PieChart, FileText, Brain, CheckCircle2, Layers, Activity, Target, LineChart, Monitor, Eye, Zap, Wrench, Battery, Mail, Bell, Database } from "lucide-react";
 import { AnalyticsDashboard, AnalyticsHeroDashboards, Scale500GWDashboard } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "Advanced Analytics | Unified Renewable Solutions | Adaptive Engineering",
@@ -490,6 +492,32 @@ export default function Page() {
  </div>
  </div>
  </section>
+
+  <FAQSection
+    theme="light"
+    faqs={[
+      {
+        question: "What capabilities does AEPL's Advanced Analytics platform offer?",
+        answer: "Our analytics platform provides interactive data visualization, automated loss bucket categorization, drag-and-drop report builders, degradation trend analysis, and conversational AI insights."
+      },
+      {
+        question: "What are 'loss buckets' and how does the system calculate them?",
+        answer: "Loss buckets categorize lost generation into specific factors (such as grid curtailment, inverter clipping, soiling, and temperature losses). By combining weather sensor data with electrical models, the system calculates losses down to the kWh."
+      },
+      {
+        question: "Can I build and schedule my own custom report templates?",
+        answer: "Yes. Our Enterprise Custom Report Builder features a drag-and-drop canvas. You can design templates with custom metrics and logos, and configure schedules to automatically email reports in PDF or CSV formats."
+      },
+      {
+        question: "How does the conversational AI help plant managers?",
+        answer: "Operators can query plant data using natural language (e.g., 'What caused yesterday's dip in block B?'). The AI scans telemetry logs, correlates parameters like soiling or grid flags, and offers recommended actions."
+      },
+      {
+        question: "Can this module integrate with legacy, third-party SCADA databases?",
+        answer: "Yes. Our analytics pipeline features standard connectors that pull data from third-party historians or SCADA databases using REST APIs, OPC-UA, or Modbus, creating a single analytics layer for your portfolio."
+      }
+    ]}
+  />
 
  {/* CTA */}
  <section className="py-20 bg-white text-center relative z-20">

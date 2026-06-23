@@ -21,6 +21,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function WaterWizClient() {
   const [activeTab, setActiveTab] = useState<"monitor" | "analyze" | "reporting" | "om" | "integrations">("monitor");
@@ -490,7 +492,35 @@ export default function WaterWizClient() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is WaterWiz and what infrastructure does it monitor?",
+            answer: "WaterWiz is a specialized SCADA and telemetry software platform for the water industry. It provides real-time monitoring and automation for municipal water supply schemes, wastewater treatment plants (STPs), effluent treatment plants (ETPs), reservoirs, and smart micro-irrigation networks."
+          },
+          {
+            question: "What sensors and hardware interface with the WaterWiz portal?",
+            answer: "WaterWiz aggregates data from electromagnetic flow meters, chemical/turbidity analyzers, chlorine sensors, water level transmitters, pump status indicators, and energy meters via local RTUs using Modbus or OPC communication protocols."
+          },
+          {
+            question: "Can WaterWiz feed data directly to state or national water boards?",
+            answer: "Yes, WaterWiz features pre-built API integration pipelines to feed telemetry reports directly to municipal and regional water management systems, including state department dashboards and central water monitoring databases."
+          },
+          {
+            question: "How does WaterWiz help in reducing water distribution losses?",
+            answer: "The platform calculates flow balance across pipelines and reservoirs, enabling operators to identify leaks, line blockages, or Non-Revenue Water (NRW) anomalies immediately in real-time."
+          },
+          {
+            question: "What hosting configurations are supported for WaterWiz deployments?",
+            answer: "WaterWiz supports a variety of deployment models, including secure cloud instances (AWS or Microsoft Azure) for multi-town schemes and local on-premise servers for standalone treatment plants."
+          }
+        ]}
+      />
+
       {/* 10. CTA (Dark - Semi-transparent background for 3D visibility) */}
+
       <section className="py-24 text-center relative z-10 bg-slate-950/80 backdrop-blur-sm border-t border-white/5">
         <div className="max-w-3xl mx-auto px-6">
           <SectionWrapper>

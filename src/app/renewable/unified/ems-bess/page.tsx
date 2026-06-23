@@ -6,6 +6,8 @@ import {
   Eye, Wrench, AlertTriangle, Layers, Sliders, FileCheck, Globe 
 } from "lucide-react";
 import { EMSHeroDashboards, HybridPlantDashboard } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "Energy Management System - BESS | Unified Renewable Solutions | Adaptive Engineering",
@@ -452,6 +454,33 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What does AEPL's Energy Management System (EMS) for BESS do?",
+            answer: "Our EMS is an indigenous control platform designed for utility-scale battery energy storage systems. It manages charging and discharging rates, performs cell-level diagnostics, balances State of Charge (SoC), and automates peak shaving and grid support."
+          },
+          {
+            question: "How does the EMS perform energy arbitrage?",
+            answer: "The EMS uses machine learning models that monitor dynamic tariff rates and solar/wind generation forecasts. It schedules charging during low-demand or negative-tariff periods and discharging during peak tariff windows, maximizing revenues."
+          },
+          {
+            question: "How does the system handle State of Charge (SoC) management?",
+            answer: "It runs cell-balancing algorithms that monitor and equalize charge levels across multiple battery banks during idle times. This prevents individual container overcharging, extends total battery life, and ensures maximum discharge capacity."
+          },
+          {
+            question: "What safety protocols are programmed to prevent thermal runaway?",
+            answer: "The EMS continuously collects cell-level temperatures, contactor states, and insulation values. If any module temperature violates safety thresholds or shows rapid heat rises, the controller isolates the bank and triggers emergency cooling protocols."
+          },
+          {
+            question: "Does the EMS support compliance with Central Electricity Authority (CEA) regulations?",
+            answer: "Yes. Our controllers are configured to meet CEA regulations for grid connectivity. The system regulates active and reactive power injection at the Point of Common Coupling (PCC) to support voltage stability and grid frequency."
+          }
+        ]}
+      />
 
       {/* 8. CTA (Dark) */}
       <section className="py-20 bg-slate-950 text-center relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">

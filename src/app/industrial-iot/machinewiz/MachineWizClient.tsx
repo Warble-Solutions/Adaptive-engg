@@ -20,6 +20,8 @@ import {
   Layers
 } from "lucide-react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function MachineWizClient() {
   const steps = [
@@ -357,7 +359,35 @@ export default function MachineWizClient() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is MachineWiz and what does it do?",
+            answer: "MachineWiz is a smart factory analytics and machine telemetry platform. It collects high-frequency data from PLC and CNC controllers, aggregates and processes it at the edge, and computes real-time OEE, cycle times, and machine health metrics on shop-floor dashboards."
+          },
+          {
+            question: "What types of machines and controllers can MachineWiz connect to?",
+            answer: "MachineWiz includes native driver integrations for a wide variety of machine controllers, including Fanuc, Siemens, Mitsubishi, Rockwell, Modbus RTU/TCP PLCs, OPC-UA servers, and digital/analog IO links."
+          },
+          {
+            question: "How is the MachineWiz hardware/agent deployed?",
+            answer: "The platform can be deployed as a physical edge gateway cabinet, a software agent running on existing industrial IPCs, or a containerized Docker service on local factory servers, allowing quick plug-and-play installation."
+          },
+          {
+            question: "Can MachineWiz data be synced with our MES or ERP software?",
+            answer: "Yes, MachineWiz features a built-in integration engine designed to merge machine telemetry data with contextual logs from Manufacturing Execution Systems (MES), ERP databases, and CMMS software, utilizing secure REST APIs or Webhooks."
+          },
+          {
+            question: "What predictive maintenance capabilities are included?",
+            answer: "MachineWiz monitors key physical parameters such as motor temperature, vibration frequencies, current load, and bearing wear. Using rules-based alerts and machine learning models, it identifies mechanical anomalies and estimates the remaining useful life (RUL) of components."
+          }
+        ]}
+      />
+
       {/* 10. CTA (Dark) */}
+
       <section className="py-24 text-center relative z-10 bg-slate-950/80 backdrop-blur-sm border-t border-white/5">
         <div className="max-w-3xl mx-auto px-6">
           <SectionWrapper>

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { ArrowRight, Shield, Zap, Activity, CheckCircle2, Cpu, Award, ThermometerSun, Lock, Gauge, Settings } from "lucide-react";
 import CertificateGallery from "@/components/CertificateGallery";
 import { ACDBPanelVisual } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "ACDB Panel Solutions | PM-KUSUM | Adaptive Engineering",
@@ -228,6 +230,33 @@ export default function Page() {
  </div>
  </div>
  </section>
+
+  {/* FAQ SECTION */}
+  <FAQSection
+    theme="light"
+    faqs={[
+      {
+        question: "What is an ACDB panel and why is it used in PM-KUSUM?",
+        answer: "An Alternating Current Distribution Board (ACDB) acts as an isolation and protection link between the solar inverter output and the water pump motor. It protects the pump drive from grid surges and facilitates safe isolation during O&M."
+      },
+      {
+        question: "Are AEPL's ACDB panels officially type-tested?",
+        answer: "Yes, our ACDB panels are type-tested at ERDA and CPRI laboratories. They comply with IS/IEC 61439-1 & 2 standards for short-circuit resistance, temperature rise limits, and IP65 ingress protection verification."
+      },
+      {
+        question: "What environmental protections are built into the ACDB enclosure?",
+        answer: "Enclosures are fabricated using UV-stabilized FRP (Fiber Reinforced Plastic) or powder-coated CRCA steel. They feature high-quality neoprene gaskets and sealed IP68 cable glands to prevent entry of water or dust."
+      },
+      {
+        question: "What surge protection specifications are included in the panels?",
+        answer: "We integrate Type 1+2 surge protection devices (SPDs) with Metal Oxide Varistor (MOV) technology. They are rated up to 40kA surge currents to shield downstream drives from lightning and switching spikes."
+      },
+      {
+        question: "Can the ACDB panels stream energy statistics to SolarWiz?",
+        answer: "Yes, we offer an optional digital energy meter with an RS485 Modbus output. This links with our solar RTU to stream real-time current, voltage, and energy generation statistics directly to the SolarWiz portal."
+      }
+    ]}
+  />
 
  {/* CTA */}
  <section className="py-20 bg-transparent text-center relative z-10">

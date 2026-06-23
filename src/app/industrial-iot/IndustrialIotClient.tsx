@@ -4,6 +4,8 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Droplet, Cpu, Activity, CheckCircle, Database, Server, Settings } from "lucide-react";
 import SceneTrigger from "@/components/3d/SceneTrigger";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function IndustrialIotClient() {
   const platforms = [
@@ -183,7 +185,35 @@ export default function IndustrialIotClient() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="dark"
+        faqs={[
+          {
+            question: "What is the AEPL Industrial IoT Suite?",
+            answer: "Our Industrial IoT Suite comprises three specialized telemetry platforms: SolarWiz (for renewable assets), WaterWiz (for municipal water supply and treatment SCADA), and MachineWiz (for factory floor OEE and predictive maintenance)."
+          },
+          {
+            question: "Are AEPL's IoT platforms compatible with third-party hardware?",
+            answer: "Yes, all three platforms are designed with OEM-independent device drivers and protocol libraries. They can translate Modbus RTU/TCP, OPC UA, MQTT, and other protocols from various hardware manufacturers."
+          },
+          {
+            question: "How does the system handle internet outages at remote sites?",
+            answer: "Our edge telemetry devices feature built-in store-and-forward local databases. When internet connectivity is lost, the edge nodes store data points locally, and automatically synchronize them back to the cloud when connections resume."
+          },
+          {
+            question: "Can I customize dashboards and reporting formats?",
+            answer: "Yes, each platform includes interactive user-facing dashboards, visual analytics modules, and custom report designers (such as ReportWiz) that let you configure charts, filters, and scheduled report delivery."
+          },
+          {
+            question: "What hosting options are available for the cloud applications?",
+            answer: "We offer flexible deployment configurations including secure cloud hosting (AWS / Microsoft Azure) and dedicated on-premise infrastructure based on your corporate IT policies and scaling requirements."
+          }
+        ]}
+      />
+
       {/* 4. CTA Section (Light) */}
+
       <section className="py-24 bg-white text-slate-900 text-center relative z-10">
         <div className="max-w-3xl mx-auto px-6">
           <SectionWrapper>

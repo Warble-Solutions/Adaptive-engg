@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Factory, Zap, CloudCog, ShieldCheck, TrendingUp, Settings, BarChart3, Handshake, Cpu, Layers, Beaker, Database, Eye, LayoutTemplate } from "lucide-react";
 import { WATER_STATS, WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "Effluent Treatment Plant (ETP) | Adaptive Engineering",
@@ -353,6 +355,33 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What E&I and SCADA solutions does AEPL offer for Effluent Treatment Plants (ETP)?",
+            answer: "We offer complete E&I packages including custom switchgear and distribution panels, PLC panels, instrumentation (electromagnetic flow meters, level transmitters, pH/turbidity/conductivity analyzers), variable frequency drives (VFDs) for pump control, and fully integrated SCADA software."
+          },
+          {
+            question: "How does AEPL automate Membrane Bioreactor (MBR) filtration systems?",
+            answer: "We program PLC logic to continuously monitor Trans-Membrane Pressure (TMP). The system automatically manages membrane filtration cycles, schedules air scour blowers, triggers backwash sequences, and initiates Clean-in-Place (CIP) chemical washes when pressure limits are reached, preserving membrane life."
+          },
+          {
+            question: "What analytics does the ETP SCADA platform provide?",
+            answer: "Our SCADA software tracks real-time filtration rates, cumulative treated volumes, membrane pressure curves, chemical dosing consumption, and power efficiency metrics. This data is displayed on operator HMIs and logged for compliance reporting."
+          },
+          {
+            question: "How do you optimize chemical dosing in industrial effluent treatment?",
+            answer: "We configure pH and oxidation controllers to regulate dosing pump rates. By dynamically matching dosing chemical quantities (acids, bases, coagulants) to incoming raw effluent characteristics, the system ensures stable neutralization while reducing chemical waste."
+          },
+          {
+            question: "Does AEPL integrate online effluent quality monitoring for pollution control board compliance?",
+            answer: "Yes. We integrate Online Continuous Effluent Monitoring Systems (OCEMS) that send real-time pH, COD, BOD, and TSS telemetry directly to State Pollution Control Board (SPCB) and CPCB servers, assuring complete regulatory compliance."
+          }
+        ]}
+      />
 
       {/* 10. CTA */}
       <section className="py-20 bg-transparent text-center relative z-10">

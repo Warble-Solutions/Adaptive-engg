@@ -7,6 +7,8 @@ import {
   Sliders, Layers, Database 
 } from "lucide-react";
 import { CMMSDashboard } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "CMMS | Unified Renewable Solutions | Adaptive Engineering",
@@ -335,6 +337,33 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What does AEPL's CMMS provide for renewable operations?",
+            answer: "It provides a computerized maintenance platform that automates work order dispatching, standardizes preventive checklists (SOPs), tracks warehouse inventory, and aggregates crew performance logs."
+          },
+          {
+            question: "How does the CMMS automate work order generation?",
+            answer: "The CMMS links with our SCADA. When an inverter trips or underperforms, SCADA raises an alarm, and the CMMS creates a work order, assigns the nearest skilled technician, and sends a mobile alert."
+          },
+          {
+            question: "How does the system standardize maintenance SOPs for field technicians?",
+            answer: "Technicians receive step-by-step checklists on their mobile app. They must verify physical lockouts, log diagnostic checks, and upload photo logs before work orders can be closed."
+          },
+          {
+            question: "What capabilities are included in inventory and spare parts tracking?",
+            answer: "The system monitors spare parts availability across warehouses, sets reorder thresholds, tracks tool allocations, and automatically links parts consumed to specific work order costs."
+          },
+          {
+            question: "How does the CMMS improve the Mean Time to Repair (MTTR)?",
+            answer: "By automating dispatch, routing technicians based on proximity, providing instant access to manuals/wiring diagrams, and maintaining correct spare stocks, we reduce MTTR by up to 35%."
+          }
+        ]}
+      />
 
       {/* 6. CTA (Dark Split Layout) */}
       <section className="py-24 bg-slate-950 text-left relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900 overflow-hidden">

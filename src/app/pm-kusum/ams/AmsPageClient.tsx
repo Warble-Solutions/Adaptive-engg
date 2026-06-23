@@ -9,6 +9,7 @@ import {
   Layers, FileText, QrCode, Bell, Workflow, Shield, Database, Smartphone, 
   Info, Cpu, Clock, RefreshCw, Server, MessageSquare, Folder, GitBranch, ArrowUpRight
 } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
 
 export default function AmsPageClient() {
   const [activeTab, setActiveTab] = useState("info");
@@ -428,6 +429,34 @@ export default function AmsPageClient() {
           </div>
         </div>
       </section>
+
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What does AEPL's Asset Management System (AMS) provide for PM-KUSUM?",
+            answer: "It provides a unified asset performance management (APM) platform. This includes hierarchical tree-structure asset logs, preventive/corrective maintenance workflows, mobile technician dashboards, and real-time inventory tracking."
+          },
+          {
+            question: "How does the AMS coordinate different team roles?",
+            answer: "It structures operations into three dashboard views: 1) Operational (field crew work orders), 2) Managerial (control room alarms, telemetry diagnostics), and 3) Strategic (enterprise macro dashboards on portfolio efficiency and cost)."
+          },
+          {
+            question: "What maintenance scheduling options are supported in the system?",
+            answer: "We support time-based preventive scheduling, calendar-driven cycles, usage-based triggers, and condition-based automated dispatches linked with SCADA alarm events."
+          },
+          {
+            question: "How does the mobile app assist field crews on-site?",
+            answer: "Crews can scan QR codes on panels to pull specifications and manuals. They follow step-by-step checklists, log parameters, and upload photo logs to confirm completion."
+          },
+          {
+            question: "How is inventory management integrated into the maintenance workflows?",
+            answer: "When a repair work order is raised, the system automatically checks local warehouse stock for the required spare parts, issues a transfer request, and tracks parts consumed to calculate precise O&M costs."
+          }
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 bg-white text-center relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-100">

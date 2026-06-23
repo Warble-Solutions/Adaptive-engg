@@ -2,6 +2,8 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, FileText, BarChart3, PieChart, Clock, Download, TrendingUp, CheckCircle2, Table2, LineChart, Calendar, Filter, Layers } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "ReportWiz | PM-KUSUM | Adaptive Engineering",
@@ -235,7 +237,34 @@ export default function Page() {
  </div>
  </section>
 
- {/* CTA */}
+  {/* FAQ SECTION */}
+  <FAQSection
+    theme="light"
+    faqs={[
+      {
+        question: "What is ReportWiz?",
+        answer: "ReportWiz is AEPL's automated enterprise reporting platform designed for renewable energy portfolios. It simplifies compliance and operations auditing by generating custom, scheduled, and multi-format reports from live plant SCADA data."
+      },
+      {
+        question: "What key performance indicators (KPIs) can ReportWiz calculate?",
+        answer: "ReportWiz automates the calculation of key solar metrics such as Performance Ratio (PR), Capacity Utilization Factor (CUF), specific yield, plant load factor (PLF), and carbon offsets, complete with auto-benchmarking against contract targets."
+      },
+      {
+        question: "Can I export reports in different formats and style them with my company branding?",
+        answer: "Yes, the platform supports exporting reports in PDF, Excel (xlsx), and CSV formats. You can use branded templates with your corporate logo, custom headers, and stylized data tables."
+      },
+      {
+        question: "How does the scheduling feature work in ReportWiz?",
+        answer: "You can schedule reports to be generated automatically on a daily, weekly, monthly, or annual basis. ReportWiz then automatically distributes these reports via email to pre-configured stakeholders."
+      },
+      {
+        question: "Does ReportWiz offer customized report building?",
+        answer: "Yes, the platform includes a custom report designer. Users can select specific field parameters, apply date range filters, choose data groupings, and create interactive drill-down charts (line, bar, heatmaps, box plots) to visualize their data."
+      }
+    ]}
+  />
+
+  {/* CTA */}
  <section className="py-20 bg-transparent text-center relative z-10">
  <div className="max-w-2xl mx-auto px-6">
  <SectionWrapper>

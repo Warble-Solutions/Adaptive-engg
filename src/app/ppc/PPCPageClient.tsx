@@ -16,6 +16,8 @@ import {
 import SectionWrapper from "@/components/SectionWrapper";
 import { PPC_STATS } from "@/lib/constants";
 import { CMSHeroDashboards } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function PPCPageClient() {
   return (
@@ -672,7 +674,35 @@ export default function PPCPageClient() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is the primary function of a Power Plant Controller (PPC)?",
+            answer: "A Power Plant Controller (PPC) is a centralized control system that regulates active power, reactive power, power factor, and voltage at the Point of Common Coupling (PCC) to meet strict utility grid code compliance requirements."
+          },
+          {
+            question: "How many PPC installations has AEPL deployed?",
+            answer: `AEPL has successfully executed over ${PPC_STATS.ppcProjects.value}${PPC_STATS.ppcProjects.suffix} PPC projects across India, supporting a cumulative installed renewable energy base of over ${PPC_STATS.installedBase.value}${PPC_STATS.installedBase.suffix}.`
+          },
+          {
+            question: "Does your PPC support hybrid solar-wind-storage installations?",
+            answer: "Yes, our PPC is fully designed for hybrid projects. It dynamically coordinates power exports, ramp rates, and frequency response controls across solar inverters, wind turbine generators (WTGs), and Battery Energy Storage Systems (BESS)."
+          },
+          {
+            question: "What is the control response time of AEPL's PPC?",
+            answer: "The PPC features high-speed controller logic running on real-time hardware, executing control loops and coordinating active/reactive power adjustments in less than 200 milliseconds to manage grid transients."
+          },
+          {
+            question: "What compliance standards does your controller adhere to?",
+            answer: "Our Power Plant Controller complies with the Central Electricity Authority (CEA) and State DISCOM grid codes, including CERC regulations and IEEE 1547 standards for interconnecting distributed resources."
+          }
+        ]}
+      />
+
       {/* 8. CTA (Dark) */}
+
       <section className="py-20 bg-transparent text-center relative z-10">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>

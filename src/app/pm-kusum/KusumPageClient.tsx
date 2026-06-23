@@ -9,6 +9,8 @@ import MicroCTA from "@/components/ui/MicroCTA";
 import ActionBadge from "@/components/ui/ActionBadge";
 import SectionWrapper from "@/components/SectionWrapper";
 import { AnimatePresence, motion } from "framer-motion";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function KusumPageClient() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -439,7 +441,32 @@ export default function KusumPageClient() {
         </div>
       </section>
 
-
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="dark"
+        faqs={[
+          {
+            question: "What solutions does AEPL offer for the PM-KUSUM scheme?",
+            answer: "We supply complete Electrical and Instrumentation (E&I) hardware and software. This includes IP65 ACDB/DCDB panels, HT panels up to 33kV, Remote Monitoring Systems (RMS) telemetry panels, and our MNRE-compliant Central Monitoring Portal (SolarWiz)."
+          },
+          {
+            question: "What are Component A, B, and C of the PM-KUSUM scheme?",
+            answer: "Component A covers setting up small solar plants (0.5 to 2MW) on barren land. Component B covers installation of off-grid solar water pumps (up to 7.5HP). Component C covers solarization of existing grid-connected agricultural pumps. AEPL provides E&I and telemetry for all three components."
+          },
+          {
+            question: "Is AEPL's Remote Monitoring System (RMS) compliant with MNRE guidelines?",
+            answer: "Yes, our RMS is designed to meet Ministry of New and Renewable Energy (MNRE) telemetry specifications. It captures mandatory pump parameters (voltage, current, flow rate, frequency, battery voltage, solar radiation) and transmits data directly to MNRE/DISCOM servers."
+          },
+          {
+            question: "What hardware panels do you supply for PM-KUSUM solar water pumps?",
+            answer: "We supply type-tested IP65-rated AC Distribution Boards (ACDB) and DC Distribution Boards (DCDB) equipped with surge protection devices (SPDs), MCBs, and terminal blocks, ensuring safe electrical isolation for pump controllers."
+          },
+          {
+            question: "How does SolarWiz help developers secure government subsidies?",
+            answer: "MNRE subsidies are contingent on daily data streaming to government portals. SolarWiz monitors uptime, logs daily pump status, alerts technicians of telemetry dropouts, and generates Joint Meter Reading (JMR) reports required to claim subsidies."
+          }
+        ]}
+      />
 
       {/* 6. CTA (Light) */}
       <section className="py-20 bg-transparent text-center relative z-10">

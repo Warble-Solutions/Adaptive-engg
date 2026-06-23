@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import { CMSHeroDashboards } from "@/components/DashboardMockups";
 import UnifiedCMSFeatures from "@/components/UnifiedCMSFeatures";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "Central Monitoring System (CMS) | Unified Renewable Solutions | Adaptive Engineering",
@@ -424,6 +426,33 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is the main purpose of AEPL's Central Monitoring System (CMS)?",
+            answer: "It provides portfolio-wide monitoring of geographically distributed solar, wind, and battery assets, consolidating performance indicators (yield, PR, downtime) in a single centralized screen."
+          },
+          {
+            question: "Is the CMS platform vendor-agnostic?",
+            answer: "Yes. Our platform integrates with all leading inverter OEMs, tracker controllers, weather stations, and wind turbine brands, allowing developers to manage heterogeneous assets."
+          },
+          {
+            question: "How does the CMS handle performance anomaly detection?",
+            answer: "It runs machine learning algorithms that compare real-time generation profiles against target designs and historical benchmarks, instantly identifying anomalies like string dropouts or module soiling."
+          },
+          {
+            question: "What cybersecurity measures protect CMS portfolio data?",
+            answer: "Our architecture aligns with IEC 62443 standards. We secure all communication tunnels using TLS encryption and VPN tunnels, protect access with role-based permissions (RBAC), and host systems on secure cloud infrastructures."
+          },
+          {
+            question: "Does the CMS integrate with maintenance workflows?",
+            answer: "Yes, it integrates directly with our CMMS module. When a critical inverter fault is detected, the system can automatically create and dispatch a repair ticket to field technicians, minimizing mean time to repair (MTTR)."
+          }
+        ]}
+      />
 
       {/* 8. CTA (Dark) */}
       <section className="py-20 bg-slate-950 text-center relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">

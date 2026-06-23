@@ -2,6 +2,8 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Server, Lock, Network, Shield, AlertTriangle } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+
 
 
 export const metadata = {
@@ -321,7 +323,35 @@ export default function Page() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is the role of the Telemetry System in PM-KUSUM projects?",
+            answer: "The Telemetry System utilizes Remote Terminal Units (RTUs) to transmit real-time electrical data from grid-connected solar power plants to State Load Despatch Centres (SLDC) or Regional Load Despatch Centres (RLDC), satisfying grid operator visibility mandates."
+          },
+          {
+            question: "What protocols does the Telemetry System support?",
+            answer: "Our system is fully compliant with standard utility protocols including IEC 60870-5-104, DNP3, and Modbus RTU/TCP, facilitating direct integration with SCADA hosts."
+          },
+          {
+            question: "How is communication reliability maintained in remote areas?",
+            answer: "We deploy dual redundant communication paths. The primary channel runs over a dedicated fiber optic or leased line link, with a secondary backup channel running over cellular LTE (4G/5G) for automatic failover."
+          },
+          {
+            question: "Does the Telemetry System meet CERC cyber security guidelines?",
+            answer: "Yes, the RTU signal cabinets are integrated with security firewalls, encrypted communication channels, secure user access controls, and auditing logs in compliance with Central Electricity Regulatory Commission (CERC) security mandates."
+          },
+          {
+            question: "What happens during a grid power failure?",
+            answer: "Our telemetry cabinets feature a built-in battery backup UPS system. This ensures that the RTU and critical network sensors remain fully operational and continue monitoring/logging telemetry during temporary power outages."
+          }
+        ]}
+      />
+
       {/* CTA */}
+
       <section className="py-24 bg-slate-950 text-center relative z-20">
         <div className="max-w-2xl mx-auto px-6">
           <SectionWrapper>

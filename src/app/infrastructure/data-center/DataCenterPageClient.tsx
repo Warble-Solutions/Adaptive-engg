@@ -7,6 +7,7 @@ import {
   ArrowRight, Zap, Activity, ShieldCheck, Cpu, CheckCircle2, 
   Server, Wind, Sliders, Lock, ChevronRight
 } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
 
 export default function DataCenterPageClient() {
   const [activeSolution, setActiveSolution] = useState<number>(0);
@@ -642,6 +643,33 @@ export default function DataCenterPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="dark"
+        faqs={[
+          {
+            question: "What does AEPL's scope of work include for Data Center E&I?",
+            answer: "We supply, install, test, and commission complete Electrical and Instrumentation (E&I) systems. This includes high-tension (HT) switchyards up to 33kV, medium-voltage (MV) and low-voltage (LV) distribution panels (PCC/MCC), busduct routing, uninterruptible power supply (UPS) synchronization, precision HVAC controls, and environment monitoring systems (EMS)."
+          },
+          {
+            question: "What certifications and compliance levels do you support for data center infrastructure?",
+            answer: "All our panels and integration designs comply with international standards such as IS/IEC 61439 (Type-Tested assemblies) and IEEE recommendations. We design systems to align with TIA-942 and Uptime Institute Tier III and Tier IV guidelines, ensuring maximum operational availability."
+          },
+          {
+            question: "How does AEPL support Concurrent Maintainability (Tier III)?",
+            answer: "We design and fabricate electrical panels with dual power feeds, physical compartment barriers (Form 4b separation), and draw-out vacuum circuit breakers (VCBs). This allows maintenance, testing, and replacement of individual power paths or breakers without shutting down downstream servers."
+          },
+          {
+            question: "Do you integrate Building Management Systems (BMS) and EPMS?",
+            answer: "Yes. We configure intelligent monitoring gateways that aggregate telemetry from energy meters, UPS systems, automatic transfer switches (ATS), chillers, and CRAH units. Data is integrated into centralized BMS or EPMS platforms via Modbus RTU/TCP, BACnet, or SNMP protocols."
+          },
+          {
+            question: "What testing protocols are executed before hand-over?",
+            answer: "We conduct detailed Factory Acceptance Testing (FAT) with loop checking and hot-standby simulations. On-site, we perform comprehensive Site Acceptance Testing (SAT), including insulation tests, contact resistance tests, relay coordination checks, and generator synchronization audits."
+          }
+        ]}
+      />
 
       {/* 5. CTA */}
       <section className="py-24 bg-white text-slate-900 text-center relative z-20 rounded-t-[40px] -mt-10">

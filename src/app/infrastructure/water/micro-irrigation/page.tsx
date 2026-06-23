@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Settings, Handshake, Cpu, Sprout, Combine, CalendarClock, Droplets, Activity } from "lucide-react";
 import { WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "Micro Irrigation | Adaptive Engineering",
@@ -306,6 +308,33 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What does AEPL provide for Outlet Management Systems (OMS) in Micro Irrigation?",
+            answer: "We deliver complete OMS packages comprising solar-powered remote terminal units (RTUs), motorized control valves, field pressure transmitters, flow sensors, secure wireless telemetry nodes, and centralized cloud-based scheduling SCADA software."
+          },
+          {
+            question: "How does AEPL ensure equitable water distribution at the chak level?",
+            answer: "Our field RTUs run valve-sequencing programs. Based on predefined schedules or real-time soil moisture trends, valves are automatically modulated to maintain a uniform hydraulic gradient, ensuring that tail-end chaks receive the exact allocated water volume."
+          },
+          {
+            question: "How do your field controllers handle communication over large farming areas?",
+            answer: "We deploy low-power wide-area network technologies (such as LoRaWAN or secure GPRS/4G) to link thousands of distributed field valves with the main pumping station and regional SCADA centers, ensuring stable telemetry across rugged agricultural terrains."
+          },
+          {
+            question: "What energy sources power your field telemetry and valve controllers?",
+            answer: "All field installations are self-sustaining. They are powered by custom-sized solar photovoltaic panels paired with industrial-grade lithium iron phosphate (LiFePO4) batteries. The RTU continuously monitors battery health and solar charge parameters, reporting status to SCADA."
+          },
+          {
+            question: "How does the SCADA system identify pipeline leakages or sabotage?",
+            answer: "The SCADA system runs delta-pressure algorithms. By cross-referencing flow rates at the main pumping station with cumulative flow and pressure data at downstream chaks, it immediately identifies line pressure drops, flags potential leakages, and alerts operators of potential line theft or sabotage."
+          }
+        ]}
+      />
 
       {/* 9. CTA */}
       <section className="py-20 bg-transparent text-center relative z-10">

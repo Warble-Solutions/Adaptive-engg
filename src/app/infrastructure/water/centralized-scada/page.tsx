@@ -5,6 +5,8 @@ import Image from "next/image";
 import { ArrowRight, Monitor, Droplets, BatteryCharging, Shield, Activity, Search, RefreshCw, Layers, Database, Lock, Cpu, LayoutTemplate, Factory, Settings } from "lucide-react";
 import { ScadaHeroDashboard } from "@/components/DashboardMockups";
 import { WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "Centralized SCADA System | Adaptive Engineering",
@@ -277,6 +279,33 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What does AEPL's Centralized SCADA offer for water networks?",
+            answer: "It provides a unified control console displaying live volumetric quantity (flow, reservoir levels) and quality parameters (pH, turbidity, chlorine) across all decentralized municipal or industrial water assets."
+          },
+          {
+            question: "What protocols and interfaces are supported for field data integration?",
+            answer: "We support industry-standard integration protocols including Modbus RTU/TCP, OPC-UA, MQTT, Profibus, and BACnet. This allows seamless telemetry exchange with field PLCs, RTUs, and smart instrumentation."
+          },
+          {
+            question: "How is telemetry data protected during network connection drops?",
+            answer: "Our edge RTU panels feature local solid-state buffer storage. If cellular GPRS/4G or radio networks fail, telemetry logs are queued locally (store-and-forward) and auto-synchronized upon recovery, guaranteeing zero data loss."
+          },
+          {
+            question: "What database and visualization tools do you implement for dashboards?",
+            answer: "We deploy secure Oracle or MSSQL server databases paired with high-performance vector graphics (SVG-based) HMI systems. Dashboards are fully HTML5-compliant, enabling secure web browser and mobile device access."
+          },
+          {
+            question: "How does centralized monitoring optimize operational costs (O&M)?",
+            answer: "By consolidating operational logs, the software automatically tracks pump duty cycles to schedule predictive maintenance, optimizes capacitor banks to lower energy costs, and flags line pressure drops to identify leakages instantly."
+          }
+        ]}
+      />
 
       {/* 7. CTA */}
       <section className="py-20 bg-transparent text-center relative z-10">

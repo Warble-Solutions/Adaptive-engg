@@ -9,6 +9,8 @@ import {
   ChevronRight
 } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function PanelsPageClient() {
   const [activeMfgStep, setActiveMfgStep] = useState<number>(0);
@@ -567,6 +569,33 @@ export default function PanelsPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="dark"
+        faqs={[
+          {
+            question: "What types of electrical panels does AEPL manufacture?",
+            answer: "We manufacture a comprehensive range of custom low-voltage (LV) and high-voltage (HV) panels, including HT vacuum circuit breaker (VCB) panels up to 33kV, Power Control Centres (PCC), Motor Control Centres (MCC), Intelligent MCCs (IMCC), Automatic Power Factor Correction (APFC) panels, Power & Lighting Distribution Boards (PDB/LDB), VFD/Soft Starter panels, PLC automation panels, and IP65-rated AC/DC distribution boards."
+          },
+          {
+            question: "Are AEPL panels officially certified and type-tested?",
+            answer: "Yes. All our panels undergo testing and comply with IS/IEC 61439-1 & 2 standards. They are type-tested by accredited laboratories (such as ERDA/CPRI) for short-circuit temperature rise and ingress protection (IP) verification."
+          },
+          {
+            question: "What is the manufacturing capacity of AEPL's panel workshop?",
+            answer: "Our centralized manufacturing facility covers over 40,000sq.ft. of workshop space equipped with CNC sheet metal punch presses, busbar shearing and bending machines, and advanced secondary wiring verification stations. We supply over 10,000+ panels annually."
+          },
+          {
+            question: "Do you supply smart or intelligent panels (IMCC)?",
+            answer: "Yes, our Intelligent Motor Control Centres (IMCC) are equipped with intelligent relays and communication gateways (supporting Modbus, Profibus, Ethernet/IP) that stream real-time motor currents, winding temperatures, and diagnostic alerts directly to central SCADA systems."
+          },
+          {
+            question: "What custom engineering options do you provide?",
+            answer: "We offer complete engineering customization, including choice of switchgear brands (Siemens, Schneider, ABB, L&T), custom busbar ratings (copper or aluminum), enclosure dimensions (fixed or draw-out design), front/rear access layouts, and specific IP ratings for harsh outdoor environments."
+          }
+        ]}
+      />
 
       {/* 5. CTA */}
       <section className="py-24 bg-transparent text-white text-center relative z-20 border-t border-white/5">

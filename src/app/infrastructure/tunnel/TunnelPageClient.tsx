@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Share2, Lightbulb, Clock, CheckCircle2, Fan, Settings, Shield, Bell, Layers, FileText, Users, Server, Radio, Wind, TrendingUp, Compass, Network, ClipboardList, Boxes, Play, RefreshCw } from "lucide-react";
 import { COMPANY_STATS, TUNNEL_STATS } from "@/lib/constants";
 import { TunnelSCADADashboard } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function TunnelPageClient() {
   const [activeTab, setActiveTab] = useState<"control" | "electrical" | "safety" | "user_info">("control");
@@ -1145,7 +1147,32 @@ export default function TunnelPageClient() {
         </div>
       </section>
 
-
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="dark"
+        faqs={[
+          {
+            question: "What does AEPL's scope of work cover for Tunnel E&I?",
+            answer: "We deliver complete Electrical, Instrumentation, and Control (E&I) systems. This includes high-tension (HT) substations (up to 33kV), main power distribution boards (PCC/MCC), uninterruptible power supplies (UPS), tunnel ventilation control systems, linear heat detection (LHD) sensors, gas detectors, smart LED lighting systems, and unified SCADA control desks."
+          },
+          {
+            question: "What safety standards and guidelines do you comply with?",
+            answer: "All tunnel installations are designed and executed in accordance with international safety guidelines such as NFPA 502 (Standard for Road Tunnels, Bridges, and Other Limited Access Highways) and relevant Indian Road Congress (IRC) specifications. This ensures robust smoke extraction, fire safety, and emergency lighting loops."
+          },
+          {
+            question: "How does your SCADA system handle emergency ventilation?",
+            answer: "Our SCADA integration monitors carbon monoxide (CO), nitrogen dioxide (NO2), and visibility index (K-value) levels in real time. In the event of high gas concentrations or fire, the system automatically triggers pre-configured emergency ventilation algorithms (jet fan rotation, speed adjustments, and exhaust dampers) to clear smoke and maintain safe evacuation pathways."
+          },
+          {
+            question: "What redundancy is built into the tunnel electrical distribution?",
+            answer: "We deploy hot-redundant power paths comprising dual active grid feeds, standby diesel generators, and centralized UPS systems with automatic transfer switches (ATS). This ensures that critical life safety loads (emergency lighting, ventilation, and telemetry sensors) remain continuously powered even during complete grid failure."
+          },
+          {
+            question: "How is the tunnel lighting dynamically adjusted?",
+            answer: "We integrate intelligent tunnel lighting controllers that measure external ambient light near the portals using photometer sensors. The system automatically adjusts lighting intensity inside the portal zones (threshold, transition, and interior zones) to prevent the 'black hole' effect for drivers entering the tunnel during daytime."
+          }
+        ]}
+      />
 
       {/* 7. CTA (Subtle dark overlay) */}
       <section className="py-24 bg-transparent text-center relative z-10">

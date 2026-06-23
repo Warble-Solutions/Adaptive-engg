@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Waves, Droplet, Droplets, Settings, Gauge, Power, CheckCircle2, LayoutTemplate, ShieldCheck, TrendingUp, Factory, Cpu, Activity, BarChart3, Handshake, Zap, Globe } from "lucide-react";
 import { WATER_STATS, WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "Water Supply & WTP | Adaptive Engineering",
@@ -294,6 +296,33 @@ export default function Page() {
  </div>
  </div>
  </section>
+
+ {/* FAQ SECTION */}
+ <FAQSection
+   theme="light"
+   faqs={[
+     {
+       question: "What E&I and automation systems does AEPL provide for Water Treatment Plants (WTP)?",
+       answer: "We deliver complete Electrical, Instrumentation, and Automation packages. This includes custom-built LT panels (PCC/MCC/APFC), programmable logic controllers (PLCs), field instrumentation (flow meters, level sensors, quality analyzers), chlorine/alum chemical dosing automation, and centralized SCADA control room systems."
+     },
+     {
+       question: "What government approvals does AEPL hold for drinking water supply schemes?",
+       answer: "Adaptive Engineering is a government-approved E&I partner. We are registered and approved by GWSSB (Gujarat), MPJNM, MPUDC & MPUADD (Madhya Pradesh), UPJNM (Uttar Pradesh), RWS&S (Odisha), and JICA-assisted projects (Assam), among others."
+     },
+     {
+       question: "How do you connect remote Overhead Tanks (OHT) to the WTP central SCADA?",
+       answer: "We deploy RTU-based telemetry panels at remote OHT sites. These panels monitor reservoir water levels and pump status using ultrasonic level sensors and transmit data back to the central SCADA system over secure GPRS/4G or RF networks, enabling automated reservoir level control."
+     },
+     {
+       question: "How does WTP automation improve operational efficiency?",
+       answer: "By automating filter backwash cycles, chemical dosing rates based on raw water turbidity/pH, and reservoir scheduling, plants reduce chemical wastage by up to 25%, minimize power usage, and ensure consistent potable water quality compliance."
+     },
+     {
+       question: "What benefits does AEPL's in-house panel manufacturing facility bring?",
+       answer: "Our 1,25,000+sq.ft. facility allows us to design, fabricate, and test all electrical panels (type-tested to IS/IEC standards) under strict QA/QC processes. This reduces reliance on third-party supply chains, ensuring faster project completion and reliable execution."
+     }
+   ]}
+ />
 
  {/* 9. CTA */}
  <section className="py-20 bg-transparent text-center relative z-10">

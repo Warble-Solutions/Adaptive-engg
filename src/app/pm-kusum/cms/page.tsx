@@ -2,6 +2,8 @@ import SceneTrigger from "@/components/3d/SceneTrigger";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Eye, Monitor, Globe, Shield, BarChart3, Cpu, CheckCircle2, Activity, Database, Layers, Users, Palette, Lock, Wifi, Smartphone, MessageSquare, Folder, FileText } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "Central Monitoring System (CMS) | PM-KUSUM | Adaptive Engineering",
@@ -393,6 +395,33 @@ export default function Page() {
  </div>
  </div>
  </section>
+
+  {/* FAQ SECTION */}
+  <FAQSection
+    theme="light"
+    faqs={[
+      {
+        question: "What is the main purpose of AEPL's Central Monitoring System (CMS) for PM-KUSUM?",
+        answer: "Our CMS (SolarWiz) is a centralized portal designed to monitor, aggregate, and analyze decentralized PM-KUSUM solar assets. It calculates individual plant KPIs to ensure complete performance visibility and loss mitigation."
+      },
+      {
+        question: "Is the SolarWiz CMS platform compatible with different inverter and equipment OEMs?",
+        answer: "Yes, SolarWiz features OEM-independent connectors. It can communicate with multi-brand solar inverters, remote terminal units (RTUs), and data logger gateways, aggregating heterogeneous field data into a unified dashboard."
+      },
+      {
+        question: "What hosting and deployment models are supported by the CMS?",
+        answer: "We support both secure on-premise deployments (on corporate servers/infrastructure) and cloud-hosted environments (such as AWS and Microsoft Azure), providing scalability and flexibility to match client IT standards."
+      },
+      {
+        question: "How does the system handle data transmission over weak rural networks?",
+        answer: "The platform is engineered with lightweight data structures and optimized payload sizes (less than 1.2KB per poll cycle), minimizing bandwidth utilization and ensuring reliable data synchronization even on slow rural GPRS/cellular networks."
+      },
+      {
+        question: "What security standards are implemented in the SolarWiz CMS?",
+        answer: "The system utilizes 128-bit SSL/TLS 1.3 encryption for data in transit and has strict user access control lists (ACLs) to secure command rooms and web/mobile client dashboards."
+      }
+    ]}
+  />
 
  {/* CTA */}
  <section className="py-20 bg-white text-center relative z-20 rounded-t-[40px] -mt-10">

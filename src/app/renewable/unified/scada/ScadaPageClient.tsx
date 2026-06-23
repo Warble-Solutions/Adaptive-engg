@@ -11,6 +11,8 @@ import { COMPANY_STATS } from "@/lib/constants";
 import { 
   ScadaHeroDashboard, PlantOverviewDashboard, AlarmConsoleDashboard, ScadaMonitoringDashboard 
 } from "@/components/DashboardMockups";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function ScadaPageClient() {
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -685,6 +687,33 @@ export default function ScadaPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What makes AEPL's renewable SCADA platform unique?",
+            answer: "Our SCADA combines rich component libraries designed specifically for solar and wind applications, offering high-resolution visualization, integrated plant control loops, and direct interfaces with utility grids."
+          },
+          {
+            question: "What protocols do you support for interfacing with field inverters?",
+            answer: "We support a wide array of industrial protocols including Modbus RTU/TCP, IEC 60870-5-104, DNP3, and OPC-UA, ensuring compatibility with all major inverter manufacturers and tracking controllers."
+          },
+          {
+            question: "Can the SCADA system handle utility-scale plants with high tag counts?",
+            answer: "Yes, our high-speed SCADA engine is optimized to process more than 10 Lakh+ telemetry tags simultaneously with sub-second update cycles, suitable for large gigawatt-scale portfolios."
+          },
+          {
+            question: "How does the SCADA system assist operators in alarm management?",
+            answer: "We implement alarm-prioritization rules based on ISA-18.2 guidelines. This filters out alarm noise during system disruptions, highlighting critical root causes (such as main breaker trips) so operators can act instantly."
+          },
+          {
+            question: "Do you support remote active power control through SCADA?",
+            answer: "Yes. In addition to monitoring, the system provides remote command desks for reactive power modulation, active power curtailments, and individual block-level inverter start/stop operations, compliant with dispatch instructions."
+          }
+        ]}
+      />
 
       {/* 8. CTA (Immersive Dark) */}
       <section className="py-24 bg-slate-950 text-white text-center relative z-20 rounded-t-[40px] -mt-10 border-t border-slate-900">

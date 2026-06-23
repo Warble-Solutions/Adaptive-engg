@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Factory, Zap, ShieldCheck, TrendingUp, Settings, BarChart3, Handshake, Cpu, Anchor, Database, LayoutTemplate, Activity } from "lucide-react";
 import { WATER_STATS, WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
   title: "Lift Irrigation | Adaptive Engineering",
@@ -356,6 +358,33 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What E&I and automation packages does AEPL offer for Lift Irrigation schemes?",
+            answer: "We supply complete turnkey Electrical, Instrumentation, and Automation packages. This includes custom high-tension (HT) substations (up to 33kV), medium-voltage (MV) and low-voltage (LV) PCC/MCC panels, VFDs and soft starters, flow and pressure telemetry, and integrated SCADA platforms."
+          },
+          {
+            question: "How does AEPL optimize high-capacity pump start-ups and operation?",
+            answer: "We integrate soft starters or variable frequency drives (VFDs) into our pump control panels. These control start-up current inrushes and ramp speeds, preventing electrical grid voltage drops and eliminating water hammer issues that cause pipe bursts."
+          },
+          {
+            question: "What predictive diagnostics are integrated into your pumping SCADA?",
+            answer: "Our SCADA systems collect winding temperatures, bearing temperatures, and vibration profile amplitudes. Continuous data analytics curves identify mechanical misalignments or bearing wear before they lead to critical motor failures."
+          },
+          {
+            question: "How do you balance runtime wear-and-tear across multiple pumps?",
+            answer: "We program duty-cycle balancing algorithms in the main PLC. The PLC logs cumulative runtime hours for all active pump motors and dynamically alternates start priorities to ensure balanced operation and wear across the pump array."
+          },
+          {
+            question: "What government approvals does AEPL hold for lift irrigation projects?",
+            answer: "We are an approved vendor for various major state water departments and EPCs, including GWSSB (Gujarat), MPJNM, MPUDC & MPUADD (Madhya Pradesh), UPJNM (Uttar Pradesh), RWS&S (Odisha), and JICA-assisted projects (Assam)."
+          }
+        ]}
+      />
 
       {/* 10. CTA */}
       <section className="py-20 bg-transparent text-center relative z-10">

@@ -7,6 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Droplets, Settings, LayoutTemplate, ShieldCheck, Factory, Cpu, Activity, BarChart3, Handshake, Zap, Globe, Smartphone, Radio } from "lucide-react";
 import { WATER_STATS, WATER_SOLUTIONS, GOVERNMENT_APPROVALS_WATER } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function STPPageClient() {
   const currentPath = "/infrastructure/water/stp";
@@ -441,6 +443,33 @@ export default function STPPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What E&I and automation packages does AEPL offer for Sewage Treatment Plants (STP)?",
+            answer: "We supply turnkey Electrical, Instrumentation, and Control packages for STPs. This includes custom-built LT panels (MCC/PCC/APFC), PLC panels, gas monitoring sensors, electromagnetic flow meters, dissolved oxygen (DO) analyzers, and centralized SCADA platforms."
+          },
+          {
+            question: "How does AEPL optimize biological treatment stages and aeration cycles?",
+            answer: "We integrate PLCs with Dissolved Oxygen (DO) and oxidation-reduction potential (ORP) sensors. The PLC logic automatically regulates air blower VFD speeds based on real-time oxygen demand, reducing aeration energy costs by up to 30% while ensuring complete biological treatment."
+          },
+          {
+            question: "How do your smart control panels prevent pump dry-runs and balance wear?",
+            answer: "Our motor control panels monitor ultrasonic sump level inputs to prevent dry-running. The PLC also tracks pump runtime logs and alternates start sequences among multiple pumps (duty/standby/assist) to ensure balanced wear-and-tear across all units."
+          },
+          {
+            question: "Do you support remote monitoring for geographically distributed lift stations?",
+            answer: "Yes. We integrate wide-area telemetry panels at remote pumping stations. Level, flow, and power parameters are buffered locally (store-and-forward) and transmitted over secure GPRS/4G or radio telemetry links to a centralized STP SCADA portal."
+          },
+          {
+            question: "How does AEPL ensure compliance with municipal wastewater discharge guidelines?",
+            answer: "We integrate online continuous effluent monitoring systems (OCEMS) with SCADA logging. Our software generates automated, daily/monthly reports tracking parameters such as pH, BOD, COD, and TSS to ensure full compliance with regulatory standards."
+          }
+        ]}
+      />
 
       {/* 10. CTA */}
       <section className="py-20 bg-transparent text-center relative z-10">

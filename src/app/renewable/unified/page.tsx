@@ -3,6 +3,8 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Zap, Activity, ShieldCheck, Cpu, Award, CheckCircle2, Monitor, Shield, PieChart, Wrench, Battery } from "lucide-react";
 import { COMPANY_STATS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 export const metadata = {
  title: "Unified Renewable Solution | Adaptive Engineering",
@@ -217,6 +219,33 @@ export default function Page() {
  </div>
  </div>
  </section>
+
+ {/* FAQ SECTION */}
+  <FAQSection
+    theme="light"
+    faqs={[
+      {
+        question: "What is AEPL's Unified Renewable Solution?",
+        answer: "It is an end-to-end, single-vendor integration package that covers the entire Electrical, Instrumentation, and Control (E&I) scope, including panels, substation switchyards, SCADA, PPC, CMS, Analytics, CMMS, and battery management."
+      },
+      {
+        question: "What are the benefits of using a single vendor for renewable projects?",
+        answer: "By consolidating E&I and software under one responsible vendor, clients eliminate compatibility issues, reduce project execution timelines by up to 40%, and avoid vendor-coordination delays."
+      },
+      {
+        question: "What sub-systems are integrated into your unified platform?",
+        answer: "Our ecosystem integrates six core components: 1) SCADA (plant control), 2) Power Plant Controller (PPC for grid compliance), 3) Central Monitoring System (CMS for portfolio analytics), 4) Advanced Analytics, 5) CMMS (maintenance management), and 6) EMS-BESS (battery energy storage system management)."
+      },
+      {
+        question: "How does the Unified Solution simplify grid compliance?",
+        answer: "Because we engineer the electrical switchyard, HT/LT panels, and the software-based Power Plant Controller (PPC) in-house, we can calibrate relay coordination and control response speeds (under 200 milliseconds) dynamically to meet utility grid codes."
+      },
+      {
+        question: "Does this platform support hybrid wind-solar-BESS configurations?",
+        answer: "Yes. Our platform is designed specifically for utility-scale hybrid installations. The Energy Management System (EMS) runs algorithms that coordinate generation profiles across solar inverters and wind turbines while regulating BESS charging/discharging dynamically."
+      }
+    ]}
+  />
 
  {/* CTA */}
  <section className="py-20 bg-transparent text-center relative z-10">

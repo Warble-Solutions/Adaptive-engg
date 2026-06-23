@@ -29,6 +29,26 @@ import Image from "next/image";
 import MicroCTA from "@/components/ui/MicroCTA";
 import SectionWrapper from "@/components/SectionWrapper";
 import { COMPANY_STATS, PPC_STATS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
+const faqs = [
+  {
+    question: "What makes AEPL's approach to renewable projects different?",
+    answer: "We offer a unified, single-vendor approach covering software (SCADA, PPC, CMS) and electrical infrastructure (HT/LT panels, E&I). This removes vendor fragmentation, reduces integration time, and ensures seamless grid compliance."
+  },
+  {
+    question: "Are your power plant controllers (PPC) grid-compliant?",
+    answer: "Yes. Our PPC systems are HIL type-tested and designed to meet stringent grid code requirements, including dynamic reactive power compensation and Automatic Generation Control (AGC)."
+  },
+  {
+    question: "Do you provide end-to-end electrical infrastructure support?",
+    answer: "Yes, we handle the entire project lifecycle—from designing and manufacturing IS/IEC certified HT/LT panels to turnkey E&I site execution for utility-scale solar and wind plants."
+  },
+  {
+    question: "Can your CMS handle multi-vendor hardware?",
+    answer: "Absolutely. Our Central Monitoring System (CMS) is hardware-agnostic and features robust communication drivers, allowing you to monitor and manage heterogeneous assets across your portfolio through a single dashboard."
+  }
+];
 
 export default function RenewablePageClient() {
   return (
@@ -443,6 +463,33 @@ export default function RenewablePageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="dark"
+        faqs={[
+          {
+            question: "What solutions does AEPL offer for the renewable energy sector?",
+            answer: "We offer complete Electrical, Instrumentation, and Control (E&I) solutions. This includes turnkey E&I project contracting, HT/LT electrical panels, Power Plant Controllers (PPC), SCADA systems, remote telemetry, and BESS (Battery Energy Storage System) integration."
+          },
+          {
+            question: "Does AEPL provide solutions for solar water pumps under PM-KUSUM?",
+            answer: "Yes. We supply specialized IP65-rated AC/DC distribution boards and remote telemetry units (RTUs) for PM-KUSUM solar water pumps, along with our Central Monitoring Portal (SolarWiz) for real-time tracking."
+          },
+          {
+            question: "Can AEPL handle utility-scale wind-solar hybrid power plant controls?",
+            answer: "Yes. We design and deploy high-performance Power Plant Controllers (PPCs) and hybrid SCADA systems that coordinate active/reactive power flow and control ramp rates at the point of common coupling (PCC) to meet grid code requirements."
+          },
+          {
+            question: "What is a Power Plant Controller (PPC) and why is it required?",
+            answer: "A PPC is a high-speed controller (usually resolving in less than 200 milliseconds) that dynamically regulates the active and reactive power output of solar inverters and wind turbines. It is required by utilities to maintain grid stability and voltage profiles."
+          },
+          {
+            question: "Where does AEPL manufacture its electrical switchboards?",
+            answer: "All our HT and LT panels are designed and fabricated in-house at our state-of-the-art 1,25,000+sq.ft. facility. This ensures type-tested quality (IS/IEC standards) and on-time project delivery."
+          }
+        ]}
+      />
 
       {/* 6. CTA (Dark) */}
       <section className="py-20 bg-slate-950 text-center border-t border-white/5 relative z-10">

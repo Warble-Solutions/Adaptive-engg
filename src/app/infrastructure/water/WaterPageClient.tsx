@@ -7,6 +7,8 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 import { ArrowRight, Droplets, Activity, CheckCircle2, ShieldCheck, Settings, LineChart, Cpu, Anchor, Wifi, RefreshCw } from "lucide-react";
 import { WATER_STATS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
 
 interface LogMessage {
   id: number;
@@ -481,6 +483,33 @@ export default function WaterPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What water and wastewater systems does AEPL support?",
+            answer: "We provide complete electrical, instrumentation, and control (E&I) systems for Water Treatment Plants (WTP), Sewage Treatment Plants (STP), Effluent Treatment Plants (ETP), lift irrigation schemes, micro-irrigation systems, and urban water distribution networks."
+          },
+          {
+            question: "How does AEPL optimize lift and micro-irrigation systems?",
+            answer: "We design and integrate smart control panels with soft starters and VFDs to limit pipeline water hammer issues and motor current spikes. Additionally, we integrate telemetry links with field pressure sensors and flow meters to balance supply grids and prevent pipe bursts."
+          },
+          {
+            question: "What is the role of centralized SCADA in municipal water networks?",
+            answer: "Centralized SCADA platforms aggregate flow, pressure, and tank level telemetry from remote pump houses and reservoirs over GSM/4G or radio networks. This allows municipal operators to monitor flow rates, run analytics to identify pipeline leakages, and control booster pumps from a single control room."
+          },
+          {
+            question: "How do you integrate water quality and flow instrumentation?",
+            answer: "We connect electromagnetic flow meters, ultrasonic level sensors, turbidity meters, pH sensors, and chlorine analyzers to local PLC/RTU units. Telemetry data is polled using industry-standard protocols (Modbus, Profibus, or 4-20mA analog loops) to automate process feedback."
+          },
+          {
+            question: "Do you support automated chemical dosing controls in treatment plants?",
+            answer: "Yes. Our PLC logic automatically calculates dosing pump stroke rates based on incoming flow volumes and water quality parameter feedback (such as pH or turbidity). This ensures precise chemical treatment (alum, chlorine, polyelectrolyte) while minimizing chemical waste."
+          }
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 bg-transparent text-center relative z-10">

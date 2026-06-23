@@ -22,6 +22,8 @@ import {
 import { useState } from "react";
 import { SolarProDashboard } from "@/components/DashboardMockups";
 import SceneTrigger from "@/components/3d/SceneTrigger";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function SolarWizClient() {
   const [activeTab, setActiveTab] = useState<"monitor" | "analyze" | "reporting" | "om" | "integrations">("monitor");
@@ -466,7 +468,35 @@ export default function SolarWizClient() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <FAQSection
+        theme="light"
+        faqs={[
+          {
+            question: "What is the SolarWiz portal and what assets does it monitor?",
+            answer: "SolarWiz is a centralized monitoring portal that provides real-time telemetry, performance calculations, and operations monitoring for utility-scale and decentralized solar power plants. It tracks inverters, weather sensors (WMS), string monitoring boxes, transformers, and switchgears."
+          },
+          {
+            question: "Can I compare performance across different plants in my portfolio?",
+            answer: "Yes, SolarWiz includes cross-plant comparison views. You can compare parameter trends and performance metrics side-by-side to identify your best and worst performing solar assets."
+          },
+          {
+            question: "How does the custom reporting feature work in SolarWiz?",
+            answer: "SolarWiz includes an in-built reports library and a customizable report builder. You can define specific parameter ranges, set alarm limits, extract data in various formats, and export analysis outputs directly to business intelligence tools like Microsoft Power BI."
+          },
+          {
+            question: "What third-party integrations are supported by SolarWiz?",
+            answer: "The platform integrates seamlessly with weather forecasting services, cleaning robots, solar tracking controllers, business intelligence tools, and Computerized Maintenance Management Systems (CMMS) to optimize O&M."
+          },
+          {
+            question: "Does the portal support multi-theme layouts for command centers?",
+            answer: "Yes, the portal supports adjustable color themes (including dark and light modes) engineered to display plant parameters and telemetry charts clearly in large industrial operations command centers."
+          }
+        ]}
+      />
+
       {/* 10. CTA (Dark - Semi-transparent background for 3D visibility) */}
+
       <section className="py-24 text-center relative z-10 bg-slate-950/80 backdrop-blur-sm border-t border-white/5">
         <div className="max-w-3xl mx-auto px-6">
           <SectionWrapper>
